@@ -1,0 +1,13 @@
+{
+  "name": "worldview-sorter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-registry.mjs",
+    "test": "node scripts/validate-registry.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
