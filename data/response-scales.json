@@ -121,6 +121,42 @@
         "no_view",
         "not_understood"
       ]
+    },
+    {
+      "id": "importance5",
+      "responseType": "likert",
+      "ordered": true,
+      "options": [
+        {
+          "id": "not_important",
+          "value": -2,
+          "label": "Not important to me"
+        },
+        {
+          "id": "slightly_important",
+          "value": -1,
+          "label": "Slightly important to me"
+        },
+        {
+          "id": "moderately_important",
+          "value": 0,
+          "label": "Moderately important to me"
+        },
+        {
+          "id": "very_important",
+          "value": 1,
+          "label": "Very important to me"
+        },
+        {
+          "id": "extremely_important",
+          "value": 2,
+          "label": "Extremely important to me"
+        }
+      ],
+      "allowedSpecialStates": [
+        "no_view",
+        "not_understood"
+      ]
     }
   ]
 }

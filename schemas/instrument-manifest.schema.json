@@ -74,6 +74,9 @@
             "maxSameDomainConsecutive": {
               "type": "integer",
               "minimum": 1
+            },
+            "respectEligibilityDependencies": {
+              "type": "boolean"
             }
           }
         }

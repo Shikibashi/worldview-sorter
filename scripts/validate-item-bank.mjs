@@ -7,8 +7,8 @@ const domains = (await load("data/domains.json")).domains;
 const constructs = (await load("data/constructs.json")).constructs;
 const sources = (await load("data/sources.json")).sources;
 const scalesDoc = await load("data/response-scales.json");
-const bankDoc = await load("data/items/candidate-v0.1.json");
-const instrument = await load("data/instruments/prototype-0.1.json");
+const bankDoc = await load("data/items/candidate-v0.2.json");
+const instrument = await load("data/instruments/prototype-0.2.json");
 
 let failures = 0;
 const fail = (message) => {
@@ -141,6 +141,13 @@ for (const entry of instrument.entries) {
   }
 }
 pass("instrument manifest references checked");
+
+const conditionalItems = items.filter((item) => item.eligibility.mode === "conditional");
+if (conditionalItems.length && !instrument.ordering.constraints.respectEligibilityDependencies) {
+  fail("instrument has conditional items but does not require eligibility dependency ordering");
+} else if (conditionalItems.length) {
+  pass("conditional-item dependency ordering required by manifest");
+}
 
 for (const item of items) {
   for (const forbidden of ["weight", "loading", "score"]) {

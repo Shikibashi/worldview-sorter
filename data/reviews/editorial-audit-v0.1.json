@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditVersion": "0.1.0",
+  "reviewedBankVersion": "0.1.0",
+  "resultingBankVersion": "0.2.0",
+  "status": "editorial_complete_cognitive_review_pending",
+  "summary": {
+    "reviewed": 60,
+    "revised": 29,
+    "passedWithoutRevision": 31,
+    "blockingModelErrorsFixed": [
+      "AHI001 no longer defines free will as incompatible with prior causation.",
+      "SOI005 now targets special obligations (NE09) rather than collectivism (SO02).",
+      "Value-importance items use an importance scale rather than an agreement scale.",
+      "PLI005 uses ranking instead of a structurally attractive generic mixed option."
+    ],
+    "knownPoolLevelIssues": [
+      "Primary-target wording remains strongly positive-keyed in the 60-item architecture pool.",
+      "Many constructs have only one prototype item and cannot support reliable scores.",
+      "The pool has not undergone respondent cognitive interviewing.",
+      "No item parameters, factor loadings, reliability estimates, DIF results, or validity evidence exist yet."
+    ]
+  },
+  "issueVocabulary": [
+    "ambiguous_reference",
+    "ambiguous_quantifier",
+    "construct_ambiguity",
+    "construct_contamination",
+    "construct_definition_leak",
+    "double_barreled",
+    "jargon",
+    "loaded_contrast",
+    "low_discrimination",
+    "mirror_asymmetry",
+    "question_begging",
+    "readability",
+    "response_format",
+    "response_scale_mismatch",
+    "safe_middle_option",
+    "social_desirability",
+    "target_mismatch",
+    "tautological_wording",
+    "theoretical_exclusion",
+    "underspecified_vignette",
+    "embedded_uncertainty_option"
+  ],
+  "reviews": [
+    {
+      "itemId": "MEI001",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MEI002",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "mirror_asymmetry",
+        "ambiguous_reference"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MEI003",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "low_discrimination",
+        "tautological_wording"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MEI004",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "absolute_wording"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MEI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "embedded_uncertainty_option"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised so substantive response options do not duplicate the separate no-view/not-understood response states."
+    },
+    {
+      "itemId": "NEI001",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "low_discrimination"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "NEI002",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "NEI003",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "NEI004",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "readability",
+        "construct_contamination"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "NEI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "underspecified_vignette"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MFI001",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MFI002",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MFI003",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MFI004",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MFI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "question_begging"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MFI006",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "VAI001",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "response_scale_mismatch"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "VAI002",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "response_scale_mismatch"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "VAI003",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "response_scale_mismatch"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "VAI004",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "response_scale_mismatch"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "VAI005",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EPI001",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EPI002",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "mirror_asymmetry",
+        "social_desirability"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EPI003",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EPI004",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "jargon"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EPI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "readability"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "OMI001",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "construct_definition_leak"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "OMI002",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "OMI003",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "double_barreled"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "OMI004",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "OMI005",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MSI001",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "double_barreled"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MSI002",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MSI003",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MSI004",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "MSI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "embedded_uncertainty_option"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised so substantive response options do not duplicate the separate no-view/not-understood response states."
+    },
+    {
+      "itemId": "AHI001",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "construct_contamination",
+        "theoretical_exclusion"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "AHI002",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "AHI003",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "AHI004",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "AHI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "loaded_contrast",
+        "readability"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "RCI001",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "RCI002",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "double_barreled"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "RCI003",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "ambiguous_quantifier"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "RCI004",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "RCI005",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EXI001",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EXI002",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EXI003",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "construct_ambiguity"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "EXI004",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "SOI001",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "double_barreled"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "SOI002",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "double_barreled"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "SOI003",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "SOI004",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "low_discrimination",
+        "social_desirability"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "SOI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "target_mismatch"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    },
+    {
+      "itemId": "PLI001",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "PLI002",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "PLI003",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "PLI004",
+      "reviewedRevision": 1,
+      "decision": "pass_for_cognitive_review",
+      "issues": [],
+      "resultingRevision": 1,
+      "note": "No blocking editorial defect identified at architecture-prototype stage; empirical performance remains unknown."
+    },
+    {
+      "itemId": "PLI005",
+      "reviewedRevision": 1,
+      "decision": "revise",
+      "issues": [
+        "safe_middle_option",
+        "response_format"
+      ],
+      "resultingRevision": 2,
+      "note": "Revised to reduce the listed editorial or construct-validity risk; empirical performance remains unknown."
+    }
+  ]
+}

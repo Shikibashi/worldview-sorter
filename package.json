@@ -6,7 +6,8 @@
   "scripts": {
     "validate:registry": "node scripts/validate-registry.mjs",
     "validate:items": "node scripts/validate-item-bank.mjs",
-    "validate": "npm run validate:registry && npm run validate:items",
+    "lint:items": "node scripts/lint-items.mjs",
+    "validate": "npm run validate:registry && npm run validate:items && npm run lint:items",
     "test": "npm run validate"
   },
   "engines": {
