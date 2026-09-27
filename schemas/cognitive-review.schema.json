@@ -1,0 +1,222 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/cognitive-review.schema.json",
+  "title": "Worldview Sorter Cognitive Review Session",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "protocolVersion",
+    "bankVersion",
+    "reviewSessionId",
+    "participantCode",
+    "language",
+    "mode",
+    "consentConfirmed",
+    "startedAt",
+    "completedAt",
+    "itemReviews",
+    "sessionNotes"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "protocolVersion": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "reviewSessionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "participantCode": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "type": "string",
+      "minLength": 2
+    },
+    "mode": {
+      "enum": [
+        "moderated",
+        "unmoderated"
+      ]
+    },
+    "consentConfirmed": {
+      "type": "boolean"
+    },
+    "startedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "itemReviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "itemId",
+          "itemRevision",
+          "observedResponse",
+          "comprehension",
+          "paraphrase",
+          "reasoning",
+          "unclearTerms",
+          "alternateInterpretations",
+          "answerability",
+          "socialDesirability",
+          "midpointMeaning",
+          "issueTags",
+          "severity",
+          "suggestedRevision",
+          "notes"
+        ],
+        "properties": {
+          "itemId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}I\\d{3}$"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "observedResponse": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "state",
+              "value"
+            ],
+            "properties": {
+              "state": {
+                "enum": [
+                  "answered",
+                  "no_view",
+                  "not_understood",
+                  "not_applicable"
+                ]
+              },
+              "value": {
+                "oneOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          },
+          "comprehension": {
+            "enum": [
+              "clear",
+              "mostly_clear",
+              "unclear"
+            ]
+          },
+          "paraphrase": {
+            "type": "string"
+          },
+          "reasoning": {
+            "type": "string"
+          },
+          "unclearTerms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "alternateInterpretations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "answerability": {
+            "enum": [
+              "easy",
+              "adequate",
+              "difficult",
+              "could_not_answer"
+            ]
+          },
+          "socialDesirability": {
+            "enum": [
+              "low",
+              "moderate",
+              "high",
+              "unknown"
+            ]
+          },
+          "midpointMeaning": {
+            "enum": [
+              "not_used",
+              "genuine_midpoint",
+              "uncertainty",
+              "mixed_reasons",
+              "context_dependent",
+              "other"
+            ]
+          },
+          "issueTags": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "severity": {
+            "enum": [
+              "none",
+              "minor",
+              "major",
+              "blocking"
+            ]
+          },
+          "suggestedRevision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "sessionNotes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

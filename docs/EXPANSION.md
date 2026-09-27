@@ -1,76 +1,69 @@
 # Research-bank expansion
 
-## Batch 0.1
+## Batch 0.1: 60 → 96 items
 
-The first expansion moves the candidate bank from 60 to 96 items.
-
-It is intentionally targeted rather than proportional.
+The first expansion was targeted rather than proportional.
 
 Priorities:
 
 1. cover headline constructs that had no item at all;
 2. add counter-keyed agreement items where the prototype was strongly one-sided;
 3. preserve independence between constructs rather than manufacturing opposite poles;
-4. add lower-level breadth only after headline coverage improves.
+4. add lower-level breadth only after headline coverage improved.
 
-## Added coverage
+This batch added 36 items and reduced uncovered headline constructs to two: `PL10` and `PL11`.
 
-The batch adds first candidate items for several previously uncovered headline constructs, including:
+## Batch 0.2: 96 → 145 items
 
-- care / relational normative ethics;
-- stimulation;
-- hedonism;
-- benevolence;
-- rational / a priori epistemic reliance;
-- reductionism / emergence;
-- baseline human benevolence;
-- baseline human selfishness / competition;
-- tolerance of otherness;
-- humanity-nature worldview;
-- democratic authorization;
-- liberty as noninterference;
-- rights as side constraints.
+The second expansion is a **coverage-completion batch**.
 
-It also adds counter-keyed items for constructs such as:
+It adds exactly one candidate item for every remaining uncovered headline or primary construct:
 
-- moral context sensitivity;
-- categorical moral reasons;
-- impartial beneficence;
-- Care, Loyalty, and Purity foundations;
-- scientific-method reliance;
-- physicalism;
-- consciousness reducibility;
-- human-nature mutability;
-- supernatural reality;
-- afterlife;
-- cosmic purpose;
-- constructed meaning.
+- 2 previously uncovered headline constructs;
+- 47 previously uncovered primary constructs;
+- 49 new items total.
 
-## What this does not mean
+After this batch:
 
-The bank is still not balanced enough for production scoring.
+- all 60 headline constructs have at least one candidate item;
+- all 62 primary constructs have at least one candidate item;
+- diagnostic and research constructs may still be intentionally uncovered because they are not required in the standard public form.
 
-Counter-keyed wording is not automatically superior, and mechanically negated statements can introduce their own method factor. Polarity balance is therefore treated as an item-development constraint to investigate, not a quota to satisfy blindly.
+### Important limitation
 
-No new item has empirical discrimination, difficulty, loading, reliability, validity, or DIF evidence.
+Coverage is not measurement quality.
 
-## Next expansion priorities
+One item is not enough to support a reliable standalone score. This milestone only ensures the project can now inspect every intended public-facing construct in the item-development process.
 
-The next batches should preferentially cover currently unmeasured primary constructs and deepen constructs with only one candidate item.
+The next expansion phases should deepen constructs based on:
 
-Particular priority should go to:
+- theoretical breadth;
+- cognitive-review findings;
+- need for counter-keyed wording;
+- scenario/vignette coverage;
+- anticipated local dependence;
+- later pilot information and discrimination.
 
-- distributive-principle family;
-- property-right strength;
-- positive/capability liberty;
-- non-domination;
-- procedural/substantive justice;
-- punishment rationales;
-- epistemic intuition, revelation, and truth attainability;
-- social dominance / anti-egalitarianism;
-- cooperation / competition;
-- social-category construction;
-- religious centrality and sacredness;
-- special obligations, contractualism, demandingness, and doing/allowing.
+## Design principles retained
 
-Before pilot deployment, the bank should also receive human cognitive interviews and blind ideological-cue review.
+- No contemporary party, candidate, or culture-war item is used as a shortcut for a deeper construct.
+- Independent constructs are not forced into bipolar opposition.
+- Values use direct importance judgments where appropriate.
+- Categorical families use diagnostic or ranking structures when a slider would misrepresent them.
+- Item records contain intended targets, not final scoring weights.
+
+## Current bank status
+
+`candidate-v0.4.json` contains 145 candidate items.
+
+It has:
+
+- complete headline/primary candidate coverage;
+- no psychometric scoring model;
+- no empirical factor structure;
+- no item discrimination or threshold estimates;
+- no reliability estimates;
+- no DIF or invariance evidence;
+- no validated short form.
+
+The bank is ready for systematic cognitive review, not production scoring.

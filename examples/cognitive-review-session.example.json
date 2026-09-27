@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "protocolVersion": "0.1.0",
+  "bankVersion": "0.4.0",
+  "reviewSessionId": "EXAMPLE-SESSION",
+  "participantCode": "EXAMPLE-PARTICIPANT",
+  "language": "en",
+  "mode": "moderated",
+  "consentConfirmed": true,
+  "startedAt": null,
+  "completedAt": null,
+  "itemReviews": [
+    {
+      "itemId": "MEI001",
+      "itemRevision": 1,
+      "observedResponse": {
+        "state": "answered",
+        "value": 1
+      },
+      "comprehension": "clear",
+      "paraphrase": "EXAMPLE ONLY: The question asks whether morality can be independent of unanimous approval.",
+      "reasoning": "EXAMPLE ONLY: Brief explanation of what the reviewer considered.",
+      "unclearTerms": [],
+      "alternateInterpretations": [],
+      "answerability": "easy",
+      "socialDesirability": "low",
+      "midpointMeaning": "not_used",
+      "issueTags": [],
+      "severity": "none",
+      "suggestedRevision": null,
+      "notes": "EXAMPLE ONLY. This file is not participant data."
+    }
+  ],
+  "sessionNotes": "EXAMPLE ONLY. Do not store real direct identifiers in review records."
+}

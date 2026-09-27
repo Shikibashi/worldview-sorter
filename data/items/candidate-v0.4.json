@@ -1,0 +1,6395 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.4.0",
+  "status": "candidate",
+  "purpose": "145-item candidate research pool with complete headline and primary construct coverage. Not psychometrically validated.",
+  "itemIdPolicy": "Permanent IDs use <domain>I<3 digits>. IDs are never reused after retirement.",
+  "items": [
+    {
+      "id": "MEI001",
+      "revision": 1,
+      "domainId": "ME",
+      "text": "An action can be morally wrong even if every person who knows about it approves of it.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "ME-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "objectivity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI002",
+      "revision": 2,
+      "domainId": "ME",
+      "text": "An action cannot be morally wrong independently of people's attitudes toward it.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME01",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "ME-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "objectivity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI003",
+      "revision": 2,
+      "domainId": "ME",
+      "text": "A moral rule can have genuine exceptions even when everyone agrees on the relevant facts.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "context"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI004",
+      "revision": 2,
+      "domainId": "ME",
+      "text": "Some moral requirements can bind a person even when following them conflicts with that person's own goals and preferences.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "reasons"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI005",
+      "revision": 2,
+      "domainId": "ME",
+      "text": "Two fully informed people disagree about whether an action is morally wrong. Which description best fits the disagreement?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "diagnostic",
+      "targets": [
+        {
+          "constructId": "ME06",
+          "relation": "diagnostic",
+          "role": "primary"
+        },
+        {
+          "constructId": "ME07",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "one_mistaken",
+          "label": "At least one of them must be mistaken about a moral fact."
+        },
+        {
+          "id": "person_relative",
+          "label": "Each claim can be correct relative to the individual making it."
+        },
+        {
+          "id": "group_relative",
+          "label": "Each claim can be correct relative to a social or cultural framework."
+        },
+        {
+          "id": "both_false",
+          "label": "Both are treating morality as factual when such moral facts do not exist."
+        },
+        {
+          "id": "not_truth_apt",
+          "label": "Their moral statements need not be literal claims that are true or false."
+        },
+        {
+          "id": "other",
+          "label": "None of these descriptions fits well."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "truth_aptness",
+        "disagreement"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI001",
+      "revision": 2,
+      "domainId": "NE",
+      "text": "When one action would produce much better overall consequences than another, that difference can by itself be a strong moral reason to choose it.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "consequences"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI002",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Some actions remain wrong even when performing them would clearly produce the best overall outcome.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "constraints"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI003",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "A good moral judgment should ask what kind of person an action expresses or helps someone become.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "virtue"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI004",
+      "revision": 2,
+      "domainId": "NE",
+      "text": "A stranger's well-being should count just as much as the same amount of well-being for someone close to me.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE07",
+          "relation": "positive",
+          "role": "primary"
+        },
+        {
+          "constructId": "NE09",
+          "relation": "negative",
+          "role": "secondary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "impartiality"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "oxford-utilitarianism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI005",
+      "revision": 2,
+      "domainId": "NE",
+      "text": "A rescue team can save five trapped people only by deliberately causing serious but nonfatal harm to one uninvolved person who would otherwise be safe. There is no alternative. Which response is closest to your view?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {
+          "constructId": "NE08",
+          "relation": "diagnostic",
+          "role": "primary"
+        },
+        {
+          "constructId": "NE01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        },
+        {
+          "constructId": "NE02",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "never",
+          "label": "Deliberately injuring the person is impermissible regardless of the numbers."
+        },
+        {
+          "id": "almost_never",
+          "label": "It is normally impermissible, with only exceptional cases possibly overriding that."
+        },
+        {
+          "id": "depends",
+          "label": "The answer depends on further details not given here."
+        },
+        {
+          "id": "usually",
+          "label": "It is normally permissible when it is the only way to save substantially more people."
+        },
+        {
+          "id": "required",
+          "label": "It is permissible, and may be required, if it clearly produces the best outcome."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "NE-S01",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "instrumental_harm",
+        "vignette"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "oxford-utilitarianism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI001",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "Preventing needless suffering is an important consideration when deciding whether conduct is morally acceptable.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "care"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI002",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "People should have equal moral standing even when they differ greatly in status, wealth, or social importance.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "equality"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI003",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "Fairness often requires rewards or burdens to reflect what people contributed.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "proportionality"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI004",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "Loyalty to a group can be a moral virtue even when remaining loyal involves personal sacrifice.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "loyalty"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI005",
+      "revision": 2,
+      "domainId": "MF",
+      "text": "Respecting established roles and authorities can have moral value apart from the immediate consequences.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "authority"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI006",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "Some acts can be morally degrading or defiling even when they cause no obvious material harm.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "purity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI001",
+      "revision": 2,
+      "domainId": "VA",
+      "text": "Thinking independently and developing my own ideas.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "self_direction"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI002",
+      "revision": 2,
+      "domainId": "VA",
+      "text": "Personal safety and a secure immediate environment.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA09",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "security"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI003",
+      "revision": 2,
+      "domainId": "VA",
+      "text": "Demonstrating competence and accomplishing difficult things.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "achievement"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI004",
+      "revision": 2,
+      "domainId": "VA",
+      "text": "Justice and protection for people beyond my own social circles.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA17",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "universalism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI005",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Rank these values from most important to least important when they genuinely conflict.",
+      "responseType": "ranking",
+      "responseScaleId": "ranking_all",
+      "status": "candidate",
+      "contentKind": "ranking",
+      "targets": [
+        {
+          "constructId": "VA02",
+          "relation": "tradeoff",
+          "role": "primary"
+        },
+        {
+          "constructId": "VA09",
+          "relation": "tradeoff",
+          "role": "primary"
+        },
+        {
+          "constructId": "VA05",
+          "relation": "tradeoff",
+          "role": "primary"
+        },
+        {
+          "constructId": "VA11",
+          "relation": "tradeoff",
+          "role": "primary"
+        },
+        {
+          "constructId": "VA17",
+          "relation": "tradeoff",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "autonomy",
+          "label": "Choosing and directing my own actions."
+        },
+        {
+          "id": "security",
+          "label": "Protecting personal safety and stability."
+        },
+        {
+          "id": "achievement",
+          "label": "Accomplishing difficult things and demonstrating competence."
+        },
+        {
+          "id": "tradition",
+          "label": "Preserving inherited customs and ways of life."
+        },
+        {
+          "id": "universal_concern",
+          "label": "Protecting the rights and welfare of people generally."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "value_tradeoff"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI001",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "Even a belief I am highly confident in should remain open to revision if sufficiently strong contrary evidence appears.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "EP-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "fallibilism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI002",
+      "revision": 2,
+      "domainId": "EP",
+      "text": "Some beliefs can become so well justified that future contrary evidence should not normally reopen them.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP01",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "EP-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "fallibilism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI003",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "Direct observation is an especially important source of evidence about how the world works.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "empiricism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI004",
+      "revision": 2,
+      "domainId": "EP",
+      "text": "Methods that expose claims to systematic testing deserve more confidence than methods that cannot be checked in comparable ways.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "science"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI005",
+      "revision": 2,
+      "domainId": "EP",
+      "text": "When I cannot evaluate a technical claim myself, agreement among qualified experts should count as substantial evidence.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP07",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "expertise",
+        "testimony"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI001",
+      "revision": 2,
+      "domainId": "OM",
+      "text": "Reality may include fundamental entities or powers that no natural science could, even in principle, fully describe.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM01",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "naturalism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI002",
+      "revision": 1,
+      "domainId": "OM",
+      "text": "Everything that exists is ultimately physical, even if some physical systems have very complex properties.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "physicalism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI003",
+      "revision": 2,
+      "domainId": "OM",
+      "text": "At least some abstract objects, such as numbers, exist independently of human thought and language.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM03",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "abstract_objects"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI004",
+      "revision": 1,
+      "domainId": "OM",
+      "text": "Purposes or ends are genuine features of at least some natural processes, not merely descriptions imposed by observers.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "OM-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "teleology"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI005",
+      "revision": 1,
+      "domainId": "OM",
+      "text": "Nature itself contains no purposes; talk of purpose is something observers add when describing natural processes.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM05",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "OM-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "teleology"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI001",
+      "revision": 2,
+      "domainId": "MS",
+      "text": "A complete account of the brain and its physical processes could, in principle, fully explain consciousness.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MS01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "consciousness",
+        "reduction"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI002",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "What makes a future person the same person as me depends mainly on psychological continuity such as memory, intentions, and character.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MS03",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "personal_identity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI003",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "The self is better understood as an ongoing process or organization than as a separate inner substance that remains unchanged.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MS04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "self"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI004",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "A notebook, computer, or other external tool can sometimes become a genuine part of a person's cognitive process rather than merely an aid to it.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MS05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "extended_mind"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI005",
+      "revision": 2,
+      "domainId": "MS",
+      "text": "A machine scans you perfectly, destroys your body, and creates an exact functioning duplicate elsewhere with all your memories and dispositions. Which is closest to your view?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {
+          "constructId": "MS03",
+          "relation": "diagnostic",
+          "role": "primary"
+        },
+        {
+          "constructId": "MS07",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "same_person",
+          "label": "The duplicate is straightforwardly the same person."
+        },
+        {
+          "id": "survival_not_identity",
+          "label": "Something important survives, but strict numerical identity is unclear or lost."
+        },
+        {
+          "id": "new_person",
+          "label": "The duplicate is a new person despite the perfect continuity."
+        },
+        {
+          "id": "depends",
+          "label": "The answer depends on a further fact about persons or consciousness."
+        },
+        {
+          "id": "other",
+          "label": "None of these descriptions fits well."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "MS-S01",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "personal_identity",
+        "teletransportation"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI001",
+      "revision": 2,
+      "domainId": "AH",
+      "text": "Human beings sometimes exercise genuine control over which action they choose.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "free_will"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "free-will-inventory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI002",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Given the complete state of the world and the laws governing it, only one future is physically possible.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "determinism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "free-will-inventory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI003",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "A person can sometimes deserve moral blame for an action even after every causal explanation of why they acted has been given.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "responsibility"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI004",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Many important human dispositions can change substantially when environments, incentives, and institutions change.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH06",
+          "relation": "positive",
+          "role": "primary"
+        },
+        {
+          "constructId": "AH09",
+          "relation": "positive",
+          "role": "secondary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "malleability"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI005",
+      "revision": 2,
+      "domainId": "AH",
+      "text": "A person's conscious reasons can make a causal difference to what they do.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH10",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "reasons",
+        "agency"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI001",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Which option is closest to your current view about divine reality?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "diagnostic",
+      "targets": [
+        {
+          "constructId": "RC01",
+          "relation": "diagnostic",
+          "role": "primary"
+        },
+        {
+          "constructId": "RC11",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "personal_divine",
+          "label": "At least one personal or agent-like God probably exists."
+        },
+        {
+          "id": "impersonal_divine",
+          "label": "Some divine or sacred reality probably exists, but not as a personal agent."
+        },
+        {
+          "id": "uncertain",
+          "label": "I am substantially uncertain whether any divine reality exists."
+        },
+        {
+          "id": "probably_none",
+          "label": "Probably no divine reality exists."
+        },
+        {
+          "id": "none",
+          "label": "No divine reality exists."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "deity",
+        "divinity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI002",
+      "revision": 2,
+      "domainId": "RC",
+      "text": "If some divine reality exists, it is more likely to be capable of intentions than to be wholly impersonal.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "conditional",
+        "all": [
+          {
+            "kind": "response_option_in",
+            "itemId": "RCI001",
+            "optionIds": [
+              "personal_divine",
+              "impersonal_divine",
+              "uncertain"
+            ]
+          }
+        ]
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood",
+        "not_applicable"
+      ],
+      "contentTags": [
+        "divinity",
+        "agency"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI003",
+      "revision": 2,
+      "domainId": "RC",
+      "text": "At least some part of reality is genuinely supernatural rather than entirely natural.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "supernatural"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI004",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Some important aspect of a person can continue to exist after biological death.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC07",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "afterlife"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI005",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Human life is part of an objective purpose built into reality rather than a purpose created only by human beings.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC08",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "cosmic_purpose"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EXI001",
+      "revision": 1,
+      "domainId": "EX",
+      "text": "A human life can have objective meaning even if the person living it does not experience that life as meaningful.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EX01",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "objective_meaning"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EXI002",
+      "revision": 1,
+      "domainId": "EX",
+      "text": "People can create genuine meaning through their projects, relationships, and commitments even if the universe supplies no purpose for them.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EX03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "constructed_meaning"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EXI003",
+      "revision": 2,
+      "domainId": "EX",
+      "text": "Human life has no objective meaning independent of what people create or value.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EX04",
+          "relation": "positive",
+          "role": "primary"
+        },
+        {
+          "constructId": "EX01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "nihilism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EXI004",
+      "revision": 1,
+      "domainId": "EX",
+      "text": "The world generally contains many worthwhile possibilities that can be discovered or created.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EX06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "enticing_world"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "primal-world-beliefs"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI001",
+      "revision": 2,
+      "domainId": "SO",
+      "text": "Individuals have moral claims that should not be overridden merely because doing so would benefit a larger group.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "individualism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI002",
+      "revision": 2,
+      "domainId": "SO",
+      "text": "Some groups can have legitimate goals that cannot be reduced entirely to the separate goals of their individual members.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "collectivism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI003",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Who a person is depends in important ways on relationships and social roles, not only on traits inside that individual.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "relational_self"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI004",
+      "revision": 2,
+      "domainId": "SO",
+      "text": "A stranger on the other side of the world can have moral claims on me as weighty as those of someone in my own community.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO09",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "moral_scope",
+        "cosmopolitanism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI005",
+      "revision": 2,
+      "domainId": "SO",
+      "text": "When the two genuinely conflict, which consideration should normally receive greater moral priority?",
+      "responseType": "paired_choice",
+      "responseScaleId": "paired5",
+      "status": "candidate",
+      "contentKind": "tradeoff",
+      "targets": [
+        {
+          "constructId": "SO09",
+          "relation": "tradeoff",
+          "role": "primary"
+        },
+        {
+          "constructId": "NE09",
+          "relation": "tradeoff",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "A",
+          "label": "A: Special obligations arising from membership in one's close group."
+        },
+        {
+          "id": "B",
+          "label": "B: Equal consideration of people regardless of group membership."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "partiality",
+        "moral_scope"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI001",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A political institution can sometimes have a genuine moral right to impose rules by force, not merely the practical ability to do so.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL01",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "legitimacy"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI002",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "People normally have a moral duty to obey valid laws because they are laws, even when they independently disagree with the rule.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "political_obligation"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI003",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Important political decisions should generally be made by a central authority capable of applying one rule across the whole jurisdiction.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "PL-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "centralization"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI004",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Political power should generally be dispersed among smaller or overlapping institutions even when that produces more variation between places.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL05",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": "PL-M01",
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "decentralization"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI005",
+      "revision": 2,
+      "domainId": "PL",
+      "text": "Rank these coordination mechanisms by how much weight they should generally carry when more than one is feasible.",
+      "responseType": "ranking",
+      "responseScaleId": "ranking_all",
+      "status": "candidate",
+      "contentKind": "diagnostic",
+      "targets": [
+        {
+          "constructId": "PL13",
+          "relation": "tradeoff",
+          "role": "primary"
+        },
+        {
+          "constructId": "PL14",
+          "relation": "tradeoff",
+          "role": "primary"
+        },
+        {
+          "constructId": "PL15",
+          "relation": "tradeoff",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "market",
+          "label": "Decentralized voluntary exchange and prices."
+        },
+        {
+          "id": "democratic",
+          "label": "Collective or democratic decision-making by affected participants."
+        },
+        {
+          "id": "expert",
+          "label": "Expert or administrative planning based on specialized knowledge."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "coordination",
+        "markets",
+        "planning"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI006",
+      "revision": 1,
+      "domainId": "ME",
+      "text": "Once the relevant facts are known, the same moral rule should yield the same judgment across cases.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME03",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "context",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI007",
+      "revision": 1,
+      "domainId": "ME",
+      "text": "A moral requirement gives a person a reason to act only when it connects to something that person already wants or values.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME05",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "reasons",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI008",
+      "revision": 1,
+      "domainId": "ME",
+      "text": "Some moral questions cannot be settled by applying general rules alone; the particular features of the case can be decisive.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME04",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "particularism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI006",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Moral judgment should take seriously the needs created by dependence, vulnerability, and ongoing relationships.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "care",
+        "relationships"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI007",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "What kind of character an action expresses should matter less than whether the action itself was right or wrong.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE03",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "virtue",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI008",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "It can be reasonable to give greater moral weight to the serious interests of people close to me than to equal interests of distant strangers.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE07",
+          "relation": "negative",
+          "role": "primary"
+        },
+        {
+          "constructId": "NE09",
+          "relation": "positive",
+          "role": "secondary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "partiality",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI007",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "Whether someone suffers does not by itself tell us whether an action is morally wrong.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF01",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "care",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI008",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "Loyalty to a group has no moral value apart from whether the group is actually doing something good.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF04",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "loyalty",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MFI009",
+      "revision": 1,
+      "domainId": "MF",
+      "text": "If no one is harmed or wronged, disgust or impurity alone is not a moral reason to condemn an act.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MF06",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "purity",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "mfq2"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI006",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Novelty, excitement, and change.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "stimulation"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI007",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Pleasure and enjoyment.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "hedonism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI008",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Caring for the well-being of people close to me.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA15",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "benevolence"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI006",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "Reasoning alone can sometimes justify knowledge without relying on new observation.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "rationalism",
+        "a_priori"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI007",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "A claim can deserve high confidence even when it cannot be tested by systematic empirical methods.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP06",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "science",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI008",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "Longstanding traditions can preserve knowledge that no single generation could easily reconstruct for itself.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP08",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "tradition"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI006",
+      "revision": 1,
+      "domainId": "OM",
+      "text": "Higher-level properties can always, in principle, be fully explained by the behavior and arrangement of their lower-level parts.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM04",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "reductionism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI007",
+      "revision": 1,
+      "domainId": "OM",
+      "text": "Some higher-level properties are genuinely novel and cannot be fully reduced to descriptions of their lower-level parts.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM04",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "emergence"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "OMI008",
+      "revision": 1,
+      "domainId": "OM",
+      "text": "At least some features of mind or reality are fundamentally nonphysical.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "OM02",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "nonphysicalism",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI006",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "Even a complete physical description of the brain could leave something about conscious experience unexplained.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MS01",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "consciousness",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI007",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "There is a persisting subject of experience that remains the same self through major changes in memory and personality.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MS04",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "substantial_self"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MSI008",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "Continuity of the living body matters more to personal identity than continuity of memories or personality.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "MS03",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "personal_identity",
+        "bodily_continuity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI006",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Without coercion or reward, people are often naturally capable of sustained cooperation and concern for others.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "benevolence"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI007",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Even under favorable institutions, self-interest and competition remain powerful default tendencies in human behavior.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "self_interest",
+        "competition"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI008",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Many basic human dispositions remain fairly stable even when social conditions change substantially.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH06",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "malleability",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI006",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Reality is entirely natural; there are no genuinely supernatural beings, forces, or realms.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC03",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "naturalism",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI007",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "When biological death permanently ends brain function, the person no longer exists in any form.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC07",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "afterlife",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI008",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Any purpose human life has is created by people rather than built into reality itself.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC08",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "cosmic_purpose",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EXI005",
+      "revision": 1,
+      "domainId": "EX",
+      "text": "If the universe supplies no objective purpose, human projects cannot create genuine meaning by themselves.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EX03",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "constructed_meaning",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EXI006",
+      "revision": 1,
+      "domainId": "EX",
+      "text": "A human life can have objective meaning without being part of a cosmic or divine purpose.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EX04",
+          "relation": "negative",
+          "role": "primary"
+        },
+        {
+          "constructId": "EX01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "objective_meaning",
+        "counter_keyed"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EXI007",
+      "revision": 1,
+      "domainId": "EX",
+      "text": "For ordinary people, the world is generally more dangerous than safe.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EX05",
+          "relation": "negative",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "world_safety"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "primal-world-beliefs"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI006",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "A society can remain healthy even when its members hold sharply different values and ways of life.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "tolerance",
+        "pluralism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI007",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Humans are one part of ecological systems and should not treat the rest of nature merely as a resource for human purposes.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO12",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "nature",
+        "ecocentrism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI008",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Social categories usually reflect stable underlying differences rather than mainly historical conventions.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO10",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "essentialism",
+        "social_categories"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI006",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A political system has a stronger claim to legitimacy when those subject to its rules have a meaningful and roughly equal role in authorizing it.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "democracy",
+        "authorization"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI007",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Political freedom primarily means having a protected sphere in which others do not interfere with one's choices.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "liberty",
+        "noninterference"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI008",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Some individual rights should constrain what governments may do even when violating those rights would benefit a large majority.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL09",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "rights",
+        "side_constraints"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "MEI009",
+      "revision": 1,
+      "domainId": "ME",
+      "text": "A genuine moral requirement should apply to any person in the same morally relevant circumstances, regardless of who they are.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "ME02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "universality"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI009",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "A moral principle is defective if some person affected by it could reasonably reject it as a basis for governing everyone.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "contractualism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI010",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Mutually advantageous agreement among people with different interests can provide a foundation for moral rules.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "contractarianism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI011",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "People may permissibly give substantial priority to their own projects even when they could produce somewhat more good by setting those projects aside.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE10",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "agent_relative",
+        "prerogatives"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI012",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Moral obligations can sometimes require very large personal sacrifices when much greater harm to others can thereby be prevented.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE11",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "demandingness"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "NEI013",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Directly causing a harm is normally morally worse than merely allowing an equally serious harm to occur.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "NE12",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "doing_allowing"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI009",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Having influence or authority over other people.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "power_dominance"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI010",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Having substantial control over money, property, or other valuable resources.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA07",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "power_resources"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI011",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Protecting my public image and avoiding humiliation.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA08",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "face"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI012",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Stability and safety for society as a whole.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA10",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "societal_security"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI013",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Following rules and formal obligations even when doing so is inconvenient.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA12",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "conformity_rules"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI014",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Avoiding actions that upset or embarrass people around me.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA13",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "conformity_interpersonal"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI015",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Remaining modest about my own importance and accomplishments.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA14",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "humility"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI016",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Being someone the people close to me can reliably depend on.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA16",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "benevolence_dependability"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI017",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Protecting the natural environment for its own sake.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA18",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "universalism_nature"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "VAI018",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Understanding and accepting people whose beliefs or ways of life differ sharply from mine.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "VA19",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "universalism_tolerance"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "schwartz-refined"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI009",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "Knowledge in complex fields is usually made of interconnected claims that can change as new evidence and concepts develop.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP02",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "knowledge_complexity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI010",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "For at least some questions, human inquiry can arrive at answers that are objectively correct rather than merely useful or conventional.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "truth_attainability"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI011",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "A strong intuitive seeming can sometimes provide genuine justification for a belief even before supporting evidence is available.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP09",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "intuition"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI012",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "A revelation believed to come from a divine or supernatural source can sometimes provide genuine knowledge.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP10",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "revelation"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "EPI013",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "When a mature scientific theory repeatedly succeeds, that is evidence that at least some of the unobservable entities or structures it describes are approximately real.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "EP13",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "scientific_realism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "philpapers-2020"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI009",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Important human behavior usually results from several interacting causes rather than one dominant kind of cause.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH07",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "complexity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI010",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Biological differences and inherited dispositions can make a substantial causal contribution to human behavior.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH08",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "biological_causes"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "AHI011",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Motives or processes outside conscious awareness can make a substantial causal difference to what people do.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "AH11",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "unconscious_causes"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI009",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "A divine or supernatural agent can sometimes influence ordinary events in the world.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC04",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "intervention"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI010",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Events can sometimes occur through genuinely miraculous action rather than through ordinary natural processes alone.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "miracles"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI011",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "A message believed to be genuine divine revelation can legitimately guide what a person ought to believe or do.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "revelation_authority"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI012",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Some things can possess a sacred status that gives us reasons not to treat them merely as ordinary objects or resources.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC09",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "sacredness"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "RCI013",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Religious or spiritual commitments in my life.",
+      "responseType": "likert",
+      "responseScaleId": "importance5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "RC10",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "religious_centrality"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI009",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Some social groups should have greater power and status than other groups.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO05",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "group_dominance"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "sdo7"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI010",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Reducing large differences in social standing between groups is not, by itself, an important social goal.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO06",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "anti_egalitarianism"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "sdo7"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI011",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "People can often solve shared problems best through voluntary cooperation rather than by trying to defeat one another.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO07",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "cooperation"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI012",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Competition between people or groups is often a healthy way to discover who can perform better or use resources more effectively.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO08",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "competition"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "koltko-2004"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "SOI013",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Many social categories exist partly because people collectively create, maintain, and interpret them through social practices.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "SO11",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "social_construction"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI009",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Political coercion requires meaningful consent from the people subjected to it in order to be fully legitimate.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL03",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "consent",
+        "legitimacy"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI010",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A person is politically unfree when another person or institution holds uncontrolled power over them, even if that power is rarely exercised.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL07",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "non_domination"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI011",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Freedom sometimes requires more than noninterference; people may also need real capabilities and opportunities to pursue important choices.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL08",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "positive_liberty",
+        "capability"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI012",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Rank these distributive principles by how much weight they should usually receive when allocating important social resources.",
+      "responseType": "ranking",
+      "responseScaleId": "ranking_all",
+      "status": "candidate",
+      "contentKind": "ranking",
+      "targets": [
+        {
+          "constructId": "PL10",
+          "relation": "tradeoff",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "equality",
+          "label": "Equality: distribute shares as equally as possible."
+        },
+        {
+          "id": "need",
+          "label": "Need: give more to those with greater needs."
+        },
+        {
+          "id": "desert",
+          "label": "Desert: give more to those who contributed or earned more."
+        },
+        {
+          "id": "sufficiency",
+          "label": "Sufficiency: ensure everyone reaches an adequate threshold first."
+        },
+        {
+          "id": "priority",
+          "label": "Priority: give extra weight to improving the position of those who are worse off."
+        },
+        {
+          "id": "entitlement",
+          "label": "Entitlement: preserve holdings that arose through legitimate acquisition and transfer."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "distribution",
+        "justice"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI013",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "When people acquire and transfer property without force or fraud, they gain strong moral claims against others taking or controlling it.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL11",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "property_rights"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI014",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Some productive resources can legitimately be owned in common rather than by particular individuals or firms.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL12",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "common_ownership"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI015",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A decision can be just because it was reached through fair procedures even when the resulting outcome is unequal or disappointing.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL16",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "procedural_justice"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI016",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A procedure can be fair in form yet still produce an unjust result that institutions have reason to correct.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL17",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "substantive_justice"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI017",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Wrongdoers can deserve punishment because of what they did, even when punishing them would have no beneficial future effects.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL18",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "retribution"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI018",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A central purpose of punishment is to discourage future wrongdoing by making harmful conduct costly.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL19",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "deterrence"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI019",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A central purpose of justice after wrongdoing should be to repair harm, rehabilitate offenders, and restore workable relationships where possible.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL20",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "rehabilitation",
+        "restoration"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI020",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Political institutions should take the interests of people outside their own country seriously even when doing so brings no reciprocal national benefit.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL22",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "cosmopolitan_scope"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI021",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Shared national membership can create special political obligations to compatriots that do not extend equally to everyone in the world.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL23",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "national_obligation"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI022",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Overlapping and competing institutions can sometimes govern better than assigning final authority to one unified institution.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL24",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "polycentricity"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    },
+    {
+      "id": "PLI023",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Religious doctrines or authorities should have independent standing as a source of public law, not merely influence citizens as private beliefs.",
+      "responseType": "likert",
+      "responseScaleId": "agreement5",
+      "status": "candidate",
+      "contentKind": "principle",
+      "targets": [
+        {
+          "constructId": "PL26",
+          "relation": "positive",
+          "role": "primary"
+        }
+      ],
+      "options": [],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "religious_public_authority"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "project-theory"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": null
+    }
+  ]
+}
