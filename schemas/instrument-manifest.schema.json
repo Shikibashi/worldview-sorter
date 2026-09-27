@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/instrument-manifest.schema.json",
+  "title": "Worldview Sorter Instrument Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "instrumentVersion",
+    "registryVersion",
+    "bankVersion",
+    "status",
+    "purpose",
+    "nominalPoolSize",
+    "ordering",
+    "branching",
+    "responseStatePolicy",
+    "scoringModelVersion",
+    "entries"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "instrumentVersion": {
+      "type": "string"
+    },
+    "registryVersion": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "nominalPoolSize": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "ordering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "constraints"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "fixed",
+            "randomized",
+            "randomized_constrained"
+          ]
+        },
+        "constraints": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "separateMirrorGroups",
+            "separateScenarioGroups",
+            "maxSameDomainConsecutive"
+          ],
+          "properties": {
+            "separateMirrorGroups": {
+              "type": "boolean"
+            },
+            "separateScenarioGroups": {
+              "type": "boolean"
+            },
+            "maxSameDomainConsecutive": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    "branching": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "preserveSkippedItemsInSession"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "preserveSkippedItemsInSession": {
+          "type": "boolean"
+        }
+      }
+    },
+    "responseStatePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "neutralIsAnswered",
+        "noViewIsMissingPositionData",
+        "notUnderstoodIsMissingPositionData",
+        "notApplicableIsMissingPositionData"
+      ],
+      "properties": {
+        "neutralIsAnswered": {
+          "type": "boolean"
+        },
+        "noViewIsMissingPositionData": {
+          "type": "boolean"
+        },
+        "notUnderstoodIsMissingPositionData": {
+          "type": "boolean"
+        },
+        "notApplicableIsMissingPositionData": {
+          "type": "boolean"
+        }
+      }
+    },
+    "scoringModelVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "index",
+          "itemId",
+          "itemRevision"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "itemId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}I\\d{3}$"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0.0",
+  "responseStates": [
+    {
+      "id": "answered",
+      "meaning": "A substantive response to the item."
+    },
+    {
+      "id": "no_view",
+      "meaning": "The respondent does not currently hold a view; this is missing substantive position data, not a midpoint."
+    },
+    {
+      "id": "not_understood",
+      "meaning": "The respondent cannot answer because the item or distinction is not understood."
+    },
+    {
+      "id": "not_applicable",
+      "meaning": "The item does not apply to the respondent or scenario."
+    }
+  ],
+  "scales": [
+    {
+      "id": "agreement5",
+      "responseType": "likert",
+      "ordered": true,
+      "options": [
+        {
+          "id": "strongly_disagree",
+          "value": -2,
+          "label": "Strongly disagree"
+        },
+        {
+          "id": "disagree",
+          "value": -1,
+          "label": "Disagree"
+        },
+        {
+          "id": "neutral",
+          "value": 0,
+          "label": "Neutral"
+        },
+        {
+          "id": "agree",
+          "value": 1,
+          "label": "Agree"
+        },
+        {
+          "id": "strongly_agree",
+          "value": 2,
+          "label": "Strongly agree"
+        }
+      ],
+      "allowedSpecialStates": [
+        "no_view",
+        "not_understood"
+      ]
+    },
+    {
+      "id": "paired5",
+      "responseType": "paired_choice",
+      "ordered": true,
+      "options": [
+        {
+          "id": "strong_a",
+          "value": -2,
+          "label": "Strongly favor A"
+        },
+        {
+          "id": "lean_a",
+          "value": -1,
+          "label": "Lean A"
+        },
+        {
+          "id": "equal",
+          "value": 0,
+          "label": "Neither / equal"
+        },
+        {
+          "id": "lean_b",
+          "value": 1,
+          "label": "Lean B"
+        },
+        {
+          "id": "strong_b",
+          "value": 2,
+          "label": "Strongly favor B"
+        }
+      ],
+      "allowedSpecialStates": [
+        "no_view",
+        "not_understood"
+      ]
+    },
+    {
+      "id": "single_choice",
+      "responseType": "single_choice",
+      "ordered": false,
+      "options": [],
+      "allowedSpecialStates": [
+        "no_view",
+        "not_understood",
+        "not_applicable"
+      ]
+    },
+    {
+      "id": "vignette_choice",
+      "responseType": "vignette_choice",
+      "ordered": false,
+      "options": [],
+      "allowedSpecialStates": [
+        "no_view",
+        "not_understood"
+      ]
+    },
+    {
+      "id": "ranking_all",
+      "responseType": "ranking",
+      "ordered": false,
+      "options": [],
+      "allowedSpecialStates": [
+        "no_view",
+        "not_understood"
+      ]
+    }
+  ]
+}

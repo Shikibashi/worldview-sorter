@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/response-session.schema.json",
+  "title": "Worldview Sorter Raw Response Session",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "instrumentVersion",
+    "sessionId",
+    "presentedItems",
+    "responses",
+    "scoringSnapshots"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "instrumentVersion": {
+      "type": "string"
+    },
+    "sessionId": {
+      "type": "string"
+    },
+    "startedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "presentedItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "index",
+          "itemId",
+          "itemRevision",
+          "presented",
+          "skippedByBranch"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "presented": {
+            "type": "boolean"
+          },
+          "skippedByBranch": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "responses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "itemId",
+          "itemRevision",
+          "state",
+          "value",
+          "answeredAt"
+        ],
+        "properties": {
+          "itemId": {
+            "type": "string"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "state": {
+            "enum": [
+              "answered",
+              "no_view",
+              "not_understood",
+              "not_applicable"
+            ]
+          },
+          "value": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "answeredAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "scoringSnapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "scoringModelVersion",
+          "profileModelVersion",
+          "generatedAt",
+          "resultRef"
+        ],
+        "properties": {
+          "scoringModelVersion": {
+            "type": "string"
+          },
+          "profileModelVersion": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "resultRef": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,17 +1,17 @@
-name: Validate construct registry
+name: Validate worldview data
 
 on:
   push:
     paths:
       - "data/**"
       - "schemas/**"
-      - "scripts/validate-registry.mjs"
+      - "scripts/**"
       - "package.json"
   pull_request:
     paths:
       - "data/**"
       - "schemas/**"
-      - "scripts/validate-registry.mjs"
+      - "scripts/**"
       - "package.json"
 
 jobs:

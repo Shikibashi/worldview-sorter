@@ -4,8 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate-registry.mjs",
-    "test": "node scripts/validate-registry.mjs"
+    "validate:registry": "node scripts/validate-registry.mjs",
+    "validate:items": "node scripts/validate-item-bank.mjs",
+    "validate": "npm run validate:registry && npm run validate:items",
+    "test": "npm run validate"
   },
   "engines": {
     "node": ">=20"

@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/item-bank.schema.json",
+  "title": "Worldview Sorter Item Bank",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "bankVersion",
+    "status",
+    "purpose",
+    "itemIdPolicy",
+    "items"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "pilot",
+        "calibrated",
+        "deprecated"
+      ]
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "itemIdPolicy": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "revision",
+          "domainId",
+          "text",
+          "responseType",
+          "responseScaleId",
+          "status",
+          "contentKind",
+          "targets",
+          "options",
+          "mirrorGroup",
+          "scenarioGroup",
+          "eligibility",
+          "specialStates",
+          "contentTags",
+          "provenance",
+          "notes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}I\\d{3}$"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "domainId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 8
+          },
+          "responseType": {
+            "enum": [
+              "likert",
+              "single_choice",
+              "vignette_choice",
+              "paired_choice",
+              "ranking"
+            ]
+          },
+          "responseScaleId": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "candidate",
+              "pilot",
+              "calibrated",
+              "retired"
+            ]
+          },
+          "contentKind": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "constructId",
+                "relation",
+                "role"
+              ],
+              "properties": {
+                "constructId": {
+                  "type": "string",
+                  "pattern": "^[A-Z]{2}\\d{2}$"
+                },
+                "relation": {
+                  "enum": [
+                    "positive",
+                    "negative",
+                    "diagnostic",
+                    "tradeoff"
+                  ]
+                },
+                "role": {
+                  "enum": [
+                    "primary",
+                    "secondary"
+                  ]
+                }
+              }
+            }
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "label"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "mirrorGroup": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scenarioGroup": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "eligibility": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "mode"
+                ],
+                "properties": {
+                  "mode": {
+                    "const": "always"
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "mode",
+                  "all"
+                ],
+                "properties": {
+                  "mode": {
+                    "const": "conditional"
+                  },
+                  "all": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "kind",
+                        "itemId",
+                        "optionIds"
+                      ],
+                      "properties": {
+                        "kind": {
+                          "const": "response_option_in"
+                        },
+                        "itemId": {
+                          "type": "string",
+                          "pattern": "^[A-Z]{2}I\\d{3}$"
+                        },
+                        "optionIds": {
+                          "type": "array",
+                          "minItems": 1,
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "specialStates": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "no_view",
+                "not_understood",
+                "not_applicable"
+              ]
+            }
+          },
+          "contentTags": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "provenance": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "origin",
+              "sourceRefs",
+              "license",
+              "copiedText"
+            ],
+            "properties": {
+              "origin": {
+                "enum": [
+                  "original_project_draft",
+                  "adapted",
+                  "licensed_reuse"
+                ]
+              },
+              "sourceRefs": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string"
+                }
+              },
+              "license": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "status",
+                  "spdx"
+                ],
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "undecided",
+                      "licensed",
+                      "public_domain",
+                      "permission_required"
+                    ]
+                  },
+                  "spdx": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              },
+              "copiedText": {
+                "type": "boolean"
+              }
+            }
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
