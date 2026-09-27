@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0.0",
+  "protocolVersion": "0.2.0",
+  "status": "draft",
+  "targetBankVersion": "0.5.0",
+  "purpose": "Qualitative cognitive review of candidate item interpretation before pilot psychometric data collection.",
+  "reviewUnit": "item_revision",
+  "dataPolicy": {
+    "participantCode": "pseudonymous_only",
+    "directIdentifiersProhibited": true,
+    "demographics": "optional_separate_dataset",
+    "freeTextMayContainSensitiveMaterial": "review_before_persistence"
+  },
+  "operationalTargets": {
+    "minimumIndependentReviewsPerItem": 3,
+    "preferredIndependentReviewsPerItem": 5,
+    "recommendedItemsPerSession": 20,
+    "note": "Workflow targets for qualitative review of the v0.5 candidate bank; not psychometric sample-size claims."
+  },
+  "interviewSequence": [
+    {
+      "id": "natural_answer",
+      "prompt": "Answer the item as you normally would before discussing it."
+    },
+    {
+      "id": "paraphrase",
+      "prompt": "In your own words, what is this item asking?"
+    },
+    {
+      "id": "reasoning",
+      "prompt": "What were you thinking about when you chose your answer?"
+    },
+    {
+      "id": "terms",
+      "prompt": "Were any words or phrases unclear, technical, loaded, or open to more than one meaning?"
+    },
+    {
+      "id": "alternatives",
+      "prompt": "Could someone reasonably interpret this item in a different way? If so, how?"
+    },
+    {
+      "id": "answerability",
+      "prompt": "Did the available response options let you express your actual view?"
+    },
+    {
+      "id": "social_pressure",
+      "prompt": "Did any response feel socially expected, embarrassing, virtuous, extreme, or otherwise pressured?"
+    },
+    {
+      "id": "midpoint_probe",
+      "prompt": "If you chose a midpoint or special response, what did that response mean to you in this case?"
+    },
+    {
+      "id": "revision",
+      "prompt": "How, if at all, would you rewrite the item to make your interpretation clearer without changing the idea?"
+    }
+  ],
+  "issueTags": [
+    "ambiguous_term",
+    "multiple_interpretations",
+    "double_barreled",
+    "hidden_assumption",
+    "construct_contamination",
+    "response_options_incomplete",
+    "midpoint_means_uncertainty",
+    "social_desirability_pressure",
+    "ideological_cue",
+    "reading_burden",
+    "technical_jargon",
+    "scenario_missing_fact",
+    "branching_problem",
+    "translation_risk",
+    "other"
+  ],
+  "promotionGate": {
+    "from": "candidate",
+    "to": "pilot",
+    "requirements": [
+      "Minimum independent cognitive-review target reached for the exact item revision.",
+      "No unresolved major comprehension or branching issue.",
+      "No unresolved ideological-cue or response-option defect.",
+      "Reviewer paraphrases substantially converge on the intended construct meaning.",
+      "Any revision triggered by review increments the item revision and resets review counts for the changed wording."
+    ],
+    "note": "Passing cognitive review permits pilot testing only; it does not establish reliability, validity, invariance, or calibrated scoring."
+  }
+}

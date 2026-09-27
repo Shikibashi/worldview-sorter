@@ -1,0 +1,695 @@
+{
+  "schemaVersion": "1.0.0",
+  "expansionVersion": "0.3.0",
+  "baseBankVersion": "0.4.0",
+  "resultingBankVersion": "0.5.0",
+  "itemsAdded": 97,
+  "milestone": "minimum_two_primary_indicators_for_all_public_constructs",
+  "strategy": [
+    "Add one new primary-role indicator to every headline/primary construct with fewer than two primary indicators.",
+    "Use natural counter-keying where it improves response-style balance without manufacturing false opposites.",
+    "Use vignettes, rankings, and paired tradeoffs for constructs that are poorly represented by ordinary agreement items.",
+    "Keep all new item targets theoretical; no psychometric weights are embedded."
+  ],
+  "entries": [
+    {
+      "itemId": "MEI010",
+      "domainId": "ME",
+      "primaryTarget": "ME02",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "MEI011",
+      "domainId": "ME",
+      "primaryTarget": "ME04",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "NEI014",
+      "domainId": "NE",
+      "primaryTarget": "NE01",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "NEI015",
+      "domainId": "NE",
+      "primaryTarget": "NE02",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "NEI016",
+      "domainId": "NE",
+      "primaryTarget": "NE04",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI017",
+      "domainId": "NE",
+      "primaryTarget": "NE05",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI018",
+      "domainId": "NE",
+      "primaryTarget": "NE06",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI019",
+      "domainId": "NE",
+      "primaryTarget": "NE08",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI020",
+      "domainId": "NE",
+      "primaryTarget": "NE09",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI021",
+      "domainId": "NE",
+      "primaryTarget": "NE10",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "NEI022",
+      "domainId": "NE",
+      "primaryTarget": "NE11",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "NEI023",
+      "domainId": "NE",
+      "primaryTarget": "NE12",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MFI010",
+      "domainId": "MF",
+      "primaryTarget": "MF02",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MFI011",
+      "domainId": "MF",
+      "primaryTarget": "MF03",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MFI012",
+      "domainId": "MF",
+      "primaryTarget": "MF05",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI019",
+      "domainId": "VA",
+      "primaryTarget": "VA01",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI020",
+      "domainId": "VA",
+      "primaryTarget": "VA02",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI021",
+      "domainId": "VA",
+      "primaryTarget": "VA03",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI022",
+      "domainId": "VA",
+      "primaryTarget": "VA04",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI023",
+      "domainId": "VA",
+      "primaryTarget": "VA06",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI024",
+      "domainId": "VA",
+      "primaryTarget": "VA07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI025",
+      "domainId": "VA",
+      "primaryTarget": "VA08",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI026",
+      "domainId": "VA",
+      "primaryTarget": "VA10",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI027",
+      "domainId": "VA",
+      "primaryTarget": "VA11",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI028",
+      "domainId": "VA",
+      "primaryTarget": "VA12",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI029",
+      "domainId": "VA",
+      "primaryTarget": "VA13",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI030",
+      "domainId": "VA",
+      "primaryTarget": "VA14",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI031",
+      "domainId": "VA",
+      "primaryTarget": "VA15",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI032",
+      "domainId": "VA",
+      "primaryTarget": "VA16",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI033",
+      "domainId": "VA",
+      "primaryTarget": "VA18",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI034",
+      "domainId": "VA",
+      "primaryTarget": "VA19",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EPI014",
+      "domainId": "EP",
+      "primaryTarget": "EP02",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EPI015",
+      "domainId": "EP",
+      "primaryTarget": "EP03",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EPI016",
+      "domainId": "EP",
+      "primaryTarget": "EP04",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EPI017",
+      "domainId": "EP",
+      "primaryTarget": "EP05",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EPI018",
+      "domainId": "EP",
+      "primaryTarget": "EP07",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EPI019",
+      "domainId": "EP",
+      "primaryTarget": "EP08",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EPI020",
+      "domainId": "EP",
+      "primaryTarget": "EP09",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EPI021",
+      "domainId": "EP",
+      "primaryTarget": "EP10",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EPI022",
+      "domainId": "EP",
+      "primaryTarget": "EP13",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "OMI009",
+      "domainId": "OM",
+      "primaryTarget": "OM01",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI010",
+      "domainId": "OM",
+      "primaryTarget": "OM03",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI009",
+      "domainId": "MS",
+      "primaryTarget": "MS05",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "AHI012",
+      "domainId": "AH",
+      "primaryTarget": "AH01",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "AHI013",
+      "domainId": "AH",
+      "primaryTarget": "AH02",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "AHI014",
+      "domainId": "AH",
+      "primaryTarget": "AH03",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "AHI015",
+      "domainId": "AH",
+      "primaryTarget": "AH04",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "AHI016",
+      "domainId": "AH",
+      "primaryTarget": "AH05",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "AHI017",
+      "domainId": "AH",
+      "primaryTarget": "AH07",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "AHI018",
+      "domainId": "AH",
+      "primaryTarget": "AH08",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "AHI019",
+      "domainId": "AH",
+      "primaryTarget": "AH09",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "AHI020",
+      "domainId": "AH",
+      "primaryTarget": "AH10",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "AHI021",
+      "domainId": "AH",
+      "primaryTarget": "AH11",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "RCI014",
+      "domainId": "RC",
+      "primaryTarget": "RC01",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI015",
+      "domainId": "RC",
+      "primaryTarget": "RC02",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "RCI016",
+      "domainId": "RC",
+      "primaryTarget": "RC04",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "RCI017",
+      "domainId": "RC",
+      "primaryTarget": "RC05",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "RCI018",
+      "domainId": "RC",
+      "primaryTarget": "RC06",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "RCI019",
+      "domainId": "RC",
+      "primaryTarget": "RC09",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "RCI020",
+      "domainId": "RC",
+      "primaryTarget": "RC10",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EXI008",
+      "domainId": "EX",
+      "primaryTarget": "EX01",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "SOI014",
+      "domainId": "SO",
+      "primaryTarget": "SO01",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI015",
+      "domainId": "SO",
+      "primaryTarget": "SO02",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI016",
+      "domainId": "SO",
+      "primaryTarget": "SO03",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI017",
+      "domainId": "SO",
+      "primaryTarget": "SO04",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI018",
+      "domainId": "SO",
+      "primaryTarget": "SO05",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI019",
+      "domainId": "SO",
+      "primaryTarget": "SO06",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI020",
+      "domainId": "SO",
+      "primaryTarget": "SO07",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI021",
+      "domainId": "SO",
+      "primaryTarget": "SO08",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI022",
+      "domainId": "SO",
+      "primaryTarget": "SO10",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI023",
+      "domainId": "SO",
+      "primaryTarget": "SO11",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI024",
+      "domainId": "SO",
+      "primaryTarget": "SO12",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI024",
+      "domainId": "PL",
+      "primaryTarget": "PL01",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI025",
+      "domainId": "PL",
+      "primaryTarget": "PL02",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI026",
+      "domainId": "PL",
+      "primaryTarget": "PL03",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI027",
+      "domainId": "PL",
+      "primaryTarget": "PL04",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI028",
+      "domainId": "PL",
+      "primaryTarget": "PL06",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI029",
+      "domainId": "PL",
+      "primaryTarget": "PL07",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI030",
+      "domainId": "PL",
+      "primaryTarget": "PL08",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI031",
+      "domainId": "PL",
+      "primaryTarget": "PL09",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI032",
+      "domainId": "PL",
+      "primaryTarget": "PL10",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI033",
+      "domainId": "PL",
+      "primaryTarget": "PL11",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI034",
+      "domainId": "PL",
+      "primaryTarget": "PL12",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI035",
+      "domainId": "PL",
+      "primaryTarget": "PL13",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI036",
+      "domainId": "PL",
+      "primaryTarget": "PL14",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI037",
+      "domainId": "PL",
+      "primaryTarget": "PL15",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI038",
+      "domainId": "PL",
+      "primaryTarget": "PL16",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI039",
+      "domainId": "PL",
+      "primaryTarget": "PL17",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI040",
+      "domainId": "PL",
+      "primaryTarget": "PL18",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI041",
+      "domainId": "PL",
+      "primaryTarget": "PL19",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI042",
+      "domainId": "PL",
+      "primaryTarget": "PL20",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI043",
+      "domainId": "PL",
+      "primaryTarget": "PL22",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI044",
+      "domainId": "PL",
+      "primaryTarget": "PL23",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI045",
+      "domainId": "PL",
+      "primaryTarget": "PL24",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "PLI046",
+      "domainId": "PL",
+      "primaryTarget": "PL26",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "NEI024",
+      "domainId": "NE",
+      "primaryTarget": "NE09",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "AHI022",
+      "domainId": "AH",
+      "primaryTarget": "AH09",
+      "responseType": "likert",
+      "relation": "positive"
+    }
+  ]
+}

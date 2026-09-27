@@ -104,30 +104,18 @@ for (const item of items) {
   if (!mirrorGroups.has(item.mirrorGroup)) mirrorGroups.set(item.mirrorGroup, []);
   mirrorGroups.get(item.mirrorGroup).push(item);
 }
-
 for (const [groupId, pair] of mirrorGroups) {
   if (pair.length !== 2) {
     fail(`${groupId}: mirror group must contain exactly 2 items`);
     continue;
   }
-
-  const firstPositive = new Set(
-    pair[0].targets.filter((target) => target.relation === "positive").map((target) => target.constructId)
-  );
-  const firstNegative = new Set(
-    pair[0].targets.filter((target) => target.relation === "negative").map((target) => target.constructId)
-  );
-  const secondPositive = new Set(
-    pair[1].targets.filter((target) => target.relation === "positive").map((target) => target.constructId)
-  );
-  const secondNegative = new Set(
-    pair[1].targets.filter((target) => target.relation === "negative").map((target) => target.constructId)
-  );
-
+  const firstPositive = new Set(pair[0].targets.filter((t) => t.relation === "positive").map((t) => t.constructId));
+  const firstNegative = new Set(pair[0].targets.filter((t) => t.relation === "negative").map((t) => t.constructId));
+  const secondPositive = new Set(pair[1].targets.filter((t) => t.relation === "positive").map((t) => t.constructId));
+  const secondNegative = new Set(pair[1].targets.filter((t) => t.relation === "negative").map((t) => t.constructId));
   const opposed =
     [...firstPositive].some((id) => secondNegative.has(id)) ||
     [...secondPositive].some((id) => firstNegative.has(id));
-
   if (!opposed) fail(`${groupId}: mirror pair lacks an opposed shared construct target`);
 }
 pass(`${mirrorGroups.size} mirror groups checked`);
@@ -139,18 +127,37 @@ for (const [domainId, count] of Object.entries(perDomain)) {
 }
 console.log("candidate items by domain:", perDomain);
 
+const primaryCounts = Object.fromEntries(constructs.map((construct) => [construct.id, 0]));
+for (const item of items) {
+  for (const target of item.targets) {
+    if (target.role === "primary") {
+      primaryCounts[target.constructId] = (primaryCounts[target.constructId] ?? 0) + 1;
+    }
+  }
+}
+const publicConstructs = constructs.filter(
+  (construct) => construct.tier === "headline" || construct.tier === "primary"
+);
+const underDepthFloor = publicConstructs.filter((construct) => (primaryCounts[construct.id] ?? 0) < 2);
+if (underDepthFloor.length) {
+  fail(
+    "headline/primary constructs below two primary indicators: " +
+    underDepthFloor.map((construct) => `${construct.id}=${primaryCounts[construct.id] ?? 0}`).join(", ")
+  );
+} else {
+  pass(`all ${publicConstructs.length} headline/primary constructs have at least two primary indicators`);
+}
+
 if (instrument.entries.length !== instrument.nominalPoolSize) {
   fail("manifest entry count does not equal nominalPoolSize");
 }
 if (instrument.nominalPoolSize !== items.length) {
   fail(`manifest nominalPoolSize ${instrument.nominalPoolSize} does not equal bank size ${items.length}`);
 }
-
 const indexes = instrument.entries.map((entry) => entry.index).sort((a, b) => a - b);
 if (indexes.some((value, index) => value !== index)) {
   fail("manifest indexes must be contiguous from zero");
 }
-
 for (const entry of instrument.entries) {
   const item = items.find((candidate) => candidate.id === entry.itemId);
   if (!item) fail(`manifest references unknown item ${entry.itemId}`);
@@ -186,5 +193,4 @@ if (failures) {
   console.error(`\n${failures} item-bank validation failure(s)`);
   process.exit(1);
 }
-
 console.log("\nItem-bank validation passed.");
