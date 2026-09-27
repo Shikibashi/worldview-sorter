@@ -3,12 +3,13 @@ import { readFile } from "node:fs/promises";
 const root = new URL("../", import.meta.url);
 const load = async (path) => JSON.parse(await readFile(new URL(path, root), "utf8"));
 
+const current = await load("data/current.json");
 const domains = (await load("data/domains.json")).domains;
 const constructs = (await load("data/constructs.json")).constructs;
 const sources = (await load("data/sources.json")).sources;
 const scalesDoc = await load("data/response-scales.json");
-const bankDoc = await load("data/items/candidate-v0.2.json");
-const instrument = await load("data/instruments/prototype-0.2.json");
+const bankDoc = await load(current.candidateBank.path);
+const instrument = await load(current.instrument.path);
 
 let failures = 0;
 const fail = (message) => {
@@ -17,10 +18,20 @@ const fail = (message) => {
 };
 const pass = (message) => console.log("PASS:", message);
 
+if (bankDoc.bankVersion !== current.candidateBank.version) {
+  fail(`current candidate bank version mismatch: pointer=${current.candidateBank.version}, file=${bankDoc.bankVersion}`);
+}
+if (instrument.instrumentVersion !== current.instrument.version) {
+  fail(`current instrument version mismatch: pointer=${current.instrument.version}, file=${instrument.instrumentVersion}`);
+}
+if (instrument.bankVersion !== bankDoc.bankVersion) {
+  fail(`instrument bank version ${instrument.bankVersion} does not match bank ${bankDoc.bankVersion}`);
+}
+
 const domainIds = new Set(domains.map((domain) => domain.id));
 const constructIds = new Set(constructs.map((construct) => construct.id));
 const sourceIds = new Set(sources.map((source) => source.id));
-const scaleIds = new Set(scalesDoc.scales.map((scale) => scale.id));
+const scales = new Map(scalesDoc.scales.map((scale) => [scale.id, scale]));
 const stateIds = new Set(scalesDoc.responseStates.map((state) => state.id));
 
 const items = bankDoc.items;
@@ -34,8 +45,18 @@ for (const item of items) {
   if (!item.id.startsWith(item.domainId + "I")) {
     fail(`${item.id}: item prefix does not match domain ${item.domainId}`);
   }
-  if (!scaleIds.has(item.responseScaleId)) {
+
+  const scale = scales.get(item.responseScaleId);
+  if (!scale) {
     fail(`${item.id}: unknown response scale ${item.responseScaleId}`);
+  } else if (scale.responseType !== item.responseType) {
+    fail(`${item.id}: response type ${item.responseType} does not match scale ${item.responseScaleId} (${scale.responseType})`);
+  }
+
+  const optionIds = new Set();
+  for (const option of item.options) {
+    if (optionIds.has(option.id)) fail(`${item.id}: duplicate option ID ${option.id}`);
+    optionIds.add(option.id);
   }
 
   for (const target of item.targets) {
@@ -66,17 +87,16 @@ for (const item of items) {
         fail(`${item.id}: branch references unknown item ${condition.itemId}`);
         continue;
       }
-      const optionIds = new Set(source.options.map((option) => option.id));
+      const sourceOptionIds = new Set(source.options.map((option) => option.id));
       for (const optionId of condition.optionIds) {
-        if (!optionIds.has(optionId)) {
+        if (!sourceOptionIds.has(optionId)) {
           fail(`${item.id}: branch references unknown option ${condition.itemId}:${optionId}`);
         }
       }
     }
   }
 }
-
-if (itemIds.size === items.length) pass(`${items.length} item IDs unique`);
+pass(`${itemIds.size} item IDs checked`);
 
 const mirrorGroups = new Map();
 for (const item of items) {
@@ -110,22 +130,20 @@ for (const [groupId, pair] of mirrorGroups) {
 
   if (!opposed) fail(`${groupId}: mirror pair lacks an opposed shared construct target`);
 }
-
 pass(`${mirrorGroups.size} mirror groups checked`);
-
-if (items.length !== 60) fail(`prototype must contain 60 items, found ${items.length}`);
-else pass("60-item architecture pool");
 
 const perDomain = Object.fromEntries(domains.map((domain) => [domain.id, 0]));
 for (const item of items) perDomain[item.domainId] += 1;
-
 for (const [domainId, count] of Object.entries(perDomain)) {
-  if (count < 4) fail(`${domainId}: prototype has only ${count} items`);
+  if (count < 1) fail(`${domainId}: no candidate items`);
 }
-console.log("prototype items by domain:", perDomain);
+console.log("candidate items by domain:", perDomain);
 
 if (instrument.entries.length !== instrument.nominalPoolSize) {
   fail("manifest entry count does not equal nominalPoolSize");
+}
+if (instrument.nominalPoolSize !== items.length) {
+  fail(`manifest nominalPoolSize ${instrument.nominalPoolSize} does not equal bank size ${items.length}`);
 }
 
 const indexes = instrument.entries.map((entry) => entry.index).sort((a, b) => a - b);

@@ -1,7 +1,10 @@
 import { readFile } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
-const bank = JSON.parse(await readFile(new URL("data/items/candidate-v0.2.json", root), "utf8"));
+const load = async (path) => JSON.parse(await readFile(new URL(path, root), "utf8"));
+
+const current = await load("data/current.json");
+const bank = await load(current.candidateBank.path);
 const items = bank.items;
 
 let hardFailures = 0;
@@ -42,7 +45,7 @@ for (const item of items) {
 const agreementItems = items.filter((item) => item.responseScaleId === "agreement5");
 const keying = { positive: 0, negative: 0, diagnostic: 0, tradeoff: 0 };
 for (const item of agreementItems) {
-  const primary = item.targets.find((t) => t.role === "primary");
+  const primary = item.targets.find((target) => target.role === "primary");
   if (primary && primary.relation in keying) keying[primary.relation] += 1;
 }
 const signed = keying.positive + keying.negative;

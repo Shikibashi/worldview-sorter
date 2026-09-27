@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "registryVersion": "0.1.0",
+  "candidateBank": {
+    "version": "0.3.0",
+    "path": "data/items/candidate-v0.3.json"
+  },
+  "instrument": {
+    "version": "0.3.0-research",
+    "path": "data/instruments/research-pool-0.3.json"
+  },
+  "editorialAudit": {
+    "version": "0.1.0",
+    "path": "data/reviews/editorial-audit-v0.1.json"
+  },
+  "expansionBatch": {
+    "version": "0.1.0",
+    "path": "data/reviews/expansion-batch-v0.1.json"
+  }
+}

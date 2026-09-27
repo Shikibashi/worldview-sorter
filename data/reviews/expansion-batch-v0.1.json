@@ -1,0 +1,393 @@
+{
+  "schemaVersion": "1.0.0",
+  "expansionVersion": "0.1.0",
+  "baseBankVersion": "0.2.0",
+  "resultingBankVersion": "0.3.0",
+  "itemsAdded": 36,
+  "strategy": [
+    "Cover currently unmeasured headline constructs before deepening already well-covered constructs.",
+    "Add semantically natural counter-keyed agreement items where the prototype was strongly one-sided.",
+    "Do not manufacture false bipolarity between independent constructs.",
+    "Use importance responses for Schwartz-style values rather than agreement wording."
+  ],
+  "entries": [
+    {
+      "itemId": "MEI006",
+      "domainId": "ME",
+      "targets": [
+        "ME03"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MEI007",
+      "domainId": "ME",
+      "targets": [
+        "ME05"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MEI008",
+      "domainId": "ME",
+      "targets": [
+        "ME04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "NEI006",
+      "domainId": "NE",
+      "targets": [
+        "NE04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "NEI007",
+      "domainId": "NE",
+      "targets": [
+        "NE03"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "NEI008",
+      "domainId": "NE",
+      "targets": [
+        "NE07",
+        "NE09"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MFI007",
+      "domainId": "MF",
+      "targets": [
+        "MF01"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MFI008",
+      "domainId": "MF",
+      "targets": [
+        "MF04"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MFI009",
+      "domainId": "MF",
+      "targets": [
+        "MF06"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "VAI006",
+      "domainId": "VA",
+      "targets": [
+        "VA03"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "VAI007",
+      "domainId": "VA",
+      "targets": [
+        "VA04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "VAI008",
+      "domainId": "VA",
+      "targets": [
+        "VA15"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "EPI006",
+      "domainId": "EP",
+      "targets": [
+        "EP05"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "EPI007",
+      "domainId": "EP",
+      "targets": [
+        "EP06"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "EPI008",
+      "domainId": "EP",
+      "targets": [
+        "EP08"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "OMI006",
+      "domainId": "OM",
+      "targets": [
+        "OM04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "OMI007",
+      "domainId": "OM",
+      "targets": [
+        "OM04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "OMI008",
+      "domainId": "OM",
+      "targets": [
+        "OM02"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MSI006",
+      "domainId": "MS",
+      "targets": [
+        "MS01"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MSI007",
+      "domainId": "MS",
+      "targets": [
+        "MS04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "MSI008",
+      "domainId": "MS",
+      "targets": [
+        "MS03"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "AHI006",
+      "domainId": "AH",
+      "targets": [
+        "AH04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "AHI007",
+      "domainId": "AH",
+      "targets": [
+        "AH05"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "AHI008",
+      "domainId": "AH",
+      "targets": [
+        "AH06"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "RCI006",
+      "domainId": "RC",
+      "targets": [
+        "RC03"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "RCI007",
+      "domainId": "RC",
+      "targets": [
+        "RC07"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "RCI008",
+      "domainId": "RC",
+      "targets": [
+        "RC08"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "EXI005",
+      "domainId": "EX",
+      "targets": [
+        "EX03"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "EXI006",
+      "domainId": "EX",
+      "targets": [
+        "EX04",
+        "EX01"
+      ],
+      "goals": [
+        "counter_keying",
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "EXI007",
+      "domainId": "EX",
+      "targets": [
+        "EX05"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "SOI006",
+      "domainId": "SO",
+      "targets": [
+        "SO04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "SOI007",
+      "domainId": "SO",
+      "targets": [
+        "SO12"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "SOI008",
+      "domainId": "SO",
+      "targets": [
+        "SO10"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "PLI006",
+      "domainId": "PL",
+      "targets": [
+        "PL04"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "PLI007",
+      "domainId": "PL",
+      "targets": [
+        "PL06"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    },
+    {
+      "itemId": "PLI008",
+      "domainId": "PL",
+      "targets": [
+        "PL09"
+      ],
+      "goals": [
+        "construct_coverage"
+      ]
+    }
+  ]
+}
