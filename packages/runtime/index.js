@@ -117,6 +117,8 @@ export function generatePilotPacket({ bank, pilot, seed, size, packetId }) {
   const remaining = new Set(selected.keys());
   let previousDomain = null;
   let sameDomainRun = 0;
+  const maxSameDomainConsecutive =
+    pilot.administration?.maxSameDomainConsecutive ?? 2;
 
   while (remaining.size) {
     const available = [...remaining].filter((id) =>
@@ -131,15 +133,9 @@ export function generatePilotPacket({ bank, pilot, seed, size, packetId }) {
 
     let chosen = ranked.find((id) => {
       const domainId = selected.get(id).domainId;
-      return !(domainId === previousDomain && sameDomainRun >= pilot.administration?.maxSameDomainConsecutive);
+      return !(domainId === previousDomain && sameDomainRun >= maxSameDomainConsecutive);
     });
 
-    if (!chosen) {
-      chosen = ranked.find((id) => {
-        const domainId = selected.get(id).domainId;
-        return !(domainId === previousDomain && sameDomainRun >= 2);
-      });
-    }
     chosen ??= ranked[0];
 
     const domainId = selected.get(chosen).domainId;
