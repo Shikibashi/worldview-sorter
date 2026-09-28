@@ -63,5 +63,5 @@ The instrument may contain dozens of separately estimated constructs underneath 
 
 ## Status
 
-This repository is currently at **construct-model v0.1 / candidate research bank v0.8**. The bank contains 472 versioned candidate items. The registry and item assignments remain theory-driven and provisional; the project has not yet established an empirical factor structure, calibrated item parameters, validated scoring model, or validated short form.
+This repository is currently at **construct-model v0.1 / candidate research bank v0.8 / pilot architecture v0.1**. The bank contains 472 versioned candidate items. Raw pilot-session, calibration-export, versioned scoring, and empirical short-form selection machinery now exist, but the registry and item assignments remain theory-driven and provisional. The project has not yet established an empirical factor structure, calibrated item parameters, validated scoring model, or validated short form.
 

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyVersion": "0.1.0",
+  "sourceBankVersion": "0.8.0",
+  "status": "awaiting_empirical_parameters",
+  "operationalItemRange": {
+    "min": 80,
+    "max": 110
+  },
+  "requiredCoverage": {
+    "constructTiers": [
+      "headline"
+    ],
+    "minimumPrimaryItemsPerRequiredConstruct": 1
+  },
+  "constraints": {
+    "maxItemsPerMirrorGroup": 1,
+    "requireBranchPrerequisites": true,
+    "excludeIfFlagged": [
+      "dif",
+      "severe_local_dependence",
+      "invalid_item",
+      "low_information"
+    ]
+  },
+  "ranking": {
+    "primaryMetric": "informationScore",
+    "secondaryMetric": "constructCoverageGain",
+    "preferMethodDiversity": true
+  },
+  "note": "This policy defines selection machinery only. No short form is valid until empirical item parameters are supplied."
+}

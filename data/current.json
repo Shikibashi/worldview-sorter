@@ -16,5 +16,21 @@
   "expansionBatch": {
     "version": "0.6.0",
     "path": "data/reviews/expansion-batch-v0.6.json"
+  },
+  "pilot": {
+    "version": "pilot-0.1",
+    "path": "data/pilots/pilot-0.1.json"
+  },
+  "engineeringScoringModel": {
+    "version": "engineering-keyed-0.1",
+    "path": "data/scoring/engineering-keyed-v0.1.json"
+  },
+  "shortFormPolicy": {
+    "version": "0.1.0",
+    "path": "data/short-forms/policy-v0.1.json"
+  },
+  "calibrationTemplate": {
+    "version": "template-0.1",
+    "path": "data/calibration/item-parameters.template.json"
   }
 }

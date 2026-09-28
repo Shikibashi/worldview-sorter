@@ -6,11 +6,18 @@
   "scripts": {
     "validate:registry": "node scripts/validate-registry.mjs",
     "validate:items": "node scripts/validate-item-bank.mjs",
+    "validate:pilot": "node scripts/validate-pilot-architecture.mjs",
     "lint:items": "node scripts/lint-items.mjs",
     "report:coverage": "node scripts/report-coverage.mjs",
     "report:methods": "node scripts/report-method-diversity.mjs",
-    "validate": "npm run validate:registry && npm run validate:items && npm run lint:items",
-    "test": "npm run validate"
+    "pilot:packet": "node scripts/generate-pilot-packet.mjs",
+    "pilot:score": "node scripts/score-session.mjs",
+    "pilot:export": "node scripts/export-calibration.mjs",
+    "pilot:summary": "node scripts/summarize-pilot.mjs",
+    "shortform:select": "node scripts/select-short-form.mjs",
+    "test:score": "node scripts/score-session.mjs examples/pilot-session.example.json",
+    "validate": "npm run validate:registry && npm run validate:items && npm run validate:pilot && npm run lint:items",
+    "test": "npm run validate && npm run test:score"
   },
   "engines": {
     "node": ">=20"

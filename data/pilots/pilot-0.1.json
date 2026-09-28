@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "pilotId": "pilot-0.1",
+  "status": "architecture",
+  "bankVersion": "0.8.0",
+  "sourceInstrumentVersion": "0.8.0-research",
+  "sessionSchemaVersion": "1.0.0",
+  "administration": {
+    "mode": "planned_missing_packets",
+    "defaultPacketSize": 120,
+    "allowedPacketSize": {
+      "min": 80,
+      "max": 160
+    },
+    "packetSelection": "seeded_domain_proportional",
+    "assignment": "uniform_random_or_round_robin_by_deployment",
+    "note": "Packet sizes and assignment are operational engineering defaults, not claims about psychometric or sample-size adequacy."
+  },
+  "privacy": {
+    "directIdentifiersAllowed": false,
+    "rawIpStorageAllowed": false,
+    "rawUserAgentStorageAllowed": false,
+    "respondentKeyOptional": true,
+    "respondentKeyMeaning": "Opaque pseudonymous key only when repeated-session linkage is intentionally required."
+  },
+  "recording": {
+    "exactItemRevision": true,
+    "presentationIndex": true,
+    "responseState": true,
+    "rawResponseValue": true,
+    "responseTimeMs": true,
+    "changedAnswerCount": true,
+    "locale": true,
+    "clientVersion": true,
+    "randomizationSeed": true
+  },
+  "scoring": {
+    "defaultEngineeringModelVersion": "engineering-keyed-0.1",
+    "publicInterpretationAllowed": false
+  },
+  "calibration": {
+    "exportVersion": "0.1.0",
+    "includeDirectIdentifiers": false,
+    "preserveSpecialResponseStates": true,
+    "preserveResponseTiming": true
+  }
+}

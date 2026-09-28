@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/short-form-candidate.schema.json",
+  "title": "Worldview Sorter Empirical Short-Form Candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "status",
+    "policyVersion",
+    "calibrationVersion",
+    "sourceBankVersion",
+    "requestedSize",
+    "entries"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "status": {
+      "const": "empirical_candidate_not_validated"
+    },
+    "policyVersion": {
+      "type": "string"
+    },
+    "calibrationVersion": {
+      "type": "string"
+    },
+    "sourceBankVersion": {
+      "type": "string"
+    },
+    "requestedSize": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "index",
+          "itemId",
+          "itemRevision",
+          "informationScore"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "informationScore": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

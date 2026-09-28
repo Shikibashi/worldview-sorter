@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/pilot-packet.schema.json",
+  "title": "Worldview Sorter Pilot Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "pilotId",
+    "packetId",
+    "seed",
+    "bankVersion",
+    "sourceInstrumentVersion",
+    "size",
+    "selectionMethod",
+    "entries"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "pilotId": {
+      "type": "string"
+    },
+    "packetId": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "sourceInstrumentVersion": {
+      "type": "string"
+    },
+    "size": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "selectionMethod": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "index",
+          "itemId",
+          "itemRevision",
+          "domainId",
+          "responseScaleId"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "domainId": {
+            "type": "string"
+          },
+          "responseScaleId": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

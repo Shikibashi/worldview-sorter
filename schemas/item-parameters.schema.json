@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/item-parameters.schema.json",
+  "title": "Worldview Sorter Empirical Item Parameters",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "calibrationVersion",
+    "bankVersion",
+    "status",
+    "modelFamily",
+    "generatedAt",
+    "items"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "calibrationVersion": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "template",
+        "empirical",
+        "deprecated"
+      ]
+    },
+    "modelFamily": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "itemId",
+          "itemRevision",
+          "informationScore",
+          "eligibleForShortForm",
+          "discrimination",
+          "thresholds",
+          "difFlags",
+          "localDependenceFlags",
+          "qualityFlags",
+          "notes"
+        ],
+        "properties": {
+          "itemId": {
+            "type": "string"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "informationScore": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "eligibleForShortForm": {
+            "type": "boolean"
+          },
+          "discrimination": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "thresholds": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "number"
+            }
+          },
+          "difFlags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "localDependenceFlags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "qualityFlags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

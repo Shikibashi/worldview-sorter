@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/result-snapshot.schema.json",
+  "title": "Worldview Sorter Result Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "sessionId",
+    "pilotId",
+    "instrumentVersion",
+    "bankVersion",
+    "scoringModelVersion",
+    "generatedAt",
+    "status",
+    "interpretationAllowed",
+    "constructResults",
+    "notes"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "sessionId": {
+      "type": "string"
+    },
+    "pilotId": {
+      "type": "string"
+    },
+    "instrumentVersion": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "scoringModelVersion": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "engineering_only",
+        "pilot_calibration",
+        "calibrated"
+      ]
+    },
+    "interpretationAllowed": {
+      "type": "boolean"
+    },
+    "constructResults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "constructId",
+          "estimate",
+          "answeredEligibleItems",
+          "eligibleItems",
+          "coverage",
+          "method",
+          "uncertainty"
+        ],
+        "properties": {
+          "constructId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}\\d{2}$"
+          },
+          "estimate": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": -1,
+            "maximum": 1
+          },
+          "answeredEligibleItems": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "eligibleItems": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "coverage": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "method": {
+            "type": "string"
+          },
+          "uncertainty": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
