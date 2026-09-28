@@ -157,6 +157,42 @@
         "no_view",
         "not_understood"
       ]
+    },
+    {
+      "id": "moral_relevance5",
+      "responseType": "likert",
+      "ordered": true,
+      "options": [
+        {
+          "id": "not_relevant",
+          "value": -2,
+          "label": "Not morally relevant"
+        },
+        {
+          "id": "slightly_relevant",
+          "value": -1,
+          "label": "Slightly relevant"
+        },
+        {
+          "id": "moderately_relevant",
+          "value": 0,
+          "label": "Moderately relevant"
+        },
+        {
+          "id": "very_relevant",
+          "value": 1,
+          "label": "Very relevant"
+        },
+        {
+          "id": "extremely_relevant",
+          "value": 2,
+          "label": "Extremely relevant"
+        }
+      ],
+      "allowedSpecialStates": [
+        "no_view",
+        "not_understood"
+      ]
     }
   ]
 }

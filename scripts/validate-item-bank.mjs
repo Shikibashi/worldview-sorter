@@ -135,17 +135,27 @@ for (const item of items) {
     }
   }
 }
-const publicConstructs = constructs.filter(
-  (construct) => construct.tier === "headline" || construct.tier === "primary"
-);
-const underDepthFloor = publicConstructs.filter((construct) => (primaryCounts[construct.id] ?? 0) < 2);
-if (underDepthFloor.length) {
+const headlineConstructs = constructs.filter((construct) => construct.tier === "headline");
+const primaryConstructs = constructs.filter((construct) => construct.tier === "primary");
+
+const headlineUnderFloor = headlineConstructs.filter((construct) => (primaryCounts[construct.id] ?? 0) < 3);
+if (headlineUnderFloor.length) {
   fail(
-    "headline/primary constructs below two primary indicators: " +
-    underDepthFloor.map((construct) => `${construct.id}=${primaryCounts[construct.id] ?? 0}`).join(", ")
+    "headline constructs below three primary indicators: " +
+    headlineUnderFloor.map((construct) => `${construct.id}=${primaryCounts[construct.id] ?? 0}`).join(", ")
   );
 } else {
-  pass(`all ${publicConstructs.length} headline/primary constructs have at least two primary indicators`);
+  pass(`all ${headlineConstructs.length} headline constructs have at least three primary indicators`);
+}
+
+const primaryUnderFloor = primaryConstructs.filter((construct) => (primaryCounts[construct.id] ?? 0) < 2);
+if (primaryUnderFloor.length) {
+  fail(
+    "primary constructs below two primary indicators: " +
+    primaryUnderFloor.map((construct) => `${construct.id}=${primaryCounts[construct.id] ?? 0}`).join(", ")
+  );
+} else {
+  pass(`all ${primaryConstructs.length} primary constructs have at least two primary indicators`);
 }
 
 if (instrument.entries.length !== instrument.nominalPoolSize) {
