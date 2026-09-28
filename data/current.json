@@ -2,19 +2,19 @@
   "schemaVersion": "1.0.0",
   "registryVersion": "0.1.0",
   "candidateBank": {
-    "version": "0.7.0",
-    "path": "data/items/candidate-v0.7.json"
+    "version": "0.8.0",
+    "path": "data/items/candidate-v0.8.json"
   },
   "instrument": {
-    "version": "0.7.0-research",
-    "path": "data/instruments/research-pool-0.7.json"
+    "version": "0.8.0-research",
+    "path": "data/instruments/research-pool-0.8.json"
   },
   "editorialAudit": {
     "version": "0.1.0",
     "path": "data/reviews/editorial-audit-v0.1.json"
   },
   "expansionBatch": {
-    "version": "0.5.0",
-    "path": "data/reviews/expansion-batch-v0.5.json"
+    "version": "0.6.0",
+    "path": "data/reviews/expansion-batch-v0.6.json"
   }
 }

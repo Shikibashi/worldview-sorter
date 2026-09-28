@@ -63,5 +63,5 @@ The instrument may contain dozens of separately estimated constructs underneath 
 
 ## Status
 
-This repository is currently in **construct-model v0.1**. The registry is theory-driven and provisional. It is intended to support item-pool construction and later empirical calibration, not to claim that the listed dimensions have already been psychometrically validated.
+This repository is currently at **construct-model v0.1 / candidate research bank v0.8**. The bank contains 472 versioned candidate items. The registry and item assignments remain theory-driven and provisional; the project has not yet established an empirical factor structure, calibrated item parameters, validated scoring model, or validated short form.
 

@@ -177,6 +177,43 @@ for (const entry of instrument.entries) {
 }
 pass("instrument manifest references checked");
 
+if (items.length !== 472) {
+  fail(`candidate research bank must contain exactly 472 items, found ${items.length}`);
+} else {
+  pass("candidate research bank contains exactly 472 items");
+}
+
+const specialtyConstructs = constructs.filter(
+  (construct) =>
+    (construct.tier === "diagnostic" || construct.tier === "research") &&
+    construct.directlyScored
+);
+const specialtyUnderTarget = specialtyConstructs.filter(
+  (construct) => (primaryCounts[construct.id] ?? 0) < construct.candidateItemTarget
+);
+if (specialtyUnderTarget.length) {
+  fail(
+    "diagnostic/research constructs below registry candidate target: " +
+    specialtyUnderTarget
+      .map((construct) => `${construct.id}=${primaryCounts[construct.id] ?? 0}/${construct.candidateItemTarget}`)
+      .join(", ")
+  );
+} else {
+  pass(`all ${specialtyConstructs.length} directly measured diagnostic/research constructs meet registry candidate targets`);
+}
+
+const derivedWithPrimaryItems = constructs.filter(
+  (construct) => construct.type === "derived" && (primaryCounts[construct.id] ?? 0) > 0
+);
+if (derivedWithPrimaryItems.length) {
+  fail(
+    "derived constructs must not receive direct primary items: " +
+    derivedWithPrimaryItems.map((construct) => construct.id).join(", ")
+  );
+} else {
+  pass("derived constructs remain derived-only");
+}
+
 const conditionalItems = items.filter((item) => item.eligibility.mode === "conditional");
 if (conditionalItems.length && !instrument.ordering.constraints.respectEligibilityDependencies) {
   fail("instrument has conditional items but does not require eligibility dependency ordering");
