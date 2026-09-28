@@ -36,5 +36,17 @@
   "uiBehavior": {
     "version": "0.1.0",
     "path": "data/ui/behavior-v0.1.json"
+  },
+  "profileCatalog": {
+    "version": "0.1.0",
+    "path": "data/profiles/catalog-v0.1.json"
+  },
+  "profileProbeSet": {
+    "version": "0.1.0",
+    "path": "data/profiles/probes-v0.1.json"
+  },
+  "profileMatchingPolicy": {
+    "version": "0.1.0",
+    "path": "data/profiles/matching-policy-v0.1.json"
   }
 }

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogVersion": "0.1.0",
+  "status": "prototype",
+  "identityOutputAllowed": false,
+  "profiles": [
+    {
+      "id": "objectivism",
+      "label": "Objectivism",
+      "identityLabel": "Objectivist",
+      "kind": "philosophical_system",
+      "sourceRefs": [
+        "ari-objectivism"
+      ],
+      "description": "A full philosophical system, not a synonym for generic libertarian or free-market politics.",
+      "hardGates": [
+        {
+          "kind": "probe",
+          "probeId": "OBJ-P01",
+          "acceptedValues": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "probe",
+          "probeId": "OBJ-P02",
+          "acceptedValues": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "probe",
+          "probeId": "OBJ-P03",
+          "acceptedValues": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "probe",
+          "probeId": "OBJ-P04",
+          "acceptedValues": [
+            1,
+            2
+          ]
+        }
+      ],
+      "softTargets": [
+        {
+          "constructId": "PL09",
+          "target": 0.85,
+          "weight": 1
+        },
+        {
+          "constructId": "PL11",
+          "target": 0.9,
+          "weight": 1
+        },
+        {
+          "constructId": "PL13",
+          "target": 0.95,
+          "weight": 1
+        },
+        {
+          "constructId": "EP10",
+          "target": -0.9,
+          "weight": 1
+        },
+        {
+          "constructId": "RC01",
+          "target": -0.9,
+          "weight": 0.75
+        },
+        {
+          "constructId": "OM01",
+          "target": -0.85,
+          "weight": 0.75
+        }
+      ],
+      "identityConfirmation": {
+        "required": true,
+        "prompt": "Does 'Objectivist' accurately describe your philosophical identity?",
+        "acceptedValues": [
+          "yes"
+        ]
+      }
+    }
+  ]
+}

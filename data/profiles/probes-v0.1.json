@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "probeSetVersion": "0.1.0",
+  "status": "prototype",
+  "responseScaleId": "agreement5",
+  "probes": [
+    {
+      "id": "OBJ-P01",
+      "profileId": "objectivism",
+      "text": "A person's own rational flourishing and happiness should be the ultimate moral end of their life, rather than self-sacrifice to others as an end in itself.",
+      "role": "hard_gate",
+      "sourceRefs": [
+        "ari-objectivism"
+      ],
+      "rationale": "Distinguishes Objectivist rational egoism from merely market-oriented or individual-rights political views."
+    },
+    {
+      "id": "OBJ-P02",
+      "profileId": "objectivism",
+      "text": "Knowledge should ultimately rest on sensory evidence integrated by reason; revelation or faith is not an independent source of factual knowledge.",
+      "role": "hard_gate",
+      "sourceRefs": [
+        "ari-objectivism"
+      ],
+      "rationale": "Represents the Objectivist commitment to reason and sensory reality rather than faith/revelation."
+    },
+    {
+      "id": "OBJ-P03",
+      "profileId": "objectivism",
+      "text": "The proper political order is laissez-faire capitalism with government limited to protecting individual rights against force and fraud.",
+      "role": "hard_gate",
+      "sourceRefs": [
+        "ari-objectivism"
+      ],
+      "rationale": "Prevents generic market liberalism, anarchism, or other pro-market views from being relabeled Objectivism."
+    },
+    {
+      "id": "OBJ-P04",
+      "profileId": "objectivism",
+      "text": "Reality exists independently of people's beliefs, wishes, or consciousness.",
+      "role": "hard_gate",
+      "sourceRefs": [
+        "ari-objectivism"
+      ],
+      "rationale": "Represents the Objectivist metaphysical commitment to mind-independent reality."
+    }
+  ]
+}

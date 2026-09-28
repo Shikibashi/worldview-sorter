@@ -95,3 +95,14 @@ See `docs/COLLECTION_SERVICE.md`.
 The runner follows the modern 12Axes interaction pattern for one-question flow, progress, selected-answer feedback, 200 ms auto-advance, Back, length presets, and completion submission while retaining Worldview Sorter's heterogeneous item types.
 
 See `docs/12AXES_PARITY.md`.
+
+
+## Doctrine-gated profile matching
+
+Worldview labels are not assigned by nearest political-vector distance.
+
+The profile layer supports abstention, direct doctrinal gates, explicit contradiction handling, affinity-vs-identity separation, and explicit identity confirmation. Percentage "match" presentation is prohibited.
+
+The Objectivism regression case specifically guarantees that strong free-market/property/secular overlap cannot produce an Objectivist identity when core Objectivist doctrine is rejected.
+
+See `docs/PROFILE_MATCHING.md`.

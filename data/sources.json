@@ -70,6 +70,13 @@
       "title": "Worldview Sorter construct review",
       "url": "https://github.com/Shikibashi/worldview-sorter",
       "use": "Project-specific distinctions that require later empirical validation."
+    },
+    {
+      "id": "ari-objectivism",
+      "kind": "primary_source",
+      "title": "Ayn Rand Institute — Introducing Objectivism / Objectivism overview",
+      "url": "https://courses.aynrand.org/works/introducing-objectivism/",
+      "use": "Primary-source basis for the Objectivism reference profile: reality independent of wishes, reason/sense as the basis of knowledge, rational self-interest, individual rights, and laissez-faire capitalism with rights-protecting government."
     }
   ]
 }
