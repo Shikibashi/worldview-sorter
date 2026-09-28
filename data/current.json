@@ -32,5 +32,9 @@
   "calibrationTemplate": {
     "version": "template-0.1",
     "path": "data/calibration/item-parameters.template.json"
+  },
+  "uiBehavior": {
+    "version": "0.1.0",
+    "path": "data/ui/behavior-v0.1.json"
   }
 }

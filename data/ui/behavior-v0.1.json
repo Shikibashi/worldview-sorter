@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "behaviorVersion": "0.1.0",
+  "interactionModel": "single_question",
+  "presets": [
+    {
+      "id": "short",
+      "label": "Short pilot",
+      "size": 80
+    },
+    {
+      "id": "standard",
+      "label": "Standard pilot",
+      "size": 120
+    },
+    {
+      "id": "long",
+      "label": "Long pilot",
+      "size": 160
+    }
+  ],
+  "autoAdvance": {
+    "supported": true,
+    "defaultEnabled": true,
+    "delayMs": 200
+  },
+  "navigation": {
+    "back": true,
+    "manualNext": true,
+    "changedEarlierAnswerClearsLaterState": true
+  },
+  "progress": {
+    "showCurrentAndTotal": true,
+    "showPercent": true
+  },
+  "answerFeedback": {
+    "showSelectedState": true
+  },
+  "completion": {
+    "submitRemoteWhenAvailable": true,
+    "allowRawJsonExport": true,
+    "showWorldviewResults": false
+  },
+  "referenceNotes": [
+    "Interaction parity target is the one-question/progress/auto-advance/back flow used by modern 12Axes, not its political axes or scoring model.",
+    "Heterogeneous response types and raw special states are retained."
+  ]
+}

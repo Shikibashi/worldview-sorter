@@ -80,3 +80,18 @@ npm run web:serve
 Then open `http://localhost:4173/apps/web/`.
 
 The runner generates seeded pilot packets, administers branching items one at a time, autosaves raw sessions locally, resumes interrupted sessions, and exports the exact versioned pilot-session JSON used by the calibration tooling. It does not display worldview scores.
+
+
+## Remote collection service
+
+`npm run server:start` now serves the browser runner and the raw-session collection API from one same-origin Node service.
+
+Completed sessions are server-validated against the exact active bank, seed-generated packet, revisions, response scales, and branch state before immutable storage.
+
+See `docs/COLLECTION_SERVICE.md`.
+
+## 12Axes-style interaction parity
+
+The runner follows the modern 12Axes interaction pattern for one-question flow, progress, selected-answer feedback, 200 ms auto-advance, Back, length presets, and completion submission while retaining Worldview Sorter's heterogeneous item types.
+
+See `docs/12AXES_PARITY.md`.

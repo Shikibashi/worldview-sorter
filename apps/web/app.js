@@ -30,11 +30,17 @@ let pilot;
 let bank;
 let scalesDoc;
 let domains;
+let behavior;
 let packet = null;
 let session = null;
 let currentIndex = null;
 let questionShownAt = 0;
 let rankingOrder = [];
+let autoAdvanceEnabled = true;
+let advanceTimer = null;
+let advancing = false;
+let remoteAvailable = false;
+let remoteSubmitting = false;
 
 const itemMap = () => new Map(bank.items.map((item) => [item.id, item]));
 const scaleMap = () => new Map(scalesDoc.scales.map((scale) => [scale.id, scale]));
@@ -82,8 +88,31 @@ const specialLabel = {
   not_applicable:"Not applicable"
 };
 
+const clearAdvanceTimer = () => {
+  if (advanceTimer !== null) {
+    clearTimeout(advanceTimer);
+    advanceTimer = null;
+  }
+  advancing = false;
+  $("answer-area")?.setAttribute("data-advancing", "false");
+  $("special-area")?.setAttribute("data-advancing", "false");
+};
+
+const setAdvancing = (value) => {
+  advancing = value;
+  $("answer-area")?.setAttribute("data-advancing", String(value));
+  $("special-area")?.setAttribute("data-advancing", String(value));
+  if ($("next-button")) $("next-button").disabled = value || !currentHasResponse();
+  if ($("back-button")) $("back-button").disabled = value || findPrevious((currentIndex ?? 0) - 1) === null;
+};
+
 const existingResponse = (itemId) =>
   session.responses.find((response) => response.itemId === itemId) ?? null;
+
+const currentHasResponse = () => {
+  if (currentIndex === null || !packet?.entries[currentIndex]) return false;
+  return Boolean(existingResponse(packet.entries[currentIndex].itemId));
+};
 
 const eligibleAt = (index) => {
   const entry = packet.entries[index];
@@ -107,13 +136,59 @@ const findPrevious = (from) => {
   return null;
 };
 
+const setCollectionStatus = (message, state = "") => {
+  const el = $("collection-status");
+  el.textContent = message;
+  if (state) el.dataset.state = state;
+  else delete el.dataset.state;
+};
+
+const submitRemoteSession = async () => {
+  if (!session || session.completionStatus !== "completed" || remoteSubmitting) return;
+
+  if (!remoteAvailable || !behavior.completion.submitRemoteWhenAvailable) {
+    setCollectionStatus("Collector unavailable. Export the raw JSON to retain this pilot session.", "error");
+    $("retry-submit-button").classList.remove("hidden");
+    return;
+  }
+
+  remoteSubmitting = true;
+  $("retry-submit-button").classList.add("hidden");
+  setCollectionStatus("Submitting raw session…");
+
+  try {
+    const response = await fetch("/api/pilot/sessions", {
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body:JSON.stringify(session)
+    });
+    const body = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(body.message || "Collector returned HTTP " + response.status);
+    }
+    setCollectionStatus(
+      body.duplicate ? "Session was already stored by the collector." : "Session stored by the collector.",
+      "success"
+    );
+  } catch (error) {
+    setCollectionStatus("Remote submission failed: " + error.message + ". Raw JSON export is still available.", "error");
+    $("retry-submit-button").classList.remove("hidden");
+  } finally {
+    remoteSubmitting = false;
+  }
+};
+
 const complete = () => {
-  finishSession(session);
+  clearAdvanceTimer();
+  if (session.completionStatus !== "completed") finishSession(session);
+  currentIndex = null;
   saveLocal();
   $("status-pill").textContent = "Complete";
+
   const answered = session.responses.filter((r) => r.state === "answered").length;
   const special = session.responses.length - answered;
   const skipped = session.presentedItems.filter((p) => p.skippedByBranch).length;
+
   $("complete-summary").textContent =
     "Session: " + session.sessionId + "\n" +
     "Packet: " + session.packetId + "\n" +
@@ -121,15 +196,18 @@ const complete = () => {
     "Special responses: " + special + "\n" +
     "Branch-skipped: " + skipped + "\n" +
     "Bank: " + session.bankVersion;
+
   show("complete-screen");
+  void submitRemoteSession();
 };
 
 const moveTo = (index) => {
+  clearAdvanceTimer();
   if (index === null || index >= packet.entries.length) {
-    currentIndex = null;
     complete();
     return;
   }
+
   currentIndex = index;
   markPresented(session, index);
   questionShownAt = performance.now();
@@ -137,7 +215,26 @@ const moveTo = (index) => {
   saveLocal();
 };
 
+const advanceFromCurrent = () => {
+  if (currentIndex === null || !currentHasResponse()) return;
+  clearAdvanceTimer();
+  moveTo(findNext(currentIndex + 1));
+};
+
+const scheduleAdvance = () => {
+  if (!behavior.autoAdvance.supported || !autoAdvanceEnabled) return;
+  clearAdvanceTimer();
+  setAdvancing(true);
+  advanceTimer = setTimeout(() => {
+    advanceTimer = null;
+    advancing = false;
+    advanceFromCurrent();
+  }, behavior.autoAdvance.delayMs);
+};
+
 const submit = (state, value) => {
+  if (advancing || currentIndex === null) return;
+
   const entry = packet.entries[currentIndex];
   const item = itemMap().get(entry.itemId);
   const scale = scaleMap().get(item.responseScaleId);
@@ -147,7 +244,9 @@ const submit = (state, value) => {
   const changed = prior &&
     (prior.state !== state || JSON.stringify(prior.value) !== JSON.stringify(value));
 
-  if (changed) clearAfterIndex(session, currentIndex);
+  if (changed && behavior.navigation.changedEarlierAnswerClearsLaterState) {
+    clearAfterIndex(session, currentIndex);
+  }
 
   recordResponse(session, {
     itemId:item.id,
@@ -158,7 +257,8 @@ const submit = (state, value) => {
   });
 
   saveLocal();
-  moveTo(findNext(currentIndex + 1));
+  renderQuestion();
+  scheduleAdvance();
 };
 
 const renderRanking = (item, existing) => {
@@ -198,7 +298,7 @@ const renderRanking = (item, existing) => {
       up.type = "button";
       up.className = "rank-button";
       up.textContent = "↑";
-      up.disabled = index === 0;
+      up.disabled = index === 0 || advancing;
       up.setAttribute("aria-label", "Move up");
       up.addEventListener("click", () => {
         [rankingOrder[index - 1], rankingOrder[index]] = [rankingOrder[index], rankingOrder[index - 1]];
@@ -209,7 +309,7 @@ const renderRanking = (item, existing) => {
       down.type = "button";
       down.className = "rank-button";
       down.textContent = "↓";
-      down.disabled = index === rankingOrder.length - 1;
+      down.disabled = index === rankingOrder.length - 1 || advancing;
       down.setAttribute("aria-label", "Move down");
       down.addEventListener("click", () => {
         [rankingOrder[index + 1], rankingOrder[index]] = [rankingOrder[index], rankingOrder[index + 1]];
@@ -224,7 +324,8 @@ const renderRanking = (item, existing) => {
     const submitButton = document.createElement("button");
     submitButton.type = "button";
     submitButton.className = "primary";
-    submitButton.textContent = "Save ranking and continue";
+    submitButton.disabled = advancing;
+    submitButton.textContent = "Save ranking";
     submitButton.addEventListener("click", () => submit("answered", [...rankingOrder]));
 
     area.append(list, submitButton);
@@ -238,10 +339,12 @@ const renderQuestion = () => {
   const item = itemMap().get(entry.itemId);
   const existing = existingResponse(item.id);
   const d = domainMap().get(item.domainId);
+  const percent = Math.round(((currentIndex + 1) / packet.entries.length) * 100);
 
   $("domain-label").textContent = d?.name ?? item.domainId;
-  $("progress-text").textContent = String(currentIndex + 1) + " / " + String(packet.entries.length);
-  $("progress-bar").value = ((currentIndex + 1) / packet.entries.length) * 100;
+  $("progress-text").textContent =
+    "Question " + String(currentIndex + 1) + " of " + String(packet.entries.length) + " · " + String(percent) + "%";
+  $("progress-bar").value = percent;
   $("question-text").textContent = item.text;
   $("status-pill").textContent = "Pilot session";
 
@@ -259,6 +362,7 @@ const renderQuestion = () => {
 
   const answerArea = $("answer-area");
   answerArea.innerHTML = "";
+  answerArea.dataset.advancing = String(advancing);
 
   if (item.responseType === "ranking") {
     renderRanking(item, existing);
@@ -280,6 +384,7 @@ const renderQuestion = () => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "answer-button";
+      button.disabled = advancing;
       button.textContent = answer.label;
       if (
         existing?.state === "answered" &&
@@ -294,21 +399,25 @@ const renderQuestion = () => {
 
   const specialArea = $("special-area");
   specialArea.innerHTML = "";
+  specialArea.dataset.advancing = String(advancing);
+
   for (const state of item.specialStates) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "special-button";
+    button.disabled = advancing;
     button.textContent = specialLabel[state] ?? state;
     if (existing?.state === state) button.classList.add("selected");
     button.addEventListener("click", () => submit(state, null));
     specialArea.append(button);
   }
 
-  const previous = findPrevious(currentIndex - 1);
-  $("back-button").disabled = previous === null;
+  $("back-button").disabled = advancing || findPrevious(currentIndex - 1) === null;
+  $("next-button").disabled = advancing || !currentHasResponse();
 };
 
 const startNew = ({ size, seed }) => {
+  clearAdvanceTimer();
   packet = generatePilotPacket({
     bank,
     pilot,
@@ -320,7 +429,7 @@ const startNew = ({ size, seed }) => {
     pilot,
     packet,
     locale:navigator.language || "en-US",
-    clientVersion:"web-0.1",
+    clientVersion:"web-0.2",
     sessionId:createSessionId()
   });
   currentIndex = null;
@@ -329,6 +438,7 @@ const startNew = ({ size, seed }) => {
 };
 
 const resumeSaved = (saved) => {
+  clearAdvanceTimer();
   packet = saved.packet;
   session = saved.session;
   currentIndex = saved.currentIndex;
@@ -356,20 +466,67 @@ const exportSession = () => {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 };
 
+const renderPresets = () => {
+  const grid = $("preset-grid");
+  grid.innerHTML = "";
+  for (const preset of behavior.presets) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "preset-button";
+
+    const title = document.createElement("strong");
+    title.textContent = preset.label;
+
+    const detail = document.createElement("span");
+    detail.textContent = String(preset.size) + " questions";
+
+    button.append(title, detail);
+    button.addEventListener("click", () => {
+      const seed = $("packet-seed").value.trim() || generateSeed();
+      $("packet-size").value = preset.size;
+      startNew({ size:preset.size, seed });
+    });
+    grid.append(button);
+  }
+};
+
+const checkRemote = async () => {
+  try {
+    const response = await fetch("/api/health", { cache:"no-store" });
+    if (!response.ok) return false;
+    const health = await response.json();
+    return (
+      health.status === "ok" &&
+      health.pilotId === pilot.pilotId &&
+      health.bankVersion === bank.bankVersion &&
+      health.instrumentVersion === current.instrument.version
+    );
+  } catch {
+    return false;
+  }
+};
+
 const bootstrap = async () => {
   current = await fetchJson("data/current.json");
-  [pilot, bank, scalesDoc, domains] = await Promise.all([
+  [pilot, bank, scalesDoc, domains, behavior] = await Promise.all([
     fetchJson(current.pilot.path),
     fetchJson(current.candidateBank.path),
     fetchJson("data/response-scales.json"),
-    fetchJson("data/domains.json")
+    fetchJson("data/domains.json"),
+    fetchJson(current.uiBehavior.path)
   ]);
+
+  autoAdvanceEnabled = behavior.autoAdvance.defaultEnabled;
+  $("auto-advance-toggle").checked = autoAdvanceEnabled;
 
   $("packet-size").min = pilot.administration.allowedPacketSize.min;
   $("packet-size").max = pilot.administration.allowedPacketSize.max;
   $("packet-size").value = pilot.administration.defaultPacketSize;
   $("packet-seed").value = generateSeed();
   $("status-pill").textContent = String(bank.items.length) + "-item bank";
+
+  renderPresets();
+  remoteAvailable = await checkRemote();
 
   const saved = loadSaved();
   if (saved) {
@@ -393,12 +550,27 @@ const bootstrap = async () => {
   });
 
   $("back-button").addEventListener("click", () => {
+    clearAdvanceTimer();
     const previous = findPrevious(currentIndex - 1);
     if (previous !== null) moveTo(previous);
   });
 
+  $("next-button").addEventListener("click", advanceFromCurrent);
+
+  $("auto-advance-toggle").addEventListener("change", () => {
+    autoAdvanceEnabled = $("auto-advance-toggle").checked;
+    if (!autoAdvanceEnabled) clearAdvanceTimer();
+  });
+
+  $("retry-submit-button").addEventListener("click", async () => {
+    remoteAvailable = await checkRemote();
+    await submitRemoteSession();
+  });
+
   $("export-button").addEventListener("click", exportSession);
+
   $("restart-button").addEventListener("click", () => {
+    clearAdvanceTimer();
     clearLocal();
     packet = null;
     session = null;
