@@ -148,14 +148,14 @@ if (headlineUnderFloor.length) {
   pass(`all ${headlineConstructs.length} headline constructs have at least three primary indicators`);
 }
 
-const primaryUnderFloor = primaryConstructs.filter((construct) => (primaryCounts[construct.id] ?? 0) < 2);
+const primaryUnderFloor = primaryConstructs.filter((construct) => (primaryCounts[construct.id] ?? 0) < 3);
 if (primaryUnderFloor.length) {
   fail(
-    "primary constructs below two primary indicators: " +
+    "primary constructs below three primary indicators: " +
     primaryUnderFloor.map((construct) => `${construct.id}=${primaryCounts[construct.id] ?? 0}`).join(", ")
   );
 } else {
-  pass(`all ${primaryConstructs.length} primary constructs have at least two primary indicators`);
+  pass(`all ${primaryConstructs.length} primary constructs have at least three primary indicators`);
 }
 
 if (instrument.entries.length !== instrument.nominalPoolSize) {
