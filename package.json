@@ -17,7 +17,10 @@
     "shortform:select": "node scripts/select-short-form.mjs",
     "test:score": "node scripts/score-session.mjs examples/pilot-session.example.json",
     "validate": "npm run validate:registry && npm run validate:items && npm run validate:pilot && npm run lint:items",
-    "test": "npm run validate && npm run test:score"
+    "test": "npm run validate && npm run test:runtime && npm run test:score && npm run test:web:syntax",
+    "test:runtime": "node scripts/test-runtime.mjs",
+    "test:web:syntax": "node --check apps/web/app.js",
+    "web:serve": "node scripts/serve-web.mjs"
   },
   "engines": {
     "node": ">=20"

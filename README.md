@@ -65,3 +65,18 @@ The instrument may contain dozens of separately estimated constructs underneath 
 
 This repository is currently at **construct-model v0.1 / candidate research bank v0.8 / pilot architecture v0.1**. The bank contains 472 versioned candidate items. Raw pilot-session, calibration-export, versioned scoring, and empirical short-form selection machinery now exist, but the registry and item assignments remain theory-driven and provisional. The project has not yet established an empirical factor structure, calibrated item parameters, validated scoring model, or validated short form.
 
+
+
+## Browser pilot runner
+
+A dependency-free pilot administration client now lives in `apps/web/`.
+
+Run it from the repository root:
+
+```bash
+npm run web:serve
+```
+
+Then open `http://localhost:4173/apps/web/`.
+
+The runner generates seeded pilot packets, administers branching items one at a time, autosaves raw sessions locally, resumes interrupted sessions, and exports the exact versioned pilot-session JSON used by the calibration tooling. It does not display worldview scores.
