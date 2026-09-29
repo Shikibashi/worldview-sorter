@@ -1,0 +1,156 @@
+{
+  "version": "philosophy-release-1",
+  "bankVersion": "0.9.0",
+  "modelVersion": "generic-0.2.0",
+  "formPolicyVersion": "philosophy-blueprint-1.0.0",
+  "itemCount": 562,
+  "newItems": 0,
+  "newCommitmentRules": 57,
+  "totalCommitmentRules": 140,
+  "totalComparisons": 146,
+  "totalSources": 80,
+  "newSourceRecords": 21,
+  "facets": 31,
+  "mappedConstructs": 132,
+  "remainingConstructGaps": 49,
+  "mappedItems": 319,
+  "publicExclusions": 10,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.8.json": "c8cc54c5a58c8ed902b31603283253bca6751c46cb6ef9d22c71fe1001952b7f",
+    "data/items/candidate-v0.9.json": "3ab53fe4d312cc3980f653c02e6501f446b7e24e11e8774dea247f22184af89c",
+    "data/instruments/research-pool-0.8.json": "1a687893886929f7830871df4240cbf19ce21318fdf309a9fcb3f15cac349394",
+    "data/instruments/research-pool-0.9.json": "a2762c7347c4ad78fe3934a5c11eb2c83f4141a648595daf49a8eda8ebd95ad4",
+    "data/generic/model-v0.1.json": "9a1e346ce4686f5df41fc41ae4be8bd60355a7531856c2779d2be299012ce298"
+  },
+  "empiricalValidation": false,
+  "cognitiveReviewRequired": false,
+  "domains": [
+    {
+      "id": "ME",
+      "name": "Metaethics",
+      "facets": [
+        "meta-status",
+        "meta-scope",
+        "meta-reasons"
+      ],
+      "beforeRules": 3,
+      "afterRules": 9
+    },
+    {
+      "id": "NE",
+      "name": "Normative & applied ethics",
+      "facets": [
+        "ethics-foundations",
+        "ethics-obligations",
+        "ethics-action"
+      ],
+      "beforeRules": 15,
+      "afterRules": 21
+    },
+    {
+      "id": "MF",
+      "name": "Moral psychology",
+      "facets": [
+        "moral-psychology"
+      ],
+      "beforeRules": 6,
+      "afterRules": 6
+    },
+    {
+      "id": "VA",
+      "name": "Values & axiology",
+      "facets": [
+        "personal-values",
+        "value-theories"
+      ],
+      "beforeRules": 19,
+      "afterRules": 22
+    },
+    {
+      "id": "EP",
+      "name": "Epistemology",
+      "facets": [
+        "epistemic-method",
+        "epistemic-justification"
+      ],
+      "beforeRules": 6,
+      "afterRules": 16
+    },
+    {
+      "id": "OM",
+      "name": "Ontology & metaphysics",
+      "facets": [
+        "ontology",
+        "metaontology",
+        "metaphysical-structure",
+        "laws-causation",
+        "time-modality"
+      ],
+      "beforeRules": 6,
+      "afterRules": 13
+    },
+    {
+      "id": "MS",
+      "name": "Mind & personal identity",
+      "facets": [
+        "consciousness",
+        "personal-identity"
+      ],
+      "beforeRules": 2,
+      "afterRules": 7
+    },
+    {
+      "id": "AH",
+      "name": "Agency & human nature",
+      "facets": [
+        "agency-freedom",
+        "agency-causes"
+      ],
+      "beforeRules": 3,
+      "afterRules": 5
+    },
+    {
+      "id": "RC",
+      "name": "Philosophy of religion",
+      "facets": [
+        "religious-claims",
+        "religious-practice"
+      ],
+      "beforeRules": 3,
+      "afterRules": 7
+    },
+    {
+      "id": "EX",
+      "name": "Meaning & existential outlook",
+      "facets": [
+        "existential-meaning",
+        "existential-outlook"
+      ],
+      "beforeRules": 2,
+      "afterRules": 4
+    },
+    {
+      "id": "SO",
+      "name": "Social philosophy & ontology",
+      "facets": [
+        "social-persons",
+        "social-entities"
+      ],
+      "beforeRules": 2,
+      "afterRules": 5
+    },
+    {
+      "id": "PL",
+      "name": "Political, legal & economic philosophy",
+      "facets": [
+        "political-authority",
+        "political-rights",
+        "political-economy",
+        "political-justice",
+        "political-scope"
+      ],
+      "beforeRules": 16,
+      "afterRules": 25
+    }
+  ]
+}

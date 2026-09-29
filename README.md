@@ -63,3 +63,7 @@ Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 `npm run test:experience` checks the new controller, evidence summary, privacy-safe share projection and post-completion game boundary. The separate Quiz experience workflow tests the actual Chromium browser and publishes synthetic screenshots.
 
 [Quiz experience and academic design rationale](docs/QUIZ_EXPERIENCE.md) explains future gamification. Game rewards are disabled by default and cannot use beliefs, scores, speed or ideological consistency. The current experience already provides a summary; no calibration flag has been used to claim validated worldview scores.
+
+## Philosophy-domain content coverage
+
+The public quiz uses a versioned content blueprint with separate ontology, metaphysics, metaethical, ethical, epistemic, and political/legal/economic facets. Every route asks multiple relevant questions for each facet rather than hoping proportional random sampling does so. Original item text is unchanged; academic citations explain conceptual scope, not scientific validation of custom items. See [the domain/source/evidence specification](docs/PHILOSOPHY_DOMAINS.md).
