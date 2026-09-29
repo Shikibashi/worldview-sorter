@@ -166,7 +166,7 @@ export const rules=[
   a("SOI024"),e("SOI030",[-2,-1],[1,2])
  ],"This is a tradeoff preference in stated cases, not a complete theory of environmental value."),
  R("audit-SO13-just-world","SO13","People generally get outcomes they deserve",["audit-justworld"],[
-  a("SOI037"),a("SOI038",-1),e("SOI039",[],["undeserved"])
+  a("SOI037"),a("SOI038",-1)
  ],"General just-world belief is distinct from personal just-world belief and does not by itself establish victim blaming."),
  R("audit-PL01-legitimacy","PL01","Political institutions can sometimes possess a moral right to coerce",["acad-legitimacy"],[
   a("PLI001"),a("PLI024",-1),e("PLI047",["yes","qualified"],["no"])
