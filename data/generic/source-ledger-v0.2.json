@@ -488,11 +488,14 @@
       "reviewedOn": "2026-09-28",
       "reuse": "No questionnaire wording copied; theory-level reference only.",
       "useByRules": [
+        "legacy-objectivism-market-coordination",
         "ph-polycentric-order"
       ],
       "useByConstructs": [],
       "useByItems": [
         "PLI022",
+        "PLI035",
+        "PLI055",
         "PLI069"
       ],
       "permissionToCopyItems": false,
@@ -657,9 +660,7 @@
         "construct-ME10",
         "construct-NE15",
         "construct-PL27",
-        "construct-PL29",
-        "legacy-objectivism-market-coordination",
-        "legacy-objectivism-moral-truth-aptness"
+        "construct-PL29"
       ],
       "useByConstructs": [
         "ME09",
@@ -669,10 +670,6 @@
         "PL29"
       ],
       "useByItems": [
-        "PLI035",
-        "PLI055",
-        "MEI017",
-        "MEI018",
         "MEI100",
         "MEI101",
         "MEI102",
@@ -712,9 +709,7 @@
         "construct-EP19",
         "construct-EP20",
         "construct-OM12",
-        "construct-OM13",
-        "legacy-objectivism-market-coordination",
-        "legacy-objectivism-moral-truth-aptness"
+        "construct-OM13"
       ],
       "useByConstructs": [
         "EP15",
@@ -727,10 +722,6 @@
         "AH14"
       ],
       "useByItems": [
-        "PLI035",
-        "PLI055",
-        "MEI017",
-        "MEI018",
         "EPI100",
         "EPI101",
         "EPI102",
@@ -1374,9 +1365,14 @@
       "evidenceType": "signed_scholarly_analysis",
       "reviewedOn": "2026-09-28",
       "itemReuse": "No item wording copied; conceptual reference only.",
-      "useByRules": [],
+      "useByRules": [
+        "legacy-objectivism-moral-truth-aptness"
+      ],
       "useByConstructs": [],
-      "useByItems": [],
+      "useByItems": [
+        "MEI017",
+        "MEI018"
+      ],
       "permissionToCopyItems": false,
       "validatesOurItems": false,
       "sourceRole": "signed_scholarly_analysis",
@@ -2394,11 +2390,14 @@
       "permissionToCopyItems": false,
       "validatesOurItems": false,
       "useByRules": [
+        "legacy-objectivism-market-coordination",
         "ph-strong-property"
       ],
       "useByItems": [
         "PLI013",
-        "PLI054"
+        "PLI035",
+        "PLI054",
+        "PLI055"
       ]
     },
     {
@@ -2429,10 +2428,13 @@
       "permissionToCopyItems": false,
       "validatesOurItems": false,
       "useByRules": [
+        "legacy-objectivism-moral-truth-aptness",
         "ph-stance-independence"
       ],
       "useByItems": [
         "MEI002",
+        "MEI017",
+        "MEI018",
         "MEI023"
       ]
     }

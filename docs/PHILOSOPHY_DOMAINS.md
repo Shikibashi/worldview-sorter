@@ -46,6 +46,10 @@ Every route contains complete two-evidence-group bundles for each listed facet. 
 
 The new local public form uses a distinct instrument version and packet-policy version. Research pilot packet generation is unchanged. Existing backups without a public-form marker use the historical generator; unknown versions fail closed. The collector does not mistake a new public form for a research packet.
 
+## Generic scope of inherited criteria
+
+The truth-aptness and market-coordination criteria retain their historical internal IDs but now use topic-specific academic sources and explanations. Attitude or prescription answers no longer count automatically as rejecting all truth-aptness. The earlier model is preserved.
+
 ## Exact academic rules
 
 ### Moral wrongness can be independent of attitudes

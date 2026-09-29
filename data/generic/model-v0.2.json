@@ -3051,10 +3051,10 @@
       "constructId": "PL13",
       "label": "market-coordination",
       "layer": "institutional_normative",
-      "scope": "A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.",
+      "scope": "Your preferences between voluntary exchange, prices and deliberate allocation in the stated coordination cases.",
       "sourceIds": [
-        "acad-rand",
-        "acad-rand-epistemology"
+        "acad-ostrom",
+        "domain-property"
       ],
       "evidence": [
         {
@@ -3084,8 +3084,8 @@
           "unitId": "PLI055"
         }
       ],
-      "boundary": "Inherited narrow criterion; do not generalize it beyond A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.",
-      "mappingStatus": "inherited_academic_rule_with_recorded_limits",
+      "boundary": "Coordination preferences do not establish Objectivism, an ethical code or a universal case for one institution. Markets, states and commons can be evaluated differently by activity.",
+      "mappingStatus": "source_reviewed_contextual_coordination_not_identity",
       "domainId": "PL",
       "tier": "headline",
       "minimumEvidenceUnits": 2,
@@ -3096,10 +3096,10 @@
       "constructId": "ME06",
       "label": "moral-truth-aptness",
       "layer": "metaethical",
-      "scope": "A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.",
+      "scope": "Your explicit answers about whether moral sentences can be true or false.",
       "sourceIds": [
-        "acad-rand",
-        "acad-rand-epistemology"
+        "domain-polzler",
+        "gen-noncognitivism"
       ],
       "evidence": [
         {
@@ -3120,16 +3120,13 @@
           "support": [
             "truth_claim"
           ],
-          "oppose": [
-            "attitude",
-            "prescription"
-          ],
+          "oppose": [],
           "itemRevision": 1,
           "unitId": "MEI018"
         }
       ],
-      "boundary": "Inherited narrow criterion; do not generalize it beyond A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.",
-      "mappingStatus": "inherited_academic_rule_with_recorded_limits",
+      "boundary": "Truth-aptness does not establish stance-independent moral truth or an Objectivist identity. Expressivist and quasi-realist accounts can accommodate truth-talk; expressing an attitude need not deny every kind of truth-aptness.",
+      "mappingStatus": "source_reviewed_explicit_truth_talk_not_identity",
       "domainId": "ME",
       "tier": "diagnostic",
       "minimumEvidenceUnits": 2,
