@@ -9,7 +9,25 @@ const args={model,bank,scalesDoc};let tests=0;
 const test=(name,fn)=>{fn();tests++;console.log('PASS generic: '+name);};
 const input=responses=>({bankVersion:bank.bankVersion,responses});
 const rule=id=>{const c=model.commitments.find(x=>x.id===id);assert.ok(c,id);return c;};
-const answers=(id,dir='support')=>rule(id).evidence.filter(e=>e[dir].length).map(e=>({itemId:e.itemId,itemRevision:e.itemRevision,state:'answered',value:e[dir][0]}));
+const addPrerequisites=(responses)=>{
+ const byItem=new Map(bank.items.map(i=>[i.id,i])),out=new Map(responses.map(r=>[r.itemId,r]));
+ let changed=true;
+ while(changed){
+  changed=false;
+  for(const response of [...out.values()]){
+   const item=byItem.get(response.itemId);
+   if(item?.eligibility?.mode!=='conditional')continue;
+   for(const condition of item.eligibility.all){
+    if(out.has(condition.itemId))continue;
+    const parent=byItem.get(condition.itemId);
+    out.set(condition.itemId,{itemId:parent.id,itemRevision:parent.revision,state:'answered',value:condition.optionIds[0]});
+    changed=true;
+   }
+  }
+ }
+ return [...out.values()];
+};
+const answers=(id,dir='support')=>addPrerequisites(rule(id).evidence.filter(e=>e[dir].length).map(e=>({itemId:e.itemId,itemRevision:e.itemRevision,state:'answered',value:e[dir][0]})));
 const merge=(...rs)=>[...new Map(rs.flat().map(r=>[r.itemId,r])).values()];
 const run=responses=>compareWorldview({...args,input:input(responses)});
 const state=(result,id)=>result.commitments.find(c=>c.commitmentId===id).state;
