@@ -53,7 +53,7 @@ export function buildQuizSummary({model,bank,scalesDoc,session}){
  return {schemaVersion:'quiz-summary-1',experienceVersion:EXPERIENCE_VERSION,modelVersion:report.modelVersion,bankVersion:report.bankVersion,
   title:'Your worldview, in pieces',subtitle:'A map of the answers you gave, not a label you have to wear.',
   academicNotice:'Informed by philosophy and psychology research. These original questions and interpretation rules are exploratory, not a validated psychological assessment.',
-  coverageNotice:['worldview-public-1.0.0','worldview-public-240-1.0.0'].includes(session.instrumentVersion)?'Each route samples the core philosophical topics, but not every position. A blank or unresolved area means limited evidence or an unmapped distinction, not a neutral or opposing belief.':'This historical sample was not content-balanced. Missing topics do not indicate neutrality or opposition.',
+  coverageNotice:session.instrumentVersion.startsWith('worldview-public')?'Each route samples the core philosophical topics, but not every position. A blank or unresolved area means limited evidence or an unmapped distinction, not a neutral or opposing belief.':'This historical sample was not content-balanced. Missing topics do not indicate neutrality or opposition.',
   resolvedPatterns:rows.filter(r=>['supported','opposed','mixed'].includes(r.status)).length,
   answeredItems:session.responses.filter(r=>r.state==='answered').length,
   specialResponses:session.responses.filter(r=>r.state!=='answered').length,

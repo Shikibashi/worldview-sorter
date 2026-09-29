@@ -1,8 +1,8 @@
 import {generatePhilosophyPacket} from '../philosophy/forms.js';
 import {generatePilotPacket,createPilotSession,isItemEligible,responseMapFor,markPresented,markBranchSkipped,recordResponse,finishSession,validateResponseValue} from '../runtime/index.js';
 
-export const EXPERIENCE_VERSION='quiz-1.2.0';
-export const COMPATIBLE_EXPERIENCE_VERSIONS=['quiz-1.0.0','quiz-1.1.0','quiz-1.2.0'];
+export const EXPERIENCE_VERSION='quiz-1.3.0';
+export const COMPATIBLE_EXPERIENCE_VERSIONS=['quiz-1.0.0','quiz-1.1.0','quiz-1.2.0','quiz-1.3.0'];
 const insist=(ok,message)=>{if(!ok)throw new Error(message);};
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 
