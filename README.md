@@ -43,3 +43,13 @@ No participant responses or empirical item parameters were fabricated. Published
 ## Additional measurement limits
 
 See [methodological disagreements and explicit-endorsement limits](docs/METAETHICAL_MEASUREMENT_LIMITS.md), including a 2026 critique of folk-metaethical classification. A new versioned packet-ordering algorithm fixes a regression exposed by the expanded bank while preserving historical v0.8 packet replay.
+
+## Generic academic comparison layer
+
+The active generic model covers all twelve domains using reusable, source-traceable commitments. Personal priorities, normative principles, descriptive beliefs, ontological claims and institutional prescriptions are not conflated. No profile is forced and no match percentage is produced.
+
+`npm run worldview:compare -- responses.json`
+
+`npm run worldview:followups -- responses.json 12`
+
+See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access ledger](research/academic/GENERIC_SOURCE_LEDGER.md), and [coverage report](data/generic/coverage-v0.1.json). Existing sample collection and older comparison modules remain compatibility/development tools; the generic layer does not require cognitive review or claim empirical validation.

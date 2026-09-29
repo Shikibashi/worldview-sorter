@@ -52,5 +52,17 @@
   "academicSupplement": {
     "version": "0.9.0",
     "path": "data/academic/methodology-supplement-v0.9.json"
+  },
+  "worldviewModel": {
+    "version": "generic-0.1.0",
+    "path": "data/generic/model-v0.1.json"
+  },
+  "worldviewSourceLedger": {
+    "version": "0.1.0",
+    "path": "data/generic/source-ledger-v0.1.json"
+  },
+  "worldviewCoverage": {
+    "version": "0.1.0",
+    "path": "data/generic/coverage-v0.1.json"
   }
 }

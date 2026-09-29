@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "bankVersion": "0.9.0",
+  "itemCount": 562,
+  "activeConstructCount": 181,
+  "domainsCovered": 12,
+  "commitments": 83,
+  "comparisons": 89,
+  "sourceRecords": 58,
+  "newSourceRecords": 20,
+  "constructsWithMappings": 81,
+  "constructsWithoutMappings": 100,
+  "itemsWithMappings": 209,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.8.json": "c8cc54c5a58c8ed902b31603283253bca6751c46cb6ef9d22c71fe1001952b7f",
+    "data/items/candidate-v0.9.json": "3ab53fe4d312cc3980f653c02e6501f446b7e24e11e8774dea247f22184af89c",
+    "data/instruments/research-pool-0.9.json": "a2762c7347c4ad78fe3934a5c11eb2c83f4141a648595daf49a8eda8ebd95ad4",
+    "data/registries/constructs-v0.2.json": "957ef19d4f2bad343846841d1c73343875fab07aaedb2a75202f8938a7324aa2"
+  },
+  "cognitiveReviewRequired": false,
+  "empiricalDataFabricated": false
+}
