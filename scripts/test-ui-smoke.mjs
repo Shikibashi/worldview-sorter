@@ -23,9 +23,12 @@ class Element {
 }
 const html=await readFile(path.join(root,'apps/web/index.html'),'utf8');
 const elements=new Map();
-for(const match of html.matchAll(/<([a-z]+)\b[^>]*\bid="([^"]+)"[^>]*>/g)) {
+// HTML tag names include digits (h1/h2); excluding them silently drops headings.
+for(const match of html.matchAll(/<([a-z][a-z0-9-]*)\b[^>]*\bid="([^"]+)"[^>]*>/gi)) {
   const e=new Element(match[1]);e.className=match[0].match(/class="([^"]*)"/)?.[1]??'';elements.set(match[2],e);
 }
+assert.ok(elements.has('question-text'),'Harness must include the actual question heading');
+assert.equal(elements.get('question-text').tagName,'h2');
 const saved=new Map();
 globalThis.document={getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),body:new Element('body')};
 globalThis.localStorage={getItem:k=>saved.get(k)??null,setItem:(k,v)=>saved.set(k,v),removeItem:k=>saved.delete(k)};
