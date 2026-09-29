@@ -64,5 +64,10 @@
   "worldviewCoverage": {
     "version": "0.1.0",
     "path": "data/generic/coverage-v0.1.json"
+  },
+  "quizExperience": {
+    "version": "quiz-1.0.0",
+    "path": "data/experience/policy-v1.json",
+    "entrypoint": "apps/quiz/index.html"
   }
 }
