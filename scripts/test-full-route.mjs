@@ -13,29 +13,35 @@ const current = await read('data/current.json');
 const bank = await read(current.candidateBank.path), pilot = await read(current.pilot.path);
 const model = await read(current.worldviewModel.path), instrument = await read(current.instrument.path);
 const scalesDoc = await read('data/response-scales.json');
-const original = await read(current.publicForm.path), full = await read(current.fullForm.path);
+const original = await read('data/philosophy/public-form-v1.json'), full = await read('data/philosophy/public-full-v1.json');
+const activeOriginal = await read(current.publicForm.path), activeFull = await read(current.fullForm.path);
 const experience = await read(current.quizExperience.path), history = await read('data/philosophy/full-route-history-v1.json');
 const byItem = new Map(bank.items.map(i => [i.id, i]));
-const forms = [original, full], args = { bank, pilot, scalesDoc, formPolicies: forms };
+const forms = [original, full, activeOriginal, activeFull], activeForms=[activeOriginal,activeFull];
+const args = { bank, pilot, scalesDoc, formPolicies: forms };
 let tests = 0;
 const test = (name, fn) => { fn(); tests++; console.log('PASS full route: ' + name); };
 
 test('Four selectable routes and the 562-item bank are separate quantities', () => {
   assert.deepEqual(experience.routes.map(r => r.size), [80, 120, 160, 240]);
-  assert.deepEqual(full.sizes, [240]);
-  assert.deepEqual(original.sizes, [80, 120, 160]);
+  assert.deepEqual(activeFull.sizes, [240]);
+  assert.deepEqual(activeOriginal.sizes, [80, 120, 160]);
   assert.equal(bank.items.length, 562);
-  for (const r of experience.routes) assert.ok(forms.some(f => f.policyVersion === r.formPolicyVersion && f.sizes.includes(r.size)));
+  for (const r of experience.routes) assert.ok(activeForms.some(f => f.policyVersion === r.formPolicyVersion && f.sizes.includes(r.size)));
 });
 test('Longer length does not change evidence rules, raw items, rewards or privacy', () => {
-  assert.equal(full.modelVersion, original.modelVersion);
-  assert.deepEqual(full.facets, original.facets);
-  assert.deepEqual(full.bundles, original.bundles);
-  assert.deepEqual(full.excludedItemIds, original.excludedItemIds);
+  assert.equal(activeFull.modelVersion, activeOriginal.modelVersion);
+  assert.deepEqual(activeFull.facets, activeOriginal.facets);
+  assert.deepEqual(activeFull.bundles, activeOriginal.bundles);
+  assert.deepEqual(activeFull.excludedItemIds, activeOriginal.excludedItemIds);
   assert.equal(experience.gamification.enabled, false);
   assert.equal(experience.privacy.defaultAnswerSubmission, false);
   assert.equal(experience.questionnairePolicy.rewriteItemText, false);
-  assert.notEqual(full.instrumentVersion, original.instrumentVersion);
+  assert.notEqual(activeFull.instrumentVersion, activeOriginal.instrumentVersion);
+  assert.equal(original.policyVersion,'philosophy-blueprint-1.0.0');
+  assert.equal(full.policyVersion,'philosophy-full-1.0.0');
+  assert.equal(activeOriginal.parentPolicyVersion,original.policyVersion);
+  assert.equal(activeFull.parentPolicyVersion,full.policyVersion);
 });
 for (const [p, expected] of Object.entries(history.artifacts)) {
   const actual = hash(await raw(p));
@@ -49,19 +55,19 @@ for (const saved of history.packets) test('Exact prior packet replay: ' + saved.
 test('100 full-route seeds each contain 240 distinct, covered, correctly ordered positions', () => {
   for (let n = 0; n < 100; n++) {
     const seed = 'full-240-' + n;
-    const packet = generatePhilosophyPacket({ bank, pilot, policy: full, seed, size: 240 });
-    assert.deepEqual(packet, generatePhilosophyPacket({ bank, pilot, policy: full, seed, size: 240 }));
+    const packet = generatePhilosophyPacket({ bank, pilot, policy: activeFull, seed, size: 240 });
+    assert.deepEqual(packet, generatePhilosophyPacket({ bank, pilot, policy: activeFull, seed, size: 240 }));
     assert.equal(packet.entries.length, 240);
     assert.equal(new Set(packet.entries.map(e => e.itemId)).size, 240);
     assert.equal(new Set(packet.entries.map(e => e.domainId)).size, 12);
     assert.equal(new Set(packet.entries.map(e => e.responseScaleId)).size, 7);
-    const audit = auditPhilosophyPacket(packet, full);
+    const audit = auditPhilosophyPacket(packet, activeFull);
     assert.ok(audit.allRequired); assert.equal(audit.facets.length, 31);
     const positions = new Map(packet.entries.map(e => [e.itemId, e.index]));
     for (const [index, entry] of packet.entries.entries()) {
       const item = byItem.get(entry.itemId);
       assert.equal(entry.index, index); assert.equal(entry.itemRevision, item.revision);
-      assert.ok(!full.excludedItemIds.includes(item.id));
+      assert.ok(!activeFull.excludedItemIds.includes(item.id));
       if (index >= 2) assert.ok(new Set(packet.entries.slice(index - 2, index + 1).map(e => e.domainId)).size > 1);
       if (index) for (const key of ['mirrorGroup', 'scenarioGroup']) {
         assert.ok(!item[key] || item[key] !== byItem.get(packet.entries[index - 1].itemId)[key]);
@@ -71,12 +77,12 @@ test('100 full-route seeds each contain 240 distinct, covered, correctly ordered
   }
 });
 test('Invalid route lengths fail rather than truncating, padding or duplicating', () => {
-  for (const size of [0, 80, 160, 239, 241, 240.5, '240']) assert.throws(() => generatePhilosophyPacket({ bank, pilot, policy: full, seed: 'invalid-length', size }));
+  for (const size of [0, 80, 160, 239, 241, 240.5, '240']) assert.throws(() => generatePhilosophyPacket({ bank, pilot, policy: activeFull, seed: 'invalid-length', size }));
 });
 
 const choose = item => ['likert', 'paired_choice'].includes(item.responseType) ? 0 : item.responseType === 'ranking' ? item.options.map(o => o.id) : item.options[0].id;
 for (const mode of ['answered', 'mixed', 'no_view']) test('240-position ' + mode + ' flow can pause, restore, finish and explain results', () => {
-  let q = createQuiz({ bank, pilot, scalesDoc, formPolicy: full, size: 240, seed: 'flow-240-' + mode, sessionId: 'synthetic-240-' + mode });
+  let q = createQuiz({ bank, pilot, scalesDoc, formPolicy: activeFull, size: 240, seed: 'flow-240-' + mode, sessionId: 'synthetic-240-' + mode });
   seekQuestion(q, bank); let n = 0;
   while (q.index !== null) {
     assert.ok(n++ < 241);
@@ -113,7 +119,7 @@ for (const mode of ['answered', 'mixed', 'no_view']) test('240-position ' + mode
   // Public quiz length is not permission to write to the research collector.
   assert.throws(() => validateSubmittedSession({ session: q.session, bank, pilot, instrument, scalesDoc }));
 });
-for (const version of ['quiz-1.0.0', 'quiz-1.1.0', 'quiz-1.2.0']) test('Compatible browser envelope version: ' + version, () => assert.ok(COMPATIBLE_EXPERIENCE_VERSIONS.includes(version)));
+for (const version of ['quiz-1.0.0', 'quiz-1.1.0', 'quiz-1.2.0', 'quiz-1.3.0']) test('Compatible browser envelope version: ' + version, () => assert.ok(COMPATIBLE_EXPERIENCE_VERSIONS.includes(version)));
 for (const size of [80, 120, 160]) test('Older ' + size + '-item public save resumes with a policy registry', () => {
   const q = createQuiz({ bank, pilot, scalesDoc, formPolicy: original, size, seed: 'saved-original-' + size, sessionId: 'original-' + size });
   q.session.clientVersion = 'quiz-1.1.0'; seekQuestion(q, bank);
