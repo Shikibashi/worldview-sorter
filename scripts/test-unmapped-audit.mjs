@@ -82,7 +82,7 @@ for(const rule of accepted){
 testCase('External-world realism is not direct realism',()=>{
  const r=run([response('EPI036',2),response('EPI037','mind_independent'),response('EPI034','indirect')]);
  assert.equal(state(r,'audit-EP11-external-world'),'supported');
- assert.equal(state(r,'audit-EP11-skepticism'),'insufficient_evidence');
+ assert.equal(state(r,'audit-EP11-skepticism'),'opposed');
 });
 testCase('Biological and environmental causal beliefs can both be supported',()=>{
  const r=run([...answers('audit-AH08-biological'),...answers('audit-AH09-environmental')]);
