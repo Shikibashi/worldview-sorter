@@ -18,7 +18,7 @@ The bank remains 562 items. The model has 83 reusable commitment rules and 89 sc
 ## Reusable rules, exact questions and sources
 
 ### afterlife-belief: Personal persistence after death
-Personal persistence after death [Atheism and Agnosticism](https://plato.stanford.edu/entries/atheism-agnosticism/)
+Personal persistence after death [Afterlife](https://plato.stanford.edu/entries/afterlife/)
 Layer: ontological. Evidence: RCI004@1, RCI023@1.
 Afterlife belief does not establish belief in a creator or any named religion.
 
@@ -214,17 +214,17 @@ These scenarios do not measure all consequentialist commitments; exceptional ans
 
 ### legacy-objectivism-market-coordination: market-coordination
 A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters. [Badhwar & Long: Ayn Rand](https://plato.stanford.edu/entries/ayn-rand/); [Badhwar & Long: Rand, Epistemology and Metaphysics](https://plato.stanford.edu/entries/ayn-rand/supplement.html)
-Layer: normative. Evidence: PLI035@1, PLI055@1.
+Layer: institutional_normative. Evidence: PLI035@1, PLI055@1.
 Inherited narrow criterion; do not generalize it beyond A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.
 
 ### legacy-objectivism-moral-truth-aptness: moral-truth-aptness
 A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters. [Badhwar & Long: Ayn Rand](https://plato.stanford.edu/entries/ayn-rand/); [Badhwar & Long: Rand, Epistemology and Metaphysics](https://plato.stanford.edu/entries/ayn-rand/supplement.html)
-Layer: normative. Evidence: MEI017@1, MEI018@1.
+Layer: metaethical. Evidence: MEI017@1, MEI018@1.
 Inherited narrow criterion; do not generalize it beyond A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.
 
 ### legacy-philosophical-anarchism-no-general-obedience: no-general-obedience
 The philosophical-anarchist position about a general content-independent duty to obey, not a policy of immediate institutional abolition. [Dagger & Lefkowitz: Political Obligation](https://plato.stanford.edu/entries/political-obligation/); [Fabienne Peter: Political Legitimacy](https://plato.stanford.edu/entries/legitimacy/); [A. John Simmons (1999): Justification and Legitimacy](https://doi.org/10.1086/233944)
-Layer: normative. Evidence: PLI002@1, PLI025@1, PLI048@1.
+Layer: institutional_normative. Evidence: PLI002@1, PLI025@1, PLI048@1.
 Inherited narrow criterion; do not generalize it beyond The philosophical-anarchist position about a general content-independent duty to obey, not a policy of immediate institutional abolition.
 
 ### moral-concern-authority: Moral relevance of authority

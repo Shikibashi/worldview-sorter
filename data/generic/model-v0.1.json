@@ -374,6 +374,17 @@
       "use": "Separates free-will, determinism, and related beliefs."
     },
     {
+      "id": "gen-afterlife",
+      "title": "Afterlife",
+      "url": "https://plato.stanford.edu/entries/afterlife/",
+      "locator": "Introduction and sections 1–3: survival, dualism, materialism",
+      "claim": "Survival after biological death is a distinct question; dualism does not guarantee it and materialist accounts of survival are discussed.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "Conceptual reference only; no question wording copied."
+    },
+    {
       "id": "gen-agency",
       "title": "Free Will",
       "url": "https://plato.stanford.edu/entries/freewill/",
@@ -664,7 +675,7 @@
       "label": "Personal persistence after death",
       "layer": "ontological",
       "sourceIds": [
-        "gen-theology"
+        "gen-afterlife"
       ],
       "evidence": [
         {
@@ -2790,7 +2801,7 @@
       "id": "legacy-objectivism-market-coordination",
       "constructId": "PL13",
       "label": "market-coordination",
-      "layer": "normative",
+      "layer": "institutional_normative",
       "scope": "A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.",
       "sourceIds": [
         "acad-rand",
@@ -2835,7 +2846,7 @@
       "id": "legacy-objectivism-moral-truth-aptness",
       "constructId": "ME06",
       "label": "moral-truth-aptness",
-      "layer": "normative",
+      "layer": "metaethical",
       "scope": "A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.",
       "sourceIds": [
         "acad-rand",
@@ -2879,7 +2890,7 @@
       "id": "legacy-philosophical-anarchism-no-general-obedience",
       "constructId": "PL02",
       "label": "no-general-obedience",
-      "layer": "normative",
+      "layer": "institutional_normative",
       "scope": "The philosophical-anarchist position about a general content-independent duty to obey, not a policy of immediate institutional abolition.",
       "sourceIds": [
         "acad-obligation",
@@ -6120,7 +6131,7 @@
       "kind": "specified_commitment",
       "scope": "Personal persistence after death",
       "sourceIds": [
-        "gen-theology"
+        "gen-afterlife"
       ],
       "criteria": [
         {
