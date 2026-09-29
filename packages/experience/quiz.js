@@ -1,8 +1,8 @@
 import {generatePhilosophyPacket} from '../philosophy/forms.js';
 import {generatePilotPacket,createPilotSession,isItemEligible,responseMapFor,markPresented,markBranchSkipped,recordResponse,finishSession,validateResponseValue} from '../runtime/index.js';
 
-export const EXPERIENCE_VERSION='quiz-1.1.0';
-export const COMPATIBLE_EXPERIENCE_VERSIONS=['quiz-1.0.0','quiz-1.1.0'];
+export const EXPERIENCE_VERSION='quiz-1.2.0';
+export const COMPATIBLE_EXPERIENCE_VERSIONS=['quiz-1.0.0','quiz-1.1.0','quiz-1.2.0'];
 const insist=(ok,message)=>{if(!ok)throw new Error(message);};
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 
@@ -75,10 +75,16 @@ export function quizProgress(quiz){
  const done=entries.filter(e=>answered.has(e.itemId)||e.skippedByBranch).length;
  return {answered:answered.size,skipped,done,total:entries.length,percent:Math.floor(100*done/entries.length)};
 }
-export function restoreQuiz(saved,{bank,pilot,scalesDoc,formPolicy=null}){
+export function restoreQuiz(saved,{bank,pilot,scalesDoc,formPolicy=null,formPolicies=[]}){
  insist(saved&&saved.packet&&saved.session,'The saved quiz is incomplete.');
  const quiz=structuredClone(saved),{session,packet}=quiz;
  const isBlueprint=packet.formPolicyVersion!==undefined;
+ if(isBlueprint){
+  const compatible=[formPolicy,...formPolicies].filter(p=>p&&p.policyVersion===packet.formPolicyVersion);
+  insist(compatible.length>0,'Unknown public form version. Keep its backup for a compatible release.');
+  insist(compatible.every(p=>same(p,compatible[0])),'Conflicting saved-form definitions.');
+  formPolicy=compatible[0];
+ }
  if(isBlueprint)insist(formPolicy&&packet.formPolicyVersion===formPolicy.policyVersion&&packet.evidenceModelVersion===formPolicy.modelVersion,'Unknown public form version. Keep its backup for a compatible release.');
  const administration=isBlueprint?formPolicy.administrationId:pilot.pilotId;
  const instrument=isBlueprint?formPolicy.instrumentVersion:pilot.sourceInstrumentVersion;

@@ -8,7 +8,7 @@ const storageKey='worldview-sorter:quiz-experience:1';
 const screens=['home','quiz','results','failure'];
 const specialNames={no_view:'No view',not_understood:'I do not understand this item',not_applicable:'Not applicable'};
 const instructions={agreement5:'Choose the response that fits your view.',importance5:'How important is this to you?',moral_relevance5:'How relevant is this to your moral judgment?',paired5:'Compare the two positions below.'};
-let bank,pilot,scalesDoc,model,formPolicy,quiz=null,summary=null,loadedText=null,timer=null,shownAt=0,storageWorks=true;
+let bank,pilot,scalesDoc,model,experiencePolicy,formPolicies=[],quiz=null,summary=null,loadedText=null,timer=null,shownAt=0,storageWorks=true;
 let exploration=initialExploration();
 const gameOptions=Object.freeze({enabled:false}); // Future post-result opt-in, never a score input.
 const elem=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
@@ -166,19 +166,23 @@ function openShare(){
 }
 function start(size){
  if(loadedText&&!confirm('Starting another quiz replaces the locally saved quiz. Save a backup first to keep it. Continue?'))return;
- announce('');const seed=crypto.randomUUID();quiz=createQuiz({bank,pilot,scalesDoc,formPolicy,seed,size,sessionId:crypto.randomUUID(),locale:navigator.language||'en'});
+ announce('');const seed=crypto.randomUUID();const route=experiencePolicy.routes.find(r=>r.size===size);const chosenPolicy=formPolicies.find(p=>p.policyVersion===route?.formPolicyVersion);if(!chosenPolicy)throw Error('Unknown quiz route.');quiz=createQuiz({bank,pilot,scalesDoc,formPolicy:chosenPolicy,seed,size,sessionId:crypto.randomUUID(),locale:navigator.language||'en'});
  exploration=initialExploration();seekQuestion(quiz,bank,0);enterQuestion();
 }
 async function bootstrap(){
  const current=await fetchJSON('data/current.json');
- [bank,pilot,scalesDoc,model,formPolicy]=await Promise.all([fetchJSON(current.candidateBank.path),fetchJSON(current.pilot.path),fetchJSON('data/response-scales.json'),fetchJSON(current.worldviewModel.path),fetchJSON(current.publicForm.path)]);
- const names=[['A first look',80,'All core topics, with more distinctions left open.'],['A wider view',120,'All core topics, with more complete answer patterns.'],['A deep dive',160,'The widest selection of perspectives. No time limit.']];
- names.forEach(([name,size,description],index)=>{const button=elem('button',undefined,'route');button.dataset.size=String(size);button.append(elem('span','ROUTE 0'+(index+1),'route-number'),elem('strong',name),elem('span',size+' questions'),elem('span',description));button.addEventListener('click',()=>start(size));$('routes').append(button);});
+ [bank,pilot,scalesDoc,model,experiencePolicy]=await Promise.all([fetchJSON(current.candidateBank.path),fetchJSON(current.pilot.path),fetchJSON('data/response-scales.json'),fetchJSON(current.worldviewModel.path),fetchJSON(current.quizExperience.path)]);
+ formPolicies=await Promise.all(experiencePolicy.formPolicies.map(p=>fetchJSON(p.path)));
+ for(const [index,route] of experiencePolicy.routes.entries()){
+  const button=elem('button',undefined,'route');button.dataset.size=String(route.size);
+  button.append(elem('span','ROUTE 0'+(index+1),'route-number'),elem('strong',route.label),elem('span',route.size+' questions'),elem('span',route.description));
+  button.addEventListener('click',()=>start(route.size));$('routes').append(button);
+ }
  try{loadedText=localStorage.getItem(storageKey);}catch{storageWorks=false;announce('Local saving is unavailable. You can still take the quiz and export your answers.');}
  renderSaved();
  $('resume').addEventListener('click',()=>{try{
   const envelope=JSON.parse(loadedText);if(!COMPATIBLE_EXPERIENCE_VERSIONS.includes(envelope.experienceVersion))throw Error('This backup uses another interface version. Keep it for a compatible version.');
-  quiz=restoreQuiz(envelope.quiz,{bank,pilot,scalesDoc,formPolicy});announce('');
+  quiz=restoreQuiz(envelope.quiz,{bank,pilot,scalesDoc,formPolicies});announce('');
   if(quiz.session.completionStatus==='completed')finish();else{seekQuestion(quiz,bank,quiz.index??0);enterQuestion();}
  }catch(e){announce(e.message+' Your saved data was not deleted.');}});
  $('backup-saved').addEventListener('click',()=>{if(loadedText)download(loadedText,'worldview-local-backup.json');});

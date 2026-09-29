@@ -8,7 +8,7 @@ import {createFileSessionStore} from '../packages/collection/store.js';
 import {createQuiz,seekQuestion,currentItem,answerQuestion,nextQuestion} from '../packages/experience/quiz.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),read=async p=>JSON.parse(await readFile(path.join(root,p),'utf8'));
 const current=await read('data/current.json'),bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),instrument=await read(current.instrument.path),scalesDoc=await read('data/response-scales.json');
-const formPolicy=await read(current.publicForm.path);
+const formPolicy=await read(current.publicForm.path),fullPolicy=await read(current.fullForm.path);
 const scaleMap=new Map(scalesDoc.scales.map(s=>[s.id,s]));
 let seed;
 for(let n=0;n<300;n++){
@@ -24,7 +24,7 @@ await writeFile(path.join(storePath,'secret.json'),'{"synthetic":"PRIVATE_SENTIN
 const store=createFileSessionStore({directory:storePath});
 const server=createCollectionHttpServer({repoRoot:root,bank,pilot,instrument,scalesDoc,store});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const base='http://127.0.0.1:'+server.address().port;
-const browser=await chromium.launch();let assertions=0;
+const browser=await chromium.launch(process.env.PLAYWRIGHT_EXECUTABLE_PATH?{executablePath:process.env.PLAYWRIGHT_EXECUTABLE_PATH}:{});let assertions=0;
 const check=(name,ok)=>{assert.ok(ok,name);assertions++;console.log('PASS browser: '+name);};
 try{
  const context=await browser.newContext({viewport:{width:1280,height:900},acceptDownloads:true});
@@ -34,7 +34,7 @@ try{
  await page.goto(base+'/');await page.waitForSelector('body[data-ready="true"]');
  check('Root opens the quiz rather than research runner',page.url().endsWith('/apps/quiz/'));
  await page.screenshot({path:'artifacts/quiz/landing-desktop.png',fullPage:true});
- check('Exactly three length presets',await page.locator('.route').count()===3);
+ check('Four length presets including the 240-question full route',await page.locator('.route').count()===4&&await page.locator('.route[data-size="240"]').count()===1);
  await page.locator('.route[data-size="80"]').click();await page.locator('#quiz').waitFor({state:'visible'});
  await page.locator('#auto').uncheck();
  check('An unanswered question cannot be advanced',await page.locator('#next').isDisabled());
@@ -91,6 +91,57 @@ try{
  }
  check('No browser JavaScript errors',errors.length===0);
  await context.close();
+ // Run the new full route in an actual mobile-sized browser. All answers below
+ // are synthetic interaction fixtures, not respondent data or expected beliefs.
+ const fullContext=await browser.newContext({viewport:{width:390,height:844},acceptDownloads:true,reducedMotion:'reduce'});
+ const fullPage=await fullContext.newPage();const fullErrors=[];let fullPosts=0;
+ fullPage.on('pageerror',e=>fullErrors.push(e.message));fullPage.on('request',r=>{if(r.method()==='POST')fullPosts++;});
+ await fullPage.addInitScript(()=>{let n=0;Object.defineProperty(globalThis.crypto,'randomUUID',{value:()=>n++===0?'browser-full-240':'synthetic-full-browser-'+n});});
+ await fullPage.goto(base+'/');await fullPage.waitForSelector('body[data-ready="true"]');
+ await fullPage.screenshot({path:'artifacts/quiz/full-route-landing-mobile.png',fullPage:true});
+ await fullPage.locator('.route[data-size="240"]').click();await fullPage.locator('#quiz').waitFor({state:'visible'});await fullPage.locator('#auto').uncheck();
+ check('Full route begins at question 1 of 240',/Question 1 of 240/.test(await fullPage.locator('#position').innerText()));
+ await fullPage.screenshot({path:'artifacts/quiz/full-route-question-mobile.png',fullPage:true});
+ let fullSteps=0;const fullScales=new Set();
+ while(await fullPage.locator('#quiz').isVisible()){
+  assert.ok(fullSteps++<241,'Full-route browser loop must terminate');
+  const scale=await fullPage.locator('#quiz').getAttribute('data-scale');fullScales.add(scale);
+  if(scale==='ranking_all'){
+   const selects=fullPage.locator('#answer-options select');
+   for(let n=0;n<await selects.count();n++)await selects.nth(n).selectOption(String(n+1));
+   await fullPage.locator('#confirm-ranking').click();
+  }else await fullPage.locator('#answer-options .answer').first().click();
+  await fullPage.locator('#next').click();
+  if(fullSteps===120&&await fullPage.locator('#quiz').isVisible()){
+   const id=await fullPage.locator('#quiz').getAttribute('data-item-id');
+   const before=await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session.responses);
+   await fullPage.locator('#pause').click();await fullPage.reload();await fullPage.waitForSelector('body[data-ready="true"]');await fullPage.locator('#resume').click();
+   await fullPage.locator('#quiz').waitFor({state:'visible'});await fullPage.locator('#auto').uncheck();
+   check('240 route resumes at the same mid-quiz item',await fullPage.locator('#quiz').getAttribute('data-item-id')===id);
+   assert.deepEqual(await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session.responses),before);
+   await fullPage.locator('#back').click();await fullPage.locator('#next').click();
+   check('Full-route Back/Next preserves answers and restores position',await fullPage.locator('#quiz').getAttribute('data-item-id')===id);
+  }
+ }
+ await fullPage.locator('#results').waitFor({state:'visible'});
+ const fullSaved=await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz);
+ check('240 unique assigned items survive the full browser flow',fullSaved.packet.size===240&&new Set(fullSaved.packet.entries.map(e=>e.itemId)).size===240);
+ check('All full-route positions are answered or legitimately branch-skipped',fullSaved.session.responses.length+fullSaved.session.presentedItems.filter(e=>e.skippedByBranch).length===240);
+ check('Full-route results cover twelve panels and 31 facets',await fullPage.locator('#domain-map .domain').count()===12&&await fullPage.locator('[data-facet-id]').count()===31);
+ check('Full route exercised all seven response scales',fullScales.size===7);
+ check('Full route has a distinct instrument and saved policy',fullSaved.session.instrumentVersion===fullPolicy.instrumentVersion&&fullSaved.packet.formPolicyVersion===fullPolicy.policyVersion);
+ check('240 route never posts answers and has no browser errors',fullPosts===0&&fullErrors.length===0);
+ check('Full results do not misdescribe this as an old random sample',!(await fullPage.locator('#coverage-notice').innerText()).includes('historical sample'));
+ check('Full-route mobile results have no horizontal overflow',await fullPage.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await fullPage.screenshot({path:'artifacts/quiz/full-route-results-mobile.png',fullPage:true});
+ const fullDownloadEvent=fullPage.waitForEvent('download');await fullPage.locator('#result-answers').click();const fullDownload=await fullDownloadEvent;
+ const fullStream=await fullDownload.createReadStream(),fullChunks=[];for await(const chunk of fullStream)fullChunks.push(chunk);
+ assert.deepEqual(JSON.parse(Buffer.concat(fullChunks).toString()),fullSaved.session);
+ check('Full 240-session export exactly preserves raw responses',true);
+ await fullPage.reload();await fullPage.waitForSelector('body[data-ready="true"]');await fullPage.locator('#resume').click();await fullPage.locator('#results').waitFor({state:'visible'});
+ assert.deepEqual(await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session),fullSaved.session);
+ check('Completed full-route backup reopens without changing answers',true);
+ await fullContext.close();
  const blocked=await browser.newContext();const fallback=await blocked.newPage();
  await fallback.addInitScript(()=>{Storage.prototype.setItem=function(){throw new DOMException('blocked','QuotaExceededError');};});
  await fallback.goto(base+'/');await fallback.waitForSelector('body[data-ready="true"]');await fallback.locator('.route[data-size="80"]').click();await fallback.locator('#auto').uncheck();
