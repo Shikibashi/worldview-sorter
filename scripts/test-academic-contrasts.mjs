@@ -141,7 +141,7 @@ test('Contradictory responses are visible and are not averaged into a label',()=
   const mixed=merge(objectivistResponses,[forConstruct('NE15',-1)[0]]);
   const result=run(input(mixed));
   assert.equal(candidate(result,'objectivism').state,'mixed_evidence');
-  assert.equal(candidate(result,'objectivism').criteria.find(c=>c.id==='normative-self-interest').state,'mixed');
+  assert.equal(candidate(result,'objectivism').criteria.find(c=>c.criterionId==='normative-self-interest').state,'mixed');
 });
 test('Self-identification is kept separate from supported commitments',()=>{
   const result=run({...input([]),selfReportedIdentities:['Objectivist']});
