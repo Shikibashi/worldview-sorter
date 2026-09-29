@@ -12,12 +12,12 @@ export const sources = [
   S('acad-stirner', 'David Leopold: Max Stirner', 'https://plato.stanford.edu/entries/max-stirner/', '2.2–2.4; ownness, fixed ideas, human essence, association'),
   S('acad-egoism', 'Robert Shaver: Egoism', 'https://plato.stanford.edu/entries/egoism/', '1–3; psychological, ethical and rational egoism'),
   S('acad-pragmatism', 'Legg & Hookway: Pragmatism', 'https://plato.stanford.edu/entries/pragmatism/', 'Pragmatic maxim; inquiry, truth and realism'),
-  S('acad-promises', 'Michael R. James: Promises', 'https://plato.stanford.edu/entries/promises/', 'Normative powers, practice and expectation accounts; contract'),
+  S('acad-promises', 'Allen Habib: Promises', 'https://plato.stanford.edu/entries/promises/', 'Normative powers, practice and expectation accounts; contract'),
   S('acad-obligation', 'Dagger & Lefkowitz: Political Obligation', 'https://plato.stanford.edu/entries/political-obligation/', 'Problem of political obligation; consent; philosophical anarchism'),
   S('acad-legitimacy', 'Fabienne Peter: Political Legitimacy', 'https://plato.stanford.edu/entries/legitimacy/', '2.1–2.3: authority, coercion and political obligation'),
   S('acad-rights', 'Leif Wenar: Rights', 'https://plato.stanford.edu/entries/rights/', 'Functions, forms and justification of rights'),
   S('acad-social-ontology', 'Brian Epstein: Social Ontology', 'https://plato.stanford.edu/entries/social-ontology/', 'Social dependence, group agents and methodological individualism'),
-  S('acad-nominalism', 'Sam Cowling: Nominalism in Metaphysics', 'https://plato.stanford.edu/entries/nominalism-metaphysics/', 'Abstract objects and universals are distinct issues'),
+  S('acad-nominalism', 'Sam Cowling & Daniel Giberman: Nominalism in Metaphysics', 'https://plato.stanford.edu/entries/nominalism-metaphysics/', 'Abstract objects and universals are distinct issues'),
   S('acad-epistemology', 'Stanford Encyclopedia of Philosophy: Epistemology', 'https://plato.stanford.edu/entries/epistemology/', 'Knowledge, justification, sources and foundational structure'),
   S('acad-contractarianism', 'Stanford Encyclopedia of Philosophy: Contractarianism', 'https://plato.stanford.edu/entries/contractarianism/', 'Mutual advantage contrasted with contractualist justification'),
   S('acad-constructivism', 'Carla Bagnoli: Constructivism in Metaethics', 'https://plato.stanford.edu/entries/constructivism-metaethics/', 'Objectivity, procedures and realism disputes'),
@@ -31,7 +31,7 @@ export const sources = [
   S('acad-ous', 'Kahane et al. (2018): Beyond Sacrificial Harm: A Two-Dimensional Model of Utilitarian Psychology', 'https://pubmed.ncbi.nlm.nih.gov/29265854/', 'Impartial beneficence versus instrumental harm', 'instrument_development_research', 'abstract_reviewed'),
   S('acad-mfq2', 'Atari et al. (2023): Morality Beyond the WEIRD: How the Nomological Network of Morality Varies Across Cultures', 'https://pubmed.ncbi.nlm.nih.gov/37589704/', 'MFQ-2 development; six foundations', 'instrument_development_research', 'abstract_reviewed'),
   S('acad-fwi', 'Nadelhoffer et al. (2014): The Free Will Inventory', 'https://pubmed.ncbi.nlm.nih.gov/24561311/', 'Separate free-will, determinism and dualism beliefs', 'instrument_development_research', 'abstract_reviewed'),
-  S('acad-clark-watson', 'Clark & Watson (2019): Constructing Validity: New Developments in Creating Objective Measuring Instruments', 'https://pubmed.ncbi.nlm.nih.gov/30896212/', 'Psychological Assessment 31, 1412–1427; DOI 10.1037/pas0000626', 'measurement_methodology', 'abstract_reviewed')
+  S('acad-clark-watson', 'Clark & Watson (2019): Constructing Validity: New Developments in Creating Objective Measuring Instruments', 'https://pubmed.ncbi.nlm.nih.gov/30896212/', 'Psychological Assessment 31, 1412–1427; DOI 10.1037/pas0000626', 'measurement_methodology', 'publisher_metadata_only')
 ];
 
 // [polarity, original item stem]. The three items are candidate indicators,

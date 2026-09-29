@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0.0",
-  "pilotId": "pilot-0.2",
-  "instrumentVersion": "0.9.0-research",
-  "bankVersion": "0.9.0",
+  "pilotId": "pilot-0.1",
+  "instrumentVersion": "0.8.0-research",
+  "bankVersion": "0.8.0",
   "packetId": "example-packet",
   "sessionId": "example-session",
   "respondentKey": null,

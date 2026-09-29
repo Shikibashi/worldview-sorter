@@ -212,6 +212,7 @@ const moveTo = (index) => {
   markPresented(session, index);
   questionShownAt = performance.now();
   renderQuestion();
+  show("question-screen");
   saveLocal();
 };
 

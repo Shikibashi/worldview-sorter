@@ -29,10 +29,13 @@ const scaleMap = new Map(scalesDoc.scales.map((s) => [s.id, s]));
 const itemMap = new Map(bank.items.map((i) => [i.id, i]));
 const responseMap = new Map(session.responses.map((r) => [r.itemId, r]));
 
+const constructDefinitions = new Map((await loadRepo("data/constructs.json")).constructs.map(c => [c.id,c]));
 const eligibleByConstruct = new Map();
 for (const item of bank.items) {
   if (!model.algorithm.eligibleResponseScaleIds.includes(item.responseScaleId)) continue;
   for (const target of item.targets) {
+    const definition = constructDefinitions.get(target.constructId);
+    if (!definition || definition.measurementStatus === "deprecated" || ["categorical","derived","hierarchical"].includes(definition.type)) continue;
     if (target.role !== model.algorithm.eligibleTargetRole) continue;
     if (!model.algorithm.eligibleRelations.includes(target.relation)) continue;
     if (!eligibleByConstruct.has(target.constructId)) eligibleByConstruct.set(target.constructId, []);

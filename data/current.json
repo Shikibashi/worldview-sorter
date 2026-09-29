@@ -1,52 +1,56 @@
 {
   "schemaVersion": "1.0.0",
-  "registryVersion": "0.1.0",
+  "registryVersion": "0.2.0",
   "candidateBank": {
-    "version": "0.8.0",
-    "path": "data/items/candidate-v0.8.json"
+    "version": "0.9.0",
+    "path": "data/items/candidate-v0.9.json"
   },
   "instrument": {
-    "version": "0.8.0-research",
-    "path": "data/instruments/research-pool-0.8.json"
+    "version": "0.9.0-research",
+    "path": "data/instruments/research-pool-0.9.json"
   },
   "editorialAudit": {
     "version": "0.1.0",
     "path": "data/reviews/editorial-audit-v0.1.json"
   },
-  "expansionBatch": {
-    "version": "0.6.0",
-    "path": "data/reviews/expansion-batch-v0.6.json"
-  },
   "pilot": {
-    "version": "pilot-0.1",
-    "path": "data/pilots/pilot-0.1.json"
+    "version": "pilot-0.2",
+    "path": "data/pilots/pilot-0.2.json"
   },
   "engineeringScoringModel": {
-    "version": "engineering-keyed-0.1",
-    "path": "data/scoring/engineering-keyed-v0.1.json"
+    "version": "engineering-keyed-0.2",
+    "path": "data/scoring/engineering-keyed-v0.2.json"
   },
   "shortFormPolicy": {
-    "version": "0.1.0",
-    "path": "data/short-forms/policy-v0.1.json"
+    "version": "0.2.0",
+    "path": "data/short-forms/policy-v0.2.json"
   },
   "calibrationTemplate": {
-    "version": "template-0.1",
-    "path": "data/calibration/item-parameters.template.json"
+    "version": "template-0.2",
+    "path": "data/calibration/item-parameters-v0.9.template.json"
   },
   "uiBehavior": {
     "version": "0.1.0",
     "path": "data/ui/behavior-v0.1.json"
   },
   "profileCatalog": {
-    "version": "0.1.0",
-    "path": "data/profiles/catalog-v0.1.json"
+    "version": "0.2.0",
+    "path": "data/profiles/catalog-v0.2.json"
   },
   "profileProbeSet": {
-    "version": "0.1.0",
-    "path": "data/profiles/probes-v0.1.json"
+    "version": "0.2.0",
+    "path": "data/profiles/evidence-map-v0.2.json"
   },
   "profileMatchingPolicy": {
-    "version": "0.1.0",
-    "path": "data/profiles/matching-policy-v0.1.json"
+    "version": "0.2.0",
+    "path": "data/profiles/matching-policy-v0.2.json"
+  },
+  "academicRelease": {
+    "version": "0.9.0",
+    "path": "data/academic/release-v0.9.json"
+  },
+  "academicSupplement": {
+    "version": "0.9.0",
+    "path": "data/academic/methodology-supplement-v0.9.json"
   }
 }

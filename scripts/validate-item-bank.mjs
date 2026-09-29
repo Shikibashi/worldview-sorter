@@ -5,7 +5,7 @@ const load = async (path) => JSON.parse(await readFile(new URL(path, root), "utf
 
 const current = await load("data/current.json");
 const domains = (await load("data/domains.json")).domains;
-const constructs = (await load("data/constructs.json")).constructs;
+const constructs = (await load("data/constructs.json")).constructs.filter(c => c.measurementStatus !== "deprecated");
 const sources = (await load("data/sources.json")).sources;
 const scalesDoc = await load("data/response-scales.json");
 const bankDoc = await load(current.candidateBank.path);
@@ -29,7 +29,7 @@ if (instrument.bankVersion !== bankDoc.bankVersion) {
 }
 
 const domainIds = new Set(domains.map((domain) => domain.id));
-const constructIds = new Set(constructs.map((construct) => construct.id));
+const constructIds = new Set((await load("data/constructs.json")).constructs.map(c => c.id));
 const sourceIds = new Set(sources.map((source) => source.id));
 const scales = new Map(scalesDoc.scales.map((scale) => [scale.id, scale]));
 const stateIds = new Set(scalesDoc.responseStates.map((state) => state.id));
@@ -177,11 +177,9 @@ for (const entry of instrument.entries) {
 }
 pass("instrument manifest references checked");
 
-if (items.length !== 472) {
-  fail(`candidate research bank must contain exactly 472 items, found ${items.length}`);
-} else {
-  pass("candidate research bank contains exactly 472 items");
-}
+const academicRelease = await load(current.academicRelease.path);
+if (items.length !== academicRelease.itemCount) fail("Academic release item count mismatch");
+else pass("Versioned academic release item count verified");
 
 const specialtyConstructs = constructs.filter(
   (construct) =>

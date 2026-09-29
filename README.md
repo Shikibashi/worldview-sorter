@@ -1,108 +1,45 @@
 # Worldview Sorter
 
-A research-first, 12-panel worldview inventory inspired by the usability of 8values/9Axes/12Axes, but designed around heterogeneous measurement rather than a fixed set of hand-authored bipolar axes.
+Twelve interface domains, not twelve forced bipolar latent traits.
 
-## Core design rule
+## Current release
 
-**Twelve is the interface organization, not the statistical model.**
+Candidate bank **0.9.0** contains **562 original candidate items**. The registry has **182 permanent entries**, of which **181 are active**. One bundled legacy ontology construct is deprecated, not silently redefined.
 
-The instrument may contain dozens of separately estimated constructs underneath twelve public-facing domains. Constructs may be bipolar, monopolar, categorical, hierarchical, affinity-based, or derived. They must not be forced into two-ended percentage bars merely for visual symmetry.
+This academic update adds 30 distinctions and 90 items. Its 25-entry source ledger distinguishes reviewed scholarly text, abstracts, and metadata-only references. These sources support conceptual distinctions; they do not validate the new questionnaire.
 
-## Initial domains
+See [academic rationale](docs/ACADEMIC_GROUNDING.md), [item/source matrix](research/academic/CONSTRUCT_SOURCE_MATRIX.md), and [matching contract](docs/PROFILE_MATCHING.md).
 
-1. Metaethics
-2. Normative ethics
-3. Moral foundations
-4. Values & axiology
-5. Epistemology
-6. Metaphysics & ontology
-7. Mind & self
-8. Agency & human nature
-9. Religion & cosmology
-10. Existential orientation
-11. Social ontology & human relations
-12. Political, legal & economic philosophy
-
-## Repository model
-
-- `data/domains.json` — the twelve UI domains.
-- `data/constructs.json` — permanent construct IDs and measurement metadata.
-- `data/relationships.json` — logical/dependency rules and explicit anti-inference rules.
-- `schemas/construct-registry.schema.json` — machine-readable validation contract.
-- `docs/CONSTRUCT_MODEL.md` — interpretation and modeling rules.
-- `docs/VERSIONING.md` — immutable ID and versioning policy.
-- `scripts/validate-registry.mjs` — dependency-free registry checks.
-- `.github/workflows/validate-registry.yml` — CI validation.
-
-## Measurement types
-
-- `monopolar` — independent intensity; high X does not imply low Y.
-- `bipolar` — genuinely opposing poles; use sparingly and validate empirically.
-- `affinity` — several orientations may all be high.
-- `categorical` — alternatives usually resolved through branching/diagnostic items.
-- `hierarchical` — broad construct with separately measured facets.
-- `derived` — computed interpretation; never directly measured as a standalone score.
-
-## Tiers
-
-- `headline` — candidate for short-form summaries and the share card.
-- `primary` — standard public instrument.
-- `diagnostic` — conditional follow-up when prerequisites make the distinction meaningful.
-- `research` — long-form/experimental until evidence supports promotion.
-
-## Non-negotiable data rules
-
-1. Raw item responses are stored independently from derived scores.
-2. Neutral is not the same as “no view.”
-3. Item IDs and construct IDs are permanent and never reused.
-4. Scoring models are versioned separately from instruments and item wording.
-5. A changed scoring model must be able to rescore historical raw responses.
-6. Current political-policy positions do not define deeper worldview constructs.
-7. Philosophical/profile matching is a secondary interpretation layer, not the scoring model.
-8. Logical relationships are not assumed to be empirical correlations, and empirical correlations are not treated as logical identity.
-
-## Status
-
-This repository is currently at **construct-model v0.1 / candidate research bank v0.8 / pilot architecture v0.1**. The bank contains 472 versioned candidate items. Raw pilot-session, calibration-export, versioned scoring, and empirical short-form selection machinery now exist, but the registry and item assignments remain theory-driven and provisional. The project has not yet established an empirical factor structure, calibrated item parameters, validated scoring model, or validated short form.
-
-
-
-## Browser pilot runner
-
-A dependency-free pilot administration client now lives in `apps/web/`.
-
-Run it from the repository root:
+## Run
 
 ```bash
-npm run web:serve
+npm run build:academic
+npm test
+npm run server:start
 ```
 
-Then open `http://localhost:4173/apps/web/`.
+The development runner is served at http://127.0.0.1:4173/apps/web/. Do not expose a research-data deployment publicly without a deployment/security review.
 
-The runner generates seeded pilot packets, administers branching items one at a time, autosaves raw sessions locally, resumes interrupted sessions, and exports the exact versioned pilot-session JSON used by the calibration tooling. It does not display worldview scores.
+## Evidence, not identity guessing
 
+The nine reference comparisons consume exact item IDs, revisions and raw response states. No political centroid, categorical numeric proxy, chat memory, preferred identity, or personality/country resemblance supplies missing answers. Neutral, no view, disagreement and mixed evidence remain distinct. There is no forced winner, match percentage, or automatically assigned identity.
 
-## Remote collection service
+The comparisons and engineering scores remain **unvalidated and non-interpretable**. The browser does not display them as worldview results. The follow-up planner identifies missing real questionnaire items; it is not calibrated adaptive testing and is not yet wired into the public interface.
 
-`npm run server:start` now serves the browser runner and the raw-session collection API from one same-origin Node service.
+## History
 
-Completed sessions are server-validated against the exact active bank, seed-generated packet, revisions, response scales, and branch state before immutable storage.
+The 0.8 bank and instrument remain byte-for-byte frozen. New wording or targeting receives a new item revision. The 0.1 registry is archived; new observations use registry 0.2. Sources, release manifests, reference criteria and resulting comparisons are versioned independently.
 
-See `docs/COLLECTION_SERVICE.md`.
+## Commands
 
-## 12Axes-style interaction parity
+- `npm run test:profiles`: academic contrast and evidence-integrity regressions.
+- `npm run test:collection`: collector integration tests.
+- `npm run test:12axes`: packet and interaction-contract tests, not visual browser verification.
+- `npm run test:ui-smoke`: executes the app against a small DOM harness; not a real-browser accessibility/layout audit.
+- `npm run pilot:packet -- --seed example --size 120`: administration packet.
 
-The runner follows the modern 12Axes interaction pattern for one-question flow, progress, selected-answer feedback, 200 ms auto-advance, Back, length presets, and completion submission while retaining Worldview Sorter's heterogeneous item types.
+No participant responses or empirical item parameters were fabricated. Published MFQ-2, PVQ-RR, Free Will Inventory and Oxford Utilitarianism Scale validation does not transfer to this project's original items.
 
-See `docs/12AXES_PARITY.md`.
+## Additional measurement limits
 
-
-## Doctrine-gated profile matching
-
-Worldview labels are not assigned by nearest political-vector distance.
-
-The profile layer supports abstention, direct doctrinal gates, explicit contradiction handling, affinity-vs-identity separation, and explicit identity confirmation. Percentage "match" presentation is prohibited.
-
-The Objectivism regression case specifically guarantees that strong free-market/property/secular overlap cannot produce an Objectivist identity when core Objectivist doctrine is rejected.
-
-See `docs/PROFILE_MATCHING.md`.
+See [methodological disagreements and explicit-endorsement limits](docs/METAETHICAL_MEASUREMENT_LIMITS.md), including a 2026 critique of folk-metaethical classification. A new versioned packet-ordering algorithm fixes a regression exposed by the expanded bank while preserving historical v0.8 packet replay.

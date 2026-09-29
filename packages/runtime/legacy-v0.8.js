@@ -1,4 +1,3 @@
-import {orderSelectedItems} from './packet-ordering.js';
 const hashString = (s) => {
   let h = 2166136261;
   for (let i = 0; i < s.length; i++) {
@@ -120,12 +119,6 @@ export function generatePilotPacket({ bank, pilot, seed, size, packetId }) {
   let sameDomainRun = 0;
   const maxSameDomainConsecutive =
     pilot.administration?.maxSameDomainConsecutive ?? 2;
-
-  // New releases cannot silently relax the hard run constraint.
-  if (pilot.administration.packetOrdering === 'constraint-search-v1') {
-    ordered.push(...orderSelectedItems({items:[...selected.values()], seed, maxSameDomainConsecutive}));
-    remaining.clear();
-  }
 
   while (remaining.size) {
     const available = [...remaining].filter((id) =>

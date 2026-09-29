@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "0.9.0",
+  "reviewedOn": "2026-09-28",
+  "purpose": "Additional methodological criticism, not new validated items or participant data.",
+  "measurementClaim": "explicit_reported_endorsement_not_implicit_commitment",
+  "sources": [
+    {
+      "id": "acad-bush-moss-2020",
+      "authors": [
+        "Lance S. Bush",
+        "David Moss"
+      ],
+      "title": "Misunderstanding Metaethics: Difficulties Measuring Folk Objectivism and Relativism",
+      "url": "https://doi.org/10.33392/diam.1495",
+      "year": 2020,
+      "evidenceType": "peer_reviewed_methodological_critique",
+      "access": "publisher_abstract_reviewed",
+      "implication": "Selecting a response can reflect an unintended interpretation rather than the construct the author intended."
+    },
+    {
+      "id": "acad-yang-2026",
+      "authors": [
+        "Qiongda Yang"
+      ],
+      "title": "Driving the Chariot North: How Experimental Metaethics Has Gone South with Error Theory and Non-Cognitivism",
+      "url": "https://doi.org/10.1007/s13164-026-00835-x",
+      "year": 2026,
+      "evidenceType": "peer_reviewed_methodological_critique",
+      "access": "full_html_text_reviewed",
+      "locator": "Sections 4–7: explicit endorsement versus implicit commitment and expressivism versus truth-aptness",
+      "implication": "Do not infer that ordinary truth or disagreement language uniquely establishes realism; expressivists may accommodate such language. This is a critique, not a settled consensus."
+    }
+  ],
+  "constraints": [
+    "Evidence compares what respondents explicitly endorse under the actual wording; it does not diagnose an unconscious or implicit philosophy.",
+    "Moral objectivity is not the named Randian system Objectivism.",
+    "Truth-aptness alone cannot identify moral realism or rule out all forms of expressivism.",
+    "No single answer, preferred identity, political result, or chat memory determines the result.",
+    "Source-backed concepts do not establish validity, factor structure, reliability, or calibrated thresholds for new questionnaire items."
+  ]
+}

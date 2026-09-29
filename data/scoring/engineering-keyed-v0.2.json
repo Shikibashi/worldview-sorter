@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0.0",
+  "modelVersion": "engineering-keyed-0.2",
+  "status": "engineering_only",
+  "compatibleBankVersions": [
+    "0.9.0"
+  ],
+  "compatibleInstrumentVersions": [
+    "0.9.0-research"
+  ],
+  "purpose": "Transparent smoke-test scoring for runtime/rescoring validation only. Not a psychometric model and not suitable for public interpretation.",
+  "interpretationAllowed": false,
+  "algorithm": {
+    "family": "signed_normalized_mean",
+    "eligibleResponseScaleIds": [
+      "agreement5",
+      "importance5",
+      "moral_relevance5"
+    ],
+    "eligibleTargetRole": "primary",
+    "eligibleRelations": [
+      "positive",
+      "negative"
+    ],
+    "relationMultipliers": {
+      "positive": 1,
+      "negative": -1
+    },
+    "missingStates": [
+      "no_view",
+      "not_understood",
+      "not_applicable"
+    ],
+    "aggregation": "unweighted_mean_of_normalized_numeric_responses",
+    "scaleNormalization": "divide each numeric response by the maximum absolute numeric value defined by its response scale",
+    "minimumAnsweredItems": 1
+  },
+  "outputs": {
+    "range": {
+      "min": -1,
+      "max": 1
+    },
+    "includeCoverage": true,
+    "includeEligibleItemCount": true,
+    "uncertainty": "none"
+  },
+  "limitations": [
+    "Diagnostic, categorical, vignette-choice, paired-choice, and ranking responses are excluded unless they use an eligible numeric scale and signed target relation.",
+    "All eligible items receive equal weight.",
+    "No item discrimination, thresholds, factor loadings, reliability, population norms, or uncertainty estimates are used.",
+    "Importance and moral-relevance scales are normalized only for engineering consistency; the resulting means must not be interpreted as validated latent trait estimates.",
+    "Derived constructs are not scored directly.",
+    "Categorical, derived and deprecated constructs are not numeric scales. Profile comparisons use exact raw item evidence, never these engineering means."
+  ]
+}

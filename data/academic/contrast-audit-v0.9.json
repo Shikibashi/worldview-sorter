@@ -1,0 +1,98 @@
+{
+  "version": "0.9.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.8.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-09-28",
+  "note": "Conceptual coverage is not evidence of latent dimensionality, reliability, or classification accuracy.",
+  "unresolvedAudit": [
+    {
+      "id": "legacy-collectivism",
+      "constructs": [
+        "SO01",
+        "SO02",
+        "SO14",
+        "SO15"
+      ],
+      "status": "isolated_from_profile_inference",
+      "issue": "Some legacy items conflate group agency, descriptive dependence and normative priority. New distinctions must not be collapsed back into SO02."
+    },
+    {
+      "id": "legacy-abstracts-universals",
+      "constructs": [
+        "OM03",
+        "OM11",
+        "OM12"
+      ],
+      "status": "legacy_score_deprecated",
+      "issue": "OM03 bundled distinct ontological disputes. Retain its ID for historical decoding; new outputs use OM11 and OM12."
+    },
+    {
+      "id": "foundations-vs-ethics",
+      "constructs": [
+        "MF01",
+        "NE04",
+        "NE07"
+      ],
+      "status": "empirical_discriminant_validation_needed",
+      "issue": "Care concern, relational reasoning and impartial beneficence are related but not the same variable."
+    },
+    {
+      "id": "values-module",
+      "constructs": [
+        "VA01",
+        "VA20"
+      ],
+      "status": "original_items_not_PVQ_RR",
+      "issue": "The existing values bank was inspired by Schwartz; it is not a licensed administration or validation of the published PVQ-RR."
+    },
+    {
+      "id": "sampling-for-diagnosis",
+      "constructs": [],
+      "status": "followup_planner_added_not_deployed",
+      "issue": "A domain-proportional packet may not contain enough discriminating evidence. Missing criteria stay unresolved; no inferred answer may replace them."
+    },
+    {
+      "id": "response-method",
+      "constructs": [],
+      "status": "empirical_validation_needed",
+      "issue": "Different response formats need not measure the same trait even when they share a theoretical target."
+    }
+  ],
+  "supersessions": [
+    {
+      "legacyConstructId": "OM03",
+      "replacementConstructIds": [
+        "OM11",
+        "OM12"
+      ],
+      "historicalScoresConvertible": false
+    }
+  ],
+  "itemRevisionChanges": [
+    {
+      "itemId": "MEI005",
+      "fromRevision": 2,
+      "toRevision": 3,
+      "reason": "Separate truth-aptness, stance-independence, relative truth and error theory. Do not say both P and not-P are false.",
+      "beforeHash": "a4989856c1cd352e6491c1507653d9973353dba24f7b271ec7bf21f494526226",
+      "afterHash": "e42e4cd6d704e5f96c10786a97306603d038a30fedd920fbe86e1d30a5943e9c"
+    },
+    {
+      "itemId": "MEI019",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "reason": "Truth-aptness must not be equated with stance-independent truth. This diagnostic distinction remains provisional.",
+      "beforeHash": "8b0791d8a2285866cf191d01a5c89a99c8a9b61e8cc8fe637d9c8862da549e46",
+      "afterHash": "3f3ab609f1be630b7e880bbf64046d28a7e38b12778dd69cfc100b6a74ec56ad"
+    },
+    {
+      "itemId": "OMI003",
+      "fromRevision": 2,
+      "toRevision": 3,
+      "reason": "Remove the bundle of numbers, properties and universals; assess abstract objects separately.",
+      "beforeHash": "e72d7315a5bfd704e9a2d9e1920824548e97709fa77d86db4bc8c20135d19b41",
+      "afterHash": "d0db79a357860dd4aac40f00be20900db7efa006cd4f4f9bd511dd84a328bb1f"
+    }
+  ]
+}
