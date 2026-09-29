@@ -1,0 +1,3778 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyVersion": "philosophy-blueprint-1.1.0",
+  "algorithm": "facet-bundles-1",
+  "bankVersion": "0.9.0",
+  "modelVersion": "generic-0.3.0",
+  "administrationId": "public-worldview-1",
+  "instrumentVersion": "worldview-public-1.1.0",
+  "sizes": [
+    80,
+    120,
+    160
+  ],
+  "domains": [
+    "ME",
+    "NE",
+    "MF",
+    "VA",
+    "EP",
+    "OM",
+    "MS",
+    "AH",
+    "RC",
+    "EX",
+    "SO",
+    "PL"
+  ],
+  "responseScaleIds": [
+    "agreement5",
+    "paired5",
+    "single_choice",
+    "vignette_choice",
+    "ranking_all",
+    "importance5",
+    "moral_relevance5"
+  ],
+  "excludedItemIds": [
+    "EPI025",
+    "EPI015",
+    "EPI022",
+    "MEI014",
+    "MEI006",
+    "OMI025",
+    "OMI028",
+    "OMI031",
+    "AHI035",
+    "AHI026"
+  ],
+  "facets": [
+    {
+      "id": "meta-status",
+      "domainId": "ME",
+      "title": "Metaethics: truth and grounds",
+      "question": "What could make a moral claim true?",
+      "ruleIds": [
+        "ph-stance-independence",
+        "legacy-objectivism-moral-truth-aptness"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "legacy-objectivism-moral-truth-aptness:0",
+        "ph-stance-independence:0"
+      ]
+    },
+    {
+      "id": "meta-scope",
+      "domainId": "ME",
+      "title": "Metaethics: scope and context",
+      "question": "Do the same requirements apply in different cases?",
+      "ruleIds": [
+        "ph-universal-requirements",
+        "ph-context-sensitive",
+        "ph-particular-judgment"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-context-sensitive:0",
+        "ph-particular-judgment:0",
+        "ph-universal-requirements:0"
+      ]
+    },
+    {
+      "id": "meta-reasons",
+      "domainId": "ME",
+      "title": "Metaethics: reasons and motivation",
+      "question": "Can moral reasons bind or motivate independently of desire?",
+      "ruleIds": [
+        "ph-categorical-reasons",
+        "ph-motivational-necessity"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-categorical-reasons:0",
+        "ph-categorical-reasons:1",
+        "ph-motivational-necessity:0"
+      ]
+    },
+    {
+      "id": "ethics-foundations",
+      "domainId": "NE",
+      "title": "Normative ethics: reasons for action",
+      "question": "What should guide what we do?",
+      "ruleIds": [
+        "outcomes-count",
+        "moral-constraints",
+        "character-counts",
+        "relational-care",
+        "reasonable-rejection",
+        "mutual-advantage"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "character-counts:0",
+        "moral-constraints:0",
+        "mutual-advantage:0",
+        "outcomes-count:0",
+        "reasonable-rejection:0",
+        "relational-care:0"
+      ]
+    },
+    {
+      "id": "ethics-obligations",
+      "domainId": "NE",
+      "title": "Normative ethics: obligations and personal projects",
+      "question": "What do we owe others, and what may we keep for ourselves?",
+      "ruleIds": [
+        "ph-special-obligations",
+        "ph-personal-prerogatives",
+        "ph-high-sacrifice"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-high-sacrifice:0",
+        "ph-personal-prerogatives:0",
+        "ph-special-obligations:0"
+      ]
+    },
+    {
+      "id": "ethics-action",
+      "domainId": "NE",
+      "title": "Ethics in cases: rules, intentions and harm",
+      "question": "Which features of an action change its moral assessment?",
+      "ruleIds": [
+        "ph-doing-allowing",
+        "ph-rule-mediated",
+        "ph-intention-sensitive"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-doing-allowing:0",
+        "ph-intention-sensitive:0",
+        "ph-rule-mediated:0"
+      ]
+    },
+    {
+      "id": "moral-psychology",
+      "domainId": "MF",
+      "title": "Moral psychology: concerns",
+      "question": "Which considerations draw your moral attention?",
+      "ruleIds": [
+        "moral-concern-care",
+        "moral-concern-equality",
+        "moral-concern-proportionality",
+        "moral-concern-loyalty",
+        "moral-concern-authority",
+        "moral-concern-purity"
+      ],
+      "minimumBundles": 2,
+      "bundleIds": [
+        "moral-concern-authority:0",
+        "moral-concern-care:0",
+        "moral-concern-equality:0",
+        "moral-concern-loyalty:0",
+        "moral-concern-proportionality:0",
+        "moral-concern-purity:0"
+      ]
+    },
+    {
+      "id": "personal-values",
+      "domainId": "VA",
+      "title": "Axiology: personal priorities",
+      "question": "What matters in your own life?",
+      "ruleIds": [
+        "priority-VA01",
+        "priority-VA03",
+        "priority-VA04",
+        "priority-VA05",
+        "priority-VA09",
+        "priority-VA15",
+        "priority-VA17"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "priority-VA01:0",
+        "priority-VA01:1",
+        "priority-VA03:0",
+        "priority-VA03:1",
+        "priority-VA04:0",
+        "priority-VA04:1",
+        "priority-VA05:0",
+        "priority-VA09:0",
+        "priority-VA15:0",
+        "priority-VA15:1",
+        "priority-VA17:0"
+      ]
+    },
+    {
+      "id": "value-theories",
+      "domainId": "VA",
+      "title": "Axiology: well-being and aesthetic value",
+      "question": "What makes a life go well, or a judgment of beauty apt?",
+      "ruleIds": [
+        "ph-objective-welfare",
+        "ph-desire-welfare",
+        "ph-aesthetic-objectivity"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-aesthetic-objectivity:0",
+        "ph-desire-welfare:0",
+        "ph-objective-welfare:0"
+      ]
+    },
+    {
+      "id": "epistemic-method",
+      "domainId": "EP",
+      "title": "Epistemology: evidence and inquiry",
+      "question": "How do you decide what to believe?",
+      "ruleIds": [
+        "ph-belief-revision",
+        "ph-observation-weight",
+        "ph-expert-testimony",
+        "ph-intuitive-warrant",
+        "ph-tradition-evidence"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-belief-revision:0",
+        "ph-expert-testimony:0",
+        "ph-intuitive-warrant:0",
+        "ph-observation-weight:0",
+        "ph-tradition-evidence:0"
+      ]
+    },
+    {
+      "id": "epistemic-justification",
+      "domainId": "EP",
+      "title": "Epistemology: justification and science",
+      "question": "What warrants a belief or a scientific claim?",
+      "ruleIds": [
+        "ph-foundational-justification",
+        "ph-coherent-justification",
+        "ph-reliable-processes",
+        "ph-scientific-realism",
+        "ph-values-science"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-coherent-justification:0",
+        "ph-foundational-justification:0",
+        "ph-reliable-processes:0",
+        "ph-scientific-realism:0",
+        "ph-values-science:0"
+      ]
+    },
+    {
+      "id": "ontology",
+      "domainId": "OM",
+      "title": "Ontology: what exists",
+      "question": "What belongs in an account of what exists?",
+      "ruleIds": [
+        "natural-world",
+        "physical-reality",
+        "construct-OM11",
+        "construct-OM12",
+        "construct-OM13"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "construct-OM11:0",
+        "construct-OM11:1",
+        "construct-OM12:0",
+        "construct-OM12:1",
+        "construct-OM13:0",
+        "construct-OM13:1",
+        "natural-world:0",
+        "physical-reality:0"
+      ]
+    },
+    {
+      "id": "metaontology",
+      "domainId": "OM",
+      "title": "Metaontology: how to ask about existence",
+      "question": "Are existence disputes deep, conceptual, or sometimes verbal?",
+      "ruleIds": [
+        "construct-OM14"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "construct-OM14:0",
+        "construct-OM14:1"
+      ]
+    },
+    {
+      "id": "metaphysical-structure",
+      "domainId": "OM",
+      "title": "Metaphysics: dependence and purpose",
+      "question": "Are higher-level features reducible, and can nature have purposes?",
+      "ruleIds": [
+        "ph-full-reduction",
+        "ph-inherent-purpose"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-full-reduction:0",
+        "ph-inherent-purpose:0"
+      ]
+    },
+    {
+      "id": "laws-causation",
+      "domainId": "OM",
+      "title": "Metaphysics: laws and causes",
+      "question": "Do laws govern events, and what makes something a cause?",
+      "ruleIds": [
+        "ph-governing-laws",
+        "ph-humean-laws",
+        "ph-productive-causation"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-governing-laws:0",
+        "ph-humean-laws:0",
+        "ph-productive-causation:0"
+      ]
+    },
+    {
+      "id": "time-modality",
+      "domainId": "OM",
+      "title": "Metaphysics: time and possibility",
+      "question": "What makes past, future and possible things real?",
+      "ruleIds": [
+        "ph-eternal-time",
+        "ph-concrete-worlds"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-concrete-worlds:0",
+        "ph-eternal-time:0"
+      ]
+    },
+    {
+      "id": "consciousness",
+      "domainId": "MS",
+      "title": "Philosophy of mind: consciousness",
+      "question": "How does experience relate to physical processes?",
+      "ruleIds": [
+        "ph-physical-explanation",
+        "ph-functional-minds",
+        "ph-basic-experience"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-basic-experience:0",
+        "ph-functional-minds:0",
+        "ph-physical-explanation:0"
+      ]
+    },
+    {
+      "id": "personal-identity",
+      "domainId": "MS",
+      "title": "Mind and self: identity and content",
+      "question": "What makes a mind or a person continuous?",
+      "ruleIds": [
+        "psychological-continuity",
+        "extended-cognition",
+        "ph-process-self",
+        "ph-external-content"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "extended-cognition:0",
+        "ph-external-content:0",
+        "ph-process-self:0",
+        "psychological-continuity:0"
+      ]
+    },
+    {
+      "id": "agency-freedom",
+      "domainId": "AH",
+      "title": "Agency: freedom and determinism",
+      "question": "What would make a choice genuinely free?",
+      "ruleIds": [
+        "deterministic-world",
+        "construct-AH14"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "construct-AH14:0",
+        "construct-AH14:1",
+        "deterministic-world:0"
+      ]
+    },
+    {
+      "id": "agency-causes",
+      "domainId": "AH",
+      "title": "Human nature: reasons and causes",
+      "question": "What influences human action?",
+      "ruleIds": [
+        "ph-conscious-causes",
+        "ph-unconscious-causes",
+        "construct-AH13"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "construct-AH13:0",
+        "construct-AH13:1",
+        "ph-conscious-causes:0",
+        "ph-unconscious-causes:0"
+      ]
+    },
+    {
+      "id": "religious-claims",
+      "domainId": "RC",
+      "title": "Philosophy of religion: reality and purpose",
+      "question": "What, if anything, lies beyond natural reality?",
+      "ruleIds": [
+        "divine-existence",
+        "theological-suspension",
+        "afterlife-belief",
+        "ph-supernatural-reality",
+        "ph-cosmic-purpose"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "afterlife-belief:0",
+        "divine-existence:0",
+        "ph-cosmic-purpose:0",
+        "ph-supernatural-reality:0",
+        "theological-suspension:0"
+      ]
+    },
+    {
+      "id": "religious-practice",
+      "domainId": "RC",
+      "title": "Religion: importance and sacred commitments",
+      "question": "What role do spiritual commitments play?",
+      "ruleIds": [
+        "ph-religious-priority",
+        "ph-sacred-value"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-religious-priority:0",
+        "ph-sacred-value:0"
+      ]
+    },
+    {
+      "id": "existential-meaning",
+      "domainId": "EX",
+      "title": "Existential philosophy: meaning",
+      "question": "What can make a life meaningful?",
+      "ruleIds": [
+        "objective-meaning",
+        "constructed-meaning",
+        "ph-noncosmic-meaning"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "constructed-meaning:0",
+        "objective-meaning:0",
+        "ph-noncosmic-meaning:0"
+      ]
+    },
+    {
+      "id": "existential-outlook",
+      "domainId": "EX",
+      "title": "Existential orientation: possibility",
+      "question": "How do you regard the possibilities life offers?",
+      "ruleIds": [
+        "ph-world-possibilities"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-world-possibilities:0"
+      ]
+    },
+    {
+      "id": "social-persons",
+      "domainId": "SO",
+      "title": "Social philosophy: persons and explanation",
+      "question": "How do individual claims and social explanations relate?",
+      "ruleIds": [
+        "ph-individual-claims",
+        "construct-SO15"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "construct-SO15:0",
+        "construct-SO15:1",
+        "ph-individual-claims:0"
+      ]
+    },
+    {
+      "id": "social-entities",
+      "domainId": "SO",
+      "title": "Social ontology: institutions and groups",
+      "question": "How do practices constitute social reality?",
+      "ruleIds": [
+        "construct-SO14",
+        "ph-social-constitution",
+        "ph-group-agency"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "construct-SO14:0",
+        "construct-SO14:1",
+        "ph-group-agency:0",
+        "ph-social-constitution:0"
+      ]
+    },
+    {
+      "id": "political-authority",
+      "domainId": "PL",
+      "title": "Political philosophy: legitimate authority",
+      "question": "What could justify institutions and coercion?",
+      "ruleIds": [
+        "ph-consent-authority",
+        "ph-democratic-authorization",
+        "ph-polycentric-order",
+        "legacy-philosophical-anarchism-no-general-obedience"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "legacy-philosophical-anarchism-no-general-obedience:0",
+        "legacy-philosophical-anarchism-no-general-obedience:1",
+        "ph-consent-authority:0",
+        "ph-democratic-authorization:0",
+        "ph-polycentric-order:0"
+      ]
+    },
+    {
+      "id": "political-rights",
+      "domainId": "PL",
+      "title": "Political philosophy: liberty and rights",
+      "question": "Which freedoms and claims constrain power?",
+      "ruleIds": [
+        "noninterference",
+        "nondomination",
+        "effective-freedom",
+        "ph-rights-constraints"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "effective-freedom:0",
+        "nondomination:0",
+        "noninterference:0",
+        "ph-rights-constraints:0"
+      ]
+    },
+    {
+      "id": "political-economy",
+      "domainId": "PL",
+      "title": "Political economy: property and coordination",
+      "question": "How should ownership and coordination be justified?",
+      "ruleIds": [
+        "ph-strong-property",
+        "legacy-objectivism-market-coordination"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "legacy-objectivism-market-coordination:0",
+        "ph-strong-property:0"
+      ]
+    },
+    {
+      "id": "political-justice",
+      "domainId": "PL",
+      "title": "Legal philosophy: validity and justice",
+      "question": "What makes a law valid or a legal response just?",
+      "ruleIds": [
+        "source-based-validity",
+        "moral-limits-validity",
+        "procedural-justice",
+        "substantive-justice",
+        "ph-desert-punishment"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "moral-limits-validity:0",
+        "ph-desert-punishment:0",
+        "procedural-justice:0",
+        "source-based-validity:0",
+        "substantive-justice:0"
+      ]
+    },
+    {
+      "id": "political-scope",
+      "domainId": "PL",
+      "title": "Political philosophy: membership and moral scope",
+      "question": "Who is owed political consideration?",
+      "ruleIds": [
+        "ph-political-cosmopolitanism",
+        "ph-national-obligations"
+      ],
+      "minimumBundles": 1,
+      "bundleIds": [
+        "ph-national-obligations:0",
+        "ph-political-cosmopolitanism:0"
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "id": "afterlife-belief:0",
+      "commitmentId": "afterlife-belief",
+      "domainId": "RC",
+      "itemIds": [
+        "RCI004",
+        "RCI023"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "RCI004",
+        "RCI023"
+      ]
+    },
+    {
+      "id": "character-counts:0",
+      "commitmentId": "character-counts",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI003",
+        "NEI027"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI003",
+        "NE-S05"
+      ]
+    },
+    {
+      "id": "construct-AH13:0",
+      "commitmentId": "construct-AH13",
+      "domainId": "AH",
+      "itemIds": [
+        "AHI100",
+        "AHI101"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "AHI100",
+        "AHI101"
+      ]
+    },
+    {
+      "id": "construct-AH13:1",
+      "commitmentId": "construct-AH13",
+      "domainId": "AH",
+      "itemIds": [
+        "AHI101",
+        "AHI102"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "AHI101",
+        "AHI102"
+      ]
+    },
+    {
+      "id": "construct-AH14:0",
+      "commitmentId": "construct-AH14",
+      "domainId": "AH",
+      "itemIds": [
+        "AHI103",
+        "AHI104"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "AHI103",
+        "AHI104"
+      ]
+    },
+    {
+      "id": "construct-AH14:1",
+      "commitmentId": "construct-AH14",
+      "domainId": "AH",
+      "itemIds": [
+        "AHI104",
+        "AHI105"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "AHI104",
+        "AHI105"
+      ]
+    },
+    {
+      "id": "construct-EP15:0",
+      "commitmentId": "construct-EP15",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI100",
+        "EPI101"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI100",
+        "EPI101"
+      ]
+    },
+    {
+      "id": "construct-EP15:1",
+      "commitmentId": "construct-EP15",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI101",
+        "EPI102"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI101",
+        "EPI102"
+      ]
+    },
+    {
+      "id": "construct-EP16:0",
+      "commitmentId": "construct-EP16",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI103",
+        "EPI104"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI103",
+        "EPI104"
+      ]
+    },
+    {
+      "id": "construct-EP16:1",
+      "commitmentId": "construct-EP16",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI104",
+        "EPI105"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI104",
+        "EPI105"
+      ]
+    },
+    {
+      "id": "construct-EP17:0",
+      "commitmentId": "construct-EP17",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI106",
+        "EPI107"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI106",
+        "EPI107"
+      ]
+    },
+    {
+      "id": "construct-EP17:1",
+      "commitmentId": "construct-EP17",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI107",
+        "EPI108"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI107",
+        "EPI108"
+      ]
+    },
+    {
+      "id": "construct-EP18:0",
+      "commitmentId": "construct-EP18",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI109",
+        "EPI110"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI109",
+        "EPI110"
+      ]
+    },
+    {
+      "id": "construct-EP18:1",
+      "commitmentId": "construct-EP18",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI110",
+        "EPI111"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI110",
+        "EPI111"
+      ]
+    },
+    {
+      "id": "construct-EP19:0",
+      "commitmentId": "construct-EP19",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI112",
+        "EPI113"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI112",
+        "EPI113"
+      ]
+    },
+    {
+      "id": "construct-EP19:1",
+      "commitmentId": "construct-EP19",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI113",
+        "EPI114"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI113",
+        "EPI114"
+      ]
+    },
+    {
+      "id": "construct-EP20:0",
+      "commitmentId": "construct-EP20",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI115",
+        "EPI116"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI115",
+        "EPI116"
+      ]
+    },
+    {
+      "id": "construct-EP20:1",
+      "commitmentId": "construct-EP20",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI116",
+        "EPI117"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI116",
+        "EPI117"
+      ]
+    },
+    {
+      "id": "construct-ME09:0",
+      "commitmentId": "construct-ME09",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI100",
+        "MEI101"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI100",
+        "MEI101"
+      ]
+    },
+    {
+      "id": "construct-ME09:1",
+      "commitmentId": "construct-ME09",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI101",
+        "MEI102"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI101",
+        "MEI102"
+      ]
+    },
+    {
+      "id": "construct-ME10:0",
+      "commitmentId": "construct-ME10",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI103",
+        "MEI104"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI103",
+        "MEI104"
+      ]
+    },
+    {
+      "id": "construct-ME10:1",
+      "commitmentId": "construct-ME10",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI104",
+        "MEI105"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI104",
+        "MEI105"
+      ]
+    },
+    {
+      "id": "construct-NE15:0",
+      "commitmentId": "construct-NE15",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI100",
+        "NEI101"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI100",
+        "NEI101"
+      ]
+    },
+    {
+      "id": "construct-NE15:1",
+      "commitmentId": "construct-NE15",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI101",
+        "NEI102"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI101",
+        "NEI102"
+      ]
+    },
+    {
+      "id": "construct-NE16:0",
+      "commitmentId": "construct-NE16",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI103",
+        "NEI104"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI103",
+        "NEI104"
+      ]
+    },
+    {
+      "id": "construct-NE16:1",
+      "commitmentId": "construct-NE16",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI104",
+        "NEI105"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI104",
+        "NEI105"
+      ]
+    },
+    {
+      "id": "construct-NE17:0",
+      "commitmentId": "construct-NE17",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI106",
+        "NEI107"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI106",
+        "NEI107"
+      ]
+    },
+    {
+      "id": "construct-NE17:1",
+      "commitmentId": "construct-NE17",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI107",
+        "NEI108"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI107",
+        "NEI108"
+      ]
+    },
+    {
+      "id": "construct-NE18:0",
+      "commitmentId": "construct-NE18",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI109",
+        "NEI110"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI109",
+        "NEI110"
+      ]
+    },
+    {
+      "id": "construct-NE18:1",
+      "commitmentId": "construct-NE18",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI110",
+        "NEI111"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI110",
+        "NEI111"
+      ]
+    },
+    {
+      "id": "construct-NE19:0",
+      "commitmentId": "construct-NE19",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI112",
+        "NEI113"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI112",
+        "NEI113"
+      ]
+    },
+    {
+      "id": "construct-NE19:1",
+      "commitmentId": "construct-NE19",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI113",
+        "NEI114"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI113",
+        "NEI114"
+      ]
+    },
+    {
+      "id": "construct-NE20:0",
+      "commitmentId": "construct-NE20",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI115",
+        "NEI116"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI115",
+        "NEI116"
+      ]
+    },
+    {
+      "id": "construct-NE20:1",
+      "commitmentId": "construct-NE20",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI116",
+        "NEI117"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI116",
+        "NEI117"
+      ]
+    },
+    {
+      "id": "construct-NE21:0",
+      "commitmentId": "construct-NE21",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI118",
+        "NEI119"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI118",
+        "NEI119"
+      ]
+    },
+    {
+      "id": "construct-NE21:1",
+      "commitmentId": "construct-NE21",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI119",
+        "NEI120"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI119",
+        "NEI120"
+      ]
+    },
+    {
+      "id": "construct-OM11:0",
+      "commitmentId": "construct-OM11",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI100",
+        "OMI101"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI100",
+        "OMI101"
+      ]
+    },
+    {
+      "id": "construct-OM11:1",
+      "commitmentId": "construct-OM11",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI101",
+        "OMI102"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI101",
+        "OMI102"
+      ]
+    },
+    {
+      "id": "construct-OM12:0",
+      "commitmentId": "construct-OM12",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI103",
+        "OMI104"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI103",
+        "OMI104"
+      ]
+    },
+    {
+      "id": "construct-OM12:1",
+      "commitmentId": "construct-OM12",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI104",
+        "OMI105"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI104",
+        "OMI105"
+      ]
+    },
+    {
+      "id": "construct-OM13:0",
+      "commitmentId": "construct-OM13",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI106",
+        "OMI107"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI106",
+        "OMI107"
+      ]
+    },
+    {
+      "id": "construct-OM13:1",
+      "commitmentId": "construct-OM13",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI107",
+        "OMI108"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI107",
+        "OMI108"
+      ]
+    },
+    {
+      "id": "construct-OM14:0",
+      "commitmentId": "construct-OM14",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI109",
+        "OMI110"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI109",
+        "OMI110"
+      ]
+    },
+    {
+      "id": "construct-OM14:1",
+      "commitmentId": "construct-OM14",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI110",
+        "OMI111"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI110",
+        "OMI111"
+      ]
+    },
+    {
+      "id": "construct-PL27:0",
+      "commitmentId": "construct-PL27",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI100",
+        "PLI101"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI100",
+        "PLI101"
+      ]
+    },
+    {
+      "id": "construct-PL27:1",
+      "commitmentId": "construct-PL27",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI101",
+        "PLI102"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI101",
+        "PLI102"
+      ]
+    },
+    {
+      "id": "construct-PL28:0",
+      "commitmentId": "construct-PL28",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI103",
+        "PLI104"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI103",
+        "PLI104"
+      ]
+    },
+    {
+      "id": "construct-PL28:1",
+      "commitmentId": "construct-PL28",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI104",
+        "PLI105"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI104",
+        "PLI105"
+      ]
+    },
+    {
+      "id": "construct-PL29:0",
+      "commitmentId": "construct-PL29",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI106",
+        "PLI107"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI106",
+        "PLI107"
+      ]
+    },
+    {
+      "id": "construct-PL29:1",
+      "commitmentId": "construct-PL29",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI107",
+        "PLI108"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI107",
+        "PLI108"
+      ]
+    },
+    {
+      "id": "construct-PL30:0",
+      "commitmentId": "construct-PL30",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI109",
+        "PLI110"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI109",
+        "PLI110"
+      ]
+    },
+    {
+      "id": "construct-PL30:1",
+      "commitmentId": "construct-PL30",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI110",
+        "PLI111"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI110",
+        "PLI111"
+      ]
+    },
+    {
+      "id": "construct-PL31:0",
+      "commitmentId": "construct-PL31",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI112",
+        "PLI113"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI112",
+        "PLI113"
+      ]
+    },
+    {
+      "id": "construct-PL31:1",
+      "commitmentId": "construct-PL31",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI113",
+        "PLI114"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI113",
+        "PLI114"
+      ]
+    },
+    {
+      "id": "construct-PL32:0",
+      "commitmentId": "construct-PL32",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI115",
+        "PLI116"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI115",
+        "PLI116"
+      ]
+    },
+    {
+      "id": "construct-PL32:1",
+      "commitmentId": "construct-PL32",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI116",
+        "PLI117"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI116",
+        "PLI117"
+      ]
+    },
+    {
+      "id": "construct-PL33:0",
+      "commitmentId": "construct-PL33",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI118",
+        "PLI119"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI118",
+        "PLI119"
+      ]
+    },
+    {
+      "id": "construct-PL33:1",
+      "commitmentId": "construct-PL33",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI119",
+        "PLI120"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI119",
+        "PLI120"
+      ]
+    },
+    {
+      "id": "construct-SO14:0",
+      "commitmentId": "construct-SO14",
+      "domainId": "SO",
+      "itemIds": [
+        "SOI100",
+        "SOI101"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "SOI100",
+        "SOI101"
+      ]
+    },
+    {
+      "id": "construct-SO14:1",
+      "commitmentId": "construct-SO14",
+      "domainId": "SO",
+      "itemIds": [
+        "SOI101",
+        "SOI102"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "SOI101",
+        "SOI102"
+      ]
+    },
+    {
+      "id": "construct-SO15:0",
+      "commitmentId": "construct-SO15",
+      "domainId": "SO",
+      "itemIds": [
+        "SOI103",
+        "SOI104"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "SOI103",
+        "SOI104"
+      ]
+    },
+    {
+      "id": "construct-SO15:1",
+      "commitmentId": "construct-SO15",
+      "domainId": "SO",
+      "itemIds": [
+        "SOI104",
+        "SOI105"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "SOI104",
+        "SOI105"
+      ]
+    },
+    {
+      "id": "constructed-meaning:0",
+      "commitmentId": "constructed-meaning",
+      "domainId": "EX",
+      "itemIds": [
+        "EXI002",
+        "EXI010"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EXI002",
+        "EX-S02"
+      ]
+    },
+    {
+      "id": "deterministic-world:0",
+      "commitmentId": "deterministic-world",
+      "domainId": "AH",
+      "itemIds": [
+        "AHI002",
+        "AHI013"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "AHI002",
+        "AHI013"
+      ]
+    },
+    {
+      "id": "divine-existence:0",
+      "commitmentId": "divine-existence",
+      "domainId": "RC",
+      "itemIds": [
+        "RCI014",
+        "RCI021"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "RCI014",
+        "RCI021"
+      ]
+    },
+    {
+      "id": "effective-freedom:0",
+      "commitmentId": "effective-freedom",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI011",
+        "PLI058"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI011",
+        "PL-S09"
+      ]
+    },
+    {
+      "id": "extended-cognition:0",
+      "commitmentId": "extended-cognition",
+      "domainId": "MS",
+      "itemIds": [
+        "MSI004",
+        "MSI012"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MSI004",
+        "MS-S04"
+      ]
+    },
+    {
+      "id": "impartial-beneficence:0",
+      "commitmentId": "impartial-beneficence",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI004",
+        "NEI044"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI004",
+        "NEI044"
+      ]
+    },
+    {
+      "id": "instrumental-harm:0",
+      "commitmentId": "instrumental-harm",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI005",
+        "NEI030"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "NE-S01",
+        "NE-S07"
+      ]
+    },
+    {
+      "id": "legacy-objectivism-market-coordination:0",
+      "commitmentId": "legacy-objectivism-market-coordination",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI035",
+        "PLI055"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI035",
+        "PLI055"
+      ]
+    },
+    {
+      "id": "legacy-objectivism-moral-truth-aptness:0",
+      "commitmentId": "legacy-objectivism-moral-truth-aptness",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI017",
+        "MEI018"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI017",
+        "MEI018"
+      ]
+    },
+    {
+      "id": "legacy-philosophical-anarchism-no-general-obedience:0",
+      "commitmentId": "legacy-philosophical-anarchism-no-general-obedience",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI002",
+        "PLI025"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI002",
+        "PLI025"
+      ]
+    },
+    {
+      "id": "legacy-philosophical-anarchism-no-general-obedience:1",
+      "commitmentId": "legacy-philosophical-anarchism-no-general-obedience",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI025",
+        "PLI048"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI025",
+        "PL-S03"
+      ]
+    },
+    {
+      "id": "moral-concern-authority:0",
+      "commitmentId": "moral-concern-authority",
+      "domainId": "MF",
+      "itemIds": [
+        "MFI017",
+        "MFI027"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MFI017",
+        "MF-S06"
+      ]
+    },
+    {
+      "id": "moral-concern-care:0",
+      "commitmentId": "moral-concern-care",
+      "domainId": "MF",
+      "itemIds": [
+        "MFI013",
+        "MFI023"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MFI013",
+        "MF-S02"
+      ]
+    },
+    {
+      "id": "moral-concern-equality:0",
+      "commitmentId": "moral-concern-equality",
+      "domainId": "MF",
+      "itemIds": [
+        "MFI014",
+        "MFI024"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MFI014",
+        "MF-S03"
+      ]
+    },
+    {
+      "id": "moral-concern-loyalty:0",
+      "commitmentId": "moral-concern-loyalty",
+      "domainId": "MF",
+      "itemIds": [
+        "MFI016",
+        "MFI026"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MFI016",
+        "MF-S05"
+      ]
+    },
+    {
+      "id": "moral-concern-proportionality:0",
+      "commitmentId": "moral-concern-proportionality",
+      "domainId": "MF",
+      "itemIds": [
+        "MFI015",
+        "MFI025"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MFI015",
+        "MF-S04"
+      ]
+    },
+    {
+      "id": "moral-concern-purity:0",
+      "commitmentId": "moral-concern-purity",
+      "domainId": "MF",
+      "itemIds": [
+        "MFI018",
+        "MFI028"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MFI018",
+        "MF-S07"
+      ]
+    },
+    {
+      "id": "moral-constraints:0",
+      "commitmentId": "moral-constraints",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI002",
+        "NEI026"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI002",
+        "NE-S04"
+      ]
+    },
+    {
+      "id": "moral-limits-validity:0",
+      "commitmentId": "moral-limits-validity",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI072",
+        "PLI073"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI072",
+        "PL-S18"
+      ]
+    },
+    {
+      "id": "mutual-advantage:0",
+      "commitmentId": "mutual-advantage",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI010",
+        "NEI032"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI010",
+        "NEI032"
+      ]
+    },
+    {
+      "id": "natural-world:0",
+      "commitmentId": "natural-world",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI009",
+        "OMI011"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI009",
+        "OMI011"
+      ]
+    },
+    {
+      "id": "nondomination:0",
+      "commitmentId": "nondomination",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI010",
+        "PLI057"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI010",
+        "PL-S08"
+      ]
+    },
+    {
+      "id": "noninterference:0",
+      "commitmentId": "noninterference",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI007",
+        "PLI051"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI007",
+        "PL-S04"
+      ]
+    },
+    {
+      "id": "objective-meaning:0",
+      "commitmentId": "objective-meaning",
+      "domainId": "EX",
+      "itemIds": [
+        "EXI001",
+        "EXI008"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EXI001",
+        "EXI008"
+      ]
+    },
+    {
+      "id": "outcomes-count:0",
+      "commitmentId": "outcomes-count",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI001",
+        "NEI025"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI001",
+        "NE-S03"
+      ]
+    },
+    {
+      "id": "ph-aesthetic-objectivity:0",
+      "commitmentId": "ph-aesthetic-objectivity",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI061",
+        "VAI060"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI061",
+        "VAI060"
+      ]
+    },
+    {
+      "id": "ph-basic-experience:0",
+      "commitmentId": "ph-basic-experience",
+      "domainId": "MS",
+      "itemIds": [
+        "MSI015",
+        "MSI017"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MSI015",
+        "MSI017"
+      ]
+    },
+    {
+      "id": "ph-belief-revision:0",
+      "commitmentId": "ph-belief-revision",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI001",
+        "EPI023"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EP-M01",
+        "EP-S01"
+      ]
+    },
+    {
+      "id": "ph-categorical-reasons:0",
+      "commitmentId": "ph-categorical-reasons",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI004",
+        "MEI007"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI004",
+        "MEI007"
+      ]
+    },
+    {
+      "id": "ph-categorical-reasons:1",
+      "commitmentId": "ph-categorical-reasons",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI007",
+        "MEI026"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI007",
+        "MEI026"
+      ]
+    },
+    {
+      "id": "ph-coherent-justification:0",
+      "commitmentId": "ph-coherent-justification",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI039",
+        "EPI042"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI039",
+        "EPI042"
+      ]
+    },
+    {
+      "id": "ph-concrete-worlds:0",
+      "commitmentId": "ph-concrete-worlds",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI029",
+        "OMI030"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI029",
+        "OMI030"
+      ]
+    },
+    {
+      "id": "ph-conscious-causes:0",
+      "commitmentId": "ph-conscious-causes",
+      "domainId": "AH",
+      "itemIds": [
+        "AHI005",
+        "AHI032"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "AHI005",
+        "AH-S10"
+      ]
+    },
+    {
+      "id": "ph-consent-authority:0",
+      "commitmentId": "ph-consent-authority",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI009",
+        "PLI056"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI009",
+        "PL-S07"
+      ]
+    },
+    {
+      "id": "ph-context-sensitive:0",
+      "commitmentId": "ph-context-sensitive",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI003",
+        "MEI025"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI003",
+        "MEI025"
+      ]
+    },
+    {
+      "id": "ph-cosmic-purpose:0",
+      "commitmentId": "ph-cosmic-purpose",
+      "domainId": "RC",
+      "itemIds": [
+        "RCI005",
+        "RCI008"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "RCI005",
+        "RCI008"
+      ]
+    },
+    {
+      "id": "ph-democratic-authorization:0",
+      "commitmentId": "ph-democratic-authorization",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI006",
+        "PLI027"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI006",
+        "PLI027"
+      ]
+    },
+    {
+      "id": "ph-desert-punishment:0",
+      "commitmentId": "ph-desert-punishment",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI017",
+        "PLI064"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI017",
+        "PL-S12"
+      ]
+    },
+    {
+      "id": "ph-desire-welfare:0",
+      "commitmentId": "ph-desire-welfare",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI054",
+        "VAI056"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI054",
+        "VA-S02"
+      ]
+    },
+    {
+      "id": "ph-doing-allowing:0",
+      "commitmentId": "ph-doing-allowing",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI013",
+        "NEI036"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI013",
+        "NE-S12"
+      ]
+    },
+    {
+      "id": "ph-eternal-time:0",
+      "commitmentId": "ph-eternal-time",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI026",
+        "OMI027"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI026",
+        "OMI027"
+      ]
+    },
+    {
+      "id": "ph-expert-testimony:0",
+      "commitmentId": "ph-expert-testimony",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI005",
+        "EPI018"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI005",
+        "EPI018"
+      ]
+    },
+    {
+      "id": "ph-external-content:0",
+      "commitmentId": "ph-external-content",
+      "domainId": "MS",
+      "itemIds": [
+        "MSI019",
+        "MSI018"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MSI019",
+        "MS-S05"
+      ]
+    },
+    {
+      "id": "ph-foundational-justification:0",
+      "commitmentId": "ph-foundational-justification",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI038",
+        "EPI042"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI038",
+        "EPI042"
+      ]
+    },
+    {
+      "id": "ph-full-reduction:0",
+      "commitmentId": "ph-full-reduction",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI006",
+        "OMI007"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI006",
+        "OMI007"
+      ]
+    },
+    {
+      "id": "ph-functional-minds:0",
+      "commitmentId": "ph-functional-minds",
+      "domainId": "MS",
+      "itemIds": [
+        "MSI013",
+        "MSI017"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MSI013",
+        "MSI017"
+      ]
+    },
+    {
+      "id": "ph-governing-laws:0",
+      "commitmentId": "ph-governing-laws",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI016",
+        "OMI018"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI016",
+        "OMI018"
+      ]
+    },
+    {
+      "id": "ph-group-agency:0",
+      "commitmentId": "ph-group-agency",
+      "domainId": "SO",
+      "itemIds": [
+        "SOI002",
+        "SOI026"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "SOI002",
+        "SO-S02"
+      ]
+    },
+    {
+      "id": "ph-high-sacrifice:0",
+      "commitmentId": "ph-high-sacrifice",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI012",
+        "NEI035"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI012",
+        "NE-S11"
+      ]
+    },
+    {
+      "id": "ph-humean-laws:0",
+      "commitmentId": "ph-humean-laws",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI017",
+        "OMI018"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI017",
+        "OMI018"
+      ]
+    },
+    {
+      "id": "ph-individual-claims:0",
+      "commitmentId": "ph-individual-claims",
+      "domainId": "SO",
+      "itemIds": [
+        "SOI001",
+        "SOI025"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "SOI001",
+        "SO-S01"
+      ]
+    },
+    {
+      "id": "ph-inherent-purpose:0",
+      "commitmentId": "ph-inherent-purpose",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI004",
+        "OMI014"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OM-M01",
+        "OMI014"
+      ]
+    },
+    {
+      "id": "ph-intention-sensitive:0",
+      "commitmentId": "ph-intention-sensitive",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI041",
+        "NEI043"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI041",
+        "NE-S15"
+      ]
+    },
+    {
+      "id": "ph-intuitive-warrant:0",
+      "commitmentId": "ph-intuitive-warrant",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI011",
+        "EPI031"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI011",
+        "EP-S04"
+      ]
+    },
+    {
+      "id": "ph-motivational-necessity:0",
+      "commitmentId": "ph-motivational-necessity",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI020",
+        "MEI022"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI020",
+        "MEI022"
+      ]
+    },
+    {
+      "id": "ph-national-obligations:0",
+      "commitmentId": "ph-national-obligations",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI021",
+        "PLI068"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI021",
+        "PL-S15"
+      ]
+    },
+    {
+      "id": "ph-noncosmic-meaning:0",
+      "commitmentId": "ph-noncosmic-meaning",
+      "domainId": "EX",
+      "itemIds": [
+        "EXI006",
+        "EXI011"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EXI006",
+        "EXI011"
+      ]
+    },
+    {
+      "id": "ph-objective-welfare:0",
+      "commitmentId": "ph-objective-welfare",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI058",
+        "VAI054"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI058",
+        "VAI054"
+      ]
+    },
+    {
+      "id": "ph-observation-weight:0",
+      "commitmentId": "ph-observation-weight",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI003",
+        "EPI016"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI003",
+        "EPI016"
+      ]
+    },
+    {
+      "id": "ph-particular-judgment:0",
+      "commitmentId": "ph-particular-judgment",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI008",
+        "MEI015"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI008",
+        "MEI015"
+      ]
+    },
+    {
+      "id": "ph-personal-prerogatives:0",
+      "commitmentId": "ph-personal-prerogatives",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI011",
+        "NEI034"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI011",
+        "NE-S10"
+      ]
+    },
+    {
+      "id": "ph-physical-explanation:0",
+      "commitmentId": "ph-physical-explanation",
+      "domainId": "MS",
+      "itemIds": [
+        "MSI001",
+        "MSI006"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "MSI001",
+        "MSI006"
+      ]
+    },
+    {
+      "id": "ph-political-cosmopolitanism:0",
+      "commitmentId": "ph-political-cosmopolitanism",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI020",
+        "PLI067"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI020",
+        "PLI067"
+      ]
+    },
+    {
+      "id": "ph-polycentric-order:0",
+      "commitmentId": "ph-polycentric-order",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI022",
+        "PLI069"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI022",
+        "PL-S16"
+      ]
+    },
+    {
+      "id": "ph-process-self:0",
+      "commitmentId": "ph-process-self",
+      "domainId": "MS",
+      "itemIds": [
+        "MSI003",
+        "MSI011"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MSI003",
+        "MS-S03"
+      ]
+    },
+    {
+      "id": "ph-productive-causation:0",
+      "commitmentId": "ph-productive-causation",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI020",
+        "OMI021"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI020",
+        "OMI021"
+      ]
+    },
+    {
+      "id": "ph-reliable-processes:0",
+      "commitmentId": "ph-reliable-processes",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI040",
+        "EPI042"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI040",
+        "EPI042"
+      ]
+    },
+    {
+      "id": "ph-religious-priority:0",
+      "commitmentId": "ph-religious-priority",
+      "domainId": "RC",
+      "itemIds": [
+        "RCI013",
+        "RCI030"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "RCI013",
+        "RCI030"
+      ]
+    },
+    {
+      "id": "ph-religious-public-law:0",
+      "commitmentId": "ph-religious-public-law",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI023",
+        "PLI070"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI023",
+        "PL-S17"
+      ]
+    },
+    {
+      "id": "ph-rights-constraints:0",
+      "commitmentId": "ph-rights-constraints",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI008",
+        "PLI052"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI008",
+        "PLI052"
+      ]
+    },
+    {
+      "id": "ph-rule-mediated:0",
+      "commitmentId": "ph-rule-mediated",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI037",
+        "NEI040"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI037",
+        "NEI040"
+      ]
+    },
+    {
+      "id": "ph-sacred-value:0",
+      "commitmentId": "ph-sacred-value",
+      "domainId": "RC",
+      "itemIds": [
+        "RCI012",
+        "RCI029"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "RCI012",
+        "RC-S04"
+      ]
+    },
+    {
+      "id": "ph-scientific-realism:0",
+      "commitmentId": "ph-scientific-realism",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI013",
+        "EPI033"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI013",
+        "EP-S06"
+      ]
+    },
+    {
+      "id": "ph-social-constitution:0",
+      "commitmentId": "ph-social-constitution",
+      "domainId": "SO",
+      "itemIds": [
+        "SOI013",
+        "SOI036"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "SOI013",
+        "SO-S08"
+      ]
+    },
+    {
+      "id": "ph-special-obligations:0",
+      "commitmentId": "ph-special-obligations",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI024",
+        "NEI033"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI024",
+        "NE-S09"
+      ]
+    },
+    {
+      "id": "ph-stance-independence:0",
+      "commitmentId": "ph-stance-independence",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI002",
+        "MEI023"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "ME-M01",
+        "ME-S07"
+      ]
+    },
+    {
+      "id": "ph-strong-property:0",
+      "commitmentId": "ph-strong-property",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI013",
+        "PLI054"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI013",
+        "PL-S06"
+      ]
+    },
+    {
+      "id": "ph-supernatural-reality:0",
+      "commitmentId": "ph-supernatural-reality",
+      "domainId": "RC",
+      "itemIds": [
+        "RCI003",
+        "RCI006"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "RCI003",
+        "RCI006"
+      ]
+    },
+    {
+      "id": "ph-tradition-evidence:0",
+      "commitmentId": "ph-tradition-evidence",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI019",
+        "EPI030"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI019",
+        "EP-S03"
+      ]
+    },
+    {
+      "id": "ph-unconscious-causes:0",
+      "commitmentId": "ph-unconscious-causes",
+      "domainId": "AH",
+      "itemIds": [
+        "AHI011",
+        "AHI021"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "AHI011",
+        "AHI021"
+      ]
+    },
+    {
+      "id": "ph-universal-requirements:0",
+      "commitmentId": "ph-universal-requirements",
+      "domainId": "ME",
+      "itemIds": [
+        "MEI024",
+        "MEI010"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MEI024",
+        "MEI010"
+      ]
+    },
+    {
+      "id": "ph-values-science:0",
+      "commitmentId": "ph-values-science",
+      "domainId": "EP",
+      "itemIds": [
+        "EPI044",
+        "EPI045"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EPI044",
+        "EPI045"
+      ]
+    },
+    {
+      "id": "ph-world-possibilities:0",
+      "commitmentId": "ph-world-possibilities",
+      "domainId": "EX",
+      "itemIds": [
+        "EXI004",
+        "EXI017"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "EXI004",
+        "EXI017"
+      ]
+    },
+    {
+      "id": "physical-reality:0",
+      "commitmentId": "physical-reality",
+      "domainId": "OM",
+      "itemIds": [
+        "OMI002",
+        "OMI012"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "OMI002",
+        "OMI012"
+      ]
+    },
+    {
+      "id": "priority-VA01:0",
+      "commitmentId": "priority-VA01",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI001",
+        "VAI019"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI001",
+        "VAI019"
+      ]
+    },
+    {
+      "id": "priority-VA01:1",
+      "commitmentId": "priority-VA01",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI019",
+        "VAI035"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI019",
+        "VAI035"
+      ]
+    },
+    {
+      "id": "priority-VA02:0",
+      "commitmentId": "priority-VA02",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI020",
+        "VAI036"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI020",
+        "VAI036"
+      ]
+    },
+    {
+      "id": "priority-VA03:0",
+      "commitmentId": "priority-VA03",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI006",
+        "VAI021"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI006",
+        "VAI021"
+      ]
+    },
+    {
+      "id": "priority-VA03:1",
+      "commitmentId": "priority-VA03",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI021",
+        "VAI037"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI021",
+        "VAI037"
+      ]
+    },
+    {
+      "id": "priority-VA04:0",
+      "commitmentId": "priority-VA04",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI007",
+        "VAI022"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI007",
+        "VAI022"
+      ]
+    },
+    {
+      "id": "priority-VA04:1",
+      "commitmentId": "priority-VA04",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI022",
+        "VAI038"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI022",
+        "VAI038"
+      ]
+    },
+    {
+      "id": "priority-VA05:0",
+      "commitmentId": "priority-VA05",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI003",
+        "VAI039"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI003",
+        "VAI039"
+      ]
+    },
+    {
+      "id": "priority-VA06:0",
+      "commitmentId": "priority-VA06",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI009",
+        "VAI023"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI009",
+        "VAI023"
+      ]
+    },
+    {
+      "id": "priority-VA06:1",
+      "commitmentId": "priority-VA06",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI023",
+        "VAI044"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI023",
+        "VAI044"
+      ]
+    },
+    {
+      "id": "priority-VA07:0",
+      "commitmentId": "priority-VA07",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI010",
+        "VAI024"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI010",
+        "VAI024"
+      ]
+    },
+    {
+      "id": "priority-VA07:1",
+      "commitmentId": "priority-VA07",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI024",
+        "VAI045"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI024",
+        "VAI045"
+      ]
+    },
+    {
+      "id": "priority-VA08:0",
+      "commitmentId": "priority-VA08",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI011",
+        "VAI025"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI011",
+        "VAI025"
+      ]
+    },
+    {
+      "id": "priority-VA08:1",
+      "commitmentId": "priority-VA08",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI025",
+        "VAI046"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI025",
+        "VAI046"
+      ]
+    },
+    {
+      "id": "priority-VA09:0",
+      "commitmentId": "priority-VA09",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI002",
+        "VAI040"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI002",
+        "VAI040"
+      ]
+    },
+    {
+      "id": "priority-VA10:0",
+      "commitmentId": "priority-VA10",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI012",
+        "VAI026"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI012",
+        "VAI026"
+      ]
+    },
+    {
+      "id": "priority-VA10:1",
+      "commitmentId": "priority-VA10",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI026",
+        "VAI047"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI026",
+        "VAI047"
+      ]
+    },
+    {
+      "id": "priority-VA11:0",
+      "commitmentId": "priority-VA11",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI027",
+        "VAI041"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI027",
+        "VAI041"
+      ]
+    },
+    {
+      "id": "priority-VA12:0",
+      "commitmentId": "priority-VA12",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI013",
+        "VAI028"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI013",
+        "VAI028"
+      ]
+    },
+    {
+      "id": "priority-VA12:1",
+      "commitmentId": "priority-VA12",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI028",
+        "VAI048"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI028",
+        "VAI048"
+      ]
+    },
+    {
+      "id": "priority-VA13:0",
+      "commitmentId": "priority-VA13",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI014",
+        "VAI029"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI014",
+        "VAI029"
+      ]
+    },
+    {
+      "id": "priority-VA13:1",
+      "commitmentId": "priority-VA13",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI029",
+        "VAI049"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI029",
+        "VAI049"
+      ]
+    },
+    {
+      "id": "priority-VA14:0",
+      "commitmentId": "priority-VA14",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI015",
+        "VAI030"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI015",
+        "VAI030"
+      ]
+    },
+    {
+      "id": "priority-VA14:1",
+      "commitmentId": "priority-VA14",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI030",
+        "VAI050"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI030",
+        "VAI050"
+      ]
+    },
+    {
+      "id": "priority-VA15:0",
+      "commitmentId": "priority-VA15",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI008",
+        "VAI031"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI008",
+        "VAI031"
+      ]
+    },
+    {
+      "id": "priority-VA15:1",
+      "commitmentId": "priority-VA15",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI031",
+        "VAI042"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI031",
+        "VAI042"
+      ]
+    },
+    {
+      "id": "priority-VA16:0",
+      "commitmentId": "priority-VA16",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI016",
+        "VAI032"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI016",
+        "VAI032"
+      ]
+    },
+    {
+      "id": "priority-VA16:1",
+      "commitmentId": "priority-VA16",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI032",
+        "VAI051"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI032",
+        "VAI051"
+      ]
+    },
+    {
+      "id": "priority-VA17:0",
+      "commitmentId": "priority-VA17",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI004",
+        "VAI043"
+      ],
+      "itemRevisions": [
+        2,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI004",
+        "VAI043"
+      ]
+    },
+    {
+      "id": "priority-VA18:0",
+      "commitmentId": "priority-VA18",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI017",
+        "VAI033"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI017",
+        "VAI033"
+      ]
+    },
+    {
+      "id": "priority-VA18:1",
+      "commitmentId": "priority-VA18",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI033",
+        "VAI052"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI033",
+        "VAI052"
+      ]
+    },
+    {
+      "id": "priority-VA19:0",
+      "commitmentId": "priority-VA19",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI018",
+        "VAI034"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI018",
+        "VAI034"
+      ]
+    },
+    {
+      "id": "priority-VA19:1",
+      "commitmentId": "priority-VA19",
+      "domainId": "VA",
+      "itemIds": [
+        "VAI034",
+        "VAI053"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "VAI034",
+        "VAI053"
+      ]
+    },
+    {
+      "id": "procedural-justice:0",
+      "commitmentId": "procedural-justice",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI015",
+        "PLI062"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI015",
+        "PL-S10"
+      ]
+    },
+    {
+      "id": "psychological-continuity:0",
+      "commitmentId": "psychological-continuity",
+      "domainId": "MS",
+      "itemIds": [
+        "MSI002",
+        "MSI022"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "MSI002",
+        "MS-S06"
+      ]
+    },
+    {
+      "id": "reasonable-rejection:0",
+      "commitmentId": "reasonable-rejection",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI009",
+        "NEI031"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI009",
+        "NE-S08"
+      ]
+    },
+    {
+      "id": "relational-care:0",
+      "commitmentId": "relational-care",
+      "domainId": "NE",
+      "itemIds": [
+        "NEI006",
+        "NEI028"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "NEI006",
+        "NE-S06"
+      ]
+    },
+    {
+      "id": "source-based-validity:0",
+      "commitmentId": "source-based-validity",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI071",
+        "PLI073"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI071",
+        "PL-S18"
+      ]
+    },
+    {
+      "id": "substantive-justice:0",
+      "commitmentId": "substantive-justice",
+      "domainId": "PL",
+      "itemIds": [
+        "PLI016",
+        "PLI063"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "PLI016",
+        "PL-S11"
+      ]
+    },
+    {
+      "id": "theological-suspension:0",
+      "commitmentId": "theological-suspension",
+      "domainId": "RC",
+      "itemIds": [
+        "RCI001",
+        "RCI021"
+      ],
+      "itemRevisions": [
+        1,
+        1
+      ],
+      "evidenceUnits": [
+        "RCI001",
+        "RCI021"
+      ]
+    }
+  ],
+  "scoringStatus": "authored_content_blueprint_not_validated_short_form",
+  "parentPolicyVersion": "philosophy-blueprint-1.0.0"
+}

@@ -54,28 +54,32 @@
     "path": "data/academic/methodology-supplement-v0.9.json"
   },
   "worldviewModel": {
-    "version": "generic-0.2.0",
-    "path": "data/generic/model-v0.2.json"
+    "version": "generic-0.3.0",
+    "path": "data/generic/model-v0.3.json"
   },
   "worldviewSourceLedger": {
-    "version": "0.2.0",
-    "path": "data/generic/source-ledger-v0.2.json"
+    "version": "0.3.0",
+    "path": "data/generic/source-ledger-v0.3.json"
   },
   "worldviewCoverage": {
-    "version": "0.2.0",
-    "path": "data/generic/coverage-v0.2.json"
+    "version": "0.3.0",
+    "path": "data/generic/coverage-v0.3.json"
   },
   "quizExperience": {
-    "version": "quiz-1.2.0",
-    "path": "data/experience/policy-v1.1.json",
+    "version": "quiz-1.3.0",
+    "path": "data/experience/policy-v1.2.json",
     "entrypoint": "apps/quiz/index.html"
   },
   "publicForm": {
-    "version": "philosophy-blueprint-1.0.0",
-    "path": "data/philosophy/public-form-v1.json"
+    "version": "philosophy-blueprint-1.1.0",
+    "path": "data/philosophy/public-form-v1.1.json"
   },
   "fullForm": {
-    "version": "philosophy-full-1.0.0",
-    "path": "data/philosophy/public-full-v1.json"
+    "version": "philosophy-full-1.1.0",
+    "path": "data/philosophy/public-full-v1.1.json"
+  },
+  "unmappedAcademicAudit": {
+    "version": "unmapped-audit-1.0.0",
+    "path": "data/academic/unmapped-audit-v1.json"
   }
 }
