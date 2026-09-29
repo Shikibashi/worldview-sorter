@@ -1,0 +1,45 @@
+name: Philosophy domains
+on:
+  push:
+    branches: [construct-registry-v0.1]
+    paths:
+      - '.github/workflows/philosophy-domains.yml'
+      - 'data/philosophy/**'
+      - 'scripts/*philosophy*.mjs'
+      - 'packages/worldview/**'
+      - 'packages/experience/**'
+      - 'apps/quiz/**'
+      - 'package.json'
+  pull_request:
+    paths:
+      - '.github/workflows/philosophy-domains.yml'
+      - 'data/philosophy/**'
+      - 'scripts/*philosophy*.mjs'
+      - 'packages/worldview/**'
+      - 'packages/experience/**'
+      - 'apps/quiz/**'
+      - 'package.json'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Reproduce current build and regression tests
+        run: npm test
+      - name: Retain tracked source for reproducible audit
+        if: always()
+        run: |
+          mkdir -p /tmp/worldview-audit
+          git archive --format=tar HEAD | gzip -n > /tmp/worldview-audit/source.tar.gz
+          git rev-parse HEAD > /tmp/worldview-audit/commit.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: philosophy-source-audit
+          path: /tmp/worldview-audit/
+          retention-days: 7
