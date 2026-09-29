@@ -8,6 +8,7 @@ on:
       - 'scripts/test-academic*.mjs'
       - 'scripts/test-ui-smoke.mjs'
       - 'packages/profiles/**'
+      - 'packages/runtime/**'
       - 'package.json'
       - '.github/workflows/academic-release.yml'
   pull_request:
@@ -17,6 +18,7 @@ on:
       - 'scripts/test-academic*.mjs'
       - 'scripts/test-ui-smoke.mjs'
       - 'packages/profiles/**'
+      - 'packages/runtime/**'
       - 'package.json'
       - '.github/workflows/academic-release.yml'
 permissions:
