@@ -43,6 +43,7 @@ testCase('Exactly the 49 previously unmapped constructs are classified once',()=
  assert.equal(audit.decisions.length,49);
  assert.equal(new Set(audit.decisions.map(d=>d.constructId)).size,49);
  assert.deepEqual(audit.decisionCounts,{ready_existing_items:27,needs_new_discriminating_items:2,remain_derived:5,remain_research_only:7,split_or_deprecate:8});
+ assert.ok(audit.decisions.every(d=>Array.isArray(d.sourceIds)&&d.sourceIds.length>0));
 });
 testCase('No question was added, deleted, or revised by the audit',()=>{
  assert.equal(bank.items.length,562);
@@ -68,17 +69,38 @@ for(const rule of accepted){
   assert.equal(state(run(pos),rule.id),'supported');
   if(new Set(rule.evidence.filter(e=>e.oppose.length).map(e=>e.unitId)).size>=2)assert.equal(state(run(neg),rule.id),'opposed');
   assert.equal(state(run([]),rule.id),'insufficient_evidence');
-  const supportEvidence=rule.evidence.find(e=>e.support.length);
-  const opposeEvidence=rule.evidence.find(e=>e.oppose.length&&e.itemId!==supportEvidence?.itemId);
-  if(supportEvidence&&opposeEvidence){
-   const mixed=withPrerequisites([
-    response(supportEvidence.itemId,supportEvidence.support[0]),
-    response(opposeEvidence.itemId,opposeEvidence.oppose[0])
-   ]);
-   assert.equal(state(run(mixed),rule.id),'mixed');
+  const supportEvidence=rule.evidence.filter(e=>e.support.length);
+  const opposeEvidence=rule.evidence.filter(e=>e.oppose.length);
+  if(supportEvidence.length&&opposeEvidence.length){
+   let foundMixed=false;
+   for(const se of supportEvidence){
+    for(const oe of opposeEvidence){
+     if(se.itemId===oe.itemId)continue;
+     const mixed=withPrerequisites([
+      response(se.itemId,se.support[0]),
+      response(oe.itemId,oe.oppose[0])
+     ]);
+     if(state(run(mixed),rule.id)==='mixed'){foundMixed=true;break;}
+    }
+    if(foundMixed)break;
+   }
+   assert.equal(foundMixed,true,"No valid mixed-evidence counterexample for "+rule.id);
   }
  });
 }
+testCase('Liberty/opposition-to-domination remains research-only rather than being silently added to MFQ-2',()=>{
+ const d=audit.decisions.find(d=>d.constructId==='MF07');
+ assert.equal(d.decision,'remain_research_only');
+ assert.ok(d.sourceIds.includes('acad-mfq2'));
+ assert.ok(d.sourceIds.includes('audit-liberty'));
+ assert.equal(d.acceptedRuleIds.length,0);
+});
+testCase('Free-will belief remains unmapped because current items confound existence with theories of freedom',()=>{
+ const d=audit.decisions.find(d=>d.constructId==='AH01');
+ assert.equal(d.decision,'needs_new_discriminating_items');
+ assert.ok(d.sourceIds.includes('free-will-inventory'));
+ assert.equal(d.acceptedRuleIds.length,0);
+});
 testCase('External-world realism is not direct realism',()=>{
  const r=run([response('EPI036',2),response('EPI037','mind_independent'),response('EPI034','indirect')]);
  assert.equal(state(r,'audit-EP11-external-world'),'supported');
