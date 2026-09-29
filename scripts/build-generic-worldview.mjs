@@ -1,9 +1,16 @@
 import assert from 'node:assert/strict';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {sources as newSources,commitments as authored,foundationRules,methodologicalRules,unsupportedInferences,readinessGaps} from '../data/generic/spec-v0.1.mjs';
+import {sources as reviewedSources,commitments as authored,foundationRules,methodologicalRules,unsupportedInferences,readinessGaps} from '../data/generic/spec-v0.1.mjs';
 import {additions} from '../data/academic/additions-v0.9.mjs';
 import {validateModel} from '../packages/worldview/index.js';
+const newSources=[...reviewedSources,{
+ id:'gen-afterlife',title:'Afterlife',url:'https://plato.stanford.edu/entries/afterlife/',
+ locator:'Introduction and sections 1–3: survival, dualism, materialism',
+ claim:'Survival after biological death is a distinct question; dualism does not guarantee it and materialist accounts of survival are discussed.',
+ access:'selected_sections_reviewed',evidenceType:'signed_scholarly_analysis',reviewedOn:'2026-09-28',
+ itemReuse:'Conceptual reference only; no question wording copied.'
+}];
 const root=new URL('../',import.meta.url);
 const raw=p=>readFile(new URL(p,root),'utf8');
 const read=async p=>JSON.parse(await raw(p));
@@ -54,14 +61,20 @@ for(const p of old.profiles){
   let id=c.constructId?'construct-'+c.constructId:null;
   if(!id){
    id='legacy-'+p.id+'-'+c.id;
-   addRule({id,constructId:items.get(c.evidence[0].itemId).targets[0].constructId,label:c.id,layer:'normative',scope:p.scope,sourceIds:c.sourceIds,evidence:c.evidence,
+   const layer=items.get(c.evidence[0].itemId).domainId==='ME'?'metaethical':'institutional_normative';
+   addRule({id,constructId:items.get(c.evidence[0].itemId).targets[0].constructId,label:c.id,layer,scope:p.scope,sourceIds:c.sourceIds,evidence:c.evidence,
     boundary:'Inherited narrow criterion; do not generalize it beyond '+p.scope,mappingStatus:'inherited_academic_rule_with_recorded_limits'});
   }
   return {commitmentId:id,expected:c.expected==='reject'?'oppose':'support',role:c.essential?'defining':'disputed'};
  });
  comparisons.push({id:p.id,label:p.label,scope:p.scope,kind:'selected_tradition_commitments',sourceIds:p.sourceIds,criteria,limitations:p.limitations});
 }
-for(const c of authored){addRule(c);single(c);}
+for(const original of authored){
+ const c=original.id==='afterlife-belief'?{...original,sourceIds:['gen-afterlife']}:original;
+ addRule(c);single(c);
+}
+assert.equal(rules.get('legacy-objectivism-moral-truth-aptness').layer,'metaethical');
+assert.deepEqual(rules.get('afterlife-belief').sourceIds,['gen-afterlife']);
 for(const [constructId,name,general,caseId,support,oppose] of foundationRules){
  const c={id:'moral-concern-'+name,constructId,label:'Moral relevance of '+name,layer:'moral_intuition',sourceIds:['acad-mfq2'],
   scope:'Reported importance of '+name+' in moral assessment, without assigning a party or philosophical system.',
