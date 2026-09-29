@@ -3,3 +3,5 @@
 @media(max-width:680px){.edition{display:none}.routes,.domain-map{grid-template-columns:1fr}.route{min-height:124px}.navigation{gap:8px}.autoadvance{order:3;flex-basis:100%}.navigation #next{margin-left:auto}.quiet-actions span{margin:0;flex-basis:100%}.masthead{padding:18px}main{padding:20px 16px 40px}footer span{float:none;display:block}h1{font-size:2.8rem}.button-row button{flex:1 1 45%}.promise{margin-bottom:26px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){button,.question-card,.domain{border:1px solid ButtonText}.answer[aria-pressed=true]{outline:3px solid Highlight}progress{forced-color-adjust:auto}}
+
+.facet-coverage{padding:0.7rem 0;border-bottom:1px solid currentColor;margin-bottom:1rem}.facet-coverage p{font-size:0.85rem;line-height:1.5;margin:0.45rem 0}.facet-coverage span{opacity:0.75}

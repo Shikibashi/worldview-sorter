@@ -1,4 +1,4 @@
-import {createQuiz,restoreQuiz,currentItem,seekQuestion,answerQuestion,nextQuestion,previousQuestion,quizProgress,EXPERIENCE_VERSION} from '../../packages/experience/quiz.js';
+import {createQuiz,restoreQuiz,currentItem,seekQuestion,answerQuestion,nextQuestion,previousQuestion,quizProgress,EXPERIENCE_VERSION,COMPATIBLE_EXPERIENCE_VERSIONS} from '../../packages/experience/quiz.js';
 import {buildQuizSummary,createSharePreview,DOMAIN_COPY} from '../../packages/experience/summary.js';
 import {initialExploration,recordExploration} from '../../packages/experience/exploration.js';
 import {shuffleWithSeed} from '../../packages/runtime/index.js';
@@ -8,7 +8,7 @@ const storageKey='worldview-sorter:quiz-experience:1';
 const screens=['home','quiz','results','failure'];
 const specialNames={no_view:'No view',not_understood:'I do not understand this item',not_applicable:'Not applicable'};
 const instructions={agreement5:'Choose the response that fits your view.',importance5:'How important is this to you?',moral_relevance5:'How relevant is this to your moral judgment?',paired5:'Compare the two positions below.'};
-let bank,pilot,scalesDoc,model,quiz=null,summary=null,loadedText=null,timer=null,shownAt=0,storageWorks=true;
+let bank,pilot,scalesDoc,model,formPolicy,quiz=null,summary=null,loadedText=null,timer=null,shownAt=0,storageWorks=true;
 let exploration=initialExploration();
 const gameOptions=Object.freeze({enabled:false}); // Future post-result opt-in, never a score input.
 const elem=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
@@ -129,7 +129,11 @@ function finish(){
  for(const domain of summary.domains){
   const card=elem('section',undefined,'domain'),details=elem('details'),head=elem('summary');
   head.append(elem('strong',domain.title),elem('span',domain.prompt),elem('span',domain.responses+' responses in this topic'));
-  details.append(head);details.addEventListener('toggle',()=>{if(details.open)resultEvent('topic_opened',domain.id);});
+  details.append(head);
+  const facets=elem('div',undefined,'facet-coverage');
+  for(const f of domain.facets??[]){const line=elem('p');line.dataset.facetId=f.id;line.append(elem('strong',f.title),elem('span',' · '+f.answeredItems+' responses'));facets.append(line);}
+  details.append(facets);
+  details.addEventListener('toggle',()=>{if(details.open)resultEvent('topic_opened',domain.id);});
   const known=domain.rows.filter(r=>r.status!=='insufficient_evidence'),partial=domain.rows.filter(r=>r.status==='insufficient_evidence');
   if(!known.length)details.append(elem('p','Still taking shape. Your responses do not yet support a broader pattern here.','small'));
   for(const row of [...known,...partial]){
@@ -162,19 +166,19 @@ function openShare(){
 }
 function start(size){
  if(loadedText&&!confirm('Starting another quiz replaces the locally saved quiz. Save a backup first to keep it. Continue?'))return;
- announce('');const seed=crypto.randomUUID();quiz=createQuiz({bank,pilot,scalesDoc,seed,size,sessionId:crypto.randomUUID(),locale:navigator.language||'en'});
+ announce('');const seed=crypto.randomUUID();quiz=createQuiz({bank,pilot,scalesDoc,formPolicy,seed,size,sessionId:crypto.randomUUID(),locale:navigator.language||'en'});
  exploration=initialExploration();seekQuestion(quiz,bank,0);enterQuestion();
 }
 async function bootstrap(){
  const current=await fetchJSON('data/current.json');
- [bank,pilot,scalesDoc,model]=await Promise.all([fetchJSON(current.candidateBank.path),fetchJSON(current.pilot.path),fetchJSON('data/response-scales.json'),fetchJSON(current.worldviewModel.path)]);
- const names=[['A first look',80,'The smallest sample. More open questions.'],['A wider view',120,'More room for different parts of your outlook.'],['A deep dive',160,'The largest sample, without a time limit.']];
+ [bank,pilot,scalesDoc,model,formPolicy]=await Promise.all([fetchJSON(current.candidateBank.path),fetchJSON(current.pilot.path),fetchJSON('data/response-scales.json'),fetchJSON(current.worldviewModel.path),fetchJSON(current.publicForm.path)]);
+ const names=[['A first look',80,'All core topics, with more distinctions left open.'],['A wider view',120,'All core topics, with more complete answer patterns.'],['A deep dive',160,'The widest selection of perspectives. No time limit.']];
  names.forEach(([name,size,description],index)=>{const button=elem('button',undefined,'route');button.dataset.size=String(size);button.append(elem('span','ROUTE 0'+(index+1),'route-number'),elem('strong',name),elem('span',size+' questions'),elem('span',description));button.addEventListener('click',()=>start(size));$('routes').append(button);});
  try{loadedText=localStorage.getItem(storageKey);}catch{storageWorks=false;announce('Local saving is unavailable. You can still take the quiz and export your answers.');}
  renderSaved();
  $('resume').addEventListener('click',()=>{try{
-  const envelope=JSON.parse(loadedText);if(envelope.experienceVersion!==EXPERIENCE_VERSION)throw Error('This backup uses another interface version. Keep it for a compatible version.');
-  quiz=restoreQuiz(envelope.quiz,{bank,pilot,scalesDoc});announce('');
+  const envelope=JSON.parse(loadedText);if(!COMPATIBLE_EXPERIENCE_VERSIONS.includes(envelope.experienceVersion))throw Error('This backup uses another interface version. Keep it for a compatible version.');
+  quiz=restoreQuiz(envelope.quiz,{bank,pilot,scalesDoc,formPolicy});announce('');
   if(quiz.session.completionStatus==='completed')finish();else{seekQuestion(quiz,bank,quiz.index??0);enterQuestion();}
  }catch(e){announce(e.message+' Your saved data was not deleted.');}});
  $('backup-saved').addEventListener('click',()=>{if(loadedText)download(loadedText,'worldview-local-backup.json');});

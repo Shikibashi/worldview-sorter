@@ -2,12 +2,12 @@ import {compareWorldview} from '../worldview/index.js';
 import {EXPERIENCE_VERSION} from './quiz.js';
 
 export const DOMAIN_COPY={
- ME:['Moral truth','What makes a moral claim true?'],NE:['Right action','What should guide our choices?'],
- MF:['Moral concerns','What catches your moral attention?'],VA:['What matters','Which priorities shape your life?'],
- EP:['Knowing','How do you decide what to believe?'],OM:['Reality','What kinds of things exist?'],
- MS:['Mind & self','What makes you, you?'],AH:['Choice & agency','What does it mean to choose freely?'],
- RC:['The bigger picture','What lies beyond ordinary experience?'],EX:['Meaning','What makes a life meaningful?'],
- SO:['Life together','How do people and institutions fit together?'],PL:['Rules & power','How should authority and cooperation work?']
+ ME:['Metaethics','What makes a moral claim true?'],NE:['Normative & applied ethics','What should guide our choices?'],
+ MF:['Moral psychology','What catches your moral attention?'],VA:['Values & axiology','Which priorities shape your life?'],
+ EP:['Epistemology','How do you decide what to believe?'],OM:['Ontology & metaphysics','What kinds of things exist?'],
+ MS:['Mind & personal identity','What makes you, you?'],AH:['Agency & human nature','What does it mean to choose freely?'],
+ RC:['Philosophy of religion','What lies beyond ordinary experience?'],EX:['Meaning & existential outlook','What makes a life meaningful?'],
+ SO:['Social philosophy & ontology','How do people and institutions fit together?'],PL:['Political, legal & economic philosophy','How should authority and cooperation work?']
 };
 const STATUS={supported:'Your answers support this',opposed:'Your answers lean against this',mixed:'Your answers differ here',insufficient_evidence:'Still taking shape'};
 const LABELS={no_view:'No view',not_understood:'I do not understand this item',not_applicable:'Not applicable'};
@@ -27,8 +27,9 @@ export function buildQuizSummary({model,bank,scalesDoc,session}){
  const report=compareWorldview({model,bank,scalesDoc,input});
  const items=new Map(bank.items.map(i=>[i.id,i])),scales=new Map(scalesDoc.scales.map(s=>[s.id,s]));
  const sources=new Map(model.sources.map(s=>[s.id,s]));
+ const specified=new Map(model.commitments.map(c=>[c.id,c]));
  const rows=report.commitments.map(c=>({
-  id:c.commitmentId,domainId:c.domainId,label:FRIENDLY[c.commitmentId]??c.label,status:c.state,statusLabel:STATUS[c.state],scope:c.scope,
+  id:c.commitmentId,domainId:c.domainId,facetId:specified.get(c.commitmentId)?.facetId??model.facets?.find(f=>f.ruleIds.includes(c.commitmentId))?.id??null,label:FRIENDLY[c.commitmentId]??c.label,status:c.state,statusLabel:STATUS[c.state],scope:c.scope,
   // These inherited boundaries are lists of prohibited inferences. They must
   // never be presented as if they were positive claims about the respondent.
   boundary:c.commitmentId.startsWith('construct-')?'Do not infer: '+c.boundary:c.boundary,
@@ -40,11 +41,19 @@ export function buildQuizSummary({model,bank,scalesDoc,session}){
  const domains=report.domains.map(d=>({id:d.id,title:DOMAIN_COPY[d.id]?.[0]??d.name,prompt:DOMAIN_COPY[d.id]?.[1]??'',academicTitle:d.name,
   responses:session.presentedItems.filter(e=>e.domainId===d.id&&session.responses.some(r=>r.itemId===e.itemId)).length,
   rows:rows.filter(r=>r.domainId===d.id&&r.evidence.length>0),
-  unresolvedConstructCount:d.unresolvedConstructIds.length}));
+  unresolvedConstructCount:d.unresolvedConstructIds.length,
+  facets:(model.facets??[]).filter(f=>f.domainId===d.id).map(f=>{
+   const members=rows.filter(r=>r.facetId===f.id),itemIds=new Set(members.flatMap(r=>r.evidence.map(e=>e.itemId)));
+   return {id:f.id,title:f.title,question:f.question,answeredItems:itemIds.size,
+    supportedPatterns:members.filter(r=>r.status==='supported').length,
+    opposedPatterns:members.filter(r=>r.status==='opposed').length,
+    mixedPatterns:members.filter(r=>r.status==='mixed').length,
+    coverageStatus:itemIds.size?'some_responses':'not_sampled_or_no_responses'};
+  })}));
  return {schemaVersion:'quiz-summary-1',experienceVersion:EXPERIENCE_VERSION,modelVersion:report.modelVersion,bankVersion:report.bankVersion,
   title:'Your worldview, in pieces',subtitle:'A map of the answers you gave, not a label you have to wear.',
   academicNotice:'Informed by philosophy and psychology research. These original questions and interpretation rules are exploratory, not a validated psychological assessment.',
-  coverageNotice:'A shorter quiz leaves more open questions. A blank area means limited evidence or an unmapped topic, not a neutral or opposing belief.',
+  coverageNotice:session.instrumentVersion==='worldview-public-1.0.0'?'Each route samples the core philosophical topics, but not every position. A blank or unresolved area means limited evidence or an unmapped distinction, not a neutral or opposing belief.':'This historical sample was not content-balanced. Missing topics do not indicate neutrality or opposition.',
   resolvedPatterns:rows.filter(r=>['supported','opposed','mixed'].includes(r.status)).length,
   answeredItems:session.responses.filter(r=>r.state==='answered').length,
   specialResponses:session.responses.filter(r=>r.state!=='answered').length,

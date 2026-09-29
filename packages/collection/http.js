@@ -13,7 +13,7 @@ const staticAllowed=name=>{
  if(name.split('/').some(segment=>segment.startsWith('.')))return false;
  if(name==='/docs/QUIZ_EXPERIENCE.md')return true;
  if(name.startsWith('/data/'))return path.extname(name)==='.json';
- return ['/apps/web/','/apps/quiz/','/packages/runtime/','/packages/worldview/','/packages/experience/'].some(prefix=>name.startsWith(prefix))&&['.html','.css','.js','.svg'].includes(path.extname(name));
+ return ['/apps/web/','/apps/quiz/','/packages/runtime/','/packages/worldview/','/packages/experience/','/packages/philosophy/'].some(prefix=>name.startsWith(prefix))&&['.html','.css','.js','.svg'].includes(path.extname(name));
 };
 export function createCollectionHttpServer({repoRoot,bank,pilot,instrument,scalesDoc,store,adminToken=null,maxBodyBytes=2_000_000}){
  const root=path.resolve(repoRoot);

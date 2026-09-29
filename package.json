@@ -1,10 +1,10 @@
 {
   "name": "worldview-sorter",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build:academic": "node scripts/build-academic-release.mjs && node scripts/build-academic-finalize.mjs && node scripts/build-generic-worldview.mjs && node scripts/build-quiz-experience.mjs",
+    "build:academic": "node scripts/build-academic-release.mjs && node scripts/build-academic-finalize.mjs && node scripts/build-generic-worldview.mjs && node scripts/build-quiz-experience.mjs && node scripts/build-philosophy-release.mjs",
     "pretest": "npm run build:academic",
     "prevalidate": "npm run build:academic",
     "preserver:start": "npm run build:academic",
@@ -36,9 +36,12 @@
     "test:ui-smoke": "node scripts/test-ui-smoke.mjs",
     "test:web:syntax": "node --check apps/web/app.js && node --check apps/server/server.mjs && node --check apps/quiz/app.js",
     "validate": "npm run validate:registry && npm run validate:items && npm run validate:pilot && npm run validate:profiles && npm run lint:items",
-    "test": "npm run validate && npm run test:runtime && npm run test:packet-ordering && npm run test:score && npm run test:collection && npm run test:12axes && npm run test:profiles && npm run test:generic && npm run test:experience && npm run test:ui-smoke && npm run test:web:syntax",
+    "test": "npm run validate && npm run test:runtime && npm run test:packet-ordering && npm run test:score && npm run test:collection && npm run test:12axes && npm run test:profiles && npm run test:generic && npm run test:philosophy && npm run test:experience && npm run test:ui-smoke && npm run test:web:syntax",
     "web:serve": "node apps/server/server.mjs",
-    "server:start": "node apps/server/server.mjs"
+    "server:start": "node apps/server/server.mjs",
+    "test:philosophy": "node scripts/test-philosophy-release.mjs"
   },
-  "engines": {"node": ">=20"}
+  "engines": {
+    "node": ">=20"
+  }
 }

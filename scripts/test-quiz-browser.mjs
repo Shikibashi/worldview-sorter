@@ -8,10 +8,11 @@ import {createFileSessionStore} from '../packages/collection/store.js';
 import {createQuiz,seekQuestion,currentItem,answerQuestion,nextQuestion} from '../packages/experience/quiz.js';
 const root=fileURLToPath(new URL('../',import.meta.url)),read=async p=>JSON.parse(await readFile(path.join(root,p),'utf8'));
 const current=await read('data/current.json'),bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),instrument=await read(current.instrument.path),scalesDoc=await read('data/response-scales.json');
+const formPolicy=await read(current.publicForm.path);
 const scaleMap=new Map(scalesDoc.scales.map(s=>[s.id,s]));
 let seed;
 for(let n=0;n<300;n++){
- const candidate='browser-experience-'+n,q=createQuiz({bank,pilot,scalesDoc,seed:candidate,size:80,sessionId:'synthetic-session'}),seen=new Set();seekQuestion(q,bank);
+ const candidate='browser-experience-'+n,q=createQuiz({bank,pilot,scalesDoc,formPolicy,seed:candidate,size:80,sessionId:'synthetic-session'}),seen=new Set();seekQuestion(q,bank);
  while(q.index!==null){const i=currentItem(q,bank);seen.add(i.responseScaleId);const value=['likert','paired_choice'].includes(i.responseType)?scaleMap.get(i.responseScaleId).options[0].value:i.responseType==='ranking'?i.options.map(o=>o.id):i.options[0].id;answerQuestion(q,bank,scalesDoc,{state:'answered',value});nextQuestion(q,bank);}
  if(seen.size===7){seed=candidate;break;}
 }
@@ -65,6 +66,9 @@ try{
  const stored=await page.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session);
  check('Raw neutral and no-view remain different',stored.responses.some(r=>r.state==='answered'&&r.value===0)&&stored.responses.some(r=>r.state==='no_view'&&r.value===null));
  check('Actually completed raw session',stored.completionStatus==='completed');
+ check('Public form has its own replayable instrument version',stored.instrumentVersion===formPolicy.instrumentVersion);
+ check('All 31 academic subtopics appear in result panels',await page.locator('[data-facet-id]').count()===31);
+ check('Ontology and metaphysics are explicit, distinct subtopics',await page.locator('[data-facet-id="ontology"]').count()===1&&await page.locator('[data-facet-id="laws-causation"]').count()===1);
  const panel=page.locator('#domain-map .domain details').first();await panel.locator('summary').first().click();
  const why=panel.locator('.pattern details').first();if(await why.count()){await why.locator('summary').click();check('Sources exist in the explanation',await why.locator('a[href^="https:"]').count()>0);}
  await page.screenshot({path:'artifacts/quiz/summary-desktop.png',fullPage:true});

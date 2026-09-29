@@ -1,0 +1,51 @@
+// Panels are navigation. Facets are content specifications, not discovered factors.
+const f=(id,domainId,title,question,ruleIds,minimumBundles=1)=>({id,domainId,title,question,ruleIds,minimumBundles});
+export const facets=[
+ f('meta-status','ME','Metaethics: truth and grounds','What could make a moral claim true?', ['ph-stance-independence','legacy-objectivism-moral-truth-aptness']),
+ f('meta-scope','ME','Metaethics: scope and context','Do the same requirements apply in different cases?', ['ph-universal-requirements','ph-context-sensitive','ph-particular-judgment']),
+ f('meta-reasons','ME','Metaethics: reasons and motivation','Can moral reasons bind or motivate independently of desire?', ['ph-categorical-reasons','ph-motivational-necessity']),
+ f('ethics-foundations','NE','Normative ethics: reasons for action','What should guide what we do?', ['outcomes-count','moral-constraints','character-counts','relational-care','reasonable-rejection','mutual-advantage']),
+ f('ethics-obligations','NE','Normative ethics: obligations and personal projects','What do we owe others, and what may we keep for ourselves?', ['ph-special-obligations','ph-personal-prerogatives','ph-high-sacrifice']),
+ f('ethics-action','NE','Ethics in cases: rules, intentions and harm','Which features of an action change its moral assessment?', ['ph-doing-allowing','ph-rule-mediated','ph-intention-sensitive']),
+ f('moral-psychology','MF','Moral psychology: concerns','Which considerations draw your moral attention?', ['moral-concern-care','moral-concern-equality','moral-concern-proportionality','moral-concern-loyalty','moral-concern-authority','moral-concern-purity'],2),
+ f('personal-values','VA','Axiology: personal priorities','What matters in your own life?', ['priority-VA01','priority-VA03','priority-VA04','priority-VA05','priority-VA09','priority-VA15','priority-VA17']),
+ f('value-theories','VA','Axiology: well-being and aesthetic value','What makes a life go well, or a judgment of beauty apt?', ['ph-objective-welfare','ph-desire-welfare','ph-aesthetic-objectivity']),
+ f('epistemic-method','EP','Epistemology: evidence and inquiry','How do you decide what to believe?', ['ph-belief-revision','ph-observation-weight','ph-expert-testimony','ph-intuitive-warrant','ph-tradition-evidence']),
+ f('epistemic-justification','EP','Epistemology: justification and science','What warrants a belief or a scientific claim?', ['ph-foundational-justification','ph-coherent-justification','ph-reliable-processes','ph-scientific-realism','ph-values-science']),
+ f('ontology','OM','Ontology: what exists','What belongs in an account of what exists?', ['natural-world','physical-reality','construct-OM11','construct-OM12','construct-OM13']),
+ f('metaontology','OM','Metaontology: how to ask about existence','Are existence disputes deep, conceptual, or sometimes verbal?', ['construct-OM14']),
+ f('metaphysical-structure','OM','Metaphysics: dependence and purpose','Are higher-level features reducible, and can nature have purposes?', ['ph-full-reduction','ph-inherent-purpose']),
+ f('laws-causation','OM','Metaphysics: laws and causes','Do laws govern events, and what makes something a cause?', ['ph-governing-laws','ph-humean-laws','ph-productive-causation']),
+ f('time-modality','OM','Metaphysics: time and possibility','What makes past, future and possible things real?', ['ph-eternal-time','ph-concrete-worlds']),
+ f('consciousness','MS','Philosophy of mind: consciousness','How does experience relate to physical processes?', ['ph-physical-explanation','ph-functional-minds','ph-basic-experience']),
+ f('personal-identity','MS','Mind and self: identity and content','What makes a mind or a person continuous?', ['psychological-continuity','extended-cognition','ph-process-self','ph-external-content']),
+ f('agency-freedom','AH','Agency: freedom and determinism','What would make a choice genuinely free?', ['deterministic-world','construct-AH14']),
+ f('agency-causes','AH','Human nature: reasons and causes','What influences human action?', ['ph-conscious-causes','ph-unconscious-causes','construct-AH13']),
+ f('religious-claims','RC','Philosophy of religion: reality and purpose','What, if anything, lies beyond natural reality?', ['divine-existence','theological-suspension','afterlife-belief','ph-supernatural-reality','ph-cosmic-purpose']),
+ f('religious-practice','RC','Religion: importance and sacred commitments','What role do spiritual commitments play?', ['ph-religious-priority','ph-sacred-value']),
+ f('existential-meaning','EX','Existential philosophy: meaning','What can make a life meaningful?', ['objective-meaning','constructed-meaning','ph-noncosmic-meaning']),
+ f('existential-outlook','EX','Existential orientation: possibility','How do you regard the possibilities life offers?', ['ph-world-possibilities']),
+ f('social-persons','SO','Social philosophy: persons and explanation','How do individual claims and social explanations relate?', ['ph-individual-claims','construct-SO15']),
+ f('social-entities','SO','Social ontology: institutions and groups','How do practices constitute social reality?', ['construct-SO14','ph-social-constitution','ph-group-agency']),
+ f('political-authority','PL','Political philosophy: legitimate authority','What could justify institutions and coercion?', ['ph-consent-authority','ph-democratic-authorization','ph-polycentric-order','legacy-philosophical-anarchism-no-general-obedience']),
+ f('political-rights','PL','Political philosophy: liberty and rights','Which freedoms and claims constrain power?', ['noninterference','nondomination','effective-freedom','ph-rights-constraints']),
+ f('political-economy','PL','Political economy: property and coordination','How should ownership and coordination be justified?', ['ph-strong-property','legacy-objectivism-market-coordination']),
+ f('political-justice','PL','Legal philosophy: validity and justice','What makes a law valid or a legal response just?', ['source-based-validity','moral-limits-validity','procedural-justice','substantive-justice','ph-desert-punishment']),
+ f('political-scope','PL','Political philosophy: membership and moral scope','Who is owed political consideration?', ['ph-political-cosmopolitanism','ph-national-obligations'])
+];
+export const panelNames={ME:'Metaethics',NE:'Normative & applied ethics',MF:'Moral psychology',VA:'Values & axiology',EP:'Epistemology',OM:'Ontology & metaphysics',MS:'Mind & personal identity',AH:'Agency & human nature',RC:'Philosophy of religion',EX:'Meaning & existential outlook',SO:'Social philosophy & ontology',PL:'Political, legal & economic philosophy'};
+export const upgradePolicy={
+ version:'academic-upgrade-1',
+ meaning:'A repeatable review and release procedure, not an autonomous claim to monitor all research.',
+ requirements:['Name the philosophical question, its alternatives and cross-loading risks.',
+ 'Record source URL, reviewed sections, date, access limits and whether evidence is conceptual or empirical.',
+ 'Map exact item revisions and exact response meanings; keep qualified alternatives and missingness distinct.',
+ 'Add positive, negative and counterexample regressions before activating an interpretation.',
+ 'Version the model and selection policy; material wording changes require a new item revision and bank/instrument release.',
+ 'Replay historical answers only against compatible bank versions; preserve the original snapshots.',
+ 'Test public form content coverage in addition to item counts, and verify the browser shows it.',
+ 'Treat study populations, language, incentives and response format as limits on empirical transfer.'],
+ caveats:['No cognitive-review gate is reinstated.','A minimum of two authored evidence groups is an engineering display rule, not reliability or factor identification.',
+ 'Domain coverage is partial and largely Anglophone. No inference of Buddhist, Confucian, Hindu, Indigenous or other traditions from superficial similarity.',
+ 'The PhilPapers design is an organizational reference. Expert prevalence is not a truth key, classification prior or population norm.']
+};

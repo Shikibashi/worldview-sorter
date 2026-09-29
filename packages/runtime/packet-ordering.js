@@ -2,7 +2,7 @@
  * A bounded search fails explicitly rather than relaxing an invariant.
  * Seed controls tie-breaking only; counts keep a domain from being stranded.
  */
-export function orderSelectedItems({ items, seed, maxSameDomainConsecutive = 2, maxSearchNodes = 100000 }) {
+export function orderSelectedItems({ items, seed, maxSameDomainConsecutive = 2, maxSearchNodes = 100000, separateRelatedGroups = false }) {
   if (!Array.isArray(items)) throw new TypeError('items must be an array');
   if (!Number.isInteger(maxSameDomainConsecutive) || maxSameDomainConsecutive < 1) {
     throw new RangeError('maxSameDomainConsecutive must be a positive integer');
@@ -52,10 +52,11 @@ export function orderSelectedItems({ items, seed, maxSameDomainConsecutive = 2, 
     if (++visitedNodes > maxSearchNodes) throw new Error('Packet-ordering search budget exceeded; constraints were not relaxed');
     if (!remaining.size) return true;
     if (!capacityAllows(lastDomain, run)) return false;
-    const key = JSON.stringify([lastDomain, run, [...remaining].sort()]);
+    const key = JSON.stringify([lastDomain, run, [...remaining].sort(), ...(separateRelatedGroups ? [ordered.at(-1) ?? null] : [])]);
     if (failed.has(key)) return false;
     const candidates = [...remaining].filter(id => {
-      const domain = byId.get(id).domainId;
+      const item = byId.get(id), domain = item.domainId, previous = byId.get(ordered.at(-1));
+      if (separateRelatedGroups && previous && ['mirrorGroup','scenarioGroup'].some(k => item[k] && item[k] === previous[k])) return false;
       return !(domain === lastDomain && run >= maxSameDomainConsecutive) &&
         [...dependencies.get(id)].every(dep => !remaining.has(dep));
     }).sort((a,b) => {

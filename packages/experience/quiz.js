@@ -1,13 +1,15 @@
+import {generatePhilosophyPacket} from '../philosophy/forms.js';
 import {generatePilotPacket,createPilotSession,isItemEligible,responseMapFor,markPresented,markBranchSkipped,recordResponse,finishSession,validateResponseValue} from '../runtime/index.js';
 
-export const EXPERIENCE_VERSION='quiz-1.0.0';
+export const EXPERIENCE_VERSION='quiz-1.1.0';
+export const COMPATIBLE_EXPERIENCE_VERSIONS=['quiz-1.0.0','quiz-1.1.0'];
 const insist=(ok,message)=>{if(!ok)throw new Error(message);};
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 
 // The controller has no achievement, profile, badge, score or reward input.
-export function createQuiz({bank,pilot,scalesDoc,seed,size,sessionId,locale='en'}){
- const packet=generatePilotPacket({bank,pilot,seed,size,packetId:pilot.pilotId+'-'+seed});
- const session=createPilotSession({pilot,packet,locale,clientVersion:EXPERIENCE_VERSION,sessionId});
+export function createQuiz({bank,pilot,scalesDoc,seed,size,sessionId,locale='en',formPolicy=null}){
+ const packet=formPolicy?generatePhilosophyPacket({bank,pilot,policy:formPolicy,seed,size}):generatePilotPacket({bank,pilot,seed,size,packetId:pilot.pilotId+'-'+seed});
+ const session=createPilotSession({pilot:{...pilot,pilotId:packet.pilotId},packet,locale,clientVersion:EXPERIENCE_VERSION,sessionId});
  return {packet,session,index:0};
 }
 export function currentItem(quiz,bank){return quiz.index===null?null:bank.items.find(i=>i.id===quiz.packet.entries[quiz.index].itemId);}
@@ -73,12 +75,16 @@ export function quizProgress(quiz){
  const done=entries.filter(e=>answered.has(e.itemId)||e.skippedByBranch).length;
  return {answered:answered.size,skipped,done,total:entries.length,percent:Math.floor(100*done/entries.length)};
 }
-export function restoreQuiz(saved,{bank,pilot,scalesDoc}){
+export function restoreQuiz(saved,{bank,pilot,scalesDoc,formPolicy=null}){
  insist(saved&&saved.packet&&saved.session,'The saved quiz is incomplete.');
  const quiz=structuredClone(saved),{session,packet}=quiz;
- insist(session.bankVersion===bank.bankVersion&&session.pilotId===pilot.pilotId&&session.instrumentVersion===pilot.sourceInstrumentVersion,'This saved quiz uses a different release. Keep its backup; do not reinterpret it with new questions.');
+ const isBlueprint=packet.formPolicyVersion!==undefined;
+ if(isBlueprint)insist(formPolicy&&packet.formPolicyVersion===formPolicy.policyVersion&&packet.evidenceModelVersion===formPolicy.modelVersion,'Unknown public form version. Keep its backup for a compatible release.');
+ const administration=isBlueprint?formPolicy.administrationId:pilot.pilotId;
+ const instrument=isBlueprint?formPolicy.instrumentVersion:pilot.sourceInstrumentVersion;
+ insist(session.bankVersion===bank.bankVersion&&session.pilotId===administration&&session.instrumentVersion===instrument,'This saved quiz uses a different release. Keep its backup; do not reinterpret it with new questions.');
  insist(typeof session.randomizationSeed==='string'&&session.randomizationSeed.length<=200,'Invalid saved seed.');
- const expected=generatePilotPacket({bank,pilot,seed:session.randomizationSeed,size:packet.size,packetId:session.packetId});
+ const expected=isBlueprint?generatePhilosophyPacket({bank,pilot,policy:formPolicy,seed:session.randomizationSeed,size:packet.size,packetId:session.packetId}):generatePilotPacket({bank,pilot,seed:session.randomizationSeed,size:packet.size,packetId:session.packetId});
  insist(same(expected,packet),'The saved question order or version is invalid.');
  insist(Array.isArray(session.presentedItems)&&session.presentedItems.length===packet.size,'Invalid saved presentation records.');
  insist(Array.isArray(session.responses),'Invalid saved responses.');
