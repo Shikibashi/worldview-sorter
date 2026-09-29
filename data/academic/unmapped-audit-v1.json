@@ -16,6 +16,13 @@
       "constructId": "ME07",
       "decision": "remain_derived",
       "rationale": "Metaethical family should remain a derived synthesis over independently measured metaethical commitments; MEI005 is diagnostic, not a standalone family scale.",
+      "sourceIds": [
+        "acad-polzler-2018",
+        "acad-yang-2026",
+        "gen-realism",
+        "gen-antirealism",
+        "gen-noncognitivism"
+      ],
       "construct": {
         "id": "ME07",
         "domainId": "ME",
@@ -47,6 +54,10 @@
       "constructId": "MF07",
       "decision": "remain_research_only",
       "rationale": "Liberty/opposition-to-domination is theoretically interesting, but it is not part of the standard MFQ-2 six-foundation model and the current items are original exploratory content.",
+      "sourceIds": [
+        "acad-mfq2",
+        "audit-liberty"
+      ],
       "construct": {
         "id": "MF07",
         "domainId": "MF",
@@ -75,6 +86,9 @@
       "constructId": "EP02",
       "decision": "ready_existing_items",
       "rationale": "Existing items directly ask whether knowledge is simple versus interconnected/developing; interpret only this narrow personal-epistemology proposition.",
+      "sourceIds": [
+        "audit-schommer"
+      ],
       "construct": {
         "id": "EP02",
         "domainId": "EP",
@@ -104,6 +118,9 @@
       "constructId": "EP03",
       "decision": "needs_new_discriminating_items",
       "rationale": "EPI015 was already excluded and the remaining material does not provide two independent negative indicators of truth attainability without conflating approximation, skepticism, and conventionalism.",
+      "sourceIds": [
+        "acad-epistemology"
+      ],
       "construct": {
         "id": "EP03",
         "domainId": "EP",
@@ -131,6 +148,9 @@
       "constructId": "EP05",
       "decision": "ready_existing_items",
       "rationale": "Two direct, opposing items support a narrow a-priori-justification interpretation; EPI025 remains excluded as a knowledge/trivia recognition question.",
+      "sourceIds": [
+        "audit-apriori"
+      ],
       "construct": {
         "id": "EP05",
         "domainId": "EP",
@@ -160,6 +180,10 @@
       "constructId": "EP06",
       "decision": "ready_existing_items",
       "rationale": "Public systematic testability can be interpreted as an epistemic preference, without claiming science is the only source of knowledge.",
+      "sourceIds": [
+        "domain-science-objectivity",
+        "acad-epistemology"
+      ],
       "construct": {
         "id": "EP06",
         "domainId": "EP",
@@ -189,6 +213,9 @@
       "constructId": "EP10",
       "decision": "ready_existing_items",
       "rationale": "Current items directly ask whether purported revelation can provide factual justification; this is distinct from revelation's moral or political authority.",
+      "sourceIds": [
+        "audit-revelation"
+      ],
       "construct": {
         "id": "EP10",
         "domainId": "EP",
@@ -218,6 +245,9 @@
       "constructId": "EP11",
       "decision": "split_or_deprecate",
       "rationale": "The current construct conflates external-world metaphysics, perceptual directness, and skepticism. Retain narrower external-world-independence and skepticism interpretations; do not emit one categorical label.",
+      "sourceIds": [
+        "audit-perception"
+      ],
       "construct": {
         "id": "EP11",
         "domainId": "EP",
@@ -249,6 +279,10 @@
       "constructId": "OM08",
       "decision": "split_or_deprecate",
       "rationale": "Substantive-versus-deflationary attitudes can be reported, but framework relativity and verbalism should not be collapsed into one categorical metaontology label.",
+      "sourceIds": [
+        "acad-thomasson",
+        "acad-marschall"
+      ],
       "construct": {
         "id": "OM08",
         "domainId": "OM",
@@ -279,6 +313,9 @@
       "constructId": "MS07",
       "decision": "remain_derived",
       "rationale": "Identity-under-transformation is appropriately a derived pattern over continuity and transformation cases; one teleportation item cannot support a direct scale.",
+      "sourceIds": [
+        "gen-identity"
+      ],
       "construct": {
         "id": "MS07",
         "domainId": "MS",
@@ -306,6 +343,10 @@
       "constructId": "AH01",
       "decision": "needs_new_discriminating_items",
       "rationale": "Current free-will items partly encode compatibilist conditions, so disagreement may mean incompatibilism rather than disbelief in free will.",
+      "sourceIds": [
+        "free-will-inventory",
+        "gen-agency"
+      ],
       "construct": {
         "id": "AH01",
         "domainId": "AH",
@@ -334,6 +375,9 @@
       "constructId": "AH03",
       "decision": "ready_existing_items",
       "rationale": "Current items directly address basic/desert-entailing responsibility and manipulation; keep distinct from forward-looking responsibility.",
+      "sourceIds": [
+        "audit-responsibility"
+      ],
       "construct": {
         "id": "AH03",
         "domainId": "AH",
@@ -364,6 +408,9 @@
       "constructId": "AH04",
       "decision": "split_or_deprecate",
       "rationale": "The broad 'baseline benevolence' label overreaches. Existing direct items can support only the narrower claim that humans are capable of genuinely other-regarding motivation.",
+      "sourceIds": [
+        "audit-altruism"
+      ],
       "construct": {
         "id": "AH04",
         "domainId": "AH",
@@ -393,6 +440,11 @@
       "constructId": "AH05",
       "decision": "split_or_deprecate",
       "rationale": "Self-interest prevalence and competition are different. Psychological egoism is already represented by AH13 and social competition by SO08; do not score this bundled construct as one worldview dimension.",
+      "sourceIds": [
+        "audit-altruism",
+        "acad-egoism",
+        "audit-svo"
+      ],
       "construct": {
         "id": "AH05",
         "domainId": "AH",
@@ -420,6 +472,10 @@
       "constructId": "AH06",
       "decision": "ready_existing_items",
       "rationale": "Existing items directly concern malleability of human dispositions; keep separate from whether causes are biological or environmental.",
+      "sourceIds": [
+        "audit-fixed-malleable",
+        "audit-human-nature"
+      ],
       "construct": {
         "id": "AH06",
         "domainId": "AH",
@@ -449,6 +505,9 @@
       "constructId": "AH07",
       "decision": "remain_research_only",
       "rationale": "A generic preference for multi-causal explanation is a methodological outlook with no clear validated worldview construct here; retain for research only.",
+      "sourceIds": [
+        "audit-human-nature"
+      ],
       "construct": {
         "id": "AH07",
         "domainId": "AH",
@@ -476,6 +535,9 @@
       "constructId": "AH08",
       "decision": "ready_existing_items",
       "rationale": "Interpret only the reported belief that biological/inherited factors can make substantial causal contributions; do not infer immutability or normativity.",
+      "sourceIds": [
+        "audit-human-nature"
+      ],
       "construct": {
         "id": "AH08",
         "domainId": "AH",
@@ -505,6 +567,9 @@
       "constructId": "AH09",
       "decision": "ready_existing_items",
       "rationale": "Interpret only the reported belief that social/environmental factors can substantially shape behavior; do not infer blank-slate views.",
+      "sourceIds": [
+        "audit-human-nature"
+      ],
       "construct": {
         "id": "AH09",
         "domainId": "AH",
@@ -535,6 +600,10 @@
       "constructId": "AH12",
       "decision": "remain_derived",
       "rationale": "Compatibilist/libertarian/skeptical family classification must remain derived from free-will, determinism, and responsibility answers.",
+      "sourceIds": [
+        "free-will-inventory",
+        "gen-agency"
+      ],
       "construct": {
         "id": "AH12",
         "domainId": "AH",
@@ -563,6 +632,10 @@
       "constructId": "RC02",
       "decision": "ready_existing_items",
       "rationale": "Conditional questions directly distinguish personal/agentic from impersonal divinity; only interpret when relevant branch prerequisites are satisfied.",
+      "sourceIds": [
+        "audit-providence",
+        "gen-theology"
+      ],
       "construct": {
         "id": "RC02",
         "domainId": "RC",
@@ -594,6 +667,10 @@
       "constructId": "RC04",
       "decision": "ready_existing_items",
       "rationale": "Current items directly address whether supernatural agency can intervene in ordinary events.",
+      "sourceIds": [
+        "audit-divine-intervention",
+        "audit-providence"
+      ],
       "construct": {
         "id": "RC04",
         "domainId": "RC",
@@ -625,6 +702,9 @@
       "constructId": "RC05",
       "decision": "ready_existing_items",
       "rationale": "Current items directly address miracles, while distinguishing unexplained natural events from miracle claims.",
+      "sourceIds": [
+        "audit-miracles"
+      ],
       "construct": {
         "id": "RC05",
         "domainId": "RC",
@@ -656,6 +736,9 @@
       "constructId": "RC06",
       "decision": "ready_existing_items",
       "rationale": "Current items support a narrow claim about purported revelation having authority for belief or conduct, distinct from public-law authority.",
+      "sourceIds": [
+        "audit-revelation"
+      ],
       "construct": {
         "id": "RC06",
         "domainId": "RC",
@@ -685,6 +768,9 @@
       "constructId": "RC11",
       "decision": "remain_derived",
       "rationale": "Theism, deism, pantheism, panentheism, and impersonal divinity are a family of alternatives. Keep the family descriptive/derived rather than a single score.",
+      "sourceIds": [
+        "gen-theology"
+      ],
       "construct": {
         "id": "RC11",
         "domainId": "RC",
@@ -717,6 +803,9 @@
       "constructId": "EX02",
       "decision": "split_or_deprecate",
       "rationale": "Designer-grounded and non-designer sources of objective purpose should be separate commitments, not one categorical score.",
+      "sourceIds": [
+        "gen-meaning"
+      ],
       "construct": {
         "id": "EX02",
         "domainId": "EX",
@@ -749,6 +838,9 @@
       "constructId": "EX04",
       "decision": "ready_existing_items",
       "rationale": "Current items directly distinguish denial of objective/inherent meaning from alternative objective or constructed sources.",
+      "sourceIds": [
+        "gen-meaning"
+      ],
       "construct": {
         "id": "EX04",
         "domainId": "EX",
@@ -778,6 +870,9 @@
       "constructId": "EX05",
       "decision": "remain_research_only",
       "rationale": "World-safety is a validated Primal World Beliefs construct, but these are custom items and should remain explicitly exploratory until calibrated.",
+      "sourceIds": [
+        "primal-world-beliefs"
+      ],
       "construct": {
         "id": "EX05",
         "domainId": "EX",
@@ -805,6 +900,9 @@
       "constructId": "EX07",
       "decision": "remain_research_only",
       "rationale": "World-aliveness is a validated primal family, but these custom items mix felt intentionality and metaphysical responsiveness; retain as research-only.",
+      "sourceIds": [
+        "primal-world-beliefs"
+      ],
       "construct": {
         "id": "EX07",
         "domainId": "EX",
@@ -832,6 +930,9 @@
       "constructId": "EX08",
       "decision": "remain_research_only",
       "rationale": "The current scale mixes social improvability, personal problems, and pessimism; it is not a clean optimism measure.",
+      "sourceIds": [
+        "primal-world-beliefs"
+      ],
       "construct": {
         "id": "EX08",
         "domainId": "EX",
@@ -859,6 +960,9 @@
       "constructId": "EX09",
       "decision": "remain_derived",
       "rationale": "Responses to meaninglessness should be derived from meaning/nihilism responses rather than scored as an independent latent trait.",
+      "sourceIds": [
+        "gen-meaning"
+      ],
       "construct": {
         "id": "EX09",
         "domainId": "EX",
@@ -886,6 +990,9 @@
       "constructId": "SO03",
       "decision": "ready_existing_items",
       "rationale": "Existing items directly ask whether relationships/roles partly constitute identity; do not equate this with collectivism.",
+      "sourceIds": [
+        "audit-selfconstrual"
+      ],
       "construct": {
         "id": "SO03",
         "domainId": "SO",
@@ -915,6 +1022,9 @@
       "constructId": "SO04",
       "decision": "ready_existing_items",
       "rationale": "Interpret narrowly as toleration/noninterference toward disliked non-rights-violating ways of life, not generalized warmth toward outgroups.",
+      "sourceIds": [
+        "audit-toleration"
+      ],
       "construct": {
         "id": "SO04",
         "domainId": "SO",
@@ -944,6 +1054,9 @@
       "constructId": "SO05",
       "decision": "ready_existing_items",
       "rationale": "Current items align conceptually with group-dominance preference; custom wording is not an SDO-7 administration.",
+      "sourceIds": [
+        "sdo7"
+      ],
       "construct": {
         "id": "SO05",
         "domainId": "SO",
@@ -973,6 +1086,9 @@
       "constructId": "SO06",
       "decision": "ready_existing_items",
       "rationale": "Current items align with opposition to group equality as a distinct SDO-related tendency; do not infer explicit dominance.",
+      "sourceIds": [
+        "sdo7"
+      ],
       "construct": {
         "id": "SO06",
         "domainId": "SO",
@@ -1002,6 +1118,9 @@
       "constructId": "SO07",
       "decision": "remain_research_only",
       "rationale": "General cooperation preference is not equivalent to validated Social Value Orientation allocation behavior; retain for research.",
+      "sourceIds": [
+        "audit-svo"
+      ],
       "construct": {
         "id": "SO07",
         "domainId": "SO",
@@ -1029,6 +1148,9 @@
       "constructId": "SO08",
       "decision": "remain_research_only",
       "rationale": "General competition preference is not equivalent to SVO or a single economic ideology; retain for research.",
+      "sourceIds": [
+        "audit-svo"
+      ],
       "construct": {
         "id": "SO08",
         "domainId": "SO",
@@ -1056,6 +1178,9 @@
       "constructId": "SO09",
       "decision": "ready_existing_items",
       "rationale": "Current items directly address moral scope across group boundaries; distinguish from institutional cosmopolitanism and absence of special obligations.",
+      "sourceIds": [
+        "domain-cosmopolitanism"
+      ],
       "construct": {
         "id": "SO09",
         "domainId": "SO",
@@ -1085,6 +1210,9 @@
       "constructId": "SO10",
       "decision": "ready_existing_items",
       "rationale": "Current items support a narrow psychological-essentialism interpretation; do not infer biological determinism or stereotype endorsement.",
+      "sourceIds": [
+        "audit-essentialism"
+      ],
       "construct": {
         "id": "SO10",
         "domainId": "SO",
@@ -1114,6 +1242,9 @@
       "constructId": "SO12",
       "decision": "split_or_deprecate",
       "rationale": "Humanity-nature worldview is hierarchical. Existing items support ecological interdependence and anthropocentric-priority subclaims, not one total ecological score.",
+      "sourceIds": [
+        "audit-nep"
+      ],
       "construct": {
         "id": "SO12",
         "domainId": "SO",
@@ -1145,6 +1276,9 @@
       "constructId": "SO13",
       "decision": "ready_existing_items",
       "rationale": "Current items directly address general just-world belief; do not infer personal just-world belief or victim blaming.",
+      "sourceIds": [
+        "audit-justworld"
+      ],
       "construct": {
         "id": "SO13",
         "domainId": "SO",
@@ -1174,6 +1308,9 @@
       "constructId": "PL01",
       "decision": "ready_existing_items",
       "rationale": "Current items directly ask whether political institutions can possess a moral right to coerce; keep distinct from political obligation.",
+      "sourceIds": [
+        "acad-legitimacy"
+      ],
       "construct": {
         "id": "PL01",
         "domainId": "PL",
@@ -1203,6 +1340,9 @@
       "constructId": "PL05",
       "decision": "ready_existing_items",
       "rationale": "Interpret as centralization/decentralization preference in stated governance contexts, not as a complete theory of federalism.",
+      "sourceIds": [
+        "audit-federalism"
+      ],
       "construct": {
         "id": "PL05",
         "domainId": "PL",
@@ -1232,6 +1372,9 @@
       "constructId": "PL10",
       "decision": "split_or_deprecate",
       "rationale": "Equality, need, desert, sufficiency, priority, and entitlement are different distributive principles. Ranking them does not justify one family score.",
+      "sourceIds": [
+        "gen-distribution"
+      ],
       "construct": {
         "id": "PL10",
         "domainId": "PL",
@@ -1259,6 +1402,9 @@
       "constructId": "PL12",
       "decision": "ready_existing_items",
       "rationale": "Current items directly address legitimacy of common ownership; do not infer socialism or rejection of private property in all domains.",
+      "sourceIds": [
+        "domain-property"
+      ],
       "construct": {
         "id": "PL12",
         "domainId": "PL",
@@ -1288,6 +1434,9 @@
       "constructId": "PL14",
       "decision": "ready_existing_items",
       "rationale": "Interpret as preference for participatory/democratic coordination in stated contexts, not as endorsement of political democracy everywhere.",
+      "sourceIds": [
+        "acad-ostrom"
+      ],
       "construct": {
         "id": "PL14",
         "domainId": "PL",
@@ -1317,6 +1466,9 @@
       "constructId": "PL15",
       "decision": "ready_existing_items",
       "rationale": "Interpret as preference for expert/administrative decision authority in stated contexts, distinct from valuing expert testimony.",
+      "sourceIds": [
+        "audit-epistocracy"
+      ],
       "construct": {
         "id": "PL15",
         "domainId": "PL",
@@ -1346,6 +1498,9 @@
       "constructId": "PL19",
       "decision": "ready_existing_items",
       "rationale": "Current items directly address deterrence as a purpose/justification of punishment; mixed theories remain possible.",
+      "sourceIds": [
+        "domain-punishment"
+      ],
       "construct": {
         "id": "PL19",
         "domainId": "PL",
@@ -1375,6 +1530,9 @@
       "constructId": "PL20",
       "decision": "split_or_deprecate",
       "rationale": "Rehabilitation and restorative repair are distinct aims. Current direct items bundle them, so do not emit one combined score.",
+      "sourceIds": [
+        "domain-punishment"
+      ],
       "construct": {
         "id": "PL20",
         "domainId": "PL",
@@ -1402,6 +1560,9 @@
       "constructId": "PL25",
       "decision": "ready_existing_items",
       "rationale": "Interpret as gradual reform versus decisive institutional replacement; do not equate rupture with violent revolution.",
+      "sourceIds": [
+        "audit-revolution"
+      ],
       "construct": {
         "id": "PL25",
         "domainId": "PL",
@@ -1474,6 +1635,138 @@
       ]
     }
   ],
+  "domainSummary": [
+    {
+      "domainId": "AH",
+      "audited": 9,
+      "mappedAfterAudit": 5,
+      "intentionallyUnresolved": 4,
+      "decisions": {
+        "ready_existing_items": 4,
+        "needs_new_discriminating_items": 1,
+        "remain_derived": 1,
+        "remain_research_only": 1,
+        "split_or_deprecate": 2
+      }
+    },
+    {
+      "domainId": "EP",
+      "audited": 6,
+      "mappedAfterAudit": 5,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 4,
+        "needs_new_discriminating_items": 1,
+        "remain_derived": 0,
+        "remain_research_only": 0,
+        "split_or_deprecate": 1
+      }
+    },
+    {
+      "domainId": "EX",
+      "audited": 6,
+      "mappedAfterAudit": 2,
+      "intentionallyUnresolved": 4,
+      "decisions": {
+        "ready_existing_items": 1,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 3,
+        "split_or_deprecate": 1
+      }
+    },
+    {
+      "domainId": "ME",
+      "audited": 1,
+      "mappedAfterAudit": 0,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 0,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "MF",
+      "audited": 1,
+      "mappedAfterAudit": 0,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 1,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "MS",
+      "audited": 1,
+      "mappedAfterAudit": 0,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 0,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "OM",
+      "audited": 1,
+      "mappedAfterAudit": 1,
+      "intentionallyUnresolved": 0,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 0,
+        "split_or_deprecate": 1
+      }
+    },
+    {
+      "domainId": "PL",
+      "audited": 9,
+      "mappedAfterAudit": 7,
+      "intentionallyUnresolved": 2,
+      "decisions": {
+        "ready_existing_items": 7,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 0,
+        "split_or_deprecate": 2
+      }
+    },
+    {
+      "domainId": "RC",
+      "audited": 5,
+      "mappedAfterAudit": 4,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 4,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 0,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "SO",
+      "audited": 10,
+      "mappedAfterAudit": 8,
+      "intentionallyUnresolved": 2,
+      "decisions": {
+        "ready_existing_items": 7,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 2,
+        "split_or_deprecate": 1
+      }
+    }
+  ],
   "sourceIds": [
     "audit-schommer",
     "audit-apriori",
@@ -1494,7 +1787,8 @@
     "audit-svo",
     "audit-federalism",
     "audit-epistocracy",
-    "audit-revolution"
+    "audit-revolution",
+    "audit-liberty"
   ],
   "historicalBankChanged": false,
   "empiricalValidationClaimed": false,

@@ -1135,6 +1135,17 @@
       "claim": "Revolution, resistance, rebellion, secession, and reform are distinct; a preference for institutional rupture is not automatically endorsement of violent revolution.",
       "validatesOurItems": false,
       "permissionToCopyItems": false
+    },
+    {
+      "id": "audit-liberty",
+      "title": "Iyer et al. (2012): Understanding Libertarian Morality",
+      "url": "https://doi.org/10.1371/journal.pone.0042366",
+      "access": "full_text_reviewed",
+      "evidenceType": "academic_conceptual_or_measurement_reference",
+      "reviewedOn": "2026-09-29",
+      "claim": "Liberty/oppression was developed as a proposed moral-foundation construct in work on libertarian moral psychology; it is not one of the six foundations validated in MFQ-2.",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
     }
   ],
   "commitments": [
