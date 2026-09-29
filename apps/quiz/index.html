@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="description" content="Explore your worldview, one question at a time. A research-informed quiz with a source-linked summary, not a forced ideology label.">
+ <meta name="referrer" content="no-referrer"><title>Worldview Sorter · Explore your outlook</title>
+ <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ <a class="skip" href="#main">Skip to quiz</a>
+ <header class="masthead"><a class="brand" href="./">Worldview Sorter<span>A field guide to your outlook</span></a><span class="edition">Exploratory edition · 01</span></header>
+ <main id="main">
+  <p id="message" role="status" aria-live="polite"></p>
+  <section id="home" aria-labelledby="home-title">
+   <p class="eyebrow">Twelve topics. More than one way to see the world.</p>
+   <h1 id="home-title">What holds your<br>worldview together?</h1>
+   <p class="lede">Work through ideas, choices and thought experiments. Discover which answers fit together, where they pull in different directions, and what is still an open question.</p>
+   <div class="promise"><span>No right-answer score</span><span>No timer</span><span>Pause whenever you like</span></div>
+   <div id="saved" class="notice" hidden><p id="saved-description"></p><button id="resume" class="primary">Continue your quiz</button> <button id="backup-saved">Save existing backup</button> <button id="discard">Delete saved quiz</button></div>
+   <h2>Choose your route</h2><div id="routes" class="routes" aria-label="Quiz lengths"></div>
+   <p class="small">Each route samples the question bank. Fewer questions leave more topics unresolved; longer does not mean more correct.</p>
+   <details class="method"><summary>Research-informed, not a psychological diagnosis</summary><p>The concepts and comparisons draw on academic philosophy and psychology. Our original questions and interpretation rules have not been empirically validated as an assessment. Your summary links the answers and sources behind each pattern. We do not assign a single ideology or a percentage match.</p><p>Answers and results stay in this browser unless you export them. The quiz has no account, ad tracker or automatic answer submission. Your hosting provider still receives ordinary page requests. Local storage can be cleared by the browser; save a backup to keep your answers.</p><a href="../../docs/QUIZ_EXPERIENCE.md" target="_blank" rel="noopener noreferrer">Design rationale and source ledger</a></details>
+  </section>
+  <section id="quiz" hidden aria-labelledby="question-title">
+   <div class="quiz-meta"><span id="topic" class="eyebrow"></span><span id="position"></span></div>
+   <label class="sr-only" for="progress">Progress through assigned questions, not a worldview score</label><progress id="progress" value="0" max="100"></progress><p id="progress-caption" class="small"></p>
+   <article class="question-card">
+    <h1 id="question-title" tabindex="-1"></h1><p id="instruction" class="small"></p><div id="context"></div>
+    <div id="answer-options" role="group" aria-labelledby="question-title"></div>
+    <div id="special-options" class="specials" role="group" aria-label="Other ways to respond"></div>
+   </article>
+   <div class="navigation"><button id="back">Back</button><label class="autoadvance"><input id="auto" type="checkbox" checked> Advance after I answer</label><button id="next" class="primary" disabled>Next question</button></div>
+   <div class="quiet-actions"><button id="pause">Pause & return later</button><button id="save-answers">Save answers</button><span id="storage-status" class="small"></span></div>
+   <p class="small">You can disagree, stay neutral or have no view. There are no points for choosing one over another.</p>
+  </section>
+  <section id="results" hidden aria-labelledby="results-title">
+   <p class="eyebrow">Your field guide</p><h1 id="results-title" tabindex="-1">Your worldview,<br>in pieces.</h1>
+   <p class="lede">A map of the answers you gave, not a label you have to wear.</p><p id="result-counts" class="notice"></p>
+   <p id="academic-notice" class="small"></p><p id="coverage-notice" class="small"></p>
+   <div class="button-row"><button id="share-open" class="primary">Choose what to share</button><button id="summary-save">Save summary</button><button id="result-answers">Save raw answers</button><button id="restart">Explore again</button></div>
+   <div id="domain-map" class="domain-map"></div>
+   <details id="comparisons"><summary>Explore philosophical comparisons</summary><p class="small">These compare selected commitments, not whole identities. Missing answers stay missing. Several comparisons can fit at once.</p><div id="comparison-list"></div></details>
+   <section id="sharing" class="notice" hidden aria-labelledby="share-title"><h2 id="share-title">Your choice, your summary</h2><p>Select up to six patterns. Only the preview below is copied, with no raw answers, session identifier, timings or badges.</p><div id="share-options"></div><label for="share-preview">Exact text to copy</label><textarea id="share-preview" readonly rows="7"></textarea><button id="copy-share" class="primary">Copy preview</button><button id="share-close">Close</button></section>
+  </section>
+  <section id="failure" hidden><h1>We could not open this quiz.</h1><p id="failure-message"></p><p>Your existing saved data has not been deleted. Reload to try again.</p></section>
+ </main>
+ <footer>Curiosity, not a verdict. <span>Academic references live behind the explanations.</span></footer>
+ <script type="module" src="./app.js"></script>
+</body>
+</html>

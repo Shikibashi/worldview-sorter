@@ -1,0 +1,12 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
+const write=(p,v)=>writeFile(new URL(p,root),typeof v==='string'?v:JSON.stringify(v,null,2)+'\n');
+const current=await read('data/current.json');
+current.quizExperience={version:'quiz-1.0.0',path:'data/experience/policy-v1.json',entrypoint:'apps/quiz/index.html'};
+await write('data/current.json',current);
+let readme=await readFile(new URL('README.md',root),'utf8');
+const marker='\n## Public quiz experience\n';readme=readme.split(marker)[0];
+readme+=marker+'\nThe root now opens a field-guide-style quiz with 80/120/160-question routes, pause/resume, unchanged academic items, and a twelve-topic source-linked answer summary. It is an exploratory, research-informed quiz, not a validated assessment. Answers stay in the browser unless explicitly exported. The old `/apps/web/` route remains a development collector client.\n\nRun `npm run server:start`, then visit `http://127.0.0.1:4173/`.\n\n`npm run test:experience` checks the new controller, evidence summary, privacy-safe share projection and post-completion game boundary. The separate Quiz experience workflow tests the actual Chromium browser and publishes synthetic screenshots.\n\n[Quiz experience and academic design rationale](docs/QUIZ_EXPERIENCE.md) explains future gamification. Game rewards are disabled by default and cannot use beliefs, scores, speed or ideological consistency. The current experience already provides a summary; no calibration flag has been used to claim validated worldview scores.\n';
+await write('README.md',readme);
+const output=await read('data/academic/build-output.json');output.paths=[...new Set([...output.paths,'README.md','data/current.json'])].sort();
+await write('data/academic/build-output.json',output);
