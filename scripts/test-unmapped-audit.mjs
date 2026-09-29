@@ -21,22 +21,18 @@ let tests=0;
 const testCase=(name,fn)=>{fn();tests++;console.log('PASS audit: '+name);};
 const response=(id,value,state='answered')=>({itemId:id,itemRevision:itemMap.get(id).revision,state,value});
 const withPrerequisites=(responses)=>{
- const out=new Map(responses.map(r=>[r.itemId,r]));
- let changed=true;
- while(changed){
-  changed=false;
-  for(const r of [...out.values()]){
-   const item=itemMap.get(r.itemId);
-   if(item?.eligibility?.mode!=='conditional')continue;
-   for(const condition of item.eligibility.all){
-    if(out.has(condition.itemId))continue;
-    const parent=itemMap.get(condition.itemId);
-    out.set(condition.itemId,response(condition.itemId,condition.optionIds[0]));
-    changed=true;
-   }
+ const out=[],seen=new Set();
+ const visit=r=>{
+  if(seen.has(r.itemId))return;
+  const item=itemMap.get(r.itemId);
+  if(item?.eligibility?.mode==='conditional')for(const condition of item.eligibility.all){
+   const parent=itemMap.get(condition.itemId);
+   visit(response(parent.id,condition.optionIds[0]));
   }
- }
- return [...out.values()];
+  if(!seen.has(r.itemId)){seen.add(r.itemId);out.push(r);}
+ };
+ for(const r of responses)visit(r);
+ return out;
 };
 const answers=(ruleId,dir='support')=>withPrerequisites(byRule.get(ruleId).evidence.filter(e=>e[dir].length).map(e=>response(e.itemId,e[dir][0])));
 const run=responses=>compareWorldview({model,bank,scalesDoc,input:{bankVersion:bank.bankVersion,responses}});
