@@ -24,7 +24,7 @@ The development runner is served at http://127.0.0.1:4173/apps/web/. Do not expo
 
 The nine reference comparisons consume exact item IDs, revisions and raw response states. No political centroid, categorical numeric proxy, chat memory, preferred identity, or personality/country resemblance supplies missing answers. Neutral, no view, disagreement and mixed evidence remain distinct. There is no forced winner, match percentage, or automatically assigned identity.
 
-The comparisons and engineering scores remain **unvalidated and non-interpretable**. The browser does not display them as worldview results. The follow-up planner identifies missing real questionnaire items; it is not calibrated adaptive testing and is not yet wired into the public interface.
+The comparisons and engineering scores remain **unvalidated and non-interpretable**. The public quiz summarizes explicit answer patterns with source links; it does not present engineering scores as validated worldview measurements. The follow-up planner identifies missing real questionnaire items; it is not calibrated adaptive testing and is not yet wired into the public interface.
 
 ## History
 
