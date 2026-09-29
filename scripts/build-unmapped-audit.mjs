@@ -74,6 +74,9 @@ for(const facet of model.facets??[]){
  facet.ruleIds=[...new Set([...(facet.ruleIds??[]),...additions])];
 }
 const decisionMap=new Map(decisions.map(d=>[d.constructId,d]));
+for(const d of decisions){
+ for(const sourceId of d.sourceIds)assert.ok(sourceMap.has(sourceId),"Unknown audit-decision source "+sourceId+" for "+d.constructId);
+}
 model.coverage=structuredClone(oldCoverage);
 for(const c of model.coverage.constructs){
  c.ruleIds=model.commitments.filter(r=>r.constructId===c.id).map(r=>r.id);
@@ -97,6 +100,16 @@ const audit={
  decisions:decisions.map(d=>({...d,construct:constructMap.get(d.constructId),existingItemIds:bank.items.filter(i=>i.targets.some(t=>t.constructId===d.constructId)).map(i=>i.id),
   acceptedRuleIds:model.commitments.filter(r=>r.mappingStatus==='academic_unmapped_audit_v1'&&r.constructId===d.constructId).map(r=>r.id)})),
  questionProposals,
+ domainSummary:[...new Set(decisions.map(d=>constructMap.get(d.constructId).domainId))].sort().map(domainId=>{
+  const ds=decisions.filter(d=>constructMap.get(d.constructId).domainId===domainId);
+  return {
+   domainId,
+   audited:ds.length,
+   mappedAfterAudit:ds.filter(d=>model.coverage.constructs.find(c=>c.id===d.constructId).ruleIds.length>0).length,
+   intentionallyUnresolved:ds.filter(d=>model.coverage.constructs.find(c=>c.id===d.constructId).ruleIds.length===0).length,
+   decisions:Object.fromEntries(["ready_existing_items","needs_new_discriminating_items","remain_derived","remain_research_only","split_or_deprecate"].map(kind=>[kind,ds.filter(d=>d.decision===kind).length]))
+  };
+ }),
  sourceIds:sources.map(s=>s.id),
  historicalBankChanged:false,
  empiricalValidationClaimed:false,
@@ -153,7 +166,12 @@ const docs=[
  ...Object.entries(audit.decisionCounts).map(([k,v])=>'- **'+k+'**: '+v),'',
  'Thirty-two of the 49 constructs now have at least one narrowly scoped interpretation rule. Seventeen remain intentionally unresolved at the model level.','',
  '## Construct decisions','',
- ...audit.decisions.flatMap(d=>['### '+d.constructId+' — '+d.construct.name,'**Decision:** '+d.decision,d.rationale,'Existing items: '+d.existingItemIds.join(', ')+(d.acceptedRuleIds.length?'\\nAccepted rules: '+d.acceptedRuleIds.join(', '):''),'']),
+ ...audit.decisions.flatMap(d=>['### '+d.constructId+' — '+d.construct.name,'**Decision:** '+d.decision,d.rationale,'Academic basis: '+d.sourceIds.map(id=>{const src=sourceMap.get(id);return '['+src.title+']('+src.url+')';}).join('; '),'Existing items: '+d.existingItemIds.join(', ')+(d.acceptedRuleIds.length?'\\nAccepted rules: '+d.acceptedRuleIds.join(', '):''),'']),
+ '## Representation after this audit','',
+ ...audit.domainSummary.map(d=>'- **'+d.domainId+'**: '+d.mappedAfterAudit+'/'+d.audited+' audited gaps now mapped; '+d.intentionallyUnresolved+' intentionally unresolved.'),
+ '',
+ 'Strongly represented means only that the current theory-informed model has multiple scoped rules and item bundles; it does not mean psychometric validation. Weakness is preserved wherever discrimination, construct scope, or item quality is inadequate.',
+ '',
  '## Additional original questions justified, but not added to the bank','',
  ...questionProposals.flatMap(p=>['### '+p.constructId,p.reason,...p.items.map(x=>'- '+x),'']),
  '## Methodological boundary','',
