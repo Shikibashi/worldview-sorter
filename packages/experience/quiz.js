@@ -35,14 +35,16 @@ export function answerQuestion(quiz,bank,scalesDoc,{state,value,responseTimeMs=n
  const previous=quiz.session.responses.find(r=>r.itemId===item.id);
  const changed=previous&&(!same(previous.value,value)||previous.state!==state);
  if(!previous||changed)recordResponse(quiz.session,{itemId:item.id,itemRevision:item.revision,state,value,responseTimeMs,answeredAt});
- // Question selection and order are fixed. Keep unrelated answers; invalidate only
- // branch-dependent answers whose prerequisites no longer hold.
+ // Only descendants of this changed prerequisite are affected. Do not mark
+ // unrelated future branches skipped merely because their parents are unasked.
  if(changed){
   quiz.session.completionStatus='in_progress';quiz.session.completedAt=null;
-  const items=new Map(bank.items.map(i=>[i.id,i]));
+  const items=new Map(bank.items.map(i=>[i.id,i])),affected=new Set([item.id]);
   for(const entry of quiz.session.presentedItems){
    if(entry.index<=quiz.index)continue;
    const candidate=items.get(entry.itemId);
+   if(candidate.eligibility.mode!=='conditional'||!candidate.eligibility.all.some(c=>affected.has(c.itemId)))continue;
+   affected.add(candidate.id);
    const eligible=isItemEligible(candidate,responseMapFor(quiz.session));
    if(!eligible)markBranchSkipped(quiz.session,entry.index);
    else if(entry.skippedByBranch){entry.skippedByBranch=false;entry.presented=false;entry.presentedAt=null;}
