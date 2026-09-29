@@ -11,6 +11,11 @@ export const DOMAIN_COPY={
 };
 const STATUS={supported:'Your answers support this',opposed:'Your answers lean against this',mixed:'Your answers differ here',insufficient_evidence:'Still taking shape'};
 const LABELS={no_view:'No view',not_understood:'I do not understand this item',not_applicable:'Not applicable'};
+const FRIENDLY={
+ 'legacy-objectivism-moral-truth-aptness':'Moral claims can be true or false',
+ 'legacy-objectivism-market-coordination':'Market coordination',
+ 'legacy-philosophical-anarchism-no-general-obedience':'No general duty to obey the law'
+};
 export function responseLabel(item,scale,response){
  if(response.state!=='answered')return LABELS[response.state]??response.state;
  if(Array.isArray(response.value))return response.value.map(id=>item.options.find(o=>o.id===id)?.label??id).join(' → ');
@@ -23,11 +28,14 @@ export function buildQuizSummary({model,bank,scalesDoc,session}){
  const items=new Map(bank.items.map(i=>[i.id,i])),scales=new Map(scalesDoc.scales.map(s=>[s.id,s]));
  const sources=new Map(model.sources.map(s=>[s.id,s]));
  const rows=report.commitments.map(c=>({
-  id:c.commitmentId,domainId:c.domainId,label:c.label,status:c.state,statusLabel:STATUS[c.state],scope:c.scope,boundary:c.boundary,
+  id:c.commitmentId,domainId:c.domainId,label:FRIENDLY[c.commitmentId]??c.label,status:c.state,statusLabel:STATUS[c.state],scope:c.scope,
+  // These inherited boundaries are lists of prohibited inferences. They must
+  // never be presented as if they were positive claims about the respondent.
+  boundary:c.commitmentId.startsWith('construct-')?'Do not infer: '+c.boundary:c.boundary,
   counts:{support:c.supportingUnits,oppose:c.opposingUnits,required:c.minimumEvidenceUnits},
   evidence:c.observations.filter(o=>o.rawResponse).map(o=>({itemId:o.itemId,itemRevision:o.itemRevision,text:items.get(o.itemId).text,
    answer:responseLabel(items.get(o.itemId),scales.get(items.get(o.itemId).responseScaleId),o.rawResponse),interpretation:o.state})),
-  sources:c.sourceIds.map(id=>sources.get(id)).filter(Boolean).map(s=>({id:s.id,title:s.title,url:s.url,access:s.access??'inherited reference; access not reverified',locator:s.locator??s.use??'Conceptual reference'}))
+  sources:c.sourceIds.map(id=>sources.get(id)).filter(Boolean).map(s=>({id:s.id,title:s.title,url:s.url,access:(s.access??'inherited reference; access not reverified').replaceAll('_',' '),locator:s.locator??s.use??'Conceptual reference'}))
  }));
  const domains=report.domains.map(d=>({id:d.id,title:DOMAIN_COPY[d.id]?.[0]??d.name,prompt:DOMAIN_COPY[d.id]?.[1]??'',academicTitle:d.name,
   responses:session.presentedItems.filter(e=>e.domainId===d.id&&session.responses.some(r=>r.itemId===e.itemId)).length,
