@@ -3,7 +3,7 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {sources,rules,exclusions} from '../data/philosophy/research-v1.mjs';
 import {facets,panelNames,upgradePolicy} from '../data/philosophy/syllabus-v1.mjs';
-import {validateModel} from '../packages/worldview/index.js';
+import {compareWorldview,validateModel} from '../packages/worldview/index.js';
 import {generatePhilosophyPacket,auditPhilosophyPacket} from '../packages/philosophy/forms.js';
 const root=new URL('../',import.meta.url),raw=p=>readFile(new URL(p,root),'utf8'),read=async p=>JSON.parse(await raw(p));
 const out=new Set(),hash=s=>createHash('sha256').update(s).digest('hex');
@@ -27,6 +27,18 @@ for(const c of rules){
  model.comparisons.push({id:'compare-'+c.id,label:c.label,scope:c.label,kind:'specified_commitment',sourceIds:c.sourceIds,
   criteria:[{commitmentId:c.id,expected:'support',role:'defining'}],limitations:[c.boundary,'This is a scoped interpretation, not a full philosophical identity.']});
 }
+// Reused criteria need generic scope and sources when shown outside a tradition.
+const truthRule=model.commitments.find(c=>c.id==='legacy-objectivism-moral-truth-aptness');
+truthRule.scope='Your explicit answers about whether moral sentences can be true or false.';
+truthRule.sourceIds=['domain-polzler','gen-noncognitivism'];
+truthRule.boundary='Truth-aptness does not establish stance-independent moral truth or an Objectivist identity. Expressivist and quasi-realist accounts can accommodate truth-talk; expressing an attitude need not deny every kind of truth-aptness.';
+truthRule.evidence.find(e=>e.itemId==='MEI018').oppose=[];
+truthRule.mappingStatus='source_reviewed_explicit_truth_talk_not_identity';
+const marketRule=model.commitments.find(c=>c.id==='legacy-objectivism-market-coordination');
+marketRule.scope='Your preferences between voluntary exchange, prices and deliberate allocation in the stated coordination cases.';
+marketRule.sourceIds=['acad-ostrom','domain-property'];
+marketRule.boundary='Coordination preferences do not establish Objectivism, an ethical code or a universal case for one institution. Markets, states and commons can be evaluated differently by activity.';
+marketRule.mappingStatus='source_reviewed_contextual_coordination_not_identity';
 const excludeIds=new Set(exclusions.map(e=>e.itemId));
 for(const c of rules)for(const e of c.evidence)assert.ok(!excludeIds.has(e.itemId),'Excluded evidence in active new mapping.');
 model.commitments.sort((a,b)=>a.id.localeCompare(b.id,'en'));model.comparisons.sort((a,b)=>a.id.localeCompare(b.id,'en'));
@@ -39,6 +51,13 @@ model.limitations=[...base.limitations,
 for(const c of model.coverage.constructs){c.ruleIds=model.commitments.filter(r=>r.constructId===c.id).map(r=>r.id);c.status=c.ruleIds.length?'scoped_comparison_available':'candidate_or_reference_only_no_inference_rule';}
 for(const i of model.coverage.items){i.ruleIds=model.commitments.filter(r=>r.evidence.some(e=>e.itemId===i.itemId)).map(r=>r.id);i.status=i.ruleIds.length?'explicit_mapping_only':'not_used_for_profile_inference';i.publicFormExcluded=excludeIds.has(i.itemId);}
 validateModel({model,bank,scalesDoc});
+// An attitude/prescription answer is not automatic opposition to truth-talk.
+const truthCheck=compareWorldview({model,bank,scalesDoc,input:{bankVersion:bank.bankVersion,responses:[
+ {itemId:'MEI017',itemRevision:items.get('MEI017').revision,state:'answered',value:2},
+ {itemId:'MEI018',itemRevision:items.get('MEI018').revision,state:'answered',value:'attitude'}]}});
+assert.equal(truthCheck.commitments.find(c=>c.commitmentId===truthRule.id).state,'insufficient_evidence');
+assert.ok(!truthRule.sourceIds.some(id=>id.startsWith('acad-rand')));
+assert.ok(!marketRule.sourceIds.some(id=>id.startsWith('acad-rand')));
 const bundleById=new Map();
 for(const c of model.commitments){
  if(c.evidence.some(e=>excludeIds.has(e.itemId)))continue;
@@ -62,7 +81,7 @@ const ledger=structuredClone(oldLedger);ledger.version='0.2.0';ledger.sources.pu
 for(const s of ledger.sources){s.useByRules=model.commitments.filter(r=>r.sourceIds.includes(s.id)).map(r=>r.id);s.useByItems=bank.items.filter(i=>model.commitments.some(r=>r.sourceIds.includes(s.id)&&r.evidence.some(e=>e.itemId===i.id))).map(i=>i.id);}
 const used=new Set(model.commitments.flatMap(c=>c.evidence.map(e=>e.itemId)));
 const report={version:'philosophy-release-1',bankVersion:bank.bankVersion,modelVersion:model.modelVersion,formPolicyVersion:policy.policyVersion,
- itemCount:bank.items.length,newItems:0,newCommitmentRules:rules.length,totalCommitmentRules:model.commitments.length,totalComparisons:model.comparisons.length,
+ itemCount:bank.items.length,newItems:0,inheritedRulesClarified:2,newCommitmentRules:rules.length,totalCommitmentRules:model.commitments.length,totalComparisons:model.comparisons.length,
  totalSources:model.sources.length,newSourceRecords:sources.length,facets:facets.length,
  mappedConstructs:model.coverage.constructs.filter(c=>c.ruleIds.length).length,remainingConstructGaps:model.coverage.constructs.filter(c=>!c.ruleIds.length).length,
  mappedItems:used.size,publicExclusions:exclusions.length,frozenSourceHashes:frozen,
@@ -87,7 +106,7 @@ const md=['# Philosophy-domain upgrade','',
  '', '## Selection change', '',
  'Every route contains complete two-evidence-group bundles for each listed facet. One facet may have several alternative bundles; a seed chooses among them without using answers or identities. Formats are represented and remaining slots add balanced bundles. This is an authored coverage guarantee, not an empirically optimized short form. '+link('domain-philpapers-design'),
  '', 'The new local public form uses a distinct instrument version and packet-policy version. Research pilot packet generation is unchanged. Existing backups without a public-form marker use the historical generator; unknown versions fail closed. The collector does not mistake a new public form for a research packet.',
- '', '## Exact academic rules', '',...rules.flatMap(c=>[`### ${c.label}`,`Construct ${c.constructId}; facet ${c.facetId}. `+c.sourceIds.map(link).join('; '),`Evidence: ${c.evidence.map(e=>e.itemId+'@'+items.get(e.itemId).revision).join(', ')}.`,c.boundary,'']),
+ '', '## Generic scope of inherited criteria', '', 'The truth-aptness and market-coordination criteria retain their historical internal IDs but now use topic-specific academic sources and explanations. Attitude or prescription answers no longer count automatically as rejecting all truth-aptness. The earlier model is preserved.', '', '## Exact academic rules', '',...rules.flatMap(c=>[`### ${c.label}`,`Construct ${c.constructId}; facet ${c.facetId}. `+c.sourceIds.map(link).join('; '),`Evidence: ${c.evidence.map(e=>e.itemId+'@'+items.get(e.itemId).revision).join(', ')}.`,c.boundary,'']),
  '## Items not used in new public forms','',...exclusions.map(x=>`- **${x.itemId}**: ${x.reason} ${link(x.sourceId)}`),
  '', '## Academic upgrades','',...upgradePolicy.requirements.map(x=>'- '+x),'',...upgradePolicy.caveats.map(x=>'- '+x),
  '', 'The unchanged previous model is retained as generic-0.1.0. This release is generic-0.2.0. The generic runtime never supplies missing answers from philosophical names, demographics, memories or figures. Existing interface safeguards and post-completion game isolation remain.',''].join('\n');
