@@ -87,6 +87,18 @@ for(const rule of accepted){
    assert.equal(foundMixed,true,"No valid mixed-evidence counterexample for "+rule.id);
   }
  });
+ testCase(rule.id+' rejects a disjoint same-domain false positive',()=>{
+  const targetItems=new Set(rule.evidence.map(e=>e.itemId));
+  const neighbor=model.commitments.find(other=>
+   other.id!==rule.id &&
+   other.domainId===rule.domainId &&
+   other.evidence.length>=2 &&
+   other.evidence.every(e=>!targetItems.has(e.itemId)) &&
+   new Set(other.evidence.filter(e=>e.support.length).map(e=>e.unitId)).size>=2
+  );
+  assert.ok(neighbor,"No disjoint same-domain counterexample available for "+rule.id);
+  assert.equal(state(run(answers(neighbor.id,'support')),rule.id),'insufficient_evidence');
+ });
 }
 testCase('Liberty/opposition-to-domination remains research-only rather than being silently added to MFQ-2',()=>{
  const d=audit.decisions.find(d=>d.constructId==='MF07');
