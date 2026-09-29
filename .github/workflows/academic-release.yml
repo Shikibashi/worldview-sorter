@@ -4,20 +4,30 @@ on:
     branches: [construct-registry-v0.1]
     paths:
       - 'data/academic/*.mjs'
+      - 'data/generic/*.mjs'
       - 'scripts/build-academic*.mjs'
+      - 'scripts/build-generic*.mjs'
       - 'scripts/test-academic*.mjs'
+      - 'scripts/test-generic*.mjs'
+      - 'scripts/worldview.mjs'
       - 'scripts/test-ui-smoke.mjs'
       - 'packages/profiles/**'
+      - 'packages/worldview/**'
       - 'packages/runtime/**'
       - 'package.json'
       - '.github/workflows/academic-release.yml'
   pull_request:
     paths:
       - 'data/academic/*.mjs'
+      - 'data/generic/*.mjs'
       - 'scripts/build-academic*.mjs'
+      - 'scripts/build-generic*.mjs'
       - 'scripts/test-academic*.mjs'
+      - 'scripts/test-generic*.mjs'
+      - 'scripts/worldview.mjs'
       - 'scripts/test-ui-smoke.mjs'
       - 'packages/profiles/**'
+      - 'packages/worldview/**'
       - 'packages/runtime/**'
       - 'package.json'
       - '.github/workflows/academic-release.yml'
@@ -49,7 +59,7 @@ jobs:
           test "$(git rev-parse origin/construct-registry-v0.1)" = "$EXPECTED_HEAD"
           node -e "const fs=require('fs'),cp=require('child_process');const out=JSON.parse(fs.readFileSync('data/academic/build-output.json'));for(const p of out.paths){if(p.startsWith('/')||p.split('/').includes('..'))throw Error('Invalid generated path');cp.execFileSync('git',['add','--',p]);}"
           if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Compile academically grounded registry and candidate bank v0.9'
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Compile generic academic worldview evidence model'
             git push origin HEAD:construct-registry-v0.1
           fi
           git rev-parse HEAD
