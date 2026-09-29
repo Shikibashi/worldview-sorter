@@ -21,12 +21,25 @@ export const sources=[
  src("audit-svo","Murphy, Ackermann & Handgraaf (2011): Measuring Social Value Orientation","https://doi.org/10.2139/ssrn.1804189","abstract_reviewed","SVO measures social preferences in interdependent allocation choices; generic cooperation/competition beliefs are not equivalent to SVO."),
  src("audit-federalism","Federalism","https://plato.stanford.edu/entries/federalism/","selected_sections_reviewed","Federalism divides authority between levels, while decentralization is broader; preference for local variation is not automatically federalism."),
  src("audit-epistocracy","The Ethics and Rationality of Voting","https://plato.stanford.edu/entries/voting/","selected_sections_reviewed","Epistocracy allocates political power partly by knowledge/competence; expert advice and expert rule are distinct."),
- src("audit-revolution","Revolution","https://plato.stanford.edu/entries/revolution/","selected_sections_reviewed","Revolution, resistance, rebellion, secession, and reform are distinct; a preference for institutional rupture is not automatically endorsement of violent revolution.")
+ src("audit-revolution","Revolution","https://plato.stanford.edu/entries/revolution/","selected_sections_reviewed","Revolution, resistance, rebellion, secession, and reform are distinct; a preference for institutional rupture is not automatically endorsement of violent revolution."),
+ src("audit-liberty","Iyer et al. (2012): Understanding Libertarian Morality","https://doi.org/10.1371/journal.pone.0042366","full_text_reviewed","Liberty/oppression was developed as a proposed moral-foundation construct in work on libertarian moral psychology; it is not one of the six foundations validated in MFQ-2.")
 ];
 
 const a=(itemId,polarity=1)=>({itemId,support:polarity===1?[1,2]:[-2,-1],oppose:polarity===1?[-2,-1]:[1,2]});
 const e=(itemId,support,oppose=[])=>({itemId,support,oppose});
 const R=(id,constructId,label,sourceIds,evidence,boundary,scope=label)=>({id,constructId,label,sourceIds,evidence,boundary,scope,layer:"audit_scoped_commitment"});
+
+const decisionSources={
+ ME07:["acad-polzler-2018","acad-yang-2026","gen-realism","gen-antirealism","gen-noncognitivism"],
+ MF07:["acad-mfq2","audit-liberty"],
+ EP02:["audit-schommer"],EP03:["acad-epistemology"],EP05:["audit-apriori"],EP06:["domain-science-objectivity","acad-epistemology"],EP10:["audit-revelation"],EP11:["audit-perception"],
+ OM08:["acad-thomasson","acad-marschall"],MS07:["gen-identity"],
+ AH01:["free-will-inventory","gen-agency"],AH03:["audit-responsibility"],AH04:["audit-altruism"],AH05:["audit-altruism","acad-egoism","audit-svo"],AH06:["audit-fixed-malleable","audit-human-nature"],AH07:["audit-human-nature"],AH08:["audit-human-nature"],AH09:["audit-human-nature"],AH12:["free-will-inventory","gen-agency"],
+ RC02:["audit-providence","gen-theology"],RC04:["audit-divine-intervention","audit-providence"],RC05:["audit-miracles"],RC06:["audit-revelation"],RC11:["gen-theology"],
+ EX02:["gen-meaning"],EX04:["gen-meaning"],EX05:["primal-world-beliefs"],EX07:["primal-world-beliefs"],EX08:["primal-world-beliefs"],EX09:["gen-meaning"],
+ SO03:["audit-selfconstrual"],SO04:["audit-toleration"],SO05:["sdo7"],SO06:["sdo7"],SO07:["audit-svo"],SO08:["audit-svo"],SO09:["domain-cosmopolitanism"],SO10:["audit-essentialism"],SO12:["audit-nep"],SO13:["audit-justworld"],
+ PL01:["acad-legitimacy"],PL05:["audit-federalism"],PL10:["gen-distribution"],PL12:["domain-property"],PL14:["acad-ostrom"],PL15:["audit-epistocracy"],PL19:["domain-punishment"],PL20:["domain-punishment"],PL25:["audit-revolution"]
+};
 
 export const decisions=[
  ["ME07","remain_derived","Metaethical family should remain a derived synthesis over independently measured metaethical commitments; MEI005 is diagnostic, not a standalone family scale."],
@@ -78,7 +91,8 @@ export const decisions=[
  ["PL19","ready_existing_items","Current items directly address deterrence as a purpose/justification of punishment; mixed theories remain possible."],
  ["PL20","split_or_deprecate","Rehabilitation and restorative repair are distinct aims. Current direct items bundle them, so do not emit one combined score."],
  ["PL25","ready_existing_items","Interpret as gradual reform versus decisive institutional replacement; do not equate rupture with violent revolution."]
-].map(([constructId,decision,rationale])=>({constructId,decision,rationale}));
+].map(([constructId,decision,rationale])=>({constructId,decision,rationale,sourceIds:decisionSources[constructId]??[]}));
+if(decisions.some(d=>d.sourceIds.length===0))throw new Error("Every audit decision must cite at least one academic source.");
 
 export const rules=[
  R("audit-EP02-complex-knowledge","EP02","Knowledge is often complex and interconnected",["audit-schommer"],[
