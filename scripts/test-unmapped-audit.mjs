@@ -68,9 +68,14 @@ for(const rule of accepted){
   assert.equal(state(run(pos),rule.id),'supported');
   if(new Set(rule.evidence.filter(e=>e.oppose.length).map(e=>e.unitId)).size>=2)assert.equal(state(run(neg),rule.id),'opposed');
   assert.equal(state(run([]),rule.id),'insufficient_evidence');
-  if(pos.length&&neg.length){
-   const mixed=[pos[0],neg.find(r=>r.itemId!==pos[0].itemId)??neg[0]];
-   if(new Set(mixed.map(r=>r.itemId)).size===2)assert.equal(state(run(mixed),rule.id),'mixed');
+  const supportEvidence=rule.evidence.find(e=>e.support.length);
+  const opposeEvidence=rule.evidence.find(e=>e.oppose.length&&e.itemId!==supportEvidence?.itemId);
+  if(supportEvidence&&opposeEvidence){
+   const mixed=withPrerequisites([
+    response(supportEvidence.itemId,supportEvidence.support[0]),
+    response(opposeEvidence.itemId,opposeEvidence.oppose[0])
+   ]);
+   assert.equal(state(run(mixed),rule.id),'mixed');
   }
  });
 }
