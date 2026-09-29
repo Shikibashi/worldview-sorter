@@ -66,12 +66,16 @@
     "path": "data/generic/coverage-v0.2.json"
   },
   "quizExperience": {
-    "version": "quiz-1.0.0",
-    "path": "data/experience/policy-v1.json",
+    "version": "quiz-1.2.0",
+    "path": "data/experience/policy-v1.1.json",
     "entrypoint": "apps/quiz/index.html"
   },
   "publicForm": {
     "version": "philosophy-blueprint-1.0.0",
     "path": "data/philosophy/public-form-v1.json"
+  },
+  "fullForm": {
+    "version": "philosophy-full-1.0.0",
+    "path": "data/philosophy/public-full-v1.json"
   }
 }

@@ -56,7 +56,7 @@ See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access 
 
 ## Public quiz experience
 
-The root now opens a field-guide-style quiz with 80/120/160-question routes, pause/resume, unchanged academic items, and a twelve-topic source-linked answer summary. It is an exploratory, research-informed quiz, not a validated assessment. Answers stay in the browser unless explicitly exported. The old `/apps/web/` route remains a development collector client.
+The root now opens a field-guide-style quiz with 80/120/160/240-question routes, pause/resume, unchanged academic items, and a twelve-topic source-linked answer summary. It is an exploratory, research-informed quiz, not a validated assessment. Answers stay in the browser unless explicitly exported. The old `/apps/web/` route remains a development collector client.
 
 Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 
@@ -67,3 +67,7 @@ Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 ## Philosophy-domain content coverage
 
 The public quiz uses a versioned content blueprint with separate ontology, metaphysics, metaethical, ethical, epistemic, and political/legal/economic facets. Every route asks multiple relevant questions for each facet rather than hoping proportional random sampling does so. Original item text is unchanged; academic citations explain conceptual scope, not scientific validation of custom items. See [the domain/source/evidence specification](docs/PHILOSOPHY_DOMAINS.md).
+
+## 240-question full route
+
+Choose **The full exploration** for 240 assigned questions from the existing academic bank. Shorter routes remain available and saved quizzes retain their original versions. No timer, new scoring assumptions, or automatic submission. Inapplicable branch follow-ups can be skipped. See [full-route behavior and compatibility](docs/FULL_ROUTE.md).
