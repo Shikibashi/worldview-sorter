@@ -1,6 +1,6 @@
 # Revelatory experience and factual justification: EP10 review
 
-**Status:** editorial draft; no change to the frozen pilot or respondent results.
+**Status:** historical editorial review of the predecessor. The [approved successor](REVELATION_WARRANT_RELEASE.md) is model release 1.13.0; this review does not describe the current result.
 
 The frozen public rule `audit2-EP10-revelation` infers that a sincerely believed revelation can itself give *some factual justification without independent verification*. It cites the [Stanford Encyclopedia of Philosophy's Divine Revelation entry](https://plato.stanford.edu/archives/spr2021/entries/divine-revelation/), but retains no rule-linked supporting claim. That entry describes non-inferential, inferential, and hybrid accounts of justification for revelatory claims. It does not establish that sincerity alone warrants a claim, that every apparent revelation is reliable, or that these original questions measure a validated trait.
 

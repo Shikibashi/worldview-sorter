@@ -78,10 +78,10 @@ const provenance=JSON.parse(provenanceReport.stdout);
 assert.ok(provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'&&
  r.sourceClasses.includes('context_limited_empirical_research')));
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,10);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,10);
-assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,135);
-for (const ruleId of ['construct-EP15','construct-EP20','audit2-EP06-testability','construct-AH14']) {
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,12);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,11);
+assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,134);
+for (const ruleId of ['construct-EP15','construct-EP20','audit2-EP06-testability','construct-AH14','audit2-EP10-revelation']) {
  assert.ok(!provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(ruleId));
 }
 assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,

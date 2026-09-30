@@ -72,6 +72,9 @@ async function runRoute(size,{pause=false,detail=false}={}){
  check('Current route uses AHI108 and omits the historical alternative-possibilities item',
   saved.presentedItems.some(row=>row.itemId==='AHI108')&&
   !saved.presentedItems.some(row=>row.itemId==='AHI104'));
+ check('Current route uses first-person revelation warrant instead of the audience-ambiguous item',
+  saved.presentedItems.some(row=>row.itemId==='EPI122')&&
+  !saved.presentedItems.some(row=>row.itemId==='EPI021'));
  check('Twelve worldview domains remain navigable',await page.locator('#domain-map .domain').count()===12);
  check('Results open with an evidence-qualified overview',await page.locator('#result-at-a-glance').isVisible());
  check('Every domain has a categorical evidence strip',await page.locator('#domain-map .domain-strip').count()===12);
