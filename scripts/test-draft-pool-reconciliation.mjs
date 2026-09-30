@@ -41,4 +41,4 @@ for(const id of review.existingEvidenceFirst)
  assert.ok(model.publicRuleIds.includes(id),'Existing-evidence review names a nonpublic rule: '+id);
 for(const assigned of route.routes.flatMap(row=>row.itemRefs))
  assert.ok(!draftIds.has(assigned.itemId),'Unreleased draft leaked into a public route: '+assigned.itemId);
-console.log(`Reconciled ${decisions.size} unreleased drafts against ${bank.items.length} current items; no public-route activation.`);
+console.log(`Historical draft-pool review: ${decisions.size} drafts against the ${bank.items.length}-item 1.4-era bank. PLI126 and PLI127 were released separately in 1.5; this review does not activate other drafts.`);

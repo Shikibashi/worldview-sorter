@@ -89,6 +89,14 @@ for(const key of publicCurrentKeys){
  for(const ref of Array.isArray(value)?value:[value])addRef(ref);
 }
 required.add('data/response-scales.json');
+for(const ref of current.modelReleaseVersions??[current.modelRelease]){
+ const historical=await json(ref.path);
+ for(const key of ['bank','pilot']){
+  const component=historical.components.find(row=>row.key===key);
+  assert.ok(component,'Historical release missing '+key+': '+ref.version);
+  addRef(component);
+ }
+}
 const experience=await json(current.quizExperience.path);
 for(const ref of [...experience.formPolicies,...(experience.modelPolicies??[])])addRef(ref);
 for(const file of required)await copy(file);

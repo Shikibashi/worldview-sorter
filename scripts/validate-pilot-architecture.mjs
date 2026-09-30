@@ -4,9 +4,10 @@ const root = new URL("../", import.meta.url);
 const load = async (p) => JSON.parse(await readFile(new URL(p, root), "utf8"));
 
 const current = await load("data/current.json");
-const bank = await load(current.candidateBank.path);
-const instrument = await load(current.instrument.path);
-const pilot = await load(current.pilot.path);
+// This engineering-only pilot predates the current public content release.
+const bank = await load("data/items/candidate-v0.9.json");
+const instrument = await load("data/instruments/research-pool-0.9.json");
+const pilot = await load("data/pilots/pilot-0.2.json");
 const scoring = await load(current.engineeringScoringModel.path);
 const policy = await load(current.shortFormPolicy.path);
 const template = await load(current.calibrationTemplate.path);
@@ -18,7 +19,7 @@ let failures = 0;
 const fail = (m) => { failures += 1; console.error("FAIL:", m); };
 const pass = (m) => console.log("PASS:", m);
 
-if (pilot.bankVersion !== bank.bankVersion) fail("pilot bankVersion does not match active bank");
+if (pilot.bankVersion !== bank.bankVersion) fail("pilot bankVersion does not match its historical bank");
 if (pilot.sourceInstrumentVersion !== instrument.instrumentVersion) fail("pilot source instrument mismatch");
 if (pilot.administration.defaultPacketSize < pilot.administration.allowedPacketSize.min ||
     pilot.administration.defaultPacketSize > pilot.administration.allowedPacketSize.max) {
@@ -77,7 +78,7 @@ for (const p of example.presentedItems) {
   if (!item) fail(`example references unknown item ${p.itemId}`);
   else if (item.revision !== p.itemRevision) fail(`example revision mismatch for ${p.itemId}`);
 }
-pass("example raw pilot session references current immutable item revisions");
+pass("example raw pilot session references historical immutable item revisions");
 
 if (failures) {
   console.error(`\n${failures} pilot/scoring architecture validation failure(s)`);

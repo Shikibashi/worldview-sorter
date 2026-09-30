@@ -19,6 +19,11 @@ const publicDataPathsFor=root=>{
  }
  for(const ref of [...(current.affinityCatalogVersions??[]),...(current.localizationCatalogVersions??[]),...(current.localizationBundleVersions??current.localizationBundles??[]),...(current.modelReleaseVersions??[]),...(experience.formPolicies??[]),...(experience.modelPolicies??[])])
   if(typeof ref.path==='string')paths.push(ref.path);
+ // The public quiz must resolve the pinned bank and pilot of a saved release.
+ for(const ref of current.modelReleaseVersions??[]){
+  const release=JSON.parse(readFileSync(path.join(root,ref.path),'utf8'));
+  for(const component of release.components.filter(row=>row.key==='bank'||row.key==='pilot'))paths.push(component.path);
+ }
  return new Set(paths.filter(p=>p.startsWith('data/')&&!p.split('/').some(s=>s==='.'||s==='..')).map(p=>'/'+p));
 };
 const staticAllowed=(name,publicDataPaths)=>{

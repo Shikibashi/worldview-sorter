@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "philosophicalBasis": {
+    "proposition": "National and regional governments should each have constitutionally protected powers that the other cannot withdraw unilaterally.",
+    "neighboringViews": [
+      "Revocable decentralization in a unitary state",
+      "Confederation with member-unit veto",
+      "General constitutional obedience"
+    ],
+    "nonEntailments": [
+      "Every decision should be local",
+      "The existing constitutional division is just",
+      "A specific country should adopt a federal constitution"
+    ],
+    "existingGap": "The existing PL05 items show general decentralization preference but do not ask whether powers at both levels should be constitutionally protected.",
+    "scholarlyDisagreement": "Federal orders vary in exact powers and institutional structure; the source distinguishes the federal family from revocable devolution and confederation without requiring a specific constitutional design."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "audit-federalism",
+      "relationship": "supports",
+      "claim": "A federation ordinarily protects a territorial division of final authority at both levels so that neither can revoke the other’s powers unilaterally; this distinguishes it from revocable unitary decentralization and a weak, member-controlled confederation (section 1)."
+    }
+  ],
+  "alternatives": [
+    "Infer federalism from the PL05 decentralization rule: rejected because local preference does not establish entrenched powers at both levels.",
+    "Activate the whole dimension draft pool: rejected because this release addresses one directly evidenced distinction only.",
+    "Use one new item: rejected because a general normative answer and an application case supply a better false-positive check."
+  ],
+  "respondentImpact": "Only the successor Full route can assess this narrow proposition. Quick and Standard keep it not measured; other results are unchanged.",
+  "historicalCompatibility": "The 1.4 model, 562-item bank, 238-item route, prior localization, and prior engine archive remain at their original paths. No old answer is rewritten.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "route_omission"
+    ],
+    "paths": [
+      "scripts/test-federal-content-release.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T18:00:00Z",
+        "note": "Reviewed SEP Federalism, introduction and taxonomy, exact proposition, neighboring unitary and confederal arrangements, and non-entailments."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T18:00:00Z",
+        "note": "Reviewed exact item revisions, two-unit evidence, route omissions, and historical release compatibility."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T18:00:00Z",
+        "note": "Canonical English is approved; Spanish and Arabic remain untranslated review targets and cannot be served as respondent-ready."
+      }
+    ]
+  },
+  "release": {
+    "targetVersion": "model-release-1.5.0",
+    "migration": "No raw-response migration. Existing administrations retain the recorded 1.4 release tuple and historical result.",
+    "components": [
+      "engine_source"
+    ]
+  },
+  "proposalId": "MCP-2026-028",
+  "title": "Archive the quiz client version for exact release replay",
+  "objectType": "result_semantics",
+  "changeClass": "semantic_clarification",
+  "affectedObjects": [
+    {
+      "type": "result_semantics",
+      "id": "engine-source"
+    }
+  ],
+  "currentBehavior": "Model release 1.4 has 562 items, 238 Full-route positions, and no direct PL34 rule.",
+  "proposedBehavior": "Archive the quiz client version for exact release replay. The successor has 564 items and a 240-position Full route with the new direct proposition.",
+  "rationale": "SEP distinguishes constitutionally protected two-level final authority from revocable decentralization and confederation; the existing bank cannot infer that choice from generic local preference.",
+  "implementationRefs": [
+    "scripts/build-federal-content-v1.mjs",
+    "scripts/test-federal-content-release.mjs"
+  ]
+}

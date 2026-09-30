@@ -6,12 +6,12 @@ import {matchProfiles, planProfileFollowups, validateProfileCatalog, ProfileEvid
 const root = new URL('../',import.meta.url);
 const read = async p => JSON.parse(await readFile(new URL(p,root),'utf8'));
 const current = await read('data/current.json');
-const bank = await read(current.candidateBank.path);
+const bank = await read('data/items/candidate-v0.9.json');
 const catalog = await read(current.profileCatalog.path);
 const policy = await read(current.profileMatchingPolicy.path);
 const scalesDoc = await read('data/response-scales.json');
 const evidence = (await read(current.profileProbeSet.path)).constructItems;
-const release = await read(current.academicRelease.path);
+const release = await read('data/academic/release-v0.9.json');
 const registry = await read('data/constructs.json');
 const sources = await read('data/sources.json');
 const args = {catalog,policy,bank,scalesDoc};

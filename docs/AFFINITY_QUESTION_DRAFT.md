@@ -1,4 +1,6 @@
-# Affinity question draft 1 (unreleased)
+# Affinity question draft 1 (historical editorial pool)
+
+> This page records the 1.4-era draft inventory. The current bank has 564 items after a separate, governed release of `PLI126@1` and `PLI127@1` from the dimension-gap pool. The 25 affinity questions below remain unreleased; their historical review still refers to the then-current 562-item bank.
 
 The [joint draft-pool reconciliation](../data/reviews/draft-pool-reconciliation-v1.json) compares these 25 drafts and the 16 dimension drafts with the active 562-item bank. It identifies existing questions to reuse, specific near duplicates, and a small first set for formal source and evidence review. Its priorities do not activate any draft item.
 

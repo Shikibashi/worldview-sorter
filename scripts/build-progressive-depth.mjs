@@ -74,4 +74,4 @@ let fullGuide=await readFile(new URL('docs/FULL_ROUTE.md',root),'utf8');
 fullGuide=fullGuide.replace('The 80, 120, and 160-question releases remain available.',
  'The earlier 80, 120, and 160-question releases remain available for historical replay; the current chooser offers authored 64/120 and frozen 238 depth routes.');
 await writeFile(new URL('docs/FULL_ROUTE.md',root),fullGuide);
-console.log('Pinned progressive depth routes:',policy.routes.map(r=>r.id+' '+r.size).join(', '));
+console.log('Historical progressive-depth 1.0 routes:',policy.routes.map(r=>r.id+' '+r.size).join(', '));

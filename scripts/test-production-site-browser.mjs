@@ -5,6 +5,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
+import {createQuiz,seekQuestion,answerQuestion,nextQuestion} from '../packages/experience/quiz.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),site=path.join(root,'dist/pages');
 const contentType={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8',
@@ -135,7 +136,30 @@ try{
  await keyboardContext.close();
  await runRoute(64,{pause:true,detail:true});
  await runRoute(120);
- await runRoute(238);
+ await runRoute(240);
+ const historicalBank=JSON.parse(await readFile(path.join(root,'data/items/candidate-v0.9.json'),'utf8'));
+ const historicalPilot=JSON.parse(await readFile(path.join(root,'data/pilots/pilot-0.2.json'),'utf8'));
+ const historicalPolicy=JSON.parse(await readFile(path.join(root,'data/experience/progressive-depth-v1.2.json'),'utf8'));
+ const historicalScales=JSON.parse(await readFile(path.join(root,'data/response-scales.json'),'utf8'));
+ const historicalQuiz=createQuiz({bank:historicalBank,pilot:historicalPilot,scalesDoc:historicalScales,
+  formPolicy:historicalPolicy,size:64,seed:'historical-static-browser',sessionId:'historical-static-browser',
+  modelReleaseVersion:'model-release-1.4.0'});
+ seekQuestion(historicalQuiz,historicalBank);
+ while(historicalQuiz.index!==null){answerQuestion(historicalQuiz,historicalBank,historicalScales,{state:'no_view',value:null});nextQuestion(historicalQuiz,historicalBank);}
+ historicalQuiz.affinityCatalogVersion='philosophical-affinity-1.2.0';
+ const historicalContext=await browser.newContext({acceptDownloads:true}),historicalPage=await historicalContext.newPage();
+ await historicalPage.addInitScript(saved=>localStorage.setItem('worldview-sorter:quiz-experience:1',JSON.stringify(saved)),
+  {experienceVersion:'quiz-1.8.0',quiz:historicalQuiz});
+ await historicalPage.goto(base+'/');await historicalPage.waitForSelector('body[data-ready="true"]');
+ await historicalPage.locator('#resume').click();await historicalPage.locator('#results').waitFor({state:'visible'});
+ check('A 1.4 saved administration loads its pinned bank and route',
+  await historicalPage.locator('#result-replay-notice').isVisible()&&
+  /Current reinterpretation/.test(await historicalPage.locator('#result-replay-notice').innerText()));
+ check('Historical reinterpretation cannot be silently shared as the original result',
+  await historicalPage.locator('#summary-save').isDisabled()&&await historicalPage.locator('#share-open').isDisabled());
+ const historicalRaw=historicalPage.waitForEvent('download');await historicalPage.locator('#result-answers').click();
+ check('Historical raw answers remain exportable',(await historicalRaw).suggestedFilename().endsWith('.json'));
+ await historicalContext.close();
  const context=await browser.newContext(),page=await context.newPage();
  for(const target of ['/apps/server/server.mjs','/.data/sessions.json','/scripts/test-quiz-browser.mjs','/api/research/config'])
   check('Private or collector path is absent: '+target,(await page.request.get(base+target)).status()===404);

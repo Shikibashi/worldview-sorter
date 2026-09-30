@@ -1,0 +1,2054 @@
+{
+  "schemaVersion": "progressive-depth-1",
+  "policyVersion": "progressive-depth-1.3.0",
+  "algorithm": "progressive-fixed-1",
+  "administrationId": "public-worldview-progressive-v1",
+  "bankVersion": "0.10.0",
+  "modelVersion": "generic-1.3.0-pilot",
+  "resultSemanticsVersion": "pilot-result-states-1.0.0",
+  "instrumentVersion": "worldview-pilot-1.1.0",
+  "affinityCatalogVersion": "philosophical-affinity-1.2.0",
+  "pilotFormPolicyVersion": "philosophy-pilot-1.3.0",
+  "adaptivePolicyVersion": "authored-clarify-1.1.0",
+  "clarificationBudget": 6,
+  "selectionBasis": "The 64 and 120 routes keep their exact items; the successor Full route adds two reviewed federal-division discriminators to the prior 238-item set. No shorter route inherits that proposition.",
+  "routes": [
+    {
+      "id": "quick",
+      "routeVersion": "quick-1.3.0",
+      "label": "Quick exploration",
+      "description": "64 questions across all twelve topics; many distinctions remain unmeasured.",
+      "size": 64,
+      "itemRefs": [
+        {
+          "itemId": "PLI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI001",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "AHI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "NEI031",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI052",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI005",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "AHI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "NEI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI050",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI007",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI029",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI001",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MFI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI104",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI048",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "SOI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI036",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI005",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "AHI103",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI001",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI007",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "VAI031",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI032",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI020",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI015",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MEI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI001",
+          "itemRevision": 2
+        }
+      ],
+      "guaranteedDomains": [
+        "ME",
+        "NE",
+        "MF",
+        "VA",
+        "EP",
+        "OM",
+        "MS",
+        "AH",
+        "RC",
+        "EX",
+        "SO",
+        "PL"
+      ],
+      "assessableDirectRuleIds": [
+        "audit2-EP06-testability",
+        "audit2-EP10-revelation",
+        "audit2-PL05-decentralization",
+        "audit2-RC02-agentic-divinity",
+        "audit2-SO03-relational-self",
+        "construct-AH13",
+        "construct-AH14",
+        "constructed-meaning",
+        "deterministic-world",
+        "divine-existence",
+        "legacy-philosophical-anarchism-no-general-obedience",
+        "moral-concern-authority",
+        "moral-concern-care",
+        "moral-constraints",
+        "objective-meaning",
+        "outcomes-count",
+        "ph-categorical-reasons",
+        "ph-context-sensitive",
+        "ph-expert-testimony",
+        "ph-full-reduction",
+        "ph-inherent-purpose",
+        "ph-physical-explanation",
+        "ph-process-self",
+        "ph-rights-constraints",
+        "ph-stance-independence",
+        "ph-supernatural-reality",
+        "priority-VA02",
+        "priority-VA15",
+        "reasonable-rejection",
+        "theological-suspension"
+      ],
+      "assessableFacetIds": [
+        "meta-status",
+        "meta-scope",
+        "meta-reasons",
+        "ethics-foundations",
+        "moral-psychology",
+        "personal-values",
+        "epistemic-method",
+        "metaphysical-structure",
+        "consciousness",
+        "personal-identity",
+        "agency-freedom",
+        "agency-causes",
+        "religious-claims",
+        "existential-meaning",
+        "social-persons",
+        "political-authority",
+        "political-rights"
+      ],
+      "burden": {
+        "items": 64,
+        "vignettes": 11,
+        "rankings": 1
+      },
+      "adaptiveFollowupAvailable": true
+    },
+    {
+      "id": "standard",
+      "routeVersion": "standard-1.3.0",
+      "label": "Standard exploration",
+      "description": "120 questions; broader direct evidence, still less than the full pilot.",
+      "size": 120,
+      "itemRefs": [
+        {
+          "itemId": "PLI112",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI113",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI034",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI050",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI036",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI032",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "PLI048",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI028",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "PLI052",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI108",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI037",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI015",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI031",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI001",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "PLI055",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI107",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI001",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI103",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI036",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI024",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI106",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI032",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "AHI104",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI012",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI012",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI102",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI016",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "PLI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI024",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI044",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI005",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI005",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "EXI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI029",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "AHI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI005",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI034",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI005",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MEI007",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "EXI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI020",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI035",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI016",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI007",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MEI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "AHI019",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI001",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "EXI001",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI031",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "AHI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "VAI038",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI118",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI001",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "NEI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI039",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI119",
+          "itemRevision": 1
+        }
+      ],
+      "guaranteedDomains": [
+        "ME",
+        "NE",
+        "MF",
+        "VA",
+        "EP",
+        "OM",
+        "MS",
+        "AH",
+        "RC",
+        "EX",
+        "SO",
+        "PL"
+      ],
+      "assessableDirectRuleIds": [
+        "audit2-AH08-biological",
+        "audit2-AH09-environmental",
+        "audit2-EP02-complex-knowledge",
+        "audit2-EP06-testability",
+        "audit2-EP10-revelation",
+        "audit2-EP11-external-world",
+        "audit2-EX02-nondesigner-purpose",
+        "audit2-PL05-decentralization",
+        "audit2-RC02-agentic-divinity",
+        "audit2-RC04-intervention",
+        "audit2-RC05-miracles",
+        "audit2-SO03-relational-self",
+        "construct-AH13",
+        "construct-AH14",
+        "construct-EP15",
+        "construct-OM11",
+        "construct-OM13",
+        "construct-PL31",
+        "construct-PL33",
+        "constructed-meaning",
+        "deterministic-world",
+        "divine-existence",
+        "extended-cognition",
+        "impartial-beneficence",
+        "legacy-objectivism-market-coordination",
+        "legacy-philosophical-anarchism-no-general-obedience",
+        "moral-concern-authority",
+        "moral-concern-care",
+        "moral-concern-equality",
+        "moral-concern-loyalty",
+        "moral-constraints",
+        "objective-meaning",
+        "outcomes-count",
+        "ph-categorical-reasons",
+        "ph-conscious-causes",
+        "ph-context-sensitive",
+        "ph-cosmic-purpose",
+        "ph-expert-testimony",
+        "ph-full-reduction",
+        "ph-group-agency",
+        "ph-individual-claims",
+        "ph-inherent-purpose",
+        "ph-personal-prerogatives",
+        "ph-physical-explanation",
+        "ph-process-self",
+        "ph-rights-constraints",
+        "ph-stance-independence",
+        "ph-supernatural-reality",
+        "ph-universal-requirements",
+        "priority-VA02",
+        "priority-VA04",
+        "priority-VA05",
+        "priority-VA15",
+        "psychological-continuity",
+        "reasonable-rejection",
+        "theological-suspension"
+      ],
+      "assessableFacetIds": [
+        "meta-status",
+        "meta-scope",
+        "meta-reasons",
+        "ethics-foundations",
+        "ethics-obligations",
+        "moral-psychology",
+        "personal-values",
+        "epistemic-method",
+        "epistemic-justification",
+        "ontology",
+        "metaphysical-structure",
+        "consciousness",
+        "personal-identity",
+        "agency-freedom",
+        "agency-causes",
+        "religious-claims",
+        "existential-meaning",
+        "social-persons",
+        "social-entities",
+        "political-authority",
+        "political-rights",
+        "political-economy"
+      ],
+      "burden": {
+        "items": 120,
+        "vignettes": 20,
+        "rankings": 1
+      },
+      "adaptiveFollowupAvailable": true
+    },
+    {
+      "id": "full",
+      "routeVersion": "full-1.3.0",
+      "label": "Full pilot",
+      "description": "240 questions; the broadest authored coverage, including a scoped federal-division distinction.",
+      "size": 240,
+      "itemRefs": [
+        {
+          "itemId": "PLI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI116",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI035",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI117",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI058",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI115",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI020",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI116",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI109",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI115",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI111",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI110",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI036",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI054",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI112",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI110",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI111",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI037",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI113",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI108",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI055",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI110",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI005",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI109",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI102",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI056",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "RCI012",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI105",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI031",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI103",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI050",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI001",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "VAI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI015",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI104",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI104",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI052",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI032",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI105",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI105",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI109",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "OMI016",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI041",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI039",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI104",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI038",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI119",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI005",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "OMI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "VAI039",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI016",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI118",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI007",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "VAI042",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI030",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI111",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "VAI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI019",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI028",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI103",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI110",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI007",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI038",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI032",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI102",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI029",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI113",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI015",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI008",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI030",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI012",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI001",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI034",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "PLI112",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI005",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "OMI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI052",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI005",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI037",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI001",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MFI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI107",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI020",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI003",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MSI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI036",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI003",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI016",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI109",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI051",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI001",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI002",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI040",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MFI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI020",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI073",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI108",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI020",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI002",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "MSI015",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI042",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI013",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI126",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI071",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI031",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI104",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI024",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI029",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI036",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI001",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "RCI029",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI004",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "EXI012",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI076",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI105",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI031",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI106",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI017",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI005",
+          "itemRevision": 2
+        },
+        {
+          "itemId": "EXI011",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI077",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI044",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI019",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI026",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI107",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI033",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI009",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI015",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI067",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI034",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI104",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI060",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI004",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI025",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI019",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI127",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI024",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI069",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI037",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI102",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI032",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI105",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MSI022",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "RCI030",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EXI014",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "EPI018",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MEI010",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI048",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "NEI040",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "SOI103",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "AHI032",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "MFI028",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "VAI061",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "OMI102",
+          "itemRevision": 1
+        }
+      ],
+      "guaranteedDomains": [
+        "ME",
+        "NE",
+        "MF",
+        "VA",
+        "EP",
+        "OM",
+        "MS",
+        "AH",
+        "RC",
+        "EX",
+        "SO",
+        "PL"
+      ],
+      "assessableDirectRuleIds": [
+        "afterlife-belief",
+        "audit2-AH08-biological",
+        "audit2-AH09-environmental",
+        "audit2-EP02-complex-knowledge",
+        "audit2-EP06-testability",
+        "audit2-EP10-revelation",
+        "audit2-EP11-external-world",
+        "audit2-EX02-nondesigner-purpose",
+        "audit2-PL05-decentralization",
+        "audit2-RC02-agentic-divinity",
+        "audit2-RC04-intervention",
+        "audit2-RC05-miracles",
+        "audit2-SO03-relational-self",
+        "audit2-SO05-dominance",
+        "audit2-SO06-anti-egalitarian",
+        "construct-AH13",
+        "construct-AH14",
+        "construct-EP15",
+        "construct-EP16",
+        "construct-EP18",
+        "construct-EP20",
+        "construct-ME09",
+        "construct-ME10",
+        "construct-NE15",
+        "construct-NE17",
+        "construct-NE18",
+        "construct-NE19",
+        "construct-NE20",
+        "construct-OM11",
+        "construct-OM12",
+        "construct-OM13",
+        "construct-OM14",
+        "construct-PL30",
+        "construct-PL31",
+        "construct-PL33",
+        "construct-SO14",
+        "construct-SO15",
+        "constructed-meaning",
+        "deterministic-world",
+        "divine-existence",
+        "effective-freedom",
+        "extended-cognition",
+        "impartial-beneficence",
+        "legacy-objectivism-market-coordination",
+        "legacy-philosophical-anarchism-no-general-obedience",
+        "moral-concern-authority",
+        "moral-concern-care",
+        "moral-concern-equality",
+        "moral-concern-loyalty",
+        "moral-concern-proportionality",
+        "moral-concern-purity",
+        "moral-constraints",
+        "objective-meaning",
+        "outcomes-count",
+        "ph-categorical-reasons",
+        "ph-conscious-causes",
+        "ph-consent-authority",
+        "ph-context-sensitive",
+        "ph-cosmic-purpose",
+        "ph-expert-testimony",
+        "ph-full-reduction",
+        "ph-group-agency",
+        "ph-individual-claims",
+        "ph-inherent-purpose",
+        "ph-personal-prerogatives",
+        "ph-physical-explanation",
+        "ph-polycentric-order",
+        "ph-process-self",
+        "ph-religious-priority",
+        "ph-rights-constraints",
+        "ph-rule-mediated",
+        "ph-sacred-value",
+        "ph-social-constitution",
+        "ph-stance-independence",
+        "ph-supernatural-reality",
+        "ph-tradition-evidence",
+        "ph-unconscious-causes",
+        "ph-universal-requirements",
+        "priority-VA02",
+        "priority-VA04",
+        "priority-VA05",
+        "priority-VA06",
+        "priority-VA11",
+        "priority-VA15",
+        "priority-VA16",
+        "priority-VA18",
+        "psychological-continuity",
+        "reasonable-rejection",
+        "source-based-validity",
+        "theological-suspension",
+        "reviewed-PL34-federal-division"
+      ],
+      "assessableFacetIds": [
+        "meta-status",
+        "meta-scope",
+        "meta-reasons",
+        "ethics-foundations",
+        "ethics-obligations",
+        "ethics-action",
+        "moral-psychology",
+        "personal-values",
+        "epistemic-method",
+        "epistemic-justification",
+        "ontology",
+        "metaontology",
+        "metaphysical-structure",
+        "consciousness",
+        "personal-identity",
+        "agency-freedom",
+        "agency-causes",
+        "religious-claims",
+        "religious-practice",
+        "existential-meaning",
+        "social-persons",
+        "social-entities",
+        "political-authority",
+        "political-rights",
+        "political-economy",
+        "political-justice"
+      ],
+      "burden": {
+        "items": 240,
+        "vignettes": 34,
+        "rankings": 1
+      },
+      "adaptiveFollowupAvailable": false
+    }
+  ]
+}

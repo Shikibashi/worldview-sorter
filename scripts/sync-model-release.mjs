@@ -17,6 +17,13 @@ if(channels.configVersion!==channelIndex.current.version||
  throw Error('Release channels do not target the active model release.');
 const pinned=currentFromManifest(manifest);
 Object.assign(current,pinned);
+// The research-pool and academic-release pointers are operational companions
+// to this bank. Historical pool artifacts remain at their original paths.
+if(pinned.candidateBank.version==='0.10.0'){
+ current.instrument={version:'0.10.0-research',path:'data/instruments/research-pool-0.10.json'};
+ current.academicRelease={version:'0.10.0',path:'data/academic/release-v0.10.json'};
+ current.pilot={version:'pilot-0.3',path:'data/pilots/pilot-0.3.json'};
+}
 // Coverage is embedded in the pinned model. An older standalone audit snapshot
 // must not be advertised as coverage for the active release.
 delete current.worldviewCoverage;
@@ -59,7 +66,7 @@ current.modelRelease=index.current;
 current.modelReleaseVersions=index.versions;
 current.releaseChannels=channelIndex.current;
 await verifyRelease(root,current,manifest);
-const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v2.json');
+const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v3.json');
 const activeAffinity=await readJson(root,pinned.affinityCatalog.path);
 if(evidenceAudit.release.modelVersion!==pinned.worldviewModel.version||
  evidenceAudit.release.routePolicyVersion!==pinned.progressiveDepth.version)
@@ -67,7 +74,7 @@ if(evidenceAudit.release.modelVersion!==pinned.worldviewModel.version||
 const summary=evidenceAudit.summary;
 const fullGuide=`# Full route releases
 
-The active pilot candidate is \`${pinned.pilotCandidate.version}\`, using form policy \`${pinned.fullForm.version}\` and interpretation model \`${pinned.worldviewModel.version}\` in [model release ${manifest.releaseVersion.replace('model-release-','')}](../${index.current.path}). It fixes ${summary.fullRouteItems} distinct question revisions across twelve domains. The earlier \`philosophy-full-1.2.0\` 240-question form and the 80/120/160 routes remain at their versioned paths for historical replay. The current chooser offers authored 64/120 and frozen 238 depth routes.
+The active pilot candidate is \`${pinned.pilotCandidate.version}\`, using form policy \`${pinned.fullForm.version}\` and interpretation model \`${pinned.worldviewModel.version}\` in [model release ${manifest.releaseVersion.replace('model-release-','')}](../${index.current.path}). It fixes ${summary.fullRouteItems} distinct question revisions across twelve domains. The prior 238-item pilot and earlier 240-item and 80/120/160 forms remain at their versioned paths for historical replay. The current chooser offers authored 64/120/${summary.fullRouteItems} depth routes.
 
 The pre-pilot review removed \`NEI030\` and \`EXI017\` for the reasons recorded in [the 240-item content review](../data/pilots/content-review-v1.json). No released item text or historical interpretation rule was rewritten. The active Full route has **${summary.fullRouteAssessableRules} of ${summary.publicRules}** public direct rules with enough authored content in both directions and **${summary.fullRouteNotMeasuredRules}** that remain \`not_measured\` by this route. Actual respondent evidence can still be insufficient or mixed. The [current evidence-disposition audit](PILOT_EVIDENCE_DISPOSITIONS.md) lists every gap and reconciles the earlier 35 bundled-path gaps without treating narrower successor rules as equivalent.
 
@@ -83,10 +90,14 @@ if(!readme.includes(oldComparison)&&!successorComparison.test(readme))throw Erro
 readme=readme.replace(oldComparison,newComparison).replace(successorComparison,newComparison);
 readme=readme.replace('The comparisons and engineering scores remain **unvalidated and non-interpretable**.',
  'The nine prototype comparisons and engineering scores remain **unvalidated and non-interpretable**. The public catalog offers qualitative, evidence-scoped comparison rather than a validated classification.');
-readme=readme.replace(/The active full-depth route is the frozen 238-item `pilot-candidate-[0-9.]+`(?: in `model-release-[0-9.]+`)?\./,
- `The active full-depth route is the frozen 238-item \`${pinned.pilotCandidate.version}\` in \`${manifest.releaseVersion}\`.`);
+readme=readme.replace(/The active full-depth route is the (?:frozen )?[0-9]+-item `pilot-candidate-[0-9.]+`(?: in `model-release-[0-9.]+`)?\./,
+ `The active full-depth route is the ${summary.fullRouteItems}-item \`${pinned.pilotCandidate.version}\` in \`${manifest.releaseVersion}\`.`);
 readme=readme.replace('See [the pilot contract](docs/PILOT_V1.md).',
  'See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).');
+readme=readme.replace(/with 64\/120\/\d+-question depth routes/,
+ `with 64/120/${summary.fullRouteItems}-question depth routes`);
+readme=readme.replace(/The active Full route uses the frozen 238-question pilot\. Earlier 240-item and 80\/120\/160-item releases remain available for replaying saved quizzes\./,
+ `The active Full route uses the versioned ${summary.fullRouteItems}-question successor pilot. The earlier frozen 238-question pilot and older 240-item and 80/120/160-item releases remain available for historical replay.`);
 await writeFile(readmePath,readme);
 await writeFile(new URL('data/current.json',new URL('../',import.meta.url)),JSON.stringify(current,null,2)+'\n');
 console.log('Model release index:',manifest.releaseVersion);

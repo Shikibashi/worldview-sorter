@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "worldview-model-release-1",
+  "releaseVersion": "model-release-1.5.0",
+  "releaseKind": "authored_operational_pilot",
+  "reviewBasis": [
+    "data/pilots/content-review-v1.1.json",
+    "data/academic/unmapped-audit-v2.json",
+    "data/affinities/manifest-v1.3.json",
+    "data/localization/manifest-v1.3.json"
+  ],
+  "resultSemanticsVersion": "pilot-result-states-1.0.0",
+  "affinitySemanticsVersion": "doctrinal-comparison-1.0.0",
+  "components": [
+    {
+      "key": "affinity",
+      "version": "philosophical-affinity-1.3.0",
+      "path": "data/affinities/catalog-v1.3.json",
+      "sha256": "43f555e2e1f28971c562d8cf9935fb5e64e24f6516d32bbc4aace8415b1c0244"
+    },
+    {
+      "key": "affinity_manifest",
+      "version": "philosophical-affinity-1.3.0",
+      "path": "data/affinities/manifest-v1.3.json",
+      "sha256": "7f455a8a20a8c9f83751131bb868a182b4aa6abf07f94bf7877536afd2af4a57"
+    },
+    {
+      "key": "bank",
+      "version": "0.10.0",
+      "path": "data/items/candidate-v0.10.json",
+      "sha256": "31756dda16e67e80244c963e1aefc96d9ee95a2e34b3036069d9678258869f6c"
+    },
+    {
+      "key": "content_review",
+      "version": "pilot-content-review-1.1.0",
+      "path": "data/pilots/content-review-v1.1.json",
+      "sha256": "ef01439539bb13e0d73f5edb8012a35774c729d3ece8d402cbd206778962ccf7"
+    },
+    {
+      "key": "engine_source",
+      "version": "engine-source-1.3.0",
+      "path": "data/releases/engine-sources/engine-source-1.3.0/manifest.json",
+      "sha256": "2fd5dd4d3f74e5d6a3b1e33e03ad78f74cb5419cb269ff02b64bc3253d32e830"
+    },
+    {
+      "key": "full_form",
+      "version": "philosophy-pilot-1.3.0",
+      "path": "data/philosophy/public-pilot-v1.3.json",
+      "sha256": "2790e0bc07836d4a67afa992ddc764984e79dadba4ce49b9a9168f8eda3bdbad"
+    },
+    {
+      "key": "localization_bundle:ar",
+      "version": "localization-ar-draft-4",
+      "path": "data/localization/ar-draft-v4.json",
+      "sha256": "5c8ee17b4493df68e5024cd7bed18631dfd86f9dd6b042d43531d610ddf5f94d"
+    },
+    {
+      "key": "localization_bundle:en-US",
+      "version": "localization-en-US-1.3.0",
+      "path": "data/localization/en-US-v4.json",
+      "sha256": "e370249cbd7406a051e0883aa670a6b934bd87e9487a6ac1bd3c85ddde6140ec"
+    },
+    {
+      "key": "localization_bundle:es-ES",
+      "version": "localization-es-ES-draft-4",
+      "path": "data/localization/es-ES-draft-v4.json",
+      "sha256": "44196430c06e93083347093a622bccd0ffb495e994a01c0e55a1a3aef2ab9a0d"
+    },
+    {
+      "key": "localization_catalog",
+      "version": "localization-catalog-1.3.0",
+      "path": "data/localization/catalog-v4.json",
+      "sha256": "093967116e42cc025997d2beda4e6d06e92d04965b7ac352cb05cfc386e2e15c"
+    },
+    {
+      "key": "localization_manifest",
+      "version": "localization-catalog-1.3.0",
+      "path": "data/localization/manifest-v1.3.json",
+      "sha256": "3321fffe2845ff47e202385f2fdf9debcb074c1e9ffc0069f275a40927f7b134"
+    },
+    {
+      "key": "model",
+      "version": "generic-1.3.0-pilot",
+      "path": "data/generic/model-v1.3-pilot.json",
+      "sha256": "fe72f503326e0dfa8d751dec010c08c12e3f66158cc83b70f98d37351435cbf2"
+    },
+    {
+      "key": "pilot",
+      "version": "pilot-candidate-1.3.0",
+      "path": "data/pilots/pilot-candidate-v1.3.json",
+      "sha256": "acdc96584b8f44a4aea676bd6b15f333ac2c93b78df0917331bf3a55c636962f"
+    },
+    {
+      "key": "progressive_manifest",
+      "version": "progressive-depth-1.3.0",
+      "path": "data/experience/progressive-depth-v1.3.manifest.json",
+      "sha256": "bf57245338d416daeb2e1214b065e48a937cc871d0b8defc44f09d775469e4a8"
+    },
+    {
+      "key": "progressive_routes",
+      "version": "progressive-depth-1.3.0",
+      "path": "data/experience/progressive-depth-v1.3.json",
+      "sha256": "c3e53fb48853d8158fc81f61e4dd55ec0924075c267d27e75bc36950964aa621"
+    },
+    {
+      "key": "registry",
+      "version": "0.3.0",
+      "path": "data/registries/constructs-v0.3.json",
+      "sha256": "4932e25e91dd55e989b5e49d67eab5598914bf0fb57713b84fa5fb6b837e9950"
+    },
+    {
+      "key": "response_scales",
+      "version": "1.0.0",
+      "path": "data/response-scales.json",
+      "sha256": "d170831cf7781c5e6aedb60407aeca31d82ee8b4ce6689c95fc00b2274493121"
+    },
+    {
+      "key": "source_ledger",
+      "version": "0.7.0",
+      "path": "data/generic/source-ledger-v0.7.json",
+      "sha256": "53c229c2f00755ddf447009fac3864d058ac9c99bfaa8ee5f37ee90afece2f2a"
+    },
+    {
+      "key": "sources",
+      "version": "source-registry-1.1.0",
+      "path": "data/sources-v1.1.json",
+      "sha256": "602506a0a628eaa122b7365c10b4e253bd215a20ba1abaac665bd81b1039f6e4"
+    },
+    {
+      "key": "unmapped_audit",
+      "version": "unmapped-audit-2.0.0",
+      "path": "data/academic/unmapped-audit-v2.json",
+      "sha256": "ac439464be9ff1f9f0dece39c58ec49a2b4ad6577721fded85c237dc429aaa72"
+    }
+  ]
+}

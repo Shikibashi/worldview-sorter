@@ -6,7 +6,8 @@ const read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
 const current=await read('data/current.json');
 const catalog=await read(current.profileCatalog.path);
 const policy=await read(current.profileMatchingPolicy.path);
-const bank=await read(current.candidateBank.path);
+// The nine engineering prototypes are bound to the historical 0.9 bank.
+const bank=await read('data/items/candidate-v0.9.json');
 const scalesDoc=await read('data/response-scales.json');
 const sourceIds=new Set((await read('data/sources.json')).sources.map(s=>s.id));
 validateProfileCatalog({catalog,policy,bank,scalesDoc});

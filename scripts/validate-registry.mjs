@@ -2,10 +2,11 @@ import { readFile } from "node:fs/promises";
 
 const load = async (path) => JSON.parse(await readFile(new URL("../" + path, import.meta.url), "utf8"));
 
+const current = await load("data/current.json");
 const domainsDoc = await load("data/domains.json");
-const constructsDoc = await load("data/constructs.json");
+const constructsDoc = await load(current.registry?.path ?? "data/constructs.json");
 const relationshipsDoc = await load("data/relationships.json");
-const sourcesDoc = await load("data/sources.json");
+const sourcesDoc = await load(current.sourceRegistry?.path ?? "data/sources.json");
 
 let failures = 0;
 const fail = (msg) => { failures++; console.error("FAIL:", msg); };

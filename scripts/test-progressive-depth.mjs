@@ -22,16 +22,16 @@ const compare=q=>compareWorldview({model,bank,scalesDoc,input:q.session,routeMan
 const plan=(q,domainId=null)=>planWorldviewFollowups({model,bank,scalesDoc,input:q.session,routeManifest:policy,allowedItemRefs:policy.routes.at(-1).itemRefs,domainId,maxItems:policy.clarificationBudget,affinityCatalog:catalog});
 let checks=0;const check=(name,fn)=>{fn();checks++;console.log('PASS progressive depth: '+name);};
 check('Three immutable nested routes preserve exact frozen revisions and domain/format spread',()=>{
- assert.deepEqual(policy.routes.map(r=>r.size),[64,120,238]);let prior=new Set();
+ assert.deepEqual(policy.routes.map(r=>r.size),[64,120,240]);let prior=new Set();
  assert.deepEqual(policy.routes.at(-1).itemRefs,frozenForm.frozenItems);
  for(const route of policy.routes){const ids=new Set(route.itemRefs.map(x=>x.itemId));assert.equal(ids.size,route.size);for(const x of route.itemRefs){assert.equal(byId.get(x.itemId).revision,x.itemRevision);assert.ok(pilotManifest.route.exactItemRevisions.some(y=>y.itemId===x.itemId&&y.itemRevision===x.itemRevision));}for(const id of prior)assert.ok(ids.has(id));prior=ids;const row=report.routes.find(r=>r.routeId===route.id);assert.equal(row.itemCount,route.size);assert.equal(Object.values(row.domains).filter(Boolean).length,12);assert.equal(Object.values(row.responseScales).filter(Boolean).length,7);assert.deepEqual([...route.assessableDirectRuleIds].sort(),model.publicRuleIds.filter(id=>!row.unassessablePublicRuleIds.includes(id)).sort());assert.deepEqual([...route.assessableFacetIds].sort(),[...row.assessableFacetIds].sort());}
- assert.deepEqual(report.routes.map(r=>r.assessableDirectRules),[30,56,90]);
+ assert.deepEqual(report.routes.map(r=>r.assessableDirectRules),[30,56,91]);
  assert.deepEqual(report.routes.map(r=>r.affinity.reduce((n,t)=>n+t.definingDirectlyAssessable,0)),[2,2,11]);
  assert.deepEqual(report.routes.map(r=>r.affinity.reduce((n,t)=>n+t.definingPartiallyAssessed,0)),[0,2,2]);
 });
 check('A short route cannot inherit unasked public or derived propositions',()=>{
  const q=fill(newQuiz(64,'all-no-view')),r=compare(q);
- assert.equal(r.commitments.filter(c=>model.publicRuleIds.includes(c.commitmentId)&&c.state==='not_measured').length,111);
+ assert.equal(r.commitments.filter(c=>model.publicRuleIds.includes(c.commitmentId)&&c.state==='not_measured').length,112);
  assert.ok(r.derived.every(d=>d.state!=='supported'));
  const s=buildQuizSummary({model,bank,scalesDoc,session:q.session,routeManifest:policy,affinityCatalog:catalog,affinityPilot:pilotManifest});
  assert.equal(s.affinities.traditions.length,catalog.traditions.length);
@@ -47,7 +47,7 @@ check('A branch-skipped discriminator is not counted as presented evidence',()=>
  assert.equal(quickResult.availableSupportUnits,1);
  assert.equal(quickResult.availableOpposeUnits,1);
  assert.equal(quickResult.state,'not_measured');
- const full=fill(newQuiz(238,'branch-skipped-agentic-full'),new Map([['RCI001','none']]));
+ const full=fill(newQuiz(240,'branch-skipped-agentic-full'),new Map([['RCI001','none']]));
  assert.equal(full.session.presentedItems.find(entry=>entry.itemId==='RCI002').skippedByBranch,true);
  const fullResult=compare(full).commitments.find(c=>c.commitmentId==='audit2-RC02-agentic-divinity');
  assert.equal(fullResult.availableSupportUnits,2);
@@ -105,7 +105,7 @@ check('Quick can clarify one domain, then continue to Standard and Full without 
  assert.deepEqual(restore(q),q);fill(q);recordDepthCheckpoint(q);
  assert.ok(compare(q).commitments.filter(c=>model.publicRuleIds.includes(c.commitmentId)&&c.state==='not_measured').length<=84);
  const newFull=extendProgressiveQuiz({quiz:q,bank,policy,routeId:'full'});assert.ok(newFull.added>0);
- assert.equal(new Set(q.packet.entries.map(e=>e.itemId)).size,238);assert.ok([...beforeIds].every(id=>q.packet.entries.some(e=>e.itemId===id)));
+ assert.equal(new Set(q.packet.entries.map(e=>e.itemId)).size,240);assert.ok([...beforeIds].every(id=>q.packet.entries.some(e=>e.itemId===id)));
  assert.deepEqual(restore(q),q);fill(q);recordDepthCheckpoint(q);assert.deepEqual(restore(q),q);
  assert.equal(q.depth.checkpoints.length,4);
  assert.equal(plan(q).entries.length,0);
