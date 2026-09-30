@@ -62,7 +62,7 @@ function opportunity(rule,ids){
   opposePossible:oppose.size>=rule.minimumEvidenceUnits,units:units.size,conditionalItemIds:conditional};
 }
 const sizes=[80,120,160,240],sampleCount=32;
-const routeSamples={};
+const routeSamples={},packetSets={};
 for(const size of sizes){
  const policy=size===240?full:short;
  const packets=[];
@@ -73,6 +73,7 @@ for(const size of sizes){
   for(const e of packet.entries)assert(items.get(e.itemId)?.revision===e.itemRevision,'Stale route item revision');
   packets.push(packet);
  }
+ packetSets[size]=packets.map(packet=>new Set(packet.entries.map(e=>e.itemId)));
  const itemCounts=Object.fromEntries(bank.items.map(i=>[i.id,0]));
  const ruleCounts=Object.fromEntries(model.commitments.map(r=>[r.id,{assessable:0,supportPossible:0,opposePossible:0,conditional:0}]));
  const profileCounts=Object.fromEntries(profiles.profiles.map(p=>[p.id,{allDefining:0,anyDefining:0}]));
@@ -97,7 +98,53 @@ for(const size of sizes){
   meanItemsByResponseScale:Object.fromEntries(Object.entries(methods).map(([k,v])=>[k,v/sampleCount])),
   assessableRuleIdsEverySample:Object.entries(ruleCounts).filter(([,v])=>v.assessable===sampleCount).map(([k])=>k),
   assessableRuleIdsSomeSamples:Object.entries(ruleCounts).filter(([,v])=>v.assessable>0&&v.assessable<sampleCount).map(([k])=>k),
-  assessableRuleIdsNoSamples:Object.entries(ruleCounts).filter(([,v])=>v.assessable===0).map(([k])=>k)};
+ assessableRuleIdsNoSamples:Object.entries(ruleCounts).filter(([,v])=>v.assessable===0).map(([k])=>k)};
+}
+const opportunityIds=ids=>new Set(model.commitments.filter(r=>opportunity(r,ids).assessable).map(r=>r.id));
+const routeTransitions=[];
+for(let n=1;n<sizes.length;n++){
+ const from=sizes[n-1],to=sizes[n];let retained=0,added=0,dropped=0,newRulePaths=0,lostRulePaths=0;
+ const gainedByRule={},lostByRule={};
+ for(let k=0;k<sampleCount;k++){
+  const before=packetSets[from][k],after=packetSets[to][k];
+  retained+=[...before].filter(id=>after.has(id)).length;
+  added+=[...after].filter(id=>!before.has(id)).length;
+  dropped+=[...before].filter(id=>!after.has(id)).length;
+  const oldRules=opportunityIds(before),newRules=opportunityIds(after);
+  for(const id of newRules)if(!oldRules.has(id)){newRulePaths++;gainedByRule[id]=(gainedByRule[id]??0)+1;}
+  for(const id of oldRules)if(!newRules.has(id)){lostRulePaths++;lostByRule[id]=(lostByRule[id]??0)+1;}
+ }
+ routeTransitions.push({from,to,pairedSeedCount:sampleCount,meanRetainedItems:retained/sampleCount,
+  meanAddedItems:added/sampleCount,meanDroppedItems:dropped/sampleCount,
+  meanNewRulePaths:newRulePaths/sampleCount,meanLostRulePaths:lostRulePaths/sampleCount,
+  gainedRuleSampleCounts:gainedByRule,lostRuleSampleCounts:lostByRule});
+}
+const routeMarginal={};
+for(const size of sizes){
+ const policy=size===240?full:short;
+ const byId=new Map(bank.items.map(i=>[i.id,i]));
+ const stats=Object.fromEntries(bank.items.map(i=>[i.id,{assigned:0,publicRulePathLoss:0,facetMinimumLoss:0,formatGuaranteeLoss:0,lostPublicRuleIds:[]}]));
+ for(const ids of packetSets[size]){
+  const beforeRules=opportunityIds(ids);
+  const beforeFacet=policy.facets.map(f=>f.bundleIds.filter(id=>policy.bundles.find(b=>b.id===id).itemIds.every(itemId=>ids.has(itemId))).length);
+  for(const id of ids){
+   const row=stats[id];row.assigned++;
+   const after=new Set(ids);after.delete(id);
+   // A conditional follow-up cannot remain assigned without its parent.
+   let progress=true;while(progress){progress=false;for(const other of [...after]){
+    const item=byId.get(other);
+    if(item.eligibility.mode==='conditional'&&item.eligibility.all.some(c=>!after.has(c.itemId))){after.delete(other);progress=true;}
+   }}
+   const newRules=opportunityIds(after);
+   const lost=[...beforeRules].filter(ruleId=>rules.get(ruleId).tier!=='research'&&!newRules.has(ruleId));
+   if(lost.length){row.publicRulePathLoss++;for(const ruleId of lost)if(!row.lostPublicRuleIds.includes(ruleId))row.lostPublicRuleIds.push(ruleId);}
+   if(policy.facets.some((f,index)=>beforeFacet[index]>=f.minimumBundles&&
+    f.bundleIds.filter(bundleId=>policy.bundles.find(b=>b.id===bundleId).itemIds.every(itemId=>after.has(itemId))).length<f.minimumBundles))row.facetMinimumLoss++;
+   if(policy.responseScaleIds.some(scaleId=>[...ids].some(itemId=>byId.get(itemId).responseScaleId===scaleId)&&
+    ![...after].some(itemId=>byId.get(itemId).responseScaleId===scaleId)))row.formatGuaranteeLoss++;
+  }
+ }
+ routeMarginal[size]=stats;
 }
 
 const stop=new Set(['a','an','the','to','of','in','on','for','with','by','and','or','is','are','can','be','that','it','their','they','one','some','if','even','than','as','at','from','should','would','could','more','most']);
@@ -157,7 +204,14 @@ const itemAudit=bank.items.map(i=>{
   ['keep','No concrete content defect established by this audit.']);
  return {itemId:i.id,revision:i.revision,domainId:i.domainId,primaryConstructIds:primary(i),secondaryConstructIds:secondary(i),responseType:i.responseType,responseScaleId:fmt(i),
   semanticTarget:i.text,answerOptions:i.options.map(o=>({id:o.id,label:o.label})),itemNotes:i.notes,contentKind:i.contentKind,polarity:i.targets.map(t=>({constructId:t.constructId,relation:t.relation})),
+  authoredItemTargets:i.targets.map(t=>({constructId:t.constructId,role:t.role,relation:t.relation,
+   constructDescription:registry.constructs.find(c=>c.id===t.constructId)?.description??null})),
+  interpretablePropositions:ruleUse.get(i.id).map(id=>{const r=rules.get(id),e=r.evidence.find(entry=>entry.itemId===i.id);return {ruleId:id,
+   proposition:r.proposition??r.scope,propositionBasis:r.proposition?'explicit':'inherited_scope',tier:r.tier,
+   supportAnswers:e.support,opposeAnswers:e.oppose,boundary:r.boundary,
+   neighboringViews:r.neighbors??[],falsePositiveNotes:r.falsePositives??[]};}),
   routeSampleInclusion:Object.fromEntries(sizes.map(size=>[size,routeSamples[size].itemCounts[i.id]])),
+  routeMarginalOpportunity:Object.fromEntries(sizes.map(size=>[size,routeMarginal[size][i.id]])),
   interpretationRuleIds:ruleUse.get(i.id),referenceCriterionIds:profileUse.get(i.id),eligibility:i.eligibility,
   sourceIds:i.provenance.sourceRefs,provenanceOrigin:i.provenance.origin,contentTags:i.contentTags,
   editorialDisposition:base[0],dispositionRationale:base[1],wordingReviewFlags:wordingFlags(i),
@@ -194,7 +248,7 @@ const report={schemaVersion:'content-efficiency-audit-1',auditKind:'authored_sem
   semanticFlags:'Regex and token containment are review prompts, not findings of statistical local dependence or item redundancy.',
   disposition:'Keep is the conservative default where no concrete defect is established; named exceptions have explicit rationale.'},
  sourceMetadata:model.sources.map(s=>({id:s.id,title:s.title,url:s.url??null,access:s.access??null})),
- itemDispositions:itemAudit,constructRepresentation:constructAudit,routeDiagnostics:routeSamples,
+ itemDispositions:itemAudit,constructRepresentation:constructAudit,routeDiagnostics:routeSamples,routeTransitions,
  suspectedSimilarityPairs:near,referenceComparisons:profileAudit,
  publicResultContract:{states:['supported','opposed','mixed','insufficient_evidence'],routeOmissionStateCurrently:'insufficient_evidence',
   recommendation:'Add versioned not_measured semantics before asserting route-aware absence; distinguish branch skips from omissions and inconclusive presented evidence.'},

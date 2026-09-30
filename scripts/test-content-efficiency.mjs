@@ -11,6 +11,7 @@ const review=read('data/reviews/route-review-v1.json');
 const bank=read('data/items/candidate-v0.9.json');
 const model=read('data/generic/model-v0.3.json');
 const prior=read('data/academic/unmapped-audit-v1.json');
+const ruleById=new Map(model.commitments.map(rule=>[rule.id,rule]));
 const allowed=new Set(['keep','keep_parallel_indicator','keep_discriminator','keep_research_only','rewrite_candidate','route_reconsider','deprecate_candidate']);
 assert.equal(audit.itemDispositions.length,562);
 assert.equal(new Set(audit.itemDispositions.map(x=>x.itemId)).size,562);
@@ -21,8 +22,21 @@ assert.deepEqual(audit.itemDispositions.map(x=>[x.itemId,x.revision]),bank.items
 for(const item of audit.itemDispositions){
  assert.ok(allowed.has(item.editorialDisposition),item.itemId);
  assert.ok(item.dispositionRationale&&item.semanticTarget&&item.sourceIds.length,item.itemId);
+ assert.equal(item.authoredItemTargets.length,item.primaryConstructIds.length+item.secondaryConstructIds.length,item.itemId);
+ assert.deepEqual(item.interpretablePropositions.map(x=>x.ruleId),item.interpretationRuleIds,item.itemId);
+ for(const proposition of item.interpretablePropositions){
+  const rule=ruleById.get(proposition.ruleId),evidence=rule.evidence.find(e=>e.itemId===item.itemId);
+  assert.deepEqual(proposition.supportAnswers,evidence.support,item.itemId);
+  assert.deepEqual(proposition.opposeAnswers,evidence.oppose,item.itemId);
+ }
  assert.deepEqual(Object.keys(item.routeSampleInclusion),['80','120','160','240']);
- for(const n of Object.values(item.routeSampleInclusion))assert.ok(n>=0&&n<=32,item.itemId);
+ for(const [size,n] of Object.entries(item.routeSampleInclusion)){
+  assert.ok(n>=0&&n<=32,item.itemId);
+  const marginal=item.routeMarginalOpportunity[size];
+  assert.equal(marginal.assigned,n,item.itemId);
+  for(const count of [marginal.publicRulePathLoss,marginal.facetMinimumLoss,marginal.formatGuaranteeLoss])
+   assert.ok(count>=0&&count<=n,item.itemId);
+ }
 }
 const researchOnly=new Set(prior.decisions.filter(x=>x.decision==='remain_research_only').map(x=>x.constructId));
 for(const item of audit.itemDispositions.filter(x=>x.editorialDisposition==='keep_research_only')){
@@ -37,6 +51,13 @@ for(const size of [80,120,160,240]){
  assert.equal(route.guaranteedFacetIds.length,31);
  assert.equal(route.assessableRuleIdsEverySample.length+route.assessableRuleIdsSomeSamples.length+route.assessableRuleIdsNoSamples.length,model.commitments.length);
  assert.equal(Object.values(route.meanItemsByDomain).reduce((a,b)=>a+b,0),size);
+}
+assert.equal(audit.routeTransitions.length,3);
+for(const transition of audit.routeTransitions){
+ assert.equal(transition.pairedSeedCount,32);
+ assert.equal(transition.meanRetainedItems+transition.meanDroppedItems,transition.from);
+ assert.equal(transition.meanRetainedItems+transition.meanAddedItems,transition.to);
+ assert.ok(transition.meanNewRulePaths>=transition.meanLostRulePaths);
 }
 assert.equal(review.proposedChanges.length,0);
 assert.equal(review.releaseMutationApproved,false);
