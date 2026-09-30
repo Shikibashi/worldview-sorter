@@ -77,7 +77,7 @@
     "test:so09": "node scripts/test-so09-retirement.mjs",
     "test:easy-ontology": "node scripts/test-easy-ontology-release.mjs",
     "test:federal-content": "node scripts/test-federal-content-release.mjs",
-    "test:affinity": "node scripts/test-affinity-catalog-v1.mjs && node scripts/test-affinity-expansion-review.mjs && node scripts/validate-affinity-question-draft.mjs && npm run test:easy-ontology && npm run test:federal-content && node scripts/test-epistemic-affinity-release.mjs && node scripts/test-act-consequence-content-release.mjs && node scripts/test-rule-consequence-content-release.mjs"
+    "test:affinity": "node scripts/test-affinity-catalog-v1.mjs && node scripts/test-affinity-expansion-review.mjs && node scripts/validate-affinity-question-draft.mjs && npm run test:easy-ontology && npm run test:federal-content && node scripts/test-epistemic-affinity-release.mjs && node scripts/test-act-consequence-content-release.mjs && node scripts/test-rule-consequence-content-release.mjs && node scripts/test-act-rule-affinity-release.mjs"
   },
   "engines": {
     "node": ">=20"
