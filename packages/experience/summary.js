@@ -28,7 +28,7 @@ export function buildQuizSummary({model,bank,scalesDoc,session}){
  const items=new Map(bank.items.map(i=>[i.id,i])),scales=new Map(scalesDoc.scales.map(s=>[s.id,s]));
  const sources=new Map(model.sources.map(s=>[s.id,s]));
  const specified=new Map(model.commitments.map(c=>[c.id,c]));
- const rows=report.commitments.map(c=>({
+ const rows=report.commitments.filter(c=>c.tier!=='research').map(c=>({
   id:c.commitmentId,domainId:c.domainId,facetId:specified.get(c.commitmentId)?.facetId??model.facets?.find(f=>f.ruleIds.includes(c.commitmentId))?.id??null,label:FRIENDLY[c.commitmentId]??c.label,status:c.state,statusLabel:STATUS[c.state],scope:c.scope,
   // These inherited boundaries are lists of prohibited inferences. They must
   // never be presented as if they were positive claims about the respondent.

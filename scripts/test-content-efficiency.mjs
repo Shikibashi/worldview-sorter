@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
+import {compareWorldview} from '../packages/worldview/index.js';
+import {buildQuizSummary,createSharePreview} from '../packages/experience/summary.js';
 
 // This tests the immutable PR #1 audit baseline, not an empirical claim about
 // response quality or all possible packet seeds.
@@ -10,6 +12,7 @@ const audit=read('data/reviews/content-efficiency-v1.json');
 const review=read('data/reviews/route-review-v1.json');
 const bank=read('data/items/candidate-v0.9.json');
 const model=read('data/generic/model-v0.3.json');
+const scalesDoc=read('data/response-scales.json');
 const prior=read('data/academic/unmapped-audit-v1.json');
 const ruleById=new Map(model.commitments.map(rule=>[rule.id,rule]));
 const allowed=new Set(['keep','keep_parallel_indicator','keep_discriminator','keep_research_only','rewrite_candidate','route_reconsider','deprecate_candidate']);
@@ -73,6 +76,21 @@ for(const gap of review.structuralGaps){
  assert.ok(gap.candidateAdditions.length>=gap.requiredUnits,gap.ruleId);
  assert.ok(gap.candidateAdditions.every(x=>!x.inCurrentFullBundlePool),gap.ruleId);
 }
+// Research-tier rules can still be evaluated internally, but cannot become
+// respondent-facing rows or selectable share patterns in this historical model.
+const researchRule=model.commitments.find(rule=>rule.id==='ph-aesthetic-objectivity');
+const researchResponses=researchRule.evidence.slice(0,2).map(e=>({itemId:e.itemId,itemRevision:e.itemRevision,state:'answered',value:e.support[0]}));
+const researchSession={completionStatus:'completed',instrumentVersion:'worldview-public-1.1.0',bankVersion:bank.bankVersion,
+ responses:researchResponses,presentedItems:researchResponses.map(response=>({itemId:response.itemId,itemRevision:response.itemRevision,
+  domainId:'VA',presented:true,skippedByBranch:false}))};
+const internal=compareWorldview({model,bank,scalesDoc,input:researchSession});
+assert.equal(internal.commitments.find(row=>row.commitmentId===researchRule.id).state,'supported');
+const publicSummary=buildQuizSummary({model,bank,scalesDoc,session:researchSession});
+const researchIds=new Set(model.commitments.filter(rule=>rule.tier==='research').map(rule=>rule.id));
+assert.ok(publicSummary.rows.every(row=>!researchIds.has(row.id)));
+assert.ok(publicSummary.domains.every(domain=>domain.rows.every(row=>!researchIds.has(row.id))));
+assert.ok(publicSummary.rows.some(row=>model.commitments.find(rule=>rule.id===row.id)?.tier==='headline'));
+assert.throws(()=>createSharePreview(publicSummary,[researchRule.id]));
 const narrative=fs.readFileSync(new URL('../docs/CONTENT_EFFICIENCY_AUDIT.md',import.meta.url),'utf8');
 const labels={keep:'Keep',keep_parallel_indicator:'Keep as parallel indicator',keep_discriminator:'Keep as discriminator',
  keep_research_only:'Keep for research only',rewrite_candidate:'Rewrite candidate',route_reconsider:'Reconsider for route',
