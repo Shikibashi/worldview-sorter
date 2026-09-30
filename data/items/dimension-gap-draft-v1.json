@@ -1,0 +1,1064 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.9.0-dimension-gap-draft-1",
+  "status": "candidate",
+  "purpose": "Original unreleased items for distinctions suggested by the supplied 12axes dimensions. No public route, interpretation rule, affinity mapping, or percentage scoring uses these items. Answer meanings are review hypotheses, not production evidence keys.",
+  "items": [
+    {
+      "id": "PLI126",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Which division of authority should normally govern a country with national and regional governments?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL34",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "entrenched",
+          "label": "Each level should have some powers that the other cannot take away unilaterally."
+        },
+        {
+          "id": "national_delegation",
+          "label": "The national government may delegate regional powers and reclaim them when appropriate."
+        },
+        {
+          "id": "regional_delegation",
+          "label": "Regional governments should be able to reclaim any powers given to the national government."
+        },
+        {
+          "id": "case_by_case",
+          "label": "The right arrangement depends on the issue and the country."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "entrenched": "supports",
+        "national_delegation": "opposes",
+        "regional_delegation": "neighbor",
+        "case_by_case": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-federalism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Distinguishes a federal division from revocable national delegation and a confederation. Generic local preference does not suffice."
+    },
+    {
+      "id": "PLI127",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A national government wants one uniform policy on a matter assigned by the constitution to regional governments. The regional policy protects rights equally well. What should settle the conflict?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL34",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "respect_division",
+          "label": "The protected regional authority should stand unless the constitution is properly changed."
+        },
+        {
+          "id": "national_override",
+          "label": "The national government should be able to override the region for uniformity."
+        },
+        {
+          "id": "regional_veto",
+          "label": "Regional governments should control even matters assigned nationally."
+        },
+        {
+          "id": "other_reason",
+          "label": "Other features of the case would determine my view."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "respect_division": "supports",
+        "national_override": "opposes",
+        "regional_veto": "neighbor",
+        "other_reason": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-federalism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Holds rights protection constant; checks whether decentralization is constitutionally protected rather than merely useful."
+    },
+    {
+      "id": "SOI108",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "A public agency can offer a service in a minority language without reducing service to others. What should it normally do?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "SO16",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "provide",
+          "label": "Offer the service in that language."
+        },
+        {
+          "id": "private_only",
+          "label": "Allow private use of the language but keep public service in the common language."
+        },
+        {
+          "id": "require_common",
+          "label": "Require everyone to use the common language in public services."
+        },
+        {
+          "id": "depends",
+          "label": "It depends on further circumstances, such as the cost or demand."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "provide": "supports",
+        "private_only": "neighbor",
+        "require_common": "opposes",
+        "depends": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-multiculturalism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Tests institutional accommodation rather than mere tolerance. Feasibility is stipulated, but a single scenario does not establish a general view."
+    },
+    {
+      "id": "SOI109",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "A generally useful public rule burdens a harmless cultural practice unusually heavily. Which response is preferable?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "SO16",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "reasonable_exception",
+          "label": "Allow a reasonable exception while preserving the rule for others."
+        },
+        {
+          "id": "same_rule",
+          "label": "Apply the rule identically despite the unequal burden."
+        },
+        {
+          "id": "private_tolerance",
+          "label": "Permit the practice in private but make no public exception."
+        },
+        {
+          "id": "depends",
+          "label": "The answer depends on the rule and burden involved."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "reasonable_exception": "supports",
+        "same_rule": "opposes",
+        "private_tolerance": "neighbor",
+        "depends": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-multiculturalism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates accommodation from formal uniformity; harmless does not mean every exception is costless."
+    },
+    {
+      "id": "PLI128",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Should a peaceful person normally have a moral claim to settle in another country when no specific threat from that person is shown?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL35",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "presumption",
+          "label": "Yes, with restrictions requiring a further justification."
+        },
+        {
+          "id": "broad_discretion",
+          "label": "No, the receiving state may exclude people for broad collective aims."
+        },
+        {
+          "id": "legal_only",
+          "label": "Only if the receiving state already grants permission."
+        },
+        {
+          "id": "depends",
+          "label": "It depends on further features of the case."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "presumption": "supports",
+        "broad_discretion": "opposes",
+        "legal_only": "neighbor",
+        "depends": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-immigration"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "A moral presumption is distinct from a claim that borders must always be open."
+    },
+    {
+      "id": "PLI129",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A government excludes an otherwise eligible prospective resident solely to keep the country’s current cultural composition. Is that a sufficient moral reason?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL35",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "insufficient",
+          "label": "No, that reason alone is insufficient."
+        },
+        {
+          "id": "sufficient",
+          "label": "Yes, preserving the current composition is sufficient."
+        },
+        {
+          "id": "conditional",
+          "label": "Only if the change would threaten important shared institutions."
+        },
+        {
+          "id": "uncertain",
+          "label": "I cannot judge from the information given."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "insufficient": "supports",
+        "sufficient": "opposes",
+        "conditional": "context",
+        "uncertain": "missing"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-immigration"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Isolates cultural-composition exclusion from security and resource concerns; agreement is not proof of unrestricted migration."
+    },
+    {
+      "id": "PLI130",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "An invading force is attacking civilians. Can organized armed force be morally permissible to defend them?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL36",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "proportionate",
+          "label": "Yes, if it is proportionate and directed at stopping the attack."
+        },
+        {
+          "id": "nonviolent_only",
+          "label": "No, defense should remain nonviolent even then."
+        },
+        {
+          "id": "only_without_killing",
+          "label": "Only if the defense does not intentionally use lethal force."
+        },
+        {
+          "id": "depends",
+          "label": "I would need to know more about the likely harms."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "proportionate": "supports",
+        "nonviolent_only": "opposes",
+        "only_without_killing": "context",
+        "depends": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-pacifism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates defensive-war permissibility from absolute and qualified pacifism; does not license offensive war."
+    },
+    {
+      "id": "PLI131",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "An armed group attacks civilians within its own country. If nonviolent attempts have failed, may an organized defense force use proportionate armed force to stop the attack?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL36",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "may",
+          "label": "Yes, if needed to protect the civilians."
+        },
+        {
+          "id": "never_lethal",
+          "label": "No, organized force that may kill is impermissible even then."
+        },
+        {
+          "id": "unarmed_only",
+          "label": "Only unarmed protective action is permissible."
+        },
+        {
+          "id": "depends",
+          "label": "The answer depends on the expected harms."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "may": "supports",
+        "never_lethal": "opposes",
+        "unarmed_only": "opposes",
+        "depends": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-pacifism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "A domestic protection case complements the invasion case. It remains distinct from permission for military intervention across borders."
+    },
+    {
+      "id": "PLI132",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A government is carrying out mass killings. An outside coalition could stop them with a limited military operation, but faces no threat itself. Is that intervention ever morally permissible?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL37",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "strictly_permissible",
+          "label": "Yes, if likely to protect people with proportionate harm and no workable peaceful alternative."
+        },
+        {
+          "id": "consent_only",
+          "label": "Only if that government consents."
+        },
+        {
+          "id": "never",
+          "label": "No outside military force is permissible in this case."
+        },
+        {
+          "id": "depends",
+          "label": "I would need further evidence about likely consequences or authority."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "strictly_permissible": "supports",
+        "consent_only": "opposes",
+        "never": "opposes",
+        "depends": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-global-justice"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Tests humanitarian intervention separately from national self-defense. Hypothetical feasibility must not be treated as empirical prediction."
+    },
+    {
+      "id": "PLI133",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A government proposes military action abroad to protect its firms’ commercial interests. There is no attack or grave rights abuse. Is that a sufficient justification?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL37",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "not_sufficient",
+          "label": "No, those interests alone do not justify military force."
+        },
+        {
+          "id": "sufficient",
+          "label": "Yes, protecting those interests can justify it."
+        },
+        {
+          "id": "conditional",
+          "label": "Only if the interests are vital to public safety."
+        },
+        {
+          "id": "uncertain",
+          "label": "I cannot tell from this description."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "not_sufficient": "non_entailing",
+        "sufficient": "non_entailing",
+        "conditional": "non_entailing",
+        "uncertain": "missing"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-global-justice"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Rejecting commercial intervention does not support humanitarian intervention; this is a false-positive guard, not a positive indicator."
+    },
+    {
+      "id": "PLI134",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A country considers a tariff solely to shield domestic producers from foreign competition, knowing buyers will pay more. Which view is closer to yours?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL38",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "oppose_tariff",
+          "label": "Voluntary exchange should normally be allowed despite the competition."
+        },
+        {
+          "id": "favor_tariff",
+          "label": "Protecting domestic producers can justify the tariff."
+        },
+        {
+          "id": "conditional",
+          "label": "It depends on the scale of disruption or other circumstances."
+        },
+        {
+          "id": "uncertain",
+          "label": "I do not have a view on this case."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "oppose_tariff": "supports",
+        "favor_tariff": "opposes",
+        "conditional": "context",
+        "uncertain": "missing"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-global-justice"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Research-only trade preference, not a proxy for political cosmopolitanism or Objectivism."
+    },
+    {
+      "id": "PLI135",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Should a government be able to prohibit otherwise lawful voluntary trade across a border solely to make the country economically self-sufficient?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL38",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "no",
+          "label": "No, that aim alone does not justify a prohibition."
+        },
+        {
+          "id": "yes",
+          "label": "Yes, that aim can justify a prohibition."
+        },
+        {
+          "id": "limited",
+          "label": "Only for a small number of essential goods."
+        },
+        {
+          "id": "uncertain",
+          "label": "I do not have a view on this case."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "no": "supports",
+        "yes": "opposes",
+        "limited": "context",
+        "uncertain": "missing"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-global-justice"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Trade restrictions for safety, labor, or environmental harms are outside the case; no complete trade ideology follows."
+    },
+    {
+      "id": "VAI063",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "A new technology offers large benefits but uncertain long-term harms. Which deployment approach is preferable?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "VA22",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "staged",
+          "label": "Introduce it in stages while monitoring harms and retaining the ability to stop."
+        },
+        {
+          "id": "rapid",
+          "label": "Make it widely available now and address harms as they appear."
+        },
+        {
+          "id": "delay",
+          "label": "Wait for much stronger evidence of safety before deployment."
+        },
+        {
+          "id": "depends",
+          "label": "It depends on the kind and scale of possible harm."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "staged": "context",
+        "rapid": "context",
+        "delay": "context",
+        "depends": "context"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-technology"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Maps risk governance, not a one-dimensional pro/anti-technology attitude; no option directly scores a philosophy."
+    },
+    {
+      "id": "VAI064",
+      "revision": 1,
+      "domainId": "VA",
+      "text": "Does a technology count as progress merely because it increases what people can do?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "VA22",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "yes",
+          "label": "Generally yes; expanded capability is itself strong evidence of progress."
+        },
+        {
+          "id": "no",
+          "label": "No; its effects on people and institutions determine whether it is progress."
+        },
+        {
+          "id": "sometimes",
+          "label": "Sometimes, but capability alone is not enough to settle the question."
+        },
+        {
+          "id": "uncertain",
+          "label": "I do not have a view."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "yes": "context",
+        "no": "context",
+        "sometimes": "context",
+        "uncertain": "missing"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-technology"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates capability from value and warns against a generic technology percentage."
+    },
+    {
+      "id": "MSI025",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "Suppose an adult can safely and voluntarily improve memory beyond the usual human range, without treating an illness. Is this morally permissible in principle?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "MS08",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "permissible",
+          "label": "Yes, provided ordinary duties to others are respected."
+        },
+        {
+          "id": "treatment_only",
+          "label": "No, such interventions should be limited to treating illness."
+        },
+        {
+          "id": "fairness",
+          "label": "Only if access and effects on others are fair."
+        },
+        {
+          "id": "uncertain",
+          "label": "I do not have a settled view."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "permissible": "supports",
+        "treatment_only": "opposes",
+        "fairness": "context",
+        "uncertain": "missing"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-enhancement"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Enhancement beyond treatment, not a claim that all technology is beneficial or that real interventions are safe."
+    },
+    {
+      "id": "SOI110",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "An inherited social custom keeps some people from participating on equal terms, although changing it would unsettle a familiar practice. Which consideration should normally prevail?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "SO17",
+          "relation": "diagnostic",
+          "role": "primary"
+        }
+      ],
+      "options": [
+        {
+          "id": "equal_participation",
+          "label": "Revise the custom to allow equal participation."
+        },
+        {
+          "id": "continuity",
+          "label": "Preserve the custom because continuity carries greater weight here."
+        },
+        {
+          "id": "case_by_case",
+          "label": "It depends on the cost and form of change."
+        },
+        {
+          "id": "uncertain",
+          "label": "I need more information."
+        }
+      ],
+      "draftAnswerMeanings": {
+        "equal_participation": "supports",
+        "continuity": "opposes",
+        "case_by_case": "context",
+        "uncertain": "missing"
+      },
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "dimension_gap",
+        "unreleased"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "dimension-social-norms"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "One scenario cannot establish a broad progressive identity or historical theory of progress."
+    }
+  ]
+}
