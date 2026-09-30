@@ -76,7 +76,7 @@ current.modelRelease=index.current;
 current.modelReleaseVersions=index.versions;
 current.releaseChannels=channelIndex.current;
 await verifyRelease(root,current,manifest);
-const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v6.json');
+const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v7.json');
 const activeAffinity=await readJson(root,pinned.affinityCatalog.path);
 if(evidenceAudit.release.modelVersion!==pinned.worldviewModel.version||
  evidenceAudit.release.routePolicyVersion!==pinned.progressiveDepth.version)

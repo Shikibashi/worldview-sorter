@@ -20,7 +20,8 @@ assert.equal(summary.affinities.hasEstablishedAffinity,summary.affinities.tradit
 assert.equal(summary.affinityPresentation.hasEstablishedAffinity,false,
  'Legacy scope mappings cannot establish a doctrinal affinity in respondent-facing presentation.');
 const exactlySourced=new Set(['easy-ontology-scoped','fallibilism-about-knowledge',
- 'sensory-empiricism-about-the-external-world']);
+ 'sensory-empiricism-about-the-external-world','act-consequentialism-scoped',
+ 'rule-consequentialism-scoped']);
 assert.ok(summary.affinityPresentation.traditions.filter(t=>!exactlySourced.has(t.traditionId))
  .every(t=>t.state==='legacy_scope_unresolved'&&t.legacyDefiningCriterionIds.length>0));
 const easyOnQuick=summary.affinityPresentation.traditions.find(t=>t.traditionId==='easy-ontology-scoped');

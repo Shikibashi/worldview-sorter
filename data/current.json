@@ -68,8 +68,8 @@
     "sha256": "1a57e7142a11561763b181e6d0f862d050379680237c1a5c5fb06d78ac89543b"
   },
   "quizExperience": {
-    "version": "quiz-1.12.0",
-    "path": "data/experience/policy-v1.12.json",
+    "version": "quiz-1.13.0",
+    "path": "data/experience/policy-v1.13.json",
     "entrypoint": "apps/quiz/index.html"
   },
   "publicForm": {
@@ -100,10 +100,10 @@
   },
   "affinityCatalog": {
     "key": "affinity",
-    "version": "philosophical-affinity-1.6.0",
-    "path": "data/affinities/catalog-v1.6.json",
-    "sha256": "64f6181e721ab707cffcd6a660e00ce900c244367381b8fa64edb6563351e998",
-    "manifestPath": "data/affinities/manifest-v1.6.json"
+    "version": "philosophical-affinity-1.7.0",
+    "path": "data/affinities/catalog-v1.7.json",
+    "sha256": "034f3f90d98b5268a9b7dcec02cac89aaaca4947a269dfa4d8d918c2ba1f819f",
+    "manifestPath": "data/affinities/manifest-v1.7.json"
   },
   "affinityCatalogVersions": [
     {
@@ -140,21 +140,26 @@
       "version": "philosophical-affinity-1.6.0",
       "path": "data/affinities/catalog-v1.6.json",
       "manifestPath": "data/affinities/manifest-v1.6.json"
+    },
+    {
+      "version": "philosophical-affinity-1.7.0",
+      "path": "data/affinities/catalog-v1.7.json",
+      "manifestPath": "data/affinities/manifest-v1.7.json"
     }
   ],
   "progressiveDepth": {
     "key": "progressive_routes",
-    "version": "progressive-depth-1.6.0",
-    "path": "data/experience/progressive-depth-v1.6.json",
-    "sha256": "5e56522a2bfa09cdbe230fdd0a85ca9ba30c300d677a6fc78a2e9d1057640486",
-    "manifestPath": "data/experience/progressive-depth-v1.6.manifest.json"
+    "version": "progressive-depth-1.7.0",
+    "path": "data/experience/progressive-depth-v1.7.json",
+    "sha256": "1c4fc246ad8909e40aa8414ca8e1f95a6a6534bbb98de84f9eb25efbfef311c3",
+    "manifestPath": "data/experience/progressive-depth-v1.7.manifest.json"
   },
   "localizationCatalog": {
     "key": "localization_catalog",
-    "version": "localization-catalog-1.6.0",
-    "path": "data/localization/catalog-v7.json",
-    "sha256": "1c10d98495de6cf19557753b19b330969379f03b1e17d454e267c8be15447586",
-    "manifestPath": "data/localization/manifest-v1.6.json"
+    "version": "localization-catalog-1.7.0",
+    "path": "data/localization/catalog-v8.json",
+    "sha256": "16b76a284debcc325c016735f96894ba8a1f01a8cf948046320be2db1c12e974",
+    "manifestPath": "data/localization/manifest-v1.7.json"
   },
   "localizationCatalogVersions": [
     {
@@ -191,23 +196,28 @@
       "version": "localization-catalog-1.6.0",
       "path": "data/localization/catalog-v7.json",
       "manifestPath": "data/localization/manifest-v1.6.json"
+    },
+    {
+      "version": "localization-catalog-1.7.0",
+      "path": "data/localization/catalog-v8.json",
+      "manifestPath": "data/localization/manifest-v1.7.json"
     }
   ],
   "localizationBundles": [
     {
       "locale": "ar",
-      "version": "localization-ar-draft-7",
-      "path": "data/localization/ar-draft-v7.json"
+      "version": "localization-ar-draft-8",
+      "path": "data/localization/ar-draft-v8.json"
     },
     {
       "locale": "en-US",
-      "version": "localization-en-US-1.6.0",
-      "path": "data/localization/en-US-v7.json"
+      "version": "localization-en-US-1.7.0",
+      "path": "data/localization/en-US-v8.json"
     },
     {
       "locale": "es-ES",
-      "version": "localization-es-ES-draft-7",
-      "path": "data/localization/es-ES-draft-v7.json"
+      "version": "localization-es-ES-draft-8",
+      "path": "data/localization/es-ES-draft-v8.json"
     }
   ],
   "registry": {
@@ -345,11 +355,26 @@
       "locale": "es-ES",
       "version": "localization-es-ES-draft-7",
       "path": "data/localization/es-ES-draft-v7.json"
+    },
+    {
+      "locale": "ar",
+      "version": "localization-ar-draft-8",
+      "path": "data/localization/ar-draft-v8.json"
+    },
+    {
+      "locale": "en-US",
+      "version": "localization-en-US-1.7.0",
+      "path": "data/localization/en-US-v8.json"
+    },
+    {
+      "locale": "es-ES",
+      "version": "localization-es-ES-draft-8",
+      "path": "data/localization/es-ES-draft-v8.json"
     }
   ],
   "modelRelease": {
-    "version": "model-release-1.8.0",
-    "path": "data/releases/model-release-v1.8.0.json"
+    "version": "model-release-1.9.0",
+    "path": "data/releases/model-release-v1.9.0.json"
   },
   "modelReleaseVersions": [
     {
@@ -387,10 +412,14 @@
     {
       "version": "model-release-1.8.0",
       "path": "data/releases/model-release-v1.8.0.json"
+    },
+    {
+      "version": "model-release-1.9.0",
+      "path": "data/releases/model-release-v1.9.0.json"
     }
   ],
   "releaseChannels": {
-    "version": "worldview-release-channels-9.0.0",
-    "path": "data/releases/channels-v9.json"
+    "version": "worldview-release-channels-10.0.0",
+    "path": "data/releases/channels-v10.json"
   }
 }

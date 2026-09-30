@@ -5,7 +5,7 @@ import {evaluatePhilosophicalAffinities,validateAffinityCatalog} from '../packag
 import {currentFromManifest,loadSnapshot,validateContentIntegrity} from '../packages/governance/release.js';
 
 const root=new URL('../',import.meta.url),read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
-const current=await read('data/current.json');
+const current=currentFromManifest(await read('data/releases/model-release-v1.6.0.json'));
 const reviewedRefs=currentFromManifest(await read('data/releases/model-release-v1.6.0.json'));
 const [bank,model,scalesDoc,routes,pilot,catalog,oldRelease]=await Promise.all([
  read(reviewedRefs.candidateBank.path),read(reviewedRefs.worldviewModel.path),read(reviewedRefs.responseScales.path),

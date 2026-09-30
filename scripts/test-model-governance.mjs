@@ -95,7 +95,7 @@ assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,143);
 assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,20);
 assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,123);
 assert.ok(provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
-assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,21);
+assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,23);
 assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.length,14);
 assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.length,16);
 assert.ok(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.some(row=>
