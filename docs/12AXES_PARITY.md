@@ -1,5 +1,7 @@
 # 12Axes interaction-parity reference
 
+This document records the earlier **interaction** milestone. A later [question-content gap review](DIMENSION_QUESTION_GAPS.md) compares the twelve topics visible in user-supplied result screenshots with the current Worldview Sorter bank and routes. That review proposes original questions without adopting 12Axes scoring or identity claims.
+
 The browser runner intentionally borrows the interaction pattern of modern 12Axes while not copying its political dimensions, scoring model, or source code.
 
 Reference implementation reviewed:

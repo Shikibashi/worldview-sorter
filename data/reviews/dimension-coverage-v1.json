@@ -1,0 +1,595 @@
+{
+  "schemaVersion": "dimension-content-review-1",
+  "reviewVersion": "1.0.0",
+  "status": "editorial_review_not_scoring_or_release",
+  "reference": "User-supplied 12axes result images; only displayed dimension labels were used. No questions or scoring code were copied.",
+  "candidateBankVersion": "0.9.0",
+  "routePolicyVersion": "progressive-depth-1.1.0",
+  "modelVersion": "generic-1.1.0-pilot",
+  "currentItemCount": 562,
+  "draftItemCount": 16,
+  "routes": [
+    {
+      "id": "quick",
+      "version": "quick-1.1.0",
+      "itemCount": 64
+    },
+    {
+      "id": "standard",
+      "version": "standard-1.1.0",
+      "itemCount": 120
+    },
+    {
+      "id": "full",
+      "version": "full-1.1.0",
+      "itemCount": 238
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "structure",
+      "referenceLabel": "Federal",
+      "worldviewTarget": "Constitutionally divided authority",
+      "existingRelationship": "partial",
+      "nearestExistingConstructIds": [
+        "PL05"
+      ],
+      "existingPrimaryItemRefs": [
+        "PLI003@1",
+        "PLI004@1",
+        "PLI050@1"
+      ],
+      "proposedTargetIds": [
+        "PL34"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI126@1",
+        "PLI127@1"
+      ],
+      "publicRuleIds": [
+        "audit2-PL05-decentralization"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [
+            "PLI003@1",
+            "PLI004@1",
+            "PLI050@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "audit2-PL05-decentralization"
+          ]
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [
+            "PLI003@1",
+            "PLI004@1",
+            "PLI050@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "audit2-PL05-decentralization"
+          ]
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [
+            "PLI003@1",
+            "PLI004@1",
+            "PLI050@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "audit2-PL05-decentralization"
+          ]
+        }
+      ],
+      "limitation": "Decentralization is asked, but entrenched federal authority is not."
+    },
+    {
+      "id": "representation",
+      "referenceLabel": "Democracy",
+      "worldviewTarget": "Democratic authorization of political rule",
+      "existingRelationship": "direct_bank_only",
+      "nearestExistingConstructIds": [
+        "PL04"
+      ],
+      "existingPrimaryItemRefs": [
+        "PLI006@1",
+        "PLI027@1",
+        "PLI049@1"
+      ],
+      "proposedTargetIds": [],
+      "unreleasedDraftItemRefs": [],
+      "publicRuleIds": [
+        "ph-democratic-authorization"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        }
+      ],
+      "limitation": "Three relevant bank items are absent from every current public route."
+    },
+    {
+      "id": "power",
+      "referenceLabel": "Liberty",
+      "worldviewTarget": "Noninterference and political liberty",
+      "existingRelationship": "direct_bank_only",
+      "nearestExistingConstructIds": [
+        "PL06"
+      ],
+      "existingPrimaryItemRefs": [
+        "PLI007@1",
+        "PLI028@1",
+        "PLI051@1"
+      ],
+      "proposedTargetIds": [],
+      "unreleasedDraftItemRefs": [],
+      "publicRuleIds": [
+        "noninterference"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        }
+      ],
+      "limitation": "The direct noninterference rule is not assessable on public routes; liberty has other meanings too."
+    },
+    {
+      "id": "immigration",
+      "referenceLabel": "Multiculturalism",
+      "worldviewTarget": "Cultural accommodation and migration claims, separately",
+      "existingRelationship": "partial_bank_only",
+      "nearestExistingConstructIds": [
+        "SO04"
+      ],
+      "existingPrimaryItemRefs": [
+        "SOI006@1",
+        "SOI017@1",
+        "SOI028@1"
+      ],
+      "proposedTargetIds": [
+        "SO16",
+        "PL35"
+      ],
+      "unreleasedDraftItemRefs": [
+        "SOI108@1",
+        "SOI109@1",
+        "PLI128@1",
+        "PLI129@1"
+      ],
+      "publicRuleIds": [],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        }
+      ],
+      "limitation": "Bank tolerance items are off-route; neither public accommodation nor immigration can be inferred."
+    },
+    {
+      "id": "diplomacy",
+      "referenceLabel": "Pacifist",
+      "worldviewTarget": "Permissibility of defensive armed force",
+      "existingRelationship": "absent",
+      "nearestExistingConstructIds": [],
+      "existingPrimaryItemRefs": [],
+      "proposedTargetIds": [
+        "PL36"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI130@1",
+        "PLI131@1"
+      ],
+      "publicRuleIds": [],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        }
+      ],
+      "limitation": "Foreign concern is not pacifism."
+    },
+    {
+      "id": "intervention",
+      "referenceLabel": "Nationalist",
+      "worldviewTarget": "Humanitarian versus interest-driven intervention",
+      "existingRelationship": "adjacent_only",
+      "nearestExistingConstructIds": [
+        "PL23"
+      ],
+      "existingPrimaryItemRefs": [
+        "PLI021@1",
+        "PLI044@1",
+        "PLI068@1"
+      ],
+      "proposedTargetIds": [
+        "PL37"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI132@1",
+        "PLI133@1"
+      ],
+      "publicRuleIds": [
+        "ph-national-obligations"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        }
+      ],
+      "limitation": "National obligation is not a position on foreign military intervention."
+    },
+    {
+      "id": "economy",
+      "referenceLabel": "Private",
+      "worldviewTarget": "Ownership and preinstitutional rights",
+      "existingRelationship": "direct_bank_only",
+      "nearestExistingConstructIds": [
+        "PL12",
+        "PL27"
+      ],
+      "existingPrimaryItemRefs": [
+        "PLI014@1",
+        "PLI034@1",
+        "PLI059@1",
+        "PLI100@1",
+        "PLI101@1",
+        "PLI102@1"
+      ],
+      "proposedTargetIds": [],
+      "unreleasedDraftItemRefs": [],
+      "publicRuleIds": [
+        "construct-PL27"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        }
+      ],
+      "limitation": "Ownership and rights are distinct; their existing items are absent from public routes."
+    },
+    {
+      "id": "control",
+      "referenceLabel": "Free market",
+      "worldviewTarget": "Markets as a coordination mechanism",
+      "existingRelationship": "partial",
+      "nearestExistingConstructIds": [
+        "PL13"
+      ],
+      "existingPrimaryItemRefs": [
+        "PLI005@2",
+        "PLI035@1",
+        "PLI055@1"
+      ],
+      "proposedTargetIds": [],
+      "unreleasedDraftItemRefs": [],
+      "publicRuleIds": [
+        "legacy-objectivism-market-coordination"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [
+            "PLI035@1",
+            "PLI055@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "legacy-objectivism-market-coordination"
+          ]
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [
+            "PLI035@1",
+            "PLI055@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "legacy-objectivism-market-coordination"
+          ]
+        }
+      ],
+      "limitation": "Two route items address coordination, not a complete laissez-faire political economy."
+    },
+    {
+      "id": "trade",
+      "referenceLabel": "Globalism",
+      "worldviewTarget": "Cross-border exchange restrictions",
+      "existingRelationship": "adjacent_only",
+      "nearestExistingConstructIds": [
+        "PL13",
+        "PL22"
+      ],
+      "existingPrimaryItemRefs": [
+        "PLI005@2",
+        "PLI020@1",
+        "PLI035@1",
+        "PLI043@1",
+        "PLI055@1",
+        "PLI067@1"
+      ],
+      "proposedTargetIds": [
+        "PL38"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI134@1",
+        "PLI135@1"
+      ],
+      "publicRuleIds": [
+        "legacy-objectivism-market-coordination",
+        "ph-political-cosmopolitanism"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [
+            "PLI035@1",
+            "PLI055@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "legacy-objectivism-market-coordination"
+          ]
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [
+            "PLI020@1",
+            "PLI035@1",
+            "PLI055@1",
+            "PLI067@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "legacy-objectivism-market-coordination"
+          ]
+        }
+      ],
+      "limitation": "Domestic market coordination and concern for foreigners do not determine trade policy."
+    },
+    {
+      "id": "religion",
+      "referenceLabel": "Irreligious",
+      "worldviewTarget": "Deity belief, religious priority and public religious authority",
+      "existingRelationship": "partial",
+      "nearestExistingConstructIds": [
+        "RC01",
+        "RC10",
+        "PL26"
+      ],
+      "existingPrimaryItemRefs": [
+        "RCI001@1",
+        "RCI013@1",
+        "PLI023@1",
+        "RCI014@1",
+        "RCI020@1",
+        "PLI046@1",
+        "RCI021@1",
+        "RCI030@1",
+        "PLI070@1"
+      ],
+      "proposedTargetIds": [],
+      "unreleasedDraftItemRefs": [],
+      "publicRuleIds": [
+        "divine-existence",
+        "ph-religious-priority",
+        "ph-religious-public-law",
+        "theological-suspension"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [
+            "RCI001@1",
+            "RCI014@1",
+            "RCI021@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "divine-existence",
+            "theological-suspension"
+          ]
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [
+            "RCI001@1",
+            "RCI014@1",
+            "RCI021@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "divine-existence",
+            "theological-suspension"
+          ]
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [
+            "RCI001@1",
+            "RCI013@1",
+            "RCI014@1",
+            "RCI021@1",
+            "RCI030@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "divine-existence",
+            "ph-religious-priority",
+            "theological-suspension"
+          ]
+        }
+      ],
+      "limitation": "These are distinct propositions; nonbelief alone does not determine public-law or naturalist views."
+    },
+    {
+      "id": "morality",
+      "referenceLabel": "Progressive",
+      "worldviewTarget": "Tradition, reform and moral-social change",
+      "existingRelationship": "adjacent_only",
+      "nearestExistingConstructIds": [
+        "VA11",
+        "PL25"
+      ],
+      "existingPrimaryItemRefs": [
+        "VAI005@1",
+        "VAI027@1",
+        "VAI041@1",
+        "PLI075@1",
+        "PLI076@1",
+        "PLI077@1"
+      ],
+      "proposedTargetIds": [
+        "SO17"
+      ],
+      "unreleasedDraftItemRefs": [
+        "SOI110@1"
+      ],
+      "publicRuleIds": [
+        "priority-VA11"
+      ],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [
+            "VAI005@1"
+          ],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [
+            "VAI005@1"
+          ],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [
+            "VAI005@1",
+            "VAI027@1",
+            "VAI041@1",
+            "PLI076@1",
+            "PLI077@1"
+          ],
+          "assessableRelatedRuleIds": [
+            "priority-VA11"
+          ]
+        }
+      ],
+      "limitation": "Personal tradition and institutional reform are not a general progressive identity."
+    },
+    {
+      "id": "technology",
+      "referenceLabel": "Technology",
+      "worldviewTarget": "Deployment risk and human enhancement, separately",
+      "existingRelationship": "absent",
+      "nearestExistingConstructIds": [],
+      "existingPrimaryItemRefs": [],
+      "proposedTargetIds": [
+        "VA22",
+        "MS08"
+      ],
+      "unreleasedDraftItemRefs": [
+        "VAI063@1",
+        "VAI064@1",
+        "MSI025@1"
+      ],
+      "publicRuleIds": [],
+      "publicRoutes": [
+        {
+          "routeId": "quick",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "standard",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        },
+        {
+          "routeId": "full",
+          "shownExistingItemRefs": [],
+          "assessableRelatedRuleIds": []
+        }
+      ],
+      "limitation": "The current bank offers no direct technology outlook items."
+    }
+  ]
+}
