@@ -72,7 +72,7 @@
     "test:audit": "node scripts/test-unmapped-audit.mjs && node scripts/test-unmapped-audit-v2.mjs",
     "test:pilot": "node scripts/test-pilot-v1.mjs",
     "test:so09": "node scripts/test-so09-retirement.mjs",
-    "test:affinity": "node scripts/test-affinity-catalog-v1.mjs"
+    "test:affinity": "node scripts/test-affinity-catalog-v1.mjs && node scripts/test-affinity-expansion-review.mjs"
   },
   "engines": {
     "node": ">=20"
