@@ -67,7 +67,7 @@ try{
  await checkAccessibility(page,'Landing');
  check('Root opens the quiz rather than research runner',page.url().endsWith('/apps/quiz/'));
  await page.screenshot({path:'artifacts/quiz/landing-desktop.png',fullPage:true});
- check('Three depth presets including the 240-question pilot route',await page.locator('.route').count()===3&&await page.locator('.route[data-size="240"]').count()===1);
+ check('Three depth presets including the 242-question pilot route',await page.locator('.route').count()===3&&await page.locator('.route[data-size="242"]').count()===1);
  check('Only reviewed English wording is respondent-available',await page.locator('#locale-choice').inputValue()==='en-US'&&
   await page.locator('.route[data-size="64"]').isEnabled());
  for(const locale of ['es-ES','ar']){await page.locator('#locale-choice').selectOption(locale);
@@ -298,9 +298,9 @@ try{
  await page.reload();await page.waitForSelector('body[data-ready="true"]');await page.locator('#resume').click();await page.locator('#results').waitFor({state:'visible'});
  check('Adaptive stage and policy history survive reload',await page.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.depth.events.length)===3);
  await page.locator('#depth-next-full').click();await page.locator('#quiz').waitFor({state:'visible'});await page.locator('#auto').uncheck();
- await completeStage(page,241);
+ await completeStage(page,243);
  const deepSaved=await page.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz);
- check('Progressive Full reuses all frozen pilot items without duplicates',deepSaved.packet.size===240&&new Set(deepSaved.packet.entries.map(e=>e.itemId)).size===240&&deepSaved.depth.currentRouteId==='full');
+ check('Progressive Full reuses all frozen pilot items without duplicates',deepSaved.packet.size===242&&new Set(deepSaved.packet.entries.map(e=>e.itemId)).size===242&&deepSaved.depth.currentRouteId==='full');
  check('Progressive Full keeps historical checkpoints and is not mistaken for a fresh research pilot',deepSaved.depth.checkpoints.length===4&&!(await page.locator('#research-section').isVisible()));
  for(const name of ['/.git/config','/.data/pilot-sessions/anything.json','/packages/collection/store.js','/data/'+path.basename(storePath)+'/secret.json','/unlisted.txt']){
   const response=await context.request.get(base+name);check('Private or unlisted path rejected: '+name,response.status()===404);
@@ -315,17 +315,24 @@ try{
  await fullPage.goto(base+'/');await fullPage.waitForSelector('body[data-ready="true"]');
  const initialLoadMs=await fullPage.evaluate(()=>Math.round(performance.getEntriesByType('navigation')[0]?.loadEventEnd??0));
  await fullPage.screenshot({path:'artifacts/quiz/full-route-landing-mobile.png',fullPage:true});
- await fullPage.locator('.route[data-size="240"]').click();await fullPage.locator('#quiz').waitFor({state:'visible'});await fullPage.locator('#auto').uncheck();
- check('Pilot route begins at question 1 of 240',/Question 1 of 240/.test(await fullPage.locator('#position').innerText()));
+ await fullPage.locator('.route[data-size="242"]').click();await fullPage.locator('#quiz').waitFor({state:'visible'});await fullPage.locator('#auto').uncheck();
+ check('Pilot route begins at question 1 of 242',/Question 1 of 242/.test(await fullPage.locator('#position').innerText()));
  await fullPage.screenshot({path:'artifacts/quiz/full-route-question-mobile.png',fullPage:true});
  let fullSteps=0;const fullScales=new Set(),transitionMs=[];let resultGenerationMs=null;
  while(await fullPage.locator('#quiz').isVisible()){
- assert.ok(fullSteps++<241,'Pilot browser loop must terminate');
+ assert.ok(fullSteps++<243,'Pilot browser loop must terminate');
   const currentId=await fullPage.locator('#quiz').getAttribute('data-item-id');
   if(['PLI126','PLI127'].includes(currentId)){
    check(currentId+' federal discriminator fits the mobile questionnaire',await fullPage.evaluate(()=>
     document.documentElement.scrollWidth<=innerWidth)&&await fullPage.locator('#answer-options .answer').count()===4);
    await fullPage.screenshot({path:'artifacts/quiz/'+currentId+'-mobile.png',fullPage:true});
+  }
+  if(currentId==='NEI122'){
+   check('Act-versus-rule discriminator fits the mobile questionnaire',
+    await fullPage.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)&&
+    await fullPage.locator('#answer-options .answer').count()===4&&
+    /what ultimately determines/i.test(await fullPage.locator('#question-title').innerText()));
+   await fullPage.screenshot({path:'artifacts/quiz/NEI122-mobile.png',fullPage:true});
   }
   const scale=await fullPage.locator('#quiz').getAttribute('data-scale');fullScales.add(scale);
   if(scale==='ranking_all'){
@@ -341,7 +348,7 @@ try{
    const before=await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session.responses);
    await fullPage.locator('#pause').click();await fullPage.reload();await fullPage.waitForSelector('body[data-ready="true"]');await fullPage.locator('#resume').click();
    await fullPage.locator('#quiz').waitFor({state:'visible'});await fullPage.locator('#auto').uncheck();
-   check('240 route resumes at the same mid-quiz item',await fullPage.locator('#quiz').getAttribute('data-item-id')===id);
+   check('242 route resumes at the same mid-quiz item',await fullPage.locator('#quiz').getAttribute('data-item-id')===id);
    assert.deepEqual(await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session.responses),before);
    await fullPage.locator('#back').click();await fullPage.locator('#next').click();
    check('Full-route Back/Next preserves answers and restores position',await fullPage.locator('#quiz').getAttribute('data-item-id')===id);
@@ -350,12 +357,12 @@ try{
  await fullPage.locator('#results').waitFor({state:'visible'});
  const fullSaved=await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz);
  check('Completed pilot backup pins the affinity catalog version',fullSaved.affinityCatalogVersion===affinityCatalog.catalogVersion);
- check('240 unique assigned items survive the pilot browser flow',fullSaved.packet.size===240&&new Set(fullSaved.packet.entries.map(e=>e.itemId)).size===240);
- check('All pilot positions are answered or legitimately branch-skipped',fullSaved.session.responses.length+fullSaved.session.presentedItems.filter(e=>e.skippedByBranch).length===240);
+ check('242 unique assigned items survive the pilot browser flow',fullSaved.packet.size===242&&new Set(fullSaved.packet.entries.map(e=>e.itemId)).size===242);
+ check('All pilot positions are answered or legitimately branch-skipped',fullSaved.session.responses.length+fullSaved.session.presentedItems.filter(e=>e.skippedByBranch).length===242);
  check('Pilot results cover twelve panels and meaningful subfacets',await fullPage.locator('#domain-map .domain').count()===12&&await fullPage.locator('[data-facet-id]').count()>=31);
  check('Full route exercised all seven response scales',fullScales.size===7);
  check('Full route has a distinct instrument and saved policy',fullSaved.session.instrumentVersion===fullPolicy.instrumentVersion&&fullSaved.packet.formPolicyVersion===fullPolicy.policyVersion);
- check('240 route never posts answers and has no browser errors',fullPosts===0&&fullErrors.length===0);
+ check('242 route never posts answers and has no browser errors',fullPosts===0&&fullErrors.length===0);
  check('Pilot research contribution is opt-in and initially unchecked',await fullPage.locator('#research-section').isVisible()&&!(await fullPage.locator('#research-optin').isChecked())&&await fullPage.locator('#research-submit').isDisabled());
  check('Pilot results expose overview and unmeasured content',await fullPage.locator('#overview-section').isVisible()&&await fullPage.locator('#unmeasured-section').isVisible());
  check('Overview does not call unreviewed answer patterns established commitments',
@@ -453,7 +460,7 @@ try{
  const fullDownloadEvent=fullPage.waitForEvent('download');await fullPage.locator('#result-answers').click();const fullDownload=await fullDownloadEvent;
  const fullStream=await fullDownload.createReadStream(),fullChunks=[];for await(const chunk of fullStream)fullChunks.push(chunk);
  assert.deepEqual(JSON.parse(Buffer.concat(fullChunks).toString()),fullSaved.session);
- check('Full 240-session export exactly preserves raw responses',true);
+ check('Full 242-session export exactly preserves raw responses',true);
  await fullPage.reload();await fullPage.waitForSelector('body[data-ready="true"]');await fullPage.locator('#resume').click();await fullPage.locator('#results').waitFor({state:'visible'});
  assert.deepEqual(await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session),fullSaved.session);
  check('Completed full-route backup reopens without changing answers',true);

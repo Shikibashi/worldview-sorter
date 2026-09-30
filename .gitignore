@@ -3,3 +3,4 @@
 node_modules/
 artifacts/
 dist/
+data/quiz-private-test-*/
