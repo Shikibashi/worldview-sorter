@@ -165,7 +165,8 @@ try{
  const svgEvent=page.waitForEvent('download');await page.locator('#download-share-svg').click();const svgDownload=await svgEvent;
  check('Image card is an explicit download',svgDownload.suggestedFilename().endsWith('.svg'));
  const viewer=await context.newPage();await viewer.goto(base+'/apps/quiz/share.html');await viewer.locator('#snapshot-file').setInputFiles({name:'selected.json',mimeType:'application/json',buffer:snapshotBytes});
- check('Accessible file viewer opens historical snapshot without publishing',/Selected answer patterns/.test(await viewer.locator('#snapshot-view').innerText()));
+ await viewer.locator('#snapshot-view h2').waitFor();
+ check('Accessible file viewer opens historical snapshot without publishing',/Selected answer patterns/.test(await viewer.locator('#snapshot-view').textContent()));
  await viewer.locator('#snapshot-view .pattern details summary').first().click();
  check('Snapshot viewer qualifies source citation roles',/Source-record context, not linked|Topic citation; claim-level relevance|Rule-linked/.test(
   await viewer.locator('#snapshot-view .pattern details').first().innerText()));
@@ -350,7 +351,7 @@ try{
  check('Pilot research contribution is opt-in and initially unchecked',await fullPage.locator('#research-section').isVisible()&&!(await fullPage.locator('#research-optin').isChecked())&&await fullPage.locator('#research-submit').isDisabled());
  check('Pilot results expose overview and unmeasured content',await fullPage.locator('#overview-section').isVisible()&&await fullPage.locator('#unmeasured-section').isVisible());
  check('Overview does not call unreviewed answer patterns established commitments',
-  await fullPage.locator('#overview-title').innerText()==='Selected answer patterns'&&
+  await fullPage.locator('#overview-title').textContent()==='Selected answer patterns'&&
   /rule-linked supporting source claim/.test(await fullPage.locator('#overview-section > p').innerText())&&
   !(await fullPage.locator('#overview-section').innerText()).includes('Clearly evidenced commitments'));
  check('Pilot affinity section renders all six scoped comparisons',await fullPage.locator('#affinity-section').isVisible()&&await fullPage.locator('[data-tradition-id]').count()===6);
