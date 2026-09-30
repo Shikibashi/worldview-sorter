@@ -1,8 +1,8 @@
 {
   "schemaVersion": "worldview-experience-index-1",
   "current": {
-    "version": "quiz-1.12.0",
-    "path": "data/experience/policy-v1.12.json",
+    "version": "quiz-1.13.0",
+    "path": "data/experience/policy-v1.13.json",
     "entrypoint": "apps/quiz/index.html"
   }
 }

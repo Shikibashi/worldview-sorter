@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-act-rule-affinity-release.mjs"
+    ]
+  },
+  "implementationRefs": [
+    "scripts/build-act-rule-affinities-v1.mjs",
+    "scripts/test-act-rule-affinity-release.mjs",
+    "docs/governance/ACT_RULE_AFFINITY_REVIEW.md"
+  ],
+  "respondentImpact": "Only two already interpreted direct criteria can establish scoped overlap or divergence. Quick and Standard remain unmeasured; no identity, rank, or percentage is produced.",
+  "historicalCompatibility": "Model release 1.8.0 and its nine-entry catalog, route item sets, and result snapshots remain pinned. No raw answer or interpretation rule changes.",
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T21:10:00Z",
+        "note": "Reviewed SEP Consequentialism and SEP Rule Consequentialism, including act/rule criteria, decision procedure, value theory, and disputed formulations."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T21:10:00Z",
+        "note": "Checked exact NEI122/NEI014/NEI123 evidence units, route omissions, near-neighbor fixtures, and historical catalog replay."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T21:10:00Z",
+        "note": "Canonical English only. Spanish and Arabic remain unavailable draft targets pending translation review."
+      }
+    ]
+  },
+  "currentBehavior": "Nine public comparisons omit the two direct consequence criteria.",
+  "proposedBehavior": "Add two scoped doctrine comparisons; retain missing value theory and internal variation explicitly.",
+  "rationale": "These released propositions can support a careful doctrinal comparison without new questions or stronger inference.",
+  "alternatives": [
+    "Infer utilitarianism: rejected because value theory, aggregation, and other defining doctrine remain unmeasured.",
+    "Map generic outcome concern: rejected because it does not distinguish act, rule, and duty criteria."
+  ],
+  "sourceClaims": [
+    {
+      "sourceId": "sep-act-consequence-criterion",
+      "relationship": "supports",
+      "claim": "Act consequentialism applies the moral-rightness criterion directly to an act’s own consequences; in its maximizing form, an act is right only when its outcome is at least as good as the outcomes of available alternatives. This differs from full rule consequentialism, which makes wrongness depend on consequence-justified rules (sections 1, 2, and 5)."
+    },
+    {
+      "sourceId": "sep-rule-consequence-criterion",
+      "relationship": "supports",
+      "claim": "For a full rule-consequentialist criterion of wrongness, acts are wrong when forbidden by rules justified by their consequences. This differs from using consequence-justified rules merely as a decision procedure while direct act outcomes determine wrongness (sections 4 and 8)."
+    }
+  ],
+  "philosophicalBasis": {
+    "proposition": "An act’s moral rightness depends on conformity to rules ultimately justified by their consequences, even when that act alone would produce a better outcome.",
+    "neighboringViews": [
+      "generic outcome concern",
+      "rule-guided decision procedure",
+      "deontological rule constraint",
+      "utilitarianism"
+    ],
+    "nonEntailments": [
+      "No complete philosophical identity follows.",
+      "Neither criterion alone establishes a theory of value, welfare aggregation, or hedonism."
+    ],
+    "existingGap": "The model already interprets NE22 and NE23, but the public catalog does not yet expose their doctrinal contrast.",
+    "scholarlyDisagreement": "SEP distinguishes direct versus rule-based criteria, decision procedures, value theories, and rival rule-consequentialist formulations."
+  },
+  "proposalId": "MCP-2026-067",
+  "title": "Pin Rule consequentialism (scoped criterion) criterion consequence-justified-rule-criterion",
+  "objectType": "criterion",
+  "changeClass": "new_object",
+  "affectedObjects": [
+    {
+      "type": "criterion",
+      "id": "rule-consequentialism-scoped/consequence-justified-rule-criterion"
+    }
+  ],
+  "release": {
+    "targetVersion": "model-release-1.9.0",
+    "migration": "No data migration; old administrations retain their pinned release and catalog.",
+    "components": [
+      "affinity"
+    ]
+  }
+}

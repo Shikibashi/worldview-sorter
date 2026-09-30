@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "worldview-localization-bundle-1",
+  "bundleVersion": "localization-ar-draft-8",
+  "locale": "ar",
+  "language": "ar",
+  "direction": "rtl",
+  "status": "untranslated",
+  "canonical": false,
+  "bankVersion": "0.12.0",
+  "modelVersion": "generic-1.6.0-pilot",
+  "affinityCatalogVersion": "philosophical-affinity-1.7.0",
+  "itemRealizations": [],
+  "scaleRealizations": [],
+  "propositionRealizations": [],
+  "affinityRealizations": [],
+  "resultStates": {},
+  "uiStrings": {},
+  "sourceNotes": "Candidate RTL locale only. No Arabic philosophical wording, answer categories, or result claims have been approved. PLI126/PLI127 and the PL34 proposition require translation and contextual review before activation. The two new epistemic comparison entries need linguistic and philosophical review before use. NEI122 and the scoped NE22 proposition require linguistic and philosophical review before public use. NEI123 and the scoped NE23 proposition require linguistic and philosophical review before public use. The two scoped consequence-criterion comparisons require linguistic and philosophical review before public use.",
+  "sourceRealizations": [],
+  "terminologyDecisions": []
+}
