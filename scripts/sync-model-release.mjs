@@ -1,0 +1,92 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {currentFromManifest,readJson,verifyRelease} from '../packages/governance/release.js';
+
+const root=fileURLToPath(new URL('../',import.meta.url));
+const index=await readJson(root,'data/releases/current.json');
+if(index.schemaVersion!=='model-release-index-1'||!index.versions.some(ref=>ref.version===index.current.version&&ref.path===index.current.path))
+ throw Error('Invalid model release index.');
+const channelIndex=await readJson(root,'data/releases/channels-current.json');
+if(channelIndex.schemaVersion!=='worldview-release-channel-index-1'||
+ !/^data\/releases\/channels-v[0-9]+\.json$/.test(channelIndex.current?.path))
+ throw Error('Invalid release-channel index.');
+const [current,manifest,channels]=await Promise.all([readJson(root,'data/current.json'),
+ readJson(root,index.current.path),readJson(root,channelIndex.current.path)]);
+if(channels.configVersion!==channelIndex.current.version||
+ channels.channels?.stable?.modelReleaseVersion!==index.current.version)
+ throw Error('Release channels do not target the active model release.');
+const pinned=currentFromManifest(manifest);
+Object.assign(current,pinned);
+// Coverage is embedded in the pinned model. An older standalone audit snapshot
+// must not be advertised as coverage for the active release.
+delete current.worldviewCoverage;
+const history=await Promise.all(index.versions.map(ref=>readJson(root,ref.path)));
+const catalogHistory=(key,manifestKey)=>{
+ const byVersion=new Map();
+ for(const release of history){const artifact=release.components.find(component=>component.key===key),
+  artifactManifest=release.components.find(component=>component.key===manifestKey);
+  if(!artifact||!artifactManifest)throw Error('Historical release lacks '+key+' version tuple.');
+  const ref={version:artifact.version,path:artifact.path,manifestPath:artifactManifest.path};
+  const prior=byVersion.get(ref.version);
+  if(prior&&JSON.stringify(prior)!==JSON.stringify(ref))throw Error('Conflicting historical '+key+' version: '+ref.version);
+  byVersion.set(ref.version,ref);
+ }
+ return [...byVersion.values()];
+};
+current.affinityCatalogVersions=catalogHistory('affinity','affinity_manifest');
+current.localizationCatalogVersions=catalogHistory('localization_catalog','localization_manifest');
+const localizationBundleHistory=new Map();
+for(const release of history)for(const component of release.components.filter(row=>row.key.startsWith('localization_bundle:'))){
+ const ref={locale:component.key.slice('localization_bundle:'.length),version:component.version,path:component.path};
+ const key=ref.locale+'@'+ref.version,prior=localizationBundleHistory.get(key);
+ if(prior&&JSON.stringify(prior)!==JSON.stringify(ref))throw Error('Conflicting historical localization bundle: '+key);
+ localizationBundleHistory.set(key,ref);
+}
+current.localizationBundleVersions=[...localizationBundleHistory.values()];
+const experienceIndex=await readJson(root,'data/experience/current.json');
+if(experienceIndex.schemaVersion!=='worldview-experience-index-1'||
+ !/^data\/experience\/policy-v[0-9.]+\.json$/.test(experienceIndex.current?.path))
+ throw Error('Invalid experience policy index.');
+const experience=await readJson(root,experienceIndex.current.path);
+if(experience.experienceVersion!==experienceIndex.current.version||
+ experience.progressivePolicy?.version!==pinned.progressiveDepth.version||
+ experience.localizationCatalogVersion!==pinned.localizationCatalog.version||
+ experience.routes?.find(route=>route.id==='full')?.formPolicyVersion!==pinned.fullForm.version||
+ !experience.modelPolicies?.some(ref=>ref.version===pinned.worldviewModel.version&&ref.path===pinned.worldviewModel.path))
+ throw Error('Experience policy is not bound to the active model release.');
+current.quizExperience=experienceIndex.current;
+current.modelRelease=index.current;
+current.modelReleaseVersions=index.versions;
+current.releaseChannels=channelIndex.current;
+await verifyRelease(root,current,manifest);
+const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v1.json');
+const activeAffinity=await readJson(root,pinned.affinityCatalog.path);
+if(evidenceAudit.release.modelVersion!==pinned.worldviewModel.version||
+ evidenceAudit.release.routePolicyVersion!==pinned.progressiveDepth.version)
+ throw Error('Current-facing route documentation needs an evidence audit for the active release.');
+const summary=evidenceAudit.summary;
+const fullGuide=`# Full route releases
+
+The active pilot candidate is \`${pinned.pilotCandidate.version}\`, using form policy \`${pinned.fullForm.version}\` and interpretation model \`${pinned.worldviewModel.version}\` in [model release ${manifest.releaseVersion.replace('model-release-','')}](../${index.current.path}). It fixes ${summary.fullRouteItems} distinct question revisions across twelve domains. The earlier \`philosophy-full-1.2.0\` 240-question form and the 80/120/160 routes remain at their versioned paths for historical replay. The current chooser offers authored 64/120 and frozen 238 depth routes.
+
+The pre-pilot review removed \`NEI030\` and \`EXI017\` for the reasons recorded in [the 240-item content review](../data/pilots/content-review-v1.json). No released item text or historical interpretation rule was rewritten. The active Full route has **${summary.fullRouteAssessableRules} of ${summary.publicRules}** public direct rules with enough authored content in both directions and **${summary.fullRouteNotMeasuredRules}** that remain \`not_measured\` by this route. Actual respondent evidence can still be insufficient or mixed. The [current evidence-disposition audit](PILOT_EVIDENCE_DISPOSITIONS.md) lists every gap and reconciles the earlier 35 bundled-path gaps without treating narrower successor rules as equivalent.
+
+See the [pilot-era historical contract](PILOT_V1.md), [progressive route contract](PROGRESSIVE_DEPTH.md), and [prior 49-construct audit](UNMAPPED_AUDIT.md). A two-unit rule is an editorial threshold, not a reliability estimate.
+`;
+await writeFile(new URL('docs/FULL_ROUTE.md',new URL('../',import.meta.url)),fullGuide);
+const readmePath=new URL('README.md',new URL('../',import.meta.url));
+let readme=await readFile(readmePath,'utf8');
+const oldComparison='The nine reference comparisons consume exact item IDs, revisions and raw response states.';
+const newComparison=`The nine earlier reference comparisons remain historical prototypes. The current public result uses ${activeAffinity.traditions.length} versioned philosophical comparisons over interpreted propositions.`;
+const successorComparison=/The nine earlier reference comparisons remain historical prototypes\. The current public result uses (?:six|[0-9]+) versioned philosophical comparisons over interpreted propositions\./;
+if(!readme.includes(oldComparison)&&!successorComparison.test(readme))throw Error('README comparison summary changed; update the release documentation sync.');
+readme=readme.replace(oldComparison,newComparison).replace(successorComparison,newComparison);
+readme=readme.replace('The comparisons and engineering scores remain **unvalidated and non-interpretable**.',
+ 'The nine prototype comparisons and engineering scores remain **unvalidated and non-interpretable**. The public catalog offers qualitative, evidence-scoped comparison rather than a validated classification.');
+readme=readme.replace(/The active full-depth route is the frozen 238-item `pilot-candidate-[0-9.]+`(?: in `model-release-[0-9.]+`)?\./,
+ `The active full-depth route is the frozen 238-item \`${pinned.pilotCandidate.version}\` in \`${manifest.releaseVersion}\`.`);
+readme=readme.replace('See [the pilot contract](docs/PILOT_V1.md).',
+ 'See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).');
+await writeFile(readmePath,readme);
+await writeFile(new URL('data/current.json',new URL('../',import.meta.url)),JSON.stringify(current,null,2)+'\n');
+console.log('Model release index:',manifest.releaseVersion);

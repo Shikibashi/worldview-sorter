@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "bankVersion": "0.9.0",
+  "items": [
+    {
+      "itemId": "EPI025",
+      "reason": "The clearest example of a priori justification asks for philosophical knowledge, not just an outlook.",
+      "sourceId": "domain-polzler",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "EPI015",
+      "reason": "Some unknowable questions do not reject the attainability of knowledge elsewhere.",
+      "sourceId": "acad-epistemology",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "EPI022",
+      "reason": "Successful false theories remain possible under fallibilist scientific realism.",
+      "sourceId": "acad-epistemology",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "MEI014",
+      "reason": "The vignette presupposes that a contextual feature changes what is appropriate.",
+      "sourceId": "domain-particularism",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "MEI006",
+      "reason": "Same morally relevant facts may conceal a tautological consistency claim.",
+      "sourceId": "domain-particularism",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "OMI025",
+      "reason": "Unqualified wording may accidentally deny atemporal abstract objects; do not classify presentism from it.",
+      "sourceId": "domain-time",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "OMI028",
+      "reason": "Possibility of abstract representation does not itself endorse an abstract-world ontology.",
+      "sourceId": "domain-modality",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "OMI031",
+      "reason": "An evidential restriction on supernatural explanations is not a denial that supernatural reality exists.",
+      "sourceId": "gen-naturalism",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "AHI035",
+      "reason": "A definition of determinism tests recognition of a definition rather than belief that the world is deterministic.",
+      "sourceId": "gen-agency",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    },
+    {
+      "itemId": "AHI026",
+      "reason": "Evaluation of one wallet example confounds human-nature beliefs with standards of evidence.",
+      "sourceId": "acad-clark-watson",
+      "action": "exclude_from_new_public_forms_preserve_historical_item"
+    }
+  ]
+}

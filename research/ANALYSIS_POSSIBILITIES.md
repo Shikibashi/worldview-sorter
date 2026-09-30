@@ -1,0 +1,18 @@
+# Analysis possibilities and structural limits
+
+`readiness.json` screens the **actual snapshot structure**. `diagnostics.json` reports exact-revision co-answer counts for item pairs used together by public authored rules, plus the distribution of substantive answer counts per administration. These are exposure counts, not estimates of dependence or evidence-unit independence. A single co-answered pair, varied item, or linked retake does not make a psychometric analysis feasible. The readiness statuses are not a power analysis or a universal sample-size rule. Researchers should inspect joint category cells, missingness, consent selection, and their intended estimand before fitting a model.
+
+| Question | What the package permits | Main limit |
+| --- | --- | --- |
+| Item response distributions | Count raw categories by exact item revision, exposure, and missing reason. | This is a consented pilot sample with branching and partial administrations. |
+| Construct separability and dimensional structure | Explore raw co-response patterns independently of the authored construct labels. | The registry is theoretical; item overlap, category sparsity, sample structure, and model fit need separate assessment. |
+| Local dependence | Examine co-administered item pairs and wording/scenario groups. | Authored evidence units are duplicate controls, not empirically independent observations. |
+| Reliability | Estimate only after specifying a defensible score, population, and error model. | The current evidence thresholds are authored and are not a validated scale. |
+| Test–retest | Screen linked repeats by contribution-date gaps, shared exact item revisions, and model-version diversity; then analyze compatible administrations. | Linkage is optional; dates are not answer times, same-day order is unknown, and instrument changes may mimic response change. |
+| Route effects | Compare routes only if future eligible exports actually include multiple routes with their selection histories. | The current collector accepts only the frozen Full pilot, so Quick/Standard/adaptive comparison is unavailable here. |
+| DIF and invariance | Study only comparison groups and compatible items that are actually observed. | No demographics are collected; current consented wording is English only. Locale is not ethnicity or nationality. |
+| Rule and affinity critique | Reproduce authored outputs, inspect false positives, and compare them with raw response patterns or separately governed external criteria. | Self-identification and affinity satisfaction are not ground truth; an external criterion is absent here. |
+
+Researchers may propose alternative factors, criteria, or philosophical interpretations. The package does not prescribe a preferred factor count or require confirmation of Worldview Sorter's authored ontology. Analyses of later records require attention to exact model, route, item, and localization versions.
+
+One concrete content question is `construct-NE15`: the frozen Full route administers `NEI100@1` and `NEI101@1`, two similarly worded universal self-interest prescriptions, while the mapped reverse item `NEI102@1` is absent. If sufficient consented co-responses exist, researchers can examine the pair's response distribution, missingness, and possible local dependence, then use response-process work to distinguish repeated wording from distinct evidence. Neither co-agreement nor an internal-consistency estimate alone validates ethical egoism or Objectivism; see the repository's `docs/governance/SELF_INTEREST_MAPPING_REVIEW.md` for the authored content concern and source links.

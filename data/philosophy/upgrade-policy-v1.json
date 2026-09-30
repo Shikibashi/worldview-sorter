@@ -1,0 +1,20 @@
+{
+  "version": "academic-upgrade-1",
+  "meaning": "A repeatable review and release procedure, not an autonomous claim to monitor all research.",
+  "requirements": [
+    "Name the philosophical question, its alternatives and cross-loading risks.",
+    "Record source URL, reviewed sections, date, access limits and whether evidence is conceptual or empirical.",
+    "Map exact item revisions and exact response meanings; keep qualified alternatives and missingness distinct.",
+    "Add positive, negative and counterexample regressions before activating an interpretation.",
+    "Version the model and selection policy; material wording changes require a new item revision and bank/instrument release.",
+    "Replay historical answers only against compatible bank versions; preserve the original snapshots.",
+    "Test public form content coverage in addition to item counts, and verify the browser shows it.",
+    "Treat study populations, language, incentives and response format as limits on empirical transfer."
+  ],
+  "caveats": [
+    "No cognitive-review gate is reinstated.",
+    "A minimum of two authored evidence groups is an engineering display rule, not reliability or factor identification.",
+    "Domain coverage is partial and largely Anglophone. No inference of Buddhist, Confucian, Hindu, Indigenous or other traditions from superficial similarity.",
+    "The PhilPapers design is an organizational reference. Expert prevalence is not a truth key, classification prior or population norm."
+  ]
+}

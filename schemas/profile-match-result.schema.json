@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/profile-match-result.schema.json",
+  "title": "Worldview Sorter Profile Match Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "policyVersion",
+    "catalogVersion",
+    "state",
+    "selectedProfileId",
+    "publicIdentityLabel",
+    "percentageMatchAllowed",
+    "publicScoreLabel",
+    "candidates"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "policyVersion": {
+      "type": "string"
+    },
+    "catalogVersion": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "no_match",
+        "underdetermined",
+        "ambiguous",
+        "affinity_only",
+        "confirmed_identity"
+      ]
+    },
+    "selectedProfileId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publicIdentityLabel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "percentageMatchAllowed": {
+      "type": "boolean"
+    },
+    "publicScoreLabel": {
+      "type": "string"
+    },
+    "candidates": {
+      "type": "array"
+    }
+  }
+}

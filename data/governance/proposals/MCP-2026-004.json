@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-004",
+  "title": "Review independent evidence for ordinary external objects",
+  "author": "Worldview Sorter editorial draft",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "draft",
+  "affectedObjects": [
+    {"type": "proposition", "id": "audit2-EP11-external-world"},
+    {"type": "item", "id": "EPI119"},
+    {"type": "route", "id": "standard"},
+    {"type": "route", "id": "full"},
+    {"type": "source", "id": "audit-perception"}
+  ],
+  "currentBehavior": "The frozen pilot counts agreement with EPI036@1 and the mind_independent choice on EPI037@1 as two independent authored support units for ordinary-object mind-independence. Both directly restate that target. EPI036 also adds a claim about sensory mediation, so disagreement can reflect a view of perception rather than rejection of an external world.",
+  "proposedBehavior": "For a reviewed successor only, stop using EPI036 as directional EP11 evidence. Pair the general EPI037 choice with the unreleased EPI119 perceptual-error case as two authored content opportunities. Keep EPI034 idealist as an opposing alternative, and keep indirect perception, conceptualization, and skeptical suspension non-directional. If the vignette is judged redundant or misunderstood, retain EP11 as a coverage gap rather than restoring two paraphrases as independent evidence.",
+  "rationale": "The metaphysical claim that ordinary objects exist independently of minds differs from whether perception is direct, whether experience justifies belief, and whether some qualities or classifications depend on perceivers. The current two positive units do not visibly discriminate those nearby views. The vignette tests persistence of an ordinary object despite misleading appearances without making a direct-versus-indirect perception answer decisive.",
+  "philosophicalBasis": {
+    "proposition": "Ordinary perceived objects exist independently of minds.",
+    "neighboringViews": [
+      "Indirect realism can affirm mind-independent objects while denying direct awareness of them",
+      "External-world skepticism concerns knowledge or justification without necessarily denying external objects",
+      "Some experienced qualities or classifications may depend on minds even if an external object exists",
+      "Idealism or phenomenalism may deny mind-independent ordinary objects"
+    ],
+    "nonEntailments": [
+      "Perception is direct rather than representational",
+      "Perceptual beliefs are certain or immune to error",
+      "Scientific realism about unobservable entities",
+      "All properties and descriptions of an object are mind-independent"
+    ],
+    "existingGap": "EPI036 and EPI037 closely repeat the same mind-independence claim. Grouping them as one authored unit leaves the frozen route with only one positive unit. EPI034 supplies an idealist opposing option but no clean independent positive case. EPI119 is only a draft and has not been reviewed with respondents.",
+    "scholarlyDisagreement": "Academic accounts distinguish metaphysical realism from epistemological skepticism and from direct versus indirect perception; they also dispute how to characterize mind-independence and the role of conceptual schemes. The draft does not settle those debates or validate an item."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "audit-perception",
+      "claim": "The SEP treats the mind-independence of ordinary physical objects as a metaphysical position and separates it from direct versus indirect perception and from the epistemic question whether perceptual beliefs about an external world are justified.",
+      "relationship": "supports"
+    }
+  ],
+  "alternatives": [
+    "Keep EPI036 and EPI037 as two units; rejected for the successor preview because their direct target is nearly the same and EPI036 adds a mediation clause.",
+    "Count EPI034 direct or indirect perception as positive evidence; rejected because those options chiefly concern perceptual access rather than ordinary-object independence.",
+    "Reduce the threshold to one direct answer; rejected because the current engine requires two authored units and one statement offers little false-positive protection.",
+    "Leave EP11 unmeasured; retain this option if the new case cannot be distinguished from EPI037 or fails respondent comprehension review."
+  ],
+  "respondentImpact": "A successor could withdraw some frozen supported or opposed EP11 results when they rest on EPI036, and could assess EP11 only after EPI119 is actually administered. Route coverage, domain summaries, source trails, and any later affinity mapping must be recomputed under the successor model. No existing answer is imputed or relabeled in its historical administration.",
+  "historicalCompatibility": "Preserve model-release-1.0.0, EPI034@1, EPI036@1, EPI037@1, the 238-item instrument, and historical result snapshots. EPI119@1 is an unreleased new item; any accepted successor needs a new bank, route, model, source snapshot, engine archive, and manifest. Historical raw responses remain unchanged.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical", "one_item_lean", "route_omission", "source_link", "item_revision"],
+    "paths": ["scripts/test-pilot-v1.mjs", "scripts/test-model-governance.mjs"]
+  },
+  "review": {"approvals": []},
+  "release": {
+    "components": ["bank", "model", "progressive_routes", "full_form", "source_ledger", "engine_source"],
+    "migration": "No raw-response migration. Do not activate EPI119 or the successor rule until content, philosophical, localization, and route reviews complete; publish only under new versioned artifacts."
+  },
+  "implementationRefs": ["docs/governance/EXTERNAL_WORLD_EVIDENCE_REVIEW.md", "data/items/external-world-draft-v1.json", "data/generic/model-v1.0-pilot.json", "scripts/test-pilot-v1.mjs"]
+}

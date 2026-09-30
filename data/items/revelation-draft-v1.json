@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.9.0-revelation-draft-1",
+  "status": "candidate",
+  "purpose": "Unreleased EP10 audience-and-strength discriminator. No production bank, instrument, route, or interpretation rule references this draft.",
+  "itemIdPolicy": "Permanent IDs use <domain>I<3 digits>. IDs are never reused after retirement.",
+  "items": [
+    {
+      "id": "EPI120",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "A person has an experience that seems clearly to them to be a divine revelation, but nobody can independently verify it. Which assessment of factual justification is closest to your view?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {"constructId": "EP10", "relation": "diagnostic", "role": "primary"}
+      ],
+      "options": [
+        {"id": "strong_experiencer_only", "label": "The experiencer can have substantial justification from the experience alone; an outsider does not gain that much merely from the report."},
+        {"id": "strong_both", "label": "Both the experiencer and an outsider hearing the report can have substantial justification without further evidence."},
+        {"id": "provisional_only", "label": "The experiencer may have an initial reason, but not substantial justification without further evidence."},
+        {"id": "none_alone", "label": "Even the experiencer has no factual justification from the experience alone."}
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "revelation-audience-strength",
+      "eligibility": {"mode": "always"},
+      "specialStates": ["no_view", "not_understood"],
+      "contentTags": ["revelation", "first_person_justification", "public_justification", "unreleased_review_candidate"],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": ["acad-epistemology"],
+        "license": {"status": "undecided", "spdx": null},
+        "copiedText": false
+      },
+      "notes": "The first two options explicitly affirm substantial first-person justification, while differing on outsiders' warrant. The last two deny substantial justification from the experience alone; provisional justification is not equivalent to none. The general bank source reference is not an item-validation study; the specific SEP revelation analysis is documented in the editorial review and model source audit-revelation. This item is a conceptual discriminator, not a validated independent evidence unit. Review comprehension and local dependence with EPI032 before any release."
+    }
+  ]
+}

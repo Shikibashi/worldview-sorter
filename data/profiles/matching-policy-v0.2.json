@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2.0.0",
+  "policyVersion": "0.2.0",
+  "forceBestMatch": false,
+  "allowAbstention": true,
+  "percentageMatchAllowed": false,
+  "identityOutputAllowed": false,
+  "scoredEvidenceAllowed": false,
+  "neutralHandling": "recorded_but_not_directional",
+  "missingHandling": "unresolved",
+  "conflictingHandling": "mixed_without_averaging",
+  "referenceScope": "only_explicitly_measured_commitments",
+  "thresholdStatus": "authored_engineering_rule_not_calibrated"
+}

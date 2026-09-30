@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/scoring-model.schema.json",
+  "title": "Worldview Sorter Scoring Model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "modelVersion",
+    "status",
+    "compatibleBankVersions",
+    "compatibleInstrumentVersions",
+    "purpose",
+    "interpretationAllowed",
+    "algorithm",
+    "outputs",
+    "limitations"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "modelVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "engineering_only",
+        "pilot_calibration",
+        "calibrated",
+        "deprecated"
+      ]
+    },
+    "compatibleBankVersions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "compatibleInstrumentVersions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "interpretationAllowed": {
+      "type": "boolean"
+    },
+    "algorithm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "eligibleResponseScaleIds",
+        "eligibleTargetRole",
+        "eligibleRelations",
+        "relationMultipliers",
+        "missingStates",
+        "aggregation",
+        "scaleNormalization",
+        "minimumAnsweredItems"
+      ],
+      "properties": {
+        "family": {
+          "type": "string"
+        },
+        "eligibleResponseScaleIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "eligibleTargetRole": {
+          "type": "string"
+        },
+        "eligibleRelations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relationMultipliers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "missingStates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "aggregation": {
+          "type": "string"
+        },
+        "scaleNormalization": {
+          "type": "string"
+        },
+        "minimumAnsweredItems": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "range",
+        "includeCoverage",
+        "includeEligibleItemCount",
+        "uncertainty"
+      ],
+      "properties": {
+        "range": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          }
+        },
+        "includeCoverage": {
+          "type": "boolean"
+        },
+        "includeEligibleItemCount": {
+          "type": "boolean"
+        },
+        "uncertainty": {
+          "type": "string"
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

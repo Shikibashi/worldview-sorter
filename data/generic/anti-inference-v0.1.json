@@ -1,0 +1,115 @@
+{
+  "version": "0.1.0",
+  "rules": [
+    {
+      "from": "VA04",
+      "to": "VA20",
+      "reason": "Personal pleasure priority does not establish hedonism as a theory of welfare.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "NE01",
+      "to": "NE08",
+      "reason": "Consequences mattering does not entail permissive instrumental harm.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "MF01",
+      "to": "NE04",
+      "reason": "Harm concern is not identical to relational moral reasoning.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "MF02",
+      "to": "PL10",
+      "reason": "Equality concern does not uniquely select a distributive doctrine.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "RC01",
+      "to": "PL26",
+      "reason": "Private divine belief does not determine religious public authority.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "RC01",
+      "to": "OM02",
+      "reason": "Atheism or theism does not determine physicalism.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "AH02",
+      "to": "AH14",
+      "reason": "Determinism and incompatibilism are different propositions.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "SO14",
+      "to": "SO15",
+      "reason": "Institution-dependent social entities do not determine methodological individualism or normative priority of groups.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "PL21",
+      "to": "PL02",
+      "reason": "Legal validity does not establish a duty to obey.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "EP15",
+      "to": "ME01",
+      "reason": "Epistemic fallibilism does not establish moral anti-realism.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "EX01",
+      "to": "RC08",
+      "reason": "Objective meaning does not require cosmic purpose.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    },
+    {
+      "from": "OM14",
+      "to": "OM11",
+      "reason": "Easy ontological methods do not decide which abstract objects exist.",
+      "kind": "do_not_infer",
+      "automaticPropagation": false
+    }
+  ],
+  "gaps": [
+    {
+      "id": "culture-coverage",
+      "reason": "No generic Buddhism, Hinduism, Confucianism or Indigenous-worldview label may be derived from theism, authority or no-self answers. Dedicated primary scholarship and discriminating items are still required."
+    },
+    {
+      "id": "utilitarian-system",
+      "reason": "Consequence sensitivity and instrumental harm do not measure outcome-only rightness, aggregation, maximizing versus satisficing, and scope well enough to assert full utilitarianism."
+    },
+    {
+      "id": "constructivist-variants",
+      "reason": "The corpus recognizes constructivist objectivity and competing Kantian/Humean variants; the bank lacks sufficient direct procedural-grounding discriminants for a full comparison."
+    },
+    {
+      "id": "ideology-families",
+      "reason": "Socialism, liberalism, conservatism and religious traditions have internal variants; policy resemblance alone is insufficient for full-system identities."
+    },
+    {
+      "id": "legacy-wording",
+      "reason": "Some legacy reverse-keyed items and forced choices contain insufficient-conditions or ambiguity problems; only explicit reviewed mappings enter comparisons."
+    },
+    {
+      "id": "full-corpus",
+      "reason": "All repository academic references are inventoried with access limits. This is not all academic literature, all datasets, or proof of universal cultural coverage."
+    }
+  ]
+}

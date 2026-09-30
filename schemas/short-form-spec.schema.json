@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/short-form-spec.schema.json",
+  "title": "Worldview Sorter Short Form Selection Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "policyVersion",
+    "sourceBankVersion",
+    "status",
+    "operationalItemRange",
+    "requiredCoverage",
+    "constraints",
+    "ranking",
+    "note"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "policyVersion": {
+      "type": "string"
+    },
+    "sourceBankVersion": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "operationalItemRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "requiredCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "constructTiers",
+        "minimumPrimaryItemsPerRequiredConstruct"
+      ],
+      "properties": {
+        "constructTiers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "minimumPrimaryItemsPerRequiredConstruct": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxItemsPerMirrorGroup",
+        "requireBranchPrerequisites",
+        "excludeIfFlagged"
+      ],
+      "properties": {
+        "maxItemsPerMirrorGroup": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "requireBranchPrerequisites": {
+          "type": "boolean"
+        },
+        "excludeIfFlagged": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ranking": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primaryMetric",
+        "secondaryMetric",
+        "preferMethodDiversity"
+      ],
+      "properties": {
+        "primaryMetric": {
+          "type": "string"
+        },
+        "secondaryMetric": {
+          "type": "string"
+        },
+        "preferMethodDiversity": {
+          "type": "boolean"
+        }
+      }
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}

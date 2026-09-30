@@ -1,0 +1,450 @@
+{
+  "schemaVersion": "1.0.0",
+  "expansionVersion": "0.5.0",
+  "baseBankVersion": "0.6.0",
+  "resultingBankVersion": "0.7.0",
+  "itemsAdded": 62,
+  "milestone": "minimum_three_primary_indicators_for_all_public_constructs",
+  "strategy": [
+    "Give every primary-tier construct a third standalone primary-role indicator.",
+    "Prefer vignettes, tradeoffs, and categorical diagnostics for abstract or socially loaded constructs.",
+    "Keep Schwartz-style value constructs on direct importance ratings.",
+    "Do not make cognitive review a required promotion gate for this project."
+  ],
+  "entries": [
+    {
+      "itemId": "MEI013",
+      "domainId": "ME",
+      "primaryTarget": "ME02",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI014",
+      "domainId": "ME",
+      "primaryTarget": "ME03",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI015",
+      "domainId": "ME",
+      "primaryTarget": "ME04",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI016",
+      "domainId": "ME",
+      "primaryTarget": "ME05",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI031",
+      "domainId": "NE",
+      "primaryTarget": "NE05",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI032",
+      "domainId": "NE",
+      "primaryTarget": "NE06",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI033",
+      "domainId": "NE",
+      "primaryTarget": "NE09",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI034",
+      "domainId": "NE",
+      "primaryTarget": "NE10",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI035",
+      "domainId": "NE",
+      "primaryTarget": "NE11",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI036",
+      "domainId": "NE",
+      "primaryTarget": "NE12",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI044",
+      "domainId": "VA",
+      "primaryTarget": "VA06",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI045",
+      "domainId": "VA",
+      "primaryTarget": "VA07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI046",
+      "domainId": "VA",
+      "primaryTarget": "VA08",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI047",
+      "domainId": "VA",
+      "primaryTarget": "VA10",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI048",
+      "domainId": "VA",
+      "primaryTarget": "VA12",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI049",
+      "domainId": "VA",
+      "primaryTarget": "VA13",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI050",
+      "domainId": "VA",
+      "primaryTarget": "VA14",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI051",
+      "domainId": "VA",
+      "primaryTarget": "VA16",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI052",
+      "domainId": "VA",
+      "primaryTarget": "VA18",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "VAI053",
+      "domainId": "VA",
+      "primaryTarget": "VA19",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EPI028",
+      "domainId": "EP",
+      "primaryTarget": "EP02",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI029",
+      "domainId": "EP",
+      "primaryTarget": "EP03",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI030",
+      "domainId": "EP",
+      "primaryTarget": "EP08",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI031",
+      "domainId": "EP",
+      "primaryTarget": "EP09",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI032",
+      "domainId": "EP",
+      "primaryTarget": "EP10",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI033",
+      "domainId": "EP",
+      "primaryTarget": "EP13",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI015",
+      "domainId": "OM",
+      "primaryTarget": "OM03",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI012",
+      "domainId": "MS",
+      "primaryTarget": "MS05",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "AHI029",
+      "domainId": "AH",
+      "primaryTarget": "AH07",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "AHI030",
+      "domainId": "AH",
+      "primaryTarget": "AH08",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "AHI031",
+      "domainId": "AH",
+      "primaryTarget": "AH09",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "AHI032",
+      "domainId": "AH",
+      "primaryTarget": "AH10",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "AHI033",
+      "domainId": "AH",
+      "primaryTarget": "AH11",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI025",
+      "domainId": "RC",
+      "primaryTarget": "RC02",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI026",
+      "domainId": "RC",
+      "primaryTarget": "RC04",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI027",
+      "domainId": "RC",
+      "primaryTarget": "RC05",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI028",
+      "domainId": "RC",
+      "primaryTarget": "RC06",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "RCI029",
+      "domainId": "RC",
+      "primaryTarget": "RC09",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI030",
+      "domainId": "RC",
+      "primaryTarget": "RC10",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EXI010",
+      "domainId": "EX",
+      "primaryTarget": "EX03",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EXI011",
+      "domainId": "EX",
+      "primaryTarget": "EX04",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "SOI031",
+      "domainId": "SO",
+      "primaryTarget": "SO05",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "SOI032",
+      "domainId": "SO",
+      "primaryTarget": "SO06",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "SOI033",
+      "domainId": "SO",
+      "primaryTarget": "SO07",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "SOI034",
+      "domainId": "SO",
+      "primaryTarget": "SO08",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "SOI035",
+      "domainId": "SO",
+      "primaryTarget": "SO10",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "SOI036",
+      "domainId": "SO",
+      "primaryTarget": "SO11",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI056",
+      "domainId": "PL",
+      "primaryTarget": "PL03",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI057",
+      "domainId": "PL",
+      "primaryTarget": "PL07",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI058",
+      "domainId": "PL",
+      "primaryTarget": "PL08",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI059",
+      "domainId": "PL",
+      "primaryTarget": "PL12",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "PLI060",
+      "domainId": "PL",
+      "primaryTarget": "PL14",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "PLI061",
+      "domainId": "PL",
+      "primaryTarget": "PL15",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "PLI062",
+      "domainId": "PL",
+      "primaryTarget": "PL16",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI063",
+      "domainId": "PL",
+      "primaryTarget": "PL17",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI064",
+      "domainId": "PL",
+      "primaryTarget": "PL18",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI065",
+      "domainId": "PL",
+      "primaryTarget": "PL19",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI066",
+      "domainId": "PL",
+      "primaryTarget": "PL20",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI067",
+      "domainId": "PL",
+      "primaryTarget": "PL22",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "PLI068",
+      "domainId": "PL",
+      "primaryTarget": "PL23",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI069",
+      "domainId": "PL",
+      "primaryTarget": "PL24",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI070",
+      "domainId": "PL",
+      "primaryTarget": "PL26",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    }
+  ]
+}

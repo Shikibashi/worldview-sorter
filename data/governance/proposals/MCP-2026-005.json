@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-005",
+  "title": "Review independent evidence for exclusive normative self-interest",
+  "author": "Worldview Sorter editorial draft",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "draft",
+  "affectedObjects": [
+    {"type": "proposition", "id": "construct-NE15"},
+    {"type": "item", "id": "NEI100"},
+    {"type": "item", "id": "NEI101"},
+    {"type": "item", "id": "NEI102"},
+    {"type": "item", "id": "NEI121"},
+    {"type": "criterion", "id": "ethical-egoism/moral-self-interest"},
+    {"type": "criterion", "id": "objectivism-rand/rational-self-interest"},
+    {"type": "route", "id": "standard"},
+    {"type": "route", "id": "full"},
+    {"type": "source", "id": "acad-egoism"}
+  ],
+  "currentBehavior": "The frozen pilot accepts agreement with NEI100@1 and NEI101@1 as two independent units supporting construct-NE15. Their wording is closely similar. NEI102@1 is absent from the frozen route and its disagreement is ambiguous. The affinity catalog reuses the rule in two defining criteria.",
+  "proposedBehavior": "For a reviewed successor only, state the narrow exclusive moral-end proposition explicitly; group NEI100 and NEI101 as one authored unit; remove NEI102 as directional evidence; and, only if approved and actually administered, add NEI121@1 as a separate case about an independent moral reason at modest cost. Keep the stronger maximizing if-and-only-if account of ethical egoism unmeasured, and review both catalog criteria separately before release.",
+  "rationale": "Self-concern, permissions to pursue personal projects, and refusal of extreme sacrifice do not distinguish exclusive normative self-interest from moral theories that give some independent weight to others. The existing positive pair repeats a universal own-good aim and does not test that boundary.",
+  "philosophicalBasis": {
+    "proposition": "Each person morally ought to make their own long-term good the ultimate end of their actions; another person's need alone supplies no independent moral reason.",
+    "neighboringViews": [
+      "Duties of self-care alongside independent duties to others",
+      "Agent-centered prerogatives alongside non-obligatory other-regarding moral reasons",
+      "Rational egoism without an exclusively moral self-interest thesis",
+      "Psychological egoism as a descriptive claim"
+    ],
+    "nonEntailments": [
+      "The maximizing if-and-only-if account of ethical egoism",
+      "Psychological self-interest as a fact about motivation",
+      "Objectivism or any particular political position",
+      "A permission or duty to exploit other people"
+    ],
+    "existingGap": "The frozen route gives two near-paraphrases independent unit IDs. Grouping them leaves one positive unit. NEI102 is unadministered and reverse disagreement has more than one interpretation. No current route asks whether another person's need has independent moral weight at modest cost.",
+    "scholarlyDisagreement": "The SEP distinguishes ethical from rational and psychological egoism and notes less common nonmaximizing versions. Accounts of self-interest also differ. The candidate tests the narrower exclusive moral-end proposition, not every egoist theory or Rand's complete system."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "acad-egoism",
+      "claim": "Shaver's SEP account distinguishes ethical, rational, and psychological egoism and explains that standard ethical egoism makes moral rightness depend on the agent's self-interest; other moral theories can recognize uncompensated other-regarding duties at small cost.",
+      "relationship": "supports"
+    }
+  ],
+  "alternatives": [
+    "Keep NEI100 and NEI101 as two units; rejected for a successor preview because they repeat the same universal own-good claim.",
+    "Use disagreement with NEI102 as positive evidence; rejected because one may instead reject its permissibility premise.",
+    "Use a severe-sacrifice or policy item; rejected because many non-egoist views also limit demandingness and policy preferences do not establish the moral-end principle.",
+    "Leave the distinction not measured; retain this if NEI121 fails philosophical or respondent comprehension review."
+  ],
+  "respondentImpact": "A successor could withdraw some currently supported NE15 states and corresponding affinity overlap when the two similar items were the only support. A new assessment would require administration of NEI121. Existing historical results must retain the frozen rule and catalog behavior.",
+  "historicalCompatibility": "Preserve model-release-1.0.0, philosophical-affinity-1.0.0, NEI100@1, NEI101@1, NEI102@1, the 238-item route, raw answers, and historical snapshots. NEI121@1 is an unreleased new item. Any accepted successor needs versioned bank, model, route, affinity review, engine archive, source snapshot, and manifest; no response migration or silent reinterpretation.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical", "route_omission", "item_revision", "source_link"],
+    "paths": ["scripts/test-pilot-v1.mjs", "scripts/test-model-governance.mjs", "scripts/test-affinity-catalog-v1.mjs"]
+  },
+  "review": {"approvals": []},
+  "release": {
+    "components": ["bank", "model", "progressive_routes", "full_form", "affinity_catalog", "source_ledger", "engine_source"],
+    "migration": "No raw-response migration. Do not activate the draft item, successor interpretation, or affinity changes without philosophical, content, linguistic, route, and result review, plus an explicit model release."
+  },
+  "implementationRefs": ["docs/governance/SELF_INTEREST_MAPPING_REVIEW.md", "data/items/self-interest-draft-v1.json", "data/generic/model-v1.0-pilot.json", "scripts/test-pilot-v1.mjs"]
+}

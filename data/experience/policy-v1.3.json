@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "experienceVersion": "quiz-1.4.0",
+  "publicClaim": "Research-informed exploratory quiz; not an empirically validated psychological assessment.",
+  "questionnairePolicy": {
+    "rewriteItemText": false,
+    "changeResponseLabels": false,
+    "showInterpretationsBeforeCompletion": false,
+    "useScoresForRewards": false,
+    "normalizeToIdeologyPercentages": false
+  },
+  "routes": [
+    {
+      "size": 80,
+      "label": "A first look",
+      "description": "All core topics, with more distinctions left open.",
+      "formPolicyVersion": "philosophy-blueprint-1.2.0"
+    },
+    {
+      "size": 120,
+      "label": "A wider view",
+      "description": "All core topics, with more complete answer patterns.",
+      "formPolicyVersion": "philosophy-blueprint-1.2.0"
+    },
+    {
+      "size": 160,
+      "label": "A deep dive",
+      "description": "More perspectives across every field. No time limit.",
+      "formPolicyVersion": "philosophy-blueprint-1.2.0"
+    },
+    {
+      "size": 240,
+      "label": "The full exploration",
+      "description": "240 questions across all twelve topics. Pause whenever you like.",
+      "formPolicyVersion": "philosophy-full-1.2.0"
+    }
+  ],
+  "privacy": {
+    "defaultAnswerSubmission": false,
+    "automaticSharing": false,
+    "shareRequiresPreviewSelection": true,
+    "includeRawResponsesInSharePreview": false
+  },
+  "gamification": {
+    "version": "post-quiz-1",
+    "enabled": false,
+    "phase": "after_completion_only",
+    "allowedEvents": [
+      "quiz_finished",
+      "topic_opened",
+      "source_opened"
+    ],
+    "disallowedInputs": [
+      "answers",
+      "ideology",
+      "scores",
+      "consistency",
+      "speed",
+      "streaks",
+      "personalIdentity"
+    ],
+    "measurementDependencies": []
+  },
+  "sources": [
+    {
+      "id": "ux-sailer-2017",
+      "title": "Sailer, Hense, Mayr & Mandl (2017): How gamification motivates",
+      "url": "https://doi.org/10.1016/j.chb.2016.12.033",
+      "reviewedUrl": "https://www.researchgate.net/publication/311879391_How_gamification_motivates_An_experimental_study_of_the_effects_of_specific_game_design_elements_on_psychological_need_satisfaction",
+      "access": "author-uploaded article text, abstract and discussion reviewed",
+      "locator": "Abstract; sections 6.4–7",
+      "kind": "randomized_experiment",
+      "finding": "Different configurations of game elements affected different reported needs; perceived decision freedom was not changed as intended.",
+      "designInference": "Treat game elements individually and do not promise that points make a worldview questionnaire fun or valid.",
+      "validatesThisQuiz": false
+    },
+    {
+      "id": "ux-polzler-2018",
+      "title": "Pölzler (2018): How to Measure Moral Realism",
+      "url": "https://doi.org/10.1007/s13164-018-0401-8",
+      "reviewedUrl": "https://link.springer.com/article/10.1007/s13164-018-0401-8",
+      "access": "full HTML available; abstract and sections 1–7 reviewed",
+      "locator": "G1–G5; introduction",
+      "kind": "peer_reviewed_methodological_analysis",
+      "finding": "Related philosophical positions, incomplete answer choices and first-order moral prompts can undermine intended construct measurement.",
+      "designInference": "Preserve question wording and distinctions; avoid ideology targets or congratulating particular answers while answering.",
+      "validatesThisQuiz": false
+    },
+    {
+      "id": "ux-wcag-targets",
+      "title": "W3C: Understanding Target Size (Minimum)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "access": "official guidance reviewed",
+      "kind": "accessibility_guidance_not_psychometric_evidence",
+      "designInference": "Large controls, adequate spacing, keyboard access and no drag-only rankings."
+    },
+    {
+      "id": "ux-wcag-motion",
+      "title": "W3C: Understanding Animation from Interactions",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "access": "official guidance reviewed",
+      "kind": "accessibility_guidance_not_psychometric_evidence",
+      "designInference": "Respect reduced-motion preferences and do not require animation or sound."
+    }
+  ],
+  "reviewedOn": "2026-09-29",
+  "evidenceLimit": "The UI is designed for enjoyment. Enjoyment, completion gains and psychological measurement equivalence have not been demonstrated with participants. Deterministic code tests establish software noninterference only.",
+  "formPolicies": [
+    {
+      "version": "philosophy-blueprint-1.0.0",
+      "path": "data/philosophy/public-form-v1.json"
+    },
+    {
+      "version": "philosophy-full-1.0.0",
+      "path": "data/philosophy/public-full-v1.json"
+    },
+    {
+      "version": "philosophy-blueprint-1.1.0",
+      "path": "data/philosophy/public-form-v1.1.json"
+    },
+    {
+      "version": "philosophy-full-1.1.0",
+      "path": "data/philosophy/public-full-v1.1.json"
+    },
+    {
+      "version": "philosophy-blueprint-1.2.0",
+      "path": "data/philosophy/public-form-v1.2.json"
+    },
+    {
+      "version": "philosophy-full-1.2.0",
+      "path": "data/philosophy/public-full-v1.2.json"
+    }
+  ],
+  "routeLengthMeaning": "Assigned distinct items; inapplicable conditional follow-ups are skipped and recorded separately. The 240-item route is not the entire master bank.",
+  "academicAudit": {
+    "version": "unmapped-audit-2.0.0",
+    "path": "data/academic/unmapped-audit-v2.json",
+    "resultModelVersion": "generic-0.4.0"
+  },
+  "modelPolicies": [
+    {
+      "version": "generic-0.2.0",
+      "path": "data/generic/model-v0.2.json"
+    },
+    {
+      "version": "generic-0.3.0",
+      "path": "data/generic/model-v0.3.json"
+    },
+    {
+      "version": "generic-0.4.0",
+      "path": "data/generic/model-v0.4.json"
+    }
+  ]
+}

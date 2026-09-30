@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyVersion": "0.1.0",
+  "status": "prototype",
+  "forceBestMatch": false,
+  "allowAbstention": true,
+  "percentageMatchAllowed": false,
+  "publicScoreLabel": "Affinity",
+  "identityMode": "explicit_confirmation_required",
+  "minimumSoftEvidenceCoverage": 0.6,
+  "minimumAffinityForEligible": 0.7,
+  "ambiguityMargin": 0.08,
+  "hardGateRules": {
+    "missing": "underdetermined",
+    "failed": "excluded"
+  },
+  "resultStates": [
+    "excluded",
+    "underdetermined",
+    "low_affinity",
+    "eligible_unconfirmed",
+    "confirmed_identity",
+    "ambiguous"
+  ],
+  "presentationRules": [
+    "Never display a philosophical-system identity from political dimensions alone.",
+    "Never force a nearest profile when every profile is excluded, underdetermined, or below threshold.",
+    "Do not label an affinity score as a probability or percent match.",
+    "Show failed hard gates and major divergences in the explanation.",
+    "Keep public-figure, country, and historical analogies separate from worldview identity classification."
+  ]
+}

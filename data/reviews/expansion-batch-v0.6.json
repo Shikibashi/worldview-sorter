@@ -1,0 +1,780 @@
+{
+  "schemaVersion": "1.0.0",
+  "expansionVersion": "0.6.0",
+  "baseBankVersion": "0.7.0",
+  "resultingBankVersion": "0.8.0",
+  "itemsAdded": 109,
+  "milestone": "planned_research_bank_size_reached",
+  "finalItemCount": 472,
+  "strategy": [
+    "Fill every directly measured diagnostic and research-tier construct to its registry candidate-item target.",
+    "Keep derived constructs derived; do not invent direct item pools for derived interpretations.",
+    "Use the remaining slots for fourth indicators in broad non-political public constructs, especially moral foundations and high-level worldview constructs.",
+    "Stop at the planned 472-item research-bank size rather than expanding indefinitely."
+  ],
+  "entries": [
+    {
+      "itemId": "MEI017",
+      "domainId": "ME",
+      "primaryTarget": "ME06",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI018",
+      "domainId": "ME",
+      "primaryTarget": "ME06",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI019",
+      "domainId": "ME",
+      "primaryTarget": "ME06",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI020",
+      "domainId": "ME",
+      "primaryTarget": "ME08",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI021",
+      "domainId": "ME",
+      "primaryTarget": "ME08",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI022",
+      "domainId": "ME",
+      "primaryTarget": "ME08",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI023",
+      "domainId": "ME",
+      "primaryTarget": "ME01",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MEI024",
+      "domainId": "ME",
+      "primaryTarget": "ME02",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MEI025",
+      "domainId": "ME",
+      "primaryTarget": "ME03",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MEI026",
+      "domainId": "ME",
+      "primaryTarget": "ME05",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI037",
+      "domainId": "NE",
+      "primaryTarget": "NE13",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI038",
+      "domainId": "NE",
+      "primaryTarget": "NE13",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI039",
+      "domainId": "NE",
+      "primaryTarget": "NE13",
+      "responseType": "paired_choice",
+      "relation": "tradeoff"
+    },
+    {
+      "itemId": "NEI040",
+      "domainId": "NE",
+      "primaryTarget": "NE13",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI041",
+      "domainId": "NE",
+      "primaryTarget": "NE14",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "NEI042",
+      "domainId": "NE",
+      "primaryTarget": "NE14",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI043",
+      "domainId": "NE",
+      "primaryTarget": "NE14",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "NEI044",
+      "domainId": "NE",
+      "primaryTarget": "NE07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MFI019",
+      "domainId": "MF",
+      "primaryTarget": "MF07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MFI020",
+      "domainId": "MF",
+      "primaryTarget": "MF07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MFI021",
+      "domainId": "MF",
+      "primaryTarget": "MF07",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MFI022",
+      "domainId": "MF",
+      "primaryTarget": "MF07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MFI023",
+      "domainId": "MF",
+      "primaryTarget": "MF01",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MFI024",
+      "domainId": "MF",
+      "primaryTarget": "MF02",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MFI025",
+      "domainId": "MF",
+      "primaryTarget": "MF03",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MFI026",
+      "domainId": "MF",
+      "primaryTarget": "MF04",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MFI027",
+      "domainId": "MF",
+      "primaryTarget": "MF05",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MFI028",
+      "domainId": "MF",
+      "primaryTarget": "MF06",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI054",
+      "domainId": "VA",
+      "primaryTarget": "VA20",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI055",
+      "domainId": "VA",
+      "primaryTarget": "VA20",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI056",
+      "domainId": "VA",
+      "primaryTarget": "VA20",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI057",
+      "domainId": "VA",
+      "primaryTarget": "VA20",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI058",
+      "domainId": "VA",
+      "primaryTarget": "VA20",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI059",
+      "domainId": "VA",
+      "primaryTarget": "VA20",
+      "responseType": "ranking",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI060",
+      "domainId": "VA",
+      "primaryTarget": "VA21",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI061",
+      "domainId": "VA",
+      "primaryTarget": "VA21",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "VAI062",
+      "domainId": "VA",
+      "primaryTarget": "VA21",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI034",
+      "domainId": "EP",
+      "primaryTarget": "EP11",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI035",
+      "domainId": "EP",
+      "primaryTarget": "EP11",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI036",
+      "domainId": "EP",
+      "primaryTarget": "EP11",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI037",
+      "domainId": "EP",
+      "primaryTarget": "EP11",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI038",
+      "domainId": "EP",
+      "primaryTarget": "EP12",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI039",
+      "domainId": "EP",
+      "primaryTarget": "EP12",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI040",
+      "domainId": "EP",
+      "primaryTarget": "EP12",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI041",
+      "domainId": "EP",
+      "primaryTarget": "EP12",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI042",
+      "domainId": "EP",
+      "primaryTarget": "EP12",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI043",
+      "domainId": "EP",
+      "primaryTarget": "EP14",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI044",
+      "domainId": "EP",
+      "primaryTarget": "EP14",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EPI045",
+      "domainId": "EP",
+      "primaryTarget": "EP14",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI016",
+      "domainId": "OM",
+      "primaryTarget": "OM06",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI017",
+      "domainId": "OM",
+      "primaryTarget": "OM06",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI018",
+      "domainId": "OM",
+      "primaryTarget": "OM06",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI019",
+      "domainId": "OM",
+      "primaryTarget": "OM07",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI020",
+      "domainId": "OM",
+      "primaryTarget": "OM07",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI021",
+      "domainId": "OM",
+      "primaryTarget": "OM07",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI022",
+      "domainId": "OM",
+      "primaryTarget": "OM08",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI023",
+      "domainId": "OM",
+      "primaryTarget": "OM08",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI024",
+      "domainId": "OM",
+      "primaryTarget": "OM08",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI025",
+      "domainId": "OM",
+      "primaryTarget": "OM09",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI026",
+      "domainId": "OM",
+      "primaryTarget": "OM09",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI027",
+      "domainId": "OM",
+      "primaryTarget": "OM09",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI028",
+      "domainId": "OM",
+      "primaryTarget": "OM10",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI029",
+      "domainId": "OM",
+      "primaryTarget": "OM10",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI030",
+      "domainId": "OM",
+      "primaryTarget": "OM10",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "OMI031",
+      "domainId": "OM",
+      "primaryTarget": "OM01",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "OMI032",
+      "domainId": "OM",
+      "primaryTarget": "OM02",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI013",
+      "domainId": "MS",
+      "primaryTarget": "MS02",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI014",
+      "domainId": "MS",
+      "primaryTarget": "MS02",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI015",
+      "domainId": "MS",
+      "primaryTarget": "MS02",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI016",
+      "domainId": "MS",
+      "primaryTarget": "MS02",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI017",
+      "domainId": "MS",
+      "primaryTarget": "MS02",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI018",
+      "domainId": "MS",
+      "primaryTarget": "MS06",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI019",
+      "domainId": "MS",
+      "primaryTarget": "MS06",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI020",
+      "domainId": "MS",
+      "primaryTarget": "MS06",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "MSI021",
+      "domainId": "MS",
+      "primaryTarget": "MS01",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "MSI022",
+      "domainId": "MS",
+      "primaryTarget": "MS03",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "MSI023",
+      "domainId": "MS",
+      "primaryTarget": "MS04",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "AHI034",
+      "domainId": "AH",
+      "primaryTarget": "AH01",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "AHI035",
+      "domainId": "AH",
+      "primaryTarget": "AH02",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "AHI036",
+      "domainId": "AH",
+      "primaryTarget": "AH03",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "RCI031",
+      "domainId": "RC",
+      "primaryTarget": "RC11",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI032",
+      "domainId": "RC",
+      "primaryTarget": "RC11",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI033",
+      "domainId": "RC",
+      "primaryTarget": "RC11",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI034",
+      "domainId": "RC",
+      "primaryTarget": "RC11",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "RCI035",
+      "domainId": "RC",
+      "primaryTarget": "RC11",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EXI012",
+      "domainId": "EX",
+      "primaryTarget": "EX02",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EXI013",
+      "domainId": "EX",
+      "primaryTarget": "EX02",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EXI014",
+      "domainId": "EX",
+      "primaryTarget": "EX02",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "EXI015",
+      "domainId": "EX",
+      "primaryTarget": "EX05",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EXI016",
+      "domainId": "EX",
+      "primaryTarget": "EX05",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EXI017",
+      "domainId": "EX",
+      "primaryTarget": "EX06",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EXI018",
+      "domainId": "EX",
+      "primaryTarget": "EX06",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EXI019",
+      "domainId": "EX",
+      "primaryTarget": "EX07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EXI020",
+      "domainId": "EX",
+      "primaryTarget": "EX07",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EXI021",
+      "domainId": "EX",
+      "primaryTarget": "EX07",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EXI022",
+      "domainId": "EX",
+      "primaryTarget": "EX08",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "EXI023",
+      "domainId": "EX",
+      "primaryTarget": "EX08",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "EXI024",
+      "domainId": "EX",
+      "primaryTarget": "EX08",
+      "responseType": "paired_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "SOI037",
+      "domainId": "SO",
+      "primaryTarget": "SO13",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "SOI038",
+      "domainId": "SO",
+      "primaryTarget": "SO13",
+      "responseType": "likert",
+      "relation": "negative"
+    },
+    {
+      "itemId": "SOI039",
+      "domainId": "SO",
+      "primaryTarget": "SO13",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "SOI040",
+      "domainId": "SO",
+      "primaryTarget": "SO12",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "PLI071",
+      "domainId": "PL",
+      "primaryTarget": "PL21",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI072",
+      "domainId": "PL",
+      "primaryTarget": "PL21",
+      "responseType": "likert",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI073",
+      "domainId": "PL",
+      "primaryTarget": "PL21",
+      "responseType": "vignette_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI074",
+      "domainId": "PL",
+      "primaryTarget": "PL21",
+      "responseType": "single_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI075",
+      "domainId": "PL",
+      "primaryTarget": "PL25",
+      "responseType": "likert",
+      "relation": "positive"
+    },
+    {
+      "itemId": "PLI076",
+      "domainId": "PL",
+      "primaryTarget": "PL25",
+      "responseType": "paired_choice",
+      "relation": "diagnostic"
+    },
+    {
+      "itemId": "PLI077",
+      "domainId": "PL",
+      "primaryTarget": "PL25",
+      "responseType": "likert",
+      "relation": "negative"
+    }
+  ]
+}

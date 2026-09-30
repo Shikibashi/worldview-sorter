@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/profile-probes.schema.json",
+  "title": "Worldview Sorter Profile Probe Set",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "probeSetVersion",
+    "status",
+    "responseScaleId",
+    "probes"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "probeSetVersion": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "prototype",
+        "calibrated",
+        "deprecated"
+      ]
+    },
+    "responseScaleId": {
+      "type": "string"
+    },
+    "probes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "profileId",
+          "text",
+          "role",
+          "sourceRefs",
+          "rationale"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9-]+$"
+          },
+          "profileId": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "hard_gate",
+              "soft_discriminator"
+            ]
+          },
+          "sourceRefs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "rationale": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

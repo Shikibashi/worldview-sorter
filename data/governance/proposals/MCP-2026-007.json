@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-007",
+  "title": "Retire the conflated public moral-scope interpretation",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "deprecation",
+  "status": "released",
+  "affectedObjects": [
+    {"type": "proposition", "id": "audit2-SO09-moral-scope"},
+    {"type": "research_classification", "id": "audit2-SO09-moral-scope"},
+    {"type": "result_semantics", "id": "model-policy"},
+    {"type": "result_semantics", "id": "affinity-catalog-policy"},
+    {"type": "localization", "id": "catalog/model-binding"},
+    {"type": "localization", "id": "catalog/ar"},
+    {"type": "localization", "id": "catalog/en-US"},
+    {"type": "localization", "id": "catalog/es-ES"},
+    {"type": "localization", "id": "bundle/ar"},
+    {"type": "localization", "id": "bundle/en-US"},
+    {"type": "localization", "id": "bundle/es-ES"},
+    {"type": "route", "id": "route-policy"},
+    {"type": "item", "id": "SOI004"},
+    {"type": "item", "id": "SOI029"},
+    {"type": "route", "id": "quick"},
+    {"type": "route", "id": "standard"},
+    {"type": "route", "id": "full"},
+    {"type": "source", "id": "domain-cosmopolitanism"}
+  ],
+  "currentBehavior": "The frozen rule treats SOI004@2's possible equal claim and SOI029@1's usual priority in one matched rescue case as two directional units for one proposition. Agreement with the possibility and preference for the community member in the rescue case is reported as mixed, although those answers can express a coherent moderate position.",
+  "proposedBehavior": "In a successor model, retain both item revisions and the SO09 item target, but retire the conflated interpretation rule entirely until independent discriminating evidence exists. Remove its public comparison and assessability claims, and show SO09 as an explicit coverage gap. Do not move the same mismatched rule into research-only computation. The current validator rightly rejects a one-unit audited public rule.",
+  "rationale": "The modal statement that equal moral claims can occur does not entail equal priority normally. Local priority in one matched case does not deny the possibility of equality elsewhere. Strict and moderate moral cosmopolitan positions must not collapse into a generic cosmopolitan identity.",
+  "philosophicalBasis": {
+    "proposition": "In a matched serious-harm case, a stranger abroad can have a moral claim as weighty as a community member.",
+    "neighboringViews": [
+      "Strict moral cosmopolitanism denies additional compatriot priority in aid decisions",
+      "Moderate moral cosmopolitanism recognizes universal duties alongside some special compatriot duties",
+      "Political cosmopolitanism concerns institutions rather than this moral tradeoff"
+    ],
+    "nonEntailments": [
+      "Equal priority in every matched case",
+      "No special obligations to friends, family, or compatriots",
+      "Open borders or global political institutions",
+      "Identification with a cosmopolitan tradition"
+    ],
+    "existingGap": "SOI004@2 directly asks whether equality can occur, while SOI029@1 asks usual priority. They cannot corroborate the same modal proposition. With SOI029 removed, the pilot has one directional unit for that proposition and cannot meet its two-unit support threshold.",
+    "scholarlyDisagreement": "Cosmopolitan positions differ about special obligations to compatriots and how those obligations are balanced against universal aid duties. The source defines this conceptual dispute but does not validate the original questionnaire."
+  },
+  "sourceClaims": [
+    {"sourceId": "domain-cosmopolitanism", "claim": "The SEP distinguishes strict moral cosmopolitanism, which gives no extra aid duty to compatriots, from moderate moral cosmopolitanism, which accepts universal duties and special compatriot duties. That distinction supports separating universal moral concern from the further claim of usual equal priority in aid decisions; it does not validate these items.", "relationship": "supports"}
+  ],
+  "alternatives": [
+    "Retain the current two-unit rule: rejected for a successor because a coherent moderate response can be mislabeled as conflict.",
+    "Change the proposition to usual equality while keeping both items: rejected because SOI004 says can, not normally.",
+    "Lower the threshold to one answer: rejected because one item alone offers little false-positive protection.",
+    "Create a new discriminating question immediately: deferred until the separate possibility and usual-priority targets are reviewed as distinct content needs."
+  ],
+  "respondentImpact": "A successor would no longer compute or publish a SO09 interpretation from the existing two-item pair. SOI004 and SOI029 raw answers remain available; the SO domain must show the coverage gap and the prototype comparison criterion must be removed. Historical mixed states remain intact in their original snapshots.",
+  "historicalCompatibility": "Preserve model-release-1.0.0, model-release-1.1.0, both historical item revisions, old routes, and saved result snapshots. Publish a new model/release version for any accepted change; do not rewrite raw answers or old rules.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical", "one_item_lean", "route_omission", "source_link", "item_revision"],
+    "paths": ["scripts/test-pilot-v1.mjs", "scripts/test-model-governance.mjs", "scripts/test-so09-retirement.mjs"]
+  },
+  "review": {"approvals": [
+    {"role": "philosophical", "reviewer": "Worldview Sorter AI editorial review", "at": "2026-09-30T05:27:58Z", "note": "Compared SOI004@2 and SOI029@1 answer meanings with the strict/moderate cosmopolitan distinction in SEP. The modal possibility claim and usual-priority choice are not equivalent; retirement preserves the unresolved distinction without asserting respondent doctrine."},
+    {"role": "engineering", "reviewer": "Worldview Sorter AI release review", "at": "2026-09-30T05:27:58Z", "note": "Checked successor content integrity, unchanged 238 item revisions, old-release hashes, public-rule and comparison removal, and positive/negative/mixed/missing synthetic regressions. Historical model remains immutable."},
+    {"role": "linguistic", "reviewer": "Worldview Sorter AI localization review", "at": "2026-09-30T05:27:58Z", "note": "Canonical item wording and answer options are byte-identical. Locale bundles only rebind model and affinity versions; non-English bundles remain untranslated drafts and are not enabled for respondents."}
+  ]},
+  "release": {
+    "components": ["model", "source_ledger", "pilot", "full_form", "progressive_routes", "affinity", "localization_catalog"],
+    "migration": "No raw-response migration. A successor must review Quick, Standard, Full, the SO result domain, coverage, comparison criterion, and any localization of changed respondent wording."
+  },
+  "implementationRefs": ["docs/governance/MORAL_SCOPE_EVIDENCE_REVIEW.md", "data/generic/model-v1.1-pilot.json", "data/releases/model-release-v1.2.0.json", "scripts/build-so09-retirement.mjs", "scripts/test-so09-retirement.mjs"]
+}

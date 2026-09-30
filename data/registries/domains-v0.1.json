@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0.0",
+  "registryVersion": "0.1.0",
+  "domains": [
+    {
+      "id": "ME",
+      "key": "metaethics",
+      "name": "Metaethics",
+      "order": 1,
+      "candidateItemTarget": 30,
+      "description": "What, if anything, makes moral claims true, objective, universal, or reason-giving?",
+      "status": "provisional"
+    },
+    {
+      "id": "NE",
+      "key": "normative_ethics",
+      "name": "Normative ethics",
+      "order": 2,
+      "candidateItemTarget": 45,
+      "description": "How should actions, rules, character, consequences, relationships, and competing moral claims be evaluated?",
+      "status": "provisional"
+    },
+    {
+      "id": "MF",
+      "key": "moral_foundations",
+      "name": "Moral foundations",
+      "order": 3,
+      "candidateItemTarget": 36,
+      "description": "Independent moral-intuitive concerns rather than a single left/right moral axis.",
+      "status": "provisional"
+    },
+    {
+      "id": "VA",
+      "key": "values_axiology",
+      "name": "Values & axiology",
+      "order": 4,
+      "candidateItemTarget": 57,
+      "description": "What people value, how values are structured, and what makes a life go well.",
+      "status": "provisional"
+    },
+    {
+      "id": "EP",
+      "key": "epistemology",
+      "name": "Epistemology",
+      "order": 5,
+      "candidateItemTarget": 45,
+      "description": "What can be known, how beliefs should be justified, and which sources or methods warrant confidence.",
+      "status": "provisional"
+    },
+    {
+      "id": "OM",
+      "key": "metaphysics_ontology",
+      "name": "Metaphysics & ontology",
+      "order": 6,
+      "candidateItemTarget": 35,
+      "description": "What kinds of things exist and what the basic structure of reality is like.",
+      "status": "provisional"
+    },
+    {
+      "id": "MS",
+      "key": "mind_self",
+      "name": "Mind & self",
+      "order": 7,
+      "candidateItemTarget": 28,
+      "description": "Consciousness, mind, personal identity, and the nature of the self.",
+      "status": "provisional"
+    },
+    {
+      "id": "AH",
+      "key": "agency_human_nature",
+      "name": "Agency & human nature",
+      "order": 8,
+      "candidateItemTarget": 40,
+      "description": "Free will, responsibility, human nature, and causal explanations of behavior.",
+      "status": "provisional"
+    },
+    {
+      "id": "RC",
+      "key": "religion_cosmology",
+      "name": "Religion & cosmology",
+      "order": 9,
+      "candidateItemTarget": 35,
+      "description": "God, supernatural reality, revelation, afterlife, sacredness, and cosmic purpose.",
+      "status": "provisional"
+    },
+    {
+      "id": "EX",
+      "key": "existential_orientation",
+      "name": "Existential orientation",
+      "order": 10,
+      "candidateItemTarget": 24,
+      "description": "Meaning, purpose, nihilism, and broad existential interpretations of the world.",
+      "status": "provisional"
+    },
+    {
+      "id": "SO",
+      "key": "social_ontology",
+      "name": "Social ontology & human relations",
+      "order": 11,
+      "candidateItemTarget": 42,
+      "description": "Individual and group relations, hierarchy, social categories, moral scope, and humanity's relation to nature.",
+      "status": "provisional"
+    },
+    {
+      "id": "PL",
+      "key": "political_legal_economic",
+      "name": "Political, legal & economic philosophy",
+      "order": 12,
+      "candidateItemTarget": 55,
+      "description": "Authority, liberty, rights, justice, property, coordination, law, punishment, and political scope.",
+      "status": "provisional"
+    }
+  ]
+}

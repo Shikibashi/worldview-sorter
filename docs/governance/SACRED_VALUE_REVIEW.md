@@ -1,0 +1,32 @@
+# Sacred-value interpretation review
+
+Status: editorial analysis for a future model release, with [draft change proposal MCP-2026-002](../../data/governance/proposals/MCP-2026-002.json); **not** an approved change to frozen pilot 1.0.0. The versioned rule definition `ph-sacred-value` remains available for historical interpretation; the original release did not pin executable engine source, so exact historical runtime-code identity is unproven. Its source record explicitly says the cited study does not validate this questionnaire.
+
+## Exact evidence in the pilot
+
+`RCI012@1` asks whether some things can have sacred status that gives reasons not to treat them merely as objects or resources. `RCI029@1` asks how much moral weight the sacred status of a community's object should carry against a large practical benefit, with no direct harm to persons. The current rule needs two evidence units. Agreement with `RCI012` and either “very high” or “some” in `RCI029` support it; disagreement with `RCI012` and either “symbolic” or “none” in `RCI029` oppose it. Neutral, `no_view`, `not_understood`, unanswered, and unavailable evidence do not become support. Mixed support and opposition remain mixed under the existing evidence semantics.
+
+The narrow proposition supported by concordant positive answers is: **the respondent grants sacred status itself at least some moral weight in the stated object and practical-benefit context, beyond the ordinary resource value of the object and the specified direct harm to persons.** A “some” response expressly allows that the benefit may outweigh it. The vignette's “symbolic” response assigns weight to human reactions and relationships while denying an additional weight to sacred status itself. It can therefore oppose the narrow proposition without denying that those relationships matter morally.
+
+## Distinctions this evidence cannot settle
+
+- **Attitude dependence.** Neither question asks whether a thing can be sacred independently of anyone's attitudes or practices. A community-conferred sacred status can motivate the same positive answers as an attitude-independent status. “Independent normative weight” must not be read as a metaphysical claim of mind-independent intrinsic value.
+- **Inviolability and comparison.** “Some” weight is compatible with tradeoffs. Even “very high” does not establish that all tradeoffs are forbidden, that ordinary value comparison is impossible, or that a commitment is dialectically immune to argument. `RCI019@1` uses “beyond ordinary practical evaluation,” but it is not an evidence unit in the frozen rule and is too broad to repair this distinction by implication.
+- **Religion and identity.** The answers do not entail a deity, revelation, religious law, purity norms, membership in a tradition, or an entire theory of value. A secular respondent may affirm the narrow proposition.
+- **Generalization.** The single vignette concerns a community's sacred object and a practical benefit. The rule does not establish an unrestricted stance toward sacred persons, places, political commitments, or every sacrifice.
+
+These are possible false positives for a broader “sacred values” label. The authored item target and the narrower respondent proposition must remain separate from any hypothesized psychometric construct `RC09`. No calibration or latent structure is established by this review.
+
+## Academic basis and source scope
+
+- [Ginges et al. (2007)](https://pubmed.ncbi.nlm.nih.gov/17460042/) report experiments about sacred values and material or symbolic incentives in a specific violent conflict. This is context for the distinction, not evidence that `RCI012` or `RCI029` measures a validated construct.
+- [*The Nature of Sacred Values*](https://academic.oup.com/book/44864/chapter-abstract/384569224) describes a stronger account involving forbidden tradeoffs and inviolability. The pilot's “some weight” option cannot establish that stronger account.
+- [Rotondo, “The Philosophical Significance of the Sacred”](https://www.cambridge.org/core/journals/philosophy/article/abs/philosophical-significance-of-the-sacred/7B1A523474922B7051EAC55F9760B5BA) develops an account with ethical implications. A search-index excerpt of the [author manuscript](https://philpapers.org/archive/ROTTPS-3.pdf) describes it as attitude/action-dependent; the full manuscript was not reviewed for this note. Thus a positive answer does not discriminate that kind of account from attitude-independent sacredness.
+- [Clarke, “The sanctity of life as a sacred value”](https://pubmed.ncbi.nlm.nih.gov/36131633/) discusses a non-dogmatic reconception of sacredness. This supports the boundary that affirming sacred status does not, by itself, establish religious dogma; the paper concerns the distinct sanctity-of-life debate.
+- [SEP, “Incommensurable Values”](https://plato.stanford.edu/entries/value-incommensurable/) distinguishes disputed meanings of incommensurability and ordinary comparison. Giving something weight against a benefit does not, by itself, answer those further questions.
+
+The cited academic abstracts and the indexed manuscript excerpt support these **conceptual boundaries**. They do not supply response-process evidence for this original questionnaire. The proposed `rotondo-sacred-2026` and `katsafanas-sacred-values-2022` source IDs are draft references to the linked Cambridge article and Oxford chapter above; neither is a registered source record in the frozen model. A new release must add reviewed source records and exact rule-linked claims before using them in production.
+
+## Decision for the next reviewed release
+
+Keep historical pilot wording and rule bytes unchanged. The draft proposal narrows the respondent-facing claim to moral weight in the asked tradeoff and records the non-entailments above. Review whether `RCI012` and `RCI029` still warrant two distinct authored evidence units, since they express closely related wording; empirical independence has not been shown. Add regression cases for positive, negative, mixed, missing, community-conferred/attitude-dependent, and tradeoff-permitting answers before approval. If maintainers instead want to infer attitude-independent sacredness or strict inviolability, treat each as a **new distinction requiring a discriminating item and new rule**, not as a reinterpretation of these historical answers. Use a new component and model release under [the governance process](CONTRIBUTING.md).

@@ -1,0 +1,1796 @@
+{
+  "schemaVersion": "1.0.0",
+  "auditVersion": "unmapped-audit-1.0.0",
+  "baseModelVersion": "generic-0.2.0",
+  "resultModelVersion": "generic-0.3.0",
+  "auditedConstructs": 49,
+  "decisionCounts": {
+    "ready_existing_items": 27,
+    "needs_new_discriminating_items": 2,
+    "remain_derived": 5,
+    "remain_research_only": 7,
+    "split_or_deprecate": 8
+  },
+  "decisions": [
+    {
+      "constructId": "ME07",
+      "decision": "remain_derived",
+      "rationale": "Metaethical family should remain a derived synthesis over independently measured metaethical commitments; MEI005 is diagnostic, not a standalone family scale.",
+      "sourceIds": [
+        "acad-polzler-2018",
+        "acad-yang-2026",
+        "gen-realism",
+        "gen-antirealism",
+        "gen-noncognitivism"
+      ],
+      "construct": {
+        "id": "ME07",
+        "domainId": "ME",
+        "name": "Metaethical family",
+        "type": "derived",
+        "tier": "diagnostic",
+        "description": "Derived classification over realist, constructivist, subjectivist, error-theoretic, noncognitivist, and related families.",
+        "candidateItemTarget": 0,
+        "outputMode": "hidden_derived",
+        "evidenceBasis": [
+          "philpapers-2020"
+        ],
+        "prerequisites": [
+          "ME01",
+          "ME02",
+          "ME03",
+          "ME05",
+          "ME06"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": false
+      },
+      "existingItemIds": [
+        "MEI005"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "MF07",
+      "decision": "remain_research_only",
+      "rationale": "Liberty/opposition-to-domination is theoretically interesting, but it is not part of the standard MFQ-2 six-foundation model and the current items are original exploratory content.",
+      "sourceIds": [
+        "acad-mfq2",
+        "audit-liberty"
+      ],
+      "construct": {
+        "id": "MF07",
+        "domainId": "MF",
+        "name": "Liberty / opposition to domination",
+        "type": "monopolar",
+        "tier": "research",
+        "description": "Experimental moral-foundation construct concerning domination, coercion, and liberty.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "MFI019",
+        "MFI020",
+        "MFI021",
+        "MFI022"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "EP02",
+      "decision": "ready_existing_items",
+      "rationale": "Existing items directly ask whether knowledge is simple versus interconnected/developing; interpret only this narrow personal-epistemology proposition.",
+      "sourceIds": [
+        "audit-schommer"
+      ],
+      "construct": {
+        "id": "EP02",
+        "domainId": "EP",
+        "name": "Knowledge complexity",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Tendency to regard knowledge as complex, interconnected, and developing rather than simple and fixed.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EPI009",
+        "EPI014",
+        "EPI028"
+      ],
+      "acceptedRuleIds": [
+        "audit-EP02-complex-knowledge"
+      ]
+    },
+    {
+      "constructId": "EP03",
+      "decision": "needs_new_discriminating_items",
+      "rationale": "EPI015 was already excluded and the remaining material does not provide two independent negative indicators of truth attainability without conflating approximation, skepticism, and conventionalism.",
+      "sourceIds": [
+        "acad-epistemology"
+      ],
+      "construct": {
+        "id": "EP03",
+        "domainId": "EP",
+        "name": "Attainability of truth",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Confidence that objective truth or knowledge is attainable in principle.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EPI010",
+        "EPI015",
+        "EPI029"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "EP05",
+      "decision": "ready_existing_items",
+      "rationale": "Two direct, opposing items support a narrow a-priori-justification interpretation; EPI025 remains excluded as a knowledge/trivia recognition question.",
+      "sourceIds": [
+        "audit-apriori"
+      ],
+      "construct": {
+        "id": "EP05",
+        "domainId": "EP",
+        "name": "Rational / a priori reliance",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Epistemic weight assigned to reason, conceptual analysis, or a priori justification.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EPI006",
+        "EPI017",
+        "EPI025"
+      ],
+      "acceptedRuleIds": [
+        "audit-EP05-apriori"
+      ]
+    },
+    {
+      "constructId": "EP06",
+      "decision": "ready_existing_items",
+      "rationale": "Public systematic testability can be interpreted as an epistemic preference, without claiming science is the only source of knowledge.",
+      "sourceIds": [
+        "domain-science-objectivity",
+        "acad-epistemology"
+      ],
+      "construct": {
+        "id": "EP06",
+        "domainId": "EP",
+        "name": "Scientific-method reliance",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Epistemic weight assigned to systematic scientific methods.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EPI004",
+        "EPI007",
+        "EPI026"
+      ],
+      "acceptedRuleIds": [
+        "audit-EP06-testability"
+      ]
+    },
+    {
+      "constructId": "EP10",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly ask whether purported revelation can provide factual justification; this is distinct from revelation's moral or political authority.",
+      "sourceIds": [
+        "audit-revelation"
+      ],
+      "construct": {
+        "id": "EP10",
+        "domainId": "EP",
+        "name": "Revelation as epistemic source",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Epistemic weight assigned to alleged divine or supernatural revelation.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EPI012",
+        "EPI021",
+        "EPI032"
+      ],
+      "acceptedRuleIds": [
+        "audit-EP10-revelation"
+      ]
+    },
+    {
+      "constructId": "EP11",
+      "decision": "split_or_deprecate",
+      "rationale": "The current construct conflates external-world metaphysics, perceptual directness, and skepticism. Retain narrower external-world-independence and skepticism interpretations; do not emit one categorical label.",
+      "sourceIds": [
+        "audit-perception"
+      ],
+      "construct": {
+        "id": "EP11",
+        "domainId": "EP",
+        "name": "External-world stance",
+        "type": "categorical",
+        "tier": "diagnostic",
+        "description": "Direct realism, indirect realism, idealism, skepticism, or related positions regarding the external world.",
+        "candidateItemTarget": 4,
+        "outputMode": "branch_classification",
+        "evidenceBasis": [
+          "philpapers-2020"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EPI034",
+        "EPI035",
+        "EPI036",
+        "EPI037"
+      ],
+      "acceptedRuleIds": [
+        "audit-EP11-external-world",
+        "audit-EP11-skepticism"
+      ]
+    },
+    {
+      "constructId": "OM08",
+      "decision": "split_or_deprecate",
+      "rationale": "Substantive-versus-deflationary attitudes can be reported, but framework relativity and verbalism should not be collapsed into one categorical metaontology label.",
+      "sourceIds": [
+        "acad-thomasson",
+        "acad-marschall"
+      ],
+      "construct": {
+        "id": "OM08",
+        "domainId": "OM",
+        "name": "Metaontology",
+        "type": "categorical",
+        "tier": "research",
+        "description": "Whether ontological disputes are substantive, deflationary, quantifier-relative, or otherwise construed.",
+        "candidateItemTarget": 3,
+        "outputMode": "branch_classification",
+        "evidenceBasis": [
+          "philpapers-2020"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "OMI022",
+        "OMI023",
+        "OMI024"
+      ],
+      "acceptedRuleIds": [
+        "audit-OM08-deflationary",
+        "audit-OM08-substantive"
+      ]
+    },
+    {
+      "constructId": "MS07",
+      "decision": "remain_derived",
+      "rationale": "Identity-under-transformation is appropriately a derived pattern over continuity and transformation cases; one teleportation item cannot support a direct scale.",
+      "sourceIds": [
+        "gen-identity"
+      ],
+      "construct": {
+        "id": "MS07",
+        "domainId": "MS",
+        "name": "Identity under transformation",
+        "type": "derived",
+        "tier": "diagnostic",
+        "description": "Derived pattern across teleportation, copying, uploading, replacement, and continuity vignettes.",
+        "candidateItemTarget": 0,
+        "outputMode": "hidden_derived",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [
+          "MS03"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": false
+      },
+      "existingItemIds": [
+        "MSI005"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "AH01",
+      "decision": "needs_new_discriminating_items",
+      "rationale": "Current free-will items partly encode compatibilist conditions, so disagreement may mean incompatibilism rather than disbelief in free will.",
+      "sourceIds": [
+        "free-will-inventory",
+        "gen-agency"
+      ],
+      "construct": {
+        "id": "AH01",
+        "domainId": "AH",
+        "name": "Free-will belief",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Strength of belief that human agents possess free will.",
+        "candidateItemTarget": 5,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "free-will-inventory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI001",
+        "AHI012",
+        "AHI023",
+        "AHI034"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "AH03",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly address basic/desert-entailing responsibility and manipulation; keep distinct from forward-looking responsibility.",
+      "sourceIds": [
+        "audit-responsibility"
+      ],
+      "construct": {
+        "id": "AH03",
+        "domainId": "AH",
+        "name": "Moral-responsibility belief",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Strength of belief in basic or desert-entailing moral responsibility.",
+        "candidateItemTarget": 5,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI003",
+        "AHI014",
+        "AHI025",
+        "AHI036"
+      ],
+      "acceptedRuleIds": [
+        "audit-AH03-basic-desert"
+      ]
+    },
+    {
+      "constructId": "AH04",
+      "decision": "split_or_deprecate",
+      "rationale": "The broad 'baseline benevolence' label overreaches. Existing direct items can support only the narrower claim that humans are capable of genuinely other-regarding motivation.",
+      "sourceIds": [
+        "audit-altruism"
+      ],
+      "construct": {
+        "id": "AH04",
+        "domainId": "AH",
+        "name": "Baseline human benevolence",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Belief that humans are naturally capable of or inclined toward benevolence/cooperation.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI006",
+        "AHI015",
+        "AHI026"
+      ],
+      "acceptedRuleIds": [
+        "audit-AH04-altruistic-capacity"
+      ]
+    },
+    {
+      "constructId": "AH05",
+      "decision": "split_or_deprecate",
+      "rationale": "Self-interest prevalence and competition are different. Psychological egoism is already represented by AH13 and social competition by SO08; do not score this bundled construct as one worldview dimension.",
+      "sourceIds": [
+        "audit-altruism",
+        "acad-egoism",
+        "audit-svo"
+      ],
+      "construct": {
+        "id": "AH05",
+        "domainId": "AH",
+        "name": "Baseline human selfishness / competition",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Belief that humans are naturally inclined toward selfishness, rivalry, or competition.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI007",
+        "AHI016",
+        "AHI027"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "AH06",
+      "decision": "ready_existing_items",
+      "rationale": "Existing items directly concern malleability of human dispositions; keep separate from whether causes are biological or environmental.",
+      "sourceIds": [
+        "audit-fixed-malleable",
+        "audit-human-nature"
+      ],
+      "construct": {
+        "id": "AH06",
+        "domainId": "AH",
+        "name": "Human-nature mutability",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Belief that human traits and dispositions are substantially malleable.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI004",
+        "AHI008",
+        "AHI028"
+      ],
+      "acceptedRuleIds": [
+        "audit-AH06-malleability"
+      ]
+    },
+    {
+      "constructId": "AH07",
+      "decision": "remain_research_only",
+      "rationale": "A generic preference for multi-causal explanation is a methodological outlook with no clear validated worldview construct here; retain for research only.",
+      "sourceIds": [
+        "audit-human-nature"
+      ],
+      "construct": {
+        "id": "AH07",
+        "domainId": "AH",
+        "name": "Human-nature complexity",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Belief that behavior resists simple, single-cause accounts.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI009",
+        "AHI017",
+        "AHI029"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "AH08",
+      "decision": "ready_existing_items",
+      "rationale": "Interpret only the reported belief that biological/inherited factors can make substantial causal contributions; do not infer immutability or normativity.",
+      "sourceIds": [
+        "audit-human-nature"
+      ],
+      "construct": {
+        "id": "AH08",
+        "domainId": "AH",
+        "name": "Biological causal attribution",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Weight assigned to biological and inherited causes of behavior.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI010",
+        "AHI018",
+        "AHI030"
+      ],
+      "acceptedRuleIds": [
+        "audit-AH08-biological"
+      ]
+    },
+    {
+      "constructId": "AH09",
+      "decision": "ready_existing_items",
+      "rationale": "Interpret only the reported belief that social/environmental factors can substantially shape behavior; do not infer blank-slate views.",
+      "sourceIds": [
+        "audit-human-nature"
+      ],
+      "construct": {
+        "id": "AH09",
+        "domainId": "AH",
+        "name": "Environmental / social causal attribution",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Weight assigned to environmental, institutional, and social causes of behavior.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "AHI004",
+        "AHI019",
+        "AHI022",
+        "AHI031"
+      ],
+      "acceptedRuleIds": [
+        "audit-AH09-environmental"
+      ]
+    },
+    {
+      "constructId": "AH12",
+      "decision": "remain_derived",
+      "rationale": "Compatibilist/libertarian/skeptical family classification must remain derived from free-will, determinism, and responsibility answers.",
+      "sourceIds": [
+        "free-will-inventory",
+        "gen-agency"
+      ],
+      "construct": {
+        "id": "AH12",
+        "domainId": "AH",
+        "name": "Agency theory family",
+        "type": "derived",
+        "tier": "diagnostic",
+        "description": "Derived but explicitly confirmed classification among compatibilist, libertarian, hard-determinist, skeptical, and related positions.",
+        "candidateItemTarget": 0,
+        "outputMode": "hidden_derived",
+        "evidenceBasis": [
+          "philpapers-2020",
+          "free-will-inventory"
+        ],
+        "prerequisites": [
+          "AH01",
+          "AH02",
+          "AH03"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": false
+      },
+      "existingItemIds": [],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "RC02",
+      "decision": "ready_existing_items",
+      "rationale": "Conditional questions directly distinguish personal/agentic from impersonal divinity; only interpret when relevant branch prerequisites are satisfied.",
+      "sourceIds": [
+        "audit-providence",
+        "gen-theology"
+      ],
+      "construct": {
+        "id": "RC02",
+        "domainId": "RC",
+        "name": "Personal / agentic deity",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Degree to which divinity is understood as personal, intentional, or agentic.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [
+          "RC01"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "RCI002",
+        "RCI015",
+        "RCI025"
+      ],
+      "acceptedRuleIds": [
+        "audit-RC02-agentic-divinity"
+      ]
+    },
+    {
+      "constructId": "RC04",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly address whether supernatural agency can intervene in ordinary events.",
+      "sourceIds": [
+        "audit-divine-intervention",
+        "audit-providence"
+      ],
+      "construct": {
+        "id": "RC04",
+        "domainId": "RC",
+        "name": "Divine / supernatural intervention",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Belief that supernatural agency intervenes in ordinary events.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [
+          "RC03"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "RCI009",
+        "RCI016",
+        "RCI026"
+      ],
+      "acceptedRuleIds": [
+        "audit-RC04-intervention"
+      ]
+    },
+    {
+      "constructId": "RC05",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly address miracles, while distinguishing unexplained natural events from miracle claims.",
+      "sourceIds": [
+        "audit-miracles"
+      ],
+      "construct": {
+        "id": "RC05",
+        "domainId": "RC",
+        "name": "Miraculous intervention",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Belief that events can occur through suspension or extraordinary override of ordinary natural regularities.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [
+          "RC03"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "RCI010",
+        "RCI017",
+        "RCI027"
+      ],
+      "acceptedRuleIds": [
+        "audit-RC05-miracles"
+      ]
+    },
+    {
+      "constructId": "RC06",
+      "decision": "ready_existing_items",
+      "rationale": "Current items support a narrow claim about purported revelation having authority for belief or conduct, distinct from public-law authority.",
+      "sourceIds": [
+        "audit-revelation"
+      ],
+      "construct": {
+        "id": "RC06",
+        "domainId": "RC",
+        "name": "Revelatory authority",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Authority granted to purported revelation in belief and conduct.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "RCI011",
+        "RCI018",
+        "RCI028"
+      ],
+      "acceptedRuleIds": [
+        "audit-RC06-revelatory-authority"
+      ]
+    },
+    {
+      "constructId": "RC11",
+      "decision": "remain_derived",
+      "rationale": "Theism, deism, pantheism, panentheism, and impersonal divinity are a family of alternatives. Keep the family descriptive/derived rather than a single score.",
+      "sourceIds": [
+        "gen-theology"
+      ],
+      "construct": {
+        "id": "RC11",
+        "domainId": "RC",
+        "name": "Divinity model",
+        "type": "categorical",
+        "tier": "diagnostic",
+        "description": "Theistic, deistic, pantheistic, panentheistic, impersonal-divinity, and related models.",
+        "candidateItemTarget": 5,
+        "outputMode": "branch_classification",
+        "evidenceBasis": [
+          "philpapers-2020"
+        ],
+        "prerequisites": [
+          "RC01"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "RCI001",
+        "RCI031",
+        "RCI032",
+        "RCI033",
+        "RCI034",
+        "RCI035"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "EX02",
+      "decision": "split_or_deprecate",
+      "rationale": "Designer-grounded and non-designer sources of objective purpose should be separate commitments, not one categorical score.",
+      "sourceIds": [
+        "gen-meaning"
+      ],
+      "construct": {
+        "id": "EX02",
+        "domainId": "EX",
+        "name": "Objective-purpose source",
+        "type": "categorical",
+        "tier": "diagnostic",
+        "description": "Proposed source of objective meaning or purpose when such meaning is endorsed.",
+        "candidateItemTarget": 3,
+        "outputMode": "branch_classification",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [
+          "EX01"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EXI012",
+        "EXI013",
+        "EXI014"
+      ],
+      "acceptedRuleIds": [
+        "audit-EX02-designer-purpose",
+        "audit-EX02-nondesigner-purpose"
+      ]
+    },
+    {
+      "constructId": "EX04",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly distinguish denial of objective/inherent meaning from alternative objective or constructed sources.",
+      "sourceIds": [
+        "gen-meaning"
+      ],
+      "construct": {
+        "id": "EX04",
+        "domainId": "EX",
+        "name": "Existential nihilism",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Degree of endorsement that life lacks objective or inherent meaning/value.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EXI003",
+        "EXI006",
+        "EXI011"
+      ],
+      "acceptedRuleIds": [
+        "audit-EX04-nihilism"
+      ]
+    },
+    {
+      "constructId": "EX05",
+      "decision": "remain_research_only",
+      "rationale": "World-safety is a validated Primal World Beliefs construct, but these are custom items and should remain explicitly exploratory until calibrated.",
+      "sourceIds": [
+        "primal-world-beliefs"
+      ],
+      "construct": {
+        "id": "EX05",
+        "domainId": "EX",
+        "name": "World safety",
+        "type": "monopolar",
+        "tier": "research",
+        "description": "General belief that the world is safe rather than dangerous.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "primal-world-beliefs"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EXI007",
+        "EXI015",
+        "EXI016"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "EX07",
+      "decision": "remain_research_only",
+      "rationale": "World-aliveness is a validated primal family, but these custom items mix felt intentionality and metaphysical responsiveness; retain as research-only.",
+      "sourceIds": [
+        "primal-world-beliefs"
+      ],
+      "construct": {
+        "id": "EX07",
+        "domainId": "EX",
+        "name": "World aliveness / intentional character",
+        "type": "monopolar",
+        "tier": "research",
+        "description": "General tendency to experience the world as intentional, responsive, or alive.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "primal-world-beliefs"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EXI019",
+        "EXI020",
+        "EXI021"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "EX08",
+      "decision": "remain_research_only",
+      "rationale": "The current scale mixes social improvability, personal problems, and pessimism; it is not a clean optimism measure.",
+      "sourceIds": [
+        "primal-world-beliefs"
+      ],
+      "construct": {
+        "id": "EX08",
+        "domainId": "EX",
+        "name": "Optimism vs resignation",
+        "type": "bipolar",
+        "tier": "research",
+        "description": "General orientation toward possibility of improvement versus resignation or pessimism.",
+        "candidateItemTarget": 3,
+        "outputMode": "bipolar_bar",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "EXI022",
+        "EXI023",
+        "EXI024"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "EX09",
+      "decision": "remain_derived",
+      "rationale": "Responses to meaninglessness should be derived from meaning/nihilism responses rather than scored as an independent latent trait.",
+      "sourceIds": [
+        "gen-meaning"
+      ],
+      "construct": {
+        "id": "EX09",
+        "domainId": "EX",
+        "name": "Response to meaninglessness",
+        "type": "derived",
+        "tier": "diagnostic",
+        "description": "Derived existential style in response to absence or uncertainty of objective meaning.",
+        "candidateItemTarget": 0,
+        "outputMode": "hidden_derived",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [
+          "EX01",
+          "EX03",
+          "EX04"
+        ],
+        "measurementStatus": "provisional",
+        "directlyScored": false
+      },
+      "existingItemIds": [],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "SO03",
+      "decision": "ready_existing_items",
+      "rationale": "Existing items directly ask whether relationships/roles partly constitute identity; do not equate this with collectivism.",
+      "sourceIds": [
+        "audit-selfconstrual"
+      ],
+      "construct": {
+        "id": "SO03",
+        "domainId": "SO",
+        "name": "Relational / interdependent self",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Degree to which identity is understood through constitutive relationships and social roles.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI003",
+        "SOI016",
+        "SOI027"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO03-relational-self"
+      ]
+    },
+    {
+      "constructId": "SO04",
+      "decision": "ready_existing_items",
+      "rationale": "Interpret narrowly as toleration/noninterference toward disliked non-rights-violating ways of life, not generalized warmth toward outgroups.",
+      "sourceIds": [
+        "audit-toleration"
+      ],
+      "construct": {
+        "id": "SO04",
+        "domainId": "SO",
+        "name": "Tolerance of otherness",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Acceptance of persons, lifestyles, and groups substantially different from one's own.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI006",
+        "SOI017",
+        "SOI028"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO04-toleration"
+      ]
+    },
+    {
+      "constructId": "SO05",
+      "decision": "ready_existing_items",
+      "rationale": "Current items align conceptually with group-dominance preference; custom wording is not an SDO-7 administration.",
+      "sourceIds": [
+        "sdo7"
+      ],
+      "construct": {
+        "id": "SO05",
+        "domainId": "SO",
+        "name": "Group-dominance preference",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Preference for hierarchical dominance of some social groups over others.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "sdo7"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI009",
+        "SOI018",
+        "SOI031"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO05-dominance"
+      ]
+    },
+    {
+      "constructId": "SO06",
+      "decision": "ready_existing_items",
+      "rationale": "Current items align with opposition to group equality as a distinct SDO-related tendency; do not infer explicit dominance.",
+      "sourceIds": [
+        "sdo7"
+      ],
+      "construct": {
+        "id": "SO06",
+        "domainId": "SO",
+        "name": "Anti-egalitarianism",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Opposition to group-based social equality independent of explicit dominance preference.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "sdo7"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI010",
+        "SOI019",
+        "SOI032"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO06-anti-egalitarian"
+      ]
+    },
+    {
+      "constructId": "SO07",
+      "decision": "remain_research_only",
+      "rationale": "General cooperation preference is not equivalent to validated Social Value Orientation allocation behavior; retain for research.",
+      "sourceIds": [
+        "audit-svo"
+      ],
+      "construct": {
+        "id": "SO07",
+        "domainId": "SO",
+        "name": "Cooperation orientation",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Belief in and preference for cooperative modes of social interaction.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI011",
+        "SOI020",
+        "SOI033"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "SO08",
+      "decision": "remain_research_only",
+      "rationale": "General competition preference is not equivalent to SVO or a single economic ideology; retain for research.",
+      "sourceIds": [
+        "audit-svo"
+      ],
+      "construct": {
+        "id": "SO08",
+        "domainId": "SO",
+        "name": "Competition orientation",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Belief in and preference for competitive modes of social interaction.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI012",
+        "SOI021",
+        "SOI034"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "SO09",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly address moral scope across group boundaries; distinguish from institutional cosmopolitanism and absence of special obligations.",
+      "sourceIds": [
+        "domain-cosmopolitanism"
+      ],
+      "construct": {
+        "id": "SO09",
+        "domainId": "SO",
+        "name": "Scope of moral concern / cosmopolitan concern",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Breadth of the circle of persons toward whom substantial moral concern is extended.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI004",
+        "SOI005",
+        "SOI029"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO09-moral-scope"
+      ]
+    },
+    {
+      "constructId": "SO10",
+      "decision": "ready_existing_items",
+      "rationale": "Current items support a narrow psychological-essentialism interpretation; do not infer biological determinism or stereotype endorsement.",
+      "sourceIds": [
+        "audit-essentialism"
+      ],
+      "construct": {
+        "id": "SO10",
+        "domainId": "SO",
+        "name": "Social-category essentialism",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Degree to which social categories are treated as deep, natural, fixed, or essence-bearing.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI008",
+        "SOI022",
+        "SOI035"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO10-essentialism"
+      ]
+    },
+    {
+      "constructId": "SO12",
+      "decision": "split_or_deprecate",
+      "rationale": "Humanity-nature worldview is hierarchical. Existing items support ecological interdependence and anthropocentric-priority subclaims, not one total ecological score.",
+      "sourceIds": [
+        "audit-nep"
+      ],
+      "construct": {
+        "id": "SO12",
+        "domainId": "SO",
+        "name": "Humanity-nature worldview",
+        "type": "hierarchical",
+        "tier": "headline",
+        "description": "Higher-order family containing anthropocentrism, ecocentrism, ecological limits, mastery, and harmony/interdependence facets.",
+        "candidateItemTarget": 5,
+        "outputMode": "grouped_facets",
+        "evidenceBasis": [
+          "koltko-2004"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI007",
+        "SOI024",
+        "SOI030",
+        "SOI040"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO12-anthropocentric-priority",
+        "audit-SO12-interdependence"
+      ]
+    },
+    {
+      "constructId": "SO13",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly address general just-world belief; do not infer personal just-world belief or victim blaming.",
+      "sourceIds": [
+        "audit-justworld"
+      ],
+      "construct": {
+        "id": "SO13",
+        "domainId": "SO",
+        "name": "Belief in social/world justice",
+        "type": "monopolar",
+        "tier": "research",
+        "description": "Belief that people generally receive outcomes they deserve or that social reality is fundamentally just.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "SOI037",
+        "SOI038",
+        "SOI039"
+      ],
+      "acceptedRuleIds": [
+        "audit-SO13-just-world"
+      ]
+    },
+    {
+      "constructId": "PL01",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly ask whether political institutions can possess a moral right to coerce; keep distinct from political obligation.",
+      "sourceIds": [
+        "acad-legitimacy"
+      ],
+      "construct": {
+        "id": "PL01",
+        "domainId": "PL",
+        "name": "Legitimacy of coercive political authority",
+        "type": "monopolar",
+        "tier": "headline",
+        "description": "Degree to which states or political institutions can possess a justified right to coerce.",
+        "candidateItemTarget": 5,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "philpapers-2020"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI001",
+        "PLI024",
+        "PLI047"
+      ],
+      "acceptedRuleIds": [
+        "audit-PL01-legitimacy"
+      ]
+    },
+    {
+      "constructId": "PL05",
+      "decision": "ready_existing_items",
+      "rationale": "Interpret as centralization/decentralization preference in stated governance contexts, not as a complete theory of federalism.",
+      "sourceIds": [
+        "audit-federalism"
+      ],
+      "construct": {
+        "id": "PL05",
+        "domainId": "PL",
+        "name": "Centralization vs decentralization",
+        "type": "bipolar",
+        "tier": "headline",
+        "description": "Preference for concentration versus dispersion of political decision-making authority.",
+        "candidateItemTarget": 5,
+        "outputMode": "bipolar_bar",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI003",
+        "PLI004",
+        "PLI050"
+      ],
+      "acceptedRuleIds": [
+        "audit-PL05-decentralization"
+      ]
+    },
+    {
+      "constructId": "PL10",
+      "decision": "split_or_deprecate",
+      "rationale": "Equality, need, desert, sufficiency, priority, and entitlement are different distributive principles. Ranking them does not justify one family score.",
+      "sourceIds": [
+        "gen-distribution"
+      ],
+      "construct": {
+        "id": "PL10",
+        "domainId": "PL",
+        "name": "Distributive-principle family",
+        "type": "affinity",
+        "tier": "headline",
+        "description": "Relative affinities for equality, need, desert, sufficiency, priority, entitlement, and related distributive principles.",
+        "candidateItemTarget": 7,
+        "outputMode": "affinity_group",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI012",
+        "PLI032",
+        "PLI053"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "PL12",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly address legitimacy of common ownership; do not infer socialism or rejection of private property in all domains.",
+      "sourceIds": [
+        "domain-property"
+      ],
+      "construct": {
+        "id": "PL12",
+        "domainId": "PL",
+        "name": "Collective / common ownership legitimacy",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Degree to which common, collective, or social ownership is regarded as legitimate or desirable.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI014",
+        "PLI034",
+        "PLI059"
+      ],
+      "acceptedRuleIds": [
+        "audit-PL12-common-ownership"
+      ]
+    },
+    {
+      "constructId": "PL14",
+      "decision": "ready_existing_items",
+      "rationale": "Interpret as preference for participatory/democratic coordination in stated contexts, not as endorsement of political democracy everywhere.",
+      "sourceIds": [
+        "acad-ostrom"
+      ],
+      "construct": {
+        "id": "PL14",
+        "domainId": "PL",
+        "name": "Collective / democratic coordination preference",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Preference for collective, participatory, or democratically planned coordination.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI005",
+        "PLI036",
+        "PLI060"
+      ],
+      "acceptedRuleIds": [
+        "audit-PL14-democratic-coordination"
+      ]
+    },
+    {
+      "constructId": "PL15",
+      "decision": "ready_existing_items",
+      "rationale": "Interpret as preference for expert/administrative decision authority in stated contexts, distinct from valuing expert testimony.",
+      "sourceIds": [
+        "audit-epistocracy"
+      ],
+      "construct": {
+        "id": "PL15",
+        "domainId": "PL",
+        "name": "Expert / administrative coordination preference",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Preference for expert, technocratic, or administrative coordination.",
+        "candidateItemTarget": 4,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI005",
+        "PLI037",
+        "PLI061"
+      ],
+      "acceptedRuleIds": [
+        "audit-PL15-expert-coordination"
+      ]
+    },
+    {
+      "constructId": "PL19",
+      "decision": "ready_existing_items",
+      "rationale": "Current items directly address deterrence as a purpose/justification of punishment; mixed theories remain possible.",
+      "sourceIds": [
+        "domain-punishment"
+      ],
+      "construct": {
+        "id": "PL19",
+        "domainId": "PL",
+        "name": "Deterrent punishment",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Support for punishment as a means of deterring future wrongdoing.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI018",
+        "PLI041",
+        "PLI065"
+      ],
+      "acceptedRuleIds": [
+        "audit-PL19-deterrence"
+      ]
+    },
+    {
+      "constructId": "PL20",
+      "decision": "split_or_deprecate",
+      "rationale": "Rehabilitation and restorative repair are distinct aims. Current direct items bundle them, so do not emit one combined score.",
+      "sourceIds": [
+        "domain-punishment"
+      ],
+      "construct": {
+        "id": "PL20",
+        "domainId": "PL",
+        "name": "Rehabilitative / restorative punishment",
+        "type": "monopolar",
+        "tier": "primary",
+        "description": "Support for rehabilitation, repair, restoration, or reintegration as purposes of criminal justice.",
+        "candidateItemTarget": 3,
+        "outputMode": "independent_meter",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI019",
+        "PLI042",
+        "PLI066"
+      ],
+      "acceptedRuleIds": []
+    },
+    {
+      "constructId": "PL25",
+      "decision": "ready_existing_items",
+      "rationale": "Interpret as gradual reform versus decisive institutional replacement; do not equate rupture with violent revolution.",
+      "sourceIds": [
+        "audit-revolution"
+      ],
+      "construct": {
+        "id": "PL25",
+        "domainId": "PL",
+        "name": "Reform vs rupture orientation",
+        "type": "bipolar",
+        "tier": "research",
+        "description": "Preference for gradual institutional reform versus discontinuous or revolutionary replacement.",
+        "candidateItemTarget": 3,
+        "outputMode": "bipolar_bar",
+        "evidenceBasis": [
+          "project-theory"
+        ],
+        "prerequisites": [],
+        "measurementStatus": "provisional",
+        "directlyScored": true
+      },
+      "existingItemIds": [
+        "PLI075",
+        "PLI076",
+        "PLI077"
+      ],
+      "acceptedRuleIds": [
+        "audit-PL25-reform"
+      ]
+    }
+  ],
+  "questionProposals": [
+    {
+      "constructId": "EP03",
+      "reason": "Need a second independent negative indicator that distinguishes skepticism about knowability from approximation and domain-limited uncertainty.",
+      "items": [
+        "There are at least some factual questions for which sufficiently good inquiry can yield knowledge that the answer is objectively correct.",
+        "Human inquiry may approach better explanations, but it can never know any factual answer to be objectively correct."
+      ]
+    },
+    {
+      "constructId": "AH01",
+      "reason": "Need direct free-will existence items that do not presuppose compatibilism or incompatibilism.",
+      "items": [
+        "Human beings possess at least some genuine control over action that deserves to be called free will, whatever the correct theory of that control is.",
+        "Human behavior never involves the kind of control that would count as genuine free will."
+      ]
+    },
+    {
+      "constructId": "AH05",
+      "reason": "The existing construct bundles self-interest and competition; AH13 already measures psychological egoism and SO08 covers competition.",
+      "items": [
+        "Even when cooperation is available, people usually pursue their own advantage as a default motive.",
+        "Competition is a common default pattern of interaction even when nobody is forced into it."
+      ]
+    },
+    {
+      "constructId": "PL10",
+      "reason": "The six distributive principles need direct, non-ranking indicators so a single top-choice task does not define an affinity.",
+      "items": [
+        "When no stronger claim applies, making people's shares more equal is itself a reason in favor of a distribution.",
+        "Greater need is itself a reason to give someone a larger share.",
+        "Greater contribution or desert is itself a reason to give someone a larger share.",
+        "Ensuring that everyone has enough can matter more than reducing inequality above that threshold.",
+        "Benefits to people who are worse off can deserve extra weight even when total gains are smaller.",
+        "A person's legitimate prior entitlement can justify an unequal share even when another distribution would be more equal."
+      ]
+    },
+    {
+      "constructId": "PL20",
+      "reason": "Rehabilitation and restorative repair are distinct purposes and need separate direct indicators.",
+      "items": [
+        "Changing an offender's capacities and dispositions so future wrongdoing is less likely is itself an important aim of a just response.",
+        "Repairing harm among victims, offenders, and affected communities is itself an important aim of justice after wrongdoing."
+      ]
+    }
+  ],
+  "domainSummary": [
+    {
+      "domainId": "AH",
+      "audited": 9,
+      "mappedAfterAudit": 5,
+      "intentionallyUnresolved": 4,
+      "decisions": {
+        "ready_existing_items": 4,
+        "needs_new_discriminating_items": 1,
+        "remain_derived": 1,
+        "remain_research_only": 1,
+        "split_or_deprecate": 2
+      }
+    },
+    {
+      "domainId": "EP",
+      "audited": 6,
+      "mappedAfterAudit": 5,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 4,
+        "needs_new_discriminating_items": 1,
+        "remain_derived": 0,
+        "remain_research_only": 0,
+        "split_or_deprecate": 1
+      }
+    },
+    {
+      "domainId": "EX",
+      "audited": 6,
+      "mappedAfterAudit": 2,
+      "intentionallyUnresolved": 4,
+      "decisions": {
+        "ready_existing_items": 1,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 3,
+        "split_or_deprecate": 1
+      }
+    },
+    {
+      "domainId": "ME",
+      "audited": 1,
+      "mappedAfterAudit": 0,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 0,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "MF",
+      "audited": 1,
+      "mappedAfterAudit": 0,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 1,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "MS",
+      "audited": 1,
+      "mappedAfterAudit": 0,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 0,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "OM",
+      "audited": 1,
+      "mappedAfterAudit": 1,
+      "intentionallyUnresolved": 0,
+      "decisions": {
+        "ready_existing_items": 0,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 0,
+        "split_or_deprecate": 1
+      }
+    },
+    {
+      "domainId": "PL",
+      "audited": 9,
+      "mappedAfterAudit": 7,
+      "intentionallyUnresolved": 2,
+      "decisions": {
+        "ready_existing_items": 7,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 0,
+        "split_or_deprecate": 2
+      }
+    },
+    {
+      "domainId": "RC",
+      "audited": 5,
+      "mappedAfterAudit": 4,
+      "intentionallyUnresolved": 1,
+      "decisions": {
+        "ready_existing_items": 4,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 1,
+        "remain_research_only": 0,
+        "split_or_deprecate": 0
+      }
+    },
+    {
+      "domainId": "SO",
+      "audited": 10,
+      "mappedAfterAudit": 8,
+      "intentionallyUnresolved": 2,
+      "decisions": {
+        "ready_existing_items": 7,
+        "needs_new_discriminating_items": 0,
+        "remain_derived": 0,
+        "remain_research_only": 2,
+        "split_or_deprecate": 1
+      }
+    }
+  ],
+  "sourceIds": [
+    "audit-schommer",
+    "audit-apriori",
+    "audit-perception",
+    "audit-responsibility",
+    "audit-human-nature",
+    "audit-altruism",
+    "audit-fixed-malleable",
+    "audit-revelation",
+    "audit-divine-intervention",
+    "audit-miracles",
+    "audit-providence",
+    "audit-selfconstrual",
+    "audit-toleration",
+    "audit-essentialism",
+    "audit-justworld",
+    "audit-nep",
+    "audit-svo",
+    "audit-federalism",
+    "audit-epistocracy",
+    "audit-revolution",
+    "audit-liberty"
+  ],
+  "historicalBankChanged": false,
+  "empiricalValidationClaimed": false,
+  "cognitiveReviewRequired": false
+}

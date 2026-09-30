@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "directional-contract-decisions-1",
+  "modelVersion": "generic-1.1.0-pilot",
+  "reviewMethod": "AI semantic review of exact current item revisions and answer meanings, with academic context where the neighboring distinction matters. These decisions do not validate respondents or change a released rule.",
+  "decisions": [
+    {
+      "ruleId": "legacy-objectivism-moral-truth-aptness",
+      "cause": "alternative_answer_not_clean_opposition",
+      "reason": "MEI018 asks what a moral utterance is doing. Choosing attitude or prescription need not deny all literal truth-aptness, including minimalist or quasi-realist truth-talk. MEI017 supplies the only direct opposing unit.",
+      "nextReview": "Ask separately whether moral sentences can literally be true or false; do not treat attitude expression as a second denial.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/moral-cognitivism/"]
+    },
+    {
+      "ruleId": "mutual-advantage",
+      "cause": "strongest_reason_not_exclusive_reason",
+      "reason": "NEI032 asks for the strongest moral basis among alternatives. Choosing impartiality, rights, or virtue does not deny that mutual advantage can also help justify a rule. Only NEI010 directly records opposition.",
+      "nextReview": "A second item would need to deny the justificatory relevance of mutual advantage itself, without forcing a complete contractarian identity.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/contractarianism/"]
+    },
+    {
+      "ruleId": "ph-aesthetic-objectivity",
+      "cause": "response_dependence_not_no_value_beyond_actual_liking",
+      "reason": "VAI061 alone asks whether aesthetic value can survive universal actual dislike. VAI060 asks how informed critics' disagreement is best understood; response-dependent or conventional accounts can still distinguish apt from actual responses and need not deny VAI061's possibility.",
+      "nextReview": "Keep research-only. Define which account of mind-independent, ideal-response, or conventional value is targeted before treating another answer as direct denial.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/beauty/", "https://plato.stanford.edu/entries/aesthetic-judgment/"]
+    },
+    {
+      "ruleId": "ph-basic-experience",
+      "cause": "theory_choice_not_exclusive_denial",
+      "reason": "MSI017 offers broad descriptions of consciousness. Selecting identity, functional, or dual does not by itself deny every basic-experience possibility; only MSI015 directly opposes the stated possibility.",
+      "nextReview": "Test denial of basic experience in simple physical systems directly, while separating experience from cognition.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/panpsychism/"]
+    },
+    {
+      "ruleId": "ph-coherent-justification",
+      "cause": "preferred_theory_not_denial_of_contributory_role",
+      "reason": "EPI039 directly tests whether coherence mainly grounds justification. EPI042 asks for the closest fundamental account; selecting a foundation, reliable process, or plural answer does not deny that coherence can help justify a belief.",
+      "nextReview": "Keep research-only. Separate coherence as the sole ultimate ground from coherence as one justificatory contributor before authoring a second opposing unit.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/justep-coherence/"]
+    },
+    {
+      "ruleId": "ph-desire-welfare",
+      "cause": "target_scope_and_counterexample_need_review",
+      "reason": "VAI054 asks for the closest ultimate account, so choosing pleasure or objective goods does not deny that desire fulfillment can sometimes improve well-being. VAI056 tests one fulfilled desire without felt benefit; its 'no' option might oppose a narrower intrinsic-benefit claim, but should not be silently promoted to opposition to the current broad 'can improve' target.",
+      "nextReview": "Define whether the target is any benefit, intrinsic benefit, or an exclusive theory, then add or remap only an answer that denies that exact target.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/well-being/"]
+    },
+    {
+      "ruleId": "ph-doing-allowing",
+      "cause": "single_case_not_general_denial",
+      "reason": "NEI036's roughly-equal or depends answers concern one harm case with possible further duties and intentions. They do not cleanly deny NEI013's 'normally worse' claim.",
+      "nextReview": "A counterindicator must distinguish general moral significance of doing versus allowing from verdicts driven by further duties in one case.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/doing-allowing/"]
+    },
+    {
+      "ruleId": "ph-functional-minds",
+      "cause": "theory_choice_not_exclusive_denial",
+      "reason": "MSI017's identity, dual, panpsych, and other options do not each entail denial of every functional criterion for mental states. MSI013 supplies the only direct opposing unit.",
+      "nextReview": "Ask whether preserving functional organization is insufficient for the relevant mental states, specifying whether the target is mentality or consciousness.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/functionalism/"]
+    },
+    {
+      "ruleId": "ph-foundational-justification",
+      "cause": "preferred_theory_not_denial_of_basic_justification",
+      "reason": "EPI038 directly tests the possibility of properly basic justification. EPI042's coherence, reliability, infinite, and plural alternatives describe a closest fundamental account; choosing one does not always deny that some experiences or beliefs have noninferential justification.",
+      "nextReview": "Keep research-only. Test the absence of any basic or noninferential justification directly if a two-sided public proposition is later proposed.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/justep-foundational/"]
+    },
+    {
+      "ruleId": "ph-noncosmic-meaning",
+      "cause": "conditional_scenario_not_modal_denial",
+      "reason": "EXI011 asks for a reaction under the supposition that no objective purpose is built in. Its nihilism option may reject meaning in that scenario, but it does not cleanly answer EXI006's general possibility that objective meaning can arise without cosmic or divine purpose.",
+      "nextReview": "Clarify whether non-cosmic objective meaning is possible independently of the respondent's view of the actual world.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/life-meaning/"]
+    },
+    {
+      "ruleId": "ph-objective-welfare",
+      "cause": "closest_theory_not_exclusive_denial",
+      "reason": "VAI054 asks which description is closest to an ultimate account. Pleasure or informed desire as a preferred description does not exclude knowledge or friendship from helping someone when not currently desired. VAI058 alone directly opposes that possibility.",
+      "nextReview": "Use a direct counterexample about undesired objective goods; keep plural theories available rather than making alternatives exclusive by fiat.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/well-being/"]
+    },
+    {
+      "ruleId": "ph-particular-judgment",
+      "cause": "usual_rule_priority_not_no_exceptions",
+      "reason": "MEI015 says general rules 'usually' determine rightness. That is compatible with MEI008's weaker claim that some cases need particular judgment. Only MEI008 directly records opposition to the current target.",
+      "nextReview": "Separate exceptionless generalism from ordinary reliance on general principles; do not infer strong particularism from case judgment.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/moral-particularism-generalism/"]
+    },
+    {
+      "ruleId": "ph-political-cosmopolitanism",
+      "cause": "priority_not_absence_of_concern",
+      "reason": "PLI067 asks whether a citizen normally receives greater political weight in a matched rescue. Citizen priority does not entail refusal to take foreign interests seriously without reciprocal benefit, the narrower PLI020 target. Its B alternative already says equal weight, while paired5's neutral point also says 'Neither / equal'; the answer format therefore makes an equality response ambiguous.",
+      "nextReview": "Ask directly whether foreign interests can create serious political reasons even absent national gain, keeping special obligations distinct. Revise the paired item's response format in a new item revision before using equality as evidence.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/cosmopolitanism/"]
+    },
+    {
+      "ruleId": "ph-productive-causation",
+      "cause": "preferred_analysis_not_exclusive_denial_of_processes",
+      "reason": "OMI020 directly contrasts productive connection with mere regular association. OMI021 asks for the closest fundamental description; a counterfactual, regularity, or primitive answer does not by itself deny that real mechanisms matter in many causal explanations.",
+      "nextReview": "Keep research-only. Specify whether production is necessary for causation, merely common in instances, or part of an explanatory model before mapping a second opposition.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/causation-counterfactual/", "https://plato.stanford.edu/entries/causation-regularity/"]
+    },
+    {
+      "ruleId": "ph-reliable-processes",
+      "cause": "preferred_theory_not_denial_of_reliability_contribution",
+      "reason": "EPI040 directly asks whether a reliable process can justify without the believer explaining its reliability. EPI042 asks for the closest fundamental theory; selecting foundation, coherence, or pluralism does not necessarily deny that a reliable process can justify in some cases.",
+      "nextReview": "Keep research-only. If this distinction is promoted, test directly whether reliability without accessible reasons can itself justify a belief.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/justep-intext/"]
+    },
+    {
+      "ruleId": "ph-strong-property",
+      "cause": "compensated_override_not_no_strong_claim",
+      "reason": "PLI054's compensated public-use alternatives can accept a strong property claim while allowing an override. They are not clean opposition to PLI013's acquisition-based strong claim.",
+      "nextReview": "Specify whether the target is a strong defeasible claim or a near-absolute veto before adding an opposing mapping.",
+      "academicContextUrls": ["https://plato.stanford.edu/entries/libertarianism/"]
+    }
+  ]
+}

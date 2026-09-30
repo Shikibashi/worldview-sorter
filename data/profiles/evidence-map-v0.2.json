@@ -1,0 +1,518 @@
+{
+  "schemaVersion": "2.0.0",
+  "probeSetVersion": "0.2.0",
+  "bankVersion": "0.9.0",
+  "status": "original_candidates_not_validated",
+  "constructItems": {
+    "ME09": [
+      {
+        "itemId": "MEI100",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "MEI101",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "MEI102",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "ME10": [
+      {
+        "itemId": "MEI103",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "MEI104",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "MEI105",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "NE15": [
+      {
+        "itemId": "NEI100",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI101",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI102",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "NE16": [
+      {
+        "itemId": "NEI103",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI104",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI105",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "NE17": [
+      {
+        "itemId": "NEI106",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI107",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI108",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "NE18": [
+      {
+        "itemId": "NEI109",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI110",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI111",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "NE19": [
+      {
+        "itemId": "NEI112",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI113",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI114",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "NE20": [
+      {
+        "itemId": "NEI115",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI116",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI117",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "NE21": [
+      {
+        "itemId": "NEI118",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI119",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "NEI120",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "EP15": [
+      {
+        "itemId": "EPI100",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI101",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI102",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "EP16": [
+      {
+        "itemId": "EPI103",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI104",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI105",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "EP17": [
+      {
+        "itemId": "EPI106",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI107",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI108",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "EP18": [
+      {
+        "itemId": "EPI109",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI110",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI111",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "EP19": [
+      {
+        "itemId": "EPI112",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI113",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI114",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "EP20": [
+      {
+        "itemId": "EPI115",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI116",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "EPI117",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "OM11": [
+      {
+        "itemId": "OMI100",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI101",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI102",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "OM12": [
+      {
+        "itemId": "OMI103",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI104",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI105",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "OM13": [
+      {
+        "itemId": "OMI106",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI107",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI108",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "OM14": [
+      {
+        "itemId": "OMI109",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI110",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "OMI111",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "SO14": [
+      {
+        "itemId": "SOI100",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "SOI101",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "SOI102",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "SO15": [
+      {
+        "itemId": "SOI103",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "SOI104",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "SOI105",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "PL27": [
+      {
+        "itemId": "PLI100",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI101",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI102",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "PL28": [
+      {
+        "itemId": "PLI103",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI104",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI105",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "PL29": [
+      {
+        "itemId": "PLI106",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI107",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI108",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "PL30": [
+      {
+        "itemId": "PLI109",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI110",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI111",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "PL31": [
+      {
+        "itemId": "PLI112",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI113",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI114",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "PL32": [
+      {
+        "itemId": "PLI115",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI116",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI117",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "PL33": [
+      {
+        "itemId": "PLI118",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI119",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "PLI120",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "AH13": [
+      {
+        "itemId": "AHI100",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "AHI101",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "AHI102",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ],
+    "AH14": [
+      {
+        "itemId": "AHI103",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "AHI104",
+        "itemRevision": 1,
+        "polarity": 1
+      },
+      {
+        "itemId": "AHI105",
+        "itemRevision": 1,
+        "polarity": -1
+      }
+    ]
+  }
+}

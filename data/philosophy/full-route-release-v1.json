@@ -1,0 +1,26 @@
+{
+  "version": "full-route-release-1",
+  "bankVersion": "0.9.0",
+  "itemCount": 562,
+  "routeSizes": [
+    80,
+    120,
+    160,
+    240
+  ],
+  "fullPolicyVersion": "philosophy-full-1.0.0",
+  "fullInstrumentVersion": "worldview-public-240-1.0.0",
+  "modelVersion": "generic-0.2.0",
+  "facets": 31,
+  "existingPolicyUnchanged": true,
+  "frozenSourceHashes": {
+    "data/philosophy/public-form-v1.json": "eef15a4495f177486135a168e18d7ce5944d97095a6331dc066f9ad2d6670fa7",
+    "data/experience/policy-v1.json": "56099487107277f1e7a44148c522f7df1686aa41943994bb7596392a5ca782c8",
+    "data/items/candidate-v0.9.json": "3ab53fe4d312cc3980f653c02e6501f446b7e24e11e8774dea247f22184af89c",
+    "data/generic/model-v0.2.json": "eada43fe1c6c59e4737190a48be60663a2dd36ccd9c85652efc308402379fa6a",
+    "data/instruments/research-pool-0.9.json": "a2762c7347c4ad78fe3934a5c11eb2c83f4141a648595daf49a8eda8ebd95ad4",
+    "data/pilots/pilot-0.2.json": "eac69fa3a67efcc0117c08f35737fa0e99c3b917eb54039fd7efa33608493c3e"
+  },
+  "rawAnswersRescoredByLength": false,
+  "empiricalValidityClaimed": false
+}

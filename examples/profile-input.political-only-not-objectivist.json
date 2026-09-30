@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "note": "Regression fixture: strong market/liberty overlap without Objectivist doctrine must not produce an Objectivist identity.",
+  "constructEstimates": {
+    "PL09": {
+      "estimate": 0.9,
+      "coverage": 1
+    },
+    "PL11": {
+      "estimate": 0.95,
+      "coverage": 1
+    },
+    "PL13": {
+      "estimate": 1,
+      "coverage": 1
+    },
+    "EP10": {
+      "estimate": -1,
+      "coverage": 1
+    },
+    "RC01": {
+      "estimate": -1,
+      "coverage": 1
+    },
+    "OM01": {
+      "estimate": -0.9,
+      "coverage": 1
+    }
+  },
+  "probeResponses": {
+    "OBJ-P01": -1,
+    "OBJ-P02": 2,
+    "OBJ-P03": -2,
+    "OBJ-P04": 2
+  },
+  "identityConfirmations": {}
+}

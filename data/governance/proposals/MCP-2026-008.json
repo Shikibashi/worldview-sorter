@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-008",
+  "title": "Expose route opportunity reasons in pilot evidence and summaries",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "result_semantics",
+  "changeClass": "semantic_clarification",
+  "status": "approved",
+  "affectedObjects": [
+    {"type": "result_semantics", "id": "engine-source"}
+  ],
+  "currentBehavior": "Pilot results distinguish not_measured from insufficient_evidence, but do not report why the route lacked an opportunity. Facet and domain result objects have no explicit measurement status.",
+  "proposedBehavior": "Add route_omission, branch_not_reached, and unavailable_in_instrument reasons computed from exact assigned and branch-skipped evidence units. Preserve existing high-level states and thresholds. Add explicit facet and domain opportunity summaries and explanatory wording. Pin changed execution code in a new engine-source and model release.",
+  "rationale": "An omitted question, a conditional path not reached, and an instrument-wide one-sided rule are distinct content limitations. None describes the respondent's belief. A response with no usable direction remains insufficient_evidence when the opportunity existed.",
+  "philosophicalBasis": {
+    "proposition": "A respondent-facing proposition requires a valid opportunity to encounter direct evidence for the exact target before any directional conclusion can be inferred.",
+    "neighboringViews": ["A respondent who was asked but selected no view", "A conditional item not presented because its prerequisite was not met", "A theory-choice answer that does not deny a neighboring proposition"],
+    "nonEntailments": ["Route omission implies neutrality", "A missing opposing item implies respondent support", "A generic philosophical source validates the questionnaire's thresholds"],
+    "existingGap": "The current engine reports one not_measured_content status for route omission, branch ineligibility, and bank-wide directional defects; the public summary attributes all to a frozen route.",
+    "scholarlyDisagreement": "The exact doctrinal neighbors vary by proposition. The engine records opportunity only; the editorial rule and its linked sources govern the philosophical inference."
+  },
+  "sourceClaims": [
+    {"sourceId": "domain-cosmopolitanism", "claim": "Different cosmopolitan positions distinguish universal moral concern from equal priority in a particular political or aid decision; an omitted discriminator cannot be treated as a respondent's denial of either view.", "relationship": "context"}
+  ],
+  "alternatives": [
+    "Use one generic not-measured explanation: rejected because a route omission and an instrument-wide one-sided rule call for different repairs.",
+    "Infer measurement from the route name: rejected because branch prerequisites and actual assigned revisions determine opportunity.",
+    "Change historical result states: rejected because saved releases need byte-identical replay."
+  ],
+  "respondentImpact": "Public summaries can explain why a proposition was unassessed; no directional result or answer mapping changes. Facets and domains can show whether this administration assessed any of their public rules.",
+  "historicalCompatibility": "Keep model-release-1.2.0 and engine-source-1.0.0 intact. Publish an additive engine-source archive and a new model release. Historical replay selects the archived code.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical", "route_omission", "branch_skip", "research_only"],
+    "paths": ["scripts/test-pilot-v1.mjs", "scripts/test-model-governance.mjs", "scripts/audit-pilot-evidence.mjs"]
+  },
+  "review": {"approvals": [
+    {"role": "philosophical", "reviewer": "Worldview Sorter AI editorial review", "at": "2026-09-30T07:00:00Z", "note": "Reviewed the distinction between an opportunity to assess a proposition and the respondent's answer evidence, including one-sided doctrinal neighbors."},
+    {"role": "engineering", "reviewer": "Worldview Sorter AI release review", "at": "2026-09-30T07:00:00Z", "note": "Reviewed assignment, branch-skip, and no-view fixtures; retained old state semantics and planned a new source archive."}
+  ]},
+  "release": {
+    "components": ["engine_source"],
+    "targetVersion": "model-release-1.3.0",
+    "migration": "No raw-response or stored-result migration. Existing snapshots keep their recorded model release; new replays use the new engine-source reference."
+  },
+  "implementationRefs": ["packages/worldview/index.js", "packages/experience/summary.js", "scripts/test-pilot-v1.mjs", "data/releases/engine-sources/engine-source-1.1.0/manifest.json"]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-001",
+  "title": "Replace this title",
+  "author": "Replace with contributor name",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "draft",
+  "affectedObjects": [{"type": "proposition", "id": "replace-rule-id"}],
+  "currentBehavior": "Describe the current question, rule, or displayed inference.",
+  "proposedBehavior": "State the exact new behavior.",
+  "rationale": "Explain why the current model is inadequate.",
+  "philosophicalBasis": {
+    "proposition": "Write the exact proposition inferred.",
+    "neighboringViews": ["Name the closest view a respondent could hold instead."],
+    "nonEntailments": ["State what this proposition does not imply."],
+    "existingGap": "Explain the missing distinction or false positive.",
+    "scholarlyDisagreement": "Summarize relevant disagreement, or explain why none matters to this change."
+  },
+  "sourceClaims": [{"sourceId": "replace-source-id", "claim": "State what this particular source supports or challenges.", "relationship": "supports"}],
+  "alternatives": ["Describe a narrower alternative and why it was not chosen."],
+  "respondentImpact": "Specify possible changes to answers, result states, affinity, and route coverage.",
+  "historicalCompatibility": "Describe the new revision/version and how old administrations remain reproducible.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical"],
+    "paths": []
+  },
+  "review": {"approvals": []},
+  "release": {"components": ["model"], "migration": "No raw response rewrite; preserve the old model release."},
+  "implementationRefs": []
+}

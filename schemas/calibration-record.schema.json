@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/calibration-record.schema.json",
+  "title": "Worldview Sorter Calibration Long Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "exportVersion",
+    "sessionId",
+    "pilotId",
+    "instrumentVersion",
+    "bankVersion",
+    "packetId",
+    "locale",
+    "presentationIndex",
+    "itemId",
+    "itemRevision",
+    "domainId",
+    "responseType",
+    "responseScaleId",
+    "state",
+    "numericValue",
+    "categoricalValue",
+    "rankingValue",
+    "responseTimeMs",
+    "changedAnswerCount",
+    "presented",
+    "skippedByBranch"
+  ],
+  "properties": {
+    "exportVersion": {
+      "type": "string"
+    },
+    "sessionId": {
+      "type": "string"
+    },
+    "pilotId": {
+      "type": "string"
+    },
+    "instrumentVersion": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "packetId": {
+      "type": "string"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "presentationIndex": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "itemId": {
+      "type": "string"
+    },
+    "itemRevision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "domainId": {
+      "type": "string"
+    },
+    "responseType": {
+      "type": "string"
+    },
+    "responseScaleId": {
+      "type": "string"
+    },
+    "state": {
+      "enum": [
+        "answered",
+        "no_view",
+        "not_understood",
+        "not_applicable",
+        "missing"
+      ]
+    },
+    "numericValue": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "categoricalValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rankingValue": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "responseTimeMs": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "changedAnswerCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "presented": {
+      "type": "boolean"
+    },
+    "skippedByBranch": {
+      "type": "boolean"
+    }
+  }
+}

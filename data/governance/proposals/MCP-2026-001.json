@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-001",
+  "title": "Separate the incompatibilist condition from necessary alternative possibilities",
+  "author": "Worldview Sorter editorial draft",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "draft",
+  "affectedObjects": [
+    {"type": "proposition", "id": "construct-AH14"},
+    {"type": "route", "id": "quick"},
+    {"type": "route", "id": "standard"},
+    {"type": "source", "id": "sep-compatibilism"},
+    {"type": "source", "id": "sep-incompatibilism-arguments"}
+  ],
+  "currentBehavior": "AHI103 and AHI104 alone support construct-AH14 on Quick and Standard; disagreement with AHI104 opposes the broad conditional even when AHI103 and AHI105 favor it.",
+  "proposedBehavior": "A new version of construct-AH14 uses AHI103@1 and reverse-keyed AHI105@1 as its two evidence opportunities, excluding AHI104@1 from that broad rule. New Quick and Standard versions replace AHI104@1 with AHI105@1. Preserve AHI104@1 for historical and separately scoped analysis.",
+  "rationale": "The current pair can double-count closely related fixed-prior-condition formulations and confuse a necessary-alternatives view with the broader incompatibilist condition. Preserve missing and mixed states when the remaining evidence does not agree.",
+  "philosophicalBasis": {
+    "proposition": "If a choice is causally determined by the complete prior state and laws, it cannot be genuinely free.",
+    "neighboringViews": ["Compatibilism that permits free action under determinism", "Source incompatibilism that does not require alternative possibilities", "Belief that determinism is actually true", "Denial that free will is possible under any conditions"],
+    "nonEntailments": ["The respondent believes determinism is true", "The respondent believes any person has free will", "The respondent endorses libertarian free will", "The respondent denies moral responsibility"],
+    "existingGap": "AHI104 asks about necessary alternative possibilities and overlaps heavily with AHI103, while AHI105 directly presents a nearby compatibilist sufficient condition. Quick and Standard omit AHI105.",
+    "scholarlyDisagreement": "Accounts of free will differ over alternative possibilities, sourcehood, and moral responsibility. The broad incompatibility conditional should not identify one of those narrower theories."
+  },
+  "sourceClaims": [
+    {"sourceId": "sep-incompatibilism-arguments", "claim": "The core incompatibilist conditional concerns whether a deterministic world can contain free will, independently of whether determinism is true or free will is actual.", "relationship": "supports"},
+    {"sourceId": "sep-compatibilism", "claim": "Alternative-possibilities and sourcehood arguments are distinguishable; rejecting the former does not by itself reject every incompatibilist account.", "relationship": "supports"}
+  ],
+  "alternatives": ["Keep AHI104 as a second independent unit; rejected because its content is too close to AHI103 and it can misclassify source-based incompatibilism.", "Add a new free-will question immediately; deferred because AHI105 already supplies a nearby alternative for this narrow conditional, while broader theories remain unmeasured."],
+  "respondentImpact": "Some frozen-pilot supported or mixed states would become leaned toward, supported, or opposed under a separately labeled current reinterpretation. Quick and Standard route content and affinity coverage reports must be recalculated. No raw answer changes.",
+  "historicalCompatibility": "Keep model-release-1.0.0, the exact three item revisions, and progressive-depth-1.0.0 unchanged. Publish any approved correction as new model and route artifacts and a new model release; do not rewrite old administrations or share snapshots.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical"],
+    "paths": ["scripts/test-pilot-v1.mjs"]
+  },
+  "review": {"approvals": []},
+  "release": {"components": ["model", "progressive_routes"], "migration": "No raw-response rewrite. Historical results use model-release-1.0.0; any new rule and routes use new versioned artifacts and are presented as a current reinterpretation when applied to old answers."},
+  "implementationRefs": ["docs/governance/FREE_WILL_CONDITION_REVIEW.md", "scripts/test-pilot-v1.mjs"]
+}

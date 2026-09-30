@@ -1,0 +1,17 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const root=new URL('../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
+const write=(p,v)=>writeFile(new URL(p,root),typeof v==='string'?v:JSON.stringify(v,null,2)+'\n');
+const current=await read('data/current.json');
+current.quizExperience={version:'quiz-1.0.0',path:'data/experience/policy-v1.json',entrypoint:'apps/quiz/index.html'};
+await write('data/current.json',current);
+let readme=await readFile(new URL('README.md',root),'utf8');
+readme=readme.replace('The browser does not display them as worldview results.','The public quiz summarizes explicit answer patterns with source links; it does not present engineering scores as validated worldview measurements.');
+const marker='\n## Public quiz experience\n';readme=readme.split(marker)[0];
+readme+=marker+'\nThe root opens a field-guide-style quiz with 80/120/160/238-question routes, pause/resume, and source-linked summaries. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.\n\nRun `npm run server:start`, then visit `http://127.0.0.1:4173/`.\n\n`npm run test:experience` checks the controller, evidence summary, privacy-safe share projection and post-completion game boundary. The separate Quiz experience workflow tests Chromium with synthetic answers.\n\n[Quiz experience and academic design rationale](docs/QUIZ_EXPERIENCE.md) explains future gamification. Game rewards are disabled by default and cannot use beliefs, scores, speed or ideological consistency. The current experience already provides a summary; no calibration flag has been used to claim validated worldview scores.\n';
+await write('README.md',readme);
+const genericPath='docs/GENERIC_WORLDVIEW.md';
+let generic=await readFile(new URL(genericPath,root),'utf8');
+generic=generic.replace('The browser does not yet render these as a result page.','The public quiz at /apps/quiz/ renders exploratory, source-linked answer patterns, not validated worldview scores.');
+await write(genericPath,generic);
+const output=await read('data/academic/build-output.json');output.paths=[...new Set([...output.paths,'README.md','data/current.json',genericPath])].sort();
+await write('data/academic/build-output.json',output);

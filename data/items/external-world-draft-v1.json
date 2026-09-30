@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.9.0-external-world-draft-1",
+  "status": "candidate",
+  "purpose": "Unreleased EP11 discrimination candidate. No production bank, instrument, route, or interpretation rule references this draft.",
+  "itemIdPolicy": "Permanent IDs use <domain>I<3 digits>. IDs are never reused after retirement.",
+  "items": [
+    {
+      "id": "EPI119",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "People at a distance see what looks like a person; closer inspection makes it look like a rock. Which claim is closest to your view?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {
+          "constructId": "EP11",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "independent_rock",
+          "label": "A rock was there independently of how anyone perceived it."
+        },
+        {
+          "id": "external_but_conceptualized",
+          "label": "Something external may be there, but identifying it as a rock partly depends on how minds organize experience."
+        },
+        {
+          "id": "no_independent_object",
+          "label": "No rock or other object exists there independently of experience."
+        },
+        {
+          "id": "undecided_by_case",
+          "label": "Changing appearances do not settle whether a mind-independent object is there."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "external-world-perceptual-error",
+      "eligibility": {"mode": "always"},
+      "specialStates": ["no_view", "not_understood"],
+      "contentTags": ["external_world", "perceptual_error", "unreleased_review_candidate"],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": ["acad-epistemology"],
+        "license": {"status": "undecided", "spdx": null},
+        "copiedText": false
+      },
+      "notes": "A concrete perceptual-error contrast for EP11 review. The first option would support ordinary-object mind-independence; the third would oppose it. The second and fourth must remain non-directional because external existence, conceptual organization, and skeptical suspension differ. Authored content independence from EPI037 is a hypothesis requiring review, not an empirical finding."
+    }
+  ]
+}

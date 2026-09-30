@@ -1,0 +1,28 @@
+# Revelatory experience and factual justification: EP10 review
+
+**Status:** editorial draft; no change to the frozen pilot or respondent results.
+
+The frozen public rule `audit2-EP10-revelation` infers that a sincerely believed revelation can itself give *some factual justification without independent verification*. It cites the [Stanford Encyclopedia of Philosophy's Divine Revelation entry](https://plato.stanford.edu/archives/spr2021/entries/divine-revelation/), but retains no rule-linked supporting claim. That entry describes non-inferential, inferential, and hybrid accounts of justification for revelatory claims. It does not establish that sincerity alone warrants a claim, that every apparent revelation is reliable, or that these original questions measure a validated trait.
+
+## Exact item evidence
+
+| Item revision | What it asks | Authored directional meaning |
+| --- | --- | --- |
+| `EPI021@1` | Whether a sincere experience interpreted as revelation *should not by itself* justify factual claims about the world. | Disagreement supports the current rule; agreement opposes it. |
+| `EPI032@1` | A person sincerely believes they received a clear divine revelation that cannot be independently verified; how much factual justification does the experience provide? | `substantial` supports; `none` opposes; `some` and `little` do not meet the current directional mapping. |
+
+The two items address the apparent experience itself, not religious membership. `EPI032` specifies justification **for the person**, while `EPI021` does not say whether the justification is private, shareable, or sufficient for public persuasion. The response `some` explicitly says independent support is still needed; it cannot be counted as endorsing substantial justification without such support. A user may also accept first-person justification while rejecting public justification. The current pair does not distinguish these positions cleanly.
+
+## Narrow target and unreleased discriminator
+
+> In a clear seeming divine revelation without independent verification, the experiencer can gain substantial factual justification from the experience alone.
+
+The [unreleased `EPI120@1` draft](../../data/items/revelation-draft-v1.json) asks which of four accounts is closest in a case of apparent divine revelation without independent verification. `strong_experiencer_only` and `strong_both` both affirm substantial justification for the experiencer, while disagreeing about the outsider. `provisional_only` affirms at most initial justification that needs further evidence, and `none_alone` denies factual justification from the experience alone. These latter two answers oppose the **substantial standalone** target, but must not be reported as equivalent views. The item explicitly separates the first-person and outsider questions that `EPI021@1` leaves ambiguous. It is not part of any released bank or route.
+
+The [synthetic successor preview](../../scripts/test-pilot-v1.mjs) pairs `EPI032@1` with `EPI120@1` and omits `EPI021@1` from directional evidence. It keeps the frozen pilot's states and item bytes unchanged. For the stronger target, `EPI032`'s `some`, `little`, and `none` options oppose *substantial standalone* justification; this does not imply that `some` and `none` mean the same thing. The two vignettes still share content and may be locally dependent. Distinct authored item IDs do not establish independent psychometric evidence.
+
+The governance impact graph shows the frozen rule in Quick, Standard, and Full via `EPI021@1` and `EPI032@1`, plus the EP result domain, EP10 coverage record, and a stress-comparison criterion. A successor cannot replace the pair in one route silently: each affected route, comparison, coverage record, and result presentation needs review under new versions. The graph is a dependency report, not evidence that the rule's inference is philosophically sound.
+
+Nearby views include modest initial justification that still needs independent evidence, inferential justification through signs or testimony, suspension of judgment about an experience's source, and denial that an apparent revelation alone can justify factual belief. None of the answers entails that the experience is veridical, that outsiders should believe the claim, that a named religion is true, or that moral or legal authority follows. The [SEP discussion of divine revelation](https://plato.stanford.edu/archives/spr2021/entries/divine-revelation/) explains the conceptual possibility of noninferential warrant, describes accounts demanding further evidence, and distinguishes the audience of a purported revelation from its content and means. These distinctions motivate the draft, but the SEP does not establish that an apparent experience supplies **substantial** warrant, validate the item wording, or validate a two-unit threshold.
+
+Before a new model release, reviewers must decide whether an academic source supports the exact **substantial first-person** proposition rather than only the existence of a philosophical debate. The [draft item proposal](../../data/governance/proposals/MCP-2026-003.json) keeps its current source link marked `context`, not `supports`; it cannot authorize a new inference rule. A separate proposition proposal with exact supporting claim and review is necessary. Review question comprehension, response-option exclusivity, and possible local dependence between `EPI032` and `EPI120`; then review the synthetic positive, opposed, mixed, one-item, missing, and neighboring-view cases. If that evidence is not adequate, keep EP10 unresolved rather than promoting a plausible-sounding item. Preserve all frozen artifacts for historical replay.

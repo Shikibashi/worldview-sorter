@@ -1,0 +1,9 @@
+{
+  "manifestVersion": "philosophical-affinity-manifest-1.0.0",
+  "catalogVersion": "philosophical-affinity-1.1.0",
+  "path": "data/affinities/catalog-v1.1.json",
+  "sha256": "60ec0bcf6627217495bf2e5de80cf22df67ab25ef8de5dac149604e5cc34772f",
+  "modelVersion": "generic-1.1.0-pilot",
+  "instrumentVersion": "worldview-pilot-1.0.0",
+  "affinitySemanticsVersion": "doctrinal-comparison-1.0.0"
+}

@@ -1,0 +1,65 @@
+name: Build and test academic release
+on:
+  push:
+    branches: [construct-registry-v0.1]
+    paths:
+      - 'data/academic/*.mjs'
+      - 'data/generic/*.mjs'
+      - 'data/experience/**'
+      - 'data/philosophy/**'
+      - 'packages/philosophy/**'
+      - 'scripts/*philosophy*.mjs'
+      - 'scripts/build-*.mjs'
+      - 'scripts/test-*.mjs'
+      - 'scripts/worldview.mjs'
+      - 'packages/**'
+      - 'apps/quiz/**'
+      - 'package.json'
+      - '.github/workflows/academic-release.yml'
+  pull_request:
+    paths:
+      - 'data/academic/*.mjs'
+      - 'data/generic/*.mjs'
+      - 'data/experience/**'
+      - 'data/philosophy/**'
+      - 'packages/philosophy/**'
+      - 'scripts/*philosophy*.mjs'
+      - 'scripts/build-*.mjs'
+      - 'scripts/test-*.mjs'
+      - 'scripts/worldview.mjs'
+      - 'packages/**'
+      - 'apps/quiz/**'
+      - 'package.json'
+      - '.github/workflows/academic-release.yml'
+permissions:
+  contents: write
+concurrency:
+  group: academic-release-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+      - name: Verify deterministic generation
+        run: |
+          node -e "const fs=require('fs'),crypto=require('crypto');const out=JSON.parse(fs.readFileSync('data/academic/build-output.json'));fs.writeFileSync('/tmp/academic-digests.json',JSON.stringify(Object.fromEntries(out.paths.map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]))));"
+          npm run build:academic
+          node -e "const fs=require('fs'),crypto=require('crypto'),before=JSON.parse(fs.readFileSync('/tmp/academic-digests.json'));for(const [p,h] of Object.entries(before)){if(crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')!==h)throw Error('Non-deterministic output: '+p)}"
+      - name: Commit generated snapshots on the requested branch only
+        if: github.event_name == 'push' && github.ref == 'refs/heads/construct-registry-v0.1'
+        env:
+          EXPECTED_HEAD: ${{ github.sha }}
+        run: |
+          git fetch origin construct-registry-v0.1
+          test "$(git rev-parse origin/construct-registry-v0.1)" = "$EXPECTED_HEAD"
+          node -e "const fs=require('fs'),cp=require('child_process');const out=JSON.parse(fs.readFileSync('data/academic/build-output.json'));for(const p of out.paths){if(p.startsWith('/')||p.split('/').includes('..'))throw Error('Invalid generated path');cp.execFileSync('git',['add','--',p]);}"
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Compile worldview model and public quiz experience metadata'
+            git push origin HEAD:construct-registry-v0.1
+          fi
+          git rev-parse HEAD

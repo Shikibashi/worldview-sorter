@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFile,writeFile} from 'node:fs/promises';
+import {validateAffinityCatalog} from '../packages/worldview/affinities.js';
+
+const root=new URL('../',import.meta.url);
+const read=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
+const manifest=await read('data/affinities/manifest-v1.json');
+const bytes=await readFile(new URL(manifest.path,root));
+assert.equal(createHash('sha256').update(bytes).digest('hex'),manifest.sha256,'Versioned affinity catalog changed in place');
+const [catalog,model,pilot]=await Promise.all([read(manifest.path),read('data/generic/model-v1.0-pilot.json'),read('data/pilots/pilot-candidate-v1.json')]);
+validateAffinityCatalog({catalog,model,pilot});
+assert.equal(catalog.catalogVersion,manifest.catalogVersion);
+assert.equal(catalog.affinitySemanticsVersion,manifest.affinitySemanticsVersion);
+assert.equal(catalog.traditions.length,6);
+const current=await read('data/current.json');
+current.affinityCatalog={version:catalog.catalogVersion,path:manifest.path,manifestPath:'data/affinities/manifest-v1.json'};
+current.affinityCatalogVersions=[...(current.affinityCatalogVersions??[]).filter(x=>x.version!==catalog.catalogVersion),current.affinityCatalog];
+await writeFile(new URL('data/current.json',root),JSON.stringify(current,null,2)+'\n');
+console.log(`Affinity catalog ${catalog.catalogVersion}: ${catalog.traditions.length} scoped comparisons; identity and percentages disabled.`);

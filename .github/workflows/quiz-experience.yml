@@ -1,0 +1,76 @@
+name: Quiz experience
+on:
+  push:
+    branches: [construct-registry-v0.1]
+    paths:
+      - 'apps/quiz/**'
+      - 'packages/experience/**'
+      - 'packages/collection/**'
+      - 'packages/worldview/**'
+      - 'packages/runtime/**'
+      - 'data/experience/**'
+      - 'data/philosophy/**'
+      - 'packages/philosophy/**'
+      - 'scripts/*philosophy*.mjs'
+      - 'scripts/*quiz*.mjs'
+      - 'scripts/*production-site*.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/quiz-experience.yml'
+      - '.github/workflows/deploy-pages.yml'
+  pull_request:
+    paths:
+      - 'apps/quiz/**'
+      - 'packages/experience/**'
+      - 'packages/collection/**'
+      - 'packages/worldview/**'
+      - 'packages/runtime/**'
+      - 'data/experience/**'
+      - 'data/philosophy/**'
+      - 'packages/philosophy/**'
+      - 'scripts/*philosophy*.mjs'
+      - 'scripts/*quiz*.mjs'
+      - 'scripts/*production-site*.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/quiz-experience.yml'
+      - '.github/workflows/deploy-pages.yml'
+permissions:
+  contents: read
+concurrency:
+  group: quiz-experience-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build unchanged academic model and quiz projection
+        run: npm run build:academic
+      - name: Test controller, results and reward isolation
+        run: npm run test:experience
+      - name: Install browser for public-flow checks
+        run: npx playwright install --with-deps chromium
+      - name: Exercise the real browser
+        run: |
+          mkdir -p artifacts/quiz
+          npm run test:quiz:browser 2>&1 | tee artifacts/quiz/browser-test.log
+      - name: Exercise the isolated Pages artifact
+        run: |
+          npm run build:production
+          node scripts/verify-production-site.mjs
+          npm run test:production:browser
+      - name: Retain synthetic screenshots and test output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quiz-experience-synthetic
+          path: artifacts/quiz/
+          if-no-files-found: ignore
+          retention-days: 14

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-003",
+  "title": "Draft an audience-and-strength discriminator for apparent revelation",
+  "author": "Worldview Sorter editorial draft",
+  "objectType": "item",
+  "changeClass": "new_object",
+  "status": "draft",
+  "affectedObjects": [
+    {"type": "proposition", "id": "audit2-EP10-revelation"},
+    {"type": "construct", "id": "EP10"},
+    {"type": "item", "id": "EPI120"},
+    {"type": "source", "id": "audit-revelation"},
+    {"type": "route", "id": "quick"},
+    {"type": "route", "id": "standard"},
+    {"type": "route", "id": "full"}
+  ],
+  "currentBehavior": "The frozen rule combines EPI021@1 disagreement and EPI032@1 substantial justification to support a general proposition that sincerely believed revelation itself gives some factual justification without independent verification. It has no rule-linked supporting source claim. EPI032 specifies justification for the experiencer; EPI021 does not distinguish first-person from public justification.",
+  "proposedBehavior": "Review the unreleased EPI120@1 audience-and-strength discriminator. A synthetic successor preview pairs it with EPI032@1, removes ambiguous EPI021@1 from directional EP10 evidence, and limits the proposition to substantial first-person justification from an apparent revelation. Treat EPI032 'some' and 'little' as opposing this stronger proposition, without treating them as no justification. This proposal governs an item draft and does not approve that successor rule; a separate proposition proposal with exact academic support is required. Do not release the item unless comprehension and possible local dependence are reviewed. Preserve the frozen rule and original item revisions.",
+  "rationale": "The current 'some justification' wording is broader than the strongly supportive EPI032 option and leaves the relevant person unspecified. The SEP distinguishes non-inferential, inferential, and hybrid justification accounts; it does not license an inference from sincerity alone. A first-person/public distinction is an important false-positive boundary for this rule.",
+  "philosophicalBasis": {
+    "proposition": "In a clear seeming divine revelation without independent verification, the experiencer can gain substantial factual justification from the experience alone.",
+    "neighboringViews": [
+      "The experience supplies some initial justification but independent support remains necessary",
+      "Only independent signs or reliable testimony justify a revelatory claim",
+      "The experience may justify the experiencer without justifying belief by outsiders",
+      "Apparent revelation alone supplies no factual justification"
+    ],
+    "nonEntailments": [
+      "The apparent revelation is genuine or its factual content is true",
+      "A third party has sufficient reason to accept the claim",
+      "The respondent belongs to or endorses a particular religion",
+      "Revelation has moral or political authority"
+    ],
+    "existingGap": "EPI032 specifies first-person justification and has a 'substantial' option. EPI021 asks generally whether a sincere experience can justify factual claims, without naming the audience or distinguishing sincerity from an apparently clear experience. EPI120 would distinguish substantial first-person warrant, provisional first-person warrant, no first-person warrant, and an additional claim about outsider warrant. It has not been administered or reviewed; two authored units are not empirically independent merely because they use different items.",
+    "scholarlyDisagreement": "Accounts of revelatory justification include non-inferential perceptual and testimonial views, inferential evidentialist views, and hybrid approaches. Their disagreement concerns the source and audience of warrant, not simply religious identity."
+  },
+  "sourceClaims": [
+    {"sourceId": "audit-revelation", "claim": "The academic discussion distinguishes non-inferential, inferential, and hybrid ways a purported revelation might justify belief; whether the experiencer or a third party has warrant is a further question. This is conceptual context, not a scholarly endorsement of the draft item or of a 'substantial' threshold.", "relationship": "context"}
+  ],
+  "alternatives": [
+    "Retain the frozen broad wording for a new release; rejected because first-person and public justification remain conflated.",
+    "Treat EPI032's 'some' response as support; deferred because it explicitly still calls for independent support.",
+    "Reuse EPI021 as corroboration; rejected for the successor preview because its audience and required strength of justification are unspecified.",
+    "Treat EPI120 as a validated second indicator on the strength of its wording alone; rejected pending response-process and local-dependence review."
+  ],
+  "respondentImpact": "A narrower proposition would change the meaning of directional EP10 results even if the same answers and threshold retain their historical states. Source trails, public result language, route coverage, and any future affinity criterion using EP10 require review. Current administrations and share snapshots remain historical.",
+  "historicalCompatibility": "Keep model-release-1.0.0, EPI021@1, EPI032@1, and their frozen interpretation unchanged. EPI120@1 is an unreleased new item, not an in-place revision. This item proposal alone cannot authorize a changed public rule. Any accepted successor needs a separate proposition proposal, new item bank, route, model artifact, academically reviewed supporting source claim, engine archive, and release manifest. Reinterpretations of old answers must be labeled separately; never rewrite raw responses or historical results.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical", "one_item_lean", "special_response", "first_person_vs_public", "local_dependence_review"],
+    "paths": ["scripts/test-pilot-v1.mjs", "scripts/test-model-governance.mjs"]
+  },
+  "review": {"approvals": []},
+  "release": {"components": ["bank", "progressive_routes", "full_form"], "migration": "No raw-response migration. This proposal can authorize only an item and route candidate after content, philosophical, localization, and local-dependence review. A successor inference needs a separate proposition proposal, exact supporting source claim, model and engine versions, and release manifest."},
+  "implementationRefs": ["docs/governance/REVELATION_JUSTIFICATION_REVIEW.md", "data/items/revelation-draft-v1.json", "data/generic/model-v1.0-pilot.json", "scripts/test-pilot-v1.mjs"]
+}

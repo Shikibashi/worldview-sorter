@@ -1,0 +1,1354 @@
+{
+  "schemaVersion": "2.0.0",
+  "catalogVersion": "0.2.0",
+  "bankVersion": "0.9.0",
+  "registryVersion": "0.2.0",
+  "status": "prototype",
+  "identityOutputAllowed": false,
+  "interpretationAllowed": false,
+  "profiles": [
+    {
+      "id": "objectivism",
+      "label": "Objectivism: selected commitments in Rand’s formulation",
+      "scope": "A comparison to specified philosophical commitments, not a claim to exhaust the system or settle disputes among its interpreters.",
+      "sourceIds": [
+        "acad-rand",
+        "acad-rand-epistemology"
+      ],
+      "criteria": [
+        {
+          "id": "life-grounded-ethics",
+          "constructId": "ME09",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand",
+            "acad-egoism",
+            "acad-stirner"
+          ],
+          "evidence": [
+            {
+              "itemId": "MEI100",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "MEI101",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "MEI102",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "moral-truth-aptness",
+          "constructId": null,
+          "expected": "specified_responses",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand",
+            "acad-rand-epistemology"
+          ],
+          "evidence": [
+            {
+              "itemId": "MEI017",
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ],
+              "itemRevision": 1
+            },
+            {
+              "itemId": "MEI018",
+              "support": [
+                "truth_claim"
+              ],
+              "oppose": [
+                "attitude",
+                "prescription"
+              ],
+              "itemRevision": 1
+            }
+          ]
+        },
+        {
+          "id": "normative-self-interest",
+          "constructId": "NE15",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-egoism",
+            "acad-rand"
+          ],
+          "evidence": [
+            {
+              "itemId": "NEI100",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI101",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI102",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "perception-and-reason",
+          "constructId": "EP20",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand-epistemology",
+            "acad-epistemology"
+          ],
+          "evidence": [
+            {
+              "itemId": "EPI115",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI116",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI117",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "external-reality",
+          "constructId": "OM13",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand-epistemology",
+            "acad-epistemology"
+          ],
+          "evidence": [
+            {
+              "itemId": "OMI106",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "OMI107",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "OMI108",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "preinstitutional-rights",
+          "constructId": "PL27",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rights",
+            "acad-rand"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI100",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI101",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI102",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-legal-authority",
+          "constructId": "PL29",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand",
+            "acad-legitimacy",
+            "acad-hasnas"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI106",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI107",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI108",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "volitional-incompatibilism",
+          "constructId": "AH14",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-fwi",
+            "acad-rand-epistemology"
+          ],
+          "evidence": [
+            {
+              "itemId": "AHI103",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "AHI104",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "AHI105",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "market-coordination",
+          "constructId": null,
+          "expected": "specified_responses",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand",
+            "acad-rand-epistemology"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI035",
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ],
+              "itemRevision": 1
+            },
+            {
+              "itemId": "PLI055",
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ],
+              "itemRevision": 1
+            }
+          ]
+        },
+        {
+          "id": "life-choice-conditionality",
+          "constructId": "ME10",
+          "expected": "endorse",
+          "essential": false,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand",
+            "acad-egoism"
+          ],
+          "evidence": [
+            {
+              "itemId": "MEI103",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "MEI104",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "MEI105",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Fallible propositional judgment does not disqualify this comparison.",
+        "Revisable definitions and concepts as human integrations do not disqualify this comparison.",
+        "No generic a-priori rationalism, universal-realism, reductive physicalism, or unconditional duty-to-obey gate is used.",
+        "The status of choice-to-live reasons and the survival/flourishing interpretation are disputed; the optional criterion cannot exclude.",
+        "Other commitments of Objectivism remain untested. Passing these items is not sufficient to establish an identity.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "ownness-orientation",
+      "label": "Ownness without a universal self-interest obligation",
+      "scope": "A restricted, non-moralized reading of Stirnerian ownness; not a comprehensive classification of Stirner or of people influenced by him.",
+      "sourceIds": [
+        "acad-stirner",
+        "acad-egoism"
+      ],
+      "criteria": [
+        {
+          "id": "revisable-ideals",
+          "constructId": "NE17",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-stirner"
+          ],
+          "evidence": [
+            {
+              "itemId": "NEI106",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI107",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI108",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "no-universal-egoistic-command",
+          "constructId": "NE15",
+          "expected": "reject",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-egoism",
+            "acad-rand"
+          ],
+          "evidence": [
+            {
+              "itemId": "NEI100",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            },
+            {
+              "itemId": "NEI101",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            },
+            {
+              "itemId": "NEI102",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "elective-concern",
+          "constructId": "NE21",
+          "expected": "endorse",
+          "essential": false,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-stirner",
+            "acad-egoism"
+          ],
+          "evidence": [
+            {
+              "itemId": "NEI118",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI119",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI120",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "revisable-association",
+          "constructId": "NE19",
+          "expected": "endorse",
+          "essential": false,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-stirner",
+            "acad-promises"
+          ],
+          "evidence": [
+            {
+              "itemId": "NEI112",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI113",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI114",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No requirement of greed, isolation, rejection of affection, or a particular market/state program.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "philosophical-anarchism",
+      "label": "Skepticism of general political obligation",
+      "scope": "The philosophical-anarchist position about a general content-independent duty to obey, not a policy of immediate institutional abolition.",
+      "sourceIds": [
+        "acad-obligation",
+        "acad-legitimacy",
+        "acad-simmons"
+      ],
+      "criteria": [
+        {
+          "id": "no-general-obedience",
+          "constructId": null,
+          "expected": "specified_responses",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-obligation",
+            "acad-legitimacy",
+            "acad-simmons"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI002",
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ],
+              "itemRevision": 1
+            },
+            {
+              "itemId": "PLI025",
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ],
+              "itemRevision": 1
+            },
+            {
+              "itemId": "PLI048",
+              "support": [
+                "no_independent_reason"
+              ],
+              "oppose": [
+                "strong_reason",
+                "some_reason"
+              ],
+              "itemRevision": 1
+            }
+          ]
+        },
+        {
+          "id": "institutions-can-still-help",
+          "constructId": "PL31",
+          "expected": "endorse",
+          "essential": false,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-obligation",
+            "acad-legitimacy",
+            "acad-simmons"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI112",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI113",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI114",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No automatic inference about state abolition, voting, the usefulness of courts, or violence.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "nonstate-legal-pluralism",
+      "label": "Nonstate legal and protective provision",
+      "scope": "Institutional openness to nonstate adjudication and protection without an exclusive territorial authority. Not all polycentric governance takes this form.",
+      "sourceIds": [
+        "acad-hasnas",
+        "acad-legitimacy"
+      ],
+      "criteria": [
+        {
+          "id": "nonstate-provision",
+          "constructId": "PL30",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-hasnas",
+            "acad-legitimacy"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI109",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI110",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI111",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "no-necessary-monopoly",
+          "constructId": "PL29",
+          "expected": "reject",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rand",
+            "acad-legitimacy",
+            "acad-hasnas"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI106",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            },
+            {
+              "itemId": "PLI107",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            },
+            {
+              "itemId": "PLI108",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Possibility claims do not demonstrate practical success under every set of conditions.",
+        "Ostrom’s polycentric analysis is not classified as necessarily anarchist.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "pragmatic-inquiry",
+      "label": "Pragmatic clarification and revisable inquiry",
+      "scope": "Methodological affinity, not a verdict that someone belongs to every pragmatist tradition.",
+      "sourceIds": [
+        "acad-pragmatism"
+      ],
+      "criteria": [
+        {
+          "id": "consequences-clarify",
+          "constructId": "EP16",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-pragmatism"
+          ],
+          "evidence": [
+            {
+              "itemId": "EPI103",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI104",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI105",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "concepts-as-tools",
+          "constructId": "EP17",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-pragmatism",
+            "acad-rand-epistemology",
+            "acad-marschall"
+          ],
+          "evidence": [
+            {
+              "itemId": "EPI106",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI107",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI108",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fallible-knowledge",
+          "constructId": "EP15",
+          "expected": "endorse",
+          "essential": false,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-epistemology",
+            "acad-pragmatism",
+            "acad-rand-epistemology"
+          ],
+          "evidence": [
+            {
+              "itemId": "EPI100",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI101",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "EPI102",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No inference of atheism, nominalism, relativism, instrumentalist truth, or anti-realism.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "easy-metaontology",
+      "label": "Easy or deflationary ontological method",
+      "scope": "Method of settling existence questions; not an inventory of which things exist.",
+      "sourceIds": [
+        "acad-marschall",
+        "acad-thomasson"
+      ],
+      "criteria": [
+        {
+          "id": "ordinary-criteria",
+          "constructId": "OM14",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-marschall",
+            "acad-thomasson"
+          ],
+          "evidence": [
+            {
+              "itemId": "OMI109",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "OMI110",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "OMI111",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No universal-realism, abstract-object, or external-world verdict is inferred from this method.",
+        "Compatibility with realism is a live scholarly dispute, not a solved taxonomy.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "ethical-egoism",
+      "label": "Ethical egoism",
+      "scope": "A normative orientation about whose good should be the ultimate moral end, separate from descriptive motives.",
+      "sourceIds": [
+        "acad-egoism"
+      ],
+      "criteria": [
+        {
+          "id": "self-good-as-moral-end",
+          "constructId": "NE15",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-egoism",
+            "acad-rand"
+          ],
+          "evidence": [
+            {
+              "itemId": "NEI100",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI101",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "NEI102",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Does not imply psychological egoism, an Objectivist identity, a political institution, or indifference to friends.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "preinstitutional-rights",
+      "label": "Preinstitutional moral-rights grounding",
+      "scope": "One possible justification of rights, not a complete ideology.",
+      "sourceIds": [
+        "acad-rights"
+      ],
+      "criteria": [
+        {
+          "id": "rights-before-recognition",
+          "constructId": "PL27",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rights",
+            "acad-rand"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI100",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI101",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI102",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "May coexist with instrumental justifications or with either minarchist or anarchist institutional preferences.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    },
+    {
+      "id": "institutional-rights",
+      "label": "Institutional justification of rights",
+      "scope": "Attention to what stable rights do for agency and cooperation, not automatically utilitarianism.",
+      "sourceIds": [
+        "acad-rights",
+        "acad-contractarianism"
+      ],
+      "criteria": [
+        {
+          "id": "institutional-reasons",
+          "constructId": "PL28",
+          "expected": "endorse",
+          "essential": true,
+          "minimumIndependentItems": 2,
+          "sourceIds": [
+            "acad-rights",
+            "acad-contractarianism"
+          ],
+          "evidence": [
+            {
+              "itemId": "PLI103",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI104",
+              "itemRevision": 1,
+              "support": [
+                1,
+                2
+              ],
+              "oppose": [
+                -2,
+                -1
+              ]
+            },
+            {
+              "itemId": "PLI105",
+              "itemRevision": 1,
+              "support": [
+                -2,
+                -1
+              ],
+              "oppose": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "No automatic reduction to welfare maximization or denial of strong constraints.",
+        "This comparison concerns explicitly reported endorsements, not a diagnosis of implicit metaethical commitments."
+      ]
+    }
+  ]
+}

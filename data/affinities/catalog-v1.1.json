@@ -1,0 +1,652 @@
+{
+  "schemaVersion": "philosophical-affinity-catalog-1",
+  "catalogVersion": "philosophical-affinity-1.1.0",
+  "status": "theoretical_pilot_comparison_unvalidated",
+  "modelVersion": "generic-1.1.0-pilot",
+  "instrumentVersion": "worldview-pilot-1.0.0",
+  "resultSemanticsVersion": "pilot-result-states-1.0.0",
+  "affinitySemanticsVersion": "doctrinal-comparison-1.0.0",
+  "identityOutputAllowed": false,
+  "percentageMatchAllowed": false,
+  "sources": [
+    {
+      "id": "sep-pragmatism",
+      "type": "academic_secondary",
+      "title": "Legg and Hookway, Pragmatism (SEP)",
+      "url": "https://plato.stanford.edu/entries/pragmatism/"
+    },
+    {
+      "id": "peirce-1878",
+      "type": "primary",
+      "title": "C. S. Peirce, How to Make Our Ideas Clear (1878)",
+      "url": "https://www.peirce.org/writings/p119.html"
+    },
+    {
+      "id": "sep-stirner",
+      "type": "academic_secondary",
+      "title": "David Leopold, Max Stirner (SEP)",
+      "url": "https://plato.stanford.edu/entries/max-stirner/"
+    },
+    {
+      "id": "stirner-1844",
+      "type": "primary",
+      "title": "Max Stirner, The Ego and Its Own (1844; 1907 translation)",
+      "url": "https://www.gutenberg.org/ebooks/34580"
+    },
+    {
+      "id": "sep-anarchism",
+      "type": "academic_secondary",
+      "title": "Andrew Fiala, Anarchism (SEP)",
+      "url": "https://plato.stanford.edu/entries/anarchism/"
+    },
+    {
+      "id": "sep-political-obligation",
+      "type": "academic_secondary",
+      "title": "Dagger and Lefkowitz, Political Obligation (SEP)",
+      "url": "https://plato.stanford.edu/entries/political-obligation/"
+    },
+    {
+      "id": "sep-rand",
+      "type": "academic_secondary",
+      "title": "Badhwar and Long, Ayn Rand (SEP)",
+      "url": "https://plato.stanford.edu/entries/ayn-rand/"
+    },
+    {
+      "id": "rand-ethics",
+      "type": "primary",
+      "title": "Ayn Rand, The Objectivist Ethics (1961)",
+      "url": "https://courses.aynrand.org/works/the-objectivist-ethics/"
+    },
+    {
+      "id": "sep-naturalism",
+      "type": "academic_secondary",
+      "title": "David Papineau, Naturalism (SEP)",
+      "url": "https://plato.stanford.edu/entries/naturalism/"
+    },
+    {
+      "id": "sep-physicalism",
+      "type": "academic_secondary",
+      "title": "Daniel Stoljar, Physicalism (SEP)",
+      "url": "https://plato.stanford.edu/entries/physicalism/"
+    },
+    {
+      "id": "sep-egoism",
+      "type": "academic_secondary",
+      "title": "Robert Shaver, Egoism (SEP)",
+      "url": "https://plato.stanford.edu/entries/egoism/"
+    }
+  ],
+  "traditions": [
+    {
+      "id": "pragmatism",
+      "name": "Pragmatism",
+      "scope": "epistemological_tradition",
+      "context": "Classical pragmatism begins with Peirce, James, and Dewey; later pragmatists disagree about truth and realism. This entry compares the shared method of clarifying ideas through conceivable consequences, not a complete pragmatist worldview.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [
+        "peirce-1878"
+      ],
+      "secondarySourceIds": [
+        "sep-pragmatism"
+      ],
+      "sourceNotes": "SEP treats the pragmatic maxim as central, fallibilist inquiry as characteristic, and realism and truth theories as internally contested.",
+      "neighbors": [
+        "generic fallibilism",
+        "instrumentalism",
+        "scientific empiricism"
+      ],
+      "discriminators": [
+        "Revisability alone does not establish the pragmatic maxim.",
+        "Practical bearings clarify meaning; they do not make convenience the sole truth condition."
+      ],
+      "nonEntailments": [
+        "Pragmatism does not entail that a useful belief is automatically true.",
+        "It does not entail atheism or rejection of mind-independent reality."
+      ],
+      "commitments": [
+        {
+          "id": "pragmatic-maxim",
+          "role": "defining",
+          "doctrine": "The meaning of a contested conception is clarified by its conceivable experiential or practical bearings.",
+          "sourceIds": [
+            "sep-pragmatism",
+            "peirce-1878"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP16",
+            "expectedState": "supported",
+            "note": "The pilot asks about conceptual clarification, not a complete theory of truth."
+          }
+        },
+        {
+          "id": "inquiry-fallibilism",
+          "role": "characteristic",
+          "doctrine": "Inquiry can yield knowledge while remaining open to correction.",
+          "sourceIds": [
+            "sep-pragmatism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP15",
+            "expectedState": "supported",
+            "note": "Shared with many nonpragmatist epistemologies."
+          }
+        },
+        {
+          "id": "inquiry-practice",
+          "role": "characteristic",
+          "doctrine": "Inquiry is an ongoing practice of testing and revising claims.",
+          "sourceIds": [
+            "sep-pragmatism"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "audit2-EP02-complex-knowledge",
+            "expectedState": "supported",
+            "note": "Revisable complex knowledge is only one part of this methodological view."
+          }
+        },
+        {
+          "id": "truth-and-realism",
+          "role": "disputed",
+          "doctrine": "Classical and later pragmatists disagree about realism and how to understand truth.",
+          "sourceIds": [
+            "sep-pragmatism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "No single pilot proposition represents the disputed family of truth theories."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stirnerian-ownness",
+      "name": "Stirnerian ownness",
+      "scope": "ethical_theory",
+      "context": "A narrow comparison with Stirner's ideal of ownness and revocable self-rule. The entry does not treat his texts as a generic selfishness or anarcho-capitalism scale.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [
+        "stirner-1844"
+      ],
+      "secondarySourceIds": [
+        "sep-stirner",
+        "sep-egoism"
+      ],
+      "sourceNotes": "Leopold distinguishes Stirner's ownness from psychological and ethical egoism and emphasizes the challenge that fixed obligations pose to it. The old English translation has terminology limits.",
+      "neighbors": [
+        "ethical egoism",
+        "psychological egoism",
+        "generic individualism"
+      ],
+      "discriminators": [
+        "Self-interest as a universal moral duty is not ownness.",
+        "Autonomy from fixed ideals must be considered with continued association and voluntarily assumed duties."
+      ],
+      "nonEntailments": [
+        "Ownness does not entail a universal motive of personal welfare.",
+        "It does not entail an inability to care for others or a particular market institution.",
+        "Rejecting morality in Stirner's narrow sense does not entail rejecting every evaluative judgment."
+      ],
+      "commitments": [
+        {
+          "id": "ownness",
+          "role": "defining",
+          "doctrine": "The individual should not become subject to fixed ideals or projects that are no longer their own.",
+          "sourceIds": [
+            "sep-stirner",
+            "stirner-1844"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE17",
+            "expectedState": "supported",
+            "note": "Original narrow operationalization, not a validated Stirner scale."
+          }
+        },
+        {
+          "id": "revocable-association",
+          "role": "defining",
+          "doctrine": "Ongoing association depends on the participant's continuing endorsement rather than an irrevocable subjection.",
+          "sourceIds": [
+            "sep-stirner",
+            "stirner-1844"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE19",
+            "expectedState": "supported",
+            "note": "Does not decide compensation for induced reliance."
+          }
+        },
+        {
+          "id": "no-fixed-promissory-duty",
+          "role": "defining",
+          "doctrine": "A voluntary promise is not itself an enduring moral claim that overrides renewed self-rule.",
+          "sourceIds": [
+            "sep-stirner"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE18",
+            "expectedState": "opposed",
+            "note": "This rule tests defeasible promissory reasons, not an exceptionless duty or legal remedy."
+          }
+        },
+        {
+          "id": "all-values-revisable",
+          "role": "characteristic",
+          "doctrine": "Values and appetites remain available for personal appropriation and critique.",
+          "sourceIds": [
+            "sep-stirner"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "construct-NE17",
+            "expectedState": "supported",
+            "note": "The same narrow ownness rule cannot establish this broader psychological practice independently."
+          }
+        },
+        {
+          "id": "political-program",
+          "role": "disputed",
+          "doctrine": "Stirner's critique of the state does not specify one agreed institutional economic program.",
+          "sourceIds": [
+            "sep-stirner"
+          ],
+          "mapping": {
+            "status": "unsuitable",
+            "note": "Do not infer an institution from individual ownness."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ethical-egoism",
+      "name": "Ethical egoism",
+      "scope": "ethical_theory",
+      "context": "A normative thesis about what is morally right for each agent, distinct from psychological claims about what people in fact want and from Stirnerian ownness. The pilot cannot settle the full if-and-only-if account of rightness.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-egoism"
+      ],
+      "sourceNotes": "SEP distinguishes ethical, rational, and psychological egoism; the pilot directly tests only the normative moral priority thesis.",
+      "neighbors": [
+        "Stirnerian ownness",
+        "psychological egoism",
+        "rational egoism",
+        "Objectivism"
+      ],
+      "discriminators": [
+        "Permission to pursue personal projects is weaker than a universal moral prescription to prioritize self-interest.",
+        "Stirnerian ownness can reject the fixed self-interest duty that ethical egoism asserts."
+      ],
+      "nonEntailments": [
+        "Ethical egoism does not entail that everyone is in fact selfish.",
+        "It does not entail exploitative conduct or Rand's life-grounded moral theory."
+      ],
+      "commitments": [
+        {
+          "id": "moral-self-interest",
+          "role": "defining",
+          "doctrine": "Each agent morally ought to prioritize their own good.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE15",
+            "expectedState": "supported",
+            "note": "The direct rule targets universal moral self-priority, not descriptive motivation or the stronger iff/maximizing thesis."
+          }
+        },
+        {
+          "id": "rightness-by-own-good",
+          "role": "defining",
+          "doctrine": "An act is morally right if and only if it best advances the agent's own good, rather than merely permitting self-regard.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "No pilot proposition distinguishes this stronger maximization/rightness thesis from mere moral priority."
+          }
+        },
+        {
+          "id": "account-of-welfare",
+          "role": "characteristic",
+          "doctrine": "The theory needs some account of what counts as an agent's good.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The pilot does not establish a complete egoist welfare theory."
+          }
+        },
+        {
+          "id": "rational-requirement",
+          "role": "disputed",
+          "doctrine": "Whether the self-interest thesis is also a requirement of rationality is a distinct question.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The rational-egoism rule construct-NE16 is not measured by this route."
+          }
+        }
+      ]
+    },
+    {
+      "id": "philosophical-anarchism",
+      "name": "Philosophical anarchism",
+      "scope": "political_philosophy",
+      "context": "Political-authority skepticism, especially denial of a general content-independent moral obligation to obey law. Its practical implications and arguments differ among theorists.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-anarchism",
+        "sep-political-obligation"
+      ],
+      "sourceNotes": "SEP distinguishes this philosophical position from a duty to abolish the state and from decentralization preferences; Simmons-style state-tolerant versions exist.",
+      "neighbors": [
+        "decentralism",
+        "market anarchism",
+        "civil disobedience",
+        "state reformism"
+      ],
+      "discriminators": [
+        "Preferring local institutions is not denial of political obligation.",
+        "Denying a general duty to obey does not require immediate abolition or rejection of useful public institutions."
+      ],
+      "nonEntailments": [
+        "The view does not entail violent resistance or immediate abolition.",
+        "It does not entail market provision of law or a particular property regime."
+      ],
+      "commitments": [
+        {
+          "id": "no-general-duty",
+          "role": "defining",
+          "doctrine": "Law does not normally create a general moral duty to obey merely because it is law.",
+          "sourceIds": [
+            "sep-anarchism",
+            "sep-political-obligation"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "legacy-philosophical-anarchism-no-general-obedience",
+            "expectedState": "supported",
+            "note": "Exact obligation proposition, not a policy answer."
+          }
+        },
+        {
+          "id": "authority-legitimacy",
+          "role": "defining",
+          "doctrine": "The state's claimed standing to issue binding content-independent commands lacks adequate general justification.",
+          "sourceIds": [
+            "sep-anarchism",
+            "sep-political-obligation"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "construct-PL31",
+            "expectedState": "supported",
+            "note": "Practical participation without general duty bears on this but does not settle all accounts of legitimacy."
+          }
+        },
+        {
+          "id": "state-toleration",
+          "role": "characteristic",
+          "doctrine": "Practical use of institutions can coexist with denial of general political obligation.",
+          "sourceIds": [
+            "sep-anarchism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-PL31",
+            "expectedState": "supported",
+            "note": "Characteristic of a state-tolerant strand, not required for every anarchist."
+          }
+        },
+        {
+          "id": "abolition",
+          "role": "disputed",
+          "doctrine": "Whether illegitimacy generates an obligation to dismantle states is disputed.",
+          "sourceIds": [
+            "sep-anarchism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The route does not establish a general abolition doctrine or its timing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "objectivism-rand",
+      "name": "Objectivism in Rand's formulation",
+      "scope": "comprehensive_system",
+      "context": "Rand's articulated system spans metaphysics, epistemology, ethics, and politics. This entry does not infer a system from market preferences or ethical egoism alone.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [
+        "rand-ethics"
+      ],
+      "secondarySourceIds": [
+        "sep-rand"
+      ],
+      "sourceNotes": "SEP describes metaphysical realism, reason, life-grounded objective ethics, rational self-interest, rights and laissez-faire capitalism; interpreters dispute aspects of Rand's account of the objective.",
+      "neighbors": [
+        "ethical egoism",
+        "classical liberalism",
+        "market liberalism",
+        "metaphysical realism"
+      ],
+      "discriminators": [
+        "Pro-market coordination alone is weak and merely characteristic evidence.",
+        "Life-grounded objective ethics and rational self-interest must be assessed separately.",
+        "A full political rights theory and metaphysical commitments are not measured by the pilot."
+      ],
+      "nonEntailments": [
+        "A market preference does not entail Objectivism.",
+        "General individualism or atheism does not entail Rand's system.",
+        "Rational self-interest does not entail psychological egoism."
+      ],
+      "commitments": [
+        {
+          "id": "life-grounded-objective-ethics",
+          "role": "defining",
+          "doctrine": "Objective moral standards are grounded in the requirements of human life and flourishing.",
+          "sourceIds": [
+            "sep-rand",
+            "rand-ethics"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-ME09",
+            "expectedState": "supported",
+            "note": "Narrow grounding rule; does not establish the entire metaethics."
+          }
+        },
+        {
+          "id": "rational-self-interest",
+          "role": "defining",
+          "doctrine": "The agent's rational long-term self-interest is a moral priority.",
+          "sourceIds": [
+            "sep-rand",
+            "rand-ethics"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE15",
+            "expectedState": "supported",
+            "note": "Normative moral priority, not descriptive motive."
+          }
+        },
+        {
+          "id": "perception-reason",
+          "role": "defining",
+          "doctrine": "Knowledge of the concrete world is grounded in sensory perception integrated by reason.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP20",
+            "expectedState": "supported",
+            "note": "Does not by itself establish Rand's full epistemology."
+          }
+        },
+        {
+          "id": "mind-independent-reality",
+          "role": "defining",
+          "doctrine": "Existence is independent of human consciousness.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "construct-OM13",
+            "expectedState": "supported",
+            "note": "The pilot establishes only ordinary concrete objects independent of thought, a proper part of Rand's broader realism."
+          }
+        },
+        {
+          "id": "individual-rights",
+          "role": "defining",
+          "doctrine": "Individual rights against initiated force structure political justice.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The route lacks adequate content for the pilot's basic-rights rule construct-PL27."
+          }
+        },
+        {
+          "id": "rights-protecting-state",
+          "role": "defining",
+          "doctrine": "A rights-protecting state, rather than competing coercive legal sovereignties, has a legitimate limited role.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The rule construct-PL29 is not measured by this route."
+          }
+        },
+        {
+          "id": "capitalist-coordination",
+          "role": "characteristic",
+          "doctrine": "Laissez-faire exchange is central to Rand's political economy.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "legacy-objectivism-market-coordination",
+            "expectedState": "supported",
+            "note": "Two coordination cases cannot establish laissez-faire institutional doctrine."
+          }
+        },
+        {
+          "id": "objective-category",
+          "role": "disputed",
+          "doctrine": "The best interpretation of Rand's intrinsic, subjective, and objective distinction is debated.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "unsuitable",
+            "note": "Do not turn an exegetical dispute into a respondent identity criterion."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ontological-naturalism",
+      "name": "Ontological naturalism",
+      "scope": "metaphysical_position",
+      "context": "A broad family of views on which reality contains no supernatural entities. Philosophers disagree about how closely this is tied to physicalism and scientific method.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-naturalism",
+        "sep-physicalism"
+      ],
+      "sourceNotes": "SEP distinguishes ontological from methodological naturalism and notes the imprecision of the label. Physicalism is a stronger or differently specified metaphysical claim, not a synonym forced by this comparison.",
+      "neighbors": [
+        "atheism",
+        "methodological naturalism",
+        "physicalism",
+        "secular humanism"
+      ],
+      "discriminators": [
+        "Denying a deity alone does not establish that all reality is natural.",
+        "Accepting scientific tests does not establish an ontological claim; naturalism does not by itself establish physicalism."
+      ],
+      "nonEntailments": [
+        "Ontological naturalism does not entail reductive physicalism.",
+        "It does not entail atheism from a lone answer about one conception of God.",
+        "It does not prescribe a political or ethical theory."
+      ],
+      "commitments": [
+        {
+          "id": "no-supernatural-reality",
+          "role": "defining",
+          "doctrine": "Reality contains no genuinely supernatural entities or events.",
+          "sourceIds": [
+            "sep-naturalism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "ph-supernatural-reality",
+            "expectedState": "opposed",
+            "note": "Explicit supernatural-reality proposition, distinct from unexplained events."
+          }
+        },
+        {
+          "id": "natural-exhaustiveness",
+          "role": "defining",
+          "doctrine": "Reality is exhausted by the natural order, beyond merely rejecting one supernatural claim.",
+          "sourceIds": [
+            "sep-naturalism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The direct natural-world rule has insufficient content in the frozen route."
+          }
+        },
+        {
+          "id": "scientific-method",
+          "role": "characteristic",
+          "doctrine": "Scientific inquiry is an important route to understanding nature.",
+          "sourceIds": [
+            "sep-naturalism"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "audit2-EP06-testability",
+            "expectedState": "supported",
+            "note": "A testability preference is method only, not an ontological proof."
+          }
+        },
+        {
+          "id": "physicalist-reduction",
+          "role": "disputed",
+          "doctrine": "Naturalists disagree about physicalist or reductive accounts of mind and higher-level entities.",
+          "sourceIds": [
+            "sep-naturalism",
+            "sep-physicalism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "Physical-reality is not measured; physical explanation of experience is narrower."
+          }
+        }
+      ]
+    }
+  ]
+}

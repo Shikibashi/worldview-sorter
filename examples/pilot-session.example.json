@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "pilotId": "pilot-0.2",
+  "instrumentVersion": "0.9.0-research",
+  "bankVersion": "0.9.0",
+  "packetId": "example-packet",
+  "sessionId": "example-session",
+  "respondentKey": null,
+  "locale": "en-US",
+  "clientVersion": "example-client",
+  "randomizationSeed": "example-seed",
+  "startedAt": "2026-09-28T00:00:00Z",
+  "completedAt": "2026-09-28T00:05:00Z",
+  "completionStatus": "completed",
+  "presentedItems": [
+    {
+      "index": 0,
+      "itemId": "MEI001",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "responseScaleId": "agreement5",
+      "presented": true,
+      "skippedByBranch": false,
+      "presentedAt": "2026-09-28T00:00:10Z"
+    },
+    {
+      "index": 1,
+      "itemId": "MEI002",
+      "itemRevision": 2,
+      "domainId": "ME",
+      "responseScaleId": "agreement5",
+      "presented": true,
+      "skippedByBranch": false,
+      "presentedAt": "2026-09-28T00:00:30Z"
+    },
+    {
+      "index": 2,
+      "itemId": "VAI001",
+      "itemRevision": 2,
+      "domainId": "VA",
+      "responseScaleId": "importance5",
+      "presented": true,
+      "skippedByBranch": false,
+      "presentedAt": "2026-09-28T00:01:00Z"
+    },
+    {
+      "index": 3,
+      "itemId": "EPI001",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "responseScaleId": "agreement5",
+      "presented": true,
+      "skippedByBranch": false,
+      "presentedAt": "2026-09-28T00:01:30Z"
+    },
+    {
+      "index": 4,
+      "itemId": "MFI001",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "responseScaleId": "agreement5",
+      "presented": true,
+      "skippedByBranch": false,
+      "presentedAt": "2026-09-28T00:02:00Z"
+    },
+    {
+      "index": 5,
+      "itemId": "PLI001",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "responseScaleId": "agreement5",
+      "presented": true,
+      "skippedByBranch": false,
+      "presentedAt": "2026-09-28T00:02:30Z"
+    }
+  ],
+  "responses": [
+    {
+      "itemId": "MEI001",
+      "itemRevision": 1,
+      "state": "answered",
+      "value": 1,
+      "responseTimeMs": 9000,
+      "changedAnswerCount": 0,
+      "answeredAt": "2026-09-28T00:00:19Z"
+    },
+    {
+      "itemId": "MEI002",
+      "itemRevision": 2,
+      "state": "answered",
+      "value": -1,
+      "responseTimeMs": 11000,
+      "changedAnswerCount": 1,
+      "answeredAt": "2026-09-28T00:00:41Z"
+    },
+    {
+      "itemId": "VAI001",
+      "itemRevision": 2,
+      "state": "answered",
+      "value": 2,
+      "responseTimeMs": 7000,
+      "changedAnswerCount": 0,
+      "answeredAt": "2026-09-28T00:01:07Z"
+    },
+    {
+      "itemId": "EPI001",
+      "itemRevision": 1,
+      "state": "answered",
+      "value": 2,
+      "responseTimeMs": 8000,
+      "changedAnswerCount": 0,
+      "answeredAt": "2026-09-28T00:01:38Z"
+    },
+    {
+      "itemId": "MFI001",
+      "itemRevision": 1,
+      "state": "no_view",
+      "value": null,
+      "responseTimeMs": 6000,
+      "changedAnswerCount": 0,
+      "answeredAt": "2026-09-28T00:02:06Z"
+    },
+    {
+      "itemId": "PLI001",
+      "itemRevision": 1,
+      "state": "answered",
+      "value": -1,
+      "responseTimeMs": 10000,
+      "changedAnswerCount": 0,
+      "answeredAt": "2026-09-28T00:02:40Z"
+    }
+  ],
+  "resultSnapshotRefs": []
+}

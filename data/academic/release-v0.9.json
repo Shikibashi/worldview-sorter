@@ -1,0 +1,21 @@
+{
+  "version": "0.9.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.8.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-09-28",
+  "note": "Conceptual coverage is not evidence of latent dimensionality, reliability, or classification accuracy.",
+  "itemCount": 562,
+  "newItemCount": 90,
+  "registryEntries": 182,
+  "activeConstructCount": 181,
+  "newConstructCount": 30,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.8.json": "c8cc54c5a58c8ed902b31603283253bca6751c46cb6ef9d22c71fe1001952b7f",
+    "data/instruments/research-pool-0.8.json": "1a687893886929f7830871df4240cbf19ce21318fdf309a9fcb3f15cac349394"
+  },
+  "publicInferenceAllowed": false
+}

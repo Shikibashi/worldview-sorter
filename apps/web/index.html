@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Worldview Sorter Pilot</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">Research pilot</div>
+        <h1>Worldview Sorter</h1>
+      </div>
+      <div id="status-pill" class="status-pill">Loading…</div>
+    </header>
+
+    <section id="start-screen" class="panel hidden" aria-labelledby="start-title">
+      <div class="panel-copy">
+        <div class="eyebrow">Choose a pilot length</div>
+        <h2 id="start-title">One question at a time</h2>
+        <p>Choose a preset or open the advanced controls. Answers are saved locally as you go and submitted to the collector when one is available. No worldview score is shown during the research pilot.</p>
+      </div>
+
+      <div id="resume-box" class="resume-box hidden">
+        <strong>Saved session found.</strong>
+        <span id="resume-detail"></span>
+        <div class="button-row">
+          <button id="resume-button" class="primary" type="button">Resume</button>
+          <button id="discard-button" class="secondary" type="button">Discard saved session</button>
+        </div>
+      </div>
+
+      <div id="preset-grid" class="preset-grid" aria-label="Pilot lengths"></div>
+
+      <details class="advanced-box">
+        <summary>Advanced packet controls</summary>
+        <form id="start-form" class="start-form">
+          <label>Packet size<input id="packet-size" type="number" min="80" max="160" step="1"></label>
+          <label>Randomization seed<input id="packet-seed" type="text" autocomplete="off"></label>
+          <button class="secondary" type="submit">Start custom packet</button>
+        </form>
+      </details>
+
+      <details class="privacy-note">
+        <summary>What is stored?</summary>
+        <p>Item IDs/revisions, answer states and values, timing, answer changes, packet seed, locale, and a generated session ID. The runner does not intentionally collect your name, email address, raw IP address, or raw user-agent string.</p>
+      </details>
+    </section>
+
+    <section id="question-screen" class="panel hidden" aria-live="polite">
+      <div class="progress-row">
+        <div>
+          <span id="domain-label" class="eyebrow"></span>
+          <span id="progress-text" class="progress-text"></span>
+        </div>
+        <progress id="progress-bar" max="100" value="0"></progress>
+      </div>
+
+      <article class="question-card">
+        <h2 id="question-text"></h2>
+        <div id="question-context" class="question-context"></div>
+        <div id="answer-area" class="answer-area"></div>
+        <div id="special-area" class="special-area"></div>
+      </article>
+
+      <div class="nav-row">
+        <button id="back-button" class="secondary" type="button">Back</button>
+        <span id="autosave-label">Saved locally</span>
+        <div class="nav-actions">
+          <label class="toggle-label"><input id="auto-advance-toggle" type="checkbox"> Auto advance</label>
+          <button id="next-button" class="primary" type="button">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="complete-screen" class="panel hidden" aria-labelledby="complete-title">
+      <div class="panel-copy">
+        <div class="eyebrow">Session complete</div>
+        <h2 id="complete-title">Raw responses are complete</h2>
+        <p>No worldview score has been calculated. The session is submitted automatically when the collection service is available; raw JSON export remains available as a fallback.</p>
+      </div>
+
+      <div id="collection-status" class="collection-status">Checking collector…</div>
+
+      <div class="button-row">
+        <button id="retry-submit-button" class="secondary hidden" type="button">Retry submission</button>
+        <button id="export-button" class="primary" type="button">Export session JSON</button>
+        <button id="restart-button" class="secondary" type="button">Start another session</button>
+      </div>
+
+      <pre id="complete-summary" class="summary-box"></pre>
+    </section>
+
+    <section id="error-screen" class="panel hidden">
+      <div class="eyebrow">Runner error</div>
+      <h2>Unable to continue</h2>
+      <pre id="error-message" class="error-box"></pre>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

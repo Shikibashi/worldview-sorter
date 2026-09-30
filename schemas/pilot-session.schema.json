@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/pilot-session.schema.json",
+  "title": "Worldview Sorter Pilot Raw Session",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "pilotId",
+    "instrumentVersion",
+    "bankVersion",
+    "packetId",
+    "sessionId",
+    "respondentKey",
+    "locale",
+    "clientVersion",
+    "randomizationSeed",
+    "startedAt",
+    "completedAt",
+    "completionStatus",
+    "presentedItems",
+    "responses",
+    "resultSnapshotRefs"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "pilotId": {
+      "type": "string"
+    },
+    "instrumentVersion": {
+      "type": "string"
+    },
+    "bankVersion": {
+      "type": "string"
+    },
+    "packetId": {
+      "type": "string"
+    },
+    "sessionId": {
+      "type": "string"
+    },
+    "respondentKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locale": {
+      "type": "string",
+      "minLength": 2
+    },
+    "clientVersion": {
+      "type": "string"
+    },
+    "randomizationSeed": {
+      "type": "string"
+    },
+    "startedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "completionStatus": {
+      "enum": [
+        "not_started",
+        "in_progress",
+        "completed",
+        "abandoned",
+        "technical_failure"
+      ]
+    },
+    "presentedItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "index",
+          "itemId",
+          "itemRevision",
+          "domainId",
+          "responseScaleId",
+          "presented",
+          "skippedByBranch",
+          "presentedAt"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "itemId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}I\\d{3}$"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "domainId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "responseScaleId": {
+            "type": "string"
+          },
+          "presented": {
+            "type": "boolean"
+          },
+          "skippedByBranch": {
+            "type": "boolean"
+          },
+          "presentedAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "responses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "itemId",
+          "itemRevision",
+          "state",
+          "value",
+          "responseTimeMs",
+          "changedAnswerCount",
+          "answeredAt"
+        ],
+        "properties": {
+          "itemId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}I\\d{3}$"
+          },
+          "itemRevision": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "state": {
+            "enum": [
+              "answered",
+              "no_view",
+              "not_understood",
+              "not_applicable"
+            ]
+          },
+          "value": {
+            "oneOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "responseTimeMs": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "changedAnswerCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "answeredAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "resultSnapshotRefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "schemaVersion": "1.0.0",
+  "instrumentVersion": "0.3.0-research",
+  "registryVersion": "0.1.0",
+  "bankVersion": "0.3.0",
+  "status": "candidate_research_pool",
+  "purpose": "Candidate research pool for editorial and cognitive review. No scoring model attached.",
+  "nominalPoolSize": 96,
+  "ordering": {
+    "mode": "randomized_constrained",
+    "constraints": {
+      "separateMirrorGroups": true,
+      "separateScenarioGroups": true,
+      "maxSameDomainConsecutive": 2,
+      "respectEligibilityDependencies": true
+    }
+  },
+  "branching": {
+    "enabled": true,
+    "preserveSkippedItemsInSession": true
+  },
+  "responseStatePolicy": {
+    "neutralIsAnswered": true,
+    "noViewIsMissingPositionData": true,
+    "notUnderstoodIsMissingPositionData": true,
+    "notApplicableIsMissingPositionData": true
+  },
+  "scoringModelVersion": null,
+  "entries": [
+    {
+      "index": 0,
+      "itemId": "MEI001",
+      "itemRevision": 1
+    },
+    {
+      "index": 1,
+      "itemId": "MEI002",
+      "itemRevision": 2
+    },
+    {
+      "index": 2,
+      "itemId": "MEI003",
+      "itemRevision": 2
+    },
+    {
+      "index": 3,
+      "itemId": "MEI004",
+      "itemRevision": 2
+    },
+    {
+      "index": 4,
+      "itemId": "MEI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 5,
+      "itemId": "NEI001",
+      "itemRevision": 2
+    },
+    {
+      "index": 6,
+      "itemId": "NEI002",
+      "itemRevision": 1
+    },
+    {
+      "index": 7,
+      "itemId": "NEI003",
+      "itemRevision": 1
+    },
+    {
+      "index": 8,
+      "itemId": "NEI004",
+      "itemRevision": 2
+    },
+    {
+      "index": 9,
+      "itemId": "NEI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 10,
+      "itemId": "MFI001",
+      "itemRevision": 1
+    },
+    {
+      "index": 11,
+      "itemId": "MFI002",
+      "itemRevision": 1
+    },
+    {
+      "index": 12,
+      "itemId": "MFI003",
+      "itemRevision": 1
+    },
+    {
+      "index": 13,
+      "itemId": "MFI004",
+      "itemRevision": 1
+    },
+    {
+      "index": 14,
+      "itemId": "MFI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 15,
+      "itemId": "MFI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 16,
+      "itemId": "VAI001",
+      "itemRevision": 2
+    },
+    {
+      "index": 17,
+      "itemId": "VAI002",
+      "itemRevision": 2
+    },
+    {
+      "index": 18,
+      "itemId": "VAI003",
+      "itemRevision": 2
+    },
+    {
+      "index": 19,
+      "itemId": "VAI004",
+      "itemRevision": 2
+    },
+    {
+      "index": 20,
+      "itemId": "VAI005",
+      "itemRevision": 1
+    },
+    {
+      "index": 21,
+      "itemId": "EPI001",
+      "itemRevision": 1
+    },
+    {
+      "index": 22,
+      "itemId": "EPI002",
+      "itemRevision": 2
+    },
+    {
+      "index": 23,
+      "itemId": "EPI003",
+      "itemRevision": 1
+    },
+    {
+      "index": 24,
+      "itemId": "EPI004",
+      "itemRevision": 2
+    },
+    {
+      "index": 25,
+      "itemId": "EPI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 26,
+      "itemId": "OMI001",
+      "itemRevision": 2
+    },
+    {
+      "index": 27,
+      "itemId": "OMI002",
+      "itemRevision": 1
+    },
+    {
+      "index": 28,
+      "itemId": "OMI003",
+      "itemRevision": 2
+    },
+    {
+      "index": 29,
+      "itemId": "OMI004",
+      "itemRevision": 1
+    },
+    {
+      "index": 30,
+      "itemId": "OMI005",
+      "itemRevision": 1
+    },
+    {
+      "index": 31,
+      "itemId": "MSI001",
+      "itemRevision": 2
+    },
+    {
+      "index": 32,
+      "itemId": "MSI002",
+      "itemRevision": 1
+    },
+    {
+      "index": 33,
+      "itemId": "MSI003",
+      "itemRevision": 1
+    },
+    {
+      "index": 34,
+      "itemId": "MSI004",
+      "itemRevision": 1
+    },
+    {
+      "index": 35,
+      "itemId": "MSI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 36,
+      "itemId": "AHI001",
+      "itemRevision": 2
+    },
+    {
+      "index": 37,
+      "itemId": "AHI002",
+      "itemRevision": 1
+    },
+    {
+      "index": 38,
+      "itemId": "AHI003",
+      "itemRevision": 1
+    },
+    {
+      "index": 39,
+      "itemId": "AHI004",
+      "itemRevision": 1
+    },
+    {
+      "index": 40,
+      "itemId": "AHI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 41,
+      "itemId": "RCI001",
+      "itemRevision": 1
+    },
+    {
+      "index": 42,
+      "itemId": "RCI002",
+      "itemRevision": 2
+    },
+    {
+      "index": 43,
+      "itemId": "RCI003",
+      "itemRevision": 2
+    },
+    {
+      "index": 44,
+      "itemId": "RCI004",
+      "itemRevision": 1
+    },
+    {
+      "index": 45,
+      "itemId": "RCI005",
+      "itemRevision": 1
+    },
+    {
+      "index": 46,
+      "itemId": "EXI001",
+      "itemRevision": 1
+    },
+    {
+      "index": 47,
+      "itemId": "EXI002",
+      "itemRevision": 1
+    },
+    {
+      "index": 48,
+      "itemId": "EXI003",
+      "itemRevision": 2
+    },
+    {
+      "index": 49,
+      "itemId": "EXI004",
+      "itemRevision": 1
+    },
+    {
+      "index": 50,
+      "itemId": "SOI001",
+      "itemRevision": 2
+    },
+    {
+      "index": 51,
+      "itemId": "SOI002",
+      "itemRevision": 2
+    },
+    {
+      "index": 52,
+      "itemId": "SOI003",
+      "itemRevision": 1
+    },
+    {
+      "index": 53,
+      "itemId": "SOI004",
+      "itemRevision": 2
+    },
+    {
+      "index": 54,
+      "itemId": "SOI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 55,
+      "itemId": "PLI001",
+      "itemRevision": 1
+    },
+    {
+      "index": 56,
+      "itemId": "PLI002",
+      "itemRevision": 1
+    },
+    {
+      "index": 57,
+      "itemId": "PLI003",
+      "itemRevision": 1
+    },
+    {
+      "index": 58,
+      "itemId": "PLI004",
+      "itemRevision": 1
+    },
+    {
+      "index": 59,
+      "itemId": "PLI005",
+      "itemRevision": 2
+    },
+    {
+      "index": 60,
+      "itemId": "MEI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 61,
+      "itemId": "MEI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 62,
+      "itemId": "MEI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 63,
+      "itemId": "NEI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 64,
+      "itemId": "NEI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 65,
+      "itemId": "NEI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 66,
+      "itemId": "MFI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 67,
+      "itemId": "MFI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 68,
+      "itemId": "MFI009",
+      "itemRevision": 1
+    },
+    {
+      "index": 69,
+      "itemId": "VAI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 70,
+      "itemId": "VAI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 71,
+      "itemId": "VAI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 72,
+      "itemId": "EPI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 73,
+      "itemId": "EPI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 74,
+      "itemId": "EPI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 75,
+      "itemId": "OMI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 76,
+      "itemId": "OMI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 77,
+      "itemId": "OMI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 78,
+      "itemId": "MSI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 79,
+      "itemId": "MSI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 80,
+      "itemId": "MSI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 81,
+      "itemId": "AHI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 82,
+      "itemId": "AHI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 83,
+      "itemId": "AHI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 84,
+      "itemId": "RCI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 85,
+      "itemId": "RCI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 86,
+      "itemId": "RCI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 87,
+      "itemId": "EXI005",
+      "itemRevision": 1
+    },
+    {
+      "index": 88,
+      "itemId": "EXI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 89,
+      "itemId": "EXI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 90,
+      "itemId": "SOI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 91,
+      "itemId": "SOI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 92,
+      "itemId": "SOI008",
+      "itemRevision": 1
+    },
+    {
+      "index": 93,
+      "itemId": "PLI006",
+      "itemRevision": 1
+    },
+    {
+      "index": 94,
+      "itemId": "PLI007",
+      "itemRevision": 1
+    },
+    {
+      "index": 95,
+      "itemId": "PLI008",
+      "itemRevision": 1
+    }
+  ]
+}

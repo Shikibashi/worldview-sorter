@@ -1,0 +1,548 @@
+{
+  "schemaVersion": "1.0.0",
+  "registryVersion": "0.2.0",
+  "rules": [
+    {
+      "id": "R001",
+      "type": "independent",
+      "constructs": [
+        "AH01",
+        "AH02"
+      ],
+      "rationale": "Free-will belief and determinism belief are not logical opposites; compatibilist combinations are possible."
+    },
+    {
+      "id": "R002",
+      "type": "derived_from",
+      "from": [
+        "AH01",
+        "AH02",
+        "AH03"
+      ],
+      "to": "AH12",
+      "rationale": "Agency-family classification must be derived and explicitly confirmed rather than inferred from one slider."
+    },
+    {
+      "id": "R003",
+      "type": "related_not_identical",
+      "constructs": [
+        "RC01",
+        "OM01"
+      ],
+      "rationale": "Atheism/theism and naturalism/supernaturalism are related but not conceptually identical."
+    },
+    {
+      "id": "R004",
+      "type": "independent",
+      "constructs": [
+        "RC01",
+        "OM02"
+      ],
+      "rationale": "Deity belief does not determine physicalism or nonphysicalism."
+    },
+    {
+      "id": "R005",
+      "type": "independent",
+      "constructs": [
+        "OM02",
+        "OM03"
+      ],
+      "rationale": "Physicalism and nominalism concern different ontological questions."
+    },
+    {
+      "id": "R006",
+      "type": "independent",
+      "constructs": [
+        "ME01",
+        "ME02"
+      ],
+      "rationale": "Moral stance-independence does not by itself entail universal applicability."
+    },
+    {
+      "id": "R007",
+      "type": "independent",
+      "constructs": [
+        "ME01",
+        "ME04"
+      ],
+      "rationale": "Moral realism/objectivity does not entail generalism over particularism."
+    },
+    {
+      "id": "R008",
+      "type": "derived_from",
+      "from": [
+        "ME01",
+        "ME02",
+        "ME03",
+        "ME05",
+        "ME06"
+      ],
+      "to": "ME07",
+      "rationale": "Metaethical family must synthesize multiple logically distinct commitments."
+    },
+    {
+      "id": "R009",
+      "type": "independent",
+      "constructs": [
+        "NE01",
+        "NE08"
+      ],
+      "rationale": "Sensitivity to consequences does not entail permissiveness toward instrumental harm."
+    },
+    {
+      "id": "R010",
+      "type": "independent",
+      "constructs": [
+        "NE01",
+        "NE02"
+      ],
+      "rationale": "Consequential considerations and deontic constraints can both be strongly endorsed."
+    },
+    {
+      "id": "R011",
+      "type": "independent",
+      "constructs": [
+        "SO01",
+        "SO02"
+      ],
+      "rationale": "Individualism and collectivism are independently measurable orientations, not forced complements."
+    },
+    {
+      "id": "R012",
+      "type": "related_not_identical",
+      "constructs": [
+        "MF05",
+        "PL01"
+      ],
+      "rationale": "Authority as a moral foundation is not the same construct as legitimacy of coercive political authority."
+    },
+    {
+      "id": "R013",
+      "type": "related_not_identical",
+      "constructs": [
+        "MF02",
+        "PL10"
+      ],
+      "rationale": "Equality as a moral foundation is not identical to any specific distributive-justice principle."
+    },
+    {
+      "id": "R014",
+      "type": "related_not_identical",
+      "constructs": [
+        "RC06",
+        "EP10"
+      ],
+      "rationale": "Revelation can be measured as an epistemic source and as a religious authority; the scores must remain distinct."
+    },
+    {
+      "id": "R015",
+      "type": "independent",
+      "constructs": [
+        "RC01",
+        "RC10"
+      ],
+      "rationale": "Belief in deity existence does not determine how central religion or spirituality is in a person's life."
+    },
+    {
+      "id": "R016",
+      "type": "independent",
+      "constructs": [
+        "RC01",
+        "PL26"
+      ],
+      "rationale": "Private theological belief does not determine support for religious authority in public law."
+    },
+    {
+      "id": "R017",
+      "type": "independent",
+      "constructs": [
+        "PL01",
+        "PL02"
+      ],
+      "rationale": "Political legitimacy and a general obligation to obey are distinct philosophical claims."
+    },
+    {
+      "id": "R018",
+      "type": "independent",
+      "constructs": [
+        "PL06",
+        "PL08"
+      ],
+      "rationale": "Noninterference liberty and positive/capability liberty may both be valued strongly."
+    },
+    {
+      "id": "R019",
+      "type": "independent",
+      "constructs": [
+        "PL13",
+        "PL14"
+      ],
+      "rationale": "Market and democratic/collective coordination preferences need not sum to a fixed total."
+    },
+    {
+      "id": "R020",
+      "type": "independent",
+      "constructs": [
+        "PL18",
+        "PL19",
+        "PL20"
+      ],
+      "rationale": "Retribution, deterrence, and rehabilitation/restoration are independent purposes of punishment."
+    },
+    {
+      "id": "R021",
+      "type": "derived_from",
+      "from": [
+        "MS03"
+      ],
+      "to": "MS07",
+      "rationale": "Transformation scenarios interpret personal-identity commitments; they do not replace the underlying construct."
+    },
+    {
+      "id": "R022",
+      "type": "derived_from",
+      "from": [
+        "EX01",
+        "EX03",
+        "EX04"
+      ],
+      "to": "EX09",
+      "rationale": "Existential response is a secondary interpretation of meaning-related commitments."
+    },
+    {
+      "id": "R023",
+      "type": "independent",
+      "constructs": [
+        "AH08",
+        "AH09",
+        "AH10",
+        "AH11"
+      ],
+      "rationale": "Biological, environmental, conscious-reason, and unconscious explanations can all contribute simultaneously."
+    },
+    {
+      "id": "R024",
+      "type": "independent",
+      "constructs": [
+        "SO05",
+        "SO06"
+      ],
+      "rationale": "Group dominance and anti-egalitarianism are related but separately measurable."
+    },
+    {
+      "id": "R025",
+      "type": "related_not_identical",
+      "constructs": [
+        "SO09",
+        "NE07"
+      ],
+      "rationale": "Breadth of moral concern and impartial beneficence overlap but are not identical."
+    },
+    {
+      "id": "R026",
+      "type": "independent",
+      "constructs": [
+        "EX04",
+        "EX08"
+      ],
+      "rationale": "Belief that objective meaning is absent does not logically entail pessimism or resignation."
+    },
+    {
+      "id": "R027",
+      "type": "independent",
+      "constructs": [
+        "OM01",
+        "OM04"
+      ],
+      "rationale": "Naturalism does not entail reductionism."
+    },
+    {
+      "id": "R028",
+      "type": "prerequisite",
+      "from": [
+        "RC01"
+      ],
+      "to": "RC02",
+      "rationale": "Detailed deity-model questions are only meaningful when some deity-like reality is entertained."
+    },
+    {
+      "id": "R029",
+      "type": "prerequisite",
+      "from": [
+        "RC03"
+      ],
+      "to": "RC04",
+      "rationale": "Intervention questions presuppose at least some supernatural commitment or live possibility."
+    },
+    {
+      "id": "R030",
+      "type": "prerequisite",
+      "from": [
+        "RC01"
+      ],
+      "to": "RC11",
+      "rationale": "Detailed divinity classification follows a deity/divinity branch."
+    },
+    {
+      "id": "R031",
+      "type": "prerequisite",
+      "from": [
+        "MS01"
+      ],
+      "to": "MS02",
+      "rationale": "Detailed consciousness-theory branching should use the respondent's reducibility stance as routing information, not as a forced classification."
+    },
+    {
+      "id": "R032",
+      "type": "anti_inference",
+      "constructs": [
+        "ME07",
+        "SO04"
+      ],
+      "rationale": "Metaethical anti-realism must never be inferred from social tolerance or vice versa."
+    },
+    {
+      "id": "R033",
+      "type": "anti_inference",
+      "constructs": [
+        "EP01",
+        "PL04"
+      ],
+      "rationale": "Epistemic fallibilism/open revision must never be defined by support for a particular political institution."
+    },
+    {
+      "id": "R034",
+      "type": "anti_inference",
+      "constructs": [
+        "SO11",
+        "PL10"
+      ],
+      "rationale": "Social-construction beliefs must not be inferred from left/right distributive preferences."
+    },
+    {
+      "id": "R035",
+      "type": "anti_inference",
+      "constructs": [
+        "RC03",
+        "MF06"
+      ],
+      "rationale": "Supernatural belief and moral purity concern different constructs and must not proxy for each other."
+    },
+    {
+      "id": "ACA-036",
+      "type": "anti_inference",
+      "constructs": [
+        "EP15",
+        "EP19"
+      ],
+      "rationale": "Fallible propositional judgments and contextual certainty need not exclude one another."
+    },
+    {
+      "id": "ACA-037",
+      "type": "anti_inference",
+      "constructs": [
+        "EP18",
+        "EP15"
+      ],
+      "rationale": "Foundational warrant does not entail infallibility."
+    },
+    {
+      "id": "ACA-038",
+      "type": "anti_inference",
+      "constructs": [
+        "EP17",
+        "OM13"
+      ],
+      "rationale": "Revisable human concepts do not entail a mind-dependent physical world."
+    },
+    {
+      "id": "ACA-039",
+      "type": "anti_inference",
+      "constructs": [
+        "EP05",
+        "EP20"
+      ],
+      "rationale": "A priori rationalism is not the same as reasoning from sensory evidence."
+    },
+    {
+      "id": "ACA-040",
+      "type": "anti_inference",
+      "constructs": [
+        "OM11",
+        "OM12"
+      ],
+      "rationale": "Abstract objects and universals require separate evidence."
+    },
+    {
+      "id": "ACA-041",
+      "type": "anti_inference",
+      "constructs": [
+        "OM14",
+        "OM11"
+      ],
+      "rationale": "Easy ontology is not automatically abstract-object nominalism."
+    },
+    {
+      "id": "ACA-042",
+      "type": "anti_inference",
+      "constructs": [
+        "OM14",
+        "OM13"
+      ],
+      "rationale": "A deflationary method is not automatically external-world anti-realism."
+    },
+    {
+      "id": "ACA-043",
+      "type": "anti_inference",
+      "constructs": [
+        "SO14",
+        "SO02"
+      ],
+      "rationale": "Institution-dependent reality does not imply normative collectivism."
+    },
+    {
+      "id": "ACA-044",
+      "type": "anti_inference",
+      "constructs": [
+        "SO15",
+        "SO01"
+      ],
+      "rationale": "Individual-level explanation is not a moral priority rule."
+    },
+    {
+      "id": "ACA-045",
+      "type": "anti_inference",
+      "constructs": [
+        "AH13",
+        "NE15"
+      ],
+      "rationale": "Psychological and ethical egoism must not proxy for one another."
+    },
+    {
+      "id": "ACA-046",
+      "type": "anti_inference",
+      "constructs": [
+        "NE16",
+        "NE15"
+      ],
+      "rationale": "Practical rationality and moral rightness are distinct normative questions."
+    },
+    {
+      "id": "ACA-047",
+      "type": "anti_inference",
+      "constructs": [
+        "NE17",
+        "NE15"
+      ],
+      "rationale": "Ownness is not an obligation to maximize self-interest."
+    },
+    {
+      "id": "ACA-048",
+      "type": "anti_inference",
+      "constructs": [
+        "NE17",
+        "NE21"
+      ],
+      "rationale": "Ownness need not exclude elective concern for others."
+    },
+    {
+      "id": "ACA-049",
+      "type": "anti_inference",
+      "constructs": [
+        "ME05",
+        "ME10"
+      ],
+      "rationale": "Rejecting categorical reasons does not by itself reject objective life-conditional ethics."
+    },
+    {
+      "id": "ACA-050",
+      "type": "anti_inference",
+      "constructs": [
+        "NE18",
+        "NE19"
+      ],
+      "rationale": "Promissory reasons and exit conditions are not an all-or-nothing opposition."
+    },
+    {
+      "id": "ACA-051",
+      "type": "anti_inference",
+      "constructs": [
+        "NE19",
+        "NE20"
+      ],
+      "rationale": "Withdrawal can coexist with reliance-based repair responsibilities."
+    },
+    {
+      "id": "ACA-052",
+      "type": "anti_inference",
+      "constructs": [
+        "NE18",
+        "PL33"
+      ],
+      "rationale": "Promise morality and contractual enforceability require separate questions."
+    },
+    {
+      "id": "ACA-053",
+      "type": "anti_inference",
+      "constructs": [
+        "PL27",
+        "PL11"
+      ],
+      "rationale": "Strong property protection does not uniquely identify a natural-rights foundation."
+    },
+    {
+      "id": "ACA-054",
+      "type": "anti_inference",
+      "constructs": [
+        "PL27",
+        "PL28"
+      ],
+      "rationale": "Status and instrumental justifications can coexist."
+    },
+    {
+      "id": "ACA-055",
+      "type": "anti_inference",
+      "constructs": [
+        "PL02",
+        "PL31"
+      ],
+      "rationale": "No general obedience duty does not entail useless government."
+    },
+    {
+      "id": "ACA-056",
+      "type": "anti_inference",
+      "constructs": [
+        "PL02",
+        "PL32"
+      ],
+      "rationale": "Philosophical anarchism does not by itself prescribe state abolition."
+    },
+    {
+      "id": "ACA-057",
+      "type": "anti_inference",
+      "constructs": [
+        "PL24",
+        "PL30"
+      ],
+      "rationale": "Polycentric governance is not synonymous with nonstate market law."
+    },
+    {
+      "id": "ACA-058",
+      "type": "anti_inference",
+      "constructs": [
+        "PL01",
+        "PL29"
+      ],
+      "rationale": "Permission to coerce in a case does not entail exclusive territorial authority."
+    },
+    {
+      "id": "ACA-059",
+      "type": "anti_inference",
+      "constructs": [
+        "AH01",
+        "AH14"
+      ],
+      "rationale": "Ordinary agency and a condition excluding determinism are different claims."
+    }
+  ]
+}

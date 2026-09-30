@@ -1,0 +1,1109 @@
+{
+  "schemaVersion": "route-review-1",
+  "sourceAudit": "content-efficiency-v1.json",
+  "existingPolicyVersions": [
+    "philosophy-blueprint-1.1.0",
+    "philosophy-full-1.1.0"
+  ],
+  "releaseMutationApproved": false,
+  "proposedChanges": [],
+  "meaning": "No removal/addition pair is approved. These are bundle-pool gaps, not proven impossibilities: final slot filling can select unbundled bank items. A concrete swap requires a new policy version and whole-packet impact review.",
+  "structuralGaps": [
+    {
+      "ruleId": "audit-AH03-basic-desert",
+      "constructId": "AH03",
+      "domainId": "AH",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "AHI003",
+          "itemRevision": 1,
+          "unitId": "AHI003",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI014",
+          "itemRevision": 1,
+          "unitId": "AHI014",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI025",
+          "itemRevision": 1,
+          "unitId": "AH-S03",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-AH04-altruistic-capacity",
+      "constructId": "AH04",
+      "domainId": "AH",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "AHI006",
+          "itemRevision": 1,
+          "unitId": "AHI006",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI015",
+          "itemRevision": 1,
+          "unitId": "AHI015",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-AH06-malleability",
+      "constructId": "AH06",
+      "domainId": "AH",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "AHI004",
+          "itemRevision": 1,
+          "unitId": "AHI004",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI008",
+          "itemRevision": 1,
+          "unitId": "AHI008",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI028",
+          "itemRevision": 1,
+          "unitId": "AH-S06",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-AH08-biological",
+      "constructId": "AH08",
+      "domainId": "AH",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "AHI010",
+          "itemRevision": 1,
+          "unitId": "AHI010",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI018",
+          "itemRevision": 1,
+          "unitId": "AHI018",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI030",
+          "itemRevision": 1,
+          "unitId": "AH-S08",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-AH09-environmental",
+      "constructId": "AH09",
+      "domainId": "AH",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "AHI019",
+          "itemRevision": 1,
+          "unitId": "AHI019",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI022",
+          "itemRevision": 1,
+          "unitId": "AHI022",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "AHI031",
+          "itemRevision": 1,
+          "unitId": "AH-S09",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EP02-complex-knowledge",
+      "constructId": "EP02",
+      "domainId": "EP",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "EPI009",
+          "itemRevision": 1,
+          "unitId": "EPI009",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI014",
+          "itemRevision": 1,
+          "unitId": "EPI014",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI028",
+          "itemRevision": 1,
+          "unitId": "EP-S02",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EP05-apriori",
+      "constructId": "EP05",
+      "domainId": "EP",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "EPI006",
+          "itemRevision": 1,
+          "unitId": "EPI006",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI017",
+          "itemRevision": 1,
+          "unitId": "EPI017",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EP06-testability",
+      "constructId": "EP06",
+      "domainId": "EP",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 1,
+      "unbundledFillerAssignments": 1,
+      "candidateAdditions": [
+        {
+          "itemId": "EPI004",
+          "itemRevision": 2,
+          "unitId": "EPI004",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI026",
+          "itemRevision": 1,
+          "unitId": "EPI026",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EP10-revelation",
+      "constructId": "EP10",
+      "domainId": "EP",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "EPI012",
+          "itemRevision": 1,
+          "unitId": "EPI012",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI021",
+          "itemRevision": 1,
+          "unitId": "EPI021",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI032",
+          "itemRevision": 1,
+          "unitId": "EP-S05",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EP11-external-world",
+      "constructId": "EP11",
+      "domainId": "EP",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "EPI036",
+          "itemRevision": 1,
+          "unitId": "EPI036",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI034",
+          "itemRevision": 1,
+          "unitId": "EPI034",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI037",
+          "itemRevision": 1,
+          "unitId": "EPI037",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EP11-skepticism",
+      "constructId": "EP11",
+      "domainId": "EP",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "EPI034",
+          "itemRevision": 1,
+          "unitId": "EPI034",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI035",
+          "itemRevision": 1,
+          "unitId": "EP-S07",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EPI037",
+          "itemRevision": 1,
+          "unitId": "EPI037",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EX02-designer-purpose",
+      "constructId": "EX02",
+      "domainId": "EX",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "EXI014",
+          "itemRevision": 1,
+          "unitId": "EXI014",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EXI012",
+          "itemRevision": 1,
+          "unitId": "EXI012",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-EX02-nondesigner-purpose",
+      "constructId": "EX02",
+      "domainId": "EX",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "EXI013",
+          "itemRevision": 1,
+          "unitId": "EXI013",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EXI014",
+          "itemRevision": 1,
+          "unitId": "EXI014",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "EXI012",
+          "itemRevision": 1,
+          "unitId": "EXI012",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-OM08-deflationary",
+      "constructId": "OM08",
+      "domainId": "OM",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "OMI023",
+          "itemRevision": 1,
+          "unitId": "OMI023",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "OMI022",
+          "itemRevision": 1,
+          "unitId": "OMI022",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "OMI024",
+          "itemRevision": 1,
+          "unitId": "OMI024",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-OM08-substantive",
+      "constructId": "OM08",
+      "domainId": "OM",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "OMI022",
+          "itemRevision": 1,
+          "unitId": "OMI022",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "OMI023",
+          "itemRevision": 1,
+          "unitId": "OMI023",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "OMI024",
+          "itemRevision": 1,
+          "unitId": "OMI024",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-PL01-legitimacy",
+      "constructId": "PL01",
+      "domainId": "PL",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "PLI001",
+          "itemRevision": 1,
+          "unitId": "PLI001",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI024",
+          "itemRevision": 1,
+          "unitId": "PLI024",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI047",
+          "itemRevision": 1,
+          "unitId": "PL-S02",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-PL05-decentralization",
+      "constructId": "PL05",
+      "domainId": "PL",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "PLI004",
+          "itemRevision": 1,
+          "unitId": "PL-M01",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI003",
+          "itemRevision": 1,
+          "unitId": "PL-M01",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI050",
+          "itemRevision": 1,
+          "unitId": "PLI050",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-PL12-common-ownership",
+      "constructId": "PL12",
+      "domainId": "PL",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "PLI014",
+          "itemRevision": 1,
+          "unitId": "PLI014",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI034",
+          "itemRevision": 1,
+          "unitId": "PLI034",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI059",
+          "itemRevision": 1,
+          "unitId": "PLI059",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-PL14-democratic-coordination",
+      "constructId": "PL14",
+      "domainId": "PL",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "PLI036",
+          "itemRevision": 1,
+          "unitId": "PLI036",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI060",
+          "itemRevision": 1,
+          "unitId": "PLI060",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-PL15-expert-coordination",
+      "constructId": "PL15",
+      "domainId": "PL",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "PLI037",
+          "itemRevision": 1,
+          "unitId": "PLI037",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI061",
+          "itemRevision": 1,
+          "unitId": "PLI061",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-PL19-deterrence",
+      "constructId": "PL19",
+      "domainId": "PL",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "PLI018",
+          "itemRevision": 1,
+          "unitId": "PLI018",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI041",
+          "itemRevision": 1,
+          "unitId": "PLI041",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI065",
+          "itemRevision": 1,
+          "unitId": "PL-S13",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-PL25-reform",
+      "constructId": "PL25",
+      "domainId": "PL",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "PLI075",
+          "itemRevision": 1,
+          "unitId": "PLI075",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI077",
+          "itemRevision": 1,
+          "unitId": "PLI077",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "PLI076",
+          "itemRevision": 1,
+          "unitId": "PLI076",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-RC02-agentic-divinity",
+      "constructId": "RC02",
+      "domainId": "RC",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "RCI002",
+          "itemRevision": 2,
+          "unitId": "RCI002",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "RCI015",
+          "itemRevision": 1,
+          "unitId": "RCI015",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "RCI025",
+          "itemRevision": 1,
+          "unitId": "RCI025",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-RC04-intervention",
+      "constructId": "RC04",
+      "domainId": "RC",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "RCI009",
+          "itemRevision": 1,
+          "unitId": "RCI009",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "RCI016",
+          "itemRevision": 1,
+          "unitId": "RCI016",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "RCI026",
+          "itemRevision": 1,
+          "unitId": "RC-S02",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-RC05-miracles",
+      "constructId": "RC05",
+      "domainId": "RC",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "RCI010",
+          "itemRevision": 1,
+          "unitId": "RCI010",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "RCI017",
+          "itemRevision": 1,
+          "unitId": "RCI017",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "RCI027",
+          "itemRevision": 1,
+          "unitId": "RC-S03",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-RC06-revelatory-authority",
+      "constructId": "RC06",
+      "domainId": "RC",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "RCI011",
+          "itemRevision": 1,
+          "unitId": "RCI011",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "RCI028",
+          "itemRevision": 1,
+          "unitId": "RCI028",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO03-relational-self",
+      "constructId": "SO03",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI003",
+          "itemRevision": 1,
+          "unitId": "SOI003",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI016",
+          "itemRevision": 1,
+          "unitId": "SOI016",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI027",
+          "itemRevision": 1,
+          "unitId": "SO-S03",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO04-toleration",
+      "constructId": "SO04",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI006",
+          "itemRevision": 1,
+          "unitId": "SOI006",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI017",
+          "itemRevision": 1,
+          "unitId": "SOI017",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI028",
+          "itemRevision": 1,
+          "unitId": "SO-S04",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO05-dominance",
+      "constructId": "SO05",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI009",
+          "itemRevision": 1,
+          "unitId": "SOI009",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI018",
+          "itemRevision": 1,
+          "unitId": "SOI018",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI031",
+          "itemRevision": 1,
+          "unitId": "SO-S05",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO06-anti-egalitarian",
+      "constructId": "SO06",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI010",
+          "itemRevision": 1,
+          "unitId": "SOI010",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI019",
+          "itemRevision": 1,
+          "unitId": "SOI019",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI032",
+          "itemRevision": 1,
+          "unitId": "SO-S06",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO09-moral-scope",
+      "constructId": "SO09",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI004",
+          "itemRevision": 2,
+          "unitId": "SOI004",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI005",
+          "itemRevision": 2,
+          "unitId": "SOI005",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI029",
+          "itemRevision": 1,
+          "unitId": "SOI029",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO10-essentialism",
+      "constructId": "SO10",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI008",
+          "itemRevision": 1,
+          "unitId": "SOI008",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI022",
+          "itemRevision": 1,
+          "unitId": "SOI022",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI035",
+          "itemRevision": 1,
+          "unitId": "SO-S07",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO12-anthropocentric-priority",
+      "constructId": "SO12",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI024",
+          "itemRevision": 1,
+          "unitId": "SOI024",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI030",
+          "itemRevision": 1,
+          "unitId": "SOI030",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO12-interdependence",
+      "constructId": "SO12",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI007",
+          "itemRevision": 1,
+          "unitId": "SOI007",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI040",
+          "itemRevision": 1,
+          "unitId": "SOI040",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    },
+    {
+      "ruleId": "audit-SO13-just-world",
+      "constructId": "SO13",
+      "domainId": "SO",
+      "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
+      "candidateAdditions": [
+        {
+          "itemId": "SOI037",
+          "itemRevision": 1,
+          "unitId": "SOI037",
+          "inCurrentFullBundlePool": false
+        },
+        {
+          "itemId": "SOI038",
+          "itemRevision": 1,
+          "unitId": "SOI038",
+          "inCurrentFullBundlePool": false
+        }
+      ],
+      "proposedRemovals": [],
+      "constructFacetImpact": "Needs review against existing 31 facet minima and other rule paths.",
+      "interpretationImpact": "Could create a direct evidence opportunity; no respondent conclusion is guaranteed.",
+      "historicalCompatibility": "Create a new policy/instrument version; retain both 1.1.0 policies and saved packet entries."
+    }
+  ],
+  "reviewPriority": "Rule paths with no bundled items before candidate count balancing or cosmetic route changes."
+}

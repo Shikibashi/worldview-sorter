@@ -1,0 +1,16 @@
+{
+  "paths": [
+    "README.md",
+    "data/academic/build-output.json",
+    "data/current.json",
+    "data/generic/anti-inference-v0.1.json",
+    "data/generic/build-output.json",
+    "data/generic/coverage-v0.1.json",
+    "data/generic/model-v0.1.json",
+    "data/generic/release-v0.1.json",
+    "data/generic/source-ledger-v0.1.json",
+    "data/sources.json",
+    "docs/GENERIC_WORLDVIEW.md",
+    "research/academic/GENERIC_SOURCE_LEDGER.md"
+  ]
+}

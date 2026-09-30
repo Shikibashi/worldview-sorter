@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Shikibashi/worldview-sorter/schemas/construct-registry.schema.json",
+  "title": "Worldview Sorter Construct Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "registryVersion",
+    "status",
+    "measurementTypes",
+    "tiers",
+    "outputModes",
+    "constructs"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "registryVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "enum": [
+        "provisional",
+        "pilot",
+        "calibrated",
+        "deprecated"
+      ]
+    },
+    "measurementTypes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "monopolar",
+          "bipolar",
+          "affinity",
+          "categorical",
+          "hierarchical",
+          "derived"
+        ]
+      }
+    },
+    "tiers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "headline",
+          "primary",
+          "diagnostic",
+          "research"
+        ]
+      }
+    },
+    "outputModes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "constructs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "domainId",
+          "name",
+          "type",
+          "tier",
+          "description",
+          "candidateItemTarget",
+          "outputMode",
+          "evidenceBasis",
+          "prerequisites",
+          "measurementStatus",
+          "directlyScored"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}\\d{2}$"
+          },
+          "domainId": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 2
+          },
+          "type": {
+            "enum": [
+              "monopolar",
+              "bipolar",
+              "affinity",
+              "categorical",
+              "hierarchical",
+              "derived"
+            ]
+          },
+          "tier": {
+            "enum": [
+              "headline",
+              "primary",
+              "diagnostic",
+              "research"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "minLength": 10
+          },
+          "candidateItemTarget": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "outputMode": {
+            "enum": [
+              "independent_meter",
+              "bipolar_bar",
+              "affinity_card",
+              "affinity_group",
+              "branch_classification",
+              "grouped_facets",
+              "hidden_derived"
+            ]
+          },
+          "evidenceBasis": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "prerequisites": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}\\d{2}$"
+            }
+          },
+          "measurementStatus": {
+            "enum": [
+              "provisional",
+              "pilot",
+              "calibrated",
+              "deprecated"
+            ]
+          },
+          "directlyScored": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
