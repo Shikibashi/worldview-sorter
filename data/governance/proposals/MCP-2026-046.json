@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-act-consequence-content-release.mjs"
+    ]
+  },
+  "implementationRefs": [
+    "scripts/build-act-consequence-content-v1.mjs",
+    "scripts/test-act-consequence-content-release.mjs",
+    "docs/governance/ACT_CONSEQUENCE_REVIEW.md"
+  ],
+  "respondentImpact": "Only Full adds this scoped, direct act-consequence proposition. A single directional answer is a lean; Quick and Standard retain not_measured. The nine doctrinal comparisons gain no automatic affinity criterion.",
+  "historicalCompatibility": "Release 1.6.0, its 240-item Full route, nine-entry catalog, and older item revisions remain pinned. Old administrations retain their original model and executable source.",
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:51:00Z",
+        "note": "Reviewed SEP Consequentialism and SEP Rule Consequentialism; delimited act criterion, maximization, rule-based neighbor, and non-entailments."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:51:00Z",
+        "note": "Checked exact item revisions, answer meanings, route opportunity, mixed and missing states, historical replay, and false-positive fixtures."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:51:00Z",
+        "note": "Only canonical English is active; Spanish and Arabic are marked as requiring translation and philosophical review."
+      }
+    ]
+  },
+  "proposalId": "MCP-2026-046",
+  "title": "Approve only the scoped NE22 proposition for public interpretation",
+  "objectType": "research_classification",
+  "changeClass": "reclassification",
+  "affectedObjects": [
+    {
+      "type": "research_classification",
+      "id": "reviewed-NE22-act-consequence-criterion"
+    }
+  ],
+  "currentBehavior": "The new proposition was absent from historical public rule lists.",
+  "proposedBehavior": "The reviewed direct proposition is public on a route with a two-direction evidence opportunity; no full tradition or welfare theory is promoted.",
+  "rationale": "Public membership follows exact proposition and source review with mixed, missing, and neighboring-view regressions.",
+  "alternatives": [
+    "Infer utilitarianism from generic outcome concern: rejected because the items do not establish welfare maximization or aggregation.",
+    "Reuse the existing maximization item alone: rejected because it cannot distinguish direct act assessment from a rule or another principle that rejects dominated acts.",
+    "Add a full utilitarian question bundle: deferred because this release needs only the narrow direct criterion."
+  ],
+  "sourceClaims": [
+    {
+      "sourceId": "sep-act-consequence-criterion",
+      "relationship": "supports",
+      "claim": "Act consequentialism applies the moral-rightness criterion directly to an act’s own consequences; in its maximizing form, an act is right only when its outcome is at least as good as the outcomes of available alternatives. This differs from full rule consequentialism, which makes wrongness depend on consequence-justified rules (sections 1, 2, and 5)."
+    }
+  ],
+  "philosophicalBasis": {
+    "proposition": "An act’s own consequences ultimately determine its moral rightness, and an available act with a better outcome for everyone affected rules out a worse act as permissible.",
+    "neighboringViews": [
+      "Full rule consequentialism",
+      "Satisficing consequentialism",
+      "Deontological constraints",
+      "Generic outcome sensitivity"
+    ],
+    "nonEntailments": [
+      "Utilitarianism",
+      "Welfarism",
+      "Hedonism",
+      "An empirically calibrated moral type",
+      "A recommended everyday decision procedure"
+    ],
+    "existingGap": "The prior bank asked about consequences and generic rule priority, but did not directly distinguish an act-rightness criterion from a consequence-justified rule while checking maximization.",
+    "scholarlyDisagreement": "Consequentialists differ over act versus rule formulations, what counts as good, maximization versus satisficing, and whether the criterion of rightness is a decision procedure."
+  },
+  "release": {
+    "targetVersion": "model-release-1.7.0",
+    "migration": "No data migration. Previously saved administrations retain their pinned release, route, model, catalog, and engine archive.",
+    "components": [
+      "model",
+      "pilot",
+      "full_form",
+      "progressive_routes"
+    ]
+  }
+}

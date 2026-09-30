@@ -6,17 +6,16 @@ import {evaluatePhilosophicalAffinities} from '../packages/worldview/affinities.
 
 const root=new URL('../',import.meta.url);
 const read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
-const current=await read('data/current.json');
 const [bank,model,scalesDoc,depth,form,pilot,catalog,oldBank,oldModel,oldDepth]=await Promise.all([
- read(current.candidateBank.path),read(current.worldviewModel.path),read('data/response-scales.json'),
- read(current.progressiveDepth.path),read(current.fullForm.path),read('data/pilots/pilot-0.2.json'),
- read(current.affinityCatalog.path),read('data/items/candidate-v0.9.json'),
+ read('data/items/candidate-v0.10.json'),read('data/generic/model-v1.3-pilot.json'),read('data/response-scales.json'),
+ read('data/experience/progressive-depth-v1.3.json'),read('data/philosophy/public-pilot-v1.3.json'),read('data/pilots/pilot-0.2.json'),
+ read('data/affinities/catalog-v1.3.json'),read('data/items/candidate-v0.9.json'),
  read('data/generic/model-v1.2-pilot.json'),read('data/experience/progressive-depth-v1.2.json')]);
 const ruleId='reviewed-PL34-federal-division';
 assert.equal(validateModel({model,bank,scalesDoc}),true);
 assert.deepEqual(depth.routes.map(route=>route.size),[64,120,240]);
 assert.equal(bank.items.length,564);
-assert.ok((await read(current.pilotCandidate.path)).interpretationRules.routeMeasuredDirectRuleIds.includes(ruleId),
+assert.ok((await read('data/pilots/pilot-candidate-v1.3.json')).interpretationRules.routeMeasuredDirectRuleIds.includes(ruleId),
  'The versioned pilot must record the new Full-route opportunity.');
 assert.ok(!oldBank.items.some(item=>item.id==='PLI126'||item.id==='PLI127'));
 assert.ok(!oldModel.commitments.some(rule=>rule.id===ruleId));
@@ -59,11 +58,11 @@ assert.equal(report({PLI003:-2,PLI004:2,PLI050:2}).commitments.find(row=>row.com
 assert.equal(report({},'quick').commitments.find(row=>row.commitmentId===ruleId).state,'not_measured');
 assert.equal(report({},'standard').commitments.find(row=>row.commitmentId===ruleId).state,'not_measured');
 const affinity=evaluatePhilosophicalAffinities({catalog,report:report({PLI126:'entrenched',PLI127:'respect_division'}),model,
- pilot:await read(current.pilotCandidate.path)});
+ pilot:await read('data/pilots/pilot-candidate-v1.3.json')});
 assert.equal((await read('data/affinities/catalog-v1.3.json')).traditions.length,7,
  'The historical federal release must retain its seven comparisons.');
 assert.equal(affinity.traditions.length,catalog.traditions.length,
- 'The active catalog must evaluate every scoped comparison without changing federal evidence.');
+ 'The pinned federal catalog must evaluate every scoped comparison without changing federal evidence.');
 assert.ok(affinity.traditions.every(row=>row.identityClaim===false&&row.percentage===null));
 const oldIds=new Set(oldFull.map(ref=>ref.itemId));
 assert.ok(newFull.every((ref,index)=>ref.itemId!=='PLI127'||index>newFull.findIndex(row=>row.itemId==='PLI126')));

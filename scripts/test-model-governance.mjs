@@ -23,7 +23,7 @@ assert.equal(externalWorldProposal.status,'draft');
 assert.deepEqual(await verifyRelease(root,current,activeManifest),activeManifest);
 assert.deepEqual(await verifyRelease(root,historical,manifest),manifest);
 const counts=validateContentIntegrity(snapshot);assert.equal(counts.items,562);assert.equal(counts.routes,3);
-assert.equal(validateContentIntegrity(activeSnapshot).publicRules,141);
+assert.equal(validateContentIntegrity(activeSnapshot).publicRules,142);
 assert.deepEqual(await captureRelease(root,historical,manifest.releaseVersion),manifest);
 assert.deepEqual(await captureRelease(root,current,activeManifest.releaseVersion),activeManifest);
 await assert.rejects(captureRelease(root,historical,'model-release-1.1.0'),/engine-source archive/);
@@ -78,8 +78,8 @@ const provenance=JSON.parse(provenanceReport.stdout);
 assert.ok(provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'&&
  r.sourceClasses.includes('context_limited_empirical_research')));
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,4);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,4);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,5);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,5);
 assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,137);
 for (const ruleId of ['construct-EP15','construct-EP20']) {
  assert.ok(!provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(ruleId));
@@ -91,8 +91,8 @@ assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
 assert.ok(provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='construct-EP16'&&
  r.sourceIds.includes('acad-pragmatism')));
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='ph-sacred-value'));
-assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,141);
-assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,18);
+assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,142);
+assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,19);
 assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,123);
 assert.ok(provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
 assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,21);
@@ -105,7 +105,7 @@ assert.ok(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRule
  row.propositionId==='construct-EP16'&&row.legacyScope&&row.criterionSourceIds.includes('sep-pragmatism')));
 const opportunities=provenance.routeEvidenceOpportunities;
 assert.deepEqual(opportunities.routes.map(route=>[route.routeId,route.thresholdReachablePublicRuleCount,
- route.belowThresholdPublicRuleCount]),[['quick',30,111],['standard',56,85],['full',91,50]]);
+ route.belowThresholdPublicRuleCount]),[['quick',30,112],['standard',56,86],['full',92,50]]);
 const fullOpportunity=opportunities.routes.find(route=>route.routeId==='full');
 const selfInterestOpportunity=fullOpportunity.mappedAffinityCriteria.find(criterion=>
  criterion.traditionId==='ethical-egoism'&&criterion.criterionId==='moral-self-interest');

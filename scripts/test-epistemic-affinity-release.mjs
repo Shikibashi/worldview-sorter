@@ -6,9 +6,10 @@ import {currentFromManifest,loadSnapshot,validateContentIntegrity} from '../pack
 
 const root=new URL('../',import.meta.url),read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
 const current=await read('data/current.json');
+const reviewedRefs=currentFromManifest(await read('data/releases/model-release-v1.6.0.json'));
 const [bank,model,scalesDoc,routes,pilot,catalog,oldRelease]=await Promise.all([
- read(current.candidateBank.path),read(current.worldviewModel.path),read(current.responseScales.path),
- read(current.progressiveDepth.path),read(current.pilotCandidate.path),read(current.affinityCatalog.path),
+ read(reviewedRefs.candidateBank.path),read(reviewedRefs.worldviewModel.path),read(reviewedRefs.responseScales.path),
+ read(reviewedRefs.progressiveDepth.path),read(reviewedRefs.pilotCandidate.path),read(reviewedRefs.affinityCatalog.path),
  read('data/releases/model-release-v1.5.0.json')]);
 const oldRefs=currentFromManifest(oldRelease);
 const [oldModel,oldCatalog,oldRoutes]=await Promise.all([

@@ -64,5 +64,5 @@ for(const source of sourceDraft.sources){
   assert.ok(draft.items.some(item=>item.id===id&&item.provenance.sourceRefs.includes(source.id)),
    `${source.id} has a dangling item/source-claim link to ${id}`);
 }
-console.log(`Affinity question draft valid: ${draft.items.length} unreleased items, `+
+console.log(`Historical affinity question draft valid: ${draft.items.length} items unreleased at that baseline, `+
  `${gaps.entries.length} complete position records, ${sourceDraft.sources.length} proposed source claims.`);
