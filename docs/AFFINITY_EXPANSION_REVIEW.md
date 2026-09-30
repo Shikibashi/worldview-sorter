@@ -2,6 +2,8 @@
 
 This is an editorial screen of **51** scoped philosophical positions and traditions against the active `generic-1.1.0-pilot` interpretation model. The [machine-readable review](../data/affinities/expansion-review-v1.json) records every disposition, relevant public rules, missing defining doctrine, nearest false positive, and academic source. It is **not** a released affinity catalog, respondent classification, or psychometric finding. The active catalog remains [1.1.0](../data/affinities/catalog-v1.1.json), with six comparisons. Historical catalogs and results are unchanged.
 
+The subsequent [question-gap review](AFFINITY_QUESTION_DRAFT.md) maps all 51 positions to exact existing item revisions and a limited unreleased draft of doctrinal discriminators. It leaves the public routes and catalog unchanged.
+
 | Disposition | Count | Release consequence |
 | --- | ---: | --- |
 | Current catalog | 6 | Existing authored comparisons remain qualified by the public presentation review. |

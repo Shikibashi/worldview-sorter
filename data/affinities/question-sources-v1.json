@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "affinity-question-source-proposals-1",
+  "reviewVersion": "1.0.0",
+  "status": "draft_source_claims_not_current_ledger",
+  "purpose": "Proposed claim-level academic records for question review. A future source-ledger release must formally adopt reviewed records before production use.",
+  "sources": [
+    {
+      "id": "affdraft-kant-moral",
+      "title": "Kant’s Moral Philosophy",
+      "url": "https://plato.stanford.edu/entries/kant-moral/",
+      "claim": "The universal-law and humanity formulations have distinct roles; generic constraints alone do not establish Kantian ethics.",
+      "linkedDraftItemIds": [
+        "NEI126",
+        "NEI127"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-stoicism",
+      "title": "Stoicism",
+      "url": "https://plato.stanford.edu/entries/stoicism/",
+      "claim": "The Stoic thesis that virtue alone is good differs from generic character valuation and emotional restraint.",
+      "linkedDraftItemIds": [
+        "NEI131"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-dualism",
+      "title": "Dualism",
+      "url": "https://plato.stanford.edu/entries/dualism/",
+      "claim": "Mind-body dualist views affirm mental and physical reality while denying their assimilation; an explanatory gap alone is insufficient.",
+      "linkedDraftItemIds": [
+        "OMI112"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-libertarianism",
+      "title": "Libertarianism",
+      "url": "https://plato.stanford.edu/entries/libertarianism/",
+      "claim": "Self-ownership and original claims over natural resources are distinct; right and left libertarian resource principles differ.",
+      "linkedDraftItemIds": [
+        "PLI121",
+        "PLI122"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-socialism",
+      "title": "Socialism",
+      "url": "https://plato.stanford.edu/entries/socialism/",
+      "claim": "Effective worker or social control of productive assets distinguishes socialist families from redistribution alone; markets are not automatically excluded.",
+      "linkedDraftItemIds": [
+        "PLI123"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-environmental-ethics",
+      "title": "Environmental Ethics",
+      "url": "https://plato.stanford.edu/entries/ethics-environmental/",
+      "claim": "Ecological wholes can be proposed as bearers of value or standing independently of human or individual-animal welfare.",
+      "linkedDraftItemIds": [
+        "SOI106"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-foundationalism",
+      "title": "Foundationalist Theories of Epistemic Justification",
+      "url": "https://plato.stanford.edu/entries/justep-foundational/",
+      "claim": "Foundationalism addresses the regress of justification through basic beliefs, not merely the possibility of one noninferentially justified belief.",
+      "linkedDraftItemIds": [
+        "EPI121"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-relational-self",
+      "title": "Feminist Bioethics",
+      "url": "https://plato.stanford.edu/entries/feminist-bioethics/",
+      "claim": "Relational accounts can treat social relations as constitutive of persons or autonomy rather than only causally influential.",
+      "linkedDraftItemIds": [
+        "SOI107"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-god-ultimates",
+      "title": "God and Other Ultimates",
+      "url": "https://plato.stanford.edu/entries/god-ultimates/",
+      "claim": "Personal and impersonal models of divine reality differ; a conditional characterization does not affirm existence.",
+      "linkedDraftItemIds": [
+        "RCI036",
+        "RCI037"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-miracles",
+      "title": "Miracles",
+      "url": "https://plato.stanford.edu/entries/miracles/",
+      "claim": "Divine intervention is a proposed cause in some miracle concepts; mere possibility of a miracle is not an affirmation that a deity intervenes.",
+      "linkedDraftItemIds": [
+        "RCI037"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    },
+    {
+      "id": "affdraft-anarchism",
+      "title": "Anarchism",
+      "url": "https://plato.stanford.edu/entries/anarchism/",
+      "claim": "Philosophical obligation skepticism and proposals for stateless political or legal institutions are distinct anarchist strands.",
+      "linkedDraftItemIds": [
+        "PLI125"
+      ],
+      "access": "selected_sections_reviewed",
+      "sourceRole": "signed_scholarly_analysis",
+      "status": "proposed_not_released",
+      "validatesOurItems": false,
+      "permissionToCopyItems": false
+    }
+  ]
+}
