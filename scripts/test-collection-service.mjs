@@ -88,7 +88,7 @@ const server = createCollectionHttpServer({
   instrument,
   scalesDoc,
   store,
-  adminToken:"test-admin-token"
+  legacyCollectionEnabled:true
 });
 
 await new Promise((resolve, reject) => {
@@ -101,6 +101,8 @@ const base = "http://127.0.0.1:" + address.port;
 try {
   let response = await fetch(base + "/api/health");
   assert.equal(response.status, 200);
+  assert.equal((await fetch(base + "/data/current.json")).status, 200);
+  assert.equal((await fetch(base + "/data/research/consent-v1.manifest.json")).status, 404);
   const health = await response.json();
   assert.equal(health.status, "ok");
   assert.equal(health.bankVersion, bank.bankVersion);
@@ -155,17 +157,9 @@ try {
   assert.ok(body.details.some((detail) => detail.includes("unknown field: email")));
 
   response = await fetch(base + "/api/research/export");
-  assert.equal(response.status, 401);
-
-  response = await fetch(base + "/api/research/export", {
-    headers:{ Authorization:"Bearer test-admin-token" }
-  });
-  assert.equal(response.status, 200);
-  const lines = (await response.text()).trim().split("\n");
-  assert.equal(lines.length, 1);
-  const exported = JSON.parse(lines[0]);
-  assert.equal(exported.sessionId, session.sessionId);
-  assert.equal(exported.respondentKey, null);
+  assert.equal(response.status, 410);
+  response = await fetch(base + "/api/research/export", {headers:{ Authorization:"Bearer test-admin-token" }});
+  assert.equal(response.status, 410);
 
   console.log("Collection service integration tests passed.");
 } finally {

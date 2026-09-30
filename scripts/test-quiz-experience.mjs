@@ -6,7 +6,7 @@ import {buildQuizSummary,createSharePreview} from '../packages/experience/summar
 import {initialExploration,recordExploration} from '../packages/experience/exploration.js';
 import {generatePilotPacket} from '../packages/runtime/index.js';
 const root=new URL('../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
-const current=await read('data/current.json'),bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),scalesDoc=await read('data/response-scales.json'),model=await read(current.worldviewModel.path);
+const current=await read('data/current.json'),bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),scalesDoc=await read('data/response-scales.json'),model=await read('data/generic/model-v0.4.json');
 const args={bank,pilot,scalesDoc},scales=new Map(scalesDoc.scales.map(s=>[s.id,s]));let count=0;
 const check=(name,fn)=>{fn();count++;console.log('PASS experience: '+name);};
 const create=(size=80,seed='experience-test')=>createQuiz({...args,size,seed,sessionId:'synthetic-experience-session'});
@@ -53,7 +53,7 @@ check('Summary reuses evidence, preserves answers and provides twelve domains',(
  assert.match(summary.academicNotice,/not a validated/);
 });
 check('Share preview requires selection and excludes raw session metadata',()=>{
- const row=summary.rows.find(r=>r.status!=='insufficient_evidence');assert.ok(row);
+ const row=summary.rows.find(r=>!['insufficient_evidence','not_measured'].includes(r.status));assert.ok(row);
  const preview=createSharePreview(summary,[row.id]);assert.ok(preview.includes(row.label));
  for(const value of [complete.session.sessionId,complete.session.randomizationSeed,'responseTimeMs','itemRevision'])assert.ok(!preview.includes(value));
  assert.throws(()=>createSharePreview(summary,['invented']));assert.throws(()=>createSharePreview(summary,Array(7).fill(row.id)));
@@ -72,8 +72,11 @@ check('Reward input refuses beliefs, timing, identity, scores and consistency',(
 check('Enabling or disabling the separate reward reducer cannot change results',()=>{
  const before=JSON.stringify(complete.session);for(const enabled of [false,true]){let game=initialExploration();game=recordExploration(game,{type:'quiz_finished'},{enabled});game=recordExploration(game,{type:'source_opened'},{enabled});assert.deepEqual(buildQuizSummary({model,bank,scalesDoc,session:complete.session}),summary);}assert.equal(JSON.stringify(complete.session),before);
 });
-check('The public app has no answer submission, analytics or automatic sharing',()=>{});
-const app=await readFile(new URL('apps/quiz/app.js',root),'utf8');assert.ok(!/\/api\/pilot\/sessions|method\s*:\s*['"]POST|sendBeacon/.test(app));
+check('The public app has no automatic answer submission; product metrics are disabled by default',()=>{});
+const app=await readFile(new URL('apps/quiz/app.js',root),'utf8');
+assert.ok(!/\/api\/pilot\/sessions|sendBeacon/.test(app));
+assert.match(app,/if\(!quiz\|\|!\$\('research-optin'\)\.checked\|\|currentResearchReceipt\)return/);
+assert.match(app,/\$\('research-submit'\)\.addEventListener\('click',contributeResearch\)/);
 const policy=await read('data/experience/policy-v1.json');assert.equal(policy.gamification.enabled,false);assert.equal(policy.questionnairePolicy.rewriteItemText,false);
 const hashes=(await read('data/generic/release-v0.1.json')).frozenSourceHashes;
 for(const [file,hash] of Object.entries(hashes)){assert.equal(createHash('sha256').update(await readFile(new URL(file,root))).digest('hex'),hash);count++;}

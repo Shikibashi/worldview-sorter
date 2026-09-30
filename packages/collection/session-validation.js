@@ -25,12 +25,12 @@ const assertAllowedKeys = (details, value, allowed, label) => {
 
 const TOP_LEVEL_KEYS = new Set([
   "schemaVersion","pilotId","instrumentVersion","bankVersion","packetId","sessionId",
-  "respondentKey","locale","clientVersion","randomizationSeed","startedAt","completedAt",
+  "respondentKey","locale","localization","modelReleaseVersion","releaseChannel","clientVersion","randomizationSeed","startedAt","completedAt",
   "completionStatus","presentedItems","responses","resultSnapshotRefs"
 ]);
 const PRESENTED_KEYS = new Set([
   "index","itemId","itemRevision","domainId","responseScaleId",
-  "presented","skippedByBranch","presentedAt"
+  "textVersion","variantId","presented","skippedByBranch","presentedAt"
 ]);
 const RESPONSE_KEYS = new Set([
   "itemId","itemRevision","state","value","responseTimeMs","changedAnswerCount","answeredAt"

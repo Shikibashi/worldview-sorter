@@ -1,0 +1,21 @@
+{
+  "version": "terminology-review-1.0.0",
+  "status": "review_required_per_locale",
+  "scope": "Candidate concepts for contextual review, not a fixed bilingual dictionary or claim that each term lacks a faithful translation.",
+  "terms": [
+    {"id":"liberty","englishPatterns":["liberty","freedom"],"reviewQuestion":"Does the wording distinguish liberty from autonomy, non-domination, and ability to act where the item requires it?"},
+    {"id":"autonomy","englishPatterns":["autonomy","self-government"],"reviewQuestion":"Is self-direction distinguished from mere independence and from political sovereignty?"},
+    {"id":"selfhood","englishPatterns":["self","personhood","identity"],"reviewQuestion":"Does the expression preserve the intended personal, relational, or metaphysical sense?"},
+    {"id":"rights","englishPatterns":["rights","right to"],"reviewQuestion":"Is a moral claim-right, legal right, or entitlement intended?"},
+    {"id":"duty","englishPatterns":["duty","obligation"],"reviewQuestion":"Does the wording preserve moral obligation rather than social expectation alone?"},
+    {"id":"virtue","englishPatterns":["virtue","character"],"reviewQuestion":"Is cultivated excellence distinct from rule compliance or social approval?"},
+    {"id":"nature","englishPatterns":["nature","natural"],"reviewQuestion":"Is the target ecological nature, human nature, or metaphysical naturalism?"},
+    {"id":"reason","englishPatterns":["reason","rational"],"reviewQuestion":"Is this practical reasoning, evidential reason, or a faculty of reason?"},
+    {"id":"objectivity","englishPatterns":["objective","objectivity","mind-independent"],"reviewQuestion":"Does this mean stance-independence rather than universality or certainty?"},
+    {"id":"realism","englishPatterns":["realism","realist","real world"],"reviewQuestion":"Which of moral, scientific, and external-world realism is intended?"},
+    {"id":"community","englishPatterns":["community","collective"],"reviewQuestion":"Is the intended unit a local group, political community, or humanity at large?"},
+    {"id":"authority","englishPatterns":["authority","legitimacy","legitimate"],"reviewQuestion":"Does the wording distinguish de facto power, justified rule, and a duty to obey?"},
+    {"id":"religion","englishPatterns":["religion","spiritual","sacred","divine"],"reviewQuestion":"Does the wording impose a personal-deity or institutional-religion frame not present in the proposition?"},
+    {"id":"mind","englishPatterns":["consciousness","mind","mental"],"reviewQuestion":"Does the term preserve phenomenal experience versus cognition and substance?"}
+  ]
+}

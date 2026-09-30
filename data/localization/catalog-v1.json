@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "worldview-localization-catalog-1",
+  "catalogVersion": "localization-catalog-1.0.0",
+  "canonicalBankVersion": "0.9.0",
+  "modelVersion": "generic-1.0.0-pilot",
+  "affinityCatalogVersion": "philosophical-affinity-1.0.0",
+  "locales": [
+    {"locale": "en-US", "language": "en", "direction": "ltr", "bundleVersion": "localization-en-US-1.0.0", "path": "data/localization/en-US-v1.json", "status": "approved"},
+    {"locale": "es-ES", "language": "es", "direction": "ltr", "bundleVersion": "localization-es-ES-draft-1", "path": "data/localization/es-ES-draft-v1.json", "status": "untranslated"},
+    {"locale": "ar", "language": "ar", "direction": "rtl", "bundleVersion": "localization-ar-draft-1", "path": "data/localization/ar-draft-v1.json", "status": "untranslated"}
+  ],
+  "note": "Only en-US uses the frozen canonical English bank. Other locales are review targets, not respondent-ready instruments."
+}

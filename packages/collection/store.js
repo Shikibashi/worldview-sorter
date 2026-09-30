@@ -72,10 +72,3 @@ export function createFileSessionStore({ directory }) {
 
   return { root, init, save, list };
 }
-
-export function sanitizeSessionForResearchExport(session) {
-  return {
-    ...session,
-    respondentKey:null
-  };
-}

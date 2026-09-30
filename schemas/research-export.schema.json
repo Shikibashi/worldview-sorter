@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://worldview-sorter.local/schemas/research-export.schema.json",
+  "title": "Research package 1.1.0 normalized rows",
+  "$defs": {
+    "respondent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["researchRespondentId", "linkageOptIn"],
+      "properties": {
+        "researchRespondentId": {"type": "string", "pattern": "^r-[0-9a-f-]+$"},
+        "linkageOptIn": {"type": "boolean"}
+      }
+    },
+    "administration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["researchAdministrationId", "researchRespondentId", "contributedDate", "completionStatus", "assignedItems", "recordedResponses", "consentVersion", "bankVersion", "instrumentVersion", "formPolicyVersion", "modelVersion", "resultSemanticsVersion", "derivedInferenceVersion", "affinityCatalogVersion", "respondentLocale", "presentationLocale", "interfaceLanguage", "localizationCatalogVersion", "localizationBundleVersion", "modelReleaseVersion"],
+      "properties": {
+        "researchAdministrationId": {"type": "string", "pattern": "^a-[0-9a-f-]+$"},
+        "researchRespondentId": {"$ref": "#/$defs/respondent/properties/researchRespondentId"},
+        "contributedDate": {"type": "string", "format": "date"},
+        "completionStatus": {"enum": ["completed", "in_progress"]},
+        "assignedItems": {"type": "integer", "minimum": 1},
+        "recordedResponses": {"type": "integer", "minimum": 1},
+        "consentVersion": {"const": "research-consent-1.0.0"},
+        "bankVersion": {"type": "string"},
+        "instrumentVersion": {"type": "string"},
+        "formPolicyVersion": {"type": "string"},
+        "modelVersion": {"type": "string"},
+        "resultSemanticsVersion": {"type": "string"},
+        "derivedInferenceVersion": {"type": "string"},
+        "affinityCatalogVersion": {"type": "string"},
+        "respondentLocale": {"enum": ["en", "en-US", null]},
+        "presentationLocale": {"const": "en-US"},
+        "interfaceLanguage": {"enum": ["en", null]},
+        "localizationCatalogVersion": {"type": ["string", "null"]},
+        "localizationBundleVersion": {"type": ["string", "null"]},
+        "modelReleaseVersion": {"type": ["string", "null"]},
+        "releaseChannel": {"type": ["string", "null"], "enum": ["development", "internal", "preview", "beta", "stable", null]}
+      }
+    },
+    "response": {
+      "type": "object", "additionalProperties": false,
+      "required": ["researchAdministrationId", "position", "itemId", "itemRevision", "domainId", "responseType", "responseScaleId", "presented", "responseState", "missingReason", "rawValue", "changedAnswerCount", "textVersion", "variantId", "translationStatus"],
+      "properties": {
+        "researchAdministrationId": {"$ref": "#/$defs/administration/properties/researchAdministrationId"},
+        "position": {"type": "integer", "minimum": 0},
+        "itemId": {"type": "string"},
+        "itemRevision": {"type": "integer", "minimum": 1},
+        "domainId": {"type": "string"},
+        "responseType": {"enum": ["likert", "paired_choice", "single_choice", "vignette_choice", "ranking"]},
+        "responseScaleId": {"type": "string"},
+        "presented": {"type": "boolean"},
+        "responseState": {"type": ["string", "null"], "enum": ["answered", "no_view", "not_understood", "not_applicable", null]},
+        "missingReason": {"type": ["string", "null"], "enum": ["no_view", "not_understood", "not_applicable", "branch_not_shown", "not_reached", null]},
+        "rawValue": {"type": ["integer", "string", "array", "null"], "items": {"type": "string"}},
+        "changedAnswerCount": {"type": "integer", "minimum": 0},
+        "textVersion": {"type": ["string", "null"]},
+        "variantId": {"type": ["string", "null"]},
+        "translationStatus": {"enum": ["approved", "historical_canonical_unpinned"]}
+      }
+    },
+    "item": {
+      "type": "object", "additionalProperties": false,
+      "required": ["position", "itemId", "itemRevision", "domainId", "responseType", "responseScaleId", "text", "options", "eligibility"],
+      "properties": {
+        "position": {"type": "integer", "minimum": 0},
+        "itemId": {"type": "string"},
+        "itemRevision": {"type": "integer", "minimum": 1},
+        "domainId": {"type": "string"},
+        "responseType": {"$ref": "#/$defs/response/properties/responseType"},
+        "responseScaleId": {"type": "string"},
+        "text": {"type": "string"},
+        "options": {"type": ["array", "null"], "items": {"type": "object"}},
+        "eligibility": {"type": ["object", "null"]}
+      }
+    }
+  }
+}

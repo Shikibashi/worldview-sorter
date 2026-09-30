@@ -1,0 +1,10 @@
+{
+  "consentVersion": "research-consent-1.0.0",
+  "title": "Optional future research contribution",
+  "purpose": "Your quiz and results work without contributing. No study is currently being run here.",
+  "dataUse": "If you choose to contribute, a pseudonymized copy of your raw answers, item order, answer changes, skips, contribution date, and instrument/model/catalog versions may be used in future philosophical, psychological, or political research. Approved datasets may be shared with qualified external researchers.",
+  "privacy": "The contribution record omits demographics, account details, IP addresses, exact answer times, and response speeds. Hosting may still create ordinary request logs outside this research store. Belief answers can still be recognizable despite pseudonyms.",
+  "withdrawal": "You can withdraw this contribution with the private receipt below while it remains in our store; copies already provided to researchers may not be recoverable. No contribution is sent until you check the box and press the button.",
+  "affirmationLabel": "I choose to contribute this attempt under the current consent terms.",
+  "linkageLabel": "Link future contributions from this browser with a research-only pseudonym (optional)."
+}

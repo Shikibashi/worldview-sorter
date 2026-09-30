@@ -6,7 +6,7 @@ The browser runner is a static, dependency-free administration client for the pi
 
 From the repository root:
 
-    npm run web:serve
+    WORLDVIEW_ENABLE_LEGACY_COLLECTION=true npm run web:serve
 
 Then open:
 
@@ -47,7 +47,7 @@ It does not intentionally collect:
 - IP address;
 - raw user-agent string.
 
-A future remote collection service should accept the same session schema rather than changing the browser's raw data model.
+This compatibility runner uses the older development collector. The public quiz and consented research contribution use a separate frozen-pilot path; see [collection service](COLLECTION_SERVICE.md).
 
 ## Results
 
