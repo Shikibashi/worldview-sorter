@@ -8,12 +8,15 @@ const sessionPath = process.argv[2];
 if (!sessionPath) throw new Error("usage: node scripts/score-session.mjs <session.json> [scoring-model.json]");
 
 const current = await loadRepo("data/current.json");
-const bank = await loadRepo(current.candidateBank.path);
+const session = await loadPath(sessionPath);
+const bankPath=session.bankVersion===current.candidateBank.version?current.candidateBank.path:
+ session.bankVersion==='0.9.0'?'data/items/candidate-v0.9.json':null;
+if(!bankPath)throw new Error(`No historical bank available for ${session.bankVersion}`);
+const bank = await loadRepo(bankPath);
 const scalesDoc = await loadRepo("data/response-scales.json");
 const model = process.argv[3]
   ? await loadPath(process.argv[3])
   : await loadRepo(current.engineeringScoringModel.path);
-const session = await loadPath(sessionPath);
 
 if (!model.compatibleBankVersions.includes(session.bankVersion)) {
   throw new Error(`scoring model ${model.modelVersion} is incompatible with bank ${session.bankVersion}`);
@@ -22,7 +25,7 @@ if (!model.compatibleInstrumentVersions.includes(session.instrumentVersion)) {
   throw new Error(`scoring model ${model.modelVersion} is incompatible with instrument ${session.instrumentVersion}`);
 }
 if (session.bankVersion !== bank.bankVersion) {
-  throw new Error(`session bank ${session.bankVersion} does not match active bank ${bank.bankVersion}`);
+  throw new Error(`session bank ${session.bankVersion} does not match selected bank ${bank.bankVersion}`);
 }
 
 const scaleMap = new Map(scalesDoc.scales.map((s) => [s.id, s]));

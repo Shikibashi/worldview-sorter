@@ -7,7 +7,7 @@ const root=new URL('../',import.meta.url);
 const read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
 const raw=p=>readFile(new URL(p,root));
 const current=await read('data/current.json');
-const bank=await read(current.candidateBank.path);
+const bank=await read('data/items/candidate-v0.9.json');
 const model=await read('data/generic/model-v0.3.json');
 const audit=await read('data/academic/unmapped-audit-v1.json');
 const coverage=await read('data/generic/coverage-v0.3.json');

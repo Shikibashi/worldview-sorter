@@ -14,7 +14,7 @@ const researchReceiptKey='worldview-sorter:research-receipts:1',researchLinkKey=
 const screens=['home','quiz','results','failure'];
 const specialNames={no_view:'No view',not_understood:'I do not understand this item',not_applicable:'Not applicable'};
 const instructions={agreement5:'Choose the response that fits your view.',importance5:'How important is this to you?',moral_relevance5:'How relevant is this to your moral judgment?',paired5:'Compare the two positions below.'};
-let bank,pilot,scalesDoc,model,experiencePolicy,progressivePolicy=null,affinityCatalog=null,activeAffinityCatalog=null,affinityPilot=null,affinityCatalogVersions=[],formPolicies=[],models=new Map(),quiz=null,summary=null,loadedText=null,timer=null,shownAt=0,storageWorks=true;
+let bank,activeBank,pilot,scalesDoc,model,experiencePolicy,progressivePolicy=null,affinityCatalog=null,activeAffinityCatalog=null,affinityPilot=null,activeAffinityPilot=null,affinityCatalogVersions=[],formPolicies=[],models=new Map(),banks=new Map(),pilotsByModel=new Map(),quiz=null,summary=null,loadedText=null,timer=null,shownAt=0,storageWorks=true;
 let localizationCatalog=null,localizationCatalogs=[],localizationBundles=new Map(),localizationBundlesByVersion=new Map(),activeLocalizationBundle=null;
 let modelReleases=[],activeModelReleaseVersion=null;
 let resultReplayQualification=null;
@@ -743,7 +743,7 @@ function start(size){
  const selected=localizationBundles.get($('locale-choice').value);
  if(!selected||selected.status!=='approved'){announce('This questionnaire language is awaiting philosophical and linguistic review. Choose an available language.');return;}
  if(loadedText&&!confirm('Starting another quiz replaces the locally saved quiz. Save a backup first to keep it. Continue?'))return;
- announce('');const seed=crypto.randomUUID();const route=experiencePolicy.routes.find(r=>r.size===size);const chosenPolicy=formPolicies.find(p=>p.policyVersion===route?.formPolicyVersion);if(!chosenPolicy)throw Error('Unknown quiz route.');model=models.get(chosenPolicy.modelVersion);if(!model)throw Error('Unknown interpretation release.');if(chosenPolicy.algorithm==='progressive-fixed-1')progressivePolicy=chosenPolicy;affinityCatalog=activeAffinityCatalog;
+ announce('');bank=activeBank;affinityPilot=activeAffinityPilot;const seed=crypto.randomUUID();const route=experiencePolicy.routes.find(r=>r.size===size);const chosenPolicy=formPolicies.find(p=>p.policyVersion===route?.formPolicyVersion);if(!chosenPolicy)throw Error('Unknown quiz route.');model=models.get(chosenPolicy.modelVersion);if(!model)throw Error('Unknown interpretation release.');if(chosenPolicy.algorithm==='progressive-fixed-1')progressivePolicy=chosenPolicy;affinityCatalog=activeAffinityCatalog;
  const refs=chosenPolicy.routes?.find(r=>r.size===size)?.itemRefs??chosenPolicy.frozenItems;
  const availability=routeLocalizationAvailability({bundle:selected,route:{itemRefs:refs},bank,scalesDoc,model});
  if(!availability.available){announce('This route has no approved wording for the selected language.');return;}
@@ -771,10 +771,19 @@ async function bootstrap(){
  [bank,pilot,scalesDoc,model,experiencePolicy]=await Promise.all([fetchJSON(current.candidateBank.path),fetchJSON(current.pilot.path),fetchJSON('data/response-scales.json'),fetchJSON(current.worldviewModel.path),fetchJSON(current.quizExperience.path)]);
  modelReleases=await Promise.all((current.modelReleaseVersions??[current.modelRelease]).map(ref=>fetchJSON(ref.path)));
  activeModelReleaseVersion=current.modelRelease.version;
+ const historicalBankRefs=[...new Map(modelReleases.map(release=>{const component=release.components.find(row=>row.key==='bank');return [component.version,component];})).values()];
+ const loadedBanks=await Promise.all(historicalBankRefs.map(ref=>fetchJSON(ref.path)));
+ banks=new Map(loadedBanks.map(value=>[value.bankVersion,value]));activeBank=bank;
+ const historicalPilots=await Promise.all(modelReleases.map(async release=>{
+  const modelRef=release.components.find(row=>row.key==='model');const pilotRef=release.components.find(row=>row.key==='pilot');
+  return [modelRef.version,await fetchJSON(pilotRef.path)];
+ }));
+ pilotsByModel=new Map(historicalPilots);
  $('question-feedback').hidden=!betaConfig.features.feedback;
  $('share-open').hidden=!betaConfig.features.sharing;
  affinityCatalogVersions=current.affinityCatalogVersions??(current.affinityCatalog?[current.affinityCatalog]:[]);
  if(current.affinityCatalog)[activeAffinityCatalog,affinityPilot]=await Promise.all([fetchJSON(current.affinityCatalog.path),fetchJSON(current.pilotCandidate.path)]);
+ activeAffinityPilot=affinityPilot;
  affinityCatalog=activeAffinityCatalog;
  if(experiencePolicy.modelPolicies){const loaded=await Promise.all(experiencePolicy.modelPolicies.map(p=>fetchJSON(p.path)));models=new Map(loaded.map(m=>[m.modelVersion,m]));}
  else models=new Map([[model.modelVersion,model]]);
@@ -783,13 +792,13 @@ async function bootstrap(){
  localizationCatalogs=await Promise.all((current.localizationCatalogVersions??[current.localizationCatalog]).map(ref=>fetchJSON(ref.path)));
  localizationCatalog=localizationCatalogs.find(c=>c.catalogVersion===current.localizationCatalog.version);
  if(!localizationCatalog)throw Error('Current localization catalog is unavailable.');
- for(const catalogVersion of localizationCatalogs){const boundModel=models.get(catalogVersion.modelVersion),boundAffinity=affinitiesByVersion.get(catalogVersion.affinityCatalogVersion);
-  if(!boundModel||!boundAffinity)throw Error('Historical wording dependencies are unavailable: '+catalogVersion.catalogVersion);
-  validateLocalizationCatalog(catalogVersion,{bank,model:boundModel,affinityCatalog:boundAffinity});}
+ for(const catalogVersion of localizationCatalogs){const boundModel=models.get(catalogVersion.modelVersion),boundAffinity=affinitiesByVersion.get(catalogVersion.affinityCatalogVersion),boundBank=banks.get(catalogVersion.canonicalBankVersion);
+  if(!boundModel||!boundAffinity||!boundBank)throw Error('Historical wording dependencies are unavailable: '+catalogVersion.catalogVersion);
+  validateLocalizationCatalog(catalogVersion,{bank:boundBank,model:boundModel,affinityCatalog:boundAffinity});}
  const loadedBundles=await Promise.all((current.localizationBundleVersions??current.localizationBundles??[]).map(ref=>fetchJSON(ref.path)));
  for(const bundle of loadedBundles){const catalogVersion=localizationCatalogs.find(c=>c.locales.some(r=>r.locale===bundle.locale&&r.bundleVersion===bundle.bundleVersion));
   if(!catalogVersion)throw Error('Historical wording catalog is unavailable: '+bundle.bundleVersion);
-  validateLocalizationBundle(bundle,{catalog:catalogVersion,bank,scalesDoc,
+  validateLocalizationBundle(bundle,{catalog:catalogVersion,bank:banks.get(catalogVersion.canonicalBankVersion),scalesDoc,
    model:models.get(catalogVersion.modelVersion),affinityCatalog:affinitiesByVersion.get(catalogVersion.affinityCatalogVersion)});
   localizationBundlesByVersion.set(bundle.bundleVersion,bundle);}
  for(const row of localizationCatalog.locales){const bundle=localizationBundlesByVersion.get(row.bundleVersion);
@@ -819,6 +828,8 @@ async function bootstrap(){
  renderSaved();
  $('resume').addEventListener('click',async()=>{try{
   const envelope=JSON.parse(loadedText);if(!COMPATIBLE_EXPERIENCE_VERSIONS.includes(envelope.experienceVersion))throw Error('This backup uses another interface version. Keep it for a compatible version.');
+  bank=banks.get(envelope.quiz?.session?.bankVersion);
+  if(!bank)throw Error('The saved question bank is unavailable. Keep its backup.');
   quiz=restoreQuiz(envelope.quiz,{bank,pilot,scalesDoc,formPolicies,
    localizationBundles:[...localizationBundlesByVersion.values()],localizationCatalogs,modelReleases});
   if(quiz.session.completionStatus!=='completed'&&historicalReplayQualification(quiz.session))
@@ -827,7 +838,8 @@ async function bootstrap(){
   document.documentElement.lang=activeLocalizationBundle?.language??'en';
   document.documentElement.dir=activeLocalizationBundle?.direction??'ltr';
   if(quiz.depth){progressivePolicy=formPolicies.find(p=>p.policyVersion===quiz.depth.policyVersion);if(!progressivePolicy)throw Error('The saved depth route release is unavailable. Keep its backup.');}
-  if(quiz.packet.evidenceModelVersion){model=models.get(quiz.packet.evidenceModelVersion);if(!model)throw Error('The saved interpretation release is unavailable. Keep its backup.');}
+  if(quiz.packet.evidenceModelVersion){model=models.get(quiz.packet.evidenceModelVersion);if(!model)throw Error('The saved interpretation release is unavailable. Keep its backup.');
+   affinityPilot=pilotsByModel.get(model.modelVersion);if(!affinityPilot)throw Error('The saved pilot definition is unavailable. Keep its backup.');}
   if(model.engineVersion==='generic-evidence-3'){
    const version=quiz.affinityCatalogVersion??activeAffinityCatalog?.catalogVersion;
    const ref=affinityCatalogVersions.find(x=>x.version===version);

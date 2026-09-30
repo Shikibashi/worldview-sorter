@@ -39,7 +39,7 @@ const researchContext={formPolicy,model,catalog,pilotManifest,consent:await load
  localizationCatalogs:[localizationCatalog],localizationBundles,modelReleases};
 const scaleMap=new Map(scalesDoc.scales.map(s=>[s.id,s]));
 function attempt({complete=false,seed=randomUUID(),localized=false}={}){
- const quiz=createQuiz({bank,pilot,scalesDoc,formPolicy,seed,size:238,sessionId:randomUUID(),
+ const quiz=createQuiz({bank,pilot,scalesDoc,formPolicy,seed,size:formPolicy.sizes[0],sessionId:randomUUID(),
   ...(localized?{localizationBundle:localizationBundles.find(b=>b.locale==='en-US'),localizationCatalogVersion:localizationCatalog.catalogVersion,
    modelReleaseVersion:current.modelRelease.version,releaseChannel:'beta'}:{})});
  quiz.affinityCatalogVersion=catalog.catalogVersion;seekQuestion(quiz,bank);
@@ -84,7 +84,7 @@ try{
  assert.equal(pinned.releaseChannel,'beta');
  assert.ok(pinned.responses.every(r=>r.translationStatus==='approved'&&
   r.textVersion?.startsWith(current.localizationBundles.find(b=>b.locale==='en-US').version+':')));
- assert.equal(projected.responses.length,238);assert.equal(projected.responses[0].responseState,'answered');
+ assert.equal(projected.responses.length,formPolicy.sizes[0]);assert.equal(projected.responses[0].responseState,'answered');
  assert.equal(projected.presentationLocale,'en-US');
  assert.equal(projected.responses[0].translationStatus,'historical_canonical_unpinned');
  assert.ok(projected.responses.some(r=>r.missingReason==='not_reached'));
@@ -130,11 +130,11 @@ try{
  assert.equal(command.status,0,command.stderr);
  const loaded=spawnSync(process.execPath,[path.join(out,'load-example.mjs')],{cwd:out,encoding:'utf8'});
  assert.equal(loaded.status,0,loaded.stderr);
- assert.match(loaded.stdout,/administrations: 3, responses: 714/);
+ assert.match(loaded.stdout,new RegExp(`administrations: 3, responses: ${3*formPolicy.sizes[0]}`));
  const [respondents,administrations,responses,items,versions,manifest]=await Promise.all([
   rows(out,'respondents.ndjson'),rows(out,'administrations.ndjson'),rows(out,'responses.ndjson'),rows(out,'items.ndjson'),
   readFile(path.join(out,'versions.json'),'utf8').then(JSON.parse),readFile(path.join(out,'manifest.json'),'utf8').then(JSON.parse)]);
- assert.equal(administrations.length,3);assert.equal(responses.length,714);assert.equal(items.length,238);
+ assert.equal(administrations.length,3);assert.equal(responses.length,3*formPolicy.sizes[0]);assert.equal(items.length,formPolicy.sizes[0]);
  assert.equal(respondents.length,3);assert.equal(versions.instrumentVersion,formPolicy.instrumentVersion);
  assert.equal(versions.consentVersion,RESEARCH_CONSENT_VERSION);
  assert.equal(versions.datasetSchemaVersion,'research-package-1.1.0');
@@ -203,7 +203,7 @@ try{
  assert.equal(localizedAdmin.modelReleaseVersion,current.modelRelease.version);
  assert.equal(localizedAdmin.releaseChannel,'beta');
  const localizedResponses=(await rows(localizedOut,'responses.ndjson')).filter(r=>r.researchAdministrationId===pinned.researchAdministrationId);
- assert.ok(localizedResponses.length===238&&localizedResponses.every(r=>r.textVersion&&r.translationStatus==='approved'));
+ assert.ok(localizedResponses.length===formPolicy.sizes[0]&&localizedResponses.every(r=>r.textVersion&&r.translationStatus==='approved'));
  const today=new Date().toISOString().slice(0,10),snapshotOut=path.join(temp,'wvs-research-synthetic-v1');
  const exclusions=path.join(temp,'reviewed-exclusions.json');
  await writeFile(exclusions,JSON.stringify([{researchAdministrationId:pinned.researchAdministrationId,reason:'known_test'}]),{mode:0o600});
@@ -263,7 +263,7 @@ try{
    (c.mappedPropositionId!==null||['not_measured','unsuitable'].includes(c.mappingStatus)))));
  }
  const codebook=await rows(snapshotOut,'item-codebook.ndjson');
- assert.equal(codebook.length,238);
+ assert.equal(codebook.length,formPolicy.sizes[0]);
  const claimIndex=JSON.parse(await readFile(path.join(snapshotOut,'authored-claim-index.json'),'utf8'));
  assert.equal(claimIndex.schemaVersion,'authored-claim-index-1');
  assert.equal(claimIndex.directRules.filter(rule=>rule.classification==='public_direct').length,model.publicRuleIds.length);

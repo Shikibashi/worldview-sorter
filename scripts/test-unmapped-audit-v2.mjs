@@ -8,7 +8,7 @@ import {createQuiz,seekQuestion,answerQuestion,nextQuestion} from '../packages/e
 const root=new URL('../',import.meta.url);
 const read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
 const current=await read('data/current.json');
-const bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),scalesDoc=await read('data/response-scales.json');
+const bank=await read('data/items/candidate-v0.9.json'),pilot=await read('data/pilots/pilot-0.2.json'),scalesDoc=await read('data/response-scales.json');
 const model=await read('data/generic/model-v0.4.json'),oldModel=await read('data/generic/model-v0.3.json');
 const baseCoverage=await read('data/generic/coverage-v0.2.json');
 const audit=await read(current.unmappedAcademicAudit.path),draft=await read(current.unmappedDraftItems.path);

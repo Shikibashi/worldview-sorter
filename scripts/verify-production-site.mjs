@@ -29,6 +29,13 @@ for(const file of files){
  assert.ok(!/\.(?:env|map|toml|sqlite|db)$/.test(file),'Private or debug file in Pages artifact: '+file);
 }
 const current=await json('data/current.json'),experience=await json(current.quizExperience.path);
+for(const ref of current.modelReleaseVersions??[current.modelRelease]){
+ const release=await json(ref.path);
+ for(const key of ['bank','pilot']){
+  const component=release.components.find(row=>row.key===key);
+  assert.ok(component&&fileSet.has(component.path),'Missing historical '+key+' for '+ref.version);
+ }
+}
 for(const value of Object.values(current))for(const ref of Array.isArray(value)?value:[value])
  if(ref&&typeof ref==='object'&&typeof ref.path==='string')assert.ok(fileSet.has(ref.path),'Missing current release data: '+ref.path);
 for(const ref of [...experience.formPolicies,...(experience.modelPolicies??[])])

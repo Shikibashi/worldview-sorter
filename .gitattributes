@@ -1,2 +1,7 @@
 data/reviews/content-efficiency-v1.json linguist-generated=true
 data/reviews/route-review-v1.json linguist-generated=true
+data/items/candidate-v0.10.json linguist-generated=true
+data/generic/model-v1.3-pilot.json linguist-generated=true
+data/registries/constructs-v0.3.json linguist-generated=true
+data/experience/progressive-depth-v1.3.json linguist-generated=true
+data/pilots/pilot-candidate-v1.3.json linguist-generated=true

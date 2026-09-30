@@ -5,8 +5,9 @@ const load = async (path) => JSON.parse(await readFile(new URL(path, root), "utf
 
 const current = await load("data/current.json");
 const domains = (await load("data/domains.json")).domains;
-const constructs = (await load("data/constructs.json")).constructs.filter(c => c.measurementStatus !== "deprecated");
-const sources = (await load("data/sources.json")).sources;
+const constructsDoc = await load(current.registry?.path ?? "data/constructs.json");
+const constructs = constructsDoc.constructs.filter(c => c.measurementStatus !== "deprecated");
+const sources = (await load(current.sourceRegistry?.path ?? "data/sources.json")).sources;
 const scalesDoc = await load("data/response-scales.json");
 const bankDoc = await load(current.candidateBank.path);
 const instrument = await load(current.instrument.path);
@@ -29,7 +30,7 @@ if (instrument.bankVersion !== bankDoc.bankVersion) {
 }
 
 const domainIds = new Set(domains.map((domain) => domain.id));
-const constructIds = new Set((await load("data/constructs.json")).constructs.map(c => c.id));
+const constructIds = new Set(constructsDoc.constructs.map(c => c.id));
 const sourceIds = new Set(sources.map((source) => source.id));
 const scales = new Map(scalesDoc.scales.map((scale) => [scale.id, scale]));
 const stateIds = new Set(scalesDoc.responseStates.map((state) => state.id));

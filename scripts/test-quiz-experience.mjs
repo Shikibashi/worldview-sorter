@@ -6,7 +6,7 @@ import {buildQuizSummary,createSharePreview} from '../packages/experience/summar
 import {initialExploration,recordExploration} from '../packages/experience/exploration.js';
 import {generatePilotPacket} from '../packages/runtime/index.js';
 const root=new URL('../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
-const current=await read('data/current.json'),bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),scalesDoc=await read('data/response-scales.json'),model=await read('data/generic/model-v0.4.json');
+const bank=await read('data/items/candidate-v0.9.json'),pilot=await read('data/pilots/pilot-0.2.json'),scalesDoc=await read('data/response-scales.json'),model=await read('data/generic/model-v0.4.json');
 const args={bank,pilot,scalesDoc},scales=new Map(scalesDoc.scales.map(s=>[s.id,s]));let count=0;
 const check=(name,fn)=>{fn();count++;console.log('PASS experience: '+name);};
 const create=(size=80,seed='experience-test')=>createQuiz({...args,size,seed,sessionId:'synthetic-experience-session'});
