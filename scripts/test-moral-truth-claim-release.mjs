@@ -4,7 +4,7 @@ import {compareWorldview} from '../packages/worldview/index.js';
 import {currentFromManifest,loadSnapshot,validateContentIntegrity} from '../packages/governance/release.js';
 
 const root=new URL('../',import.meta.url),read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
-const current=await read('data/current.json');
+const current=currentFromManifest(await read('data/releases/model-release-v1.10.0.json'));
 const previous=currentFromManifest(await read('data/releases/model-release-v1.9.0.json'));
 const [bank,model,scales,depth,catalog,oldBank,oldModel,oldDepth,ledger]=await Promise.all([
  read(current.candidateBank.path),read(current.worldviewModel.path),read(current.responseScales.path),

@@ -1,0 +1,1167 @@
+{
+  "schemaVersion": "philosophical-affinity-catalog-1",
+  "catalogVersion": "philosophical-affinity-2.0.0",
+  "status": "theoretical_pilot_comparison_unvalidated",
+  "modelVersion": "generic-1.9.0-pilot",
+  "instrumentVersion": "worldview-pilot-1.4.0",
+  "resultSemanticsVersion": "pilot-result-states-1.0.0",
+  "affinitySemanticsVersion": "doctrinal-comparison-1.0.0",
+  "identityOutputAllowed": false,
+  "percentageMatchAllowed": false,
+  "sources": [
+    {
+      "id": "sep-pragmatism",
+      "type": "academic_secondary",
+      "title": "Legg and Hookway, Pragmatism (SEP)",
+      "url": "https://plato.stanford.edu/entries/pragmatism/"
+    },
+    {
+      "id": "peirce-1878",
+      "type": "primary",
+      "title": "C. S. Peirce, How to Make Our Ideas Clear (1878)",
+      "url": "https://www.peirce.org/writings/p119.html"
+    },
+    {
+      "id": "sep-stirner",
+      "type": "academic_secondary",
+      "title": "David Leopold, Max Stirner (SEP)",
+      "url": "https://plato.stanford.edu/entries/max-stirner/"
+    },
+    {
+      "id": "stirner-1844",
+      "type": "primary",
+      "title": "Max Stirner, The Ego and Its Own (1844; 1907 translation)",
+      "url": "https://www.gutenberg.org/ebooks/34580"
+    },
+    {
+      "id": "sep-anarchism",
+      "type": "academic_secondary",
+      "title": "Andrew Fiala, Anarchism (SEP)",
+      "url": "https://plato.stanford.edu/entries/anarchism/"
+    },
+    {
+      "id": "sep-political-obligation",
+      "type": "academic_secondary",
+      "title": "Dagger and Lefkowitz, Political Obligation (SEP)",
+      "url": "https://plato.stanford.edu/entries/political-obligation/"
+    },
+    {
+      "id": "sep-rand",
+      "type": "academic_secondary",
+      "title": "Badhwar and Long, Ayn Rand (SEP)",
+      "url": "https://plato.stanford.edu/entries/ayn-rand/"
+    },
+    {
+      "id": "rand-ethics",
+      "type": "primary",
+      "title": "Ayn Rand, The Objectivist Ethics (1961)",
+      "url": "https://courses.aynrand.org/works/the-objectivist-ethics/"
+    },
+    {
+      "id": "sep-naturalism",
+      "type": "academic_secondary",
+      "title": "David Papineau, Naturalism (SEP)",
+      "url": "https://plato.stanford.edu/entries/naturalism/"
+    },
+    {
+      "id": "sep-physicalism",
+      "type": "academic_secondary",
+      "title": "Daniel Stoljar, Physicalism (SEP)",
+      "url": "https://plato.stanford.edu/entries/physicalism/"
+    },
+    {
+      "id": "sep-egoism",
+      "type": "academic_secondary",
+      "title": "Robert Shaver, Egoism (SEP)",
+      "url": "https://plato.stanford.edu/entries/egoism/"
+    },
+    {
+      "id": "thomasson-easy-ontology-2020",
+      "type": "primary",
+      "title": "Amie L. Thomasson, Easy Ontology",
+      "url": "https://www.amiethomasson.org/_files/ugd/63fc8a_b2cd94d9237a43dabe0d30b11e3e2da4.pdf"
+    },
+    {
+      "id": "marschall-easy-ontology-2021",
+      "type": "academic_secondary",
+      "title": "Benjamin Marschall, Easy Ontology, Quantification, and Realism",
+      "url": "https://doi.org/10.1007/s11229-019-02463-8"
+    },
+    {
+      "id": "iep-fallibilism",
+      "type": "academic_secondary",
+      "title": "Internet Encyclopedia of Philosophy: Fallibilism",
+      "url": "https://iep.utm.edu/fallibil/"
+    },
+    {
+      "id": "sep-rationalism-empiricism",
+      "type": "academic_secondary",
+      "title": "Stanford Encyclopedia of Philosophy: Rationalism vs. Empiricism",
+      "url": "https://plato.stanford.edu/entries/rationalism-empiricism/"
+    },
+    {
+      "id": "sep-act-consequence-criterion",
+      "type": "academic_secondary",
+      "title": "Stanford Encyclopedia of Philosophy: Consequentialism",
+      "url": "https://plato.stanford.edu/entries/consequentialism/"
+    },
+    {
+      "id": "sep-rule-consequence-criterion",
+      "type": "academic_secondary",
+      "title": "Stanford Encyclopedia of Philosophy: Rule Consequentialism",
+      "url": "https://plato.stanford.edu/entries/consequentialism-rule/"
+    }
+  ],
+  "traditions": [
+    {
+      "id": "pragmatism",
+      "name": "Pragmatism",
+      "scope": "epistemological_tradition",
+      "context": "Classical pragmatism begins with Peirce, James, and Dewey; later pragmatists disagree about truth and realism. This entry compares the shared method of clarifying ideas through conceivable consequences, not a complete pragmatist worldview.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [
+        "peirce-1878"
+      ],
+      "secondarySourceIds": [
+        "sep-pragmatism"
+      ],
+      "sourceNotes": "SEP treats the pragmatic maxim as central, fallibilist inquiry as characteristic, and realism and truth theories as internally contested.",
+      "neighbors": [
+        "generic fallibilism",
+        "instrumentalism",
+        "scientific empiricism"
+      ],
+      "discriminators": [
+        "Revisability alone does not establish the pragmatic maxim.",
+        "Practical bearings clarify meaning; they do not make convenience the sole truth condition."
+      ],
+      "nonEntailments": [
+        "Pragmatism does not entail that a useful belief is automatically true.",
+        "It does not entail atheism or rejection of mind-independent reality."
+      ],
+      "commitments": [
+        {
+          "id": "pragmatic-maxim",
+          "role": "defining",
+          "doctrine": "The meaning of a contested conception is clarified by its conceivable experiential or practical bearings.",
+          "sourceIds": [
+            "sep-pragmatism",
+            "peirce-1878"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP16",
+            "expectedState": "supported",
+            "note": "The pilot asks about conceptual clarification, not a complete theory of truth."
+          }
+        },
+        {
+          "id": "inquiry-fallibilism",
+          "role": "characteristic",
+          "doctrine": "Inquiry can yield knowledge while remaining open to correction.",
+          "sourceIds": [
+            "sep-pragmatism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP15",
+            "expectedState": "supported",
+            "note": "Shared with many nonpragmatist epistemologies."
+          }
+        },
+        {
+          "id": "inquiry-practice",
+          "role": "characteristic",
+          "doctrine": "Inquiry is an ongoing practice of testing and revising claims.",
+          "sourceIds": [
+            "sep-pragmatism"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "audit2-EP02-complex-knowledge",
+            "expectedState": "supported",
+            "note": "Revisable complex knowledge is only one part of this methodological view."
+          }
+        },
+        {
+          "id": "truth-and-realism",
+          "role": "disputed",
+          "doctrine": "Classical and later pragmatists disagree about realism and how to understand truth.",
+          "sourceIds": [
+            "sep-pragmatism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "No single pilot proposition represents the disputed family of truth theories."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stirnerian-ownness",
+      "name": "Stirnerian ownness",
+      "scope": "ethical_theory",
+      "context": "A narrow comparison with Stirner's ideal of ownness and revocable self-rule. The entry does not treat his texts as a generic selfishness or anarcho-capitalism scale.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [
+        "stirner-1844"
+      ],
+      "secondarySourceIds": [
+        "sep-stirner",
+        "sep-egoism"
+      ],
+      "sourceNotes": "Leopold distinguishes Stirner's ownness from psychological and ethical egoism and emphasizes the challenge that fixed obligations pose to it. The old English translation has terminology limits.",
+      "neighbors": [
+        "ethical egoism",
+        "psychological egoism",
+        "generic individualism"
+      ],
+      "discriminators": [
+        "Self-interest as a universal moral duty is not ownness.",
+        "Autonomy from fixed ideals must be considered with continued association and voluntarily assumed duties."
+      ],
+      "nonEntailments": [
+        "Ownness does not entail a universal motive of personal welfare.",
+        "It does not entail an inability to care for others or a particular market institution.",
+        "Rejecting morality in Stirner's narrow sense does not entail rejecting every evaluative judgment."
+      ],
+      "commitments": [
+        {
+          "id": "ownness",
+          "role": "defining",
+          "doctrine": "The individual should not become subject to fixed ideals or projects that are no longer their own.",
+          "sourceIds": [
+            "sep-stirner",
+            "stirner-1844"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE17",
+            "expectedState": "supported",
+            "note": "Original narrow operationalization, not a validated Stirner scale."
+          }
+        },
+        {
+          "id": "revocable-association",
+          "role": "defining",
+          "doctrine": "Ongoing association depends on the participant's continuing endorsement rather than an irrevocable subjection.",
+          "sourceIds": [
+            "sep-stirner",
+            "stirner-1844"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE19",
+            "expectedState": "supported",
+            "note": "Does not decide compensation for induced reliance."
+          }
+        },
+        {
+          "id": "no-fixed-promissory-duty",
+          "role": "defining",
+          "doctrine": "A voluntary promise is not itself an enduring moral claim that overrides renewed self-rule.",
+          "sourceIds": [
+            "sep-stirner"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE18",
+            "expectedState": "opposed",
+            "note": "This rule tests defeasible promissory reasons, not an exceptionless duty or legal remedy."
+          }
+        },
+        {
+          "id": "all-values-revisable",
+          "role": "characteristic",
+          "doctrine": "Values and appetites remain available for personal appropriation and critique.",
+          "sourceIds": [
+            "sep-stirner"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "construct-NE17",
+            "expectedState": "supported",
+            "note": "The same narrow ownness rule cannot establish this broader psychological practice independently."
+          }
+        },
+        {
+          "id": "political-program",
+          "role": "disputed",
+          "doctrine": "Stirner's critique of the state does not specify one agreed institutional economic program.",
+          "sourceIds": [
+            "sep-stirner"
+          ],
+          "mapping": {
+            "status": "unsuitable",
+            "note": "Do not infer an institution from individual ownness."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ethical-egoism",
+      "name": "Ethical egoism",
+      "scope": "ethical_theory",
+      "context": "A normative thesis about what is morally right for each agent, distinct from psychological claims about what people in fact want and from Stirnerian ownness. The pilot cannot settle the full if-and-only-if account of rightness.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-egoism"
+      ],
+      "sourceNotes": "SEP distinguishes ethical, rational, and psychological egoism; the pilot directly tests only the normative moral priority thesis.",
+      "neighbors": [
+        "Stirnerian ownness",
+        "psychological egoism",
+        "rational egoism",
+        "Objectivism"
+      ],
+      "discriminators": [
+        "Permission to pursue personal projects is weaker than a universal moral prescription to prioritize self-interest.",
+        "Stirnerian ownness can reject the fixed self-interest duty that ethical egoism asserts."
+      ],
+      "nonEntailments": [
+        "Ethical egoism does not entail that everyone is in fact selfish.",
+        "It does not entail exploitative conduct or Rand's life-grounded moral theory."
+      ],
+      "commitments": [
+        {
+          "id": "moral-self-interest",
+          "role": "defining",
+          "doctrine": "Each agent morally ought to prioritize their own good.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE15",
+            "expectedState": "supported",
+            "note": "The direct rule targets universal moral self-priority, not descriptive motivation or the stronger iff/maximizing thesis."
+          }
+        },
+        {
+          "id": "rightness-by-own-good",
+          "role": "defining",
+          "doctrine": "An act is morally right if and only if it best advances the agent's own good, rather than merely permitting self-regard.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "No pilot proposition distinguishes this stronger maximization/rightness thesis from mere moral priority."
+          }
+        },
+        {
+          "id": "account-of-welfare",
+          "role": "characteristic",
+          "doctrine": "The theory needs some account of what counts as an agent's good.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The pilot does not establish a complete egoist welfare theory."
+          }
+        },
+        {
+          "id": "rational-requirement",
+          "role": "disputed",
+          "doctrine": "Whether the self-interest thesis is also a requirement of rationality is a distinct question.",
+          "sourceIds": [
+            "sep-egoism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The rational-egoism rule construct-NE16 is not measured by this route."
+          }
+        }
+      ]
+    },
+    {
+      "id": "philosophical-anarchism",
+      "name": "Philosophical anarchism",
+      "scope": "political_philosophy",
+      "context": "Political-authority skepticism, especially denial of a general content-independent moral obligation to obey law. Its practical implications and arguments differ among theorists.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-anarchism",
+        "sep-political-obligation"
+      ],
+      "sourceNotes": "SEP distinguishes this philosophical position from a duty to abolish the state and from decentralization preferences; Simmons-style state-tolerant versions exist.",
+      "neighbors": [
+        "decentralism",
+        "market anarchism",
+        "civil disobedience",
+        "state reformism"
+      ],
+      "discriminators": [
+        "Preferring local institutions is not denial of political obligation.",
+        "Denying a general duty to obey does not require immediate abolition or rejection of useful public institutions."
+      ],
+      "nonEntailments": [
+        "The view does not entail violent resistance or immediate abolition.",
+        "It does not entail market provision of law or a particular property regime."
+      ],
+      "commitments": [
+        {
+          "id": "no-general-duty",
+          "role": "defining",
+          "doctrine": "Law does not normally create a general moral duty to obey merely because it is law.",
+          "sourceIds": [
+            "sep-anarchism",
+            "sep-political-obligation"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "legacy-philosophical-anarchism-no-general-obedience",
+            "expectedState": "supported",
+            "note": "Exact obligation proposition, not a policy answer."
+          }
+        },
+        {
+          "id": "authority-legitimacy",
+          "role": "defining",
+          "doctrine": "The state's claimed standing to issue binding content-independent commands lacks adequate general justification.",
+          "sourceIds": [
+            "sep-anarchism",
+            "sep-political-obligation"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "construct-PL31",
+            "expectedState": "supported",
+            "note": "Practical participation without general duty bears on this but does not settle all accounts of legitimacy."
+          }
+        },
+        {
+          "id": "state-toleration",
+          "role": "characteristic",
+          "doctrine": "Practical use of institutions can coexist with denial of general political obligation.",
+          "sourceIds": [
+            "sep-anarchism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-PL31",
+            "expectedState": "supported",
+            "note": "Characteristic of a state-tolerant strand, not required for every anarchist."
+          }
+        },
+        {
+          "id": "abolition",
+          "role": "disputed",
+          "doctrine": "Whether illegitimacy generates an obligation to dismantle states is disputed.",
+          "sourceIds": [
+            "sep-anarchism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The route does not establish a general abolition doctrine or its timing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "objectivism-rand",
+      "name": "Objectivism in Rand's formulation",
+      "scope": "comprehensive_system",
+      "context": "Rand's articulated system spans metaphysics, epistemology, ethics, and politics. This entry does not infer a system from market preferences or ethical egoism alone.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [
+        "rand-ethics"
+      ],
+      "secondarySourceIds": [
+        "sep-rand"
+      ],
+      "sourceNotes": "SEP describes metaphysical realism, reason, life-grounded objective ethics, rational self-interest, rights and laissez-faire capitalism; interpreters dispute aspects of Rand's account of the objective.",
+      "neighbors": [
+        "ethical egoism",
+        "classical liberalism",
+        "market liberalism",
+        "metaphysical realism"
+      ],
+      "discriminators": [
+        "Pro-market coordination alone is weak and merely characteristic evidence.",
+        "Life-grounded objective ethics and rational self-interest must be assessed separately.",
+        "A full political rights theory and metaphysical commitments are not measured by the pilot."
+      ],
+      "nonEntailments": [
+        "A market preference does not entail Objectivism.",
+        "General individualism or atheism does not entail Rand's system.",
+        "Rational self-interest does not entail psychological egoism."
+      ],
+      "commitments": [
+        {
+          "id": "life-grounded-objective-ethics",
+          "role": "defining",
+          "doctrine": "Objective moral standards are grounded in the requirements of human life and flourishing.",
+          "sourceIds": [
+            "sep-rand",
+            "rand-ethics"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-ME09",
+            "expectedState": "supported",
+            "note": "Narrow grounding rule; does not establish the entire metaethics."
+          }
+        },
+        {
+          "id": "rational-self-interest",
+          "role": "defining",
+          "doctrine": "The agent's rational long-term self-interest is a moral priority.",
+          "sourceIds": [
+            "sep-rand",
+            "rand-ethics"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-NE15",
+            "expectedState": "supported",
+            "note": "Normative moral priority, not descriptive motive."
+          }
+        },
+        {
+          "id": "perception-reason",
+          "role": "defining",
+          "doctrine": "Knowledge of the concrete world is grounded in sensory perception integrated by reason.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP20",
+            "expectedState": "supported",
+            "note": "Does not by itself establish Rand's full epistemology."
+          }
+        },
+        {
+          "id": "mind-independent-reality",
+          "role": "defining",
+          "doctrine": "Existence is independent of human consciousness.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "construct-OM13",
+            "expectedState": "supported",
+            "note": "The pilot establishes only ordinary concrete objects independent of thought, a proper part of Rand's broader realism."
+          }
+        },
+        {
+          "id": "individual-rights",
+          "role": "defining",
+          "doctrine": "Individual rights against initiated force structure political justice.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The route lacks adequate content for the pilot's basic-rights rule construct-PL27."
+          }
+        },
+        {
+          "id": "rights-protecting-state",
+          "role": "defining",
+          "doctrine": "A rights-protecting state, rather than competing coercive legal sovereignties, has a legitimate limited role.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The rule construct-PL29 is not measured by this route."
+          }
+        },
+        {
+          "id": "capitalist-coordination",
+          "role": "characteristic",
+          "doctrine": "Laissez-faire exchange is central to Rand's political economy.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "legacy-objectivism-market-coordination",
+            "expectedState": "supported",
+            "note": "Two coordination cases cannot establish laissez-faire institutional doctrine."
+          }
+        },
+        {
+          "id": "objective-category",
+          "role": "disputed",
+          "doctrine": "The best interpretation of Rand's intrinsic, subjective, and objective distinction is debated.",
+          "sourceIds": [
+            "sep-rand"
+          ],
+          "mapping": {
+            "status": "unsuitable",
+            "note": "Do not turn an exegetical dispute into a respondent identity criterion."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ontological-naturalism",
+      "name": "Ontological naturalism",
+      "scope": "metaphysical_position",
+      "context": "A broad family of views on which reality contains no supernatural entities. Philosophers disagree about how closely this is tied to physicalism and scientific method.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-naturalism",
+        "sep-physicalism"
+      ],
+      "sourceNotes": "SEP distinguishes ontological from methodological naturalism and notes the imprecision of the label. Physicalism is a stronger or differently specified metaphysical claim, not a synonym forced by this comparison.",
+      "neighbors": [
+        "atheism",
+        "methodological naturalism",
+        "physicalism",
+        "secular humanism"
+      ],
+      "discriminators": [
+        "Denying a deity alone does not establish that all reality is natural.",
+        "Accepting scientific tests does not establish an ontological claim; naturalism does not by itself establish physicalism."
+      ],
+      "nonEntailments": [
+        "Ontological naturalism does not entail reductive physicalism.",
+        "It does not entail atheism from a lone answer about one conception of God.",
+        "It does not prescribe a political or ethical theory."
+      ],
+      "commitments": [
+        {
+          "id": "no-supernatural-reality",
+          "role": "defining",
+          "doctrine": "Reality contains no genuinely supernatural entities or events.",
+          "sourceIds": [
+            "sep-naturalism"
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "ph-supernatural-reality",
+            "expectedState": "opposed",
+            "note": "Explicit supernatural-reality proposition, distinct from unexplained events."
+          }
+        },
+        {
+          "id": "natural-exhaustiveness",
+          "role": "defining",
+          "doctrine": "Reality is exhausted by the natural order, beyond merely rejecting one supernatural claim.",
+          "sourceIds": [
+            "sep-naturalism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The direct natural-world rule has insufficient content in the frozen route."
+          }
+        },
+        {
+          "id": "scientific-method",
+          "role": "characteristic",
+          "doctrine": "Scientific inquiry is an important route to understanding nature.",
+          "sourceIds": [
+            "sep-naturalism"
+          ],
+          "mapping": {
+            "status": "partial",
+            "propositionId": "audit2-EP06-testability",
+            "expectedState": "supported",
+            "note": "A testability preference is method only, not an ontological proof."
+          }
+        },
+        {
+          "id": "physicalist-reduction",
+          "role": "disputed",
+          "doctrine": "Naturalists disagree about physicalist or reductive accounts of mind and higher-level entities.",
+          "sourceIds": [
+            "sep-naturalism",
+            "sep-physicalism"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "Physical-reality is not measured; physical explanation of experience is narrower."
+          }
+        }
+      ]
+    },
+    {
+      "id": "easy-ontology-scoped",
+      "name": "Easy ontology (scoped method)",
+      "scope": "metaphysical_position",
+      "context": "This comparison concerns a limited metaontological method: some existence questions may be settled through application conditions and empirical facts. It does not assess the respondent’s complete ontology or Thomasson’s full account.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [
+        "thomasson-easy-ontology-2020"
+      ],
+      "secondarySourceIds": [
+        "marschall-easy-ontology-2021"
+      ],
+      "sourceNotes": "Thomasson defends easy arguments; Marschall describes the method while challenging its claimed compatibility with realism. The pilot asks about the method, not the range of entities that exist.",
+      "sourceClaims": [
+        {
+          "sourceId": "thomasson-easy-ontology-2020",
+          "relationship": "supports",
+          "claim": "Thomasson argues that some existence questions can be settled through ordinary conceptual truths and empirical facts without a further special metaphysical test."
+        },
+        {
+          "sourceId": "marschall-easy-ontology-2021",
+          "relationship": "context",
+          "claim": "The relation between Easy Ontology and realism is disputed."
+        }
+      ],
+      "neighbors": [
+        "ordinary-object realism",
+        "nominalism",
+        "metaphysical anti-realism",
+        "heavyweight ontology"
+      ],
+      "discriminators": [
+        "Belief that ordinary objects exist does not establish this method for answering existence questions.",
+        "Rejecting a separate metaphysical test does not by itself deny mind-independent reality."
+      ],
+      "nonEntailments": [
+        "It does not entail nominalism or denial of ordinary objects.",
+        "It does not entail that all existence questions are easy.",
+        "It does not settle whether Easy Ontology is compatible with realism."
+      ],
+      "commitments": [
+        {
+          "id": "application-conditions",
+          "role": "defining",
+          "doctrine": "Some ordinary existence questions can be resolved through application conditions and relevant empirical facts without a separate heavyweight metaphysical test.",
+          "sourceIds": [
+            "thomasson-easy-ontology-2020",
+            "marschall-easy-ontology-2021"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "thomasson-easy-ontology-2020",
+              "relationship": "supports",
+              "claim": "Thomasson argues that some existence questions can be settled through ordinary conceptual truths and empirical facts without a further special metaphysical test."
+            }
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-OM14",
+            "expectedState": "supported",
+            "note": "OMI109@1, OMI110@1, and OMI111@1 bear on this limited method; they do not establish a complete ontology."
+          }
+        },
+        {
+          "id": "wide-application",
+          "role": "characteristic",
+          "doctrine": "The method resolves a broad range of disputed existence questions.",
+          "sourceIds": [
+            "thomasson-easy-ontology-2020"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The pilot asks whether some questions can be easy, not how widely the method applies."
+          },
+          "sourceClaims": [
+            {
+              "sourceId": "thomasson-easy-ontology-2020",
+              "relationship": "supports",
+              "claim": "Thomasson argues that many ordinary ontological disputes can be settled through easy arguments from conceptual and empirical premises."
+            }
+          ]
+        },
+        {
+          "id": "realism-compatibility",
+          "role": "disputed",
+          "doctrine": "Whether this metaontological method is compatible with realism remains disputed.",
+          "sourceIds": [
+            "marschall-easy-ontology-2021"
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "No pilot item establishes the compatibility thesis."
+          },
+          "sourceClaims": [
+            {
+              "sourceId": "marschall-easy-ontology-2021",
+              "relationship": "supports",
+              "claim": "Marschall challenges Thomasson’s defense of the compatibility of Easy Ontology and realism, making the issue a live dispute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fallibilism-about-knowledge",
+      "name": "Fallible knowledge",
+      "scope": "epistemological_tradition",
+      "context": "A scoped comparison concerning whether knowledge can rest on justification that leaves a possibility of error. This does not attribute a complete epistemology or claim that every belief is fallible.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "iep-fallibilism"
+      ],
+      "sourceNotes": "IEP distinguishes fallibilistic knowledge from skepticism. The pilot asks whether fallible justification can sometimes suffice; it does not test a universal thesis that no belief can be conclusively justified.",
+      "sourceClaims": [
+        {
+          "sourceId": "iep-fallibilism",
+          "relationship": "supports",
+          "claim": "Fallibilistic knowledge can be knowledge even when its justification does not conclusively eliminate possible error; this need not imply skepticism."
+        }
+      ],
+      "neighbors": [
+        "infallibilism about knowledge",
+        "skepticism",
+        "pragmatism",
+        "ordinary willingness to revise"
+      ],
+      "discriminators": [
+        "Willingness to revise an opinion does not answer whether fallible justification can count as knowledge.",
+        "Pragmatism also requires a method of clarifying ideas through conceivable consequences."
+      ],
+      "nonEntailments": [
+        "Fallible knowledge does not entail skepticism or that usefulness makes a belief true.",
+        "It does not entail pragmatism or the impossibility of any infallible belief."
+      ],
+      "commitments": [
+        {
+          "id": "fallible-knowledge-can-count",
+          "role": "defining",
+          "doctrine": "A claim can count as knowledge even when its justification leaves open a possibility of error.",
+          "sourceIds": [
+            "iep-fallibilism"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "iep-fallibilism",
+              "relationship": "supports",
+              "claim": "Fallibilistic knowledge can be knowledge even when its justification does not conclusively eliminate possible error; this need not imply skepticism."
+            }
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP15",
+            "expectedState": "supported",
+            "note": "EPI100–102 bear on fallible justification and knowledge, not just personal openness to changing opinions."
+          }
+        },
+        {
+          "id": "revisable-inquiry",
+          "role": "characteristic",
+          "doctrine": "Inquiry can improve by revisiting claims when new evidence arrives.",
+          "sourceIds": [
+            "iep-fallibilism"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "iep-fallibilism",
+              "relationship": "supports",
+              "claim": "Belief revision is a common practice compatible with fallibilism, but not its defining knowledge thesis."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The public fallibilism criterion must not be filled from generic belief revision."
+          }
+        },
+        {
+          "id": "scope-of-infallibility",
+          "role": "disputed",
+          "doctrine": "Which, if any, kinds of belief can enjoy infallible justification is debated.",
+          "sourceIds": [
+            "iep-fallibilism"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "iep-fallibilism",
+              "relationship": "supports",
+              "claim": "The scope of the no-conclusive-justification thesis is disputed across versions of fallibilism."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The pilot does not classify all domains of belief by possible infallibility."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sensory-empiricism-about-the-external-world",
+      "name": "Experience grounded external-world knowledge",
+      "scope": "epistemological_tradition",
+      "context": "A subject-scoped empiricist comparison about factual knowledge of the concrete external world. It is not a claim that all knowledge, concepts, mathematics, or moral truths arise from the senses.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-rationalism-empiricism"
+      ],
+      "sourceNotes": "SEP treats empiricism and rationalism as subject-relative and warns against treating historical thinkers as pure types. The item bundle asks about external facts, not every possible subject.",
+      "sourceClaims": [
+        {
+          "sourceId": "sep-rationalism-empiricism",
+          "relationship": "supports",
+          "claim": "A subject-scoped empiricist thesis about the external world makes experiential evidence the ultimate source of knowledge of external facts, without excluding reasoning about that evidence."
+        }
+      ],
+      "neighbors": [
+        "a priori rationalism about external facts",
+        "trust in scientific institutions",
+        "Objectivist reason and perception",
+        "global empiricism"
+      ],
+      "discriminators": [
+        "Trust in science does not establish that experience is the ultimate source of external-world knowledge.",
+        "Reasoning from experience remains compatible; a claim to know new external facts by pure reason is the key counterposition."
+      ],
+      "nonEntailments": [
+        "This position does not entail atheism, physicalism, or that mathematics has no a priori warrant.",
+        "It does not entail that observation alone is sufficient without reasoning or that every historical empiricist holds the same view."
+      ],
+      "commitments": [
+        {
+          "id": "experience-grounds-external-facts",
+          "role": "defining",
+          "doctrine": "Knowledge claims about concrete external reality ultimately require experiential evidence; reasoning alone cannot establish new external-world facts.",
+          "sourceIds": [
+            "sep-rationalism-empiricism"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-rationalism-empiricism",
+              "relationship": "supports",
+              "claim": "A subject-scoped empiricist thesis about the external world makes experiential evidence the ultimate source of knowledge of external facts, without excluding reasoning about that evidence."
+            }
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "construct-EP20",
+            "expectedState": "supported",
+            "note": "EPI115–117 address experiential grounding and directly oppose pure-reason knowledge of new external facts."
+          }
+        },
+        {
+          "id": "origin-of-all-concepts",
+          "role": "characteristic",
+          "doctrine": "Experience is the ultimate source of concepts used to describe the external world.",
+          "sourceIds": [
+            "sep-rationalism-empiricism"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-rationalism-empiricism",
+              "relationship": "supports",
+              "claim": "The SEP Empiricism Thesis includes subject-relative claims about concepts as well as knowledge."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The pilot asks about factual warrant, not the origin of all external-world concepts."
+          }
+        },
+        {
+          "id": "experience-beyond-external-facts",
+          "role": "disputed",
+          "doctrine": "Empiricists differ about how far experience constrains mathematics, morality, and other domains.",
+          "sourceIds": [
+            "sep-rationalism-empiricism"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-rationalism-empiricism",
+              "relationship": "supports",
+              "claim": "The SEP discussion distinguishes subject areas and notes that historical figures need not fit one pure camp."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "These wider subject areas are outside this scoped comparison."
+          }
+        }
+      ]
+    },
+    {
+      "id": "act-consequentialism-scoped",
+      "name": "Act consequentialism (scoped criterion)",
+      "scope": "ethical_theory",
+      "context": "A comparison with a direct, maximizing act-rightness criterion in the administered cases. It is not an attribution of a complete consequentialist or utilitarian ethical theory.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-act-consequence-criterion"
+      ],
+      "sourceNotes": "SEP separates direct act assessment, maximization, value theory, aggregation, and decision procedure. The pilot bears only on the stated criterion in two cases.",
+      "sourceClaims": [
+        {
+          "sourceId": "sep-act-consequence-criterion",
+          "relationship": "supports",
+          "claim": "Act consequentialism applies the moral-rightness criterion directly to an act’s own consequences; in its maximizing form, an act is right only when its outcome is at least as good as the outcomes of available alternatives. This differs from full rule consequentialism, which makes wrongness depend on consequence-justified rules (sections 1, 2, and 5)."
+        }
+      ],
+      "neighbors": [
+        "rule consequentialism",
+        "satisficing consequentialism",
+        "deontological constraints",
+        "generic concern for outcomes"
+      ],
+      "discriminators": [
+        "A consequence-justified rule may guide decisions while the act itself remains the rightness criterion; a rule as the criterion is different.",
+        "Concern for consequences does not establish that they alone determine rightness or that a dominated act is impermissible."
+      ],
+      "nonEntailments": [
+        "This overlap does not establish utilitarianism, welfarism, hedonism, or impartial aggregation.",
+        "It does not prescribe calculating consequences before each decision or identify the respondent as an act consequentialist."
+      ],
+      "commitments": [
+        {
+          "id": "direct-maximizing-act-criterion",
+          "role": "defining",
+          "doctrine": "An act’s own consequences ultimately determine its moral rightness, and an available act with a better outcome for everyone affected rules out a worse act as permissible.",
+          "sourceIds": [
+            "sep-act-consequence-criterion"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-act-consequence-criterion",
+              "relationship": "supports",
+              "claim": "Act consequentialism applies the moral-rightness criterion directly to an act’s own consequences; in its maximizing form, an act is right only when its outcome is at least as good as the outcomes of available alternatives. This differs from full rule consequentialism, which makes wrongness depend on consequence-justified rules (sections 1, 2, and 5)."
+            }
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "reviewed-NE22-act-consequence-criterion",
+            "expectedState": "supported",
+            "note": "NEI122@1 contrasts the act with a rule criterion; NEI014@1 checks whether a worse outcome for everyone can be permissible. Both evidence units are required."
+          }
+        },
+        {
+          "id": "goods-promoted-by-acts",
+          "role": "characteristic",
+          "doctrine": "Different act-consequentialist theories identify different goods and ways of comparing outcomes.",
+          "sourceIds": [
+            "sep-act-consequence-criterion"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-act-consequence-criterion",
+              "relationship": "supports",
+              "claim": "Act consequentialism applies the moral-rightness criterion directly to an act’s own consequences; in its maximizing form, an act is right only when its outcome is at least as good as the outcomes of available alternatives. This differs from full rule consequentialism, which makes wrongness depend on consequence-justified rules (sections 1, 2, and 5)."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The reviewed act criterion does not settle welfare, plural goods, aggregation, or distribution."
+          }
+        },
+        {
+          "id": "actual-expected-and-deliberation",
+          "role": "disputed",
+          "doctrine": "Act consequentialists differ over actual versus expected consequences and the appropriate decision procedure.",
+          "sourceIds": [
+            "sep-act-consequence-criterion"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-act-consequence-criterion",
+              "relationship": "supports",
+              "claim": "Act consequentialism applies the moral-rightness criterion directly to an act’s own consequences; in its maximizing form, an act is right only when its outcome is at least as good as the outcomes of available alternatives. This differs from full rule consequentialism, which makes wrongness depend on consequence-justified rules (sections 1, 2, and 5)."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The pilot does not settle these internal variations."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rule-consequentialism-scoped",
+      "name": "Rule consequentialism (scoped criterion)",
+      "scope": "ethical_theory",
+      "context": "A comparison with the conjunction of a consequence-justified rule and a rule-based criterion of act rightness. The item pair does not specify a complete code or every formulation of rule consequentialism.",
+      "identityClaimAllowed": false,
+      "primarySourceIds": [],
+      "secondarySourceIds": [
+        "sep-rule-consequence-criterion"
+      ],
+      "sourceNotes": "SEP distinguishes full rule-based wrongness from rule-guided decision procedures with an act criterion, and separates wrongness from deliberation and sanctions.",
+      "sourceClaims": [
+        {
+          "sourceId": "sep-rule-consequence-criterion",
+          "relationship": "supports",
+          "claim": "For a full rule-consequentialist criterion of wrongness, acts are wrong when forbidden by rules justified by their consequences. This differs from using consequence-justified rules merely as a decision procedure while direct act outcomes determine wrongness (sections 4 and 8)."
+        }
+      ],
+      "neighbors": [
+        "act consequentialism",
+        "deontological rule constraints",
+        "contractualist rule justification",
+        "rule-guided decision procedure"
+      ],
+      "discriminators": [
+        "A useful consequence-justified rule does not establish that conformity to it determines an act’s rightness.",
+        "An independent duty can support the same rule without making its ultimate justification consequential."
+      ],
+      "nonEntailments": [
+        "This overlap does not establish utilitarianism, welfarism, or a particular theory of value.",
+        "It does not settle the optimal code, exceptions, sanctions, or the respondent’s philosophical identity."
+      ],
+      "commitments": [
+        {
+          "id": "consequence-justified-rule-criterion",
+          "role": "defining",
+          "doctrine": "An act’s moral rightness depends on conformity to rules ultimately justified by their consequences, even when that act alone would produce a better outcome.",
+          "sourceIds": [
+            "sep-rule-consequence-criterion"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-rule-consequence-criterion",
+              "relationship": "supports",
+              "claim": "For a full rule-consequentialist criterion of wrongness, acts are wrong when forbidden by rules justified by their consequences. This differs from using consequence-justified rules merely as a decision procedure while direct act outcomes determine wrongness (sections 4 and 8)."
+            }
+          ],
+          "mapping": {
+            "status": "direct",
+            "propositionId": "reviewed-NE23-rule-consequence-criterion",
+            "expectedState": "supported",
+            "note": "NEI122@1 asks whether the rule determines this act’s rightness; NEI123@1 asks whether consequences ultimately justify the rule. Both evidence units are required."
+          }
+        },
+        {
+          "id": "which-rules-and-which-goods",
+          "role": "characteristic",
+          "doctrine": "A full account specifies how consequences select a code of rules and what goods the code promotes.",
+          "sourceIds": [
+            "sep-rule-consequence-criterion"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-rule-consequence-criterion",
+              "relationship": "supports",
+              "claim": "For a full rule-consequentialist criterion of wrongness, acts are wrong when forbidden by rules justified by their consequences. This differs from using consequence-justified rules merely as a decision procedure while direct act outcomes determine wrongness (sections 4 and 8)."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "One harm-rule question does not select a general code or theory of value."
+          }
+        },
+        {
+          "id": "compliance-acceptance-and-sanctions",
+          "role": "disputed",
+          "doctrine": "Rule consequentialists dispute compliance versus acceptance formulations, exceptions, and the role of sanctions.",
+          "sourceIds": [
+            "sep-rule-consequence-criterion"
+          ],
+          "sourceClaims": [
+            {
+              "sourceId": "sep-rule-consequence-criterion",
+              "relationship": "supports",
+              "claim": "For a full rule-consequentialist criterion of wrongness, acts are wrong when forbidden by rules justified by their consequences. This differs from using consequence-justified rules merely as a decision procedure while direct act outcomes determine wrongness (sections 4 and 8)."
+            }
+          ],
+          "mapping": {
+            "status": "not_measured",
+            "note": "The pilot does not distinguish these versions."
+          }
+        }
+      ]
+    }
+  ]
+}

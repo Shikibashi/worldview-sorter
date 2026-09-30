@@ -6,7 +6,7 @@ import {currentFromManifest,loadSnapshot,validateContentIntegrity} from '../pack
 
 const root=new URL('../',import.meta.url);
 const read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
-const current=await read('data/current.json');
+const current=currentFromManifest(await read('data/releases/model-release-v1.11.0.json'));
 const previous=currentFromManifest(await read('data/releases/model-release-v1.10.0.json'));
 const [bank,model,scales,depth,catalog,ledger,oldBank,oldModel,oldDepth,oldCatalog]=await Promise.all([
  read(current.candidateBank.path),read(current.worldviewModel.path),read(current.responseScales.path),

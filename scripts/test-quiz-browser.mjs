@@ -341,6 +341,13 @@ try{
     /what ultimately justifies/i.test(await fullPage.locator('#question-title').innerText()));
    await fullPage.screenshot({path:'artifacts/quiz/NEI123-mobile.png',fullPage:true});
   }
+  if(currentId==='AHI108'){
+   check('Free-will compatibility case fits mobile and preserves an open answer',
+    await fullPage.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)&&
+    await fullPage.locator('#answer-options .answer').count()===3&&
+    /complete earlier state/i.test(await fullPage.locator('#question-title').innerText())&&
+    /do not settle/i.test(await fullPage.locator('#answer-options').innerText()));
+  }
   const scale=await fullPage.locator('#quiz').getAttribute('data-scale');fullScales.add(scale);
   if(scale==='ranking_all'){
    const selects=fullPage.locator('#answer-options select');

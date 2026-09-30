@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "worldview-localization-bundle-1",
+  "bundleVersion": "localization-es-ES-draft-11",
+  "locale": "es-ES",
+  "language": "es",
+  "direction": "ltr",
+  "status": "untranslated",
+  "canonical": false,
+  "bankVersion": "0.13.0",
+  "modelVersion": "generic-1.9.0-pilot",
+  "affinityCatalogVersion": "philosophical-affinity-2.0.0",
+  "itemRealizations": [],
+  "scaleRealizations": [],
+  "propositionRealizations": [],
+  "affinityRealizations": [],
+  "resultStates": {},
+  "uiStrings": {},
+  "sourceNotes": "Candidate locale only. No Spanish philosophical wording, answer categories, or result claims have been approved. PLI126/PLI127 and the PL34 proposition require translation and contextual review before activation. The two new epistemic comparison entries need linguistic and philosophical review before use. NEI122 and the scoped NE22 proposition require linguistic and philosophical review before public use. NEI123 and the scoped NE23 proposition require linguistic and philosophical review before public use. The two scoped consequence-criterion comparisons require linguistic and philosophical review before public use. The scoped moral truth-claim proposition needs linguistic and philosophical review before public use. The exact public-testability claim needs linguistic and philosophical review before public use. AHI108@1 and the revised free-will proposition require linguistic and philosophical review before public use.",
+  "sourceRealizations": [],
+  "terminologyDecisions": []
+}
