@@ -1,0 +1,1564 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.9.0-affinity-gap-draft-1",
+  "status": "candidate",
+  "purpose": "Unreleased doctrinal discriminators for the affinity expansion review. These questions are not in a public route, interpretation rule, or affinity catalog. Existing construct targets are navigation metadata, not permission to infer a tradition.",
+  "itemIdPolicy": "Permanent IDs use <domain>I<3 digits>. IDs are never reused after retirement.",
+  "items": [
+    {
+      "id": "NEI122",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Suppose breaking a well-justified rule in one case would clearly produce the best overall outcome, without weakening the rule for anyone else. What ultimately determines whether this act is right?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "NE13",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "act_outcome",
+          "label": "The consequences of this particular act."
+        },
+        {
+          "id": "rule_outcome",
+          "label": "Whether it follows a rule justified by the consequences of generally following it."
+        },
+        {
+          "id": "rule_independent",
+          "label": "Whether it honors a duty that is not ultimately justified by consequences."
+        },
+        {
+          "id": "context",
+          "label": "No single one of these always determines rightness."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "act-rule-criterion",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "criterion_of_rightness",
+        "act_rule_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-consequentialism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Act-outcome favors a narrow act-consequentialist criterion; rule-outcome favors rule consequentialism; rule-independent opposes both. This is about rightness, not the best everyday decision procedure. One answer is not independent corroboration."
+    },
+    {
+      "id": "NEI123",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "What ultimately justifies a moral rule against harming an innocent person?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "NE13",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "general_consequences",
+          "label": "Following that rule generally produces better consequences than the alternatives."
+        },
+        {
+          "id": "person_constraint",
+          "label": "A person's claim against being harmed can constrain us independently of the rule's overall consequences."
+        },
+        {
+          "id": "agreement",
+          "label": "The rule is justified by principles affected people could reasonably accept."
+        },
+        {
+          "id": "plural",
+          "label": "More than one of these can justify the rule without any one being ultimate."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "rule-ultimate-ground",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "rule_justification"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-consequentialism",
+          "gen-deontology",
+          "gen-contractualism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "General-consequences is a candidate rule-consequentialist ground. A person can endorse a useful rule without treating consequences as its ultimate justification. The agreement option is not automatically Scanlonian."
+    },
+    {
+      "id": "NEI124",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "When comparing possible outcomes morally, what can make one outcome better in itself?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "VA20",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "welfare_only",
+          "label": "Only how well the people affected fare; other features matter through their effect on people's welfare."
+        },
+        {
+          "id": "welfare_and_other",
+          "label": "People's welfare matters, but justice or other values can improve an outcome independently of welfare."
+        },
+        {
+          "id": "rights_priority",
+          "label": "Some rights or duties matter morally without making the outcome itself better."
+        },
+        {
+          "id": "other",
+          "label": "None of these fits my view."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "welfarist-value",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "welfarism",
+        "utilitarianism_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-consequentialism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Welfare-only concerns outcome value, not act rightness or maximization. It therefore cannot alone establish utilitarianism. The rights-priority answer may coexist with welfare-only outcome value."
+    },
+    {
+      "id": "NEI125",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Two available actions affect everyone's welfare. One produces more total welfare; the other respects a promise but produces less total welfare. Assume no other effects differ. What determines which action is morally right?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {
+          "constructId": "NE01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "maximize_welfare",
+          "label": "The action producing the most total welfare is right."
+        },
+        {
+          "id": "promise_constraint",
+          "label": "Keeping the promise can be right even when it produces less total welfare."
+        },
+        {
+          "id": "welfare_reason_only",
+          "label": "The welfare difference is a strong reason, but it does not by itself settle which action is right."
+        },
+        {
+          "id": "other",
+          "label": "None of these fits my view."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "welfare-maximization",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "maximization",
+        "utilitarianism_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-consequentialism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Maximize-welfare is compatible with act utilitarianism in this case but does not distinguish all act and rule forms; combine only with an independently reviewed criterion. The vignette fixes aggregate welfare, not distribution, and should be comprehension-reviewed."
+    },
+    {
+      "id": "NEI126",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Before acting on a personal rule, should a person ask whether everyone could follow that same rule without making an exception for themselves?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "NE02",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "constitutive",
+          "label": "Yes; being able to adopt the rule consistently for everyone is part of what makes the act right."
+        },
+        {
+          "id": "useful_check",
+          "label": "Yes as a useful check, but it does not determine rightness."
+        },
+        {
+          "id": "outcomes",
+          "label": "Only if doing so tends to improve outcomes."
+        },
+        {
+          "id": "no_general_test",
+          "label": "No general test like this is required."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "universal-law-ground",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "kantian_criterion"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-deontology",
+          "affdraft-kant-moral"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Constitutive option bears on a Kantian universal-law reading; generic consistency or a heuristic alone does not establish Kantian ethics. Scholarly variants of the categorical imperative require review."
+    },
+    {
+      "id": "NEI127",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Could an action be wrong because it treats a person merely as a tool for others, even if it would produce a greater total benefit?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "NE02",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "yes_persons",
+          "label": "Yes; the person's standing can rule it out independently of the total benefit."
+        },
+        {
+          "id": "usually_outcomes",
+          "label": "Usually, but only because that treatment tends to have bad consequences."
+        },
+        {
+          "id": "no_if_best",
+          "label": "No; if it really produces the greatest overall benefit, that determines rightness."
+        },
+        {
+          "id": "depends",
+          "label": "It depends on what the person consented to and how they are treated."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "humanity-as-end",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "persons_as_ends"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-deontology",
+          "affdraft-kant-moral"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "A yes answer also fits non-Kantian rights views. It is a discriminator against unrestricted aggregation, not a standalone Kantian classification."
+    },
+    {
+      "id": "NEI128",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "For a morally difficult action, what is the deepest question to settle first?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "NE03",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "flourishing_character",
+          "label": "What a person of good character would do as part of living well."
+        },
+        {
+          "id": "rule_duty",
+          "label": "Which duty or rule applies to the act."
+        },
+        {
+          "id": "overall_outcome",
+          "label": "Which choice produces the best overall outcome."
+        },
+        {
+          "id": "plural",
+          "label": "None of these is generally prior to the others."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "virtue-priority",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "virtue_criterion"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-virtue"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "The first option prioritizes virtue and flourishing in practical explanation; merely admiring good character does not. Does not settle which school of virtue ethics applies."
+    },
+    {
+      "id": "NEI129",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "Two people have equal urgent need, but one depends on you through an ongoing caring relationship. Could that relationship itself give you a moral reason to help that person first?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "NE04",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "constitutive_care",
+          "label": "Yes; responding to dependence within the relationship is itself part of what morality asks."
+        },
+        {
+          "id": "role_duty",
+          "label": "Yes, but only because I previously accepted a role or duty."
+        },
+        {
+          "id": "outcomes_only",
+          "label": "Only if helping that person has better consequences."
+        },
+        {
+          "id": "equal_claim",
+          "label": "No; the equal needs give them equal claims regardless of the relationship."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "care-ground",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "care_justification"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-care"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates care as a moral ground from prior role duty, outcome calculation, and equal need. Existing NEI028 asks whether the relationship gives an additional reason; this draft is only useful if that answer fails to distinguish the ground, so review for redundancy before release."
+    },
+    {
+      "id": "NEI130",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "A policy gives many people small benefits while imposing a serious avoidable burden on one person. What most directly explains why it may be wrong?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {
+          "constructId": "NE05",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "reasonable_rejection",
+          "label": "The burdened person could reasonably reject the policy as a rule for everyone, even if the small benefits add up to more."
+        },
+        {
+          "id": "aggregate_welfare",
+          "label": "It is wrong only if the total harm outweighs the combined benefits."
+        },
+        {
+          "id": "mutual_advantage",
+          "label": "It is wrong if the parties could agree on another policy that serves each person's interests better."
+        },
+        {
+          "id": "no_single_ground",
+          "label": "More than one consideration matters, with no single one decisive."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "contractualism-nonaggregation",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "individual_complaints"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-contractualism",
+          "acad-contractarianism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Near existing NEI031; the explicit aggregate and mutual-advantage alternatives are the only added discrimination. If existing NEI031 already does this adequately, retire this draft. Reasonable rejection alone is not every form of contractualism."
+    },
+    {
+      "id": "NEI131",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "A person is wise, just, and courageous but suffers illness and poverty through no fault of their own. Which claim best fits your view of that person's life?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {
+          "constructId": "NE03",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "virtue_only_good",
+          "label": "Their virtue is the only genuine good; illness and poverty can be disfavored without diminishing that good."
+        },
+        {
+          "id": "virtue_and_fortune",
+          "label": "Virtue matters greatly, but illness and poverty can also make the life worse in themselves."
+        },
+        {
+          "id": "welfare_primary",
+          "label": "How well the person fares matters more than virtue in assessing their life."
+        },
+        {
+          "id": "other",
+          "label": "None of these fits my view."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "stoic-virtue-only-good",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "stoic_value_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "affdraft-stoicism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Targets the Stoic virtue-only-good thesis, not emotional restraint. The exact academic basis is recorded in the proposed source claim. This single commitment cannot establish the whole Stoic philosophy; the wording of good versus welfare needs comprehension review."
+    },
+    {
+      "id": "MEI106",
+      "revision": 1,
+      "domainId": "ME",
+      "text": "Suppose people use an ideal process of fair, informed reasoning to settle a moral disagreement. What role could the result of that process have?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "ME07",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "constitutes_standard",
+          "label": "Under suitable conditions, it can help constitute the correct moral standard."
+        },
+        {
+          "id": "discovers_standard",
+          "label": "It can help discover a moral standard that is correct independently of any such process."
+        },
+        {
+          "id": "agreement_only",
+          "label": "It can produce agreement without making or finding a correct moral standard."
+        },
+        {
+          "id": "depends",
+          "label": "Its role depends on the kind of moral question."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "metaethical-constructivism",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "constructivist_ground"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "acad-constructivism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Constitution differs from discovery and mere agreement. 'Suitable conditions' leaves schools of constructivism unresolved; no single procedure or universal constructivist identity follows."
+    },
+    {
+      "id": "OMI112",
+      "revision": 1,
+      "domainId": "OM",
+      "text": "Which description of mind and body is closest to your view?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "OM02",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "physical_only",
+          "label": "Mental states are wholly physical, even if physical explanations can be complex."
+        },
+        {
+          "id": "two_kinds",
+          "label": "Mental and physical features are both real, and at least some mental features are fundamentally nonphysical."
+        },
+        {
+          "id": "mental_fundamental",
+          "label": "Reality is fundamentally mental; physical things depend on mind in some way."
+        },
+        {
+          "id": "unexplained",
+          "label": "Present physical explanations are incomplete, but I am unsure what follows about reality."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "physical-dual-ideal",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "mind_body_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-physicalism",
+          "domain-metaphysics",
+          "affdraft-dualism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Two-kinds supports a broad property-or-substance dualist contrast but does not settle which dualism. Unexplained resists the false positive from an explanatory gap. Mental-fundamental is only a provisional idealist signal."
+    },
+    {
+      "id": "MSI024",
+      "revision": 1,
+      "domainId": "MS",
+      "text": "Which claim best describes how conscious experience is distributed in nature?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "MS02",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "fundamental_widespread",
+          "label": "Experience itself is a basic and widespread feature of nature."
+        },
+        {
+          "id": "precursor_widespread",
+          "label": "Non-experiential precursors may be basic and widespread, while experience arises only in some systems."
+        },
+        {
+          "id": "complex_only",
+          "label": "Experience arises only in some sufficiently complex systems."
+        },
+        {
+          "id": "one_simple_possible",
+          "label": "A very simple system might experience something, but that would not make experience fundamental or widespread."
+        },
+        {
+          "id": "unknown",
+          "label": "I do not have a settled view."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "panpsychism-fundamentality",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "panpsychism_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "domain-panpsychism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Distinguishes panpsychism from panprotopsychism, complexity-only views, and MSI015’s mere possibility of simple-system experience. The status of a putative precursor remains a specialist review point."
+    },
+    {
+      "id": "PLI121",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "What authority should a competent adult normally have over their own body?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL11",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "robust_self_ownership",
+          "label": "They have a strong claim to decide its use and to refuse others' demands, subject to the same claims of others."
+        },
+        {
+          "id": "substantial_but_limited",
+          "label": "They have substantial control, but others' needs can sometimes justify requiring their labor."
+        },
+        {
+          "id": "collective_claim",
+          "label": "Collective decisions may direct a person’s bodily choices for shared ends under suitable conditions."
+        },
+        {
+          "id": "depends",
+          "label": "The answer depends too much on the circumstances for a general claim."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "self-ownership",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "libertarian_self_ownership"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "domain-property",
+          "affdraft-libertarianism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Robust option is relevant to bodily self-ownership, not sufficient for either left or right libertarianism. Control over labor and transfer rights remain separately unmeasured."
+    },
+    {
+      "id": "PLI122",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A previously unused natural resource is claimed for private use without anyone's consent. What condition, if any, is needed for that claim to be just?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL11",
+          "relation": "diagnostic",
+          "role": "secondary"
+        },
+        {
+          "constructId": "PL12",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "appropriation",
+          "label": "Peaceful first use can create a strong private claim without owing others a share of the resource's value."
+        },
+        {
+          "id": "equal_resource_claim",
+          "label": "Private use can be allowed, but others retain an equal claim to the resource's value or a fair share of natural resources."
+        },
+        {
+          "id": "collective_decision",
+          "label": "Private use requires authorization by a community that retains collective control."
+        },
+        {
+          "id": "no_general_rule",
+          "label": "No one principle covers all such resources."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "external-resource-entitlement",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "left_right_libertarian_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "domain-property",
+          "affdraft-libertarianism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Directly contrasts right- and left-libertarian resource principles without inferring either from generic redistribution skepticism. First-use wording may conflate competing right-libertarian acquisition theories; review before route inclusion."
+    },
+    {
+      "id": "PLI123",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "Who should normally have effective control over major productive assets such as factories and large firms?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL12",
+          "relation": "diagnostic",
+          "role": "secondary"
+        },
+        {
+          "constructId": "PL14",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "worker_governed",
+          "label": "The workers who use them, through institutions they can genuinely govern."
+        },
+        {
+          "id": "social_governed",
+          "label": "The wider public, through institutions it can genuinely govern."
+        },
+        {
+          "id": "state_only",
+          "label": "State officials, even if workers or the public have little control over decisions."
+        },
+        {
+          "id": "private_owners",
+          "label": "Private owners, within general rules protecting workers and others."
+        },
+        {
+          "id": "mixed",
+          "label": "Different forms should coexist without one general default."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "productive-control",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "socialism_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "domain-property",
+          "affdraft-socialism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Worker-governed and publicly governed answers are distinct social-control possibilities; state ownership without effective social control is not sufficient. This does not decide markets versus planning or democratic governance."
+    },
+    {
+      "id": "PLI124",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "A country can prevent a serious harm abroad at modest cost, but its citizens gain nothing in return. What gives it a political reason to act?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {
+          "constructId": "PL22",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "global_duty",
+          "label": "People beyond its borders can have claims on its institutions independently of national benefit."
+        },
+        {
+          "id": "humanitarian_discretion",
+          "label": "Helping is admirable, but foreign people have no claim on its institutions."
+        },
+        {
+          "id": "reciprocity_only",
+          "label": "It has a political reason to act only if citizens will benefit through reciprocity or security."
+        },
+        {
+          "id": "depends",
+          "label": "The reason depends on the kind of harm and the institution's mandate."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "cosmopolitan-institutions",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "political_cosmopolitanism_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "domain-cosmopolitanism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Distinguishes institutional claim from humanitarian permission and instrumental national benefit. Existing PLI020 and PLI067 touch similar cases; review local dependence before release."
+    },
+    {
+      "id": "PLI125",
+      "revision": 1,
+      "domainId": "PL",
+      "text": "If no state held exclusive authority to enforce law, which institution, if any, should ordinarily provide courts and protection?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "PL30",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "market_providers",
+          "label": "Competing providers chosen through property, contract, and voluntary exchange."
+        },
+        {
+          "id": "nonmarket_associations",
+          "label": "Community associations organized without making protection a market service."
+        },
+        {
+          "id": "new_state",
+          "label": "A single public authority should be established instead."
+        },
+        {
+          "id": "plural",
+          "label": "Several forms could be legitimate; no one form is generally required."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "stateless-legal-form",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "market_social_anarchism_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "acad-hasnas",
+          "affdraft-anarchism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Conditional premise distinguishes forms of stateless order. Market-providers alone cannot infer anarchism without a separately established state-abolition commitment; community associations do not by themselves establish social anarchism."
+    },
+    {
+      "id": "SOI106",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Suppose an ecosystem could be damaged without causing suffering or loss to any person or animal. Could the ecosystem itself still give us a moral reason not to damage it?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "SO12",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "ecosystem_standing",
+          "label": "Yes; the ecological whole can matter morally in its own right."
+        },
+        {
+          "id": "individuals_only",
+          "label": "Only individual living beings could supply that reason, not the ecosystem as a whole."
+        },
+        {
+          "id": "human_interest_only",
+          "label": "Only effects on present or future humans could supply that reason."
+        },
+        {
+          "id": "uncertain",
+          "label": "I am unsure whether an ecosystem itself can matter morally."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "ecological-whole-standing",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "ecocentrism_discriminator"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "affdraft-environmental-ethics"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates ecological-whole moral standing from animal-focused and human-centered environmental concern. The proposed SEP source claim is philosophical context, not an item-validation study."
+    },
+    {
+      "id": "EPI121",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "Do all justified beliefs about the world ultimately need support from some beliefs that are justified without depending on further beliefs?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "EP18",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "yes_basic",
+          "label": "Yes; some basic beliefs must stop a regress of reasons."
+        },
+        {
+          "id": "coherent_network",
+          "label": "No; beliefs can be justified by how they support one another within a coherent network."
+        },
+        {
+          "id": "unending",
+          "label": "No; justification can continue through an open-ended chain of reasons."
+        },
+        {
+          "id": "unsure",
+          "label": "I am unsure what ultimately supports justified beliefs."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "foundational-regress",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "unreleased_review_candidate"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "acad-epistemology",
+          "affdraft-foundationalism"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Tests the broader regress thesis beyond one perceptual or intuitive starting point. Yes_basic does not specify which beliefs are basic or settle debates about coherentism."
+    },
+    {
+      "id": "AHI107",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Suppose every choice is fully determined by earlier events. Which claim about freedom and responsibility is closest to your view?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "AH14",
+          "relation": "diagnostic",
+          "role": "secondary"
+        },
+        {
+          "constructId": "AH03",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "both_possible",
+          "label": "Some determined choices can still be genuinely free and morally responsible."
+        },
+        {
+          "id": "freedom_only",
+          "label": "Some determined choices can be genuinely free, but not deserving of basic moral blame."
+        },
+        {
+          "id": "responsibility_only",
+          "label": "A person may deserve moral blame, but determined choices are not genuinely free."
+        },
+        {
+          "id": "neither",
+          "label": "Determined choices are neither genuinely free nor a basis for basic moral blame."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "freedom-responsibility-separation",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "unreleased_review_candidate"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "audit2-freewill-sep"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates compatibility of freedom from compatibility of moral responsibility. Do not infer actual determinism from a conditional answer or treat responsibility-only as an ordinary compatibilist freedom view."
+    },
+    {
+      "id": "SOI107",
+      "revision": 1,
+      "domainId": "SO",
+      "text": "Imagine a person raised with entirely different relationships and social roles but the same bodily traits. Which description best fits how those changes affect who the person is?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "SO03",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "constitutive",
+          "label": "Those relationships and roles partly constitute who the person is."
+        },
+        {
+          "id": "causal_only",
+          "label": "They strongly influence the person, but identity is ultimately fixed by features within the individual."
+        },
+        {
+          "id": "minor",
+          "label": "They may affect behavior but little of the person’s identity."
+        },
+        {
+          "id": "uncertain",
+          "label": "There is no general answer across kinds of identity."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "relational-constitution",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "unreleased_review_candidate"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "affdraft-relational-self"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates constitutive relational selfhood from the causal influence or personal value of relationships. This does not establish a single cross-cultural self theory."
+    },
+    {
+      "id": "RCI036",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Which statement best fits your view about a deity with intentions or purposes?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "RC01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        },
+        {
+          "constructId": "RC02",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "exists_personal",
+          "label": "At least one such deity exists."
+        },
+        {
+          "id": "exists_impersonal",
+          "label": "A divine reality exists, but none is a deity with intentions or purposes."
+        },
+        {
+          "id": "possible_personal",
+          "label": "Such a deity may exist, but I do not affirm that one does."
+        },
+        {
+          "id": "none",
+          "label": "No divine reality exists."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "deity-existence-agentic",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "unreleased_review_candidate"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-theology",
+          "affdraft-god-ultimates"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Combines existence and agentic character in one referent. Conditional RCI025 alone cannot establish personal theism, and a possible deity is not an affirmed deity."
+    },
+    {
+      "id": "RCI037",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Which statement best fits your view about a deity that acts in ordinary events?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "RC01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        },
+        {
+          "constructId": "RC04",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "exists_intervenes",
+          "label": "A deity exists and sometimes acts in ordinary events."
+        },
+        {
+          "id": "exists_no_intervention",
+          "label": "A deity exists but does not intervene in ordinary events."
+        },
+        {
+          "id": "possible_only",
+          "label": "A deity might intervene, but I do not affirm that such a deity exists."
+        },
+        {
+          "id": "none",
+          "label": "No deity exists."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "deity-existence-intervention",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "unreleased_review_candidate"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-theology",
+          "affdraft-god-ultimates",
+          "affdraft-miracles"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Links the intervention claim to the affirmed deity rather than to supernatural possibility in general. Does not by itself establish a miracle or particular religious tradition."
+    },
+    {
+      "id": "RCI038",
+      "revision": 1,
+      "domainId": "RC",
+      "text": "Which description best fits your present view about whether any deity exists?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "RC01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "affirm",
+          "label": "I believe at least one exists."
+        },
+        {
+          "id": "deny",
+          "label": "I believe none exists."
+        },
+        {
+          "id": "considered_suspend",
+          "label": "I have considered the question and suspend judgment."
+        },
+        {
+          "id": "not_considered",
+          "label": "I have not considered the question enough to form a view."
+        },
+        {
+          "id": "unclear",
+          "label": "I am unsure what the question means or what would count as a deity."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "agnostic-suspension",
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "affinity_gap",
+        "unreleased_review_candidate"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "gen-theology"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates considered suspension from mere lack of exposure or unclear terms. This is a respondent stance, not a claim that the matter is unknowable."
+    }
+  ]
+}

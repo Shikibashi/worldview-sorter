@@ -1,0 +1,30 @@
+# Twelve-dimension question review (unreleased)
+
+The user's 12axes screenshots were used to identify **topics to examine**, not as an answer key, a scoring specification, or evidence that the respondent holds Objectivist doctrine. Worldview Sorter can offer a comparably broad set of clearly explained topics without turning its twelve interface domains into twelve validated bipolar traits. This review does not reproduce 12axes questions, percentage bars, personality matches, countries, or source code.
+
+The current source is the 562-item candidate bank and the **64/120/238** public routes. [The generated coverage report](../data/reviews/dimension-coverage-v1.json) gives exact existing item revisions, shown items, and assessable related rules for every displayed dimension. Run `npm run report:dimensions` to regenerate it, or `npm run test:dimensions` to check it against the current source files. The [16 original question drafts](../data/items/dimension-gap-draft-v1.json) and [nine target proposals](../data/registries/dimension-gap-proposals-v1.json) are outside production. Each answer option has an editorial meaning hypothesis, including contextual or non-entailing answers; those meanings are not live evidence mappings. [Source claims](../data/items/dimension-gap-sources-v1.json) are proposed academic provenance, not proof that these items are valid measures.
+
+| Displayed topic | Current public evidence | Question work |
+| --- | --- | --- |
+| Federal | All routes ask about decentralization, but not constitutionally protected final powers | PLI126–127 separate federal division, national delegation and confederation. |
+| Democracy | The bank has a direct democratic-authorization bundle; no current route asks it | [Versioned route proposal](../data/reviews/dimension-route-proposal-v1.json) adds the existing bundle. |
+| Liberty | The bank has noninterference questions; no current route asks the direct bundle | Route proposal adds its two rule items. Freedom has other meanings, so this is scoped. |
+| Multiculturalism | Bank tolerance items are off-route; public accommodation and migration are distinct gaps | SOI108–109 ask accommodation; PLI128–129 ask migration. Neither can stand in for the other. |
+| Pacifist | No direct public evidence | PLI130–131 separate defensive force from absolute or qualified objections. |
+| Nationalist/intervention | The displayed label combines different disputes; national obligation is off-route and military intervention unasked | PLI132 asks humanitarian intervention; PLI133 checks that rejection of commercial intervention is **not** counted as approval of humanitarian intervention. |
+| Private | Ownership and rights items exist but are off-route | Route proposal adds rights. Ownership awaits a separate rule review. |
+| Free market | Standard and Full can assess a narrow market-coordination preference | Existing questions remain; this is not laissez-faire doctrine. |
+| Globalism/trade | Full can assess political concern for foreigners; Standard/Full ask domestic coordination | PLI134–135 ask cross-border trade restrictions as research variables, not global identity. |
+| Irreligious | Routes ask deity belief; Full asks religious priority | The route proposal adds public religious-law authority. Atheism, secular law and naturalism remain separate. |
+| Progressive | Full asks personal tradition importance and reform/rupture; neither establishes a generic progressive identity | SOI110 is a narrow research-only social-norm scenario. It cannot support a broad label. |
+| Technology | No direct bank content | VAI063–064 ask deployment and progress criteria; MSI025 asks safe voluntary enhancement. These are distinct, research-only targets. |
+
+## Why the questions are separate
+
+[Federalism](https://plato.stanford.edu/entries/federalism/) concerns a protected division of final authority, not merely a taste for local decisions. [Multiculturalism](https://plato.stanford.edu/entries/multiculturalism/) includes institutional accommodation beyond private tolerance, while [immigration](https://plato.stanford.edu/entries/immigration/) concerns movement and exclusion. [Pacifism](https://plato.stanford.edu/entries/pacifism/) has qualified and absolute versions; [humanitarian intervention](https://plato.stanford.edu/entries/justice-global/) is a further dispute. Trade restrictions are likewise distinct from domestic market coordination. [Technology](https://plato.stanford.edu/entries/technology/) and [human enhancement](https://plato.stanford.edu/entries/enhancement/) pose different evaluative questions. A single favorable attitude cannot safely answer all of them.
+
+The 12axes screenshot's “96% Objectivism” does not establish Rand's metaphysics, epistemology, life-grounded ethics, rational self-interest, rights, or account of the state. The current catalog already treats these as separate criteria. Quick has no assessable Objectivism criterion, Standard has only partial reality and market-coordination evidence, and Full still omits the existing individual-rights and limited-state item bundles. The route proposal makes those omissions reviewable. [SEP's account of Rand](https://plato.stanford.edu/entries/ayn-rand/) is the academic basis for keeping the system-level claims separate. No wording in this draft asks the user to endorse Objectivism by name.
+
+## Release boundary
+
+The [route proposal](../data/reviews/dimension-route-proposal-v1.json) would add complete existing public-rule bundles to **new** Standard and Full versions, yielding 125 and 254 questions if all additions survive review. These are burden estimates, not announced route lengths. It does not alter frozen routes or historical administrations. The new draft questions need item/source review, comprehension work, direct proposition rules with opposing and mixed evidence, false-positive fixtures, and exact route placement before they can appear publicly. Some trade, technology and social-norm questions may remain research-only. The answer pattern in the screenshot cannot substitute for the user's raw responses to these questions.

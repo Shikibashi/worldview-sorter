@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "route-content-proposal-1",
+  "proposalVersion": "1.0.0",
+  "status": "unreleased_requires_review",
+  "basePolicyVersion": "progressive-depth-1.1.0",
+  "baseBankVersion": "0.9.0",
+  "baseRoutes": [
+    {
+      "id": "quick",
+      "routeVersion": "quick-1.1.0",
+      "size": 64
+    },
+    {
+      "id": "standard",
+      "routeVersion": "standard-1.1.0",
+      "size": 120
+    },
+    {
+      "id": "full",
+      "routeVersion": "full-1.1.0",
+      "size": 238
+    }
+  ],
+  "releaseRule": "Do not edit the frozen 64/120/238 routes. A successor must pin exact item revisions, update route coverage and model manifests, and preserve historical replay.",
+  "proposedExistingGroups": [
+    {
+      "target": "PL04",
+      "ruleId": "ph-democratic-authorization",
+      "placement": "standard_successor",
+      "rationale": "Democratic authorization is absent from every route; include its rule bundle and a competence-controlled comparison.",
+      "itemRefs": [
+        {
+          "itemId": "PLI006",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI027",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI049",
+          "itemRevision": 1
+        }
+      ]
+    },
+    {
+      "target": "PL06",
+      "ruleId": "noninterference",
+      "placement": "standard_successor",
+      "rationale": "Add the actual noninterference rule bundle; decentralization alone is not individual liberty.",
+      "itemRefs": [
+        {
+          "itemId": "PLI007",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI051",
+          "itemRevision": 1
+        }
+      ]
+    },
+    {
+      "target": "PL27",
+      "ruleId": "construct-PL27",
+      "placement": "full_successor",
+      "rationale": "A rights foundation is defining Objectivist doctrine and currently omitted even from Full; include the counter-key.",
+      "itemRefs": [
+        {
+          "itemId": "PLI100",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI101",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI102",
+          "itemRevision": 1
+        }
+      ]
+    },
+    {
+      "target": "PL29",
+      "ruleId": "construct-PL29",
+      "placement": "full_successor",
+      "rationale": "A rights-protecting territorial authority must be distinguished from market anarchism; include its counter-key.",
+      "itemRefs": [
+        {
+          "itemId": "PLI106",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI107",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI108",
+          "itemRevision": 1
+        }
+      ]
+    },
+    {
+      "target": "NE15",
+      "ruleId": "construct-NE15",
+      "placement": "full_successor",
+      "rationale": "Add the omitted reverse-keyed egoism indicator beside the two existing Full items.",
+      "itemRefs": [
+        {
+          "itemId": "NEI102",
+          "itemRevision": 1
+        }
+      ]
+    },
+    {
+      "target": "PL23",
+      "ruleId": "ph-national-obligations",
+      "placement": "full_successor",
+      "rationale": "National special obligation is distinct from noninterventionism and international concern.",
+      "itemRefs": [
+        {
+          "itemId": "PLI021",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI068",
+          "itemRevision": 1
+        }
+      ]
+    },
+    {
+      "target": "PL26",
+      "ruleId": "ph-religious-public-law",
+      "placement": "full_successor",
+      "rationale": "Irreligious personal belief does not determine religious authority in public law.",
+      "itemRefs": [
+        {
+          "itemId": "PLI023",
+          "itemRevision": 1
+        },
+        {
+          "itemId": "PLI070",
+          "itemRevision": 1
+        }
+      ]
+    }
+  ],
+  "proposedSizesIfAllApproved": {
+    "quick": 64,
+    "standard": 125,
+    "full": 254
+  },
+  "deferredExistingBundles": [
+    {
+      "target": "SO04",
+      "itemIds": [
+        "SOI006",
+        "SOI017",
+        "SOI028"
+      ],
+      "reason": "Tolerance must be reviewed alongside new cultural-accommodation questions; no active direct public rule."
+    },
+    {
+      "target": "PL12",
+      "itemIds": [
+        "PLI014",
+        "PLI034",
+        "PLI059"
+      ],
+      "reason": "Private versus common ownership needs its own proposition/rule review; it is not equivalent to Objectivist rights."
+    }
+  ],
+  "interpretationImpact": "Existing rule opportunities for PL04, PL06, PL27, PL29, PL23 and PL26 become possible if complete bundles are released. Actual states still depend on respondent answers. No new draft target gets a public rule merely by route inclusion.",
+  "affinityImpact": "Objectivism defining rights and limited-state criteria would become assessable in a successor Full route after catalog mapping and regression review. No market or atheist shortcut is introduced.",
+  "historicalCompatibility": "No historical route, item revision, model, result or affinity catalog is modified.",
+  "potentialFutureQuestionRefs": [
+    {
+      "itemId": "PLI126",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI127",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "SOI108",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "SOI109",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI128",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI129",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI130",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI131",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI132",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI133",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI134",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "PLI135",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "VAI063",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "VAI064",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "MSI025",
+      "itemRevision": 1
+    },
+    {
+      "itemId": "SOI110",
+      "itemRevision": 1
+    }
+  ],
+  "draftQuestionReleaseCondition": "These drafts require item and source review, direct-rule evidence tests, route versioning and model manifests before public administration."
+}
