@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "worldview-release-channels-1",
+  "configVersion": "worldview-release-channels-5.0.0",
+  "channels": {
+    "development": {
+      "modelReleaseVersion": "model-release-1.4.0",
+      "features": {
+        "adaptiveClarification": true,
+        "affinityDisplay": true,
+        "sharing": true,
+        "feedback": false
+      }
+    },
+    "internal": {
+      "modelReleaseVersion": "model-release-1.4.0",
+      "features": {
+        "adaptiveClarification": true,
+        "affinityDisplay": true,
+        "sharing": true,
+        "feedback": true
+      }
+    },
+    "preview": {
+      "modelReleaseVersion": "model-release-1.4.0",
+      "features": {
+        "adaptiveClarification": true,
+        "affinityDisplay": true,
+        "sharing": true,
+        "feedback": true
+      }
+    },
+    "beta": {
+      "modelReleaseVersion": "model-release-1.4.0",
+      "features": {
+        "adaptiveClarification": true,
+        "affinityDisplay": true,
+        "sharing": true,
+        "feedback": true
+      }
+    },
+    "stable": {
+      "modelReleaseVersion": "model-release-1.4.0",
+      "features": {
+        "adaptiveClarification": true,
+        "affinityDisplay": true,
+        "sharing": true,
+        "feedback": false
+      }
+    }
+  }
+}

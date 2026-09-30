@@ -19,7 +19,11 @@ const summary=buildQuizSummary({model,bank,scalesDoc,session:quiz.session,routeM
 assert.equal(summary.affinities.hasEstablishedAffinity,summary.affinities.traditions.some(t=>t.summaryState==='overlap_on_measured_core'));
 assert.equal(summary.affinityPresentation.hasEstablishedAffinity,false,
  'Legacy scope mappings cannot establish a doctrinal affinity in respondent-facing presentation.');
-assert.ok(summary.affinityPresentation.traditions.every(t=>t.state==='legacy_scope_unresolved'&&t.legacyDefiningCriterionIds.length>0));
+assert.ok(summary.affinityPresentation.traditions.filter(t=>t.traditionId!=='easy-ontology-scoped')
+ .every(t=>t.state==='legacy_scope_unresolved'&&t.legacyDefiningCriterionIds.length>0));
+const easyOnQuick=summary.affinityPresentation.traditions.find(t=>t.traditionId==='easy-ontology-scoped');
+assert.ok(easyOnQuick&&easyOnQuick.state!=='legacy_scope_unresolved',
+ 'An exact sourced proposition must not inherit the six older scope warnings.');
 const authoredOverlap={traditions:[{id:'synthetic-tradition',summaryState:'overlap_on_measured_core',
  criteria:[{id:'synthetic-defining',role:'defining',mapping:{status:'direct',propositionId:'synthetic-rule'}}]}]};
 assert.equal(qualifyAffinityPresentation({affinities:authoredOverlap,model:{commitments:[{id:'synthetic-rule',proposition:null}]}})

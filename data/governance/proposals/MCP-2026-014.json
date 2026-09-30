@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-014",
+  "title": "Define scoped Easy Ontology criterion: realism-compatibility",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "criterion",
+  "changeClass": "new_object",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "criterion",
+      "id": "easy-ontology-scoped/realism-compatibility"
+    }
+  ],
+  "currentBehavior": "The 1.3.0 release records OM14 as a legacy scope label without a rule-linked supporting claim, and the six-entry catalog has no Easy Ontology comparison.",
+  "proposedBehavior": "Publish the exact scoped claim and its source-linked comparison in new immutable artifacts; preserve all historical releases and item revisions.",
+  "rationale": "The existing Full-route OM14 items directly ask about conceptual and empirical criteria versus a further metaphysical test. A scoped comparison can use that interpreted proposition without guessing from ordinary-object realism.",
+  "philosophicalBasis": {
+    "proposition": "Whether this metaontological method is compatible with realism remains disputed.",
+    "neighboringViews": [
+      "Ordinary-object realism",
+      "Nominalism",
+      "Heavyweight ontology"
+    ],
+    "nonEntailments": [
+      "Identity as a complete school",
+      "A population-calibrated match",
+      "Agreement with every Thomasson thesis"
+    ],
+    "existingGap": "The catalog must separate what OM14 measures from broader and contested doctrine.",
+    "scholarlyDisagreement": "The method’s breadth and relation to realism are subject to scholarly disagreement."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "marschall-easy-ontology-2021",
+      "relationship": "supports",
+      "claim": "Marschall challenges Thomasson’s defense of the compatibility of Easy Ontology and realism, making the issue a live dispute."
+    }
+  ],
+  "alternatives": [
+    "Add the entire draft question pool: rejected because the existing OM14 items ask this narrow method directly.",
+    "Infer the method from ordinary-object realism: rejected because belief in objects does not settle metaontological method.",
+    "Retain an unqualified identity label: rejected because the pilot asks only a limited proposition."
+  ],
+  "respondentImpact": "This criterion stays explicitly unmeasured and cannot increase affinity.",
+  "historicalCompatibility": "The 1.3.0 model, six-entry catalog, route items, source ledger, and original results remain byte-identical. A new manifest pins the new model and catalog; old administrations replay under their recorded versions.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "route_omission",
+      "source_link"
+    ],
+    "paths": [
+      "scripts/test-easy-ontology-release.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed the exact scoped claim, neighboring realism and nominalism positions, and source limits."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed historical version binding, route opportunity, and adversarial software fixtures."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "affinity"
+    ],
+    "targetVersion": "model-release-1.4.0",
+    "migration": "No raw-response migration. Historical model and affinity results retain their previous manifest; new administrations use the new tuple."
+  },
+  "implementationRefs": [
+    "data/generic/model-v1.2-pilot.json",
+    "data/affinities/catalog-v1.2.json",
+    "scripts/test-easy-ontology-release.mjs"
+  ]
+}
