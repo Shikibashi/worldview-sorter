@@ -66,7 +66,19 @@ for(const size of [80,120,160,240]){
   const count=route.ruleCounts[rule.id],states=count.assignedOpportunity;
   assert.equal(states.unassigned+states.partial+states.complete,route.sampleCount,rule.id);
   assert.equal(states.complete,count.assessable,rule.id);
+  assert.ok(count.bidirectionalPossible<=count.assessable&&count.bidirectionalPossible<=count.supportPossible&&
+   count.bidirectionalPossible<=count.opposePossible,rule.id);
  }
+ assert.equal(route.bidirectionalRuleIdsEverySample.length+route.bidirectionalRuleIdsSomeSamples.length+
+  route.bidirectionalRuleIdsNoSamples.length,model.commitments.length);
+}
+assert.equal(audit.directionalEvidenceGaps.length,16);
+assert.equal(audit.directionalEvidenceGaps.filter(gap=>gap.tier!=='research').length,11);
+for(const gap of audit.directionalEvidenceGaps){
+ const rule=ruleById.get(gap.ruleId);
+ assert.ok(gap.availableSupportUnits<gap.minimumEvidenceUnits||gap.availableOpposeUnits<gap.minimumEvidenceUnits);
+ assert.equal(gap.minimumEvidenceUnits,rule.minimumEvidenceUnits);
+ assert.ok(audit.routeDiagnostics[240].bidirectionalRuleIdsNoSamples.includes(gap.ruleId),gap.ruleId);
 }
 assert.equal(audit.routeTransitions.length,3);
 for(const transition of audit.routeTransitions){
@@ -117,5 +129,8 @@ for(const size of [80,120,160,240]){
  const means=audit.routeDiagnostics[size].publicRuleOpportunityMeans;
  assert.ok(narrative.includes(`| ${size} | ${means.unassigned.toFixed(2)} | ${means.partial.toFixed(2)} | ${means.complete.toFixed(2)} |`),
   'Stale narrative public opportunity '+size);
+ const route=audit.routeDiagnostics[size];
+ assert.ok(narrative.includes(`| ${size} | ${route.bidirectionalRuleIdsEverySample.length} | ${route.bidirectionalRuleIdsSomeSamples.length} | ${route.bidirectionalRuleIdsNoSamples.length} |`),
+  'Stale narrative two-way opportunity '+size);
 }
 console.log('PASS content-efficiency: 562 items, 181 constructs, 4 route diagnostics, 9 references, immutable artifacts');

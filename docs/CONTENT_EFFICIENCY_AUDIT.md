@@ -24,6 +24,17 @@ The 22 research-only items target constructs the completed audit kept outside pu
 
 The policy enforces all 31 facet minima at every length. It does **not** guarantee that every rule in a facet has two evidence units. Counts below are the number of 176 rules whose minimum two authored units appeared in every, some, or none of the 32 sampled packets. A positive opportunity still can become missing, skipped, neutral, or mixed after real administration.
 
+The first table counts evidence units in **either** direction. It does not imply that both support and opposition can reach the rule's threshold. The generated report also checks those directions separately:
+
+| Assigned items | Two-way path in every sample | In some samples | In no samples |
+| ---: | ---: | ---: | ---: |
+| 80 | 2 | 112 | 62 |
+| 120 | 5 | 120 | 51 |
+| 160 | 18 | 107 | 51 |
+| 240 | 51 | 74 | 51 |
+
+Sixteen rules have too few opposing evidence units even in the **entire bank**; eleven are public rules. For example, `ph-noncosmic-meaning` and `ph-strong-property` can reach two supporting units but only one opposing unit, while `ph-desire-welfare` has no authored opposing answer. Those rules can never produce the `opposed` state under their current two-unit requirement. This is a content/rule-design gap, not evidence that respondents cannot hold an opposing view. The exact rule IDs and directional unit counts are in `directionalEvidenceGaps` in the generated audit. Addressing a gap requires a versioned rule or item review; this audit does not change historical inference.
+
 | Assigned items | Every sample | Some samples | No samples | Route meaning |
 | ---: | ---: | ---: | ---: | --- |
 | 80 | 2 | 128 | 46 | Introductory breadth; very few rules consistently have a complete path. |

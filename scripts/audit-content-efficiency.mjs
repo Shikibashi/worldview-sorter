@@ -59,8 +59,19 @@ function opportunity(rule,ids){
  const oppose=new Set(selected.filter(e=>e.oppose.length).map(e=>e.unitId));
  const conditional=selected.filter(e=>items.get(e.itemId).eligibility.mode==='conditional').map(e=>e.itemId);
  return {assessable:units.size>=rule.minimumEvidenceUnits,supportPossible:support.size>=rule.minimumEvidenceUnits,
-  opposePossible:oppose.size>=rule.minimumEvidenceUnits,units:units.size,conditionalItemIds:conditional};
+  opposePossible:oppose.size>=rule.minimumEvidenceUnits,
+  bidirectionalPossible:support.size>=rule.minimumEvidenceUnits&&oppose.size>=rule.minimumEvidenceUnits,
+  units:units.size,conditionalItemIds:conditional};
 }
+const directionalEvidenceGaps=model.commitments.flatMap(rule=>{
+ const supportUnits=new Set(rule.evidence.filter(e=>e.support.length).map(e=>e.unitId)).size;
+ const opposeUnits=new Set(rule.evidence.filter(e=>e.oppose.length).map(e=>e.unitId)).size;
+ return supportUnits>=rule.minimumEvidenceUnits&&opposeUnits>=rule.minimumEvidenceUnits?[]:[{
+  ruleId:rule.id,constructId:rule.constructId,tier:rule.tier,minimumEvidenceUnits:rule.minimumEvidenceUnits,
+  availableSupportUnits:supportUnits,availableOpposeUnits:opposeUnits,
+  meaning:'The current rule cannot reach its authored threshold in every direction, even if all mapped bank items are asked.'
+ }];
+});
 const sizes=[80,120,160,240],sampleCount=32;
 const routeSamples={},packetSets={};
 for(const size of sizes){
@@ -75,7 +86,7 @@ for(const size of sizes){
  }
  packetSets[size]=packets.map(packet=>new Set(packet.entries.map(e=>e.itemId)));
  const itemCounts=Object.fromEntries(bank.items.map(i=>[i.id,0]));
- const ruleCounts=Object.fromEntries(model.commitments.map(r=>[r.id,{assessable:0,supportPossible:0,opposePossible:0,conditional:0,
+ const ruleCounts=Object.fromEntries(model.commitments.map(r=>[r.id,{assessable:0,supportPossible:0,opposePossible:0,bidirectionalPossible:0,conditional:0,
   assignedOpportunity:{unassigned:0,partial:0,complete:0}}]));
  const profileCounts=Object.fromEntries(profiles.profiles.map(p=>[p.id,{allDefining:0,anyDefining:0}]));
  const domains={},methods={};let minDomains=Infinity,maxDomains=0;
@@ -84,7 +95,7 @@ for(const size of sizes){
   for(const id of ids)itemCounts[id]++;
   const ds=new Set(packet.entries.map(e=>e.domainId));minDomains=Math.min(minDomains,ds.size);maxDomains=Math.max(maxDomains,ds.size);
   for(const e of packet.entries){domains[e.domainId]=(domains[e.domainId]??0)+1;const f=fmt(items.get(e.itemId));methods[f]=(methods[f]??0)+1;}
-  for(const r of model.commitments){const o=opportunity(r,ids),c=ruleCounts[r.id];if(o.assessable)c.assessable++;if(o.supportPossible)c.supportPossible++;if(o.opposePossible)c.opposePossible++;if(o.conditionalItemIds.length)c.conditional++;
+  for(const r of model.commitments){const o=opportunity(r,ids),c=ruleCounts[r.id];if(o.assessable)c.assessable++;if(o.supportPossible)c.supportPossible++;if(o.opposePossible)c.opposePossible++;if(o.bidirectionalPossible)c.bidirectionalPossible++;if(o.conditionalItemIds.length)c.conditional++;
    c.assignedOpportunity[o.units===0?'unassigned':o.assessable?'complete':'partial']++;}
   for(const p of profiles.profiles){
    const defining=p.criteria.filter(c=>c.essential);
@@ -102,7 +113,10 @@ for(const size of sizes){
   meanItemsByResponseScale:Object.fromEntries(Object.entries(methods).map(([k,v])=>[k,v/sampleCount])),
   assessableRuleIdsEverySample:Object.entries(ruleCounts).filter(([,v])=>v.assessable===sampleCount).map(([k])=>k),
   assessableRuleIdsSomeSamples:Object.entries(ruleCounts).filter(([,v])=>v.assessable>0&&v.assessable<sampleCount).map(([k])=>k),
- assessableRuleIdsNoSamples:Object.entries(ruleCounts).filter(([,v])=>v.assessable===0).map(([k])=>k)};
+ assessableRuleIdsNoSamples:Object.entries(ruleCounts).filter(([,v])=>v.assessable===0).map(([k])=>k),
+  bidirectionalRuleIdsEverySample:Object.entries(ruleCounts).filter(([,v])=>v.bidirectionalPossible===sampleCount).map(([k])=>k),
+  bidirectionalRuleIdsSomeSamples:Object.entries(ruleCounts).filter(([,v])=>v.bidirectionalPossible>0&&v.bidirectionalPossible<sampleCount).map(([k])=>k),
+  bidirectionalRuleIdsNoSamples:Object.entries(ruleCounts).filter(([,v])=>v.bidirectionalPossible===0).map(([k])=>k)};
 }
 const opportunityIds=ids=>new Set(model.commitments.filter(r=>opportunity(r,ids).assessable).map(r=>r.id));
 const routeTransitions=[];
@@ -267,6 +281,7 @@ const report={schemaVersion:'content-efficiency-audit-1',auditKind:'authored_sem
   disposition:'Keep is the conservative default where no concrete defect is established; named exceptions have explicit rationale.'},
  sourceMetadata:model.sources.map(s=>({id:s.id,title:s.title,url:s.url??null,access:s.access??null})),
  itemDispositions:itemAudit,constructRepresentation:constructAudit,routeDiagnostics:routeSamples,routeTransitions,
+ directionalEvidenceGaps,
  suspectedSimilarityPairs:near,referenceComparisons:profileAudit,
  publicResultContract:{states:['supported','opposed','mixed','insufficient_evidence'],routeOmissionStateCurrently:'insufficient_evidence',
   recommendation:'Add versioned not_measured semantics before asserting route-aware absence; distinguish branch skips from omissions and inconclusive presented evidence.'},
