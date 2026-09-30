@@ -1,0 +1,21 @@
+{
+  "version": "0.11.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.10.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-09-30",
+  "note": "One new act-versus-rule discriminator; an existing item supplies a separate maximization check. Authored content, not empirical validation.",
+  "itemCount": 565,
+  "newItemCount": 1,
+  "registryEntries": 184,
+  "activeConstructCount": 183,
+  "newConstructCount": 1,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.10.json": "31756dda16e67e80244c963e1aefc96d9ee95a2e34b3036069d9678258869f6c",
+    "data/registries/constructs-v0.3.json": "4932e25e91dd55e989b5e49d67eab5598914bf0fb57713b84fa5fb6b837e9950"
+  },
+  "publicInferenceAllowed": false
+}

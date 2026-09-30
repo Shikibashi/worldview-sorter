@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "worldview-engine-source-1",
+  "engineSourceVersion": "engine-source-1.5.0",
+  "scope": "route_response_interpretation_affinity",
+  "files": [
+    {
+      "sourcePath": "packages/runtime/index.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/runtime/index.js",
+      "sha256": "9ff4b9252fd80a4e94fa746c6c7f15122f6b0bf6e0a8ecdd7d4a38354bf9d205"
+    },
+    {
+      "sourcePath": "packages/runtime/packet-ordering.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/runtime/packet-ordering.js",
+      "sha256": "b57e552fb71dabfbe4c9af8e8cbda6e8551826d3f345bd1b908dfb8a2223449d"
+    },
+    {
+      "sourcePath": "packages/philosophy/forms.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/philosophy/forms.js",
+      "sha256": "b921c28c0cc3cc85c53c3b367ad33163e651c1f883077ebfc283259c7e1f9404"
+    },
+    {
+      "sourcePath": "packages/localization/index.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/localization/index.js",
+      "sha256": "190722897e44a57a871a4548591cf50fd93501735a1865d2f256d8a094b999bf"
+    },
+    {
+      "sourcePath": "packages/beta/release.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/beta/release.js",
+      "sha256": "0e6454a728111e21b96ef8dc23fce5fa38d3a1c16916bc7917c6d2be3e7df583"
+    },
+    {
+      "sourcePath": "packages/experience/quiz.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/experience/quiz.js",
+      "sha256": "c6e3d0d288d84bd28395d47f212dedebe06c210a956e963c6801044dcee4fc94"
+    },
+    {
+      "sourcePath": "packages/experience/summary.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/experience/summary.js",
+      "sha256": "c6628e7091f46c9f8e7c2213c5fa3332f8f37536e0ff55e95f88134e1b4cb6ba"
+    },
+    {
+      "sourcePath": "packages/worldview/index.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/worldview/index.js",
+      "sha256": "a3a4a17906812e3f80bbfb3b2801004fcd7ee5259e80cf2b3e7f50f0759e0ebe"
+    },
+    {
+      "sourcePath": "packages/worldview/affinities.js",
+      "archivePath": "data/releases/engine-sources/engine-source-1.5.0/packages/worldview/affinities.js",
+      "sha256": "c024dd7015aee7a78d089265ff8188867eea370a64e8695ebf3028854e014695"
+    }
+  ]
+}
