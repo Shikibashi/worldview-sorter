@@ -136,7 +136,7 @@ try{
  await keyboardContext.close();
  await runRoute(64,{pause:true,detail:true});
  await runRoute(120);
- await runRoute(242);
+ await runRoute(243);
  const historicalBank=JSON.parse(await readFile(path.join(root,'data/items/candidate-v0.9.json'),'utf8'));
  const historicalPilot=JSON.parse(await readFile(path.join(root,'data/pilots/pilot-0.2.json'),'utf8'));
  const historicalPolicy=JSON.parse(await readFile(path.join(root,'data/experience/progressive-depth-v1.2.json'),'utf8'));

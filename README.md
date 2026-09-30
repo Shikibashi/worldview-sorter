@@ -4,9 +4,9 @@ Twelve interface domains, not twelve forced bipolar latent traits.
 
 ## Current release
 
-Candidate bank **0.9.0** contains **562 original candidate items**. The registry has **182 permanent entries**, of which **181 are active**. One bundled legacy ontology construct is deprecated, not silently redefined.
+Candidate bank **0.12.0** contains **566 authored candidate items**. The active registry includes **185 permanent entries**. The public model has **143 direct interpretation rules**, of which **93** have a two-direction authored evidence path on Full. One bundled legacy ontology construct is deprecated, not silently redefined.
 
-This academic update adds 30 distinctions and 90 items. Its 25-entry source ledger distinguishes reviewed scholarly text, abstracts, and metadata-only references. These sources support conceptual distinctions; they do not validate the new questionnaire.
+The historical 0.9.0 academic expansion added 30 distinctions and 90 items. The current source ledger adds claim-level links for subsequent reviewed releases. Sources support conceptual distinctions; they do not validate the questionnaire.
 
 See [academic rationale](docs/ACADEMIC_GROUNDING.md), [item/source matrix](research/academic/CONSTRUCT_SOURCE_MATRIX.md), and [matching contract](docs/PROFILE_MATCHING.md).
 
@@ -58,7 +58,7 @@ See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access 
 
 ## Public quiz experience
 
-The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/242-question depth routes, pause/resume, a labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
+The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/243-question depth routes, pause/resume, a labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
 
 Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 
@@ -72,7 +72,7 @@ The public quiz uses a versioned content blueprint with separate ontology, metap
 
 ## Full and historical routes
 
-The active Full route uses the versioned 242-question successor pilot. The earlier frozen 238-question pilot and older 240-item and 80/120/160-item releases remain available for historical replay. No timer, new scoring assumptions, or automatic submission. Inapplicable branch follow-ups can be skipped. See [full-route behavior and compatibility](docs/FULL_ROUTE.md).
+The active Full route uses the versioned 243-question successor pilot. The earlier frozen 238-question pilot and older 240-item and 80/120/160-item releases remain available for historical replay. No timer, new scoring assumptions, or automatic submission. Inapplicable branch follow-ups can be skipped. See [full-route behavior and compatibility](docs/FULL_ROUTE.md).
 
 ## Evidence-limited 49-construct audit
 
@@ -80,7 +80,7 @@ All 49 constructs unmapped in `coverage-v0.2.json` now have explicit disposition
 
 ## V1 pilot candidate
 
-The active full-depth route is the 242-item `pilot-candidate-1.5.0` in `model-release-1.7.0`. It keeps the earlier 240-question full form and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
+The active full-depth route is the 243-item `pilot-candidate-1.6.0` in `model-release-1.8.0`. It keeps the earlier 242- and 240-question full forms and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
 
 ## Data and optional research contribution
 

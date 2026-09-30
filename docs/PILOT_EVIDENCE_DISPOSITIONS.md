@@ -1,10 +1,10 @@
 # Frozen pilot evidence dispositions
 
-This is the current content-opportunity audit for `generic-1.5.0-pilot` and the 242-item `full-1.5.0` route in model release 1.7.0. The [machine-readable disposition](../data/reviews/pilot-evidence-dispositions-v5.json) contains every affected rule, exact assigned and omitted item revisions, evidence-unit counts, source IDs, the explicit Full-route scope, and the reconciliation with the [older 35-gap route review](../data/reviews/route-review-v1.json). Rebuild with `node scripts/audit-pilot-evidence.mjs --active --write`; CI checks the active artifact with `--active --check`. Versions 1–4 remain pinned for historical releases. This release adds one two-unit direct ethical proposition on Full; Quick and Standard omit it.
+This is the current content-opportunity audit for `generic-1.6.0-pilot` and the 243-item `full-1.6.0` route in model release 1.8.0. The [machine-readable disposition](../data/reviews/pilot-evidence-dispositions-v6.json) contains every affected rule, exact assigned and omitted item revisions, evidence-unit counts, source IDs, the explicit Full-route scope, and the reconciliation with the [older 35-gap route review](../data/reviews/route-review-v1.json). Rebuild with `node scripts/audit-pilot-evidence.mjs --active --write`; CI checks the active artifact with `--active --check`. Versions 1–5 remain pinned for historical releases. This release adds one two-unit direct ethical proposition on Full; Quick and Standard omit it.
 
 ## What the current route can claim
 
-The bank has 565 current candidate items. The versioned Full route assigns 242 exact revisions. Of 142 public direct rules, 92 have at least two assigned authored evidence units capable of support **and** at least two capable of opposition. This is opportunity, not a guaranteed respondent result: neutral, no-view, uncomprehended, missing, and contradictory answers retain their own handling. The other 50 remain `not_measured` by this route.
+The bank has 566 current candidate items. The versioned Full route assigns 243 exact revisions. Of 143 public direct rules, 93 have at least two assigned authored evidence units capable of support **and** at least two capable of opposition. This is opportunity, not a guaranteed respondent result: neutral, no-view, uncomprehended, missing, and contradictory answers retain their own handling. The other 50 remain `not_measured` by this route.
 
 | Current Full-route gap | Rules | Disposition |
 | --- | ---: | --- |
