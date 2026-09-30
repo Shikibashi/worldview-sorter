@@ -60,7 +60,10 @@ assert.equal(report({},'quick').commitments.find(row=>row.commitmentId===ruleId)
 assert.equal(report({},'standard').commitments.find(row=>row.commitmentId===ruleId).state,'not_measured');
 const affinity=evaluatePhilosophicalAffinities({catalog,report:report({PLI126:'entrenched',PLI127:'respect_division'}),model,
  pilot:await read(current.pilotCandidate.path)});
-assert.equal(affinity.traditions.length,7,'New content cannot silently add a complete philosophical identity.');
+assert.equal((await read('data/affinities/catalog-v1.3.json')).traditions.length,7,
+ 'The historical federal release must retain its seven comparisons.');
+assert.equal(affinity.traditions.length,catalog.traditions.length,
+ 'The active catalog must evaluate every scoped comparison without changing federal evidence.');
 assert.ok(affinity.traditions.every(row=>row.identityClaim===false&&row.percentage===null));
 const oldIds=new Set(oldFull.map(ref=>ref.itemId));
 assert.ok(newFull.every((ref,index)=>ref.itemId!=='PLI127'||index>newFull.findIndex(row=>row.itemId==='PLI126')));

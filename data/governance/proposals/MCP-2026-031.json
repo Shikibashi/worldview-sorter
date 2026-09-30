@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-epistemic-affinity-release.mjs"
+    ]
+  },
+  "implementationRefs": [
+    "scripts/build-epistemic-affinities-v1.mjs",
+    "scripts/test-epistemic-affinity-release.mjs",
+    "docs/governance/EPISTEMIC_AFFINITY_REVIEW.md"
+  ],
+  "respondentImpact": "Only a supported or opposed direct epistemic proposition can establish overlap or divergence. Quick and Standard retain their route-specific unmeasured doctrine; no identity or percentage is produced.",
+  "historicalCompatibility": "Model release 1.5 and its seven-entry catalog remain byte-for-byte pinned. No old answer, question wording, or historical affinity result is rewritten.",
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Reviewed IEP Fallibilism and SEP Rationalism vs. Empiricism, scope, neighbors, and non-entailments."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Checked exact existing item revisions, route opportunity, historical snapshots, and near-neighbor regression."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Canonical English only. Spanish and Arabic remain unavailable draft targets."
+      }
+    ]
+  },
+  "proposalId": "MCP-2026-031",
+  "title": "Add scoped comparison Fallible knowledge",
+  "objectType": "tradition",
+  "changeClass": "new_object",
+  "affectedObjects": [
+    {
+      "type": "tradition",
+      "id": "fallibilism-about-knowledge"
+    }
+  ],
+  "currentBehavior": "The catalog showed no separate comparison for this narrow epistemic position.",
+  "proposedBehavior": "The catalog compares the exact defining proposition and displays characteristic, disputed, and unmeasured doctrine.",
+  "rationale": "This is a sourced doctrinal comparison over a public interpreted proposition, not an identity assignment.",
+  "sourceClaims": [
+    {
+      "sourceId": "iep-fallibilism",
+      "relationship": "supports",
+      "claim": "Fallibilistic knowledge can be knowledge even when its justification does not conclusively eliminate possible error; this need not imply skepticism."
+    }
+  ],
+  "alternatives": [
+    "Infer a complete epistemological identity: rejected because the items cover only one subject-scoped doctrine.",
+    "Map from adjacent scientific trust or generic revision items: rejected because those are near-neighbor false positives."
+  ],
+  "philosophicalBasis": {
+    "proposition": "A claim can count as knowledge even when its justification leaves open a possibility of error.",
+    "neighboringViews": [
+      "infallibilism about knowledge",
+      "skepticism",
+      "pragmatism",
+      "ordinary willingness to revise"
+    ],
+    "nonEntailments": [
+      "Fallible knowledge does not entail skepticism or that usefulness makes a belief true.",
+      "It does not entail pragmatism or the impossibility of any infallible belief."
+    ],
+    "existingGap": "The reviewed candidate was absent from the public catalog despite a direct, route-tested proposition.",
+    "scholarlyDisagreement": "IEP distinguishes fallibilistic knowledge from skepticism. The pilot asks whether fallible justification can sometimes suffice; it does not test a universal thesis that no belief can be conclusively justified."
+  },
+  "release": {
+    "targetVersion": "model-release-1.6.0",
+    "migration": "No data migration. Historical administrations resolve through their pinned 1.5 model, route, catalog, and engine source.",
+    "components": [
+      "affinity"
+    ]
+  }
+}

@@ -410,10 +410,14 @@ try{
  check('A doctrinal criterion exposes its own academic and primary sources',
   await pragmatism.locator('.affinity-criterion').first().locator('a').count()===2&&
   (await pragmatism.locator('.affinity-criterion').first().innerText()).includes('Criterion sources:'));
- check('Each mapped affinity criterion discloses its unresolved proposition basis',
-  (await pragmatism.locator('.affinity-criterion').first().innerText()).includes('This mapped rule has no separately reviewed exact proposition.')&&
-  (await pragmatism.locator('.affinity-criterion').filter({hasText:'Interpreted proposition:'}).first().innerText())
-   .includes('lacks a rule-linked supporting academic claim.'));
+ const pragmaticMaxim=pragmatism.locator('.affinity-criterion').filter({hasText:'The meaning of a contested conception'});
+ const inquiryFallibilism=pragmatism.locator('.affinity-criterion').filter({hasText:'Inquiry can yield knowledge'});
+ const inquiryPractice=pragmatism.locator('.affinity-criterion').filter({hasText:'Inquiry is an ongoing practice'});
+ check('Mapped affinity criteria disclose their distinct proposition review states',
+  (await pragmaticMaxim.innerText()).includes('This mapped rule has no separately reviewed exact proposition.')&&
+  (await inquiryFallibilism.innerText()).includes('Interpreted proposition: A claim can count as knowledge')&&
+  !(await inquiryFallibilism.innerText()).includes('lacks a rule-linked supporting academic claim.')&&
+  (await inquiryPractice.innerText()).includes('lacks a rule-linked supporting academic claim.'));
  const pragmaticDomain=fullPage.locator('#domain-map .domain').filter({has:
   fullPage.locator('.pattern[data-commitment-id="construct-EP16"]')}).first();
  await pragmaticDomain.locator('details > summary').first().click();

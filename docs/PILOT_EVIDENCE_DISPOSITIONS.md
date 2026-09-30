@@ -1,6 +1,6 @@
 # Frozen pilot evidence dispositions
 
-This is the current content-opportunity audit for `generic-1.3.0-pilot` and the 240-item `full-1.3.0` route in model release 1.5.0. The [machine-readable disposition](../data/reviews/pilot-evidence-dispositions-v3.json) contains every affected rule, exact assigned and omitted item revisions, evidence-unit counts, source IDs, the explicit Full-route scope, and the reconciliation with the [older 35-gap route review](../data/reviews/route-review-v1.json). Rebuild with `node scripts/audit-pilot-evidence.mjs --active --write`; CI checks the active artifact with `--active --check`. Versions 1 and 2 remain pinned for historical releases.
+This is the current content-opportunity audit for `generic-1.4.0-pilot` and the 240-item `full-1.4.0` route in model release 1.6.0. The [machine-readable disposition](../data/reviews/pilot-evidence-dispositions-v4.json) contains every affected rule, exact assigned and omitted item revisions, evidence-unit counts, source IDs, the explicit Full-route scope, and the reconciliation with the [older 35-gap route review](../data/reviews/route-review-v1.json). Rebuild with `node scripts/audit-pilot-evidence.mjs --active --write`; CI checks the active artifact with `--active --check`. Versions 1–3 remain pinned for historical releases. This release changes source and catalog claims, not route evidence opportunities.
 
 ## What the current route can claim
 

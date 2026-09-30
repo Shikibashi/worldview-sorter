@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-epistemic-affinity-release.mjs"
+    ]
+  },
+  "implementationRefs": [
+    "scripts/build-epistemic-affinities-v1.mjs",
+    "scripts/test-epistemic-affinity-release.mjs",
+    "docs/governance/EPISTEMIC_AFFINITY_REVIEW.md"
+  ],
+  "respondentImpact": "Only a supported or opposed direct epistemic proposition can establish overlap or divergence. Quick and Standard retain their route-specific unmeasured doctrine; no identity or percentage is produced.",
+  "historicalCompatibility": "Model release 1.5 and its seven-entry catalog remain byte-for-byte pinned. No old answer, question wording, or historical affinity result is rewritten.",
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Reviewed IEP Fallibilism and SEP Rationalism vs. Empiricism, scope, neighbors, and non-entailments."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Checked exact existing item revisions, route opportunity, historical snapshots, and near-neighbor regression."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Canonical English only. Spanish and Arabic remain unavailable draft targets."
+      }
+    ]
+  },
+  "proposalId": "MCP-2026-029",
+  "title": "Record exact sourced proposition for construct-EP15",
+  "objectType": "proposition",
+  "changeClass": "semantic_clarification",
+  "affectedObjects": [
+    {
+      "type": "proposition",
+      "id": "construct-EP15"
+    }
+  ],
+  "currentBehavior": "The same direct evidence was already interpreted, but the rule lacked an explicit source-linked proposition field.",
+  "proposedBehavior": "Keep the exact evidence and answer meanings while pinning the narrow proposition and supporting scholarly claim.",
+  "rationale": "Catalog mappings must consume a sourced, exact interpreted proposition rather than an associated construct name.",
+  "sourceClaims": [
+    {
+      "sourceId": "iep-fallibilism",
+      "relationship": "supports",
+      "claim": "Fallibilistic knowledge can be knowledge even when its justification does not conclusively eliminate possible error; this need not imply skepticism."
+    }
+  ],
+  "alternatives": [
+    "Use the broad EP label as doctrine: rejected because it would hide the actual proposition.",
+    "Write new questions: rejected because the existing three-item bundle already directly addresses this narrow claim."
+  ],
+  "philosophicalBasis": {
+    "proposition": "A claim can count as knowledge even when its justification leaves open a possibility of error.",
+    "neighboringViews": [
+      "mere belief revision",
+      "skepticism",
+      "pragmatism",
+      "infallibilism"
+    ],
+    "nonEntailments": [
+      "Useful beliefs are automatically true",
+      "All possible beliefs are fallible"
+    ],
+    "existingGap": "The public direct rule had a scope but no exact proposition and rule-linked supporting claim for governed affinity use.",
+    "scholarlyDisagreement": "The scope and strength of fallibilism vary; this rule addresses only whether fallible justification can sometimes suffice for knowledge."
+  },
+  "release": {
+    "targetVersion": "model-release-1.6.0",
+    "migration": "No data migration. Historical administrations resolve through their pinned 1.5 model, route, catalog, and engine source.",
+    "components": [
+      "model",
+      "pilot",
+      "full_form",
+      "progressive_routes"
+    ]
+  }
+}
