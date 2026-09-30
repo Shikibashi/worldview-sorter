@@ -1,0 +1,21 @@
+{
+  "version": "0.10.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.9.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-09-30",
+  "note": "Two reviewed federal-division candidate items. Source-backed content, not empirical validation.",
+  "itemCount": 564,
+  "newItemCount": 2,
+  "registryEntries": 183,
+  "activeConstructCount": 182,
+  "newConstructCount": 1,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.9.json": "3ab53fe4d312cc3980f653c02e6501f446b7e24e11e8774dea247f22184af89c",
+    "data/constructs.json": "957ef19d4f2bad343846841d1c73343875fab07aaedb2a75202f8938a7324aa2"
+  },
+  "publicInferenceAllowed": false
+}
