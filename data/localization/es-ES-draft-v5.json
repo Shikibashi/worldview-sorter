@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "worldview-localization-bundle-1",
+  "bundleVersion": "localization-es-ES-draft-5",
+  "locale": "es-ES",
+  "language": "es",
+  "direction": "ltr",
+  "status": "untranslated",
+  "canonical": false,
+  "bankVersion": "0.10.0",
+  "modelVersion": "generic-1.4.0-pilot",
+  "affinityCatalogVersion": "philosophical-affinity-1.4.0",
+  "itemRealizations": [],
+  "scaleRealizations": [],
+  "propositionRealizations": [],
+  "affinityRealizations": [],
+  "resultStates": {},
+  "uiStrings": {},
+  "sourceNotes": "Candidate locale only. No Spanish philosophical wording, answer categories, or result claims have been approved. PLI126/PLI127 and the PL34 proposition require translation and contextual review before activation. The two new epistemic comparison entries need linguistic and philosophical review before use.",
+  "sourceRealizations": [],
+  "terminologyDecisions": []
+}

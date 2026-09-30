@@ -1,0 +1,647 @@
+{
+  "schemaVersion": "1.0.0",
+  "sources": [
+    {
+      "id": "acad-bush-moss-2020",
+      "authors": [
+        "Lance S. Bush",
+        "David Moss"
+      ],
+      "title": "Misunderstanding Metaethics: Difficulties Measuring Folk Objectivism and Relativism",
+      "url": "https://doi.org/10.33392/diam.1495",
+      "year": 2020,
+      "evidenceType": "peer_reviewed_methodological_critique",
+      "access": "publisher_abstract_reviewed",
+      "implication": "Selecting a response can reflect an unintended interpretation rather than the construct the author intended."
+    },
+    {
+      "id": "acad-clark-watson",
+      "kind": "academic",
+      "title": "Clark & Watson (2019): Constructing Validity: New Developments in Creating Objective Measuring Instruments",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30896212/",
+      "use": "Psychological Assessment 31, 1412–1427; DOI 10.1037/pas0000626",
+      "evidenceType": "measurement_methodology",
+      "access": "publisher_metadata_only",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-constructivism",
+      "kind": "academic",
+      "title": "Carla Bagnoli: Constructivism in Metaethics",
+      "url": "https://plato.stanford.edu/entries/constructivism-metaethics/",
+      "use": "Objectivity, procedures and realism disputes",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-contractarianism",
+      "kind": "academic",
+      "title": "Stanford Encyclopedia of Philosophy: Contractarianism",
+      "url": "https://plato.stanford.edu/entries/contractarianism/",
+      "use": "Mutual advantage contrasted with contractualist justification",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-egoism",
+      "kind": "academic",
+      "title": "Robert Shaver: Egoism",
+      "url": "https://plato.stanford.edu/entries/egoism/",
+      "use": "1–3; psychological, ethical and rational egoism",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-epistemology",
+      "kind": "academic",
+      "title": "Stanford Encyclopedia of Philosophy: Epistemology",
+      "url": "https://plato.stanford.edu/entries/epistemology/",
+      "use": "Knowledge, justification, sources and foundational structure",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-fwi",
+      "kind": "academic",
+      "title": "Nadelhoffer et al. (2014): The Free Will Inventory",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24561311/",
+      "use": "Separate free-will, determinism and dualism beliefs",
+      "evidenceType": "instrument_development_research",
+      "access": "abstract_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-hasnas",
+      "kind": "academic",
+      "title": "John Hasnas (2024): The Obviousness of Anarchy, in Common Law Liberalism",
+      "url": "https://doi.org/10.1093/9780197784631.003.0009",
+      "use": "Chapter 8, 264–294; practical argument for nonpolitical law, adjudication and protection",
+      "evidenceType": "academic_monograph_chapter",
+      "access": "publisher_abstract_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-legitimacy",
+      "kind": "academic",
+      "title": "Fabienne Peter: Political Legitimacy",
+      "url": "https://plato.stanford.edu/entries/legitimacy/",
+      "use": "2.1–2.3: authority, coercion and political obligation",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-marschall",
+      "kind": "academic",
+      "title": "Marschall (2021; online 2019): Easy Ontology, Quantification, and Realism",
+      "url": "https://doi.org/10.1007/s11229-019-02463-8",
+      "use": "Sections 1–2 and argument about the proposed compatibility with realism",
+      "evidenceType": "peer_reviewed_philosophical_argument",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-mfq2",
+      "kind": "academic",
+      "title": "Atari et al. (2023): Morality Beyond the WEIRD: How the Nomological Network of Morality Varies Across Cultures",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37589704/",
+      "use": "MFQ-2 development; six foundations",
+      "evidenceType": "instrument_development_research",
+      "access": "abstract_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-nominalism",
+      "kind": "academic",
+      "title": "Sam Cowling & Daniel Giberman: Nominalism in Metaphysics",
+      "url": "https://plato.stanford.edu/entries/nominalism-metaphysics/",
+      "use": "Abstract objects and universals are distinct issues",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-obligation",
+      "kind": "academic",
+      "title": "Dagger & Lefkowitz: Political Obligation",
+      "url": "https://plato.stanford.edu/entries/political-obligation/",
+      "use": "Problem of political obligation; consent; philosophical anarchism",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-ostrom",
+      "kind": "academic",
+      "title": "Elinor Ostrom (2010): Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
+      "url": "https://doi.org/10.1257/aer.100.3.641",
+      "use": "AER 100(3), 641–672; polycentric governance is not a synonym for state abolition",
+      "evidenceType": "peer_reviewed_institutional_research",
+      "access": "publisher_metadata_only",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-ous",
+      "kind": "academic",
+      "title": "Kahane et al. (2018): Beyond Sacrificial Harm: A Two-Dimensional Model of Utilitarian Psychology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29265854/",
+      "use": "Impartial beneficence versus instrumental harm",
+      "evidenceType": "instrument_development_research",
+      "access": "abstract_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-polzler-2018",
+      "kind": "academic",
+      "title": "Pölzler (2018): How to Measure Moral Realism",
+      "url": "https://doi.org/10.1007/s13164-018-0401-8",
+      "use": "Guidelines G1–G5; truth-aptness, universality, error theory and contamination",
+      "evidenceType": "peer_reviewed_methodological_article",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-polzler-wright",
+      "kind": "academic",
+      "title": "Pölzler & Wright (2020): Anti-Realist Pluralism: A New Approach to Folk Metaethics",
+      "url": "https://doi.org/10.1007/s13164-019-00447-8",
+      "use": "Folk metaethical pluralism across judgments",
+      "evidenceType": "peer_reviewed_research",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-pragmatism",
+      "kind": "academic",
+      "title": "Legg & Hookway: Pragmatism",
+      "url": "https://plato.stanford.edu/entries/pragmatism/",
+      "use": "Pragmatic maxim; inquiry, truth and realism",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-promises",
+      "kind": "academic",
+      "title": "Allen Habib: Promises",
+      "url": "https://plato.stanford.edu/entries/promises/",
+      "use": "Normative powers, practice and expectation accounts; contract",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-rand",
+      "kind": "academic",
+      "title": "Badhwar & Long: Ayn Rand",
+      "url": "https://plato.stanford.edu/entries/ayn-rand/",
+      "use": "Sections 1.3, 2.1–2.6 and 3.1",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-rand-epistemology",
+      "kind": "academic",
+      "title": "Badhwar & Long: Rand, Epistemology and Metaphysics",
+      "url": "https://plato.stanford.edu/entries/ayn-rand/supplement.html",
+      "use": "A.1–A.4; fallible judgments, concepts, contextual certainty and agency",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-rights",
+      "kind": "academic",
+      "title": "Leif Wenar: Rights",
+      "url": "https://plato.stanford.edu/entries/rights/",
+      "use": "Functions, forms and justification of rights",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-simmons",
+      "kind": "academic",
+      "title": "A. John Simmons (1999): Justification and Legitimacy",
+      "url": "https://doi.org/10.1086/233944",
+      "use": "Ethics 109(4), 739–771; supplement with the SEP accounts for substantive interpretation",
+      "evidenceType": "peer_reviewed_philosophical_argument",
+      "access": "publisher_metadata_only",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-social-ontology",
+      "kind": "academic",
+      "title": "Brian Epstein: Social Ontology",
+      "url": "https://plato.stanford.edu/entries/social-ontology/",
+      "use": "Social dependence, group agents and methodological individualism",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-stirner",
+      "kind": "academic",
+      "title": "David Leopold: Max Stirner",
+      "url": "https://plato.stanford.edu/entries/max-stirner/",
+      "use": "2.2–2.4; ownness, fixed ideas, human essence, association",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "text_reviewed",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-thomasson",
+      "kind": "academic",
+      "title": "Amie L. Thomasson (2015): Ontology Made Easy",
+      "url": "https://global.oup.com/academic/product/ontology-made-easy-9780190878665",
+      "use": "Publisher description and contents only; not full-book access",
+      "evidenceType": "academic_monograph",
+      "access": "publisher_metadata_only",
+      "reviewedOn": "2026-09-28",
+      "reuse": "No questionnaire wording copied; theory-level reference only."
+    },
+    {
+      "id": "acad-yang-2026",
+      "authors": [
+        "Qiongda Yang"
+      ],
+      "title": "Driving the Chariot North: How Experimental Metaethics Has Gone South with Error Theory and Non-Cognitivism",
+      "url": "https://doi.org/10.1007/s13164-026-00835-x",
+      "year": 2026,
+      "evidenceType": "peer_reviewed_methodological_critique",
+      "access": "full_html_text_reviewed",
+      "locator": "Sections 4–7: explicit endorsement versus implicit commitment and expressivism versus truth-aptness",
+      "implication": "Do not infer that ordinary truth or disagreement language uniquely establishes realism; expressivists may accommodate such language. This is a critique, not a settled consensus."
+    },
+    {
+      "id": "ari-objectivism",
+      "kind": "primary_source",
+      "title": "Ayn Rand Institute — Introducing Objectivism / Objectivism overview",
+      "url": "https://courses.aynrand.org/works/introducing-objectivism/",
+      "use": "Primary-source basis for the Objectivism reference profile: reality independent of wishes, reason/sense as the basis of knowledge, rational self-interest, individual rights, and laissez-faire capitalism with rights-protecting government."
+    },
+    {
+      "id": "free-will-inventory",
+      "kind": "instrument",
+      "title": "Free Will Inventory",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24561311/",
+      "use": "Separates free-will, determinism, and related beliefs."
+    },
+    {
+      "id": "gen-afterlife",
+      "title": "Afterlife",
+      "url": "https://plato.stanford.edu/entries/afterlife/",
+      "locator": "Introduction and sections 1–3: survival, dualism, materialism",
+      "claim": "Survival after biological death is a distinct question; dualism does not guarantee it and materialist accounts of survival are discussed.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "Conceptual reference only; no question wording copied."
+    },
+    {
+      "id": "gen-agency",
+      "title": "Free Will",
+      "url": "https://plato.stanford.edu/entries/freewill/",
+      "locator": "Compatibilism and incompatibilism",
+      "claim": "Belief in determinism does not settle whether freedom is compatible with it.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-antirealism",
+      "title": "Moral Anti-Realism",
+      "url": "https://plato.stanford.edu/entries/moral-anti-realism/",
+      "locator": "Introduction and varieties",
+      "claim": "Anti-realism includes different positions; disagreeing with realism does not uniquely select one.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-care",
+      "title": "Care Ethics",
+      "url": "https://iep.utm.edu/care-ethics/",
+      "locator": "Definition, development and challenges",
+      "claim": "Relational moral reasoning is not identical to a generic desire to prevent harm.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "Theory only; no question copying."
+    },
+    {
+      "id": "gen-consequentialism",
+      "title": "Consequentialism",
+      "url": "https://plato.stanford.edu/entries/consequentialism/",
+      "locator": "Introduction and classical consequentialism",
+      "claim": "Consequentialist theories differ in what is evaluated and which consequences matter; considering consequences alone does not establish consequentialism.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-contractualism",
+      "title": "Contractualism",
+      "url": "https://plato.stanford.edu/entries/contractualism/",
+      "locator": "Sections 1–3",
+      "claim": "Reasonable rejection by persons differs from bargaining for mutual advantage and from aggregation.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-deontology",
+      "title": "Deontological Ethics",
+      "url": "https://plato.stanford.edu/entries/ethics-deontological/",
+      "locator": "Introduction and types of deontological theory",
+      "claim": "Constraints, permissions and agent-relative duties are not interchangeable with a single consequence-insensitivity score.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-distribution",
+      "title": "Distributive Justice",
+      "url": "https://plato.stanford.edu/entries/justice-distributive/",
+      "locator": "Equality, welfare, desert and libertarian principles",
+      "claim": "Distributive principles are competing and sometimes overlapping reasons, not synonyms for parties or single-policy preferences.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-extended",
+      "title": "Embodied Cognition",
+      "url": "https://plato.stanford.edu/entries/embodied-cognition/",
+      "locator": "Section 2.3 and constitution through coupling",
+      "claim": "Embedded causal support and constitutive cognitive extension are different claims.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-identity",
+      "title": "Personal Identity",
+      "url": "https://plato.stanford.edu/entries/identity-personal/",
+      "locator": "Persistence and psychological approaches",
+      "claim": "Bodily continuity, psychological continuity and practical concern need not coincide.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-law",
+      "title": "Legal Positivism",
+      "url": "https://plato.stanford.edu/entries/legal-positivism/",
+      "locator": "Social facts, sources and morality",
+      "claim": "A position about legal validity does not itself establish a moral duty to obey law.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-liberty",
+      "title": "Positive and Negative Liberty",
+      "url": "https://plato.stanford.edu/entries/liberty-positive-negative/",
+      "locator": "Sections 1, 4 and 6",
+      "claim": "Noninterference, self-direction and non-domination involve distinct questions and do not by themselves determine a complete politics.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-meaning",
+      "title": "The Meaning of Life",
+      "url": "https://plato.stanford.edu/entries/life-meaning/",
+      "locator": "Naturalism, supernaturalism and nihilism",
+      "claim": "Objective meaning need not require a cosmic designer; absence of cosmic purpose is not absence of every kind of meaning.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-naturalism",
+      "title": "Naturalism",
+      "url": "https://plato.stanford.edu/entries/naturalism/",
+      "locator": "Ontological and methodological naturalism",
+      "claim": "Naturalistic methods and claims about what exists are distinguishable.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-noncognitivism",
+      "title": "Moral Cognitivism vs. Non-Cognitivism",
+      "url": "https://plato.stanford.edu/entries/moral-cognitivism/",
+      "locator": "Introduction and quasi-realism",
+      "claim": "Sophisticated expressivist accounts can accommodate truth-talk; one truth-aptness answer cannot identify the whole theory.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-physicalism",
+      "title": "Physicalism",
+      "url": "https://plato.stanford.edu/entries/physicalism/",
+      "locator": "Formulating physicalism and varieties",
+      "claim": "Physicalism does not require one simple reductionist theory or decide every abstract-object question.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-realism",
+      "title": "Moral Realism",
+      "url": "https://plato.stanford.edu/entries/moral-realism/",
+      "locator": "Introduction and truth/objectivity distinctions",
+      "claim": "Truth-aptness and actual moral truth are distinct commitments; realism is not inferred from tolerance.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-theology",
+      "title": "Atheism and Agnosticism",
+      "url": "https://plato.stanford.edu/entries/atheism-agnosticism/",
+      "locator": "Definitions and agnosticism",
+      "claim": "Theological belief, suspended judgment and epistemic claims about knowledge must be distinguished.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-values",
+      "title": "Schwartz (2012): An Overview of the Schwartz Theory of Basic Values",
+      "url": "https://scholarworks.gvsu.edu/orpc/vol2/iss1/11/",
+      "locator": "Author abstract and conceptual overview",
+      "claim": "Value priorities differ from attitudes, beliefs, norms and personality traits. The basic value model describes relations among motivations.",
+      "access": "abstract_reviewed",
+      "evidenceType": "author_theoretical_overview",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No questionnaire wording reused."
+    },
+    {
+      "id": "gen-virtue",
+      "title": "Virtue Ethics",
+      "url": "https://plato.stanford.edu/entries/ethics-virtue/",
+      "locator": "Introduction and varieties",
+      "claim": "Character, practical wisdom and flourishing figure differently across virtue-ethical approaches.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "gen-wellbeing",
+      "title": "Well-Being",
+      "url": "https://plato.stanford.edu/entries/well-being/",
+      "locator": "Sections 1 and 4",
+      "claim": "Personal value priorities, moral rightness and theories of what is good for someone are distinct.",
+      "access": "selected_sections_reviewed",
+      "evidenceType": "signed_scholarly_analysis",
+      "reviewedOn": "2026-09-28",
+      "itemReuse": "No item wording copied; conceptual reference only."
+    },
+    {
+      "id": "koltko-2004",
+      "kind": "article",
+      "title": "The Psychology of Worldviews",
+      "url": "https://doi.org/10.1037/1089-2680.8.1.3",
+      "use": "Broad multidimensional worldview taxonomy."
+    },
+    {
+      "id": "mfq2",
+      "kind": "instrument",
+      "title": "Moral Foundations Questionnaire-2",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37589704/",
+      "use": "Six-foundation moral-intuition structure."
+    },
+    {
+      "id": "oxford-utilitarianism",
+      "kind": "instrument",
+      "title": "Oxford Utilitarianism Scale / two-dimensional utilitarian psychology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29265854/",
+      "use": "Separates impartial beneficence from instrumental-harm permissiveness."
+    },
+    {
+      "id": "philpapers-2020",
+      "kind": "survey",
+      "title": "2020 PhilPapers Survey question design",
+      "url": "https://survey2020.philpeople.org/survey/design/questions",
+      "use": "Taxonomy of contemporary philosophical positions."
+    },
+    {
+      "id": "primal-world-beliefs",
+      "kind": "instrument",
+      "title": "Primal World Beliefs",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30299119/",
+      "use": "Broad beliefs such as Safe, Enticing, and Alive."
+    },
+    {
+      "id": "project-theory",
+      "kind": "project",
+      "title": "Worldview Sorter construct review",
+      "url": "https://github.com/Shikibashi/worldview-sorter",
+      "use": "Project-specific distinctions that require later empirical validation."
+    },
+    {
+      "id": "schwartz-refined",
+      "kind": "instrument",
+      "title": "Refined Theory of Basic Human Values",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22823292/",
+      "use": "Nineteen-value motivational continuum."
+    },
+    {
+      "id": "sdo7",
+      "kind": "instrument",
+      "title": "Social Dominance Orientation 7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26479362/",
+      "use": "Separates dominance and anti-egalitarian facets."
+    },
+    {
+      "id": "world-values-survey",
+      "kind": "survey",
+      "title": "World Values Survey",
+      "url": "https://www.worldvaluessurvey.org/",
+      "use": "Broad external attitudes and validation criteria."
+    },
+    {
+      "id": "audit-federalism",
+      "kind": "academic",
+      "title": "Federalism",
+      "url": "https://plato.stanford.edu/entries/federalism/",
+      "use": "Introduction and section 1: entrenched division in federations versus revocable unitary decentralization and member-controlled confederation.",
+      "evidenceType": "scholarly_reference",
+      "access": "selected_sections_reviewed",
+      "reviewedOn": "2026-09-30",
+      "reuse": "Conceptual basis only. New item text is original and has no empirical validation."
+    },
+    {
+      "id": "iep-fallibilism",
+      "kind": "academic",
+      "title": "Internet Encyclopedia of Philosophy: Fallibilism",
+      "url": "https://iep.utm.edu/fallibil/",
+      "use": "Formulating fallible knowledge and distinguishing it from skepticism and mere belief revision.",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "selected_sections_reviewed",
+      "reviewedOn": "2026-09-30",
+      "reuse": "Conceptual basis only; the original questions are not empirically validated."
+    },
+    {
+      "id": "sep-rationalism-empiricism",
+      "kind": "academic",
+      "title": "Stanford Encyclopedia of Philosophy: Rationalism vs. Empiricism",
+      "url": "https://plato.stanford.edu/entries/rationalism-empiricism/",
+      "use": "Sections 1.1–1.2: experience as the source of knowledge about the external world, with reasoning still able to organize it.",
+      "evidenceType": "signed_scholarly_synthesis",
+      "access": "selected_sections_reviewed",
+      "reviewedOn": "2026-09-30",
+      "reuse": "Conceptual basis only; the original questions are not empirically validated."
+    }
+  ]
+}

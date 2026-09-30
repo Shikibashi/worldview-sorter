@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-epistemic-affinity-release.mjs"
+    ]
+  },
+  "implementationRefs": [
+    "scripts/build-epistemic-affinities-v1.mjs",
+    "scripts/test-epistemic-affinity-release.mjs",
+    "docs/governance/EPISTEMIC_AFFINITY_REVIEW.md"
+  ],
+  "respondentImpact": "Only a supported or opposed direct epistemic proposition can establish overlap or divergence. Quick and Standard retain their route-specific unmeasured doctrine; no identity or percentage is produced.",
+  "historicalCompatibility": "Model release 1.5 and its seven-entry catalog remain byte-for-byte pinned. No old answer, question wording, or historical affinity result is rewritten.",
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Reviewed IEP Fallibilism and SEP Rationalism vs. Empiricism, scope, neighbors, and non-entailments."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Checked exact existing item revisions, route opportunity, historical snapshots, and near-neighbor regression."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T19:16:00Z",
+        "note": "Canonical English only. Spanish and Arabic remain unavailable draft targets."
+      }
+    ]
+  },
+  "proposalId": "MCP-2026-038",
+  "title": "Review sensory-empiricism-about-the-external-world / experience-beyond-external-facts",
+  "objectType": "criterion",
+  "changeClass": "new_object",
+  "affectedObjects": [
+    {
+      "type": "criterion",
+      "id": "sensory-empiricism-about-the-external-world/experience-beyond-external-facts"
+    }
+  ],
+  "currentBehavior": "This doctrinal criterion was absent from the historical seven-entry catalog.",
+  "proposedBehavior": "Record this nonessential doctrinal area as unmeasured; it cannot add overlap.",
+  "rationale": "Separate defining doctrine from historically associated or disputed views and keep missing criteria visible.",
+  "sourceClaims": [
+    {
+      "sourceId": "sep-rationalism-empiricism",
+      "relationship": "supports",
+      "claim": "The SEP discussion distinguishes subject areas and notes that historical figures need not fit one pure camp."
+    }
+  ],
+  "alternatives": [
+    "Infer a complete epistemological identity: rejected because the items cover only one subject-scoped doctrine.",
+    "Map from adjacent scientific trust or generic revision items: rejected because those are near-neighbor false positives."
+  ],
+  "philosophicalBasis": {
+    "proposition": "Empiricists differ about how far experience constrains mathematics, morality, and other domains.",
+    "neighboringViews": [
+      "a priori rationalism about external facts",
+      "trust in scientific institutions",
+      "Objectivist reason and perception",
+      "global empiricism"
+    ],
+    "nonEntailments": [
+      "This position does not entail atheism, physicalism, or that mathematics has no a priori warrant.",
+      "It does not entail that observation alone is sufficient without reasoning or that every historical empiricist holds the same view."
+    ],
+    "existingGap": "The reviewed candidate was absent from the public catalog despite a direct, route-tested proposition.",
+    "scholarlyDisagreement": "SEP treats empiricism and rationalism as subject-relative and warns against treating historical thinkers as pure types. The item bundle asks about external facts, not every possible subject."
+  },
+  "release": {
+    "targetVersion": "model-release-1.6.0",
+    "migration": "No data migration. Historical administrations resolve through their pinned 1.5 model, route, catalog, and engine source.",
+    "components": [
+      "affinity"
+    ]
+  }
+}
