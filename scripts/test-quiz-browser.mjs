@@ -348,6 +348,13 @@ try{
     /complete earlier state/i.test(await fullPage.locator('#question-title').innerText())&&
     /do not settle/i.test(await fullPage.locator('#answer-options').innerText()));
   }
+  if(currentId==='EPI122'){
+   check('Revelation warrant discriminator fits mobile and separates inquiry from factual reason',
+    await fullPage.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)&&
+    await fullPage.locator('#answer-options .answer').count()===3&&
+    /for that person/i.test(await fullPage.locator('#question-title').innerText())&&
+    /prompt investigation/i.test(await fullPage.locator('#answer-options').innerText()));
+  }
   const scale=await fullPage.locator('#quiz').getAttribute('data-scale');fullScales.add(scale);
   if(scale==='ranking_all'){
    const selects=fullPage.locator('#answer-options select');

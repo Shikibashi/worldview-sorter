@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-082",
+  "title": "Scope revelation evidence to defeasible first-person factual warrant",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"item","id":"EPI122"},
+    {"type":"proposition","id":"audit2-EP10-revelation"},
+    {"type":"result_semantics","id":"model-policy"},
+    {"type":"result_semantics","id":"affinity-catalog-policy"},
+    {"type":"route","id":"quick"},
+    {"type":"route","id":"standard"},
+    {"type":"route","id":"full"},
+    {"type":"route","id":"route-policy"},
+    {"type":"source","id":"sep-religious-experience-warrant"},
+    {"type":"source","id":"sep-divine-revelation-warrant"},
+    {"type":"localization","id":"bundle/ar"},
+    {"type":"localization","id":"bundle/en-US"},
+    {"type":"localization","id":"bundle/es-ES"},
+    {"type":"localization","id":"catalog/ar"},
+    {"type":"localization","id":"catalog/en-US"},
+    {"type":"localization","id":"catalog/es-ES"},
+    {"type":"localization","id":"catalog/model-binding"}
+  ],
+  "currentBehavior": "EPI021@1 is audience-ambiguous and EPI032@1 explicitly asks about the experiencer. The rule combines them under a broad some-justification claim, but excludes EPI032's explicit some answer from support.",
+  "proposedBehavior": "A new exact first-person, defeasible-initial-reason proposition uses EPI032@1 and EPI122@1. EPI032 substantial/some and EPI122 initial_reason support; EPI032 none and EPI122 investigation_only oppose. Little and depends_on_case remain nondirectional. EPI021 leaves the current public routes and evidence rule but remains historical.",
+  "rationale": "A reason to investigate a claim is not necessarily a factual reason in favor of its content. The revised question directly distinguishes these accounts for the experiencer without forcing a judgment about an outsider. The existing amount-of-justification vignette supplies complementary but unvalidated authored evidence.",
+  "philosophicalBasis": {
+    "proposition": "An apparent divine revelation can sometimes give its experiencer an initial factual reason in favor of its content before independent verification, even if that reason may later be defeated.",
+    "neighboringViews": ["Investigation-only response to revelation", "Substantial standalone first-person warrant", "Outsider testimonial warrant", "Inferential justification requiring corroboration"],
+    "nonEntailments": ["The revelation occurred or is true", "Sincerity alone makes the belief justified", "The reason is sufficient for settled belief", "Outsiders receive the same warrant", "Religious identity", "Moral or political authority"],
+    "existingGap": "The general reverse-keyed EPI021 has no audience, EPI032 some is omitted from support, and draft EPI120 bundles first-person strength with outsider assessment.",
+    "scholarlyDisagreement": "SEP describes competing arguments and defeaters for religious experience, not a consensus that every apparent revelation justifies belief. First-person grounds and testimonial grounds for hearers are distinct questions."
+  },
+  "sourceClaims": [
+    {"sourceId":"sep-religious-experience-warrant","relationship":"supports","claim":"A recognized account permits an apparent religious experience to give its subject defeasible initial grounds for a factual belief without independent verification; the subject's grounds and an outsider's testimonial grounds are distinct and disputed."},
+    {"sourceId":"sep-divine-revelation-warrant","relationship":"context","claim":"The epistemic status of putative revelation is disputed; revelation as an apparent communication is distinct from the truth of its content and from its authority for outsiders."}
+  ],
+  "alternatives": [
+    "Keep EPI021 as directional evidence: rejected because its audience and strength are ambiguous.",
+    "Promote draft EPI120 unchanged: rejected because its answers bundle first-person strength with outsider warrant and repeat EPI032's scenario.",
+    "Infer substantial standalone warrant from EPI032 some: rejected because that answer explicitly still calls for independent support.",
+    "Infer outsider or public warrant: rejected because neither current item asks it directly."
+  ],
+  "respondentImpact": "A respondent can receive an evidence-qualified conclusion about possible, defeasible first-person factual reason. Some current results differ from historical results, which remain reproducible under their release. No respondent is assigned a religion or claim of actual revelation.",
+  "historicalCompatibility": "Model release 1.12 and its bank, routes, source ledger, catalog, and engine source remain immutable. New administrations use the successor artifacts; old raw responses are not rewritten.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","route_omission","source_link"],
+    "paths": ["scripts/test-revelation-warrant-release.mjs","scripts/test-model-governance.mjs","scripts/test-production-site-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-09-30T23:00:00Z","note":"Reviewed SEP sections, audience distinction, provisional versus substantial warrant, ambiguous old item, and explicit non-entailments."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-09-30T23:15:00Z","note":"Reviewed exact predecessor paths, new item ID, three same-length route replacements, answer-state distinctions, source bindings, immutable successor paths, and historical replay contract; focused item and pilot validators passed."}
+    ]
+  },
+  "release": {
+    "components": ["bank","model","progressive_routes","full_form","pilot","content_review","sources","source_ledger","affinity","localization_catalog"],
+    "targetVersion": "model-release-1.13.0",
+    "migration": "No raw response migration. Historical administrations retain original manifests. New administrations use EPI122@1 and the scoped rule."
+  },
+  "implementationRefs": ["docs/governance/REVELATION_WARRANT_RELEASE.md","scripts/build-revelation-warrant-v1.mjs","scripts/test-revelation-warrant-release.mjs"]
+}

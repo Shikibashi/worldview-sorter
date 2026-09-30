@@ -1,0 +1,21 @@
+{
+  "version": "0.14.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.13.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-09-30",
+  "note": "One first-person revelation-warrant discriminator; versioned route substitution and a narrower evidence rule. Authored content, not empirical validation.",
+  "itemCount": 568,
+  "newItemCount": 1,
+  "registryEntries": 185,
+  "activeConstructCount": 184,
+  "newConstructCount": 0,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.13.json": "d2d0c4f066abbad924e6f0891b4207ce2aa1875b5dfe2f17567b2e3708986101",
+    "data/registries/constructs-v0.5.json": "10bcb6ce19330fe5fbe67c4c149eb56c3e18dea8c57ffac035b7ab41b83f6480"
+  },
+  "publicInferenceAllowed": false
+}
