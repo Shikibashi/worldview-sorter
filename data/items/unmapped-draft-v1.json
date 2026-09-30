@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.9.0-unmapped-draft-1",
+  "status": "candidate",
+  "purpose": "Original candidate additions to the 0.9.0 bank audit; not in any released bank or public route and not approved for interpretation.",
+  "itemIdPolicy": "Permanent IDs use <domain>I<3 digits>. IDs are never reused after retirement.",
+  "items": [
+    {
+      "id": "EPI118",
+      "revision": 1,
+      "domainId": "EP",
+      "text": "A factual claim has survived independent, repeatable tests and no rival explanation fits the evidence. Which conclusion is closest to your view?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "EP03",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "fallible_knowledge",
+          "label": "It can be known as objectively correct while remaining open to revision."
+        },
+        {
+          "id": "support_only",
+          "label": "It can be strongly supported, but never known as objectively correct."
+        },
+        {
+          "id": "case_dependent",
+          "label": "That depends on the kind of factual claim and what the tests establish."
+        },
+        {
+          "id": "practical_only",
+          "label": "Calling it correct mainly records that it works for now."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "unmapped-audit-v2"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "acad-epistemology"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates fallible knowledge from certainty demands and merely practical success. The case does not by itself settle global attainability."
+    },
+    {
+      "id": "AHI106",
+      "revision": 1,
+      "domainId": "AH",
+      "text": "Which claim is closest to your view about human free will?",
+      "responseType": "single_choice",
+      "responseScaleId": "single_choice",
+      "status": "candidate",
+      "contentKind": "contrast",
+      "targets": [
+        {
+          "constructId": "AH01",
+          "relation": "diagnostic",
+          "role": "secondary"
+        }
+      ],
+      "options": [
+        {
+          "id": "some_free_will",
+          "label": "People sometimes act with genuine free will, whatever its correct explanation is."
+        },
+        {
+          "id": "conditional_free_will",
+          "label": "People can have free will, but only if a further condition on control is met."
+        },
+        {
+          "id": "no_free_will",
+          "label": "No human action involves genuine free will."
+        },
+        {
+          "id": "undecided",
+          "label": "I do not have a settled view of whether genuine free will exists."
+        }
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": null,
+      "eligibility": {
+        "mode": "always"
+      },
+      "specialStates": [
+        "no_view",
+        "not_understood"
+      ],
+      "contentTags": [
+        "unmapped-audit-v2"
+      ],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": [
+          "free-will-inventory",
+          "gen-agency"
+        ],
+        "license": {
+          "status": "undecided",
+          "spdx": null
+        },
+        "copiedText": false
+      },
+      "notes": "Separates outright denial from theories that require special conditions; a compatibilist answer alone cannot do this."
+    }
+  ]
+}

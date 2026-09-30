@@ -10,12 +10,12 @@ Each item row records exact revision, wording, response options and format, auth
 
 | Item disposition | Count |
 | --- | ---: |
-| Keep | 497 |
+| Keep | 495 |
 | Keep as parallel indicator | 20 |
-| Keep as discriminator | 7 |
+| Keep as discriminator | 8 |
 | Keep for research only | 22 |
 | Rewrite candidate | 10 |
-| Reconsider for route | 6 |
+| Reconsider for route | 7 |
 | Deprecate candidate | 0 |
 
 The 22 research-only items target constructs the completed audit kept outside public inference. They remain in the bank. No historical item revision was edited. The 235 items absent from all four sampled route sets include both useful unselected candidates and research material; absence alone is not a deprecation case.
@@ -70,6 +70,8 @@ High candidate counts are not automatically overrepresentation. `NE09`, `VA20`, 
 The clearest wording review candidates are `NEI102` (universal ethical-egoism reverse framing), `NEI117` (absolute “never” on induced reliance), `NEI120` (absolute reverse on voluntary concern), `SOI008` (the referent “social categories” is too broad to isolate social essentialism), `EPI025` (textbook-example recognition rather than a personal view), and `EPI042` (unnecessary theory jargon). `RCI011` combines authority for **belief** and **conduct**, while `RCI018` leaves the kind of authority unspecified. Revelation is commonly treated as an epistemic question in the [SEP's account of divine revelation](https://plato.stanford.edu/entries/divine-revelation/) and [epistemology of religion](https://plato.stanford.edu/entries/religion-epistemology/); accepting testimony as knowledge does not by itself answer what conduct it should govern. `PLI019` joins repair, rehabilitation, and restored relationships, which [SEP's discussion of legal punishment](https://plato.stanford.edu/entries/legal-punishment/) treats as distinguishable aims. `SOI007` joins the descriptive claim that humans are part of ecological systems to a moral claim about treating nature as a resource; [environmental ethics](https://plato.stanford.edu/archives/fall2024/entries/ethics-environmental/) distinguishes instrumental value from moral standing and value in nature. These are wording risks, not new respondent inferences. Revision proposals must preserve revision 1 and check associated rules/reference criteria before release. The automated inventory also flags absolute quantifiers and multi-clause wording for AI review; 33 items contain absolute quantifiers, but many are philosophically necessary. Its narrow lexical trivia check did not catch `EPI025`; editorial inspection did. The review does not certify the whole bank as free of knowledge-demanding language, cultural narrowness, social desirability, policy proxying, or presupposition.
 
 Similarity review illustrates why a duplicate detector must not delete items. `SOI010` and `SOI019` differ between *all* standing differences and *unjustified* ones. `RCI014` and `RCI021` elicit belief and confidence using different methods. `AHI012` and `AHI034` add a coercion qualifier. `RCI010` and `RCI017` state opposed miracle positions. `RCI002` and `RCI015` distinguish agentic and impersonal divinity. By contrast, `MEI009`/`MEI024`, `MEI004`/`MEI026`, `NEI009`/`NEI017`, and the same-method caring pair `VAI031`/`VAI042` merit closer content comparison; current dispositions mark the second item for route review without claiming redundancy is proven. The values module intentionally uses repeated importance judgments, so format sameness alone is not a defect. Repeated academic-contrast triples need adversarial semantic review before being treated as independent evidence. Human response data could later test response-process assumptions but are not a prerequisite for another authored release.
+
+The later [SO09 moral-scope review](governance/MORAL_SCOPE_EVIDENCE_REVIEW.md) also found a pre-existing item-target mismatch relevant to this baseline: `SOI004@2` asks whether equal moral claims across distance **can** occur, while `SOI029@1` asks whether equal priority should **normally** govern one matched rescue choice. The [strict/moderate cosmopolitan distinction](https://plato.stanford.edu/entries/cosmopolitanism/) makes the difference substantive. The item inventory now retains `SOI004` as a discriminator and marks `SOI029` for route/rule review; it does not rewrite either question or the frozen rule. This is a targeted correction to two item dispositions, not a retroactive audit of the later pilot stack.
 
 ## Existing philosophical references
 

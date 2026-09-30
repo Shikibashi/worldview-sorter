@@ -11,28 +11,34 @@ const read = async p => JSON.parse(await raw(p));
 const hash = s => createHash('sha256').update(s).digest('hex');
 const current = await read('data/current.json');
 const bank = await read(current.candidateBank.path), pilot = await read(current.pilot.path);
-const model = await read(current.worldviewModel.path), instrument = await read(current.instrument.path);
+const model = await read('data/generic/model-v0.4.json'), instrument = await read(current.instrument.path);
 const scalesDoc = await read('data/response-scales.json');
 const original = await read('data/philosophy/public-form-v1.json'), full = await read('data/philosophy/public-full-v1.json');
-const activeOriginal = await read(current.publicForm.path), activeFull = await read(current.fullForm.path);
+const priorOriginal=await read('data/philosophy/public-form-v1.1.json'),priorFull=await read('data/philosophy/public-full-v1.1.json');
+const activeOriginal = await read(current.publicForm.path), activeFull = await read('data/philosophy/public-full-v1.2.json');
+const pilotFull = await read(current.fullForm.path);
 const experience = await read(current.quizExperience.path), history = await read('data/philosophy/full-route-history-v1.json');
+const progressive = await read(current.progressiveDepth.path);
 const byItem = new Map(bank.items.map(i => [i.id, i]));
-const forms = [original, full, activeOriginal, activeFull], activeForms=[activeOriginal,activeFull];
+const forms = [original, full, priorOriginal, priorFull, activeOriginal, activeFull, pilotFull, progressive], activeForms=[progressive,pilotFull];
 const args = { bank, pilot, scalesDoc, formPolicies: forms };
 let tests = 0;
 const test = (name, fn) => { fn(); tests++; console.log('PASS full route: ' + name); };
 
-test('Four selectable routes and the 562-item bank are separate quantities', () => {
-  assert.deepEqual(experience.routes.map(r => r.size), [80, 120, 160, 240]);
+test('Three selectable depth routes and the 562-item bank are separate quantities', () => {
+  assert.deepEqual(experience.routes.map(r => r.size), [64, 120, 238]);
   assert.deepEqual(activeFull.sizes, [240]);
   assert.deepEqual(activeOriginal.sizes, [80, 120, 160]);
   assert.equal(bank.items.length, 562);
-  for (const r of experience.routes) assert.ok(activeForms.some(f => f.policyVersion === r.formPolicyVersion && f.sizes.includes(r.size)));
+  for (const r of experience.routes) assert.ok(activeForms.some(f => f.policyVersion === r.formPolicyVersion &&
+    (f.sizes?.includes(r.size)||f.routes?.some(route=>route.size===r.size))));
 });
-test('Longer length does not change evidence rules, raw items, rewards or privacy', () => {
+test('Full route adds reviewed evidence opportunities without changing raw items, rewards or privacy', () => {
   assert.equal(activeFull.modelVersion, activeOriginal.modelVersion);
-  assert.deepEqual(activeFull.facets, activeOriginal.facets);
-  assert.deepEqual(activeFull.bundles, activeOriginal.bundles);
+  assert.deepEqual(activeFull.facets.slice(0,activeOriginal.facets.length), activeOriginal.facets);
+  assert.deepEqual(activeFull.bundles.slice(0,activeOriginal.bundles.length), activeOriginal.bundles);
+  assert.equal(activeFull.facets.length-activeOriginal.facets.length,17);
+  assert.equal(activeFull.bundles.length-activeOriginal.bundles.length,17);
   assert.deepEqual(activeFull.excludedItemIds, activeOriginal.excludedItemIds);
   assert.equal(experience.gamification.enabled, false);
   assert.equal(experience.privacy.defaultAnswerSubmission, false);
@@ -40,8 +46,8 @@ test('Longer length does not change evidence rules, raw items, rewards or privac
   assert.notEqual(activeFull.instrumentVersion, activeOriginal.instrumentVersion);
   assert.equal(original.policyVersion,'philosophy-blueprint-1.0.0');
   assert.equal(full.policyVersion,'philosophy-full-1.0.0');
-  assert.equal(activeOriginal.parentPolicyVersion,original.policyVersion);
-  assert.equal(activeFull.parentPolicyVersion,full.policyVersion);
+  assert.equal(activeOriginal.parentPolicyVersion,priorOriginal.policyVersion);
+  assert.equal(activeFull.parentPolicyVersion,priorFull.policyVersion);
 });
 for (const [p, expected] of Object.entries(history.artifacts)) {
   const actual = hash(await raw(p));
@@ -62,7 +68,7 @@ test('100 full-route seeds each contain 240 distinct, covered, correctly ordered
     assert.equal(new Set(packet.entries.map(e => e.domainId)).size, 12);
     assert.equal(new Set(packet.entries.map(e => e.responseScaleId)).size, 7);
     const audit = auditPhilosophyPacket(packet, activeFull);
-    assert.ok(audit.allRequired); assert.equal(audit.facets.length, 31);
+    assert.ok(audit.allRequired); assert.equal(audit.facets.length, 48);
     const positions = new Map(packet.entries.map(e => [e.itemId, e.index]));
     for (const [index, entry] of packet.entries.entries()) {
       const item = byItem.get(entry.itemId);
@@ -119,7 +125,15 @@ for (const mode of ['answered', 'mixed', 'no_view']) test('240-position ' + mode
   // Public quiz length is not permission to write to the research collector.
   assert.throws(() => validateSubmittedSession({ session: q.session, bank, pilot, instrument, scalesDoc }));
 });
-for (const version of ['quiz-1.0.0', 'quiz-1.1.0', 'quiz-1.2.0', 'quiz-1.3.0']) test('Compatible browser envelope version: ' + version, () => assert.ok(COMPATIBLE_EXPERIENCE_VERSIONS.includes(version)));
+for (const version of ['quiz-1.0.0', 'quiz-1.1.0', 'quiz-1.2.0', 'quiz-1.3.0', 'quiz-1.4.0']) test('Compatible browser envelope version: ' + version, () => assert.ok(COMPATIBLE_EXPERIENCE_VERSIONS.includes(version)));
+test('The prior 240-item result replays with its own form and model after pilot activation',()=>{
+ const q=createQuiz({bank,pilot,scalesDoc,formPolicy:activeFull,size:240,seed:'saved-pre-pilot-full',sessionId:'saved-pre-pilot-full'});
+ q.session.clientVersion='quiz-1.4.0';seekQuestion(q,bank);
+ answerQuestion(q,bank,scalesDoc,{state:'no_view',value:null});nextQuestion(q,bank);
+ assert.deepEqual(restoreQuiz(q,args),q);
+ assert.equal(q.packet.evidenceModelVersion,model.modelVersion);
+ assert.equal(q.packet.formPolicyVersion,activeFull.policyVersion);
+});
 for (const size of [80, 120, 160]) test('Older ' + size + '-item public save resumes with a policy registry', () => {
   const q = createQuiz({ bank, pilot, scalesDoc, formPolicy: original, size, seed: 'saved-original-' + size, sessionId: 'original-' + size });
   q.session.clientVersion = 'quiz-1.1.0'; seekQuestion(q, bank);

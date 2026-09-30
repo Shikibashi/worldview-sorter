@@ -6449,12 +6449,14 @@
         "moral_scope",
         "cosmopolitanism"
       ],
-      "editorialDisposition": "keep",
-      "dispositionRationale": "No concrete content defect established by this audit.",
+      "editorialDisposition": "keep_discriminator",
+      "dispositionRationale": "The possibility that a distant stranger can have an equally weighty claim is distinct from a rule of usual equal priority. Agreement here can coexist with special compatriot duties in SOI029; do not treat that combination as contradictory.",
       "wordingReviewFlags": [
         "referent_review"
       ],
-      "editorialReviewSourceUrls": [],
+      "editorialReviewSourceUrls": [
+        "https://plato.stanford.edu/entries/cosmopolitanism/"
+      ],
       "relatedHighSimilarityItems": []
     },
     {
@@ -31070,12 +31072,14 @@
         "cosmopolitanism",
         "tradeoff"
       ],
-      "editorialDisposition": "keep",
-      "dispositionRationale": "No concrete content defect established by this audit.",
+      "editorialDisposition": "route_reconsider",
+      "dispositionRationale": "The matched serious-harm tradeoff asks about usual priority. Local priority here does not oppose SOI004’s possibility claim, so the two items must not count as corroborating or contradictory units for one modal proposition.",
       "wordingReviewFlags": [
         "multiple_clause_review"
       ],
-      "editorialReviewSourceUrls": [],
+      "editorialReviewSourceUrls": [
+        "https://plato.stanford.edu/entries/cosmopolitanism/"
+      ],
       "relatedHighSimilarityItems": []
     },
     {

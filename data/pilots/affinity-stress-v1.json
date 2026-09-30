@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "affinity-stress-1",
+  "version": "affinity-stress-1.0.0",
+  "status": "internal_architecture_examples_not_public_catalog",
+  "modelVersion": "generic-1.0.0-pilot",
+  "definitions": [
+    {
+      "id": "stress-objectivism",
+      "label": "Objectivism (partial criteria stress test)",
+      "sourceIds": ["acad-rand", "acad-rand-epistemology"],
+      "nearbyTraditions": ["ethical egoism", "classical liberalism"],
+      "criteria": [
+        {"ruleId": "construct-ME09", "role": "defining", "expectedState": "supported"},
+        {"ruleId": "construct-NE15", "role": "defining", "expectedState": "supported"},
+        {"ruleId": "construct-PL29", "role": "characteristic", "expectedState": "supported"}
+      ]
+    },
+    {
+      "id": "stress-philosophical-anarchism",
+      "label": "Philosophical anarchism (obligation, not abolition)",
+      "sourceIds": ["acad-obligation", "acad-legitimacy", "acad-simmons"],
+      "nearbyTraditions": ["political skepticism", "anarcho-capitalism"],
+      "criteria": [
+        {"ruleId": "legacy-philosophical-anarchism-no-general-obedience", "role": "defining", "expectedState": "supported"},
+        {"ruleId": "construct-PL31", "role": "characteristic", "expectedState": "supported"},
+        {"ruleId": "construct-PL30", "role": "disputed", "expectedState": "supported"}
+      ]
+    }
+  ]
+}

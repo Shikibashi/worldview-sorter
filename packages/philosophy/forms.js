@@ -6,11 +6,30 @@ const need=(p,m)=>{if(!p)throw new Error(m);};
  * It samples complete authored evidence bundles before filling remaining slots.
  * Selection takes no answers, identities, game state, or normative target. */
 export function generatePhilosophyPacket({bank,pilot,policy,seed,size,packetId}){
- need(policy?.algorithm==='facet-bundles-1','Unsupported content blueprint.');
+ need(['facet-bundles-1','frozen-packet-1','progressive-fixed-1'].includes(policy?.algorithm),'Unsupported content blueprint.');
  need(bank.bankVersion===policy.bankVersion,'Blueprint/bank version mismatch.');
  need(typeof seed==='string'&&seed.length>0&&seed.length<=200,'Seed must be 1–200 characters.');
- need(policy.sizes.includes(size),'Unsupported public route length.');
+ need(policy.algorithm==='progressive-fixed-1'?policy.routes.some(r=>r.size===size):policy.sizes.includes(size),'Unsupported public route length.');
  const byId=new Map(bank.items.map(i=>[i.id,i]));
+ if(['frozen-packet-1','progressive-fixed-1'].includes(policy.algorithm)){
+  const route=policy.algorithm==='progressive-fixed-1'?policy.routes.find(r=>r.size===size):null;
+  const frozenItems=route?.itemRefs??policy.frozenItems;
+  need(frozenItems?.length===size,'Frozen route length mismatch.');
+  const seen=new Set(),positions=new Map();
+  const entries=frozenItems.map((ref,index)=>{
+   const item=byId.get(ref.itemId);
+   need(item&&item.revision===ref.itemRevision&&!seen.has(ref.itemId),'Unknown, stale or repeated frozen item '+ref.itemId);
+   need(!(policy.excludedItemIds??[]).includes(item.id),'Excluded frozen item '+item.id);
+   if(item.eligibility?.mode==='conditional')for(const condition of item.eligibility.all)need(positions.has(condition.itemId),'Frozen branch prerequisite must precede '+item.id);
+   seen.add(item.id);positions.set(item.id,index);
+   return {index,itemId:item.id,itemRevision:item.revision,domainId:item.domainId,responseScaleId:item.responseScaleId};
+  });
+  return {schemaVersion:'public-packet-1',pilotId:policy.administrationId,packetId:packetId??policy.administrationId+'-'+seed,seed,
+   bankVersion:bank.bankVersion,sourceInstrumentVersion:policy.instrumentVersion,size,selectionMethod:policy.algorithm,
+   formPolicyVersion:policy.policyVersion,evidenceModelVersion:policy.modelVersion,
+   ...(route?{routeId:route.id,routeVersion:route.routeVersion,adaptivePolicyVersion:policy.adaptivePolicyVersion}:{}),
+   plannedFacets:route?.assessableFacetIds??policy.frozenPlannedFacets,entries};
+ }
  const excluded=new Set(policy.excludedItemIds),selected=new Set(),chosen=new Set(),planned=[];
  const groups=new Map(policy.bundles.map(b=>[b.id,b]));
  function closure(ids){

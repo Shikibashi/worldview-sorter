@@ -1,5 +1,7 @@
 # Editorial review: prototype v0.1 → v0.2
 
+Historical milestone. The comprehension gate below records the v0.2 editorial policy; current [model governance](governance/CONTRIBUTING.md) permits documented AI philosophical, linguistic, and engineering review without mandatory human interviews. AI review does not establish how real respondents actually understand an item.
+
 ## Scope
 
 All 60 architecture-prototype items were reviewed for:

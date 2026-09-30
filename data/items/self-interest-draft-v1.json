@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "bankVersion": "0.9.0-self-interest-draft-1",
+  "status": "candidate",
+  "purpose": "Unreleased NE15 discriminator. No production bank, instrument, route, interpretation rule, or affinity criterion references this draft.",
+  "itemIdPolicy": "Permanent IDs use <domain>I<3 digits>. IDs are never reused after retirement.",
+  "items": [
+    {
+      "id": "NEI121",
+      "revision": 1,
+      "domainId": "NE",
+      "text": "A stranger faces serious harm. You could prevent it at modest cost to yourself. Assume helping would not advance your own long-term good. What moral weight does the stranger's need have?",
+      "responseType": "vignette_choice",
+      "responseScaleId": "vignette_choice",
+      "status": "candidate",
+      "contentKind": "vignette",
+      "targets": [
+        {"constructId": "NE15", "relation": "diagnostic", "role": "secondary"}
+      ],
+      "options": [
+        {"id": "independent_duty", "label": "Their need gives me a duty to help."},
+        {"id": "independent_reason", "label": "Their need gives me a moral reason to help, but no duty."},
+        {"id": "own_good_only", "label": "Their need alone gives me no moral reason to help; only my own long-term good can do that."},
+        {"id": "undecided", "label": "I am unsure whether their need gives me a moral reason to help."}
+      ],
+      "mirrorGroup": null,
+      "scenarioGroup": "self-interest-independent-moral-reason",
+      "eligibility": {"mode": "always"},
+      "specialStates": ["no_view", "not_understood"],
+      "contentTags": ["normative_self_interest", "independent_other_regarding_reason", "unreleased_review_candidate"],
+      "provenance": {
+        "origin": "original_project_draft",
+        "sourceRefs": ["acad-egoism"],
+        "license": {"status": "undecided", "spdx": null},
+        "copiedText": false
+      },
+      "notes": "Authored contrast between an independent duty, an independent but non-obligatory moral reason, and an exclusively self-interested moral reason. The first two options oppose only the narrow exclusive moral-end proposition; own_good_only supports it. Undecided is non-directional. This hypothetical has not undergone philosophical, comprehension, localization, or empirical review and cannot alone establish the standard maximizing account of ethical egoism."
+    }
+  ]
+}

@@ -8,7 +8,7 @@ import {generatePilotPacket} from '../packages/runtime/index.js';
 import {createQuiz,restoreQuiz,seekQuestion,currentItem,answerQuestion,nextQuestion} from '../packages/experience/quiz.js';
 import {buildQuizSummary} from '../packages/experience/summary.js';
 const root=new URL('../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
-const current=await read('data/current.json'),bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),model=await read(current.worldviewModel.path),policy=await read(current.publicForm.path),scalesDoc=await read('data/response-scales.json');
+const current=await read('data/current.json'),bank=await read(current.candidateBank.path),pilot=await read(current.pilot.path),model=await read('data/generic/model-v0.2.json'),policy=await read('data/philosophy/public-form-v1.json'),scalesDoc=await read('data/response-scales.json');
 const report=await read('data/philosophy/release-v1.json');
 const byItem=new Map(bank.items.map(i=>[i.id,i])),byScale=new Map(scalesDoc.scales.map(s=>[s.id,s]));
 const byRule=new Map(model.commitments.map(c=>[c.id,c]));let cases=0,packets=0;

@@ -8,11 +8,12 @@ const read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
 const raw=p=>readFile(new URL(p,root));
 const current=await read('data/current.json');
 const bank=await read(current.candidateBank.path);
-const model=await read(current.worldviewModel.path);
-const audit=await read(current.unmappedAcademicAudit.path);
-const coverage=await read(current.worldviewCoverage.path);
+const model=await read('data/generic/model-v0.3.json');
+const audit=await read('data/academic/unmapped-audit-v1.json');
+const coverage=await read('data/generic/coverage-v0.3.json');
 const scalesDoc=await read('data/response-scales.json');
 const oldModel=await read('data/generic/model-v0.2.json');
+const frozenPilotModel=await read('data/generic/model-v1.0-pilot.json');
 const oldPublic=await read('data/philosophy/public-form-v1.json');
 const oldFull=await read('data/philosophy/public-full-v1.json');
 const itemMap=new Map(bank.items.map(i=>[i.id,i]));
@@ -168,9 +169,10 @@ testCase('Old academic model and prior public-form policies remain byte-stable i
  assert.equal(oldModel.modelVersion,'generic-0.2.0');
  assert.equal(oldPublic.modelVersion,'generic-0.2.0');
  assert.equal(oldFull.modelVersion,'generic-0.2.0');
- assert.equal(current.worldviewModel.version,'generic-0.3.0');
- assert.equal(current.publicForm.version,'philosophy-blueprint-1.1.0');
- assert.equal(current.fullForm.version,'philosophy-full-1.1.0');
+ assert.equal(model.modelVersion,'generic-0.3.0');
+ assert.equal(frozenPilotModel.modelVersion,'generic-1.0.0-pilot');
+ assert.ok(current.modelReleaseVersions.some(ref=>ref.version==='model-release-1.1.0'),
+  'The frozen pilot release must remain available after a successor is activated.');
 });
 testCase('No external prior can manufacture audited commitments',()=>{
  const base={bankVersion:bank.bankVersion,responses:[]};

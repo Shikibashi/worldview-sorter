@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {compareWorldview,planWorldviewFollowups,validateModel} from '../packages/worldview/index.js';
 const root=new URL('../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
-const current=await read('data/current.json'),bank=await read(current.candidateBank.path),model=await read(current.worldviewModel.path),scalesDoc=await read('data/response-scales.json');
+const current=await read('data/current.json'),bank=await read(current.candidateBank.path),model=await read('data/generic/model-v0.3.json'),scalesDoc=await read('data/response-scales.json');
 const release=await read('data/generic/release-v0.1.json'),ledger=await read(current.worldviewSourceLedger.path);
 const args={model,bank,scalesDoc};let tests=0;
 const test=(name,fn)=>{fn();tests++;console.log('PASS generic: '+name);};
