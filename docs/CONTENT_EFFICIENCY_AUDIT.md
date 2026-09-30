@@ -1,6 +1,6 @@
 # Content efficiency baseline for PR #1
 
-This is an authored content and route audit of the committed `construct-registry-v0.1` baseline. It is **not** a psychometric validation, a new route release, or a review of the separate uncommitted pilot and product work in this checkout. The reproducible inventory is [content-efficiency-v1.json](../data/reviews/content-efficiency-v1.json); regenerate it with `node scripts/audit-content-efficiency.mjs --write`, and check it with `--check`. The artifact records SHA-256 hashes of all eight release inputs. The 49-construct decisions in `unmapped-audit-v1.json` remain closed; their 17 unmapped active constructs are retained as intended gaps.
+This is a historical authored content and route audit of the committed `construct-registry-v0.1` baseline; its 562-item inventory and 80/120/160/240 route policy are not the current public release. It is **not** a psychometric validation, a new route release, or a review of the separate uncommitted pilot and product work in this checkout. The reproducible inventory is [content-efficiency-v1.json](../data/reviews/content-efficiency-v1.json); regenerate it with `node scripts/audit-content-efficiency.mjs --write`, and check it with `--check`. The artifact records SHA-256 hashes of all eight release inputs. The 49-construct decisions in `unmapped-audit-v1.json` remain closed; their 17 unmapped active constructs are retained as intended gaps.
 
 ## Source of truth and review method
 
