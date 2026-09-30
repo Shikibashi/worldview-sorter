@@ -1,5 +1,6 @@
 import {createQuiz,restoreQuiz,currentItem,seekQuestion,answerQuestion,nextQuestion,previousQuestion,quizProgress,extendProgressiveQuiz,recordDepthCheckpoint,EXPERIENCE_VERSION,COMPATIBLE_EXPERIENCE_VERSIONS} from '../../packages/experience/quiz.js';
 import {buildQuizSummary,DOMAIN_COPY} from '../../packages/experience/summary.js';
+import {buildResultOverview} from '../../packages/experience/result-overview.js';
 import {initialExploration,recordExploration,initialExplorationV2,recordExplorationV2} from '../../packages/experience/exploration.js';
 import {buildShareSnapshot,shareSnapshotText,shareSnapshotSvg,readingTrailFor,compareTraditions,recommendExploration} from '../../packages/experience/engagement.js';
 import {shuffleWithSeed} from '../../packages/runtime/index.js';
@@ -49,6 +50,59 @@ function download(value,name){
 }
 function downloadSvg(value,name){const url=URL.createObjectURL(new Blob([value],{type:'image/svg+xml'}));
  const a=elem('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function renderResultHighlights(projection){
+ const holder=$('result-highlights');holder.replaceChildren();
+ if(!projection){$('result-at-a-glance').hidden=true;return;}
+ $('result-at-a-glance').hidden=false;
+ const hasQualified=[projection.supported,projection.opposed,projection.mixed].some(rows=>rows.length);
+ $('glance-description').textContent=hasQualified?
+  'Selected directly interpreted propositions with an exact target and linked source claim. These are examples, not a ranking of your beliefs.':
+  'This route produced authored answer patterns, but none clears the current exact-proposition and source-link review gate for a headline claim. Open a topic to inspect the answers and caveats.';
+ const groups=[['Supported',projection.supported],['Opposed',projection.opposed],
+  ['Mixed or context-dependent',projection.mixed],['Asked, still inconclusive',projection.insufficient]];
+ for(const [title,rows] of groups){
+  if(!rows.length)continue;
+  const section=elem('section',undefined,'highlight-group');section.dataset.state=title==='Supported'?'supported':
+   title==='Opposed'?'opposed':title==='Mixed or context-dependent'?'mixed':'insufficient';
+  section.append(elem('h3',title));
+  {const list=elem('ul');for(const row of rows){const item=elem('li');
+   const link=elem('a',row.proposition);link.href='#domain-'+row.domainId;
+   link.addEventListener('click',()=>{const details=$('domain-'+row.domainId)?.querySelector('details');if(details)details.open=true;});
+   item.append(link);list.append(item);}section.append(list);}
+  holder.append(section);
+ }
+ if(!hasQualified&&projection.provisionalPatterns.length){
+  const section=elem('section',undefined,'highlight-group');section.dataset.state='review_required';
+  section.append(elem('h3','Answer patterns under model review'));
+  const list=elem('ul');for(const row of projection.provisionalPatterns){
+   const label=row.status==='mixed_context_dependent'?'Mixed pattern':row.status==='opposed'?'Opposed pattern':'Supported pattern';
+   const item=elem('li'),link=elem('a',label+' · '+row.label);link.href='#domain-'+row.domainId;
+   link.addEventListener('click',()=>{const details=$('domain-'+row.domainId)?.querySelector('details');if(details)details.open=true;});
+   item.append(link);list.append(item);
+  }section.append(list);holder.append(section);
+ }
+ const unmeasured=elem('section',undefined,'highlight-group');unmeasured.dataset.state='not_measured';
+ unmeasured.append(elem('h3','Not measured on this route'));
+ if(projection.unmeasured.length){const list=elem('ul');for(const d of projection.unmeasured){
+  const domain=summary.domains.find(row=>row.id===d.id),item=elem('li');
+  item.append(elem('a',domain.title+' · '+d.counts.not_measured+' of '+d.total+' paths not measured'));
+  item.firstChild.href='#domain-'+d.id;list.append(item);}unmeasured.append(list);}
+ else unmeasured.append(elem('p','No proposition path is marked unmeasured here; some may still be inconclusive or under model review.','small'));
+ holder.append(unmeasured);
+}
+function domainEvidenceStrip(card,projection){
+ if(!projection||!projection.total)return;
+ const labels={supported:'supported',opposed:'opposed',leaned_toward:'leaned toward',
+  mixed_context_dependent:'mixed',insufficient_evidence:'insufficient',not_measured:'not measured',review_required:'under model review'};
+ const strip=elem('span',undefined,'domain-strip');strip.setAttribute('aria-hidden','true');
+ const description=[];
+ for(const [state,label] of Object.entries(labels)){
+  const count=projection.counts[state]??0;if(!count)continue;
+  const segment=elem('span',undefined,'domain-segment');segment.dataset.state=state;segment.style.flexGrow=String(count);
+  strip.append(segment);description.push(count+' '+label);
+ }
+ card.append(strip,elem('span',projection.assessed+' of '+projection.total+' proposition paths assessed · '+description.join(' · '),'domain-counts'));
+}
 function exportAnswers(){if(quiz)download(quiz.session,'worldview-answers.json');}
 function resultEvent(type,domainId){
  const event=type==='topic_opened'?{type,domainId}:{type};
@@ -575,6 +629,7 @@ function finish(newlyCompleted=false){
  $('result-counts').textContent=summary.resolvedPatterns+' answer patterns · '+summary.answeredItems+' substantive responses · '+summary.specialResponses+' no-view, unclear or not-applicable responses';
  $('academic-notice').textContent=summary.academicNotice;$('coverage-notice').textContent=summary.coverageNotice;
  const pilotResult=summary.schemaVersion==='quiz-summary-3';
+ const resultProjection=buildResultOverview(summary);renderResultHighlights(resultProjection);
  for(const [section,list,rows] of [
   ['overview-section','overview-list',summary.overview??[]],
   ['open-section','open-list',summary.mixedOrUnresolved??[]],
@@ -595,9 +650,11 @@ function finish(newlyCompleted=false){
   meaningfully_assessed:'Some propositions assessed'};
  for(const domain of summary.domains){
   const card=elem('section',undefined,'domain'),details=elem('details'),head=elem('summary');
+  card.id='domain-'+domain.id;
   head.append(elem('strong',domain.title),elem('span',domain.prompt),
    elem('span',pilotResult?(opportunityLabels[domain.measurementStatus]??'Assessment status unavailable'):
     domain.responses+' responses in this topic'));
+  domainEvidenceStrip(head,resultProjection?.domains.find(row=>row.id===domain.id));
   details.append(head);
   if(pilotResult){
    for(const f of domain.facets??[]){
@@ -634,6 +691,10 @@ function finish(newlyCompleted=false){
  renderEngagement();
  renderResearch();
  prepareResultFeedback();
+ for(const link of $('result-nav').querySelectorAll('a')){
+  const target=$(link.getAttribute('href').slice(1));link.hidden=!target||target.hidden;
+ }
+ $('result-nav-share').hidden=!betaConfig.features.sharing||Boolean(resultReplayQualification);
  $('sharing').hidden=true;show('results');$('results-title').focus();
 }
 function tryFinish(newlyCompleted=false){
@@ -801,6 +862,7 @@ async function bootstrap(){
  $('forget-research-link').addEventListener('click',()=>{try{localStorage.removeItem(researchLinkKey);announce('Future research contributions from this browser will not share the previous link. Existing contributions are unchanged.');renderResearchReceipts();}catch{announce('Browser storage could not be changed.');}});
  $('restart').addEventListener('click',()=>{cancelAdvance();renderSaved();show('home');});
  $('share-open').addEventListener('click',openShare);$('share-close').addEventListener('click',()=>{$('sharing').hidden=true;$('share-open').focus();});
+ $('result-nav-share').addEventListener('click',openShare);
  for(const kind of ['question','result'])$(kind+'-feedback-send').addEventListener('click',()=>submitFeedback(kind));
  for(const id of ['share-format','share-domain','share-tradition'])$(id).addEventListener('change',updateShare);
  $('download-share-json').addEventListener('click',()=>{if(shareSnapshot){download(shareSnapshot,'worldview-'+shareSnapshot.format+'-'+shareSnapshot.snapshotId+'.json');recordProductEvent('share_exported',null,false,shareSnapshot.format);}});

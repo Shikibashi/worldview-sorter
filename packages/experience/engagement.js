@@ -241,15 +241,51 @@ export function shareSnapshotText(snapshot){
 }
 
 export function shareSnapshotSvg(snapshot){
- const sourceLines=shareSnapshotText(snapshot).split('\n'),visible=[...sourceLines.slice(0,-3).slice(0,20),...sourceLines.slice(-3)];
- const lines=visible.flatMap(line=>{
-  const words=line.split(' '),parts=[];let current='';
-  for(const word of words){if((current+' '+word).length>70&&current){parts.push(current);current=word;}else current+=(current?' ':'')+word;}
-  if(current)parts.push(current);return parts;
- }).slice(0,38);
- const esc=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
- const height=110+lines.length*28;
- return `<svg xmlns="http://www.w3.org/2000/svg" lang="${snapshot.localization?.language??'en'}" dir="${snapshot.localization?.direction??'ltr'}" width="960" height="${height}" viewBox="0 0 960 ${height}" role="img" aria-label="Worldview Sorter share card"><rect width="960" height="${height}" fill="#f5f1e7"/><rect x="30" y="30" width="900" height="${height-60}" rx="8" fill="#fffcf5" stroke="#b9c5bf"/><text x="58" y="72" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="#176451">WORLDVIEW SORTER · SELECTED SNAPSHOT</text>${lines.map((line,n)=>`<text x="58" y="${112+n*28}" font-family="system-ui,sans-serif" font-size="17" fill="#20383a">${esc(line)}</text>`).join('')}</svg>`;
+ const fullText=shareSnapshotText(snapshot);
+ const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&apos;');
+ const wrap=(value,max=45)=>{
+  const words=String(value??'').split(/\s+/),out=[];let line='';
+  for(const word of words){if((line+' '+word).length>max&&line){out.push(line);line='';}
+   if(word.length>max){if(line){out.push(line);line='';}for(let i=0;i<word.length;i+=max)out.push(word.slice(i,i+max));}
+   else line+=(line?' ':'')+word;}
+  if(line)out.push(line);return out;
+ };
+ const entries=[];
+ const add=(heading,value)=>entries.push({heading,lines:wrap(value).slice(0,3)});
+ if(snapshot.rows.length){
+  for(const row of snapshot.rows){
+   const status=row.status==='mixed_context_dependent'?'Mixed / context-dependent':row.status.replaceAll('_',' ');
+   const caveat=row.propositionBasis==='inherited_rule_scope'?'claim review pending':
+    /source link under review/i.test(row.statusLabel)?'source link under review':row.inferenceStatus;
+   add(status+' · '+caveat,
+   row.propositionBasis==='inherited_rule_scope'?'Authored rule scope: '+row.scope+' (no separately recorded proposition)':row.proposition);
+  }
+ }else if(snapshot.affinity){
+  add('Doctrinal comparison · not an identity',snapshot.affinity.name+' · '+
+   (snapshot.affinity.presentationState??snapshot.affinity.summaryState).replaceAll('_',' '));
+  for(const criterion of snapshot.affinity.criteria.filter(c=>c.role==='defining').slice(0,4))
+   add(criterion.finding+' · defining',criterion.doctrine);
+ }else if(snapshot.activity){
+  add('Exploration activity',snapshot.activity.domainIds.length+' of 12 topics opened; '+
+   snapshot.activity.traditionIds.length+' traditions inspected; '+
+   (snapshot.activity.sourceDomainIds.length+snapshot.activity.sourceTraditionIds.length)+' source trails opened.');
+ }
+ const shown=entries.slice(0,6),lineHeight=33;
+ let y=402;const panels=[];
+ for(const entry of shown){
+  const height=42+entry.lines.length*lineHeight;
+  if(y+height>1055)break;
+  panels.push(`<rect x="88" y="${y}" width="904" height="${height}" fill="#fff" stroke="#383f78" stroke-width="2"/>`+
+   `<text x="110" y="${y+30}" font-family="Courier New,monospace" font-size="21" font-weight="700" fill="#5530a3">${esc(entry.heading.toUpperCase())}</text>`+
+   entry.lines.map((line,index)=>`<text x="110" y="${y+65+index*lineHeight}" font-family="Verdana,Arial,sans-serif" font-size="24" fill="#11132d">${esc(line)}</text>`).join(''));
+  y+=height+12;
+ }
+ const titleLines=wrap(snapshot.title,36).slice(0,2);
+ const qualification=wrap(snapshot.qualification,69).slice(0,3);
+ const context=`${snapshot.context.mixedCount} mixed · ${snapshot.context.insufficientCount} insufficient · ${snapshot.context.notMeasuredCount} not measured in the source result`;
+ const model=`Model ${snapshot.provenance.modelVersion} · route ${snapshot.provenance.sourceAdministration.routeId} · catalog ${snapshot.provenance.affinityCatalogVersion??'none'}`;
+ const contextBlock=y<790?`<rect x="88" y="820" width="904" height="202" fill="#e1e3ee" stroke="#383f78" stroke-width="2"/><text x="110" y="860" font-family="Courier New,monospace" font-size="22" font-weight="700" fill="#5530a3">OTHER INTERPRETATIONS IN THE SOURCE RESULT</text>${[['MIXED',snapshot.context.mixedCount],['INSUFFICIENT',snapshot.context.insufficientCount],['NOT MEASURED',snapshot.context.notMeasuredCount]].map(([label,count],index)=>`<text x="${118+index*295}" y="932" font-family="Georgia,serif" font-size="52" font-weight="700" fill="#11132d">${esc(count)}</text><text x="${118+index*295}" y="970" font-family="Courier New,monospace" font-size="20" font-weight="700" fill="#383f78">${label}</text>`).join('')}`:'';
+ return `<svg xmlns="http://www.w3.org/2000/svg" lang="${esc(snapshot.localization?.language??'en')}" dir="${snapshot.localization?.direction==='rtl'?'rtl':'ltr'}" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="card-title card-description"><title id="card-title">Worldview Sorter selected ${esc(snapshot.format)} snapshot</title><desc id="card-description">${esc(fullText)}</desc><defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 L 0 0 0 32" fill="none" stroke="#9da2bd" stroke-width="2"/></pattern></defs><rect width="1080" height="1350" fill="#d6d9e8"/><rect width="1080" height="1350" fill="url(#grid)"/><rect x="62" y="65" width="970" height="1234" fill="#11132d" opacity="0.43"/><rect x="48" y="48" width="970" height="1234" fill="#f4f3eb" stroke="#383f78" stroke-width="4"/><rect x="48" y="48" width="970" height="72" fill="#e1e3ee" stroke="#383f78" stroke-width="4"/><text x="84" y="93" font-family="Courier New,monospace" font-size="25" font-weight="700" fill="#5530a3">WORLDVIEW SORTER / SELECTED SNAPSHOT</text>${titleLines.map((line,index)=>`<text x="84" y="${168+index*47}" font-family="Georgia,serif" font-size="42" font-weight="700" fill="#11132d">${esc(line)}</text>`).join('')}${qualification.map((line,index)=>`<text x="88" y="${263+index*31}" font-family="Verdana,Arial,sans-serif" font-size="22" fill="#383f78">${esc(line)}</text>`).join('')}<line x1="88" y1="370" x2="992" y2="370" stroke="#383f78" stroke-width="3"/>${panels.join('')}${contextBlock}<rect x="88" y="1080" width="904" height="122" fill="#e1e3ee" stroke="#383f78" stroke-width="2"/>${wrap(context,76).slice(0,2).map((line,index)=>`<text x="108" y="${1113+index*25}" font-family="Courier New,monospace" font-size="18" font-weight="700" fill="#11132d">${esc(line)}</text>`).join('')}${wrap(model,76).slice(0,2).map((line,index)=>`<text x="108" y="${1164+index*23}" font-family="Courier New,monospace" font-size="18" fill="#383f78">${esc(line)}</text>`).join('')}<text x="88" y="1240" font-family="Courier New,monospace" font-size="19" fill="#383f78">Selected evidence only · full context in the snapshot text/JSON</text></svg>`;
 }
 
 export function compareShareSnapshots(first,second){
