@@ -10298,7 +10298,9 @@
       "editorialDisposition": "rewrite_candidate",
       "dispositionRationale": "Ecological participation and a norm against treating nature merely as a resource can receive different answers.",
       "wordingReviewFlags": [],
-      "editorialReviewSourceUrls": [],
+      "editorialReviewSourceUrls": [
+        "https://plato.stanford.edu/archives/fall2024/entries/ethics-environmental/"
+      ],
       "relatedHighSimilarityItems": []
     },
     {
@@ -15513,7 +15515,9 @@
       "editorialDisposition": "rewrite_candidate",
       "dispositionRationale": "Repair of harm, offender rehabilitation, and restoration of relationships are distinct possible goals of justice.",
       "wordingReviewFlags": [],
-      "editorialReviewSourceUrls": [],
+      "editorialReviewSourceUrls": [
+        "https://plato.stanford.edu/entries/legal-punishment/"
+      ],
       "relatedHighSimilarityItems": []
     },
     {

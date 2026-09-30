@@ -191,8 +191,10 @@ const dispositions={
   ['https://plato.stanford.edu/entries/divine-revelation/','https://plato.stanford.edu/entries/religion-epistemology/']],
  RCI018:['rewrite_candidate','Authority lacks a specified target: epistemic justification and practical or moral authority may elicit different views.',
   ['https://plato.stanford.edu/entries/divine-revelation/']],
- PLI019:['rewrite_candidate','Repair of harm, offender rehabilitation, and restoration of relationships are distinct possible goals of justice.'],
- SOI007:['rewrite_candidate','Ecological participation and a norm against treating nature merely as a resource can receive different answers.']
+ PLI019:['rewrite_candidate','Repair of harm, offender rehabilitation, and restoration of relationships are distinct possible goals of justice.',
+  ['https://plato.stanford.edu/entries/legal-punishment/']],
+ SOI007:['rewrite_candidate','Ecological participation and a norm against treating nature merely as a resource can receive different answers.',
+  ['https://plato.stanford.edu/archives/fall2024/entries/ethics-environmental/']]
 };
 const wordingFlags=i=>{
  const text=i.text,flags=[];

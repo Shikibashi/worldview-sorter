@@ -42,6 +42,8 @@ for(const item of audit.itemDispositions){
 for(const id of ['RCI011','RCI018','PLI019','SOI007'])
  assert.equal(audit.itemDispositions.find(item=>item.itemId===id).editorialDisposition,'rewrite_candidate',id);
 assert.equal(audit.itemDispositions.find(item=>item.itemId==='RCI011').editorialReviewSourceUrls.length,2);
+for(const id of ['PLI019','SOI007'])
+ assert.equal(audit.itemDispositions.find(item=>item.itemId===id).editorialReviewSourceUrls.length,1,id);
 const researchOnly=new Set(prior.decisions.filter(x=>x.decision==='remain_research_only').map(x=>x.constructId));
 for(const item of audit.itemDispositions.filter(x=>x.editorialDisposition==='keep_research_only')){
  assert.ok(item.primaryConstructIds.every(id=>researchOnly.has(id)),item.itemId);
