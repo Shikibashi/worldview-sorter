@@ -7,13 +7,16 @@
   ],
   "releaseMutationApproved": false,
   "proposedChanges": [],
-  "meaning": "No removal/addition pair is approved. The existing policies select seeded bundles, so a concrete swap requires a new policy version and whole-packet impact review.",
+  "meaning": "No removal/addition pair is approved. These are bundle-pool gaps, not proven impossibilities: final slot filling can select unbundled bank items. A concrete swap requires a new policy version and whole-packet impact review.",
   "structuralGaps": [
     {
       "ruleId": "audit-AH03-basic-desert",
       "constructId": "AH03",
       "domainId": "AH",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "AHI003",
@@ -44,6 +47,9 @@
       "constructId": "AH04",
       "domainId": "AH",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "AHI006",
@@ -68,6 +74,9 @@
       "constructId": "AH06",
       "domainId": "AH",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "AHI004",
@@ -98,6 +107,9 @@
       "constructId": "AH08",
       "domainId": "AH",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "AHI010",
@@ -128,6 +140,9 @@
       "constructId": "AH09",
       "domainId": "AH",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "AHI019",
@@ -158,6 +173,9 @@
       "constructId": "EP02",
       "domainId": "EP",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "EPI009",
@@ -188,6 +206,9 @@
       "constructId": "EP05",
       "domainId": "EP",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "EPI006",
@@ -212,6 +233,9 @@
       "constructId": "EP06",
       "domainId": "EP",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 1,
+      "unbundledFillerAssignments": 1,
       "candidateAdditions": [
         {
           "itemId": "EPI004",
@@ -236,6 +260,9 @@
       "constructId": "EP10",
       "domainId": "EP",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "EPI012",
@@ -266,6 +293,9 @@
       "constructId": "EP11",
       "domainId": "EP",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "EPI036",
@@ -296,6 +326,9 @@
       "constructId": "EP11",
       "domainId": "EP",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "EPI034",
@@ -326,6 +359,9 @@
       "constructId": "EX02",
       "domainId": "EX",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "EXI014",
@@ -350,6 +386,9 @@
       "constructId": "EX02",
       "domainId": "EX",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "EXI013",
@@ -380,6 +419,9 @@
       "constructId": "OM08",
       "domainId": "OM",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "OMI023",
@@ -410,6 +452,9 @@
       "constructId": "OM08",
       "domainId": "OM",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "OMI022",
@@ -440,6 +485,9 @@
       "constructId": "PL01",
       "domainId": "PL",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "PLI001",
@@ -470,6 +518,9 @@
       "constructId": "PL05",
       "domainId": "PL",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "PLI004",
@@ -500,6 +551,9 @@
       "constructId": "PL12",
       "domainId": "PL",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "PLI014",
@@ -530,6 +584,9 @@
       "constructId": "PL14",
       "domainId": "PL",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "PLI036",
@@ -554,6 +611,9 @@
       "constructId": "PL15",
       "domainId": "PL",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "PLI037",
@@ -578,6 +638,9 @@
       "constructId": "PL19",
       "domainId": "PL",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "PLI018",
@@ -608,6 +671,9 @@
       "constructId": "PL25",
       "domainId": "PL",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "PLI075",
@@ -638,6 +704,9 @@
       "constructId": "RC02",
       "domainId": "RC",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "RCI002",
@@ -668,6 +737,9 @@
       "constructId": "RC04",
       "domainId": "RC",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "RCI009",
@@ -698,6 +770,9 @@
       "constructId": "RC05",
       "domainId": "RC",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "RCI010",
@@ -728,6 +803,9 @@
       "constructId": "RC06",
       "domainId": "RC",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "RCI011",
@@ -752,6 +830,9 @@
       "constructId": "SO03",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI003",
@@ -782,6 +863,9 @@
       "constructId": "SO04",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI006",
@@ -812,6 +896,9 @@
       "constructId": "SO05",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI009",
@@ -842,6 +929,9 @@
       "constructId": "SO06",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI010",
@@ -872,6 +962,9 @@
       "constructId": "SO09",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI004",
@@ -902,6 +995,9 @@
       "constructId": "SO10",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI008",
@@ -932,6 +1028,9 @@
       "constructId": "SO12",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI024",
@@ -956,6 +1055,9 @@
       "constructId": "SO12",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI007",
@@ -980,6 +1082,9 @@
       "constructId": "SO13",
       "domainId": "SO",
       "requiredUnits": 2,
+      "gapKind": "no_bundled_evidence",
+      "maxDistinctEvidenceUnitsSeen": 0,
+      "unbundledFillerAssignments": 0,
       "candidateAdditions": [
         {
           "itemId": "SOI037",

@@ -72,10 +72,17 @@ assert.equal(review.proposedChanges.length,0);
 assert.equal(review.releaseMutationApproved,false);
 assert.deepEqual(review.structuralGaps.map(x=>x.ruleId),audit.routeDiagnostics[240].assessableRuleIdsNoSamples);
 assert.equal(review.structuralGaps.length,35);
+assert.equal(audit.routeDiagnostics[240].unbundledFill.bundlePoolItemCount,319);
+assert.equal(audit.routeDiagnostics[240].unbundledFill.distinctItemsAssigned,8);
+assert.equal(audit.routeDiagnostics[240].unbundledFill.assignmentsAcrossSamples,37);
 for(const gap of review.structuralGaps){
+ assert.equal(gap.gapKind,'no_bundled_evidence',gap.ruleId);
+ assert.ok(gap.maxDistinctEvidenceUnitsSeen<gap.requiredUnits,gap.ruleId);
+ assert.ok(gap.unbundledFillerAssignments>=0,gap.ruleId);
  assert.ok(gap.candidateAdditions.length>=gap.requiredUnits,gap.ruleId);
  assert.ok(gap.candidateAdditions.every(x=>!x.inCurrentFullBundlePool),gap.ruleId);
 }
+assert.equal(review.structuralGaps.reduce((n,gap)=>n+gap.unbundledFillerAssignments,0),1);
 // Research-tier rules can still be evaluated internally, but cannot become
 // respondent-facing rows or selectable share patterns in this historical model.
 const researchRule=model.commitments.find(rule=>rule.id==='ph-aesthetic-objectivity');

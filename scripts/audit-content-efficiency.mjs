@@ -248,6 +248,11 @@ const profileAudit=profiles.profiles.map(p=>({profileId:p.id,label:p.label,scope
   directPropositionMapping:false})),
  routeSampleOpportunity:Object.fromEntries(sizes.map(size=>[size,routeSamples[size].profileCounts[p.id]])),
  architecturalLimit:'Prototype matcher consumes versioned raw answers directly; this is not a proposition-layer philosophical affinity catalog.'}));
+const fullPool=new Set(full.bundles.flatMap(b=>b.itemIds));
+const unbundledFill=bank.items.filter(i=>!fullPool.has(i.id)&&routeSamples[240].itemCounts[i.id]>0);
+routeSamples[240].unbundledFill={bundlePoolItemCount:fullPool.size,distinctItemsAssigned:unbundledFill.length,
+ assignmentsAcrossSamples:unbundledFill.reduce((n,i)=>n+routeSamples[240].itemCounts[i.id],0),
+ meaning:'The final fill step can assign bank items outside bundles. A zero bundle path is not proof that a rule is impossible in every seed.'};
 const report={schemaVersion:'content-efficiency-audit-1',auditKind:'authored_semantic_and_structural_not_psychometric',
  baseline:{branch:'construct-registry-v0.1',bankVersion:bank.bankVersion,modelVersion:model.modelVersion,registryVersion:registry.registryVersion,
   itemCount:bank.items.length,activeConstructCount:active.length,mappedActiveConstructCount:coverage.constructs.filter(c=>c.ruleIds.length).length,
@@ -262,13 +267,15 @@ const report={schemaVersion:'content-efficiency-audit-1',auditKind:'authored_sem
  publicResultContract:{states:['supported','opposed','mixed','insufficient_evidence'],routeOmissionStateCurrently:'insufficient_evidence',
   recommendation:'Add versioned not_measured semantics before asserting route-aware absence; distinguish branch skips from omissions and inconclusive presented evidence.'},
  routeChangeProposal:{status:'no_released_route_mutation',changes:[],reason:'Candidate swaps require a reviewed semantic and rule-opportunity case; diagnostic seed frequency alone is insufficient.'}};
-const fullPool=new Set(full.bundles.flatMap(b=>b.itemIds));
 const routeReview={schemaVersion:'route-review-1',sourceAudit:'content-efficiency-v1.json',existingPolicyVersions:[short.policyVersion,full.policyVersion],
  releaseMutationApproved:false,proposedChanges:[],
- meaning:'No removal/addition pair is approved. The existing policies select seeded bundles, so a concrete swap requires a new policy version and whole-packet impact review.',
+ meaning:'No removal/addition pair is approved. These are bundle-pool gaps, not proven impossibilities: final slot filling can select unbundled bank items. A concrete swap requires a new policy version and whole-packet impact review.',
  structuralGaps:routeSamples[240].assessableRuleIdsNoSamples.map(id=>{
   const r=rules.get(id);
   return {ruleId:id,constructId:r.constructId,domainId:r.domainId,requiredUnits:r.minimumEvidenceUnits,
+   gapKind:'no_bundled_evidence',maxDistinctEvidenceUnitsSeen:Math.max(...packetSets[240].map(ids=>
+    new Set(r.evidence.filter(e=>ids.has(e.itemId)).map(e=>e.unitId)).size)),
+   unbundledFillerAssignments:r.evidence.reduce((n,e)=>n+routeSamples[240].itemCounts[e.itemId],0),
    candidateAdditions:r.evidence.map(e=>({itemId:e.itemId,itemRevision:e.itemRevision,unitId:e.unitId,inCurrentFullBundlePool:fullPool.has(e.itemId)})),
    proposedRemovals:[],constructFacetImpact:'Needs review against existing 31 facet minima and other rule paths.',
    interpretationImpact:'Could create a direct evidence opportunity; no respondent conclusion is guaranteed.',

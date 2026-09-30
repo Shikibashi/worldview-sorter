@@ -85090,7 +85090,13 @@
         "audit-SO12-anthropocentric-priority",
         "audit-SO12-interdependence",
         "audit-SO13-just-world"
-      ]
+      ],
+      "unbundledFill": {
+        "bundlePoolItemCount": 319,
+        "distinctItemsAssigned": 8,
+        "assignmentsAcrossSamples": 37,
+        "meaning": "The final fill step can assign bank items outside bundles. A zero bundle path is not proof that a rule is impossible in every seed."
+      }
     }
   },
   "routeTransitions": [
