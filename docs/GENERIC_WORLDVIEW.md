@@ -1,7 +1,5 @@
 # Generic academic worldview layer
 
-> Historical milestone for the earlier 83-rule model. Its counts are not current. See [the PR #1 content audit](CONTENT_EFFICIENCY_AUDIT.md) for `generic-0.3.0` and the 562-item bank.
-
 The unit of comparison is an explicitly reported commitment, not a person, party, country or nearest philosophical identity. This layer reuses the entire repository source ledger, including critiques and limited-access records, without pretending that citations are respondent data.
 
 The bank remains 562 items. The model has 83 reusable commitment rules and 89 scoped comparisons across all twelve domains. 100 active constructs still lack an approved comparison rule and remain visible as gaps.
