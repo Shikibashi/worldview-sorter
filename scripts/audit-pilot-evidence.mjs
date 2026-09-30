@@ -92,7 +92,7 @@ const fullRouteScope={
  unresolvedOrNeedsItemsConstructIds:model.coverage.constructs.filter(row=>!(row.ruleIds??[]).length&&
   ['unresolved','requires_new_discriminating_items'].includes(row.disposition)).map(row=>row.id).sort(),
  note:'This is the frozen route opportunity contract, not a claim that any respondent reached a directional result.'};
-const report={schemaVersion:'pilot-evidence-dispositions-1',auditVersion:activeAudit?'pilot-evidence-dispositions-1.6.0':currentAudit?'pilot-evidence-dispositions-1.1.0':'pilot-evidence-dispositions-1.0.0',
+const report={schemaVersion:'pilot-evidence-dispositions-1',auditVersion:activeAudit?'pilot-evidence-dispositions-1.7.0':currentAudit?'pilot-evidence-dispositions-1.1.0':'pilot-evidence-dispositions-1.0.0',
  scope:'Authored evidence-path and compatibility audit of the frozen successor pilot. Counts are structural, not psychometric.',
  inputs:Object.fromEntries(await Promise.all(Object.values(paths).map(async path=>[path,createHash('sha256').update(await raw(path)).digest('hex')]))),
  release:{modelVersion:model.modelVersion,routePolicyVersion:policy.policyVersion,fullRouteVersion:full.routeVersion,
@@ -105,12 +105,12 @@ const report={schemaVersion:'pilot-evidence-dispositions-1',auditVersion:activeA
   notMeasured:'The frozen route lacks a viable two-direction authored path; a response to one mapped item is not a public conclusion.',
   noStatisticalClaim:'Evidence-unit IDs control authored duplication only. They do not establish independent items, reliability, or human validity.'},
  directionalContracts,fullRouteScope,fullRouteGaps,historicalRouteGaps};
-assert.deepEqual(report.summary,{bankItems:activeAudit?566:562,publicRules:activeAudit?143:140,fullRouteItems:activeAudit?243:238,fullRouteAssessableRules:activeAudit?93:90,
+assert.deepEqual(report.summary,{bankItems:activeAudit?566:562,publicRules:activeAudit?144:140,fullRouteItems:activeAudit?243:238,fullRouteAssessableRules:activeAudit?94:90,
  fullRouteNotMeasuredRules:50,wholeBankDirectionalGaps:16,publicWholeBankDirectionalGaps:11,historicalRouteGaps:35,
  historicalStatusCounts:{no_successor_direct_rule:16,narrower_or_split_public_rule_with_full_path:2,
   related_public_rule_with_full_path:14,reopened_and_unresolved:1,successor_rule_nonpublic:2},
  fullRouteGapClasses:{all_evidence_omitted_by_frozen_route:37,bank_directional_contract_gap:11,incomplete_frozen_route_path:2}});
-const artifact=activeAudit?'data/reviews/pilot-evidence-dispositions-v7.json':currentAudit?'data/reviews/pilot-evidence-dispositions-v2.json':'data/reviews/pilot-evidence-dispositions-v1.json',bytes=JSON.stringify(report,null,2)+'\n';
+const artifact=activeAudit?'data/reviews/pilot-evidence-dispositions-v8.json':currentAudit?'data/reviews/pilot-evidence-dispositions-v2.json':'data/reviews/pilot-evidence-dispositions-v1.json',bytes=JSON.stringify(report,null,2)+'\n';
 if(process.argv.includes('--write'))await writeFile(new URL(artifact,root),bytes);
 else if(process.argv.includes('--check'))assert.equal((await raw(artifact)).toString(),bytes,'Pilot evidence disposition artifact is stale.');
 else process.stdout.write(JSON.stringify(report.summary,null,2)+'\n');
