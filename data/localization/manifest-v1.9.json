@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "worldview-localization-manifest-1",
+  "catalogVersion": "localization-catalog-1.9.0",
+  "hashes": {
+    "data/localization/catalog-v10.json": "4157fc9dee88d3b427a0e2290e4ea96ee812bc16d9075bd38f6ae5751c2fa3e6",
+    "data/localization/terminology-review-v1.json": "997a28e3ac9ef86fb5ba8e45d8347fd74fd69fa2047f40a2a4e1d33a8aef3749",
+    "data/localization/en-US-v10.json": "989095adaf15cb8067ddd6311755b802da761222fa83fdbdeaa94ee7eb78196b",
+    "data/localization/es-ES-draft-v10.json": "6343bbc47079aa9a2f2876f13c9559c66a52e3f919b444a52ed437f9607e6e5e",
+    "data/localization/ar-draft-v10.json": "e449f4c94e16f5e0c1b65e6c99ee7ce8e07988b66dde2f924296bc1b6abf10f5"
+  }
+}
