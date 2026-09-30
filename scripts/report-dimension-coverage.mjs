@@ -35,6 +35,7 @@ assert.equal(dimensions.length, 12);
 const bankIds = new Set(bank.items.map(item => item.id));
 const draftIds = new Set(draft.items.map(item => item.id));
 const proposedTargets = new Set(proposals.constructs.map(item => item.id));
+const proposedTargetById = new Map(proposals.constructs.map(item => [item.id, item]));
 const sourceIds = new Set(sources.sources.map(source => source.id));
 const scaleById = new Map(scales.scales.map(scale => [scale.id, scale]));
 const allowedDraftMeanings = new Set(['supports', 'opposes', 'neighbor', 'context', 'missing', 'non_entailing']);
@@ -47,6 +48,10 @@ for (const item of draft.items) {
   assert.equal(item.options.length, Object.keys(item.draftAnswerMeanings).length);
   assert.ok(item.options.every(option => option.id in item.draftAnswerMeanings));
   assert.ok(Object.values(item.draftAnswerMeanings).every(meaning => allowedDraftMeanings.has(meaning)));
+  if (item.targets[0].role === 'primary' && proposedTargetById.get(item.targets[0].constructId).kind === 'item_target') {
+    assert.ok(Object.values(item.draftAnswerMeanings).includes('supports'), `${item.id} lacks direct supporting meaning`);
+    assert.ok(Object.values(item.draftAnswerMeanings).includes('opposes'), `${item.id} lacks direct opposing meaning`);
+  }
   assert.ok(!policy.routes.some(route => route.itemRefs.some(ref => ref.itemId === item.id)), `${item.id} leaked into a public route`);
 }
 assert.equal(routeProposal.basePolicyVersion, policy.policyVersion);

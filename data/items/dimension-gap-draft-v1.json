@@ -611,7 +611,7 @@
         {
           "constructId": "PL37",
           "relation": "diagnostic",
-          "role": "primary"
+          "role": "secondary"
         }
       ],
       "options": [
