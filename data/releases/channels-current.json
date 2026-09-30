@@ -1,7 +1,7 @@
 {
   "schemaVersion": "worldview-release-channel-index-1",
   "current": {
-    "version": "worldview-release-channels-8.0.0",
-    "path": "data/releases/channels-v8.json"
+    "version": "worldview-release-channels-9.0.0",
+    "path": "data/releases/channels-v9.json"
   }
 }
