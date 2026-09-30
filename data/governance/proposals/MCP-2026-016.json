@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-016",
+  "title": "Version localization bindings for the scoped comparison",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "localization",
+  "changeClass": "semantic_clarification",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "localization",
+      "id": "bundle/ar"
+    },
+    {
+      "type": "localization",
+      "id": "bundle/en-US"
+    },
+    {
+      "type": "localization",
+      "id": "bundle/es-ES"
+    },
+    {
+      "type": "localization",
+      "id": "catalog/ar"
+    },
+    {
+      "type": "localization",
+      "id": "catalog/en-US"
+    },
+    {
+      "type": "localization",
+      "id": "catalog/es-ES"
+    },
+    {
+      "type": "localization",
+      "id": "catalog/model-binding"
+    }
+  ],
+  "currentBehavior": "The localization catalog and bundles bind the 1.1.0 model and six-entry affinity catalog.",
+  "proposedBehavior": "Version the bindings for the successor model and catalog. English uses canonical source text; Spanish and Arabic remain untranslated and unavailable.",
+  "rationale": "A new philosophical comparison must not silently inherit old locale approvals.",
+  "philosophicalBasis": {
+    "proposition": "Some existence questions can be settled by conceptual application conditions and relevant empirical facts without a further special metaphysical test.",
+    "neighboringViews": [
+      "Ordinary-object realism without an easy-ontology method",
+      "Nominalism",
+      "Heavyweight metaphysics"
+    ],
+    "nonEntailments": [
+      "A denial of ordinary objects",
+      "A complete ontology",
+      "An established view about realism compatibility"
+    ],
+    "existingGap": "The existing scoped OM14 rule has only a legacy label and no rule-linked claim.",
+    "scholarlyDisagreement": "Marschall challenges whether Thomasson can preserve realism while making ontological questions easy."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "thomasson-easy-ontology-2020",
+      "relationship": "supports",
+      "claim": "Thomasson argues that some existence questions can be settled through ordinary conceptual truths and empirical facts without a further special metaphysical test."
+    }
+  ],
+  "alternatives": [
+    "Add the entire draft question pool: rejected because the existing OM14 items ask this narrow method directly.",
+    "Infer the method from ordinary-object realism: rejected because belief in objects does not settle metaontological method.",
+    "Retain an unqualified identity label: rejected because the pilot asks only a limited proposition."
+  ],
+  "respondentImpact": "No translated respondent text is released. English canonical fallback is available; draft locales remain unavailable.",
+  "historicalCompatibility": "The 1.3.0 model, six-entry catalog, route items, source ledger, and original results remain byte-identical. A new manifest pins the new model and catalog; old administrations replay under their recorded versions.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "route_omission",
+      "source_link"
+    ],
+    "paths": [
+      "scripts/test-easy-ontology-release.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed canonical fallback and confirmed untranslated locales remain unavailable for new content."
+      },
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed the exact scoped claim, neighboring realism and nominalism positions, and source limits."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "localization_catalog"
+    ],
+    "targetVersion": "model-release-1.4.0",
+    "migration": "No raw-response migration. Historical model and affinity results retain their previous manifest; new administrations use the new tuple."
+  },
+  "implementationRefs": [
+    "data/generic/model-v1.2-pilot.json",
+    "data/affinities/catalog-v1.2.json",
+    "scripts/test-easy-ontology-release.mjs"
+  ]
+}

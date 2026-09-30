@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-015",
+  "title": "Bind unchanged public routes to the successor model",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "route",
+  "changeClass": "semantic_clarification",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "route",
+      "id": "quick"
+    },
+    {
+      "type": "route",
+      "id": "standard"
+    },
+    {
+      "type": "route",
+      "id": "full"
+    },
+    {
+      "type": "route",
+      "id": "route-policy"
+    }
+  ],
+  "currentBehavior": "The 64/120/238 route and Full form are bound to the 1.1.0 model and six-entry catalog.",
+  "proposedBehavior": "Publish new route and form versions with identical item revisions and ordering, bound to the exact OM14 model and seven-entry catalog.",
+  "rationale": "A historical route must retain its model/catalog tuple; the successor changes comparison content but no assigned question.",
+  "philosophicalBasis": {
+    "proposition": "Some existence questions can be settled by conceptual application conditions and relevant empirical facts without a further special metaphysical test.",
+    "neighboringViews": [
+      "Ordinary-object realism without an easy-ontology method",
+      "Nominalism",
+      "Heavyweight metaphysics"
+    ],
+    "nonEntailments": [
+      "A denial of ordinary objects",
+      "A complete ontology",
+      "An established view about realism compatibility"
+    ],
+    "existingGap": "The existing scoped OM14 rule has only a legacy label and no rule-linked claim.",
+    "scholarlyDisagreement": "Marschall challenges whether Thomasson can preserve realism while making ontological questions easy."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "acad-marschall",
+      "relationship": "supports",
+      "claim": "Marschall describes Easy Ontology as settling many ontological questions through conceptual truths and empirical knowledge, while disputing whether its defense of realism succeeds."
+    }
+  ],
+  "alternatives": [
+    "Add the entire draft question pool: rejected because the existing OM14 items ask this narrow method directly.",
+    "Infer the method from ordinary-object realism: rejected because belief in objects does not settle metaontological method.",
+    "Retain an unqualified identity label: rejected because the pilot asks only a limited proposition."
+  ],
+  "respondentImpact": "Question burden and assignment are unchanged. Quick and Standard keep OM14 not measured; Full may resolve it.",
+  "historicalCompatibility": "The 1.3.0 model, six-entry catalog, route items, source ledger, and original results remain byte-identical. A new manifest pins the new model and catalog; old administrations replay under their recorded versions.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "route_omission",
+      "source_link"
+    ],
+    "paths": [
+      "scripts/test-easy-ontology-release.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed the exact scoped claim, neighboring realism and nominalism positions, and source limits."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed historical version binding, route opportunity, and adversarial software fixtures."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "progressive_routes",
+      "full_form",
+      "pilot"
+    ],
+    "targetVersion": "model-release-1.4.0",
+    "migration": "No raw-response migration. Historical model and affinity results retain their previous manifest; new administrations use the new tuple."
+  },
+  "implementationRefs": [
+    "data/generic/model-v1.2-pilot.json",
+    "data/affinities/catalog-v1.2.json",
+    "scripts/test-easy-ontology-release.mjs"
+  ]
+}

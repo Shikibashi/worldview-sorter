@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-009",
+  "title": "Promote claim-level sources for a scoped Easy Ontology comparison",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "source",
+  "changeClass": "source_correction",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "source",
+      "id": "acad-marschall"
+    },
+    {
+      "type": "source",
+      "id": "thomasson-easy-ontology-2020"
+    },
+    {
+      "type": "source",
+      "id": "marschall-easy-ontology-2021"
+    }
+  ],
+  "currentBehavior": "The active source ledger has a broad Marschall use note; the catalog lacks claim-level primary and secondary records for this comparison.",
+  "proposedBehavior": "Version the source ledger with a claim and add the reviewed primary chapter and scholarly response to the new catalog. Do not imply either source validates these questions.",
+  "rationale": "The prior Thomasson book record was publisher metadata only. Use the author’s accessible chapter and Marschall’s reviewed article for the exact method and realism caveat; retain old records for history.",
+  "philosophicalBasis": {
+    "proposition": "Some existence questions can be settled by conceptual application conditions and relevant empirical facts without a further special metaphysical test.",
+    "neighboringViews": [
+      "Ordinary-object realism without an easy-ontology method",
+      "Nominalism",
+      "Heavyweight metaphysics"
+    ],
+    "nonEntailments": [
+      "A denial of ordinary objects",
+      "A complete ontology",
+      "An established view about realism compatibility"
+    ],
+    "existingGap": "The existing scoped OM14 rule has only a legacy label and no rule-linked claim.",
+    "scholarlyDisagreement": "Marschall challenges whether Thomasson can preserve realism while making ontological questions easy."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "acad-marschall",
+      "relationship": "supports",
+      "claim": "Marschall describes Easy Ontology as settling many ontological questions through conceptual truths and empirical knowledge, while disputing whether its defense of realism succeeds."
+    },
+    {
+      "sourceId": "thomasson-easy-ontology-2020",
+      "relationship": "supports",
+      "claim": "Thomasson argues that some existence questions can be settled through ordinary conceptual truths and empirical facts without a further special metaphysical test."
+    }
+  ],
+  "alternatives": [
+    "Add the entire draft question pool: rejected because the existing OM14 items ask this narrow method directly.",
+    "Infer the method from ordinary-object realism: rejected because belief in objects does not settle metaontological method.",
+    "Retain an unqualified identity label: rejected because the pilot asks only a limited proposition."
+  ],
+  "respondentImpact": "Full-route respondents may see a limited Easy Ontology comparison when OM14 evidence is settled; Quick and Standard leave its defining criterion unmeasured. No raw answer or threshold changes.",
+  "historicalCompatibility": "The 1.3.0 model, six-entry catalog, route items, source ledger, and original results remain byte-identical. A new manifest pins the new model and catalog; old administrations replay under their recorded versions.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "route_omission",
+      "source_link"
+    ],
+    "paths": [
+      "scripts/test-easy-ontology-release.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed the exact scoped claim, neighboring realism and nominalism positions, and source limits."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "model",
+      "source_ledger",
+      "affinity"
+    ],
+    "targetVersion": "model-release-1.4.0",
+    "migration": "No raw-response migration. Historical model and affinity results retain their previous manifest; new administrations use the new tuple."
+  },
+  "implementationRefs": [
+    "data/generic/model-v1.2-pilot.json",
+    "data/affinities/catalog-v1.2.json",
+    "scripts/test-easy-ontology-release.mjs"
+  ]
+}

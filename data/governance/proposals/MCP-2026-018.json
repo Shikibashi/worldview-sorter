@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-018",
+  "title": "Archive the successor quiz client version for exact replay",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "result_semantics",
+  "changeClass": "semantic_clarification",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "result_semantics",
+      "id": "engine-source"
+    }
+  ],
+  "currentBehavior": "The current engine archive pins quiz-1.7.0 and the model-release-1.3.0 experience.",
+  "proposedBehavior": "Pin quiz-1.8.0 with the successor experience-policy binding in engine-source-1.2.0.",
+  "rationale": "The experience envelope records its exact client version. A new policy must not reuse a prior executable-source archive after changing that version.",
+  "philosophicalBasis": {
+    "proposition": "Some existence questions can be settled by conceptual application conditions and relevant empirical facts without a further special metaphysical test.",
+    "neighboringViews": [
+      "Ordinary-object realism without an easy-ontology method",
+      "Nominalism",
+      "Heavyweight metaphysics"
+    ],
+    "nonEntailments": [
+      "A denial of ordinary objects",
+      "A complete ontology",
+      "An established view about realism compatibility"
+    ],
+    "existingGap": "The existing scoped OM14 rule has only a legacy label and no rule-linked claim.",
+    "scholarlyDisagreement": "Marschall challenges whether Thomasson can preserve realism while making ontological questions easy."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "acad-marschall",
+      "relationship": "supports",
+      "claim": "Marschall describes Easy Ontology as settling many ontological questions through conceptual truths and empirical knowledge, while disputing whether its defense of realism succeeds."
+    }
+  ],
+  "alternatives": [
+    "Add the entire draft question pool: rejected because the existing OM14 items ask this narrow method directly.",
+    "Infer the method from ordinary-object realism: rejected because belief in objects does not settle metaontological method.",
+    "Retain an unqualified identity label: rejected because the pilot asks only a limited proposition."
+  ],
+  "respondentImpact": "New saves record quiz-1.8.0; backups from quiz-1.7.0 remain compatible and historical source stays archived.",
+  "historicalCompatibility": "Engine-source-1.1.0 and the 1.3.0 release remain byte-identical. The new manifest pins the exact new client code.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "route_omission",
+      "source_link"
+    ],
+    "paths": [
+      "scripts/test-easy-ontology-release.mjs",
+      "scripts/test-full-route.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed the exact scoped claim, neighboring realism and nominalism positions, and source limits."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T17:15:00Z",
+        "note": "Reviewed historical version binding, route opportunity, and adversarial software fixtures."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "engine_source"
+    ],
+    "targetVersion": "model-release-1.4.0",
+    "migration": "No raw-response migration. Historical model and affinity results retain their previous manifest; new administrations use the new tuple."
+  },
+  "implementationRefs": [
+    "packages/experience/quiz.js",
+    "data/releases/engine-sources/engine-source-1.2.0/manifest.json",
+    "data/experience/policy-v1.8.json"
+  ]
+}
