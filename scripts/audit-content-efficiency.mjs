@@ -186,7 +186,13 @@ const dispositions={
  EPI025:['rewrite_candidate','Clearest-case option can elicit recognition of a textbook example rather than the respondent’s own epistemic view.'],
  EPI042:['rewrite_candidate','Epistemic justification and four textbook-theory options impose unnecessary jargon for a public worldview question.'],
  VAI042:['route_reconsider','Close same-method caring paraphrase of VAI031; establish its added facet before giving it a public route slot.'],
- VAI051:['keep_discriminator','Commitment and promise wording narrows the reliability value compared with VAI016 and VAI032.']
+ VAI051:['keep_discriminator','Commitment and promise wording narrows the reliability value compared with VAI016 and VAI032.'],
+ RCI011:['rewrite_candidate','Belief and conduct are different authority questions. Agreement with one need not imply agreement with the other.',
+  ['https://plato.stanford.edu/entries/divine-revelation/','https://plato.stanford.edu/entries/religion-epistemology/']],
+ RCI018:['rewrite_candidate','Authority lacks a specified target: epistemic justification and practical or moral authority may elicit different views.',
+  ['https://plato.stanford.edu/entries/divine-revelation/']],
+ PLI019:['rewrite_candidate','Repair of harm, offender rehabilitation, and restoration of relationships are distinct possible goals of justice.'],
+ SOI007:['rewrite_candidate','Ecological participation and a norm against treating nature merely as a resource can receive different answers.']
 };
 const wordingFlags=i=>{
  const text=i.text,flags=[];
@@ -215,6 +221,7 @@ const itemAudit=bank.items.map(i=>{
   interpretationRuleIds:ruleUse.get(i.id),referenceCriterionIds:profileUse.get(i.id),eligibility:i.eligibility,
   sourceIds:i.provenance.sourceRefs,provenanceOrigin:i.provenance.origin,contentTags:i.contentTags,
   editorialDisposition:base[0],dispositionRationale:base[1],wordingReviewFlags:wordingFlags(i),
+  editorialReviewSourceUrls:base[2]??[],
   relatedHighSimilarityItems:near.filter(x=>x.itemIds.includes(i.id)).slice(0,5).map(x=>({itemId:x.itemIds.find(y=>y!==i.id),tokenContainment:x.tokenContainment}))};
 });
 const constructAudit=active.map(c=>{

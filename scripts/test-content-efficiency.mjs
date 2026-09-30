@@ -22,6 +22,7 @@ assert.deepEqual(audit.itemDispositions.map(x=>[x.itemId,x.revision]),bank.items
 for(const item of audit.itemDispositions){
  assert.ok(allowed.has(item.editorialDisposition),item.itemId);
  assert.ok(item.dispositionRationale&&item.semanticTarget&&item.sourceIds.length,item.itemId);
+ assert.ok(Array.isArray(item.editorialReviewSourceUrls),item.itemId);
  assert.equal(item.authoredItemTargets.length,item.primaryConstructIds.length+item.secondaryConstructIds.length,item.itemId);
  assert.deepEqual(item.interpretablePropositions.map(x=>x.ruleId),item.interpretationRuleIds,item.itemId);
  for(const proposition of item.interpretablePropositions){
@@ -38,6 +39,9 @@ for(const item of audit.itemDispositions){
    assert.ok(count>=0&&count<=n,item.itemId);
  }
 }
+for(const id of ['RCI011','RCI018','PLI019','SOI007'])
+ assert.equal(audit.itemDispositions.find(item=>item.itemId===id).editorialDisposition,'rewrite_candidate',id);
+assert.equal(audit.itemDispositions.find(item=>item.itemId==='RCI011').editorialReviewSourceUrls.length,2);
 const researchOnly=new Set(prior.decisions.filter(x=>x.decision==='remain_research_only').map(x=>x.constructId));
 for(const item of audit.itemDispositions.filter(x=>x.editorialDisposition==='keep_research_only')){
  assert.ok(item.primaryConstructIds.every(id=>researchOnly.has(id)),item.itemId);
@@ -66,5 +70,13 @@ assert.equal(review.structuralGaps.length,35);
 for(const gap of review.structuralGaps){
  assert.ok(gap.candidateAdditions.length>=gap.requiredUnits,gap.ruleId);
  assert.ok(gap.candidateAdditions.every(x=>!x.inCurrentFullBundlePool),gap.ruleId);
+}
+const narrative=fs.readFileSync(new URL('../docs/CONTENT_EFFICIENCY_AUDIT.md',import.meta.url),'utf8');
+const labels={keep:'Keep',keep_parallel_indicator:'Keep as parallel indicator',keep_discriminator:'Keep as discriminator',
+ keep_research_only:'Keep for research only',rewrite_candidate:'Rewrite candidate',route_reconsider:'Reconsider for route',
+ deprecate_candidate:'Deprecate candidate'};
+for(const [status,label] of Object.entries(labels)){
+ const count=audit.itemDispositions.filter(item=>item.editorialDisposition===status).length;
+ assert.ok(narrative.includes(`| ${label} | ${count} |`),'Stale narrative disposition '+status);
 }
 console.log('PASS content-efficiency: 562 items, 181 constructs, 4 route diagnostics, 9 references, immutable artifacts');
