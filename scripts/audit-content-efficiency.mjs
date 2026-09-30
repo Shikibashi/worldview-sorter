@@ -118,7 +118,7 @@ const dispositions={
  MEI024:['route_reconsider','Near-paraphrase of MEI009; check whether its framing adds an independent discrimination opportunity.'],
  MEI004:['keep_parallel_indicator','Desire-independent reasons framing retained as a parallel indicator.'],
  MEI026:['route_reconsider','Overlaps MEI004 closely; assess whether the context changes the target.'],
- NEI009:['keep_parallel_indicator','Reasonable-rejection statement retained pending response-process evidence.'],
+ NEI009:['keep_parallel_indicator','Reasonable-rejection statement retained as an authored parallel indicator; no statistical independence is claimed.'],
  NEI017:['route_reconsider','Similar contractualist reasonable-rejection wording to NEI009.'],
  NEI013:['keep_parallel_indicator','Doing-versus-allowing distinction is a valid second indicator.'],
  NEI023:['route_reconsider','Similar doing-versus-allowing proposition to NEI013.'],
