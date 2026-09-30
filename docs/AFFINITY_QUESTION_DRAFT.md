@@ -1,6 +1,6 @@
 # Affinity question draft 1 (historical editorial pool)
 
-> This page records the 1.4-era draft inventory and its then-current 562-item baseline. The active bank now has 565 items. `NEI122@1` was promoted in [model release 1.7.0](../data/releases/model-release-v1.7.0.json) with a separate maximization check and a narrowly scoped interpretation rule. The other 24 affinity drafts remain unreleased. The historical draft and reconciliation records have not been rewritten.
+> This page records the 1.4-era draft inventory and its then-current 562-item baseline. The active bank now has 566 items. `NEI122@1` was promoted in [model release 1.7.0](../data/releases/model-release-v1.7.0.json) with a separate maximization check; `NEI123@1` was promoted in [model release 1.8.0](../data/releases/model-release-v1.8.0.json) with a separate act-criterion check. Each has a narrowly scoped rule. The other 23 affinity drafts remain unreleased. The historical draft and reconciliation records have not been rewritten.
 
 The [joint draft-pool reconciliation](../data/reviews/draft-pool-reconciliation-v1.json) compares these 25 drafts and the 16 dimension drafts with the **then-active** 562-item bank. It identifies existing questions to reuse, specific near duplicates, and a small first set for formal source and evidence review. Its priorities did not themselves activate any draft item.
 
@@ -8,7 +8,7 @@ The [51-position expansion review](../data/affinities/expansion-review-v1.json) 
 
 These questions ask about philosophical claims, never whether a respondent identifies with a named school. They were selected for a specific doctrinal contrast that existing content leaves indirect. An item target in the candidate format identifies the nearest authored construct for editorial navigation; it is **not** an approved interpretation rule or an assertion that the construct has been empirically established. The draft's option IDs are proposed answer meanings, not scoring keys. Any future production rule needs its own exact proposition, source-to-claim review, positive/opposed/mixed/missing behavior, independent evidence review, route release, and regression fixtures. A named tradition may require several separately supported commitments.
 
-The [11 proposed academic source records](../data/affinities/question-sources-v1.json) capture exact limited claims for questions where the older ledger offered only a broad or measurement-focused reference. `NEI122@1` now has a separately reviewed claim in the [active ledger](../data/generic/source-ledger-v0.9.json); the other proposals remain draft. No source is presented as validating these original questions.
+The [11 proposed academic source records](../data/affinities/question-sources-v1.json) capture exact limited claims for questions where the older ledger offered only a broad or measurement-focused reference. `NEI122@1` and `NEI123@1` now have separately reviewed claims in the [active ledger](../data/generic/source-ledger-v0.10.json); the other proposals remain draft. No source is presented as validating these original questions.
 
 ## What the new questions add
 

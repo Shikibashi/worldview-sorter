@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-rule-consequence-content-release.mjs"
+    ]
+  },
+  "implementationRefs": [
+    "scripts/build-rule-consequence-content-v1.mjs",
+    "scripts/test-rule-consequence-content-release.mjs",
+    "docs/governance/RULE_CONSEQUENCE_REVIEW.md"
+  ],
+  "respondentImpact": "Only Full adds this two-unit direct rule-consequence criterion. One directional answer is a lean; Quick and Standard retain not_measured. The nine doctrinal comparisons gain no automatic criterion.",
+  "historicalCompatibility": "Release 1.7.0, its 242-item Full route, nine-entry catalog, and older item revisions remain pinned. Saved administrations retain their original model and executable source.",
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T20:25:00Z",
+        "note": "Reviewed SEP Rule Consequentialism sections 4 and 8, including the criterion versus decision-procedure distinction and act, duty, and contractualist neighbors."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T20:25:00Z",
+        "note": "Checked exact item revisions, directional and non-directional answers, route opportunity, false-positive fixtures, and historical preservation."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T20:25:00Z",
+        "note": "Only canonical English is active; Spanish and Arabic remain unavailable pending translation and philosophical review."
+      }
+    ]
+  },
+  "proposalId": "MCP-2026-055",
+  "title": "Pin the rule-consequence source claim",
+  "objectType": "source",
+  "changeClass": "new_object",
+  "affectedObjects": [
+    {
+      "type": "source",
+      "id": "sep-rule-consequence-criterion"
+    }
+  ],
+  "currentBehavior": "No rule-linked academic claim established the proposed criterion versus decision-procedure contrast.",
+  "proposedBehavior": "The source registry, claim ledger, and new rule attach the SEP Rule Consequentialism claim to the limited proposition.",
+  "rationale": "A traceable source-to-rule claim is required without pretending the source validates the authored questions.",
+  "alternatives": [
+    "Treat generic rule guidance as rule consequentialism: rejected because act consequentialists can use rules as a decision procedure.",
+    "Treat generic concern for outcomes as rule consequentialism: rejected because it never establishes the rule as a rightness criterion.",
+    "Promote a complete ethical identity: deferred because sanctions, value theory, and acceptance conditions are not measured."
+  ],
+  "sourceClaims": [
+    {
+      "sourceId": "sep-rule-consequence-criterion",
+      "relationship": "supports",
+      "claim": "For a full rule-consequentialist criterion of wrongness, acts are wrong when forbidden by rules justified by their consequences. This differs from using consequence-justified rules merely as a decision procedure while direct act outcomes determine wrongness (sections 4 and 8)."
+    }
+  ],
+  "philosophicalBasis": {
+    "proposition": "An act’s moral rightness depends on conformity to rules ultimately justified by their consequences, even when that act alone would produce a better outcome.",
+    "neighboringViews": [
+      "Direct act consequentialism",
+      "Deontological rule constraints",
+      "Contractualist rule justification",
+      "Rule-guided decision procedure"
+    ],
+    "nonEntailments": [
+      "Utilitarianism",
+      "Welfarism",
+      "Hedonism",
+      "Rules for moral sanctions",
+      "An empirically calibrated moral type"
+    ],
+    "existingGap": "The prior bank asked whether a consequence-justified rule governs one act, but lacked an independent question about the rule’s ultimate justification.",
+    "scholarlyDisagreement": "Full and partial rule consequentialism differ on criterion versus decision procedure; theories differ further about rule selection, exceptions, and moral sanctions."
+  },
+  "release": {
+    "targetVersion": "model-release-1.8.0",
+    "migration": "No data migration. Historical administrations remain pinned to their release, route, model, catalog, and engine archive.",
+    "components": [
+      "sources",
+      "source_ledger",
+      "model"
+    ]
+  }
+}

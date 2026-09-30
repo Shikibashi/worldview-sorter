@@ -1,0 +1,21 @@
+{
+  "version": "0.12.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.11.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-09-30",
+  "note": "One new rule-justification discriminator; an existing item supplies a separate act-rightness criterion case. Authored content, not empirical validation.",
+  "itemCount": 566,
+  "newItemCount": 1,
+  "registryEntries": 185,
+  "activeConstructCount": 184,
+  "newConstructCount": 1,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.11.json": "b7fbe74fbe217e2b5ab917208b770b0b70b8c65d051b6d4e7c3b03ef64db5802",
+    "data/registries/constructs-v0.4.json": "0eb224a0c0d77e3ec2776f2b968ca32fe86bd5082f5e90cc9e7215bffce41e15"
+  },
+  "publicInferenceAllowed": false
+}
