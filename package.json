@@ -37,7 +37,7 @@
     "shortform:select": "node scripts/select-short-form.mjs",
     "worldview:compare": "node scripts/worldview.mjs compare",
     "worldview:followups": "node scripts/worldview.mjs followups",
-    "test:generic": "node scripts/test-generic-worldview.mjs && node scripts/test-moral-truth-claim-release.mjs",
+    "test:generic": "node scripts/test-generic-worldview.mjs && node scripts/test-moral-truth-claim-release.mjs && node scripts/test-quick-source-qualification-release.mjs",
     "test:experience": "node scripts/test-quiz-experience.mjs",
     "test:engagement": "node scripts/test-engagement.mjs",
     "test:localization": "node scripts/test-localization.mjs",

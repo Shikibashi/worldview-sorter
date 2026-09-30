@@ -80,7 +80,7 @@ All 49 constructs unmapped in `coverage-v0.2.json` now have explicit disposition
 
 ## V1 pilot candidate
 
-The active full-depth route is the 243-item `pilot-candidate-1.7.0` in `model-release-1.10.0`. It keeps the earlier 242- and 240-question full forms and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
+The active full-depth route is the 243-item `pilot-candidate-1.8.0` in `model-release-1.11.0`. It keeps the earlier 242- and 240-question full forms and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
 
 ## Data and optional research contribution
 
