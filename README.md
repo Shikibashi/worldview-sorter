@@ -18,7 +18,9 @@ npm test
 npm run server:start
 ```
 
-The public quiz is served at http://127.0.0.1:4173/apps/quiz/. The older development runner is disabled unless explicitly enabled; see [server operations](docs/COLLECTION_SERVICE.md).
+The local development server opens the public quiz at http://127.0.0.1:4173/. The older development runner is disabled unless explicitly enabled; see [server operations](docs/COLLECTION_SERVICE.md).
+
+For the static GitHub Pages release, run `npm run build:production`, `node scripts/verify-production-site.mjs`, and `npm run test:production:browser`. The artifact is `dist/pages/`; [deployment operations](docs/DEPLOYMENT.md) describe the `main`-only Actions workflow, custom domain, privacy boundary, and rollback. The repository root is never the Pages artifact.
 
 ## Evidence, not identity guessing
 
@@ -56,7 +58,7 @@ See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access 
 
 ## Public quiz experience
 
-The root opens a field-guide-style quiz with 64/120/238-question depth routes, pause/resume, and source-linked summaries. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports them or explicitly opts into an eligible fresh Full-pilot research contribution. The old `/apps/web/` development collector is disabled by default.
+The root opens a field-guide-style quiz with 64/120/238-question depth routes, pause/resume, and source-linked summaries. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
 
 Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 
@@ -82,7 +84,7 @@ The active full-depth route is the frozen 238-item `pilot-candidate-1.1.0` in `m
 
 ## Data and optional research contribution
 
-The public quiz has no account, analytics tracker, or automatic answer submission. Optional research contribution is disabled on the server by default; when enabled, it requires explicit per-attempt consent and supports receipt-based withdrawal. The private, consent-filtered package preserves raw answers and exact version snapshots. See [data boundaries and research handoff](docs/RESEARCH_DATA.md), [the data dictionary](docs/RESEARCH_DATA_DICTIONARY.md), and [public operations](docs/OPERATIONS.md).
+The public quiz has no account, analytics tracker, or automatic answer submission. The static Pages release has no research contribution, product-event, or feedback API. A separate development/research server retains the explicit-consent contribution system but is not deployed to the public domain. See [data boundaries and research handoff](docs/RESEARCH_DATA.md), [the data dictionary](docs/RESEARCH_DATA_DICTIONARY.md), and [public operations](docs/OPERATIONS.md).
 
 [Progressive depth route purposes and limits](docs/PROGRESSIVE_DEPTH.md).
 
