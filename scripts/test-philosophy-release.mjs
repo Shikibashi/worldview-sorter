@@ -79,7 +79,17 @@ for(const size of [80,120,160])test('Take, save, resume and summarize the new '+
  assert.deepEqual(restoreQuiz(q,{bank,pilot,scalesDoc,formPolicy:policy}),q);
  const before=JSON.stringify(q.session),s=buildQuizSummary({model,bank,scalesDoc,session:q.session});
  assert.equal(JSON.stringify(q.session),before);assert.equal(s.domains.length,12);assert.equal(s.domains.flatMap(d=>d.facets).length,31);
- assert.ok(s.domains.flatMap(d=>d.facets).every(f=>f.answeredItems>=2));assert.equal(s.identity,null);assert.equal(s.matchPercent,null);
+ const answered=new Set(q.session.responses.map(response=>response.itemId));
+ for(const facet of s.domains.flatMap(domain=>domain.facets)){
+  const facetRuleIds=model.facets.find(source=>source.id===facet.id).ruleIds;
+  const publicEvidence=new Set(facetRuleIds.flatMap(id=>{
+   const rule=byRule.get(id);
+   return rule.tier==='research'?[]:rule.evidence.filter(e=>answered.has(e.itemId)).map(e=>e.itemId);
+  }));
+  assert.equal(facet.answeredItems,publicEvidence.size,facet.id);
+ }
+ assert.ok(s.rows.every(row=>byRule.get(row.id)?.tier!=='research'));
+ assert.equal(s.identity,null);assert.equal(s.matchPercent,null);
  const bad=structuredClone(q);bad.packet.formPolicyVersion='unknown';assert.throws(()=>restoreQuiz(bad,{bank,pilot,scalesDoc,formPolicy:policy}));
 });
 test('Historical quiz envelopes restore with the old packet algorithm',()=>{
