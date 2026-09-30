@@ -68,6 +68,8 @@ await write('data/philosophy/full-route-release-v1.json', {
 });
 await write('docs/FULL_ROUTE.md', `# 240-question full exploration
 
+> Historical milestone for the initial full route. Version and coverage claims below describe that release, not the current PR #1 baseline. See [the content-efficiency audit](CONTENT_EFFICIENCY_AUDIT.md) for bank v0.9 and public policies v1.1.
+
 The public quiz offers 80, 120, 160, and **240 assigned questions**. The full route
 uses more of the existing ${bank.items.length}-item bank, not newly invented filler or
 repeated questions. Every route retains the 31-facet academic content blueprint.

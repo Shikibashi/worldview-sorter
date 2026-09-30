@@ -100,6 +100,7 @@ await write('data/current.json',current);
 const sourceMap=new Map(model.sources.map(s=>[s.id,s]));
 const link=id=>{const s=sourceMap.get(id);return `[${s.title}](${s.url})`;};
 const md=['# Philosophy-domain upgrade','',
+ '> Historical milestone for the 140-rule release with 49 open mapping gaps. The subsequent [49-construct audit](UNMAPPED_AUDIT.md) and [PR #1 content baseline](CONTENT_EFFICIENCY_AUDIT.md) supersede these current-state counts.','',
  'This release makes domain coverage a property of question selection and evidence, not just twelve headings. The fields overlap: ontology asks about existence and categories within a broader metaphysical inquiry. The organizational split does not assert separate empirical factors. '+link('domain-metaphysics'),'',
  '## Actual coverage', '',`The ${bank.items.length}-item bank is unchanged. ${rules.length} new source-reviewed interpretation rules bring the model to ${model.commitments.length}. ${report.mappedConstructs} active constructs have mappings; ${report.remainingConstructGaps} remain explicit gaps.`,
  '', '## Topic structure', '',...facets.map(f=>`- **${f.title}**: ${f.question}`),

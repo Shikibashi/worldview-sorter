@@ -135,6 +135,7 @@ await write('data/sources.json',{...sourceDoc,sources});
 const cite=ids=>ids.map(id=>{const s=sourceMap.get(id);assert.ok(s,'Missing source '+id);return `[${s.title}](${s.url})`;}).join('; ');
 const document=[
  '# Generic academic worldview layer','',
+ '> Historical milestone for the earlier 83-rule model. Its counts are not current. See [the PR #1 content audit](CONTENT_EFFICIENCY_AUDIT.md) for `generic-0.3.0` and the 562-item bank.','',
  'The unit of comparison is an explicitly reported commitment, not a person, party, country or nearest philosophical identity. This layer reuses the entire repository source ledger, including critiques and limited-access records, without pretending that citations are respondent data.','',
  `The bank remains ${bank.items.length} items. The model has ${ruleList.length} reusable commitment rules and ${comparisons.length} scoped comparisons across all twelve domains. ${report.constructsWithoutMappings} active constructs still lack an approved comparison rule and remain visible as gaps.`,
  '', '## Academic and methodological decisions','',
