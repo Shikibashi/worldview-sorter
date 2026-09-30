@@ -58,7 +58,7 @@ See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access 
 
 ## Public quiz experience
 
-The root opens a field-guide-style quiz with 64/120/238-question depth routes, pause/resume, and source-linked summaries. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
+The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/238-question depth routes, pause/resume, and source-linked summaries. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
 
 Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 
