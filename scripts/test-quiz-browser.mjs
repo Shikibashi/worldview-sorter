@@ -354,7 +354,8 @@ try{
   await fullPage.locator('#overview-title').textContent()==='Selected answer patterns'&&
   /rule-linked supporting source claim/.test(await fullPage.locator('#overview-section > p').innerText())&&
   !(await fullPage.locator('#overview-section').innerText()).includes('Clearly evidenced commitments'));
- check('Pilot affinity section renders all six scoped comparisons',await fullPage.locator('#affinity-section').isVisible()&&await fullPage.locator('[data-tradition-id]').count()===6);
+ check('Pilot affinity section renders every scoped catalog comparison',await fullPage.locator('#affinity-section').isVisible()&&
+  await fullPage.locator('[data-tradition-id]').count()===affinityCatalog.traditions.length);
  check('Scope-only defining mappings cannot present a close doctrinal match',
   await fullPage.locator('#affinity-empty').isVisible()&&
   await fullPage.locator('.affinity-state').first().innerText().then(text=>text.includes('Doctrinal affinity unresolved')));
