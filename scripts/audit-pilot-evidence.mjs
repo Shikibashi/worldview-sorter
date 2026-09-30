@@ -3,16 +3,18 @@ import {createHash} from 'node:crypto';
 import {readFile,writeFile} from 'node:fs/promises';
 
 const root=new URL('../',import.meta.url);
-const paths={bank:'data/items/candidate-v0.9.json',model:'data/generic/model-v1.1-pilot.json',
- routes:'data/experience/progressive-depth-v1.1.json',historicalGaps:'data/reviews/route-review-v1.json',
+const currentAudit=process.argv.includes('--current');
+const paths={bank:'data/items/candidate-v0.9.json',model:currentAudit?'data/generic/model-v1.2-pilot.json':'data/generic/model-v1.1-pilot.json',
+ routes:currentAudit?'data/experience/progressive-depth-v1.2.json':'data/experience/progressive-depth-v1.1.json',historicalGaps:'data/reviews/route-review-v1.json',
  directionalDecisions:'data/reviews/directional-contract-decisions-v1.json'};
 const raw=async path=>readFile(new URL(path,root));
 const read=async path=>JSON.parse(await raw(path));
 const [bank,model,policy,prior,decisionFile]=await Promise.all(Object.values(paths).map(read));
-assert.equal(model.modelVersion,'generic-1.1.0-pilot');
-assert.equal(policy.policyVersion,'progressive-depth-1.1.0');
+assert.equal(model.modelVersion,currentAudit?'generic-1.2.0-pilot':'generic-1.1.0-pilot');
+assert.equal(policy.policyVersion,currentAudit?'progressive-depth-1.2.0':'progressive-depth-1.1.0');
 assert.equal(decisionFile.schemaVersion,'directional-contract-decisions-1');
-assert.equal(decisionFile.modelVersion,model.modelVersion);
+// The successor changes claim provenance and affinity mapping, not rule evidence.
+assert.equal(decisionFile.modelVersion,'generic-1.1.0-pilot');
 const decisions=new Map(decisionFile.decisions.map(row=>[row.ruleId,row]));
 assert.equal(decisions.size,decisionFile.decisions.length,'Repeated directional decision.');
 const full=policy.routes.find(route=>route.id==='full');
@@ -87,7 +89,7 @@ const fullRouteScope={
  unresolvedOrNeedsItemsConstructIds:model.coverage.constructs.filter(row=>!(row.ruleIds??[]).length&&
   ['unresolved','requires_new_discriminating_items'].includes(row.disposition)).map(row=>row.id).sort(),
  note:'This is the frozen route opportunity contract, not a claim that any respondent reached a directional result.'};
-const report={schemaVersion:'pilot-evidence-dispositions-1',auditVersion:'pilot-evidence-dispositions-1.0.0',
+const report={schemaVersion:'pilot-evidence-dispositions-1',auditVersion:currentAudit?'pilot-evidence-dispositions-1.1.0':'pilot-evidence-dispositions-1.0.0',
  scope:'Authored evidence-path and compatibility audit of the frozen successor pilot. Counts are structural, not psychometric.',
  inputs:Object.fromEntries(await Promise.all(Object.values(paths).map(async path=>[path,createHash('sha256').update(await raw(path)).digest('hex')]))),
  release:{modelVersion:model.modelVersion,routePolicyVersion:policy.policyVersion,fullRouteVersion:full.routeVersion,
@@ -105,7 +107,7 @@ assert.deepEqual(report.summary,{bankItems:562,publicRules:140,fullRouteItems:23
  historicalStatusCounts:{no_successor_direct_rule:16,narrower_or_split_public_rule_with_full_path:2,
   related_public_rule_with_full_path:14,reopened_and_unresolved:1,successor_rule_nonpublic:2},
  fullRouteGapClasses:{all_evidence_omitted_by_frozen_route:37,bank_directional_contract_gap:11,incomplete_frozen_route_path:2}});
-const artifact='data/reviews/pilot-evidence-dispositions-v1.json',bytes=JSON.stringify(report,null,2)+'\n';
+const artifact=currentAudit?'data/reviews/pilot-evidence-dispositions-v2.json':'data/reviews/pilot-evidence-dispositions-v1.json',bytes=JSON.stringify(report,null,2)+'\n';
 if(process.argv.includes('--write'))await writeFile(new URL(artifact,root),bytes);
 else if(process.argv.includes('--check'))assert.equal((await raw(artifact)).toString(),bytes,'Pilot evidence disposition artifact is stale.');
 else process.stdout.write(JSON.stringify(report.summary,null,2)+'\n');

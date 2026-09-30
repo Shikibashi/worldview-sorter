@@ -2,7 +2,7 @@
 
 The current [affinity expansion review](AFFINITY_EXPANSION_REVIEW.md) screens additional scoped positions and traditions against the active model. It does not alter this historical catalog or activate new public comparisons.
 
-**Historical catalog:** The active [catalog 1.1.0](../data/affinities/catalog-v1.1.json) has the same six traditions and doctrine and remains pinned in [model release 1.3.0](../data/releases/model-release-v1.3.0.json). Model release 1.2.0 retired SO09. Catalog 1.0.0 and its original model remain byte-pinned for historical results.
+**Current release:** [Catalog 1.2.0](../data/affinities/catalog-v1.2.json) adds one scoped Easy Ontology comparison to the six historical entries. [Model release 1.4.0](../data/releases/model-release-v1.4.0.json) pins the exact catalog and interpretation model. Easy Ontology's method is assessed only on Full; its broader application and realism dispute remain visible gaps. The six-entry [catalog 1.1.0](../data/affinities/catalog-v1.1.json) and original catalog 1.0.0 remain pinned for historical results. The remainder of this document describes the original six-entry catalog unless stated otherwise.
 
 The first [catalog](../data/affinities/catalog-v1.json) compares a respondent's **already interpreted public propositions** with selected source-backed doctrines. Affinity is overlap or divergence with doctrine, never membership in a tradition. A person can overlap with several entries at once. A missing defining commitment stays unmeasured; it is never filled by a neighboring belief, raw answer, political coordinate, or market preference. The catalog is theoretical editorial content for the frozen pilot, not a validated classifier.
 

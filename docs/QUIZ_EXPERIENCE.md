@@ -32,7 +32,7 @@ The third layer accepts only `quiz_finished`, `topic_opened` with a domain ID, a
 
 The public client now provides optional source trails, neutral activity milestones, and user-initiated doctrine comparisons. Possible later additions include cosmetic themes and selected-pattern comparison. These are extensions to exploration, not upgrades to someone's supposed rationality or morality. No game mechanic may change item selection, interpretation thresholds, ideological labels or the wording being measured without a separately versioned measurement change.
 
-Even answer-independent incentives could affect how people respond. Identical raw answers producing identical results proves code isolation, not psychological measurement equivalence. Any later experiment should separately measure enjoyment/abandonment and response distributions, missingness, time patterns and subgroup effects. Retaking after reading explanations can also change responses; no repeated-play incentive is active. The raw session records an exact client version; the current interface is `quiz-1.7.0`, while older backups retain their versions.
+Even answer-independent incentives could affect how people respond. Identical raw answers producing identical results proves code isolation, not psychological measurement equivalence. Any later experiment should separately measure enjoyment/abandonment and response distributions, missingness, time patterns and subgroup effects. Retaking after reading explanations can also change responses; no repeated-play incentive is active. The raw session records an exact client version; the current interface is `quiz-1.8.0`, while older backups retain their versions.
 
 ## Privacy and sharing
 

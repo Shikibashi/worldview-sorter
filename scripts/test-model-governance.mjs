@@ -27,12 +27,14 @@ assert.equal(validateContentIntegrity(activeSnapshot).publicRules,140);
 assert.deepEqual(await captureRelease(root,historical,manifest.releaseVersion),manifest);
 assert.deepEqual(await captureRelease(root,current,activeManifest.releaseVersion),activeManifest);
 await assert.rejects(captureRelease(root,historical,'model-release-1.1.0'),/engine-source archive/);
-assert.equal(activeManifest.components.find(c=>c.key==='engine_source')?.version,'engine-source-1.1.0');
+assert.equal(activeManifest.components.find(c=>c.key==='engine_source')?.version,'engine-source-1.2.0');
 const previousManifest=await readJson(root,'data/releases/model-release-v1.2.0.json');
+const opportunityManifest=await readJson(root,'data/releases/model-release-v1.3.0.json');
 assert.equal(previousManifest.components.find(c=>c.key==='engine_source')?.version,'engine-source-1.0.0');
+assert.equal(opportunityManifest.components.find(c=>c.key==='engine_source')?.version,'engine-source-1.1.0');
 const opportunityProposal=await readJson(root,'data/governance/proposals/MCP-2026-008.json');
 const earlierEngineProposal=await readJson(root,'data/governance/proposals/MCP-2026-006.json');
-assert.deepEqual(validateReleaseTransition({previousManifest,nextManifest:activeManifest,
+assert.deepEqual(validateReleaseTransition({previousManifest,nextManifest:opportunityManifest,
  changes:[{objectType:'result_semantics',id:'engine-source',component:'engine_source',kind:'modified',
   changedFields:['engine_source'],risk:'meaning_sensitive'}],
  proposals:[earlierEngineProposal,opportunityProposal],nextSnapshot:activeSnapshot}).approvedProposalIds,['MCP-2026-008']);
@@ -74,9 +76,9 @@ const provenance=JSON.parse(provenanceReport.stdout);
 assert.ok(provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'&&
  r.sourceClasses.includes('context_limited_empirical_research')));
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,0);
-assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,140);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,1);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,1);
+assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,139);
 assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
  provenance.claimLevelProvenance.ruleLinkedClaimReferences+
  provenance.claimLevelProvenance.sourceRecordClaimOnlyReferences+
@@ -85,10 +87,10 @@ assert.ok(provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=
  r.sourceIds.includes('acad-pragmatism')));
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='ph-sacred-value'));
 assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,140);
-assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,14);
-assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,126);
+assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,15);
+assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,125);
 assert.ok(provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
-assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,18);
+assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,19);
 assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.length,16);
 assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.length,18);
 assert.ok(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.some(row=>
@@ -189,7 +191,8 @@ revisedProposition.scope+=' [synthetic clarification]';
 revisedProposition.proposition=propositionProposal.philosophicalBasis.proposition;
 revisedProposition.sourceClaims=propositionProposal.sourceClaims;
 const updatedProvenance=claimLevelProvenance(propositionSnapshot.model);
-assert.equal(updatedProvenance.ruleLinkedClaimReferences,provenance.claimLevelProvenance.ruleLinkedClaimReferences+1);
+const baselineProvenance=claimLevelProvenance(snapshot.model);
+assert.equal(updatedProvenance.ruleLinkedClaimReferences,baselineProvenance.ruleLinkedClaimReferences+1);
 assert.equal(updatedProvenance.ruleLinkedSupportingClaimReferences,1);
 assert.ok(!updatedProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(propositionId));
 const challengedSnapshot=structuredClone(propositionSnapshot);
@@ -200,7 +203,7 @@ assert.equal(challengedProvenance.ruleLinkedSupportingClaimReferences,0,
  'A linked challenge cannot be counted as supporting academic basis.');
 assert.ok(challengedProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(propositionId));
 assert.equal(updatedProvenance.referencesWithoutExplicitClaim,
- provenance.claimLevelProvenance.referencesWithoutExplicitClaim-1);
+ baselineProvenance.referencesWithoutExplicitClaim-1);
 const reviewedTrace=traceBasis(buildDependencyGraph(propositionSnapshot),'proposition',propositionId);
 assert.ok(reviewedTrace.basis.some(edge=>edge.relation==='claim_supports'&&edge.from==='source:acad-pragmatism'&&
  edge.claim===claimText));

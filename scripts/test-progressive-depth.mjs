@@ -26,7 +26,7 @@ check('Three immutable nested routes preserve exact frozen revisions and domain/
  assert.deepEqual(policy.routes.at(-1).itemRefs,frozenForm.frozenItems);
  for(const route of policy.routes){const ids=new Set(route.itemRefs.map(x=>x.itemId));assert.equal(ids.size,route.size);for(const x of route.itemRefs){assert.equal(byId.get(x.itemId).revision,x.itemRevision);assert.ok(pilotManifest.route.exactItemRevisions.some(y=>y.itemId===x.itemId&&y.itemRevision===x.itemRevision));}for(const id of prior)assert.ok(ids.has(id));prior=ids;const row=report.routes.find(r=>r.routeId===route.id);assert.equal(row.itemCount,route.size);assert.equal(Object.values(row.domains).filter(Boolean).length,12);assert.equal(Object.values(row.responseScales).filter(Boolean).length,7);assert.deepEqual([...route.assessableDirectRuleIds].sort(),model.publicRuleIds.filter(id=>!row.unassessablePublicRuleIds.includes(id)).sort());assert.deepEqual([...route.assessableFacetIds].sort(),[...row.assessableFacetIds].sort());}
  assert.deepEqual(report.routes.map(r=>r.assessableDirectRules),[30,56,90]);
- assert.deepEqual(report.routes.map(r=>r.affinity.reduce((n,t)=>n+t.definingDirectlyAssessable,0)),[2,2,10]);
+ assert.deepEqual(report.routes.map(r=>r.affinity.reduce((n,t)=>n+t.definingDirectlyAssessable,0)),[2,2,11]);
  assert.deepEqual(report.routes.map(r=>r.affinity.reduce((n,t)=>n+t.definingPartiallyAssessed,0)),[0,2,2]);
 });
 check('A short route cannot inherit unasked public or derived propositions',()=>{

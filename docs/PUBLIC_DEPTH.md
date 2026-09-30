@@ -2,7 +2,7 @@
 
 ## Bank v0.7
 
-The active candidate bank now contains **363 items**.
+At this historical milestone, candidate bank v0.7 contained **363 items**. The current candidate bank is v0.9 with 562 items.
 
 All public-facing constructs share the same minimum development floor:
 
