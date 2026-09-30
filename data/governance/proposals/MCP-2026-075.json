@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "author": "Worldview Sorter AI editorial review",
+  "status": "approved",
+  "currentBehavior": "The two Full-route answers are available only to a diagnostic legacy truth-aptness rule without an exact public proposition.",
+  "proposedBehavior": "Expose only a literal moral truth-claim proposition from two directional units; retain other metaethical and affinity gaps.",
+  "rationale": "The existing items directly address the semantic proposition. A stronger realism or school inference would be a false positive.",
+  "philosophicalBasis": {
+    "proposition": "Some ordinary moral wrongness statements make claims that can literally be true or false.",
+    "neighboringViews": [
+      "moral error theory",
+      "cognitivist relativism",
+      "expressivism",
+      "quasi-realism",
+      "moral realism"
+    ],
+    "nonEntailments": [
+      "Truth-aptness does not imply that any moral claim is true.",
+      "No complete metaethical school or psychometric type follows from this rule."
+    ],
+    "existingGap": "Full already asks two direct semantic questions, but the public model did not expose a separately source-linked exact proposition.",
+    "scholarlyDisagreement": "Sophisticated expressivists and minimalists dispute whether ordinary truth-talk establishes robust cognitivist semantics."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "sep-moral-truth-claim-criterion",
+      "relationship": "supports",
+      "claim": "Cognitivist accounts treat ordinary moral sentences as truth-apt and their acceptance as belief-like. Noncognitivist accounts question substantial truth conditions or belief expression, although sophisticated expressivists may allow deflationary truth talk. Truth-aptness alone does not establish that any moral claim is true."
+    }
+  ],
+  "alternatives": [
+    "Infer moral realism: rejected because actual moral truth remains unmeasured.",
+    "Count attitude expression as opposition: rejected because hybrid and cognitivist subjectivist accounts can also express attitudes.",
+    "Add a paraphrase question: rejected because the two existing Full items already supply different response formats."
+  ],
+  "respondentImpact": "Full may now show a narrow supported, opposed, mixed, leaned, or insufficient truth-claim result; Quick and Standard remain not measured. No affinity or raw answer changes.",
+  "historicalCompatibility": "Release 1.9.0 and prior model, route, source, localization, and result artifacts remain at immutable paths. The same 64/120/243 item revisions and order are retained.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-moral-truth-claim-release.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T22:00:00Z",
+        "note": "Reviewed SEP moral cognitivism and moral realism distinctions, including error theory, relativism, hybrid expression, and minimalist truth."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T22:00:00Z",
+        "note": "Reviewed exact MEI017@1 and MEI018@1 directions, route opportunity, false positives, and frozen replay."
+      },
+      {
+        "role": "linguistic",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-09-30T22:00:00Z",
+        "note": "Canonical English wording is unchanged; Spanish and Arabic remain unavailable pending philosophical translation review."
+      }
+    ]
+  },
+  "implementationRefs": [
+    "scripts/build-moral-truth-claim-v1.mjs",
+    "scripts/test-moral-truth-claim-release.mjs",
+    "docs/governance/MORAL_TRUTH_CLAIM_REVIEW.md"
+  ],
+  "proposalId": "MCP-2026-075",
+  "title": "Rebind catalog and model result policies without new affinity",
+  "objectType": "result_semantics",
+  "changeClass": "semantic_clarification",
+  "affectedObjects": [
+    {
+      "type": "result_semantics",
+      "id": "affinity-catalog-policy"
+    },
+    {
+      "type": "result_semantics",
+      "id": "model-policy"
+    }
+  ],
+  "release": {
+    "targetVersion": "model-release-1.10.0",
+    "migration": "No raw response rewrite; historical administrations retain their pinned model release.",
+    "components": [
+      "affinity",
+      "model"
+    ]
+  }
+}
