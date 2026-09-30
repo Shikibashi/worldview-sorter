@@ -78,10 +78,10 @@ const provenance=JSON.parse(provenanceReport.stdout);
 assert.ok(provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'&&
  r.sourceClasses.includes('context_limited_empirical_research')));
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,8);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,8);
-assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,136);
-for (const ruleId of ['construct-EP15','construct-EP20','audit2-EP06-testability']) {
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,10);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,10);
+assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,135);
+for (const ruleId of ['construct-EP15','construct-EP20','audit2-EP06-testability','construct-AH14']) {
  assert.ok(!provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(ruleId));
 }
 assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
@@ -92,8 +92,8 @@ assert.ok(provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=
  r.sourceIds.includes('acad-pragmatism')));
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='ph-sacred-value'));
 assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,144);
-assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,21);
-assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,123);
+assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,22);
+assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,122);
 assert.ok(provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
 assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,23);
 assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.length,14);

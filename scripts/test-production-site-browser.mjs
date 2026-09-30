@@ -69,6 +69,9 @@ async function runRoute(size,{pause=false,detail=false}={}){
  await page.locator('#results').waitFor({state:'visible'});
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session);
  check(`${size}-item route reaches results with preserved raw answers`,saved.completionStatus==='completed'&&saved.responses.length>0);
+ check('Current route uses AHI108 and omits the historical alternative-possibilities item',
+  saved.presentedItems.some(row=>row.itemId==='AHI108')&&
+  !saved.presentedItems.some(row=>row.itemId==='AHI104'));
  check('Twelve worldview domains remain navigable',await page.locator('#domain-map .domain').count()===12);
  check('Results open with an evidence-qualified overview',await page.locator('#result-at-a-glance').isVisible());
  check('Every domain has a categorical evidence strip',await page.locator('#domain-map .domain-strip').count()===12);
