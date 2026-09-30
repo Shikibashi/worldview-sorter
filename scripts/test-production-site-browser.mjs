@@ -45,6 +45,8 @@ async function runRoute(size,{pause=false,detail=false}={}){
  await page.goto(base+'/');await page.waitForSelector('body[data-ready="true"]');
  check('Domain root loads the public quiz',new URL(page.url()).pathname==='/');
  check('All three current routes are available',await page.locator('.route').count()===3);
+ check('Landing previews a clearly fictional result',await page.locator('.example-result').innerText().then(text=>
+  text.includes('Illustrative example with fictional answers')&&/not measured/i.test(text)));
  check('Static hosting exposes no research or feedback control',await page.locator('#privacy-controls').isHidden()&&
   await page.locator('#research-section').isHidden()&&await page.locator('#product-feedback').isHidden());
  if(detail)await accessible(page,'Production landing');
@@ -67,9 +69,15 @@ async function runRoute(size,{pause=false,detail=false}={}){
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz.session);
  check(`${size}-item route reaches results with preserved raw answers`,saved.completionStatus==='completed'&&saved.responses.length>0);
  check('Twelve worldview domains remain navigable',await page.locator('#domain-map .domain').count()===12);
+ check('Results open with an evidence-qualified overview',await page.locator('#result-at-a-glance').isVisible());
+ check('Every domain has a categorical evidence strip',await page.locator('#domain-map .domain-strip').count()===12);
+ check('Results do not present an ideology match percentage',!(await page.locator('#results').innerText()).match(/\d+% (?:match|compatible)/i));
  check('No automatic response submission occurs',posts.length===0);
  if(detail){
   await accessible(page,'Production results');
+  check('Result section navigation remains available',await page.locator('#result-nav').evaluate(node=>getComputedStyle(node).position==='sticky'));
+  await page.locator('#result-nav a[href="#domains-title"]').click();
+  check('Result navigation reaches the domain map',await page.evaluate(()=>location.hash==='#domains-title'));
   const domain=page.locator('#domain-map .domain details').first();await domain.locator('summary').first().click();
   const source=domain.locator('.pattern details').first();if(await source.count()){
    await source.locator(':scope > summary').click();
@@ -82,6 +90,25 @@ async function runRoute(size,{pause=false,detail=false}={}){
   await page.locator('#share-open').click();await page.locator('#share-options input').first().check();
   check('Sharing preview retains uncertainty and version context',/exploratory/i.test(await page.locator('#share-preview').inputValue())&&
    (await page.locator('#share-preview').inputValue()).includes('catalog '));
+  const cardEvent=page.waitForEvent('download');await page.locator('#download-share-svg').click();
+  const card=await cardEvent,cardText=await readFile(await card.path(),'utf8');
+  check('Social image uses a fixed portrait canvas and preserves uncertainty',cardText.includes('viewBox="0 0 1080 1350"')&&
+   cardText.includes('not measured')&&!cardText.includes('PRIVATE_SESSION'));
+  const cardPage=await context.newPage();await cardPage.goto('data:image/svg+xml,'+encodeURIComponent(cardText));
+  check('Social image text fits its designed canvas',await cardPage.locator('text').evaluateAll(nodes=>nodes.every(node=>{
+   const box=node.getBBox();return box.x>=80&&box.x+box.width<=995&&box.y>=45&&box.y+box.height<=1280;
+  })));
+  await cardPage.close();
+  for(const format of ['domain','affinity','exploration']){
+   await page.locator('#share-format').selectOption(format);
+   const event=page.waitForEvent('download');await page.locator('#download-share-svg').click();
+   const image=await event,xml=await readFile(await image.path(),'utf8');
+   const view=await context.newPage();await view.goto('data:image/svg+xml,'+encodeURIComponent(xml));
+   check(format+' image keeps text inside the card',await view.locator('text').evaluateAll(nodes=>nodes.every(node=>{
+    const box=node.getBBox();return box.x>=80&&box.x+box.width<=995&&box.y>=45&&box.y+box.height<=1280;
+   })));
+   await view.close();
+  }
   await page.setViewportSize({width:320,height:640});await page.evaluate(()=>document.documentElement.style.fontSize='200%');
   check('Mobile results fit doubled text size',await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   check('Reduced motion is respected',await page.evaluate(()=>getComputedStyle(document.querySelector('.domain')).animationName==='none'));
