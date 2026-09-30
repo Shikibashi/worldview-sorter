@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-081",
+  "title": "Separate the free-will compatibility conditional from alternative possibilities",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"item","id":"AHI108"},
+    {"type":"proposition","id":"construct-AH14"},
+    {"type":"result_semantics","id":"model-policy"},
+    {"type":"result_semantics","id":"affinity-catalog-policy"},
+    {"type":"route","id":"quick"},
+    {"type":"route","id":"standard"},
+    {"type":"route","id":"full"},
+    {"type":"route","id":"route-policy"},
+    {"type":"source","id":"sep-incompatibilism-condition"},
+    {"type":"source","id":"sep-compatibilism-boundaries"},
+    {"type":"localization","id":"bundle/ar"},
+    {"type":"localization","id":"bundle/en-US"},
+    {"type":"localization","id":"bundle/es-ES"},
+    {"type":"localization","id":"catalog/ar"},
+    {"type":"localization","id":"catalog/en-US"},
+    {"type":"localization","id":"catalog/es-ES"},
+    {"type":"localization","id":"catalog/model-binding"}
+  ],
+  "currentBehavior": "AHI103@1 and near-parallel AHI104@1 suffice for supported AH14 on Quick and Standard. Disagreeing with AHI105@1 also counts as broad incompatibilist support, although one can reject that reasons-based sufficient condition while remaining a compatibilist.",
+  "proposedBehavior": "Publish AHI108@1 as an applied conditional case. The new AH14 rule uses AHI103@1 and AHI108@1 in both directions, and AHI105@1 agreement as opposition only. All three current routes replace AHI104@1 with AHI108@1 at the same position. Old artifacts stay immutable.",
+  "rationale": "The necessary-alternatives item is close to the abstract compatibility claim. An applied case that includes uncoerced deliberation tests whether being fixed by prior state and laws itself rules out freedom. AHI105 disagreement is nondirectional, preventing a false positive from rejection of one compatibilist account.",
+  "philosophicalBasis": {
+    "proposition": "If a choice is fixed by the complete prior state of the world and the laws of nature, it cannot be genuinely free.",
+    "neighboringViews": ["Compatibilism about free will", "Alternative-possibilities incompatibilism", "Source incompatibilism", "Determinism as an actual-world thesis", "Moral-responsibility incompatibilism"],
+    "nonEntailments": ["Determinism is actually true", "The respondent has or lacks free will", "Libertarian agency", "Moral responsibility is impossible", "Uncaused randomness produces freedom"],
+    "existingGap": "AHI104 can double-count AHI103's fixed-prior framing, while rejection of AHI105's reasons-and-capacities sufficient condition can be mistaken for a denial of every possible compatibilist condition.",
+    "scholarlyDisagreement": "Philosophers distinguish alternative-possibilities and sourcehood arguments, and some focus on moral responsibility rather than free will. The rule is scoped to the free-will compatibility conditional only."
+  },
+  "sourceClaims": [
+    {"sourceId":"sep-incompatibilism-condition","relationship":"supports","claim":"The free-will incompatibilist denies that a choice fixed by the complete prior state and laws can be free; this conditional does not assert that determinism is actually true or settle moral responsibility."},
+    {"sourceId":"sep-compatibilism-boundaries","relationship":"supports","claim":"Compatibilist theories can allow free choice under determinism, while the alternatives-possibilities and sourcehood debates do not collapse into a single necessary condition."}
+  ],
+  "alternatives": [
+    "Keep AHI104 as a second independent support unit: rejected because its fixed-prior wording closely tracks AHI103 and its necessary-alternatives condition is narrower than AH14.",
+    "Replace AHI104 only with AHI105: rejected because disagreeing with one proposed sufficient condition is not broad incompatibilist support.",
+    "Release draft AHI107: rejected because it combines freedom and moral responsibility in one answer and would confuse the two targets.",
+    "Infer the condition from belief that determinism is true or false: rejected because actuality does not settle compatibility."
+  ],
+  "respondentImpact": "A respondent can now support or oppose the scoped conditional with two authored units. Quick and Standard receive a genuine applied alternative. Some historical answer patterns would differ under a separately labeled current reinterpretation; the original result is unchanged. This is not an empirical claim of item independence.",
+  "historicalCompatibility": "Keep bank 0.12, model 1.8, depth 1.9, form 1.8, and model release 1.11 byte-identical. New bank, model, route, form, catalog binding, and localization artifacts are separately versioned. No raw answer rewrite.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","route_omission","source_link"],
+    "paths": ["scripts/test-free-will-condition-release.mjs","scripts/test-model-governance.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-09-30T18:35:00Z","note":"Checked SEP conditional scope, alternative-possibilities versus sourcehood, the draft AHI107 responsibility conflation, and nondirectional rejection of AHI105."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI editorial review","at":"2026-09-30T18:35:00Z","note":"Checked exact revisions, route replacement, missing and mixed states, historical manifests, and no raw-answer migration."}
+    ]
+  },
+  "release": {
+    "components": ["bank","model","progressive_routes","full_form","pilot","content_review","sources","source_ledger","affinity","localization_catalog"],
+    "targetVersion": "model-release-1.12.0",
+    "migration": "No raw response migration. Historical administrations retain their original model manifest. New administrations use AHI108@1 and the new evidence rule."
+  },
+  "implementationRefs": ["docs/governance/FREE_WILL_CONDITION_REVIEW.md","scripts/build-free-will-condition-v1.mjs","scripts/test-free-will-condition-release.mjs"]
+}
