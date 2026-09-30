@@ -57,19 +57,19 @@
   },
   "worldviewModel": {
     "key": "model",
-    "version": "generic-1.3.0-pilot",
-    "path": "data/generic/model-v1.3-pilot.json",
-    "sha256": "fe72f503326e0dfa8d751dec010c08c12e3f66158cc83b70f98d37351435cbf2"
+    "version": "generic-1.4.0-pilot",
+    "path": "data/generic/model-v1.4-pilot.json",
+    "sha256": "031315a0451099583d57080e830cf4f9e389473445c0537072ff44b7004f7976"
   },
   "worldviewSourceLedger": {
     "key": "source_ledger",
-    "version": "0.7.0",
-    "path": "data/generic/source-ledger-v0.7.json",
-    "sha256": "53c229c2f00755ddf447009fac3864d058ac9c99bfaa8ee5f37ee90afece2f2a"
+    "version": "0.8.0",
+    "path": "data/generic/source-ledger-v0.8.json",
+    "sha256": "96b8b809e8aa78faa7915265cdb1c7ea7e009a69c2b4f70f3533a58ae9034fbd"
   },
   "quizExperience": {
-    "version": "quiz-1.9.0",
-    "path": "data/experience/policy-v1.9.json",
+    "version": "quiz-1.10.0",
+    "path": "data/experience/policy-v1.10.json",
     "entrypoint": "apps/quiz/index.html"
   },
   "publicForm": {
@@ -78,9 +78,9 @@
   },
   "fullForm": {
     "key": "full_form",
-    "version": "philosophy-pilot-1.3.0",
-    "path": "data/philosophy/public-pilot-v1.3.json",
-    "sha256": "2790e0bc07836d4a67afa992ddc764984e79dadba4ce49b9a9168f8eda3bdbad"
+    "version": "philosophy-pilot-1.4.0",
+    "path": "data/philosophy/public-pilot-v1.4.json",
+    "sha256": "9d56113953b116f54305e72f711f6c48755656af6e41383cacb23e7e47433a37"
   },
   "unmappedAcademicAudit": {
     "key": "unmapped_audit",
@@ -94,16 +94,16 @@
   },
   "pilotCandidate": {
     "key": "pilot",
-    "version": "pilot-candidate-1.3.0",
-    "path": "data/pilots/pilot-candidate-v1.3.json",
-    "sha256": "acdc96584b8f44a4aea676bd6b15f333ac2c93b78df0917331bf3a55c636962f"
+    "version": "pilot-candidate-1.4.0",
+    "path": "data/pilots/pilot-candidate-v1.4.json",
+    "sha256": "4b35d0942aaa5c0640aa0e2db74c8f22042d4367ea1a91d85825b01dfd12f20e"
   },
   "affinityCatalog": {
     "key": "affinity",
-    "version": "philosophical-affinity-1.3.0",
-    "path": "data/affinities/catalog-v1.3.json",
-    "sha256": "43f555e2e1f28971c562d8cf9935fb5e64e24f6516d32bbc4aace8415b1c0244",
-    "manifestPath": "data/affinities/manifest-v1.3.json"
+    "version": "philosophical-affinity-1.4.0",
+    "path": "data/affinities/catalog-v1.4.json",
+    "sha256": "26b10d065d65037d9bc1f5535a95d972309cbbfce70bd417ff2d9713123df744",
+    "manifestPath": "data/affinities/manifest-v1.4.json"
   },
   "affinityCatalogVersions": [
     {
@@ -125,21 +125,26 @@
       "version": "philosophical-affinity-1.3.0",
       "path": "data/affinities/catalog-v1.3.json",
       "manifestPath": "data/affinities/manifest-v1.3.json"
+    },
+    {
+      "version": "philosophical-affinity-1.4.0",
+      "path": "data/affinities/catalog-v1.4.json",
+      "manifestPath": "data/affinities/manifest-v1.4.json"
     }
   ],
   "progressiveDepth": {
     "key": "progressive_routes",
-    "version": "progressive-depth-1.3.0",
-    "path": "data/experience/progressive-depth-v1.3.json",
-    "sha256": "c3e53fb48853d8158fc81f61e4dd55ec0924075c267d27e75bc36950964aa621",
-    "manifestPath": "data/experience/progressive-depth-v1.3.manifest.json"
+    "version": "progressive-depth-1.4.0",
+    "path": "data/experience/progressive-depth-v1.4.json",
+    "sha256": "6be1dfbb8418e25532682e768eda9633b1695f7aeec8b4a1ae759dc0d17a7b87",
+    "manifestPath": "data/experience/progressive-depth-v1.4.manifest.json"
   },
   "localizationCatalog": {
     "key": "localization_catalog",
-    "version": "localization-catalog-1.3.0",
-    "path": "data/localization/catalog-v4.json",
-    "sha256": "093967116e42cc025997d2beda4e6d06e92d04965b7ac352cb05cfc386e2e15c",
-    "manifestPath": "data/localization/manifest-v1.3.json"
+    "version": "localization-catalog-1.4.0",
+    "path": "data/localization/catalog-v5.json",
+    "sha256": "6d2ac9c7078fe3821e9ec46fa1f908a35e628afa8a33cce02a3f55acc86330d3",
+    "manifestPath": "data/localization/manifest-v1.4.json"
   },
   "localizationCatalogVersions": [
     {
@@ -161,23 +166,28 @@
       "version": "localization-catalog-1.3.0",
       "path": "data/localization/catalog-v4.json",
       "manifestPath": "data/localization/manifest-v1.3.json"
+    },
+    {
+      "version": "localization-catalog-1.4.0",
+      "path": "data/localization/catalog-v5.json",
+      "manifestPath": "data/localization/manifest-v1.4.json"
     }
   ],
   "localizationBundles": [
     {
       "locale": "ar",
-      "version": "localization-ar-draft-4",
-      "path": "data/localization/ar-draft-v4.json"
+      "version": "localization-ar-draft-5",
+      "path": "data/localization/ar-draft-v5.json"
     },
     {
       "locale": "en-US",
-      "version": "localization-en-US-1.3.0",
-      "path": "data/localization/en-US-v4.json"
+      "version": "localization-en-US-1.4.0",
+      "path": "data/localization/en-US-v5.json"
     },
     {
       "locale": "es-ES",
-      "version": "localization-es-ES-draft-4",
-      "path": "data/localization/es-ES-draft-v4.json"
+      "version": "localization-es-ES-draft-5",
+      "path": "data/localization/es-ES-draft-v5.json"
     }
   ],
   "registry": {
@@ -188,9 +198,9 @@
   },
   "sourceRegistry": {
     "key": "sources",
-    "version": "source-registry-1.1.0",
-    "path": "data/sources-v1.1.json",
-    "sha256": "602506a0a628eaa122b7365c10b4e253bd215a20ba1abaac665bd81b1039f6e4"
+    "version": "source-registry-1.2.0",
+    "path": "data/sources-v1.2.json",
+    "sha256": "2a3b804adb6404eacbe2eb4bc5631b911b8a21059cbcc125510b188e0d2acf75"
   },
   "contentReview": {
     "key": "content_review",
@@ -206,9 +216,9 @@
   },
   "engineSource": {
     "key": "engine_source",
-    "version": "engine-source-1.3.0",
-    "path": "data/releases/engine-sources/engine-source-1.3.0/manifest.json",
-    "sha256": "2fd5dd4d3f74e5d6a3b1e33e03ad78f74cb5419cb269ff02b64bc3253d32e830"
+    "version": "engine-source-1.4.0",
+    "path": "data/releases/engine-sources/engine-source-1.4.0/manifest.json",
+    "sha256": "5784f5f59c414b9815e4ddc67fb942401909a3648d314d2f460aeaf79c9d9da9"
   },
   "localizationBundleVersions": [
     {
@@ -270,11 +280,26 @@
       "locale": "es-ES",
       "version": "localization-es-ES-draft-4",
       "path": "data/localization/es-ES-draft-v4.json"
+    },
+    {
+      "locale": "ar",
+      "version": "localization-ar-draft-5",
+      "path": "data/localization/ar-draft-v5.json"
+    },
+    {
+      "locale": "en-US",
+      "version": "localization-en-US-1.4.0",
+      "path": "data/localization/en-US-v5.json"
+    },
+    {
+      "locale": "es-ES",
+      "version": "localization-es-ES-draft-5",
+      "path": "data/localization/es-ES-draft-v5.json"
     }
   ],
   "modelRelease": {
-    "version": "model-release-1.5.0",
-    "path": "data/releases/model-release-v1.5.0.json"
+    "version": "model-release-1.6.0",
+    "path": "data/releases/model-release-v1.6.0.json"
   },
   "modelReleaseVersions": [
     {
@@ -300,10 +325,14 @@
     {
       "version": "model-release-1.5.0",
       "path": "data/releases/model-release-v1.5.0.json"
+    },
+    {
+      "version": "model-release-1.6.0",
+      "path": "data/releases/model-release-v1.6.0.json"
     }
   ],
   "releaseChannels": {
-    "version": "worldview-release-channels-6.0.0",
-    "path": "data/releases/channels-v6.json"
+    "version": "worldview-release-channels-7.0.0",
+    "path": "data/releases/channels-v7.json"
   }
 }

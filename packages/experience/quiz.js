@@ -3,8 +3,8 @@ import {generatePilotPacket,createPilotSession,isItemEligible,responseMapFor,mar
 import {itemLocalization,validateSavedLocalization} from '../localization/index.js';
 import {RELEASE_CHANNELS} from '../beta/release.js';
 
-export const EXPERIENCE_VERSION='quiz-1.9.0';
-export const COMPATIBLE_EXPERIENCE_VERSIONS=['quiz-1.0.0','quiz-1.1.0','quiz-1.2.0','quiz-1.3.0','quiz-1.4.0','quiz-1.5.0','quiz-1.6.0','quiz-1.7.0','quiz-1.8.0','quiz-1.9.0'];
+export const EXPERIENCE_VERSION='quiz-1.10.0';
+export const COMPATIBLE_EXPERIENCE_VERSIONS=['quiz-1.0.0','quiz-1.1.0','quiz-1.2.0','quiz-1.3.0','quiz-1.4.0','quiz-1.5.0','quiz-1.6.0','quiz-1.7.0','quiz-1.8.0','quiz-1.9.0','quiz-1.10.0'];
 const insist=(ok,message)=>{if(!ok)throw new Error(message);};
 const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 const CLARIFICATION_REASONS=new Set(['resolve_conflicting_evidence','check_weak_direction','supply_missing_direct_evidence',

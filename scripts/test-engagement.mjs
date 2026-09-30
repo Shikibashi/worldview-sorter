@@ -19,11 +19,16 @@ const summary=buildQuizSummary({model,bank,scalesDoc,session:quiz.session,routeM
 assert.equal(summary.affinities.hasEstablishedAffinity,summary.affinities.traditions.some(t=>t.summaryState==='overlap_on_measured_core'));
 assert.equal(summary.affinityPresentation.hasEstablishedAffinity,false,
  'Legacy scope mappings cannot establish a doctrinal affinity in respondent-facing presentation.');
-assert.ok(summary.affinityPresentation.traditions.filter(t=>t.traditionId!=='easy-ontology-scoped')
+const exactlySourced=new Set(['easy-ontology-scoped','fallibilism-about-knowledge',
+ 'sensory-empiricism-about-the-external-world']);
+assert.ok(summary.affinityPresentation.traditions.filter(t=>!exactlySourced.has(t.traditionId))
  .every(t=>t.state==='legacy_scope_unresolved'&&t.legacyDefiningCriterionIds.length>0));
 const easyOnQuick=summary.affinityPresentation.traditions.find(t=>t.traditionId==='easy-ontology-scoped');
 assert.ok(easyOnQuick&&easyOnQuick.state!=='legacy_scope_unresolved',
  'An exact sourced proposition must not inherit the six older scope warnings.');
+assert.ok([...exactlySourced].every(id=>summary.affinityPresentation.traditions.some(t=>
+ t.traditionId===id&&t.state!=='legacy_scope_unresolved')),
+ 'Every new exact sourced comparison must pass the respondent presentation guard.');
 const authoredOverlap={traditions:[{id:'synthetic-tradition',summaryState:'overlap_on_measured_core',
  criteria:[{id:'synthetic-defining',role:'defining',mapping:{status:'direct',propositionId:'synthetic-rule'}}]}]};
 assert.equal(qualifyAffinityPresentation({affinities:authoredOverlap,model:{commitments:[{id:'synthetic-rule',proposition:null}]}})

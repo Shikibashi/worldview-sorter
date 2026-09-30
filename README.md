@@ -24,7 +24,7 @@ For the static GitHub Pages release, run `npm run build:production`, `node scrip
 
 ## Evidence, not identity guessing
 
-The nine earlier reference comparisons remain historical prototypes. The current public result uses 7 versioned philosophical comparisons over interpreted propositions. No political centroid, categorical numeric proxy, chat memory, preferred identity, or personality/country resemblance supplies missing answers. Neutral, no view, disagreement and mixed evidence remain distinct. There is no forced winner, match percentage, or automatically assigned identity.
+The nine earlier reference comparisons remain historical prototypes. The current public result uses 9 versioned philosophical comparisons over interpreted propositions. No political centroid, categorical numeric proxy, chat memory, preferred identity, or personality/country resemblance supplies missing answers. Neutral, no view, disagreement and mixed evidence remain distinct. There is no forced winner, match percentage, or automatically assigned identity.
 
 The nine prototype comparisons and engineering scores remain **unvalidated and non-interpretable**. The public catalog offers qualitative, evidence-scoped comparison rather than a validated classification. The public quiz summarizes explicit answer patterns with source links; it does not present engineering scores as validated worldview measurements. The follow-up planner identifies missing reviewed items and is available as optional domain clarification; it is not calibrated adaptive testing.
 
@@ -80,7 +80,7 @@ All 49 constructs unmapped in `coverage-v0.2.json` now have explicit disposition
 
 ## V1 pilot candidate
 
-The active full-depth route is the 240-item `pilot-candidate-1.3.0` in `model-release-1.5.0`. It keeps the earlier 240-question full form and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
+The active full-depth route is the 240-item `pilot-candidate-1.4.0` in `model-release-1.6.0`. It keeps the earlier 240-question full form and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
 
 ## Data and optional research contribution
 

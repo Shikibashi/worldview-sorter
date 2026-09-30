@@ -18,7 +18,8 @@ const pilot=await read('data/pilots/pilot-candidate-v1.1.json');
 const routes=await read('data/experience/progressive-depth-v1.1.json');
 const catalog=await read('data/affinities/catalog-v1.1.json');
 const current=await read('data/current.json');
-assert.equal(current.modelRelease.version,'model-release-1.5.0');
+assert.ok(current.modelReleaseVersions.some(ref=>ref.version==='model-release-1.5.0'),
+ 'The historical federal content release remains available.');
 assert.equal((await read('data/releases/model-release-v1.2.0.json')).releaseVersion,'model-release-1.2.0');
 assert.equal((await read('data/releases/model-release-v1.3.0.json')).releaseVersion,'model-release-1.3.0');
 assert.ok(current.modelReleaseVersions.some(ref=>ref.version==='model-release-1.3.0'));
