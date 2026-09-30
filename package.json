@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build:academic": "node scripts/build-academic-release.mjs && node scripts/build-academic-finalize.mjs && node scripts/build-generic-worldview.mjs && node scripts/build-quiz-experience.mjs && node scripts/build-philosophy-release.mjs && node scripts/build-full-route.mjs && node scripts/build-unmapped-audit.mjs && node scripts/build-unmapped-audit-v2.mjs && node scripts/build-pilot-v1.mjs && node scripts/build-affinity-catalog-v1.mjs && node scripts/build-progressive-depth.mjs && node scripts/build-localization-v1.mjs && node scripts/sync-model-release.mjs",
+    "build:production": "npm run build:academic && node scripts/build-production-site.mjs",
+    "test:production:browser": "node scripts/test-production-site-browser.mjs",
     "pretest": "npm run build:academic",
     "prevalidate": "npm run build:academic",
     "preweb:serve": "npm run build:academic",

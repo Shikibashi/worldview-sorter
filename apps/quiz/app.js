@@ -7,6 +7,7 @@ import {planWorldviewFollowups} from '../../packages/worldview/index.js';
 import {validateLocalizationCatalog,validateLocalizationBundle,routeLocalizationAvailability,localizeItem,localizeSummary} from '../../packages/localization/index.js';
 
 const $=id=>document.getElementById(id);
+const staticRelease=document.querySelector('meta[name="worldview-static-release"]')?.content??null;
 const storageKey='worldview-sorter:quiz-experience:1';
 const researchReceiptKey='worldview-sorter:research-receipts:1',researchLinkKey='worldview-sorter:research-link:1';
 const screens=['home','quiz','results','failure'];
@@ -18,7 +19,7 @@ let modelReleases=[],activeModelReleaseVersion=null;
 let resultReplayQualification=null;
 let researchConfig={enabled:false},researchReceipts=[],currentResearchReceipt=null;
 let productMetrics={enabled:false};
-let betaConfig={channel:'development',modelReleaseVersion:null,
+let betaConfig={channel:staticRelease?'stable':'development',modelReleaseVersion:staticRelease,
  features:{adaptiveClarification:true,affinityDisplay:true,sharing:true,feedback:false}};
 let saveConflict=false;
 let proposedClarification=null;
@@ -130,6 +131,7 @@ function renderSaved(){
  renderResearchReceipts();
 }
 function renderResearchReceipts(){
+ if(staticRelease){$('privacy-controls').hidden=true;return;}
  const active=researchReceipts.filter(r=>['active','pending'].includes(r?.status)&&r.contributionId&&r.withdrawalToken);
  let linked=false;try{linked=Boolean(localStorage.getItem(researchLinkKey));}catch{}
  $('privacy-controls').hidden=!active.length&&!linked;
@@ -687,7 +689,7 @@ function start(size){
  recordProductEvent('route_started');
 }
 async function bootstrap(){
- try{const response=await fetch('/api/beta/config',{cache:'no-store'});
+ if(!staticRelease)try{const response=await fetch('/api/beta/config',{cache:'no-store'});
   if(response.ok)betaConfig=await response.json();}catch{}
  activeModelReleaseVersion=betaConfig.modelReleaseVersion;
  $('product-feedback').hidden=!betaConfig.features.feedback;
@@ -695,8 +697,10 @@ async function bootstrap(){
  const current=await fetchJSON('data/current.json');
  if(betaConfig.modelReleaseVersion&&betaConfig.modelReleaseVersion!==current.modelRelease.version)
   throw Error('The deployed channel and model release do not match.');
- try{researchConfig=await (await fetch('/api/research/config',{cache:'no-store'})).json();}catch{researchConfig={enabled:false};}
- try{productMetrics=await (await fetch('/api/product/config',{cache:'no-store'})).json();}catch{productMetrics={enabled:false};}
+ if(!staticRelease){
+  try{researchConfig=await (await fetch('/api/research/config',{cache:'no-store'})).json();}catch{researchConfig={enabled:false};}
+  try{productMetrics=await (await fetch('/api/product/config',{cache:'no-store'})).json();}catch{productMetrics={enabled:false};}
+ }
  $('product-metrics-note').textContent=productMetrics.enabled?'Anonymous route-use events are sent to this site for product operation. They include route, answered-item count and a chosen clarification topic, never answers or a session ID.':'No product analytics are sent by this app.';
  [bank,pilot,scalesDoc,model,experiencePolicy]=await Promise.all([fetchJSON(current.candidateBank.path),fetchJSON(current.pilot.path),fetchJSON('data/response-scales.json'),fetchJSON(current.worldviewModel.path),fetchJSON(current.quizExperience.path)]);
  modelReleases=await Promise.all((current.modelReleaseVersions??[current.modelRelease]).map(ref=>fetchJSON(ref.path)));
@@ -739,7 +743,8 @@ async function bootstrap(){
  $('locale-choice').addEventListener('change',renderLocaleChoice);
  for(const [index,route] of experiencePolicy.routes.entries()){
   const button=elem('button',undefined,'route');button.dataset.size=String(route.size);
-  button.append(elem('span',route.recommended?'RECOMMENDED':'ROUTE 0'+(index+1),'route-number'),elem('strong',route.label),elem('span',route.size+' questions'),elem('span',route.description));
+  const description=staticRelease?route.description.replace(' and optional research contribution',''):route.description;
+  button.append(elem('span',route.recommended?'RECOMMENDED':'ROUTE 0'+(index+1),'route-number'),elem('strong',route.label),elem('span',route.size+' questions'),elem('span',description));
   button.addEventListener('click',()=>start(route.size));$('routes').append(button);
  }
  renderLocaleChoice();
