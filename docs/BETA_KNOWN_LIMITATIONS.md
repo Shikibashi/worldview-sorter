@@ -1,0 +1,9 @@
+# Current limitations
+
+Worldview Sorter offers authored, source-linked philosophical interpretations. The items, evidence rules, routes, thresholds, and affinities have **not** been established as a validated psychological assessment. Results describe the propositions supported, opposed, or left open by recorded answers. They do not assign an ideology, diagnose a person, estimate a population percentile, or give a probability of belonging to a tradition.
+
+Quick and Standard ask fewer questions than Full. An unasked proposition remains **not measured** unless the administered questions independently support it. **Insufficient evidence** means relevant content was asked but the recorded answers do not justify a direction. Affinities compare only interpreted propositions; defining doctrine that the route does not measure remains visibly unmeasured. Multiple traditions may overlap, and no close affinity is a normal outcome.
+
+The initial affinity catalog is deliberately small. Several defining commitments in its six traditions remain unmeasured by the pilot. Spanish and Arabic philosophical wording is not approved for respondent use; the interface marks those options unavailable. The current beta has no account or server-side save for ordinary quiz attempts: the active quiz is stored in this browser, and a downloaded backup is needed to retain it if browser storage is cleared or the device is lost.
+
+Optional first-party product events, when enabled by the operator, describe route use without answer payloads or session identifiers. Feedback is optional where enabled. It stores only the selected category, exact content versions, and text the user chooses to enter. Feedback is a prompt for review, not an empirical truth label. Contributing answers for research is a separate explicit consent action.

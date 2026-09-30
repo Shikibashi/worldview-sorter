@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-006",
+  "title": "Pin the operational interpretation engine for historical replay",
+  "author": "Codex AI engineering review",
+  "objectType": "result_semantics",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    { "type": "result_semantics", "id": "engine-source" }
+  ],
+  "currentBehavior": "Model release 1.0.0 pins philosophical data but has no executable-source archive. Changes to route, response, interpretation, or affinity code can therefore alter replay without changing that manifest. A conditional question skipped by its branch previously counted as assigned evidence content.",
+  "proposedBehavior": "Archive the nine current route, response, interpretation, localization, and affinity modules with exact hashes. The current engine excludes a branch-skipped conditional item from available route evidence and rejects impossible presentation records. Pin that archive in a new model release while retaining release 1.0.0 unchanged.",
+  "rationale": "A saved result needs the behavior that interpreted its exact raw responses, not only the JSON definitions. A question never shown because its prerequisite failed cannot furnish an available direct evidence unit.",
+  "philosophicalBasis": {
+    "proposition": "A respondent-facing philosophical conclusion requires administered evidence that bears on its exact target.",
+    "neighboringViews": [
+      "A question assigned to a route but branch-skipped is not an answered indicator.",
+      "An administered but unanswered question differs from an unassigned question."
+    ],
+    "nonEntailments": [
+      "The respondent rejects the target proposition when a conditional question is skipped.",
+      "The archived authored rules are empirically validated."
+    ],
+    "existingGap": "The initial operational release does not pin executable interpretation code and a conditional route item could be counted as available despite never being shown.",
+    "scholarlyDisagreement": "No philosophical doctrine or source interpretation changes in this archive. The change concerns the provenance and availability of respondent evidence."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "project-theory",
+      "claim": "The project-specific evidence contract requires route and response provenance; this source is contextual and does not validate any philosophical inference or item.",
+      "relationship": "context"
+    }
+  ],
+  "alternatives": [
+    "Rely on Git history for replay; rejected because an administration must name an immutable production configuration directly.",
+    "Edit model release 1.0.0 in place; rejected because historical manifest bytes must remain unchanged."
+  ],
+  "respondentImpact": "A branch-skipped conditional discriminator cannot make a short route appear to have enough content. No raw answer is changed, and no philosophical position is inferred from the skip.",
+  "historicalCompatibility": "Keep model release 1.0.0 and all of its component bytes unchanged. It predates engine-source pinning, so its exact historical executable behavior cannot be proven from that manifest alone. New administrations pin the archived engine through model release 1.1.0.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical", "branch_skip", "presentation_validation", "archive_hash"],
+    "paths": ["scripts/test-pilot-v1.mjs", "scripts/test-progressive-depth.mjs", "scripts/test-model-governance.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Codex AI content review",
+        "at": "2026-09-30T04:27:15Z",
+        "note": "Checked the inference boundary: a branch skip is missing content, not opposition to the target or assent to a neighboring view."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Codex AI engineering review",
+        "at": "2026-09-30T04:27:15Z",
+        "note": "Reviewed exact source paths, immutable archive hashes, and branch-skip regression cases; focused tests passed."
+      }
+    ]
+  },
+  "release": {
+    "components": ["engine_source"],
+    "migration": "No raw-response migration. Preserve the 1.0.0 manifest and activate the archive only through a new explicit model release."
+  },
+  "implementationRefs": [
+    "packages/worldview/index.js",
+    "packages/governance/engine-source.js",
+    "data/releases/engine-sources/engine-source-1.0.0/manifest.json",
+    "scripts/test-progressive-depth.mjs"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-002",
+  "title": "Narrow the sacred-status interpretation to moral weight in the asked tradeoff",
+  "author": "Worldview Sorter editorial draft",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "draft",
+  "affectedObjects": [
+    {"type": "proposition", "id": "ph-sacred-value"},
+    {"type": "construct", "id": "RC09"},
+    {"type": "route", "id": "full"},
+    {"type": "source", "id": "domain-sacred"},
+    {"type": "source", "id": "rotondo-sacred-2026"},
+    {"type": "source", "id": "katsafanas-sacred-values-2022"}
+  ],
+  "currentBehavior": "The frozen ph-sacred-value rule uses RCI012@1 and RCI029@1 to display 'Sacred status can have independent normative weight'. Its scope and label can be read as attitude-independent sacredness or a strong no-tradeoff sacred-value thesis, although neither item asks those questions. The current sole rule source is context-limited empirical work and the rule has no exact proposition or rule-linked source claim.",
+  "proposedBehavior": "In a new model version, retain the two exact item revisions and their existing answer mapping, but state only that sacred status itself can carry at least some moral weight in the asked community-object versus practical-benefit context. Use a narrow label, explicit neighbors and non-entailments, and claim-linked philosophical sources. Keep mixed, one-item lean, special-response, and missing states unchanged. Review the separate authored evidence-unit assumption before release. Update the associated compare-ph-sacred-value display and source trail in that new model, without altering the frozen release.",
+  "rationale": "An affirmative 'some' answer to RCI029 explicitly permits the benefit to outweigh sacred status. RCI012 and RCI029 do not ask whether sacredness exists independently of attitudes. Their overlap also makes empirical independence of two authored units unproven. A narrower proposition reflects their actual semantic target without treating a secular, community-conferred, or tradeoff-permitting view as evidence for stronger theses.",
+  "philosophicalBasis": {
+    "proposition": "In the stated community-object and practical-benefit case, sacred status itself can carry at least some moral weight beyond the object's ordinary resource value and the specified direct harm to persons.",
+    "neighboringViews": [
+      "Only people's reactions and relationships carry weight in this case, with no additional weight from sacred status itself",
+      "Sacred status carries some weight but can be outweighed by practical benefit",
+      "Sacred values are inviolable and ordinary tradeoffs are forbidden",
+      "Sacredness is independent of any community's attitudes or practices"
+    ],
+    "nonEntailments": [
+      "The respondent regards all sacred things as inviolable",
+      "The respondent regards sacred and practical values as incommensurable",
+      "The respondent believes sacredness is attitude-independent or intrinsic",
+      "The respondent endorses a deity, revelation, religious law, or purity norm",
+      "The respondent would give the same weight to sacred people, places, or political commitments"
+    ],
+    "existingGap": "The released scope uses 'independent normative weight' without resolving independence from attitudes. Its one vignette tests a possible tradeoff and its 'some' option is compatible with weighing the benefit more heavily. The study currently cited does not validate either custom item or their independence.",
+    "scholarlyDisagreement": "Katsafanas argues for a stronger account of sacred values involving forbidden tradeoffs, incontestability, and dialectical invulnerability. Other philosophical work treats sacredness as ethically significant without this item pair settling that stronger account. Value incommensurability itself has several contested senses. This proposal deliberately covers only the narrower respondent judgment."
+  },
+  "sourceClaims": [
+    {"sourceId": "rotondo-sacred-2026", "claim": "Sacredness can have ethical significance; this supports considering a narrow normative-weight question, without establishing this questionnaire's validity or an attitude-independent account.", "relationship": "supports"},
+    {"sourceId": "katsafanas-sacred-values-2022", "claim": "A stronger account treats sacred values as inviolable, incontestable, and dialectically invulnerable; the pilot's 'some weight' option does not establish those properties.", "relationship": "challenges"},
+    {"sourceId": "domain-sacred", "claim": "The study found different effects of material and symbolic incentives in a specific conflict context; it does not validate RCI012 or RCI029 or establish a general respondent trait.", "relationship": "context"}
+  ],
+  "alternatives": [
+    "Keep the broad released label for new respondents; rejected because it invites attitude-independence and inviolability readings that the items do not distinguish.",
+    "Infer a strict sacred-values thesis; rejected because 'some' permits tradeoffs and no item tests inviolability or dialectical resistance.",
+    "Create more questions now; deferred because the narrow moral-weight proposition can be stated using existing content, while any stronger thesis needs its own discriminating item and rule."
+  ],
+  "respondentImpact": "The evidence states should remain identical for the same answers, but the claim communicated by a supported, opposed, or leaned-toward state becomes narrower. The Full route is the only progressive route assigning both items. The comparison card, result domain, coverage record, source trail, and historical-versus-current result language need review. No philosophical-affinity criterion currently maps to this rule.",
+  "historicalCompatibility": "Preserve model-release-1.0.0 and RCI012@1/RCI029@1 byte-for-byte. Publish any approved replacement rule, comparison definition, source records, and engine archive in a newly versioned model/release. Existing administrations retain their original result; a new interpretation of old answers must be labeled as such. Do not rewrite raw answers, historical share snapshots, or research releases.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical", "one_item_lean", "special_response", "tradeoff_permitting", "community_conferred", "secular"],
+    "paths": ["scripts/test-pilot-v1.mjs", "scripts/test-model-governance.mjs"]
+  },
+  "review": {"approvals": []},
+  "release": {"components": ["model", "engine_source"], "migration": "No raw-response migration. Add reviewed source records rotondo-sacred-2026 and katsafanas-sacred-values-2022 before release; keep the frozen model and route pins for historical results. If the evidence-unit review changes thresholds or mappings, revise this proposal and regression expectations before approval."},
+  "implementationRefs": ["docs/governance/SACRED_VALUE_REVIEW.md", "packages/governance/index.js", "scripts/test-pilot-v1.mjs"]
+}

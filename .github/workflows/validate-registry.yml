@@ -5,12 +5,36 @@ on:
     paths:
       - "data/**"
       - "schemas/**"
+      - "packages/governance/**"
+      - "packages/beta/**"
+      - "packages/collection/**"
+      - "packages/research/**"
+      - "packages/experience/**"
+      - "research/**"
+      - "apps/quiz/**"
+      - "apps/server/**"
+      - "docs/governance/**"
+      - "docs/BETA_*.md"
+      - "docs/MODEL_CHANGELOG.md"
+      - "docs/RESEARCH*.md"
       - "scripts/**"
       - "package.json"
   pull_request:
     paths:
       - "data/**"
       - "schemas/**"
+      - "packages/governance/**"
+      - "packages/beta/**"
+      - "packages/collection/**"
+      - "packages/research/**"
+      - "packages/experience/**"
+      - "research/**"
+      - "apps/quiz/**"
+      - "apps/server/**"
+      - "docs/governance/**"
+      - "docs/BETA_*.md"
+      - "docs/MODEL_CHANGELOG.md"
+      - "docs/RESEARCH*.md"
       - "scripts/**"
       - "package.json"
 
@@ -19,7 +43,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+      - run: npm ci
       - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:beta:browser
+      - run: npm run test:quiz:browser
+      - name: Protect historical model releases
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [[ "$BASE_SHA" =~ ^[0-9a-f]{7,40}$ ]] && [[ ! "$BASE_SHA" =~ ^0+$ ]]; then
+            node scripts/check-model-release-history.mjs "$BASE_SHA"
+          fi

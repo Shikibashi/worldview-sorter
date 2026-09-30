@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "worldview-release-channels-1",
+  "channels": {
+    "development": {"modelReleaseVersion": "model-release-1.0.0", "features": {"adaptiveClarification": true, "affinityDisplay": true, "sharing": true, "feedback": false}},
+    "internal": {"modelReleaseVersion": "model-release-1.0.0", "features": {"adaptiveClarification": true, "affinityDisplay": true, "sharing": true, "feedback": true}},
+    "preview": {"modelReleaseVersion": "model-release-1.0.0", "features": {"adaptiveClarification": true, "affinityDisplay": true, "sharing": true, "feedback": true}},
+    "beta": {"modelReleaseVersion": "model-release-1.0.0", "features": {"adaptiveClarification": true, "affinityDisplay": true, "sharing": true, "feedback": true}},
+    "stable": {"modelReleaseVersion": "model-release-1.0.0", "features": {"adaptiveClarification": true, "affinityDisplay": true, "sharing": true, "feedback": false}}
+  }
+}
