@@ -36,7 +36,7 @@ The 0.8 bank and instrument remain byte-for-byte frozen. New wording or targetin
 
 - `npm run test:profiles`: academic contrast and evidence-integrity regressions.
 - `npm run test:collection`: collector integration tests.
-- `npm run test:12axes`: packet and interaction-contract tests, not visual browser verification.
+- `npm run test:consumer-experience`: active public-route, privacy and result-presentation contract checks. The earlier 12Axes runner is a historical collector test.
 - `npm run test:ui-smoke`: executes the app against a small DOM harness; not a real-browser accessibility/layout audit.
 - `npm run pilot:packet -- --seed example --size 120`: administration packet.
 
@@ -58,7 +58,7 @@ See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access 
 
 ## Public quiz experience
 
-The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/238-question depth routes, pause/resume, and source-linked summaries. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
+The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/238-question depth routes, pause/resume, a labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
 
 Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 

@@ -1,5 +1,7 @@
 # 12Axes interaction-parity reference
 
+> Historical milestone. This document describes the earlier 80/120/160 collector contract. The current public quiz uses 64/120/238 routes and does not automatically submit answers. The active contract is checked by `npm run test:consumer-experience` and the production browser suite.
+
 The browser runner intentionally borrows the interaction pattern of modern 12Axes while not copying its political dimensions, scoring model, or source code.
 
 Reference implementation reviewed:
