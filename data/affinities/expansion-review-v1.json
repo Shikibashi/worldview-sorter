@@ -1,0 +1,1013 @@
+{
+  "schemaVersion": "affinity-expansion-review-1",
+  "reviewVersion": "1.0.0",
+  "modelVersion": "generic-1.1.0-pilot",
+  "catalogVersionReviewed": "philosophical-affinity-1.1.0",
+  "status": "editorial_review_not_production_catalog",
+  "supplementalSources": [
+    {"for":"fallibilism-about-knowledge","url":"https://plato.stanford.edu/entries/epistemology/","use":"Knowledge, justification, and the possibility of error are distinct from mere willingness to revise."},
+    {"for":"sensory-empiricism-about-the-external-world","url":"https://plato.stanford.edu/entries/rationalism-empiricism/","use":"The rationalism and empiricism dispute concerns dependence on experience for external-world knowledge."},
+    {"for":"easy-ontology","url":"https://www.amiethomasson.org/_files/ugd/63fc8a_b2cd94d9237a43dabe0d30b11e3e2da4.pdf","use":"Thomasson's primary presentation of easy ontology and ordinary application conditions."},
+    {
+      "for": "compatibilism-about-free-will",
+      "url": "https://plato.stanford.edu/entries/compatibilism/",
+      "use": "Exact compatibility thesis and distinction from actual determinism."
+    },
+    {
+      "for": "incompatibilism-about-free-will",
+      "url": "https://plato.stanford.edu/entries/incompatibilism-arguments/",
+      "use": "Alternative possibilities, sourcehood, and responsibility caveats."
+    },
+    {
+      "for": "epistemic-foundationalism",
+      "url": "https://plato.stanford.edu/entries/justep-foundational/",
+      "use": "Basic beliefs and the regress of justification."
+    },
+    {
+      "for": "act-consequentialism",
+      "url": "https://plato.stanford.edu/entries/consequentialism/",
+      "use": "Consequences as the ultimate criterion of rightness."
+    },
+    {
+      "for": "rule-consequentialism",
+      "url": "https://plato.stanford.edu/entries/consequentialism-rule/",
+      "use": "Rule justification by consequences, distinct from valuing rules."
+    },
+    {
+      "for": "classical-utilitarianism",
+      "url": "https://plato.stanford.edu/entries/consequentialism/",
+      "use": "Welfarist and maximizing commitments beyond generic consequentialism."
+    },
+    {
+      "for": "care-ethics",
+      "url": "https://iep.utm.edu/care-eth/",
+      "use": "Relationships and dependence as morally significant, with internal variation."
+    },
+    {
+      "for": "moral-realism",
+      "url": "https://plato.stanford.edu/entries/moral-realism/",
+      "use": "Truth-aptness and at least some true moral claims; stance-independence is disputed as an additional condition."
+    },
+    {
+      "for": "mind-body-dualism",
+      "url": "https://plato.stanford.edu/entries/dualism/",
+      "use": "Distinct mental and physical properties or substances."
+    },
+    {
+      "for": "metaphysical-idealism",
+      "url": "https://plato.stanford.edu/entries/idealism/",
+      "use": "Distinction between metaphysical and epistemological idealism."
+    },
+    {
+      "for": "existentialist-families",
+      "url": "https://plato.stanford.edu/entries/existentialism/",
+      "use": "Freedom and authenticity across internally diverse existentialist approaches."
+    },
+    {
+      "for": "stoicism",
+      "url": "https://plato.stanford.edu/entries/stoicism/",
+      "use": "Virtue as the only good, distinct from emotional restraint."
+    },
+    {
+      "for": "secular-humanism",
+      "url": "https://humanists.international/policy/declaration-of-modern-humanism/",
+      "use": "Movement's contemporary primary statement of a positive humanist orientation."
+    },
+    {
+      "for": "classical-liberalism",
+      "url": "https://plato.stanford.edu/entries/liberalism/",
+      "use": "Liberty and justification of political authority with internal diversity."
+    },
+    {
+      "for": "right-libertarianism",
+      "url": "https://plato.stanford.edu/entries/libertarianism/",
+      "use": "Self-ownership, property, and right versus left resource entitlements."
+    },
+    {
+      "for": "left-libertarianism",
+      "url": "https://plato.stanford.edu/entries/libertarianism/",
+      "use": "Egalitarian external-resource claims alongside self-ownership."
+    },
+    {
+      "for": "market-anarchism",
+      "url": "https://plato.stanford.edu/entries/anarchism/",
+      "use": "Anarchist families and the inadequacy of anti-state sentiment alone."
+    },
+    {
+      "for": "social-anarchism",
+      "url": "https://plato.stanford.edu/entries/anarchism/",
+      "use": "Social anarchist strands distinct from philosophical obligation skepticism."
+    },
+    {
+      "for": "socialism",
+      "url": "https://plato.stanford.edu/entries/socialism/",
+      "use": "Worker or social control of productive assets, compatible with some markets."
+    },
+    {
+      "for": "democratic-socialism",
+      "url": "https://plato.stanford.edu/entries/socialism/",
+      "use": "Social ownership and democratic coordination rather than redistribution alone."
+    },
+    {
+      "for": "civic-republicanism",
+      "url": "https://plato.stanford.edu/entries/republicanism/",
+      "use": "Freedom as non-domination."
+    },
+    {
+      "for": "political-cosmopolitanism",
+      "url": "https://plato.stanford.edu/entries/cosmopolitanism/",
+      "use": "Moral and political cosmopolitanism are distinct families."
+    },
+    {
+      "for": "ecocentrism",
+      "url": "https://plato.stanford.edu/entries/ethics-environmental/",
+      "use": "Environmental moral standing beyond human-centered policy reasons."
+    }
+  ],
+  "method": "Traditions and positions were defined from the cited academic literature before comparing their defining doctrine with the pilot's public interpreted propositions. A related rule is never promoted to a defining mapping merely to increase catalog size. Candidate means eligible for an exact item, proposition, source-claim, and governance review, not approved for respondent-facing affinity.",
+  "entries": [
+    {
+      "id": "pragmatism",
+      "scope": "epistemological_tradition",
+      "disposition": "current_catalog",
+      "sourceIds": [
+        "acad-pragmatism"
+      ],
+      "directRuleIds": [
+        "construct-EP16"
+      ],
+      "relatedRuleIds": [
+        "construct-EP15"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "generic fallibilism"
+    },
+    {
+      "id": "stirnerian-ownness",
+      "scope": "ethical_theory",
+      "disposition": "current_catalog",
+      "sourceIds": [
+        "acad-stirner"
+      ],
+      "directRuleIds": [
+        "construct-NE17",
+        "construct-NE18",
+        "construct-NE19"
+      ],
+      "relatedRuleIds": [],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "ethical egoism"
+    },
+    {
+      "id": "ethical-egoism",
+      "scope": "ethical_theory",
+      "disposition": "current_catalog",
+      "sourceIds": [
+        "acad-egoism"
+      ],
+      "directRuleIds": [
+        "construct-NE15"
+      ],
+      "relatedRuleIds": [],
+      "missingDefiningDoctrine": [
+        "Whether moral rightness depends exclusively on advancing the agent's good"
+      ],
+      "nearestFalsePositive": "permission for substantial self-concern"
+    },
+    {
+      "id": "philosophical-anarchism",
+      "scope": "political_philosophy",
+      "disposition": "current_catalog",
+      "sourceIds": [
+        "acad-obligation"
+      ],
+      "directRuleIds": [
+        "legacy-philosophical-anarchism-no-general-obedience"
+      ],
+      "relatedRuleIds": [
+        "construct-PL31"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "decentralization or dissatisfaction with a government"
+    },
+    {
+      "id": "objectivism-rand",
+      "scope": "comprehensive_system",
+      "disposition": "current_catalog",
+      "sourceIds": [
+        "acad-rand"
+      ],
+      "directRuleIds": [
+        "construct-ME09",
+        "construct-NE15",
+        "construct-EP20"
+      ],
+      "relatedRuleIds": [
+        "construct-OM13",
+        "legacy-objectivism-market-coordination"
+      ],
+      "missingDefiningDoctrine": [
+        "Rand's full rights and rights-protecting-state doctrine",
+        "Rand's distinctive conception of reason and perception as a system"
+      ],
+      "nearestFalsePositive": "market liberalism or generic self-interest"
+    },
+    {
+      "id": "ontological-naturalism",
+      "scope": "metaphysical_position",
+      "disposition": "current_catalog",
+      "sourceIds": [
+        "gen-naturalism"
+      ],
+      "directRuleIds": [
+        "ph-supernatural-reality"
+      ],
+      "relatedRuleIds": [
+        "audit2-EP06-testability"
+      ],
+      "missingDefiningDoctrine": [
+        "Whether reality is entirely natural rather than merely lacking a deity"
+      ],
+      "nearestFalsePositive": "atheism or methodological naturalism"
+    },
+    {
+      "id": "fallibilism-about-knowledge",
+      "scope": "epistemological_tradition",
+      "disposition": "candidate_requires_claim_review",
+      "sourceIds": [
+        "acad-epistemology"
+      ],
+      "directRuleIds": [
+        "construct-EP15"
+      ],
+      "relatedRuleIds": [
+        "audit2-EP02-complex-knowledge"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "mere willingness to revise beliefs; pragmatism"
+    },
+    {
+      "id": "epistemic-foundationalism",
+      "scope": "epistemological_tradition",
+      "disposition": "candidate_requires_claim_review",
+      "sourceIds": [
+        "acad-epistemology"
+      ],
+      "directRuleIds": [
+        "construct-EP18"
+      ],
+      "relatedRuleIds": [
+        "ph-intuitive-warrant"
+      ],
+      "missingDefiningDoctrine": [
+        "Whether all justified beliefs ultimately depend on basic beliefs, beyond the narrower noninferential-warrant claim"
+      ],
+      "nearestFalsePositive": "accepting one justified intuition"
+    },
+    {
+      "id": "sensory-empiricism-about-the-external-world",
+      "scope": "epistemological_tradition",
+      "disposition": "candidate_requires_claim_review",
+      "sourceIds": [
+        "acad-epistemology"
+      ],
+      "directRuleIds": [
+        "construct-EP20"
+      ],
+      "relatedRuleIds": [
+        "audit2-EP06-testability"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "scientific trust without a sensory-grounding thesis"
+    },
+    {
+      "id": "psychological-egoism",
+      "scope": "descriptive_psychology_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "acad-egoism"
+      ],
+      "directRuleIds": [
+        "construct-AH13"
+      ],
+      "relatedRuleIds": [
+        "construct-NE15"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "ethical egoism or the trivial fact that desires belong to an agent",
+      "reviewNote": "AHI100 and AHI101 closely repeat the universal own-welfare motive claim; two apparent units require independence review."
+    },
+    {
+      "id": "easy-ontology",
+      "scope": "metaphysical_position",
+      "disposition": "candidate_requires_claim_review",
+      "sourceIds": [
+        "acad-thomasson",
+        "acad-marschall"
+      ],
+      "directRuleIds": [
+        "construct-OM14"
+      ],
+      "relatedRuleIds": [
+        "construct-OM13"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "nominalism or denial of mind-independent objects"
+    },
+    {
+      "id": "personal-theism",
+      "scope": "philosophy_of_religion_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "gen-theology",
+        "audit-providence"
+      ],
+      "directRuleIds": [
+        "divine-existence",
+        "audit2-RC02-agentic-divinity"
+      ],
+      "relatedRuleIds": [
+        "audit2-RC04-intervention"
+      ],
+      "missingDefiningDoctrine": [
+        "Whether the two answered deity claims concern the same referent"
+      ],
+      "nearestFalsePositive": "impersonal divinity or spirituality without a deity",
+      "reviewNote": "The existence and conditional personality answers could concern different divine referents; review the conjunction before direct comparison."
+    },
+    {
+      "id": "interventionist-theism",
+      "scope": "philosophy_of_religion_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "audit-providence",
+        "audit-miracles"
+      ],
+      "directRuleIds": [
+        "divine-existence",
+        "audit2-RC04-intervention"
+      ],
+      "relatedRuleIds": [
+        "audit2-RC05-miracles"
+      ],
+      "missingDefiningDoctrine": [
+        "Whether the intervention claim concerns the deity whose existence is affirmed"
+      ],
+      "nearestFalsePositive": "belief that miracles are possible without belief in a deity",
+      "reviewNote": "The intervention item allows a supernatural agent other than the affirmed divine reality; review the referent before direct comparison."
+    },
+    {
+      "id": "theological-agnosticism",
+      "scope": "philosophy_of_religion_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "gen-theology"
+      ],
+      "directRuleIds": [
+        "theological-suspension"
+      ],
+      "relatedRuleIds": [
+        "divine-existence"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "atheism or selecting no view because the question was unclear",
+      "reviewNote": "Two uncertainty answers do not by themselves distinguish considered agnosticism from temporary uncertainty."
+    },
+    {
+      "id": "nonstate-legal-pluralism",
+      "scope": "political_philosophy",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "acad-hasnas",
+        "acad-legitimacy"
+      ],
+      "directRuleIds": [
+        "construct-PL30"
+      ],
+      "relatedRuleIds": [
+        "legacy-philosophical-anarchism-no-general-obedience"
+      ],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "philosophical anarchism or preference for local government",
+      "reviewNote": "Two positive items establish institutional possibility, while legitimate acceptability appears mainly in a reverse item; positive cases need review."
+    },
+    {
+      "id": "ordinary-object-realism",
+      "scope": "metaphysical_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "audit-perception"
+      ],
+      "directRuleIds": [
+        "audit2-EP11-external-world",
+        "construct-OM13"
+      ],
+      "relatedRuleIds": [],
+      "missingDefiningDoctrine": [],
+      "nearestFalsePositive": "scientific realism or realism about universals",
+      "reviewNote": "EP11 has an open evidence-independence review; opposition to ordinary-object realism does not establish idealism."
+    },
+    {
+      "id": "compatibilism-about-free-will",
+      "scope": "philosophy_of_action_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "audit2-freewill-sep"
+      ],
+      "directRuleIds": [
+        "construct-AH14"
+      ],
+      "relatedRuleIds": [
+        "deterministic-world"
+      ],
+      "missingDefiningDoctrine": [
+        "Distinguish compatibility of free will from compatibility of moral responsibility"
+      ],
+      "nearestFalsePositive": "belief that determinism is false",
+      "reviewNote": "The frozen AH14 rule has an open distinct-evidence review; the expected direction would be opposed."
+    },
+    {
+      "id": "incompatibilism-about-free-will",
+      "scope": "philosophy_of_action_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "audit2-freewill-sep"
+      ],
+      "directRuleIds": [
+        "construct-AH14"
+      ],
+      "relatedRuleIds": [
+        "deterministic-world"
+      ],
+      "missingDefiningDoctrine": [
+        "Distinguish alternative-possibilities and sourcehood arguments"
+      ],
+      "nearestFalsePositive": "believing determinism is true",
+      "reviewNote": "The frozen AH14 rule has an open distinct-evidence review; endorsement does not establish libertarian free will or hard determinism."
+    },
+    {
+      "id": "relational-selfhood",
+      "scope": "metaphysical_position",
+      "disposition": "candidate_requires_rule_review",
+      "sourceIds": [
+        "audit-selfconstrual",
+        "gen-identity"
+      ],
+      "directRuleIds": [
+        "audit2-SO03-relational-self"
+      ],
+      "relatedRuleIds": [
+        "ph-process-self"
+      ],
+      "missingDefiningDoctrine": [
+        "Whether social relations constitute the self rather than merely influence identity"
+      ],
+      "nearestFalsePositive": "valuing relationships",
+      "reviewNote": "The cited self-construal scale is psychological context, not by itself a philosophical ontology of persons."
+    },
+    {
+      "id": "act-consequentialism",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-consequentialism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "outcomes-count",
+        "instrumental-harm"
+      ],
+      "missingDefiningDoctrine": [
+        "Rightness of each act depends solely on its consequences"
+      ],
+      "nearestFalsePositive": "holding that outcomes matter"
+    },
+    {
+      "id": "rule-consequentialism",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-consequentialism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "outcomes-count",
+        "ph-rule-mediated"
+      ],
+      "missingDefiningDoctrine": [
+        "Rules are justified by their consequences as the ultimate criterion"
+      ],
+      "nearestFalsePositive": "treating justified rules as important"
+    },
+    {
+      "id": "classical-utilitarianism",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-consequentialism",
+        "acad-ous"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "outcomes-count",
+        "impartial-beneficence"
+      ],
+      "missingDefiningDoctrine": [
+        "Welfare is the sole ultimate value",
+        "Rightness depends on maximizing aggregate welfare"
+      ],
+      "nearestFalsePositive": "generic consequentialism or impartial concern"
+    },
+    {
+      "id": "kantian-deontology",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-deontology"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "moral-constraints",
+        "ph-universal-requirements"
+      ],
+      "missingDefiningDoctrine": [
+        "Autonomy and the categorical imperative ground duties",
+        "Persons are ends in themselves in the relevant Kantian sense"
+      ],
+      "nearestFalsePositive": "having any moral constraint"
+    },
+    {
+      "id": "virtue-ethics",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-virtue"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-objective-welfare"
+      ],
+      "missingDefiningDoctrine": [
+        "Virtue and character are central to the account of right action or flourishing"
+      ],
+      "nearestFalsePositive": "valuing good character"
+    },
+    {
+      "id": "care-ethics",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-care"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "relational-care",
+        "moral-concern-care"
+      ],
+      "missingDefiningDoctrine": [
+        "Care and concrete relationships have a distinctive justificatory role"
+      ],
+      "nearestFalsePositive": "reporting care as important"
+    },
+    {
+      "id": "scanlonian-contractualism",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-contractualism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "reasonable-rejection"
+      ],
+      "missingDefiningDoctrine": [
+        "Wrongness is grounded in principles no one could reasonably reject",
+        "Individual complaints are not merely summed into aggregate welfare"
+      ],
+      "nearestFalsePositive": "favoring mutual advantage"
+    },
+    {
+      "id": "moral-realism",
+      "scope": "metaethical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-realism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "legacy-objectivism-moral-truth-aptness",
+        "ph-stance-independence"
+      ],
+      "missingDefiningDoctrine": [
+        "Moral claims are truth-apt and at least some are true"
+      ],
+      "nearestFalsePositive": "moral universalism or stance-independence alone"
+    },
+    {
+      "id": "metaethical-constructivism",
+      "scope": "metaethical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "acad-constructivism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "mutual-advantage",
+        "ph-stance-independence"
+      ],
+      "missingDefiningDoctrine": [
+        "Moral standards are constituted by an appropriate constructive procedure"
+      ],
+      "nearestFalsePositive": "mere context sensitivity"
+    },
+    {
+      "id": "moral-error-theory",
+      "scope": "metaethical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-antirealism",
+        "gen-noncognitivism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "legacy-objectivism-moral-truth-aptness",
+        "ph-stance-independence"
+      ],
+      "missingDefiningDoctrine": [
+        "Moral claims are truth-apt",
+        "No positive moral claims are true"
+      ],
+      "nearestFalsePositive": "expressivism or ordinary moral skepticism"
+    },
+    {
+      "id": "moral-expressivism",
+      "scope": "metaethical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-noncognitivism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "legacy-objectivism-moral-truth-aptness"
+      ],
+      "missingDefiningDoctrine": [
+        "Moral utterances primarily express practical attitudes in the relevant semantic sense"
+      ],
+      "nearestFalsePositive": "error theory or emotional moral judgment"
+    },
+    {
+      "id": "moral-relativism",
+      "scope": "metaethical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-antirealism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-context-sensitive"
+      ],
+      "missingDefiningDoctrine": [
+        "Moral truth or correctness varies with an appropriate assessor, framework, or culture"
+      ],
+      "nearestFalsePositive": "context-sensitive moral judgment"
+    },
+    {
+      "id": "physicalism",
+      "scope": "metaphysical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-physicalism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "physical-reality",
+        "ph-physical-explanation"
+      ],
+      "missingDefiningDoctrine": [
+        "Everything is physical or bears the required relation to the physical"
+      ],
+      "nearestFalsePositive": "ontological naturalism or physical explanation of consciousness"
+    },
+    {
+      "id": "mind-body-dualism",
+      "scope": "metaphysical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-identity"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-physical-explanation"
+      ],
+      "missingDefiningDoctrine": [
+        "Mental and physical properties or substances are distinct in the relevant ontological sense"
+      ],
+      "nearestFalsePositive": "rejecting one reductive account of consciousness"
+    },
+    {
+      "id": "metaphysical-idealism",
+      "scope": "metaphysical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "audit-perception"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "audit2-EP11-external-world",
+        "construct-OM13"
+      ],
+      "missingDefiningDoctrine": [
+        "Reality is fundamentally mental, or the specified Berkeleyan immaterialist thesis"
+      ],
+      "nearestFalsePositive": "doubting ordinary perception"
+    },
+    {
+      "id": "nominalism-about-universals",
+      "scope": "metaphysical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "acad-nominalism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "construct-OM12"
+      ],
+      "missingDefiningDoctrine": [
+        "No repeatable universals are instantiated in distinct particulars"
+      ],
+      "nearestFalsePositive": "easy ontology or realism about ordinary objects"
+    },
+    {
+      "id": "panpsychism",
+      "scope": "metaphysical_position",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "domain-panpsychism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-basic-experience"
+      ],
+      "missingDefiningDoctrine": [
+        "Experience or experiential properties are fundamental and widespread in the relevant theory"
+      ],
+      "nearestFalsePositive": "allowing that one simple system might experience"
+    },
+    {
+      "id": "existentialist-families",
+      "scope": "comprehensive_system",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-meaning"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "constructed-meaning",
+        "ph-process-self"
+      ],
+      "missingDefiningDoctrine": [
+        "Freedom, situated existence, and authenticity in a specified existentialist family"
+      ],
+      "nearestFalsePositive": "generic individualism or finding meaning in projects"
+    },
+    {
+      "id": "stoicism",
+      "scope": "comprehensive_system",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-virtue"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-objective-welfare"
+      ],
+      "missingDefiningDoctrine": [
+        "Virtue alone is good in the relevant Stoic ethical sense"
+      ],
+      "nearestFalsePositive": "emotional restraint"
+    },
+    {
+      "id": "secular-humanism",
+      "scope": "comprehensive_system",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-theology",
+        "gen-meaning"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "divine-existence",
+        "constructed-meaning"
+      ],
+      "missingDefiningDoctrine": [
+        "A positive humanist ethical and civic orientation beyond nonbelief in God"
+      ],
+      "nearestFalsePositive": "atheism"
+    },
+    {
+      "id": "classical-liberalism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-liberty",
+        "acad-rights"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "noninterference",
+        "ph-strong-property"
+      ],
+      "missingDefiningDoctrine": [
+        "A defended scope of individual liberty, property, and limited political authority"
+      ],
+      "nearestFalsePositive": "generic individualism or market preference"
+    },
+    {
+      "id": "right-libertarianism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "acad-rights",
+        "domain-property"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-strong-property",
+        "construct-PL27"
+      ],
+      "missingDefiningDoctrine": [
+        "Robust self-ownership and a specified theory of original acquisition and external resources"
+      ],
+      "nearestFalsePositive": "classical liberalism or redistribution skepticism"
+    },
+    {
+      "id": "left-libertarianism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "domain-property",
+        "gen-distribution"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-strong-property",
+        "effective-freedom"
+      ],
+      "missingDefiningDoctrine": [
+        "Self-ownership with egalitarian claims over natural resources"
+      ],
+      "nearestFalsePositive": "either right libertarianism or liberal egalitarianism alone"
+    },
+    {
+      "id": "market-anarchism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "acad-hasnas",
+        "domain-property"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "construct-PL30",
+        "legacy-objectivism-market-coordination"
+      ],
+      "missingDefiningDoctrine": [
+        "A stateless legal order specifically organized through property, contract, and market institutions"
+      ],
+      "nearestFalsePositive": "nonstate legal pluralism or laissez-faire liberalism"
+    },
+    {
+      "id": "social-anarchism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "acad-obligation",
+        "gen-distribution"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "legacy-philosophical-anarchism-no-general-obedience",
+        "construct-PL30"
+      ],
+      "missingDefiningDoctrine": [
+        "Opposition to hierarchical state authority together with specified social or common-ownership institutions"
+      ],
+      "nearestFalsePositive": "philosophical anarchism alone"
+    },
+    {
+      "id": "socialism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-distribution"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "effective-freedom",
+        "legacy-objectivism-market-coordination"
+      ],
+      "missingDefiningDoctrine": [
+        "Effective social or worker control of major productive assets"
+      ],
+      "nearestFalsePositive": "supporting redistribution or public services"
+    },
+    {
+      "id": "democratic-socialism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-distribution"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-democratic-authorization",
+        "effective-freedom"
+      ],
+      "missingDefiningDoctrine": [
+        "Social ownership or worker control combined with democratic governance"
+      ],
+      "nearestFalsePositive": "social democracy"
+    },
+    {
+      "id": "civic-republicanism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-liberty"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "nondomination"
+      ],
+      "missingDefiningDoctrine": [
+        "Freedom as non-domination with suitable civic or institutional safeguards"
+      ],
+      "nearestFalsePositive": "mere preference for noninterference"
+    },
+    {
+      "id": "political-cosmopolitanism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "domain-cosmopolitanism"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-political-cosmopolitanism",
+        "impartial-beneficence"
+      ],
+      "missingDefiningDoctrine": [
+        "The specified global moral or institutional duties beyond recognizing foreign interests"
+      ],
+      "nearestFalsePositive": "ordinary humanitarian concern"
+    },
+    {
+      "id": "legal-positivism",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "gen-law"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "source-based-validity"
+      ],
+      "missingDefiningDoctrine": [
+        "Legal validity ultimately depends on social sources in the relevant theory"
+      ],
+      "nearestFalsePositive": "believing a deeply unjust statute can remain legally valid"
+    },
+    {
+      "id": "retributivism-about-punishment",
+      "scope": "political_philosophy",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "audit2-punishment-sep"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-desert-punishment"
+      ],
+      "missingDefiningDoctrine": [
+        "Desert is a sufficient or central justificatory ground for proportionate punishment"
+      ],
+      "nearestFalsePositive": "allowing desert some moral weight"
+    },
+    {
+      "id": "ecocentrism",
+      "scope": "ethical_theory",
+      "disposition": "defer_missing_defining_evidence",
+      "sourceIds": [
+        "audit-nep"
+      ],
+      "directRuleIds": [],
+      "relatedRuleIds": [
+        "ph-inherent-purpose"
+      ],
+      "missingDefiningDoctrine": [
+        "Nature or ecological wholes have moral standing independently of human interests"
+      ],
+      "nearestFalsePositive": "supporting environmental policy for human benefit"
+    }
+  ]
+}

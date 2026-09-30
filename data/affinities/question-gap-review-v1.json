@@ -1,0 +1,667 @@
+{
+  "schemaVersion": "affinity-question-gap-review-1",
+  "reviewVersion": "1.0.0",
+  "reviewedExpansion": "data/affinities/expansion-review-v1.json",
+  "candidateBank": "data/items/candidate-v0.9.json",
+  "unreleasedQuestionBank": "data/items/affinity-gap-draft-v1.json",
+  "status": "editorial_review_not_route_or_inference",
+  "method": "Each tradition is assessed by defining doctrine and nearest false positive. Existing item references identify authored content only; they do not establish rule validity, independent corroboration, route exposure, or tradition identity. Drafts remain outside released instruments.",
+  "entries": [
+    {
+      "id": "pragmatism",
+      "reviewDisposition": "current_catalog",
+      "existingItemRefs": [
+        "EPI104@1",
+        "EPI105@1",
+        "EPI106@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing contrast; claim-level source and rule review remains."
+    },
+    {
+      "id": "stirnerian-ownness",
+      "reviewDisposition": "current_catalog",
+      "existingItemRefs": [
+        "NEI106@1",
+        "NEI107@1",
+        "NEI108@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing ownness indicators; do not equate with generic egoism."
+    },
+    {
+      "id": "ethical-egoism",
+      "reviewDisposition": "current_catalog",
+      "existingItemRefs": [
+        "NEI100@1",
+        "NEI101@1",
+        "NEI102@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI121@1"
+      ],
+      "remainingReview": "Draft tests whether another person supplies an independent moral reason; still needs maximizing/self-good criterion review."
+    },
+    {
+      "id": "philosophical-anarchism",
+      "reviewDisposition": "current_catalog",
+      "existingItemRefs": [
+        "PLI024@1",
+        "PLI025@1",
+        "PLI115@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Distinguish obligation skepticism from institutional abolition."
+    },
+    {
+      "id": "objectivism-rand",
+      "reviewDisposition": "current_catalog",
+      "existingItemRefs": [
+        "MEI100@1",
+        "MEI101@1",
+        "MEI102@1",
+        "MEI103@1",
+        "MEI104@1",
+        "MEI105@1",
+        "PLI100@1",
+        "PLI106@1",
+        "PLI107@1",
+        "EPI115@1",
+        "EPI116@1",
+        "EPI117@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing pieces span reason, life, rights and state; no single answer licenses system identity."
+    },
+    {
+      "id": "ontological-naturalism",
+      "reviewDisposition": "current_catalog",
+      "existingItemRefs": [
+        "OMI001@2",
+        "OMI009@1",
+        "OMI011@1",
+        "OMI031@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing ontology questions; atheism alone is insufficient."
+    },
+    {
+      "id": "fallibilism-about-knowledge",
+      "reviewDisposition": "candidate_requires_claim_review",
+      "existingItemRefs": [
+        "EPI100@1",
+        "EPI101@1",
+        "EPI102@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "EPI118@1"
+      ],
+      "remainingReview": "Draft separates revisable knowledge from merely useful belief; exact claim review remains."
+    },
+    {
+      "id": "epistemic-foundationalism",
+      "reviewDisposition": "candidate_requires_claim_review",
+      "existingItemRefs": [
+        "EPI109@1",
+        "EPI110@1",
+        "EPI111@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "EPI121@1"
+      ],
+      "remainingReview": "New regress question distinguishes global foundationalism from one noninferential belief."
+    },
+    {
+      "id": "sensory-empiricism-about-the-external-world",
+      "reviewDisposition": "candidate_requires_claim_review",
+      "existingItemRefs": [
+        "EPI107@1",
+        "EPI108@1",
+        "EPI115@1",
+        "EPI116@1",
+        "EPI117@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing sensory-grounding content; source and exact rule proposition need review."
+    },
+    {
+      "id": "psychological-egoism",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "AHI100@1",
+        "AHI101@1",
+        "AHI102@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing universal motive wording needs independence/false-positive review, not another paraphrase."
+    },
+    {
+      "id": "easy-ontology",
+      "reviewDisposition": "candidate_requires_claim_review",
+      "existingItemRefs": [
+        "OMI109@1",
+        "OMI110@1",
+        "OMI111@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing criteria already target easy ontology; do not infer nominalism."
+    },
+    {
+      "id": "personal-theism",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "RCI014@1",
+        "RCI025@1",
+        "RCI031@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "RCI036@1"
+      ],
+      "remainingReview": "New item co-refers affirmed existence and personal deity; conditional description is insufficient."
+    },
+    {
+      "id": "interventionist-theism",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "RCI009@1",
+        "RCI016@1",
+        "RCI031@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "RCI037@1"
+      ],
+      "remainingReview": "New item co-refers intervention and the affirmed deity; mere possibility is insufficient."
+    },
+    {
+      "id": "theological-agnosticism",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "RCI001@1",
+        "RCI021@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "RCI038@1"
+      ],
+      "remainingReview": "New item separates considered suspension from unclear or unconsidered response."
+    },
+    {
+      "id": "nonstate-legal-pluralism",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "PLI109@1",
+        "PLI110@1",
+        "PLI111@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing possibility and legitimacy options; inspect rule paths and distinguish stateless endpoint."
+    },
+    {
+      "id": "ordinary-object-realism",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "OMI106@1",
+        "OMI107@1",
+        "OMI108@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "EPI119@1"
+      ],
+      "remainingReview": "Existing ordinary-object independence plus earlier perceptual-error draft; no new paraphrase."
+    },
+    {
+      "id": "compatibilism-about-free-will",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "AHI103@1",
+        "AHI105@1",
+        "AHI023@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "AHI107@1"
+      ],
+      "remainingReview": "Conditional question separates freedom and moral responsibility; does not assert determinism."
+    },
+    {
+      "id": "incompatibilism-about-free-will",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "AHI103@1",
+        "AHI104@1",
+        "AHI023@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "AHI107@1"
+      ],
+      "remainingReview": "Conditional question separates freedom and responsibility; alternatives/sourcehood remain further gaps."
+    },
+    {
+      "id": "relational-selfhood",
+      "reviewDisposition": "candidate_requires_rule_review",
+      "existingItemRefs": [
+        "SOI003@1",
+        "SOI016@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "SOI107@1"
+      ],
+      "remainingReview": "New question separates constitution of identity from causal influence or valuing relationships."
+    },
+    {
+      "id": "act-consequentialism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI001@2",
+        "NEI014@1",
+        "NEI040@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI122@1"
+      ],
+      "remainingReview": "New question targets ultimate criterion for each act, not generic outcome sensitivity."
+    },
+    {
+      "id": "rule-consequentialism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI037@1",
+        "NEI038@1",
+        "NEI039@1",
+        "NEI040@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI122@1",
+        "NEI123@1"
+      ],
+      "remainingReview": "New questions distinguish rule criterion and consequence-based justification from rule following."
+    },
+    {
+      "id": "classical-utilitarianism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI004@2",
+        "NEI025@1",
+        "NEI040@1",
+        "VAI054@1",
+        "VAI057@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI122@1",
+        "NEI124@1",
+        "NEI125@1"
+      ],
+      "remainingReview": "Welfarism, maximization and act/rule structure require distinct evidence; classical hedonism remains unmeasured."
+    },
+    {
+      "id": "kantian-deontology",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI002@1",
+        "NEI026@1",
+        "PLI052@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI126@1",
+        "NEI127@1"
+      ],
+      "remainingReview": "Drafts address universal-law and persons-as-ends criteria; Kantian autonomy remains unsettled."
+    },
+    {
+      "id": "virtue-ethics",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI003@1",
+        "NEI007@1",
+        "NEI027@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI128@1"
+      ],
+      "remainingReview": "Draft asks explanatory priority of character/flourishing rather than admiration of character."
+    },
+    {
+      "id": "care-ethics",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI006@1",
+        "NEI016@1",
+        "NEI028@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI129@1"
+      ],
+      "remainingReview": "Draft tests care relationship as a moral ground; review overlap with NEI028 before release."
+    },
+    {
+      "id": "scanlonian-contractualism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI009@1",
+        "NEI017@1",
+        "NEI031@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI130@1"
+      ],
+      "remainingReview": "Draft distinguishes individual reasonable rejection from aggregate and mutual-advantage reasons."
+    },
+    {
+      "id": "moral-realism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "MEI005@3",
+        "MEI017@1",
+        "MEI018@1",
+        "MEI019@2",
+        "MEI023@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing truth-aptness and truth responses need conjunctive, source-linked review; universalism is insufficient."
+    },
+    {
+      "id": "metaethical-constructivism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "MEI005@3",
+        "MEI011@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "MEI106@1"
+      ],
+      "remainingReview": "New question contrasts constitution by ideal procedure with discovery and mere agreement."
+    },
+    {
+      "id": "moral-error-theory",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "MEI005@3",
+        "MEI017@1",
+        "MEI018@1",
+        "MEI019@2"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "MEI005 names the doctrine in its answer; test comprehension and corroborate truth-aptness plus falsity before inference."
+    },
+    {
+      "id": "moral-expressivism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "MEI005@3",
+        "MEI018@1",
+        "MEI019@2"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing semantics questions; emotional judgment alone is not expressivism."
+    },
+    {
+      "id": "moral-relativism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "MEI005@3",
+        "MEI019@2",
+        "MEI023@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing person/culture-relative truth options; context sensitivity alone is insufficient."
+    },
+    {
+      "id": "physicalism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "OMI002@1",
+        "OMI008@1",
+        "OMI012@1",
+        "OMI032@1",
+        "MSI017@1",
+        "MSI021@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "OMI112@1"
+      ],
+      "remainingReview": "Existing global thesis plus new neighboring-view contrast; naturalism is insufficient."
+    },
+    {
+      "id": "mind-body-dualism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "OMI008@1",
+        "OMI012@1",
+        "MSI006@1",
+        "MSI017@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "OMI112@1"
+      ],
+      "remainingReview": "New contrast distinguishes two real kinds from physical explanatory gap or idealism."
+    },
+    {
+      "id": "metaphysical-idealism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "OMI108@1",
+        "OMI106@1",
+        "OMI107@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "OMI112@1"
+      ],
+      "remainingReview": "Existing mind-dependence is closer than perceptual doubt; no extra OMI113 paraphrase retained."
+    },
+    {
+      "id": "nominalism-about-universals",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "OMI010@1",
+        "OMI015@1",
+        "OMI103@1",
+        "OMI104@1",
+        "OMI105@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing repeatable-universal contrast; easy ontology is a different issue."
+    },
+    {
+      "id": "panpsychism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "MSI015@1",
+        "MSI017@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "MSI024@1"
+      ],
+      "remainingReview": "New question adds fundamentality and widespreadness beyond possibility in one simple system."
+    },
+    {
+      "id": "existentialist-families",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "EXI003@2",
+        "EXI009@1",
+        "EXI010@1",
+        "EXI024@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Family diversity and authenticity/situated freedom remain too broad for a direct tradition inference; inspect existing meaning items first."
+    },
+    {
+      "id": "stoicism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "NEI003@1",
+        "VAI054@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "NEI131@1"
+      ],
+      "remainingReview": "Draft tests virtue-only-good thesis; further Stoic physics/practice remains unmeasured."
+    },
+    {
+      "id": "secular-humanism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "RCI014@1",
+        "NEI004@2",
+        "SOI004@2"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Nonbelief plus generic concern is insufficient; positive movement commitments are not yet captured by a clean item."
+    },
+    {
+      "id": "classical-liberalism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI007@1",
+        "PLI013@1",
+        "PLI026@1",
+        "PLI034@1",
+        "PLI051@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing liberty, property and constrained authority are partial; historical family remains internally diverse."
+    },
+    {
+      "id": "right-libertarianism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI011@1",
+        "PLI013@1",
+        "PLI054@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI121@1",
+        "PLI122@1"
+      ],
+      "remainingReview": "New questions separate bodily self-ownership from acquisition of external resources."
+    },
+    {
+      "id": "left-libertarianism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI011@1",
+        "PLI012@1",
+        "PLI059@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI121@1",
+        "PLI122@1"
+      ],
+      "remainingReview": "New questions combine self-ownership with egalitarian resource claims rather than egalitarianism alone."
+    },
+    {
+      "id": "market-anarchism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI109@1",
+        "PLI110@1",
+        "PLI115@1",
+        "PLI116@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI125@1"
+      ],
+      "remainingReview": "New question tests market form of stateless courts; stateless endpoint requires separate evidence."
+    },
+    {
+      "id": "social-anarchism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI115@1",
+        "PLI116@1",
+        "PLI059@1",
+        "PLI060@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI123@1",
+        "PLI125@1"
+      ],
+      "remainingReview": "Social control and nonmarket institutions remain separate from anti-state sentiment."
+    },
+    {
+      "id": "socialism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI014@1",
+        "PLI059@1",
+        "PLI060@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI123@1"
+      ],
+      "remainingReview": "New question tests effective worker/social control of major productive assets; redistribution alone is insufficient."
+    },
+    {
+      "id": "democratic-socialism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI006@1",
+        "PLI049@1",
+        "PLI060@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI123@1"
+      ],
+      "remainingReview": "Worker/social control plus democratic governance; social democracy alone is insufficient."
+    },
+    {
+      "id": "civic-republicanism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI010@1",
+        "PLI029@1",
+        "PLI057@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing non-domination discriminator; institutional safeguards need additional review."
+    },
+    {
+      "id": "political-cosmopolitanism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI020@1",
+        "PLI067@1",
+        "PLI068@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "PLI124@1"
+      ],
+      "remainingReview": "New question distinguishes a foreign person’s political claim from mere humanitarian permission."
+    },
+    {
+      "id": "legal-positivism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI071@1",
+        "PLI072@1",
+        "PLI073@1",
+        "PLI074@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing source-based validity distinction; unjust-law validity alone is insufficient."
+    },
+    {
+      "id": "retributivism-about-punishment",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "PLI017@1",
+        "PLI040@1",
+        "PLI064@1",
+        "PLI065@1"
+      ],
+      "unreleasedDraftItemRefs": [],
+      "remainingReview": "Existing desert-alone vignette and proportionality contrast; no need for a paraphrase."
+    },
+    {
+      "id": "ecocentrism",
+      "reviewDisposition": "defer_missing_defining_evidence",
+      "existingItemRefs": [
+        "SOI007@1",
+        "SOI024@1",
+        "SOI040@1"
+      ],
+      "unreleasedDraftItemRefs": [
+        "SOI106@1"
+      ],
+      "remainingReview": "New question targets ecological wholes in their own right, rather than human benefits or individual-animal interests."
+    }
+  ]
+}

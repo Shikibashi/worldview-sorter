@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"source-claim-proposals-1",
+  "version":"1.0.0",
+  "status":"draft_not_active",
+  "sources":[
+    {"id":"dimension-federalism","title":"Federalism","url":"https://plato.stanford.edu/entries/federalism/","claim":"Constitutionally divided final authority differs from revocable local delegation and confederation."},
+    {"id":"dimension-multiculturalism","title":"Multiculturalism","url":"https://plato.stanford.edu/entries/multiculturalism/","claim":"Institutional accommodation of cultural difference is distinct from private tolerance and assimilation."},
+    {"id":"dimension-immigration","title":"Immigration","url":"https://plato.stanford.edu/entries/immigration/","claim":"Moral claims to movement and state claims to exclusion require separate examination."},
+    {"id":"dimension-pacifism","title":"Pacifism","url":"https://plato.stanford.edu/entries/pacifism/","claim":"Absolute and contingent objections to war differ, including over self-defense and protection of others."},
+    {"id":"dimension-global-justice","title":"Global Justice","url":"https://plato.stanford.edu/entries/justice-global/","claim":"Humanitarian intervention and trade justice are separate global-justice disputes; neither follows from generic global concern."},
+    {"id":"dimension-technology","title":"Philosophy of Technology","url":"https://plato.stanford.edu/entries/technology/","claim":"Evaluation of technical change considers benefits, social effects, and risks; enthusiasm is not a single philosophical system."},
+    {"id":"dimension-enhancement","title":"Human Enhancement","url":"https://plato.stanford.edu/entries/enhancement/","claim":"Enhancement beyond treatment raises distinct questions of fairness, authenticity, and governance."},
+    {"id":"dimension-social-norms","title":"Social Norms","url":"https://plato.stanford.edu/entries/social-norms/","claim":"The persistence of a social norm is distinct from its moral justification."},
+    {"id":"dimension-rand","title":"Ayn Rand","url":"https://plato.stanford.edu/entries/ayn-rand/","claim":"Objectivism spans metaphysics, epistemology, ethics, rights, and politics; market or atheistic preferences alone are insufficient."}
+  ]
+}
