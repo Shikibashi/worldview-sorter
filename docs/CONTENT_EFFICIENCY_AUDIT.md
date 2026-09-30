@@ -31,6 +31,17 @@ The policy enforces all 31 facet minima at every length. It does **not** guarant
 | 160 | 19 | 122 | 35 | More corroboration, especially moral-foundation facets and agency/identity. |
 | 240 | 57 | 84 | 35 | Much stronger opportunity for older bundled rules; still omits newer audited rule paths. |
 
+The public result boundary is clearer when counting **all 158 non-research rules per packet**, rather than only rules that appear in every sample. Means over the same 32 seeds are:
+
+| Assigned items | No rule evidence unit assigned | Some, below the rule minimum | Rule minimum assigned |
+| ---: | ---: | ---: | ---: |
+| 80 | 121.84 | 2.09 | 34.06 |
+| 120 | 103.16 | 2.13 | 52.72 |
+| 160 | 86.50 | 1.22 | 70.28 |
+| 240 | 55.97 | 1.22 | 100.81 |
+
+These are **assignment opportunities**, not actual respondent results. A conditional item can still be branch-skipped, and an assigned item can receive a neutral, missing, or opposing answer. Zero assigned units support a route-omission explanation; a partial or complete assignment can still produce insufficient evidence after administration. The generated report retains per-rule counts for each case, so a future versioned result contract can preserve those distinctions.
+
 The 80→120 step adds four rules to the every-sample set, including constructed and objective meaning. The 120→160 step adds 13, including afterlife, moral-concern facets, extended cognition, and cosmic purpose. The 160→240 step adds 38, including several metaphysics, mind, religion, and metaethical rules. These are **sample-wide opportunities**, not guarantees over arbitrary seeds. Longer packets also add corroboration to rules already possible on shorter forms.
 
 Paired packets with the same seed give a second view of the depth progression. On average, 80→120 retains 79.72 assigned items and adds 40.28, gaining 20.03 complete rule paths while losing 0.09. The 120→160 step retains 119.84, adds 40.16, gains 19.00 paths, and loses none. The 160→240 step retains 159.91, adds 80.09, gains 34.22 paths, and loses none. Fractional values are means over 32 deterministic packets. The small item losses show these seeded policies are nearly, but not perfectly, nested; saved answers must be reused by exact revision rather than assuming set inclusion.

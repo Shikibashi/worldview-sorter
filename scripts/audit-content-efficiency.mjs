@@ -75,7 +75,8 @@ for(const size of sizes){
  }
  packetSets[size]=packets.map(packet=>new Set(packet.entries.map(e=>e.itemId)));
  const itemCounts=Object.fromEntries(bank.items.map(i=>[i.id,0]));
- const ruleCounts=Object.fromEntries(model.commitments.map(r=>[r.id,{assessable:0,supportPossible:0,opposePossible:0,conditional:0}]));
+ const ruleCounts=Object.fromEntries(model.commitments.map(r=>[r.id,{assessable:0,supportPossible:0,opposePossible:0,conditional:0,
+  assignedOpportunity:{unassigned:0,partial:0,complete:0}}]));
  const profileCounts=Object.fromEntries(profiles.profiles.map(p=>[p.id,{allDefining:0,anyDefining:0}]));
  const domains={},methods={};let minDomains=Infinity,maxDomains=0;
  for(const packet of packets){
@@ -83,7 +84,8 @@ for(const size of sizes){
   for(const id of ids)itemCounts[id]++;
   const ds=new Set(packet.entries.map(e=>e.domainId));minDomains=Math.min(minDomains,ds.size);maxDomains=Math.max(maxDomains,ds.size);
   for(const e of packet.entries){domains[e.domainId]=(domains[e.domainId]??0)+1;const f=fmt(items.get(e.itemId));methods[f]=(methods[f]??0)+1;}
-  for(const r of model.commitments){const o=opportunity(r,ids),c=ruleCounts[r.id];if(o.assessable)c.assessable++;if(o.supportPossible)c.supportPossible++;if(o.opposePossible)c.opposePossible++;if(o.conditionalItemIds.length)c.conditional++;}
+  for(const r of model.commitments){const o=opportunity(r,ids),c=ruleCounts[r.id];if(o.assessable)c.assessable++;if(o.supportPossible)c.supportPossible++;if(o.opposePossible)c.opposePossible++;if(o.conditionalItemIds.length)c.conditional++;
+   c.assignedOpportunity[o.units===0?'unassigned':o.assessable?'complete':'partial']++;}
   for(const p of profiles.profiles){
    const defining=p.criteria.filter(c=>c.essential);
    const ready=defining.filter(c=>new Set(c.evidence.filter(e=>ids.has(e.itemId)).map(e=>e.itemId)).size>=c.minimumIndependentItems);
@@ -93,6 +95,8 @@ for(const size of sizes){
  }
  routeSamples[size]={policyVersion:policy.policyVersion,sampleCount,seedPattern:'content-audit-000 through content-audit-031',
   itemCounts,ruleCounts,profileCounts,minDomains,maxDomains,
+  publicRuleOpportunityMeans:Object.fromEntries(['unassigned','partial','complete'].map(state=>[state,
+   model.commitments.filter(r=>r.tier!=='research').reduce((n,r)=>n+ruleCounts[r.id].assignedOpportunity[state],0)/sampleCount])),
   guaranteedFacetIds:policy.facets.filter(f=>f.minimumBundles>0).map(f=>f.id),
   meanItemsByDomain:Object.fromEntries(Object.entries(domains).map(([k,v])=>[k,v/sampleCount])),
   meanItemsByResponseScale:Object.fromEntries(Object.entries(methods).map(([k,v])=>[k,v/sampleCount])),

@@ -60,6 +60,13 @@ for(const size of [80,120,160,240]){
  assert.equal(route.guaranteedFacetIds.length,31);
  assert.equal(route.assessableRuleIdsEverySample.length+route.assessableRuleIdsSomeSamples.length+route.assessableRuleIdsNoSamples.length,model.commitments.length);
  assert.equal(Object.values(route.meanItemsByDomain).reduce((a,b)=>a+b,0),size);
+ const publicRuleCount=model.commitments.filter(rule=>rule.tier!=='research').length;
+ assert.equal(Object.values(route.publicRuleOpportunityMeans).reduce((a,b)=>a+b,0),publicRuleCount);
+ for(const rule of model.commitments){
+  const count=route.ruleCounts[rule.id],states=count.assignedOpportunity;
+  assert.equal(states.unassigned+states.partial+states.complete,route.sampleCount,rule.id);
+  assert.equal(states.complete,count.assessable,rule.id);
+ }
 }
 assert.equal(audit.routeTransitions.length,3);
 for(const transition of audit.routeTransitions){
@@ -105,5 +112,10 @@ const labels={keep:'Keep',keep_parallel_indicator:'Keep as parallel indicator',k
 for(const [status,label] of Object.entries(labels)){
  const count=audit.itemDispositions.filter(item=>item.editorialDisposition===status).length;
  assert.ok(narrative.includes(`| ${label} | ${count} |`),'Stale narrative disposition '+status);
+}
+for(const size of [80,120,160,240]){
+ const means=audit.routeDiagnostics[size].publicRuleOpportunityMeans;
+ assert.ok(narrative.includes(`| ${size} | ${means.unassigned.toFixed(2)} | ${means.partial.toFixed(2)} | ${means.complete.toFixed(2)} |`),
+  'Stale narrative public opportunity '+size);
 }
 console.log('PASS content-efficiency: 562 items, 181 constructs, 4 route diagnostics, 9 references, immutable artifacts');
