@@ -166,7 +166,7 @@ const docs=[
  ...Object.entries(audit.decisionCounts).map(([k,v])=>'- **'+k+'**: '+v),'',
  'Thirty-two of the 49 constructs now have at least one narrowly scoped interpretation rule. Seventeen remain intentionally unresolved at the model level.','',
  '## Construct decisions','',
- ...audit.decisions.flatMap(d=>['### '+d.constructId+' — '+d.construct.name,'**Decision:** '+d.decision,d.rationale,'Academic basis: '+d.sourceIds.map(id=>{const src=sourceMap.get(id);return '['+src.title+']('+src.url+')';}).join('; '),'Existing items: '+d.existingItemIds.join(', ')+(d.acceptedRuleIds.length?'\\nAccepted rules: '+d.acceptedRuleIds.join(', '):''),'']),
+ ...audit.decisions.flatMap(d=>['### '+d.constructId+' — '+d.construct.name,'**Decision:** '+d.decision,d.rationale,'Academic basis: '+d.sourceIds.map(id=>{const src=sourceMap.get(id);return '['+src.title+']('+src.url+')';}).join('; '),'Existing items: '+(d.existingItemIds.length?d.existingItemIds.join(', '):'none')+(d.acceptedRuleIds.length?'\nAccepted rules: '+d.acceptedRuleIds.join(', '):''),'']),
  '## Representation after this audit','',
  ...audit.domainSummary.map(d=>'- **'+d.domainId+'**: '+d.mappedAfterAudit+'/'+d.audited+' audited gaps now mapped; '+d.intentionallyUnresolved+' intentionally unresolved.'),
  '',
@@ -178,7 +178,7 @@ const docs=[
  'References to validated psychological instruments identify neighboring constructs and measurement distinctions. They do not validate our rewritten/original items, justify importing published norms, or authorize copying copyrighted items.',
  'Derived families remain derived. Research-only constructs remain available for later calibration but are not promoted merely because an academic scale with a related name exists.',
  'No political actor, party, or current policy choice is ranked by this audit. Political constructs are framed as reported philosophical commitments.',''
-].join('\\n');
+].join('\n');
 await write('docs/UNMAPPED_AUDIT.md',docs);
 
 for(const [p,h] of Object.entries(frozen))assert.equal(sha(await raw(p)),h,'Historical artifact mutated: '+p);
