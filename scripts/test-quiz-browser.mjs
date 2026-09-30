@@ -367,6 +367,9 @@ try{
  check('243 unique assigned items survive the pilot browser flow',fullSaved.packet.size===243&&new Set(fullSaved.packet.entries.map(e=>e.itemId)).size===243);
  check('All pilot positions are answered or legitimately branch-skipped',fullSaved.session.responses.length+fullSaved.session.presentedItems.filter(e=>e.skippedByBranch).length===243);
  check('Pilot results cover twelve panels and meaningful subfacets',await fullPage.locator('#domain-map .domain').count()===12&&await fullPage.locator('[data-facet-id]').count()>=31);
+ check('Full results expose the scoped moral truth-claim rule without assigning a school',
+  await fullPage.locator('#domain-map .pattern[data-commitment-id="reviewed-ME06-literal-truth-claim"]').count()===1&&
+  !(await fullPage.locator('#affinity-section').innerText()).includes('Moral realist identity'));
  check('Full route exercised all seven response scales',fullScales.size===7);
  check('Full route has a distinct instrument and saved policy',fullSaved.session.instrumentVersion===fullPolicy.instrumentVersion&&fullSaved.packet.formPolicyVersion===fullPolicy.policyVersion);
  check('243 route never posts answers and has no browser errors',fullPosts===0&&fullErrors.length===0);
