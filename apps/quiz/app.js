@@ -151,7 +151,12 @@ function renderResearchReceipts(){
 function enterQuestion(){
  cancelAdvance();
  if(quiz.index===null){tryFinish(true);return;}
- shownAt=performance.now();renderQuestion();show('quiz');$('question-title').focus();save();
+ shownAt=performance.now();renderQuestion();show('quiz');
+ // Keep the question frame at one viewport position while moving keyboard focus to its heading.
+ $('question-title').focus({preventScroll:true});
+ const top=$('quiz').getBoundingClientRect().top+window.scrollY;
+ window.scrollTo(0,Math.max(0,top-16));
+ save();
 }
 function respond(state,value){
  if(timer!==null)return;
