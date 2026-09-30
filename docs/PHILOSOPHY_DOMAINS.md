@@ -1,5 +1,7 @@
 # Philosophy-domain upgrade
 
+> Historical milestone for the 140-rule release with 49 open mapping gaps. The subsequent [49-construct audit](UNMAPPED_AUDIT.md) and [PR #1 content baseline](CONTENT_EFFICIENCY_AUDIT.md) supersede these current-state counts.
+
 This release makes domain coverage a property of question selection and evidence, not just twelve headings. The fields overlap: ontology asks about existence and categories within a broader metaphysical inquiry. The organizational split does not assert separate empirical factors. [Metaphysics](https://plato.stanford.edu/entries/metaphysics/)
 
 ## Actual coverage

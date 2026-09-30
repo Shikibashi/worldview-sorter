@@ -1,0 +1,60 @@
+# Content efficiency baseline for PR #1
+
+This is an authored content and route audit of the committed `construct-registry-v0.1` baseline. It is **not** a psychometric validation, a new route release, or a review of the separate uncommitted pilot and product work in this checkout. The reproducible inventory is [content-efficiency-v1.json](../data/reviews/content-efficiency-v1.json); regenerate it with `node scripts/audit-content-efficiency.mjs --write`, and check it with `--check`. The artifact records SHA-256 hashes of all eight release inputs. The 49-construct decisions in `unmapped-audit-v1.json` remain closed; their 17 unmapped active constructs are retained as intended gaps.
+
+## Source of truth and review method
+
+Bank `0.9.0` contains 562 current items. Registry `0.2` contains 181 active constructs plus one deprecated construct. `generic-0.3.0` has 176 commitment rules, of which 164 active constructs have a mapping; 17 do not. There are 12 domains and 31 public facets. Public policy `1.1.0` supplies 80, 120, 160, and 240 assigned item routes. The separate reference catalog has nine prototype comparisons.
+
+Each item row records exact revision, wording, response options and format, targets, provenance, route frequency, rule/reference use, branch eligibility, wording review flags, and one editorial disposition. Every active construct has an item and rule opportunity row. The 32 deterministic seeds per route are diagnostic packet examples; their frequencies are **not** production frequencies, probabilities, or guarantees for all seeds. Facet minima are the policy guarantees. Token overlap only nominates pairs for semantic inspection; it does not prove redundancy or statistical local dependence. The default `keep` means no concrete defect was established through this structured review, not that wording has passed cognitive interviewing.
+
+| Item disposition | Count |
+| --- | ---: |
+| Keep | 501 |
+| Keep as parallel indicator | 20 |
+| Keep as discriminator | 7 |
+| Keep for research only | 22 |
+| Rewrite candidate | 6 |
+| Reconsider for route | 6 |
+| Deprecate candidate | 0 |
+
+The 22 research-only items target constructs the completed audit kept outside public inference. They remain in the bank. No historical item revision was edited. The 235 items absent from all four sampled route sets include both useful unselected candidates and research material; absence alone is not a deprecation case.
+
+## Route opportunities and limits
+
+The policy enforces all 31 facet minima at every length. It does **not** guarantee that every rule in a facet has two evidence units. Counts below are the number of 176 rules whose minimum two authored units appeared in every, some, or none of the 32 sampled packets. A positive opportunity still can become missing, skipped, neutral, or mixed after real administration.
+
+| Assigned items | Every sample | Some samples | No samples | Route meaning |
+| ---: | ---: | ---: | ---: | --- |
+| 80 | 2 | 128 | 46 | Introductory breadth; very few rules consistently have a complete path. |
+| 120 | 6 | 135 | 35 | More paths, including purpose/meaning rules in every sample. |
+| 160 | 19 | 122 | 35 | More corroboration, especially moral-foundation facets and agency/identity. |
+| 240 | 57 | 84 | 35 | Much stronger opportunity for older bundled rules; still omits newer audited rule paths. |
+
+The 80→120 step adds four rules to the every-sample set, including constructed and objective meaning. The 120→160 step adds 13, including afterlife, moral-concern facets, extended cognition, and cosmic purpose. The 160→240 step adds 38, including several metaphysics, mind, religion, and metaethical rules. These are **sample-wide opportunities**, not guarantees over arbitrary seeds. Longer packets also add corroboration to rules already possible on shorter forms.
+
+The 240 policy's bundle pool contains 319 of 562 items. Thirty-five approved `audit-*` rules from the completed construct review have **zero** evidence items in that pool; they did not reach two units in any sampled packet at any public length. They include revelation, external-world stance, agentic divinity, miracles, human malleability, relational selfhood, social-category essentialism, legitimacy, common ownership, coordination, punishment, and reform. This is a route-policy mismatch, not a reason to reverse those philosophical decisions. `data/reviews/route-review-v1.json` lists the exact rule/item gaps and versioned review requirements.
+
+The 240 route is not a uniformly deeper form. Mean assignment across samples is about 35 political/legal/economic items, 30 normative-ethics items, 29 ontology items, but only 8 meaning/existential items. This may reflect the authored bundle inventory, but should be reviewed against incremental proposition opportunity and fatigue. It is a semantic balance observation, not evidence of respondent local dependence. No count-balancing route edit is made solely from this observation.
+
+## Construct representation and item wording
+
+High candidate counts are not automatically overrepresentation. `NE09`, `VA20`, and `RC11` each have six targeted items; `EP12`, `MS02`, and `EX01` have five. `RC11` remains intentionally unmapped, so candidate count must not be described as interpretability. The principal underrepresentation is **route-level**: the 35 approved rules without bundled evidence and the 17 intentionally unmapped constructs. Per-construct formats, content tags, and 80/120/160/240 opportunity counts are in the artifact. Same-method evidence units are authored duplicate controls, not established statistically independent indicators.
+
+The clearest wording review candidates are `NEI102` (universal ethical-egoism reverse framing), `NEI117` (absolute “never” on induced reliance), `NEI120` (absolute reverse on voluntary concern), `SOI008` (the referent “social categories” is too broad to isolate social essentialism), `EPI025` (textbook-example recognition rather than a personal view), and `EPI042` (unnecessary theory jargon). Revision proposals must preserve revision 1 and check their associated rules/reference criteria before a new revision is released. The automated inventory also flags absolute quantifiers and multi-clause wording for human review; 33 items contain absolute quantifiers, but many are philosophically necessary (for example a universal claim). Its narrow lexical trivia check did not catch `EPI025`; editorial inspection did. That does not certify the whole bank as free of knowledge-demanding language, cultural narrowness, social desirability, policy proxying, or presupposition.
+
+Similarity review illustrates why a duplicate detector must not delete items. `SOI010` and `SOI019` differ between *all* standing differences and *unjustified* ones. `RCI014` and `RCI021` elicit belief and confidence using different methods. `AHI012` and `AHI034` add a coercion qualifier. `RCI010` and `RCI017` state opposed miracle positions. `RCI002` and `RCI015` distinguish agentic and impersonal divinity. By contrast, `MEI009`/`MEI024`, `MEI004`/`MEI026`, `NEI009`/`NEI017`, and the same-method caring pair `VAI031`/`VAI042` merit closer content comparison; current dispositions mark the second item for route review without claiming redundancy is proven. The values module intentionally uses repeated importance judgments, so format sameness alone is not a defect. Repeated academic-contrast triples need response-process review before being treated as independent evidence.
+
+## Existing philosophical references
+
+The nine references are Objectivism, ownness orientation, philosophical anarchism, nonstate legal pluralism, pragmatic inquiry, easy metaontology, ethical egoism, preinstitutional rights, and institutional rights. They are `interpretationAllowed:false` prototypes. Their current matcher uses exact **raw answer** criteria, not evidence-backed proposition results, so they are not a production affinity catalog. Do not expand them during this content audit. The artifact records every essential/nonessential criterion and the number of sampled packets with all defining evidence present. For Objectivism this is 0/32 at 80, 120, and 160, and 9/32 at 240. A political overlap alone cannot fill its missing epistemic, metaethical, and ethical criteria. Single-criterion reference entries also lack adequate whole-tradition scope. Route-aware missing doctrine and near-neighbor protections must precede any respondent-facing upgrade.
+
+## Public result contract
+
+The committed engine returns `supported`, `opposed`, `mixed`, or `insufficient_evidence`. It maps an omitted rule item to `not_answered`, and so a route that never presented the rule's items looks the same as a measured but inconclusive rule. A versioned `not_measured` state is structurally warranted. Presentation records already distinguish a presented response from a branch skip; the result projection should preserve route omission, branch skip, no-view, and answered-but-inconclusive as distinct reasons. The 17 intentionally unmapped constructs and research-only targets also need explicit non-inference metadata. Do not add a `leaned toward` public state without an evidence contract for it. The current summary code maps all commitment tiers before filtering by observed evidence; the 18 research-tier rules require an explicit publication policy audit.
+
+## PR boundary and next review gate
+
+This audit adds no item or route release and does not rewrite historical definitions. The generated JSON is about 1.3 MB because it includes all 562 item records and packet opportunity matrices; `.gitattributes` marks the two generated artifacts so reviewers can focus on the generator, tests, and narrative while still inspecting exact rows when needed. The existing checkout has many uncommitted later-phase files. Only the audit script, audit data, route review, this document, historical-doc headers, and the focused CI script entry should enter PR #1 from this work.
+
+Before draft PR #1 is made ready, reviewers should decide a versioned route response to the 35 path gaps, define route-aware `not_measured` semantics, check research-tier publication, and compare the audit against the pending pilot work. The four GitHub workflow runs at head `ad12217` are `action_required` (not test failures); the prior head has successful runs. Trigger/approval ownership must be resolved and checks rerun against the final head. Leave psychometric redundancy, reliability, item-information, fatigue effects, and cross-group equivalence to properly consented response data and cognitive testing.

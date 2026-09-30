@@ -1,5 +1,7 @@
 # Method-diversity milestone
 
+> Historical milestone for bank v0.6 (301 items), not the current bank size or production-content baseline. See [the PR #1 content audit](CONTENT_EFFICIENCY_AUDIT.md) for bank v0.9 (562 items).
+
 Bank v0.6 adds a third primary-role indicator to every headline construct.
 
 The objective is not merely to increase item count. Third indicators were preferentially written using a different response method or elicitation frame where that makes conceptual sense.
