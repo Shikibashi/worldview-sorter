@@ -1,6 +1,7 @@
 import {createQuiz,restoreQuiz,currentItem,seekQuestion,answerQuestion,nextQuestion,previousQuestion,quizProgress,extendProgressiveQuiz,recordDepthCheckpoint,EXPERIENCE_VERSION,COMPATIBLE_EXPERIENCE_VERSIONS} from '../../packages/experience/quiz.js';
 import {buildQuizSummary,DOMAIN_COPY} from '../../packages/experience/summary.js';
-import {buildResultOverview,resultOverviewDescription,resultStatusLabel,formatResponseCoverage} from '../../packages/experience/result-overview.js';
+import {buildResultOverview,resultStatusLabel,formatResponseCoverage} from '../../packages/experience/result-overview.js';
+import {renderResultHighlights,appendDomainEvidenceStrip} from './result-overview-view.js';
 import {initialExploration,recordExploration,initialExplorationV2,recordExplorationV2} from '../../packages/experience/exploration.js';
 import {buildShareSnapshot,shareSnapshotText,shareSnapshotSvg,readingTrailFor,compareTraditions,recommendExploration} from '../../packages/experience/engagement.js';
 import {shuffleWithSeed} from '../../packages/runtime/index.js';
@@ -50,56 +51,6 @@ function download(value,name){
 }
 function downloadSvg(value,name){const url=URL.createObjectURL(new Blob([value],{type:'image/svg+xml'}));
  const a=elem('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-function renderResultHighlights(projection){
- const holder=$('result-highlights');holder.replaceChildren();
- if(!projection){$('result-at-a-glance').hidden=true;return;}
- $('result-at-a-glance').hidden=false;
- $('glance-description').textContent=resultOverviewDescription(projection);
- const groups=[['Supported',projection.supported],['Opposed',projection.opposed],
-  ['Mixed or context-dependent',projection.mixed],['Asked, still inconclusive',projection.insufficient]];
- for(const [title,rows] of groups){
-  if(!rows.length)continue;
-  const section=elem('section',undefined,'highlight-group');section.dataset.state=title==='Supported'?'supported':
-   title==='Opposed'?'opposed':title==='Mixed or context-dependent'?'mixed':'insufficient';
-  section.append(elem('h3',title));
-  {const list=elem('ul');for(const row of rows){const item=elem('li');
-   const link=elem('a',row.proposition);link.href='#domain-'+row.domainId;
-   link.addEventListener('click',()=>{const details=$('domain-'+row.domainId)?.querySelector('details');if(details)details.open=true;});
-   item.append(link);list.append(item);}section.append(list);}
-  holder.append(section);
- }
- if(!projection.supported.length&&!projection.opposed.length&&!projection.mixed.length&&projection.provisionalPatterns.length){
-  const section=elem('section',undefined,'highlight-group');section.dataset.state='review_required';
-  section.append(elem('h3','Provisional answer patterns'));
-  const list=elem('ul');for(const row of projection.provisionalPatterns){
-   const label=row.status==='mixed_context_dependent'?'Mixed pattern':row.status==='opposed'?'Opposed pattern':'Supported pattern';
-   const item=elem('li'),link=elem('a',label+' · '+row.label);link.href='#domain-'+row.domainId;
-   link.addEventListener('click',()=>{const details=$('domain-'+row.domainId)?.querySelector('details');if(details)details.open=true;});
-   item.append(link);list.append(item);
-  }section.append(list);holder.append(section);
- }
- const unmeasured=elem('section',undefined,'highlight-group');unmeasured.dataset.state='not_measured';
- unmeasured.append(elem('h3','Not measured on this route'));
- if(projection.unmeasured.length){const list=elem('ul');for(const d of projection.unmeasured){
-  const domain=summary.domains.find(row=>row.id===d.id),item=elem('li');
-  item.append(elem('a',domain.title+' · '+d.counts.not_measured+' of '+d.total+' interpretations not measured'));
-  item.firstChild.href='#domain-'+d.id;list.append(item);}unmeasured.append(list);}
- else unmeasured.append(elem('p','No interpretation is marked not measured here; some may still be inconclusive or provisional.','small'));
- holder.append(unmeasured);
-}
-function domainEvidenceStrip(card,projection){
- if(!projection||!projection.total)return;
- const labels={supported:'supported',opposed:'opposed',leaned_toward:'leaned toward',
-  mixed_context_dependent:'mixed',insufficient_evidence:'insufficient',not_measured:'not measured',review_required:'provisional'};
- const strip=elem('span',undefined,'domain-strip');strip.setAttribute('aria-hidden','true');
- const description=[];
- for(const [state,label] of Object.entries(labels)){
-  const count=projection.counts[state]??0;if(!count)continue;
-  const segment=elem('span',undefined,'domain-segment');segment.dataset.state=state;segment.style.flexGrow=String(count);
-  strip.append(segment);description.push(count+' '+label);
- }
- card.append(strip,elem('span',projection.assessed+' of '+projection.total+' interpretations assessed · '+description.join(' · '),'domain-counts'));
-}
 function exportAnswers(){if(quiz)download(quiz.session,'worldview-answers.json');}
 function resultEvent(type,domainId){
  const event=type==='topic_opened'?{type,domainId}:{type};
@@ -633,7 +584,10 @@ function finish(newlyCompleted=false){
   'This is an exploratory philosophical quiz, not a validated psychological assessment. Its questions and interpretation rules are authored from philosophical sources; response data have not validated them. Some patterns remain provisional because exact philosophical claims or supporting source links are not recorded.':summary.academicNotice;
  $('coverage-notice').textContent=pilotResult?
   'Not measured means this route did not provide a complete set of direct questions. Insufficient evidence means relevant questions were presented, but your responses did not support a direction. A conditional question not presented because of an earlier answer is not evidence either way.':summary.coverageNotice;
- const resultProjection=buildResultOverview(summary);renderResultHighlights(resultProjection);
+ const resultProjection=buildResultOverview(summary);
+ renderResultHighlights({holder:$('result-highlights'),overview:$('result-at-a-glance'),
+  description:$('glance-description'),projection:resultProjection,domains:summary.domains,
+  onDomainSelect:domainId=>{const details=$('domain-'+domainId)?.querySelector('details');if(details)details.open=true;}});
  for(const [section,list,rows] of [
   ['overview-section','overview-list',summary.overview??[]],
   ['open-section','open-list',summary.mixedOrUnresolved??[]],
@@ -658,7 +612,7 @@ function finish(newlyCompleted=false){
   head.append(elem('strong',domain.title),elem('span',domain.prompt),
    elem('span',pilotResult?(opportunityLabels[domain.measurementStatus]??'Assessment status unavailable'):
     domain.responses+' responses in this topic'));
-  domainEvidenceStrip(head,resultProjection?.domains.find(row=>row.id===domain.id));
+  appendDomainEvidenceStrip(head,resultProjection?.domains.find(row=>row.id===domain.id));
   details.append(head);
   if(pilotResult){
    for(const f of domain.facets??[]){
