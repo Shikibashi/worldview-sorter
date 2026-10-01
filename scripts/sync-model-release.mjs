@@ -65,6 +65,11 @@ if(pinned.candidateBank.version==='0.18.0'){
  current.academicRelease={version:'0.18.0',path:'data/academic/release-v0.18.json'};
  current.pilot={version:'pilot-0.11',path:'data/pilots/pilot-0.11.json'};
 }
+if(pinned.candidateBank.version==='0.19.0'){
+ current.instrument={version:'0.19.0-research',path:'data/instruments/research-pool-0.19.json'};
+ current.academicRelease={version:'0.19.0',path:'data/academic/release-v0.19.json'};
+ current.pilot={version:'pilot-0.12',path:'data/pilots/pilot-0.12.json'};
+}
 // Coverage is embedded in the pinned model. An older standalone audit snapshot
 // must not be advertised as coverage for the active release.
 delete current.worldviewCoverage;
