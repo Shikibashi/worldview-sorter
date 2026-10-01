@@ -11,13 +11,22 @@ import {captureRelease,currentFromManifest,loadSnapshot,readJson,validateContent
 import {describeEngineSource,ENGINE_SOURCE_PATHS,verifyEngineSource} from '../packages/governance/engine-source.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),current=await readJson(root,'data/current.json');
-assert.equal(current.instrument.path,'data/instruments/research-pool-0.17.json',
- 'The academic rebuild must restore the research pool paired with the active 0.17 bank.');
-assert.equal(current.academicRelease.path,'data/academic/release-v0.17.json',
- 'The academic rebuild must restore the academic release paired with the active 0.17 bank.');
-assert.equal(current.pilot.path,'data/pilots/pilot-0.10.json',
- 'The academic rebuild must restore the pilot paired with the active 0.17 bank.');
+assert.equal(current.instrument.path,'data/instruments/research-pool-0.18.json',
+ 'The academic rebuild must restore the research pool paired with the active 0.18 bank.');
+assert.equal(current.academicRelease.path,'data/academic/release-v0.18.json',
+ 'The academic rebuild must restore the academic release paired with the active 0.18 bank.');
+assert.equal(current.pilot.path,'data/pilots/pilot-0.11.json',
+ 'The academic rebuild must restore the pilot paired with the active 0.18 bank.');
 const activeManifest=await readJson(root,current.modelRelease.path);
+assert.deepEqual(activeManifest.components.filter(row=>row.key.startsWith('localization_bundle:')).map(row=>row.key),
+ ['localization_bundle:en-US'],'The active release pins only its supported canonical English wording.');
+assert.ok(current.localizationBundles.every(row=>row.locale==='en-US')&&
+ current.localizationBundleVersions.every(row=>row.locale==='en-US'),
+ 'The current application index must not advertise archived non-English drafts.');
+const priorLocaleRelease=await readJson(root,'data/releases/model-release-v1.17.0.json');
+assert.deepEqual(priorLocaleRelease.components.filter(row=>row.key==='localization_bundle:ar'||row.key==='localization_bundle:es-ES')
+ .map(row=>row.key).sort(),['localization_bundle:ar','localization_bundle:es-ES'],
+ 'Historical release manifests retain their exact archived wording references.');
 const baselineManifest=await readJson(root,'data/releases/model-release-v1.1.0.json');
 const manifest=await readJson(root,'data/releases/model-release-v1.json');
 const historical={...currentFromManifest(manifest),modelRelease:{version:manifest.releaseVersion,path:'data/releases/model-release-v1.json'}};
@@ -29,7 +38,8 @@ assert.equal(externalWorldProposal.status,'draft');
 assert.deepEqual(await verifyRelease(root,current,activeManifest),activeManifest);
 assert.deepEqual(await verifyRelease(root,historical,manifest),manifest);
 const counts=validateContentIntegrity(snapshot);assert.equal(counts.items,562);assert.equal(counts.routes,3);
-assert.equal(validateContentIntegrity(activeSnapshot).publicRules,145);
+assert.equal(validateContentIntegrity(activeSnapshot).items,574);
+assert.equal(validateContentIntegrity(activeSnapshot).publicRules,146);
 assert.deepEqual(await captureRelease(root,historical,manifest.releaseVersion),manifest);
 assert.deepEqual(await captureRelease(root,current,activeManifest.releaseVersion),activeManifest);
 await assert.rejects(captureRelease(root,historical,'model-release-1.1.0'),/engine-source archive/);
@@ -84,8 +94,8 @@ const provenance=JSON.parse(provenanceReport.stdout);
 assert.ok(!provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'),
  'The successor must retain a philosophical source alongside its context-limited empirical study.');
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,21);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,16);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,24);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,18);
 assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,131);
 for (const ruleId of ['construct-EP15','construct-EP16','construct-EP20','audit2-EP06-testability','construct-AH14','audit2-EP10-revelation','construct-NE15','ph-sacred-value']) {
  assert.ok(!provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(ruleId));
@@ -96,8 +106,8 @@ assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
  provenance.claimLevelProvenance.referencesWithoutExplicitClaim);
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='construct-EP16'));
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='ph-sacred-value'));
-assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,145);
-assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,26);
+assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,146);
+assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,27);
 assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,119);
 assert.ok(!provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
 assert.ok(!provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='ph-sacred-value'));
@@ -112,7 +122,7 @@ assert.ok(!provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRul
  row.propositionId==='construct-EP16'));
 const opportunities=provenance.routeEvidenceOpportunities;
 assert.deepEqual(opportunities.routes.map(route=>[route.routeId,route.thresholdReachablePublicRuleCount,
- route.belowThresholdPublicRuleCount]),[['quick',30,115],['standard',56,89],['full',95,50]]);
+ route.belowThresholdPublicRuleCount]),[['quick',30,116],['standard',56,90],['full',96,50]]);
 const fullOpportunity=opportunities.routes.find(route=>route.routeId==='full');
 const selfInterestOpportunity=fullOpportunity.mappedAffinityCriteria.find(criterion=>
  criterion.traditionId==='ethical-egoism'&&criterion.criterionId==='moral-self-interest');

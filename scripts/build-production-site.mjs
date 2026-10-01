@@ -76,6 +76,11 @@ async function verify(expected){
  for(const key of ['localizationBundles','localizationBundleVersions'])
   assert.ok(deployedCurrent[key].every(ref=>ref.locale==='en-US'),
    'Public runtime reference is outside the canonical wording set: '+key);
+ assert.deepEqual(deployedCurrent.localizationBundles.map(ref=>ref.locale),['en-US'],
+  'The active public quiz supports only its canonical English wording.');
+ const activeWording=JSON.parse(await readFile(path.join(output,deployedCurrent.localizationCatalog.path),'utf8'));
+ assert.deepEqual(activeWording.locales.map(row=>row.locale),['en-US'],
+  'The active production wording catalog must be monolingual.');
  const entry=await readFile(path.join(output,'index.html'),'utf8');
  assert.ok(entry.includes('Worldview Sorter')&&entry.includes('src="./apps/quiz/app.js"'),
   'The custom-domain root must open the public quiz.');
