@@ -78,33 +78,31 @@ const provenance=JSON.parse(provenanceReport.stdout);
 assert.ok(provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'&&
  r.sourceClasses.includes('context_limited_empirical_research')));
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,13);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,12);
-assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,133);
-for (const ruleId of ['construct-EP15','construct-EP20','audit2-EP06-testability','construct-AH14','audit2-EP10-revelation','construct-NE15']) {
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,14);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,13);
+assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,132);
+for (const ruleId of ['construct-EP15','construct-EP16','construct-EP20','audit2-EP06-testability','construct-AH14','audit2-EP10-revelation','construct-NE15']) {
  assert.ok(!provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(ruleId));
 }
 assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
  provenance.claimLevelProvenance.ruleLinkedClaimReferences+
  provenance.claimLevelProvenance.sourceRecordClaimOnlyReferences+
  provenance.claimLevelProvenance.referencesWithoutExplicitClaim);
-assert.ok(provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='construct-EP16'&&
- r.sourceIds.includes('acad-pragmatism')));
+assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='construct-EP16'));
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='ph-sacred-value'));
 assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,144);
-assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,23);
-assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,121);
-assert.ok(provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
+assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,24);
+assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,120);
+assert.ok(!provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
 assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,23);
-assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.length,12);
-assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.length,13);
+assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.length,11);
+assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.length,12);
 assert.ok(!provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.some(row=>
  row.propositionId==='audit2-EP06-testability'));
 assert.ok(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.some(row=>
  row.propositionId==='audit2-EP02-complex-knowledge'&&row.ruleProposition));
-assert.ok(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.some(row=>
- row.traditionId==='pragmatism'&&row.criterionId==='pragmatic-maxim'&&row.role==='defining'&&
- row.propositionId==='construct-EP16'&&row.legacyScope&&row.criterionSourceIds.includes('sep-pragmatism')));
+assert.ok(!provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.some(row=>
+ row.propositionId==='construct-EP16'));
 const opportunities=provenance.routeEvidenceOpportunities;
 assert.deepEqual(opportunities.routes.map(route=>[route.routeId,route.thresholdReachablePublicRuleCount,
  route.belowThresholdPublicRuleCount]),[['quick',30,114],['standard',56,88],['full',94,50]]);
@@ -119,6 +117,11 @@ assert.deepEqual(selfInterestOpportunity.administeredItemRefs.map(ref=>ref.itemI
 assert.deepEqual(selfInterestOpportunity.omittedMappedItemRefs.map(ref=>ref.itemId+'@'+ref.itemRevision),
  ['NEI101@1']);
 assert.ok(fullOpportunity.rulesAtMinimumBothDirections.includes('construct-NE15'));
+const pragmaticOpportunity=fullOpportunity.mappedAffinityCriteria.find(criterion=>
+ criterion.traditionId==='pragmatism'&&criterion.criterionId==='pragmatic-maxim');
+assert.equal(pragmaticOpportunity.thresholdReachable,true);
+assert.deepEqual(pragmaticOpportunity.administeredItemRefs.map(ref=>ref.itemId+'@'+ref.itemRevision),
+ ['EPI103@1','EPI123@1']);
 assert.equal(opportunities.routes.find(route=>route.routeId==='standard').mappedAffinityCriteria.find(criterion=>
  criterion.criterionId==='moral-self-interest').thresholdReachable,false);
 const withReviewedTarget=structuredClone(snapshot.model);

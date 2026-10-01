@@ -163,6 +163,7 @@ try{
   snapshot.rows[0].sources.length>0&&snapshot.rows[0].sources.every(s=>s.id&&s.claimScope&&Array.isArray(s.claimLinks)));
  await page.locator('#share-format').selectOption('affinity');
  check('Affinity card retains doctrine and missing defining commitments',/Affinity is comparison, not identity/.test(await page.locator('#share-preview').inputValue())&&/unmeasured/.test(await page.locator('#share-preview').inputValue()));
+ await page.locator('#share-tradition').selectOption('philosophical-anarchism');
  check('Affinity share preview qualifies inherited rule scope',/inherited rule scope, not a separately recorded proposition/.test(await page.locator('#share-preview').inputValue()));
  await page.locator('#share-format').selectOption('exploration');
  check('Exploration card reports activity without answers',/Domains explored:/.test(await page.locator('#share-preview').inputValue()));
@@ -197,7 +198,8 @@ try{
  check('Long reading and comparison detail stay closed until requested',await page.locator('#reading-trail').isHidden()&&await page.locator('#tradition-comparison').isHidden());
  await page.locator('#reading-choice').selectOption({index:1});
  check('Reading trail shows source-linked explanation',await page.locator('#reading-trail a[href^="https:"]').count()>0);
- await page.locator('#tradition-right').selectOption({index:2});
+ await page.locator('#tradition-left').selectOption('stirnerian-ownness');
+ await page.locator('#tradition-right').selectOption('philosophical-anarchism');
  await page.locator('#tradition-compare-open').click();
  check('Two-tradition comparison preserves defining doctrine',await page.locator('#tradition-comparison .compare-tradition').count()===2);
  check('Tradition comparison does not promote scope-only overlap into close affinity',
@@ -357,6 +359,13 @@ try{
     /for that person/i.test(await fullPage.locator('#question-title').innerText())&&
     /prompt investigation/i.test(await fullPage.locator('#answer-options').innerText()));
   }
+  if(currentId==='EPI123'){
+   check('Pragmatic-maxim discriminator fits mobile and distinguishes a remaining conceptual difference',
+    await fullPage.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)&&
+    await fullPage.locator('#answer-options .answer').count()===3&&
+    /no conceivable experience or action/i.test(await fullPage.locator('#question-title').innerText())&&
+    /do not settle whether the claims differ/i.test(await fullPage.locator('#answer-options').innerText()));
+  }
   const scale=await fullPage.locator('#quiz').getAttribute('data-scale');fullScales.add(scale);
   if(scale==='ranking_all'){
    const selects=fullPage.locator('#answer-options select');
@@ -381,6 +390,9 @@ try{
  const fullSaved=await fullPage.evaluate(()=>JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')).quiz);
  check('Completed pilot backup pins the affinity catalog version',fullSaved.affinityCatalogVersion===affinityCatalog.catalogVersion);
  check('243 unique assigned items survive the pilot browser flow',fullSaved.packet.size===243&&new Set(fullSaved.packet.entries.map(e=>e.itemId)).size===243);
+ check('Full administers the direct pragmatic-method pair without the superseded pair',
+  ['EPI103','EPI123'].every(id=>fullSaved.packet.entries.some(entry=>entry.itemId===id))&&
+  !fullSaved.packet.entries.some(entry=>['EPI104','EPI105'].includes(entry.itemId)));
  check('All pilot positions are answered or legitimately branch-skipped',fullSaved.session.responses.length+fullSaved.session.presentedItems.filter(e=>e.skippedByBranch).length===243);
  check('Pilot results cover twelve panels and meaningful subfacets',await fullPage.locator('#domain-map .domain').count()===12&&await fullPage.locator('[data-facet-id]').count()>=31);
  check('Full results expose the scoped moral truth-claim rule without assigning a school',
@@ -397,7 +409,7 @@ try{
   !(await fullPage.locator('#overview-section').innerText()).includes('Clearly evidenced commitments'));
  check('Pilot affinity section renders every scoped catalog comparison',await fullPage.locator('#affinity-section').isVisible()&&
   await fullPage.locator('[data-tradition-id]').count()===affinityCatalog.traditions.length);
- const legacyTraditions=['pragmatism','stirnerian-ownness',
+ const legacyTraditions=['stirnerian-ownness',
   'philosophical-anarchism','objectivism-rand','ontological-naturalism'];
  check('Scope-only defining mappings cannot present a close doctrinal match',
   (await Promise.all(legacyTraditions.map(async id=>
@@ -405,6 +417,9 @@ try{
     .includes('Doctrinal affinity unresolved')))).every(Boolean));
  check('Narrow ethical-egoism criterion is no longer a scope-only placeholder',
   !(await fullPage.locator('[data-tradition-id="ethical-egoism"] .affinity-state').textContent())
+   .includes('Doctrinal affinity unresolved'));
+ check('Scoped Pragmatism criterion is no longer a scope-only placeholder',
+  !(await fullPage.locator('[data-tradition-id="pragmatism"] .affinity-state').textContent())
    .includes('Doctrinal affinity unresolved'));
  const sacredDomain=fullPage.locator('#domain-map .domain').filter({has:
   fullPage.locator('.pattern[data-commitment-id="ph-sacred-value"]')}).first();
@@ -443,17 +458,18 @@ try{
  if(!await pragmatism.isVisible())await fullPage.locator('#affinity-other > summary').click();
  await pragmatism.locator('details > summary').first().click();
  check('Affinity criteria show doctrine-to-proposition mappings and unmeasured doctrine',
-  (await pragmatism.innerText()).includes('Interpreted rule scope: Clarifying disputed ideas')&&
+  (await pragmatism.innerText()).includes('Interpreted proposition: Disputed ideas should be clarified')&&
   (await pragmatism.innerText()).includes('Pilot mapping: direct')&&
   (await pragmatism.innerText()).includes('No pilot proposition currently measures this doctrine.'));
  check('A doctrinal criterion exposes its own academic and primary sources',
   await pragmatism.locator('.affinity-criterion').first().locator('a').count()===2&&
   (await pragmatism.locator('.affinity-criterion').first().innerText()).includes('Criterion sources:'));
- const pragmaticMaxim=pragmatism.locator('.affinity-criterion').filter({hasText:'The meaning of a contested conception'});
+ const pragmaticMaxim=pragmatism.locator('.affinity-criterion').filter({hasText:'Disputed ideas should be clarified'});
  const inquiryFallibilism=pragmatism.locator('.affinity-criterion').filter({hasText:'Inquiry can yield knowledge'});
  const inquiryPractice=pragmatism.locator('.affinity-criterion').filter({hasText:'Inquiry is an ongoing practice'});
  check('Mapped affinity criteria disclose their distinct proposition review states',
-  (await pragmaticMaxim.innerText()).includes('This mapped rule has no separately reviewed exact proposition.')&&
+  (await pragmaticMaxim.innerText()).includes('Interpreted proposition: Disputed ideas should be clarified')&&
+  !(await pragmaticMaxim.innerText()).includes('lacks a rule-linked supporting academic claim.')&&
   (await inquiryFallibilism.innerText()).includes('Interpreted proposition: A claim can count as knowledge')&&
   !(await inquiryFallibilism.innerText()).includes('lacks a rule-linked supporting academic claim.')&&
   (await inquiryPractice.innerText()).includes('lacks a rule-linked supporting academic claim.'));
@@ -462,8 +478,9 @@ try{
  await pragmaticDomain.locator('details > summary').first().click();
  const pragmaticRow=pragmaticDomain.locator('.pattern[data-commitment-id="construct-EP16"]');
  await pragmaticRow.locator('details > summary').first().click();
- check('A source without claim-level metadata is visibly qualified',
-  (await pragmaticRow.innerText()).includes('Claim-level relevance to this inherited rule scope is not recorded'));
+ check('Pragmatic-maxim evidence exposes its scoped supporting claim',
+  (await pragmaticRow.innerText()).includes('Rule-linked source claim (supports):')&&
+  (await pragmaticRow.innerText()).includes('conceivable experiential or practical bearings'));
  await checkAccessibility(fullPage,'Pilot results and affinity');
  check('Affinity display identifies its frozen catalog and avoids identity language',(await fullPage.locator('#affinity-version').innerText()).includes(affinityCatalog.catalogVersion)&&!(await fullPage.locator('#affinity-section').innerText()).includes('You are a '));
  check('Pilot results have no invented percentage',!/(?:^|\s)\d{1,3}%\b/.test(await fullPage.locator('#results').innerText()));
