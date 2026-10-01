@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-086",
+  "title": "Narrow sacred-status interpretation to defeasible weight in the asked tradeoff",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"proposition","id":"ph-sacred-value"},
+    {"type":"result_semantics","id":"model-policy"},
+    {"type":"result_semantics","id":"affinity-catalog-policy"},
+    {"type":"route","id":"quick"},
+    {"type":"route","id":"standard"},
+    {"type":"route","id":"full"},
+    {"type":"route","id":"route-policy"},
+    {"type":"source","id":"rotondo-sacred-2026"},
+    {"type":"source","id":"katsafanas-sacred-values-2022"},
+    {"type":"source","id":"sep-value-incommensurable"},
+    {"type":"localization","id":"bundle/ar"},
+    {"type":"localization","id":"bundle/en-US"},
+    {"type":"localization","id":"bundle/es-ES"},
+    {"type":"localization","id":"catalog/ar"},
+    {"type":"localization","id":"catalog/en-US"},
+    {"type":"localization","id":"catalog/es-ES"},
+    {"type":"localization","id":"catalog/model-binding"}
+  ],
+  "currentBehavior": "The rule reports that sacred status can have independent normative weight from RCI012@1 and RCI029@1. The broad phrase can be read as attitude-independent value or strict inviolability, although the some answer permits tradeoffs and neither item tests attitude independence. The sole rule source is context-limited empirical work.",
+  "proposedBehavior": "Keep exact item revisions, route item assignments, and answer mappings. State only that sacred status itself can carry at least some moral weight in the asked community-object and practical-benefit case. Link philosophical sources to the scoped claim and stronger neighboring theses. Keep missing, lean, mixed, and opposing behavior unchanged. No tradition affinity is added.",
+  "rationale": "The some response to RCI029 allows benefit to outweigh status. RCI012 asks for a special reason but not an attitude-independent metaphysical property. The symbolic response values human relationships without granting additional weight to status itself. The revised claim tracks these answer meanings and prevents stronger false positives.",
+  "philosophicalBasis": {
+    "proposition": "In the stated community-object and practical-benefit case, sacred status itself can carry at least some moral weight beyond the object's ordinary resource value and the specified direct harm to persons.",
+    "neighboringViews": [
+      "Only human reactions and relationships matter in the vignette, with no additional sacred-status weight",
+      "Sacred status carries some defeasible moral weight",
+      "Sacred values are strictly inviolable and ordinary tradeoffs are forbidden",
+      "Sacredness is independent of community attitudes or practices",
+      "Sacredness requires a religious or purity-based account"
+    ],
+    "nonEntailments": [
+      "Every sacred thing is inviolable",
+      "Sacred and practical values are incommensurable",
+      "Sacredness is intrinsic or attitude-independent",
+      "A deity, revelation, religious law, purity norm, or religious identity",
+      "The same judgment applies to persons, places, or political commitments"
+    ],
+    "existingGap": "The old label can imply a stronger thesis than RCI012 and RCI029 discriminate. The sole context-limited empirical source does not supply a claim-level philosophical basis or validate the two authored units.",
+    "scholarlyDisagreement": "Katsafanas describes a stronger three-part account of sacred values involving inviolability, incontestability, and dialectical invulnerability. Rotondo discusses ethical significance of sacredness without making this questionnaire a measure of that full theory. Philosophers also dispute the senses of value incommensurability. This release infers none of those broader theses."
+  },
+  "sourceClaims": [
+    {"sourceId":"rotondo-sacred-2026","relationship":"supports","claim":"Sacredness can have ethical significance, including for political morality; this supports distinguishing a sacred-status reason from an object's merely practical use without establishing this questionnaire's validity."},
+    {"sourceId":"katsafanas-sacred-values-2022","relationship":"challenges","claim":"One influential account treats sacred values as inviolable, incontestable, and dialectically invulnerable; assigning only some defeasible weight in a tradeoff does not establish those stronger properties."},
+    {"sourceId":"sep-value-incommensurable","relationship":"context","claim":"Philosophers distinguish multiple meanings of value incommensurability and comparability; assigning some moral weight in one case does not settle those separate theses."}
+  ],
+  "alternatives": [
+    "Keep the broad independent normative weight wording: rejected because it invites intrinsic or attitude-independent readings.",
+    "Infer inviolability from the very high answer: rejected because one comparative case does not settle absolute tradeoff constraints.",
+    "Add new questions for stronger sacred-values doctrine now: deferred because this release corrects the existing result; a stronger proposition would require its own discriminating items and evidence review.",
+    "Treat the two authored units as empirically independent: rejected because no response-process or participant data establish that claim."
+  ],
+  "respondentImpact": "The same raw answers retain their evidence states, but the communicated proposition becomes narrower. Full can still support or oppose the scoped claim; Quick and Standard lack both required units. Historical results keep their original wording; current reinterpretation remains separate.",
+  "historicalCompatibility": "Preserve model release 1.15.0 and all previous item, rule, route, source, catalog, localization, and engine artifacts. No item wording or raw response is rewritten. The successor uses a new model and manifest, while historical administrations replay their pinned release.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","one_item_lean","special_response","tradeoff_permitting","community_conferred","secular","source_link","route_omission"],
+    "paths": ["scripts/test-sacred-value-scope-release.mjs","scripts/test-model-governance.mjs","scripts/test-quiz-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T01:13:00Z","note":"Reviewed the exact item meanings, Rotondo's peer-reviewed abstract, Katsafanas's stronger sacred-values account, SEP value incommensurability, and the community-conferred, secular and tradeoff-permitting neighbors."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T01:13:00Z","note":"Reviewed unchanged item revisions and evidence mappings, successor model and source records, route rebinding, historical replay, result wording and regression cases."}
+    ]
+  },
+  "release": {
+    "components": ["sources","source_ledger","model","full_form","progressive_routes","pilot","affinity","localization_catalog"],
+    "targetVersion": "model-release-1.16.0",
+    "migration": "No raw-response migration. The new rule narrows interpretation only; all route question revisions and order are retained."
+  },
+  "implementationRefs": ["docs/governance/SACRED_VALUE_SCOPE_RELEASE.md","scripts/build-sacred-value-scope-v1.mjs","scripts/test-sacred-value-scope-release.mjs"]
+}

@@ -1,6 +1,6 @@
 # Sacred-value interpretation review
 
-Status: editorial analysis for a future model release, with [draft change proposal MCP-2026-002](../../data/governance/proposals/MCP-2026-002.json); **not** an approved change to frozen pilot 1.0.0. The versioned rule definition `ph-sacred-value` remains available for historical interpretation; the original release did not pin executable engine source, so exact historical runtime-code identity is unproven. Its source record explicitly says the cited study does not validate this questionnaire.
+Status: historical predecessor review. [Model release 1.16.0](SACRED_VALUE_SCOPE_RELEASE.md) implements the narrower public proposition under approved proposal MCP-2026-086. The original [draft proposal MCP-2026-002](../../data/governance/proposals/MCP-2026-002.json) remains as the earlier review record. The versioned rule definition `ph-sacred-value` remains available for historical interpretation; the original release did not pin executable engine source, so exact historical runtime-code identity is unproven. Its source record explicitly says the cited study does not validate this questionnaire.
 
 ## Exact evidence in the pilot
 

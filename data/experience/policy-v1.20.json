@@ -1,0 +1,335 @@
+{
+  "schemaVersion": "1.0.0",
+  "experienceVersion": "quiz-1.20.0",
+  "publicClaim": "Research-informed exploratory quiz; not an empirically validated psychological assessment.",
+  "questionnairePolicy": {
+    "rewriteItemText": false,
+    "changeResponseLabels": false,
+    "showInterpretationsBeforeCompletion": false,
+    "useScoresForRewards": false,
+    "normalizeToIdeologyPercentages": false
+  },
+  "routes": [
+    {
+      "id": "quick",
+      "size": 64,
+      "label": "Quick exploration",
+      "description": "64 questions across twelve topics. Many distinctions stay unmeasured.",
+      "formPolicyVersion": "progressive-depth-2.4.0"
+    },
+    {
+      "id": "standard",
+      "size": 120,
+      "label": "Standard exploration",
+      "description": "Recommended · 120 questions with broader evidence; deepen later.",
+      "formPolicyVersion": "progressive-depth-2.4.0",
+      "recommended": true
+    },
+    {
+      "id": "full",
+      "size": 243,
+      "label": "Full pilot",
+      "description": "243 questions, including distinct act and consequence-justified rule criteria; the broadest authored coverage.",
+      "formPolicyVersion": "philosophy-pilot-1.13.0"
+    }
+  ],
+  "privacy": {
+    "defaultAnswerSubmission": false,
+    "automaticSharing": false,
+    "shareRequiresPreviewSelection": true,
+    "includeRawResponsesInSharePreview": false
+  },
+  "gamification": {
+    "version": "post-quiz-1",
+    "enabled": false,
+    "phase": "after_completion_only",
+    "allowedEvents": [
+      "quiz_finished",
+      "topic_opened",
+      "source_opened"
+    ],
+    "disallowedInputs": [
+      "answers",
+      "ideology",
+      "scores",
+      "consistency",
+      "speed",
+      "streaks",
+      "personalIdentity"
+    ],
+    "measurementDependencies": []
+  },
+  "sources": [
+    {
+      "id": "ux-sailer-2017",
+      "title": "Sailer, Hense, Mayr & Mandl (2017): How gamification motivates",
+      "url": "https://doi.org/10.1016/j.chb.2016.12.033",
+      "reviewedUrl": "https://www.researchgate.net/publication/311879391_How_gamification_motivates_An_experimental_study_of_the_effects_of_specific_game_design_elements_on_psychological_need_satisfaction",
+      "access": "author-uploaded article text, abstract and discussion reviewed",
+      "locator": "Abstract; sections 6.4–7",
+      "kind": "randomized_experiment",
+      "finding": "Different configurations of game elements affected different reported needs; perceived decision freedom was not changed as intended.",
+      "designInference": "Treat game elements individually and do not promise that points make a worldview questionnaire fun or valid.",
+      "validatesThisQuiz": false
+    },
+    {
+      "id": "ux-polzler-2018",
+      "title": "Pölzler (2018): How to Measure Moral Realism",
+      "url": "https://doi.org/10.1007/s13164-018-0401-8",
+      "reviewedUrl": "https://link.springer.com/article/10.1007/s13164-018-0401-8",
+      "access": "full HTML available; abstract and sections 1–7 reviewed",
+      "locator": "G1–G5; introduction",
+      "kind": "peer_reviewed_methodological_analysis",
+      "finding": "Related philosophical positions, incomplete answer choices and first-order moral prompts can undermine intended construct measurement.",
+      "designInference": "Preserve question wording and distinctions; avoid ideology targets or congratulating particular answers while answering.",
+      "validatesThisQuiz": false
+    },
+    {
+      "id": "ux-wcag-targets",
+      "title": "W3C: Understanding Target Size (Minimum)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "access": "official guidance reviewed",
+      "kind": "accessibility_guidance_not_psychometric_evidence",
+      "designInference": "Large controls, adequate spacing, keyboard access and no drag-only rankings."
+    },
+    {
+      "id": "ux-wcag-motion",
+      "title": "W3C: Understanding Animation from Interactions",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html",
+      "access": "official guidance reviewed",
+      "kind": "accessibility_guidance_not_psychometric_evidence",
+      "designInference": "Respect reduced-motion preferences and do not require animation or sound."
+    }
+  ],
+  "reviewedOn": "2026-09-29",
+  "evidenceLimit": "The UI is designed for enjoyment. Enjoyment, completion gains and psychological measurement equivalence have not been demonstrated with participants. Deterministic code tests establish software noninterference only.",
+  "formPolicies": [
+    {
+      "version": "philosophy-blueprint-1.0.0",
+      "path": "data/philosophy/public-form-v1.json"
+    },
+    {
+      "version": "philosophy-full-1.0.0",
+      "path": "data/philosophy/public-full-v1.json"
+    },
+    {
+      "version": "philosophy-blueprint-1.1.0",
+      "path": "data/philosophy/public-form-v1.1.json"
+    },
+    {
+      "version": "philosophy-full-1.1.0",
+      "path": "data/philosophy/public-full-v1.1.json"
+    },
+    {
+      "version": "philosophy-blueprint-1.2.0",
+      "path": "data/philosophy/public-form-v1.2.json"
+    },
+    {
+      "version": "philosophy-full-1.2.0",
+      "path": "data/philosophy/public-full-v1.2.json"
+    },
+    {
+      "version": "philosophy-pilot-1.0.0",
+      "path": "data/philosophy/public-pilot-v1.json"
+    },
+    {
+      "version": "progressive-depth-1.0.0",
+      "path": "data/experience/progressive-depth-v1.json"
+    },
+    {
+      "version": "philosophy-pilot-1.1.0",
+      "path": "data/philosophy/public-pilot-v1.1.json"
+    },
+    {
+      "version": "progressive-depth-1.1.0",
+      "path": "data/experience/progressive-depth-v1.1.json"
+    },
+    {
+      "version": "philosophy-pilot-1.2.0",
+      "path": "data/philosophy/public-pilot-v1.2.json"
+    },
+    {
+      "version": "progressive-depth-1.2.0",
+      "path": "data/experience/progressive-depth-v1.2.json"
+    },
+    {
+      "version": "philosophy-pilot-1.3.0",
+      "path": "data/philosophy/public-pilot-v1.3.json"
+    },
+    {
+      "version": "progressive-depth-1.3.0",
+      "path": "data/experience/progressive-depth-v1.3.json"
+    },
+    {
+      "version": "philosophy-pilot-1.4.0",
+      "path": "data/philosophy/public-pilot-v1.4.json"
+    },
+    {
+      "version": "progressive-depth-1.4.0",
+      "path": "data/experience/progressive-depth-v1.4.json"
+    },
+    {
+      "version": "philosophy-pilot-1.5.0",
+      "path": "data/philosophy/public-pilot-v1.5.json"
+    },
+    {
+      "version": "progressive-depth-1.5.0",
+      "path": "data/experience/progressive-depth-v1.5.json"
+    },
+    {
+      "version": "philosophy-pilot-1.6.0",
+      "path": "data/philosophy/public-pilot-v1.6.json"
+    },
+    {
+      "version": "progressive-depth-1.6.0",
+      "path": "data/experience/progressive-depth-v1.6.json"
+    },
+    {
+      "version": "progressive-depth-1.7.0",
+      "path": "data/experience/progressive-depth-v1.7.json"
+    },
+    {
+      "version": "philosophy-pilot-1.7.0",
+      "path": "data/philosophy/public-pilot-v1.7.json"
+    },
+    {
+      "version": "progressive-depth-1.8.0",
+      "path": "data/experience/progressive-depth-v1.8.json"
+    },
+    {
+      "version": "philosophy-pilot-1.8.0",
+      "path": "data/philosophy/public-pilot-v1.8.json"
+    },
+    {
+      "version": "progressive-depth-1.9.0",
+      "path": "data/experience/progressive-depth-v1.9.json"
+    },
+    {
+      "version": "philosophy-pilot-1.9.0",
+      "path": "data/philosophy/public-pilot-v1.9.json"
+    },
+    {
+      "version": "progressive-depth-2.0.0",
+      "path": "data/experience/progressive-depth-v2.json"
+    },
+    {
+      "version": "philosophy-pilot-1.10.0",
+      "path": "data/philosophy/public-pilot-v1.10.json"
+    },
+    {
+      "version": "progressive-depth-2.1.0",
+      "path": "data/experience/progressive-depth-v2.1.json"
+    },
+    {
+      "version": "philosophy-pilot-1.11.0",
+      "path": "data/philosophy/public-pilot-v1.11.json"
+    },
+    {
+      "version": "progressive-depth-2.2.0",
+      "path": "data/experience/progressive-depth-v2.2.json"
+    },
+    {
+      "version": "philosophy-pilot-1.12.0",
+      "path": "data/philosophy/public-pilot-v1.12.json"
+    },
+    {
+      "version": "progressive-depth-2.3.0",
+      "path": "data/experience/progressive-depth-v2.3.json"
+    },
+    {
+      "version": "philosophy-pilot-1.13.0",
+      "path": "data/philosophy/public-pilot-v1.13.json"
+    },
+    {
+      "version": "progressive-depth-2.4.0",
+      "path": "data/experience/progressive-depth-v2.4.json"
+    }
+  ],
+  "routeLengthMeaning": "All 64/120/243 item revisions and order remain unchanged. Sacred status receives a narrower public interpretation, not an additional question or evidence opportunity.",
+  "academicAudit": {
+    "version": "unmapped-audit-2.0.0",
+    "path": "data/academic/unmapped-audit-v2.json",
+    "resultModelVersion": "generic-0.4.0"
+  },
+  "modelPolicies": [
+    {
+      "version": "generic-0.2.0",
+      "path": "data/generic/model-v0.2.json"
+    },
+    {
+      "version": "generic-0.3.0",
+      "path": "data/generic/model-v0.3.json"
+    },
+    {
+      "version": "generic-0.4.0",
+      "path": "data/generic/model-v0.4.json"
+    },
+    {
+      "version": "generic-1.0.0-pilot",
+      "path": "data/generic/model-v1.0-pilot.json"
+    },
+    {
+      "version": "generic-1.1.0-pilot",
+      "path": "data/generic/model-v1.1-pilot.json"
+    },
+    {
+      "version": "generic-1.2.0-pilot",
+      "path": "data/generic/model-v1.2-pilot.json"
+    },
+    {
+      "version": "generic-1.3.0-pilot",
+      "path": "data/generic/model-v1.3-pilot.json"
+    },
+    {
+      "version": "generic-1.4.0-pilot",
+      "path": "data/generic/model-v1.4-pilot.json"
+    },
+    {
+      "version": "generic-1.5.0-pilot",
+      "path": "data/generic/model-v1.5-pilot.json"
+    },
+    {
+      "version": "generic-1.6.0-pilot",
+      "path": "data/generic/model-v1.6-pilot.json"
+    },
+    {
+      "version": "generic-1.7.0-pilot",
+      "path": "data/generic/model-v1.7-pilot.json"
+    },
+    {
+      "version": "generic-1.8.0-pilot",
+      "path": "data/generic/model-v1.8-pilot.json"
+    },
+    {
+      "version": "generic-1.9.0-pilot",
+      "path": "data/generic/model-v1.9-pilot.json"
+    },
+    {
+      "version": "generic-1.10.0-pilot",
+      "path": "data/generic/model-v1.10-pilot.json"
+    },
+    {
+      "version": "generic-1.11.0-pilot",
+      "path": "data/generic/model-v1.11-pilot.json"
+    },
+    {
+      "version": "generic-1.12.0-pilot",
+      "path": "data/generic/model-v1.12-pilot.json"
+    },
+    {
+      "version": "generic-1.13.0-pilot",
+      "path": "data/generic/model-v1.13-pilot.json"
+    }
+  ],
+  "pilotCandidate": {
+    "version": "pilot-candidate-1.13.0",
+    "path": "data/pilots/pilot-candidate-v1.13.json"
+  },
+  "progressivePolicy": {
+    "version": "progressive-depth-2.4.0",
+    "path": "data/experience/progressive-depth-v2.4.json",
+    "manifestPath": "data/experience/progressive-depth-v2.4.manifest.json"
+  },
+  "localizationCatalogVersion": "localization-catalog-2.4.0",
+  "localizationCatalogPath": "data/localization/catalog-v15.json"
+}
