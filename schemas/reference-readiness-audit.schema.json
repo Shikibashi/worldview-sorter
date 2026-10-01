@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://worldview.edriffles.us/schemas/reference-readiness-audit-v1.json",
+  "title": "Reference readiness audit specification",
+  "type": "object",
+  "required": ["schemaVersion", "auditVersion", "title", "origin", "authoringBoundary", "baseline", "routeOrder", "sources", "existingItemLeads", "futureDiscriminatorNeeds", "candidates"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "auditVersion": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "origin": { "const": "independent_authoring" },
+    "authoringBoundary": { "const": "independent_authoring" },
+    "baseline": {
+      "type": "object",
+      "required": ["candidateBank", "worldviewModel", "sourceLedger", "affinityCatalog", "progressiveRoutes", "authoringPolicy"],
+      "additionalProperties": false,
+      "properties": {
+        "candidateBank": { "$ref": "#/$defs/pin" },
+        "worldviewModel": { "$ref": "#/$defs/pin" },
+        "sourceLedger": { "$ref": "#/$defs/pin" },
+        "affinityCatalog": { "$ref": "#/$defs/pin" },
+        "progressiveRoutes": { "$ref": "#/$defs/pin" },
+        "authoringPolicy": { "$ref": "#/$defs/pin" }
+      }
+    },
+    "routeOrder": { "type": "array", "minItems": 3, "uniqueItems": true, "items": { "type": "string" } },
+    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } },
+    "existingItemLeads": { "type": "array", "items": { "$ref": "#/$defs/itemLead" } },
+    "futureDiscriminatorNeeds": { "type": "array", "items": { "$ref": "#/$defs/futureNeed" } },
+    "candidates": { "type": "array", "minItems": 8, "maxItems": 12, "items": { "$ref": "#/$defs/candidate" } }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "pin": {
+      "type": "object",
+      "required": ["version", "path", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "version": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "url", "sourceClass"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "sourceClass": { "enum": ["primary_text", "signed_scholarly_synthesis", "peer_reviewed_scholarship", "publisher_metadata"] }
+      }
+    },
+    "sourceClaim": {
+      "type": "object",
+      "required": ["sourceId", "claim", "locator"],
+      "additionalProperties": false,
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "claim": { "type": "string", "minLength": 1 },
+        "locator": { "type": "string", "minLength": 1 }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": ["id", "entityType", "proposition", "doctrinalRole", "evidenceBasis", "expectedPropositionState", "mappingAssessment", "sourceClaims", "neighboringViews", "nonEntailments", "limitations"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "entityType": { "enum": ["philosopher", "tradition"] },
+        "proposition": { "type": "string", "minLength": 1 },
+        "doctrinalRole": { "enum": ["core", "major", "minor"] },
+        "evidenceBasis": { "enum": ["primary_text", "scholarly_reconstruction", "editorial_hypothesis"] },
+        "expectedPropositionState": { "type": ["string", "null"], "enum": ["supported", "opposed", null] },
+        "mappingAssessment": { "enum": ["exact", "partial", "recognized_unmeasured", "missing_proposition", "unsuitable", "context_only"] },
+        "propositionId": { "type": "string" },
+        "relatedPropositionIds": { "type": "array", "items": { "type": "string" } },
+        "sourceClaims": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/sourceClaim" } },
+        "neighboringViews": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "nonEntailments": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "limitations": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+      },
+      "allOf": [
+        { "if": { "properties": { "mappingAssessment": { "enum": ["exact", "partial", "recognized_unmeasured"] } }, "required": ["mappingAssessment"] }, "then": { "required": ["propositionId"] } },
+        { "if": { "properties": { "mappingAssessment": { "const": "missing_proposition" } }, "required": ["mappingAssessment"] }, "then": { "not": { "required": ["propositionId"] } } },
+        { "if": { "properties": { "mappingAssessment": { "enum": ["context_only", "unsuitable"] } }, "required": ["mappingAssessment"] }, "then": { "properties": { "expectedPropositionState": { "type": "null" } } } }
+      ],
+      "additionalProperties": false
+    },
+    "candidate": {
+      "type": "object",
+      "required": ["id", "label", "entityType", "scope", "neighbors", "nonEntailments", "limitations", "claims"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "entityType": { "enum": ["philosopher", "tradition"] },
+        "scope": { "type": "string", "minLength": 1 },
+        "existingAffinityId": { "type": "string" },
+        "neighbors": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "nonEntailments": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "limitations": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+        "claims": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/claim" } }
+      },
+      "additionalProperties": false
+    },
+    "itemLead": {
+      "type": "object",
+      "required": ["id", "candidateId", "itemId", "itemRevision", "distinction", "disposition", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "candidateId": { "type": "string", "minLength": 1 },
+        "itemId": { "type": "string", "minLength": 1 },
+        "itemRevision": { "type": "integer", "minimum": 1 },
+        "distinction": { "type": "string", "minLength": 1 },
+        "disposition": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "futureNeed": {
+      "type": "object",
+      "required": ["candidateId", "distinction", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "candidateId": { "type": "string", "minLength": 1 },
+        "distinction": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
