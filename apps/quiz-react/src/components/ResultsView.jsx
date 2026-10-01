@@ -12,6 +12,13 @@ const coverageLabels = {
   not_measured: 'Not measured on this route', partially_assessed: 'Partly assessed',
   assessed_unresolved: 'Asked, but unresolved', meaningfully_assessed: 'Some positions interpreted'
 };
+const domainStateLegend = [
+  ['supported', 'Supported'],
+  ['opposed', 'Opposed'],
+  ['mixed_context_dependent', 'Mixed'],
+  ['insufficient_evidence', 'Insufficient evidence'],
+  ['not_measured', 'Not measured']
+];
 
 function ExternalSource({ source, onOpen }) {
   let valid = false;
@@ -236,6 +243,12 @@ export default function ResultsView({ runtime, quiz, summary, activity, onActivi
           <section id="domains-section" className="wvs-section" aria-labelledby="domains-title">
             <div className="wvs-section-heading"><p className="e-eyebrow">02 / Your positions</p><h2 id="domains-title">Twelve philosophical domains</h2>
               <p>Each area shows what this route could interpret. Open a topic to inspect the propositions, answers, limitations, and sources behind it.</p>
+            </div>
+            <div id="domain-map-legend" className="wvs-domain-legend" role="group" aria-label="Evidence state key">
+              <strong>Evidence state key</strong>
+              {domainStateLegend.map(([state, label]) => <span className="wvs-domain-legend-item" key={state}>
+                <i className={`wvs-domain-legend-mark wvs-strip-${state}`} aria-hidden="true" />{label}
+              </span>)}
             </div>
             <div id="domain-map" className="wvs-domain-list">
               {summary.domains.map((domain, index) => (
