@@ -18,15 +18,15 @@ npm test
 npm run server:start
 ```
 
-The local development server opens the public quiz at http://127.0.0.1:4173/. The older development runner is disabled unless explicitly enabled; see [server operations](docs/COLLECTION_SERVICE.md).
+Run `npm run dev:quiz-ui` to develop the React application rooted at `apps/quiz-react/`. The separate collector utility is available through `npm run server:start`; see [server operations](docs/COLLECTION_SERVICE.md).
 
 For the static GitHub Pages release, run `npm run build:production`, `node scripts/verify-production-site.mjs`, and `npm run test:production:browser`. The artifact is `dist/pages/`; [deployment operations](docs/DEPLOYMENT.md) describe the `main`-only Actions workflow, custom domain, privacy boundary, and rollback. The repository root is never the Pages artifact.
 
 ## Evidence, not identity guessing
 
-The nine earlier reference comparisons remain historical prototypes. The current public result uses 11 versioned philosophical comparisons over interpreted propositions. No political centroid, categorical numeric proxy, chat memory, preferred identity, or personality/country resemblance supplies missing answers. Neutral, no view, disagreement and mixed evidence remain distinct. There is no forced winner, match percentage, or automatically assigned identity.
+The active public result uses 11 versioned philosophical comparisons over interpreted propositions. No political centroid, categorical numeric proxy, chat memory, preferred identity, or personality/country resemblance supplies missing answers. Neutral, no view, disagreement and mixed evidence remain distinct. There is no forced winner, match percentage, or automatically assigned identity.
 
-The nine prototype comparisons and engineering scores remain **unvalidated and non-interpretable**. The public catalog offers qualitative, evidence-scoped comparison rather than a validated classification. The public quiz summarizes explicit answer patterns with source links; it does not present engineering scores as validated worldview measurements. The follow-up planner identifies missing reviewed items and is available as optional domain clarification; it is not calibrated adaptive testing.
+The comparison rules are exploratory and unvalidated. The public browser presents proposition-level answer interpretations with their evidence and limitations; it does not present engineering scores as validated worldview measurements. The follow-up planner offers optional authored clarifications from identified evidence gaps; it is not calibrated adaptive testing.
 
 ## History
 
@@ -56,24 +56,11 @@ The active generic model covers all twelve domains using reusable, source-tracea
 
 See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access ledger](research/academic/GENERIC_SOURCE_LEDGER.md), and [coverage report](data/generic/coverage-v0.1.json). Existing sample collection and older comparison modules remain compatibility/development tools; the generic layer does not require cognitive review or claim empirical validation.
 
-## Independent semantic exploration and reference profiles
-
-Worldview Sorter can attach source-backed explanatory links to already interpreted
-propositions and can compare those propositions with independently authored philosopher or
-tradition reference profiles. These layers cannot change respondent evidence, produce a
-nearest-profile winner, assign an identity, or emit match percentages.
-
-Third-party philosopher/profile datasets are not used as content sources. New reference
-content is authored from primary texts and reviewed scholarship under the same claim-level
-provenance rules used elsewhere in the project.
-
-See [independent reimplementation and reference-corpus policy](docs/INDEPENDENT_REIMPLEMENTATION.md).
-
 ## Public quiz experience
 
-The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/249-question depth routes, pause/resume, a labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
+The root opens the React/Vite application built on the user-owned [12Axes front-end foundation](docs/12AXES_FOUNDATION_ADOPTION.md), with the active 64/120/249-question routes, pause/resume, a clearly labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
 
-Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
+Run `npm run dev:quiz-ui` to develop the React application locally. `npm run server:start` remains a separate development/collection utility.
 
 `npm run test:experience` checks the controller, evidence summary, privacy-safe share projection and post-completion game boundary. The separate Quiz experience workflow tests Chromium with synthetic answers.
 

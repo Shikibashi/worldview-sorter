@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const output=path.join(root,'dist/pages');
+const builtApp=path.join(root,'dist/worldview-app');
 const read=async file=>readFile(path.join(root,file),'utf8');
 const json=async file=>JSON.parse(await read(file));
 const copied=new Set();
@@ -16,7 +17,8 @@ const publicCurrentKeys=['candidateBank','pilot','worldviewModel','quizExperienc
 const allowedModuleDirectories=['apps/quiz/','packages/experience/','packages/runtime/',
  'packages/worldview/','packages/philosophy/','packages/localization/','packages/beta/'];
 const publicDocs=['docs/BETA_KNOWN_LIMITATIONS.md','docs/MODEL_CHANGELOG.md',
- 'docs/QUIZ_EXPERIENCE.md','docs/RESEARCH_DATA.md'];
+ 'docs/QUIZ_EXPERIENCE.md','docs/RESEARCH_DATA.md','docs/12AXES_FOUNDATION_ADOPTION.md',
+ 'docs/THIRD_PARTY_NOTICES.md'];
 
 function safeFile(file){
  assert.equal(typeof file,'string');
@@ -62,6 +64,31 @@ async function filesUnder(dir){
  }
  return files.sort();
 }
+async function copyBuiltApp(){
+ const visit=async(dir='')=>{
+  for(const entry of await readdir(path.join(builtApp,dir),{withFileTypes:true})){
+   const relative=path.posix.join(dir,entry.name);
+   const source=path.join(builtApp,relative);
+   if(entry.isDirectory()){await visit(relative);continue;}
+   assert.ok(entry.isFile(),'Generated app contains a non-file: '+relative);
+   assert.ok(relative==='index.html'||/^assets\/[A-Za-z0-9_-]+\.(?:js|css|woff2|woff)$/.test(relative),
+    'Unexpected generated app asset: '+relative);
+   const destination=path.join(output,relative);
+   await mkdir(path.dirname(destination),{recursive:true});
+   if(relative==='index.html'){
+    const html=await readFile(source,'utf8');
+    assert.ok(html.includes('<div id="root"></div>')&&/<script[^>]+type="module"[^>]+src="\.\/assets\/[^\"]+\.js"/.test(html),
+     'Generated React entry is missing its root or bundled module.');
+    const release=current.modelRelease.version;
+    const marked=html.replace('<head>','<head>\n    <meta name="worldview-static-release" content="'+release+'">');
+    assert.notEqual(marked,html,'Could not add the static release marker to the generated root.');
+    await writeFile(destination,marked);
+   }else await cp(source,destination,{errorOnExist:true});
+   copied.add(relative);
+  }
+ };
+ await visit();
+}
 async function verify(expected){
  const actual=await filesUnder(output);
  assert.deepEqual(actual,[...expected].sort(),'Production artifact has missing or unexpected files.');
@@ -82,8 +109,10 @@ async function verify(expected){
  assert.deepEqual(activeWording.locales.map(row=>row.locale),['en-US'],
   'The active production wording catalog must be monolingual.');
  const entry=await readFile(path.join(output,'index.html'),'utf8');
- assert.ok(entry.includes('Worldview Sorter')&&entry.includes('src="./apps/quiz/app.js"'),
-  'The custom-domain root must open the public quiz.');
+ assert.ok(entry.includes('Worldview Sorter')&&entry.includes('<div id="root"></div>')&&
+  /<script[^>]+type="module"[^>]+src="\.\/assets\/[^\"]+\.js"/.test(entry),
+  'The custom-domain root must open the bundled Worldview Sorter application.');
+ assert.ok(!entry.includes('apps/quiz/app.js'),'The legacy questionnaire must not be the production root.');
  assert.ok(!entry.includes('http://'),'Insecure URL in production entry.');
  const manifest=JSON.parse(await readFile(path.join(output,'deployment.json'),'utf8'));
  assert.equal(manifest.modelReleaseVersion,(await json('data/current.json')).modelRelease.version);
@@ -120,27 +149,14 @@ await mkdir(path.join(output,'data'),{recursive:true});
 await writeFile(path.join(output,'data/current.json'),JSON.stringify(subset,null,2)+'\n');
 copied.add('data/current.json');
 for(const file of ['apps/quiz/style.css',...publicDocs])await copy(file);
-await copyModule('apps/quiz/app.js');
 await copyModule('apps/quiz/share-viewer.js');
-
-const release=current.modelRelease.version;
-const original=await read('apps/quiz/index.html');
-const staticMeta=`<meta name="worldview-static-release" content="${release}">`;
-const staticCopy=original.replace('<head>','<head>\n '+staticMeta)
- .replace('Answers stay in this browser unless you export them or explicitly contribute a completed pilot attempt to future research.',
-  'Answers stay in this browser unless you export or deliberately share them. This static site does not accept research contributions.');
-assert.notEqual(staticCopy,original,'Static entry was not generated.');
-const rootEntry=staticCopy.replace('href="./style.css"','href="./apps/quiz/style.css"')
- .replace('src="./app.js"','src="./apps/quiz/app.js"')
- .replace('href="./share.html"','href="./apps/quiz/share.html"');
 await mkdir(path.join(output,'apps/quiz'),{recursive:true});
-await writeFile(path.join(output,'index.html'),rootEntry);
-await writeFile(path.join(output,'apps/quiz/index.html'),staticCopy);
 await copy('apps/quiz/share.html');
-copied.add('index.html');copied.add('apps/quiz/index.html');
+await copyBuiltApp();
 await writeFile(path.join(output,'.nojekyll'),'');
 copied.add('.nojekyll');
 const model=await json(current.worldviewModel.path);
+const release=current.modelRelease.version;
 const deployment={schemaVersion:'worldview-pages-deployment-1',
  gitCommit:process.env.GITHUB_SHA??execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),
  applicationVersion:(await json('package.json')).version,
