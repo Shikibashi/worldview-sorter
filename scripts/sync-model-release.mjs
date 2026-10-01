@@ -168,9 +168,6 @@ readme=readme.replace(/with 64\/120\/\d+-question depth routes/,
  `with 64/120/${summary.fullRouteItems}-question depth routes`);
 readme=readme.replace(/The active Full route uses the frozen 238-question pilot\. Earlier 240-item and 80\/120\/160-item releases remain available for replaying saved quizzes\./,
  `The active Full route uses the versioned ${summary.fullRouteItems}-question successor pilot. The earlier frozen 238-question pilot and older 240-item and 80/120/160-item releases remain available for historical replay.`);
-const monolingual='The public questionnaire is English (en-US) only. Older language drafts remain archived with their historical releases and are not offered to respondents.';
-if(!readme.includes(monolingual))readme=readme.replace('The static Pages site has no research-upload endpoint.',
- `The static Pages site has no research-upload endpoint. ${monolingual}`);
 await writeFile(readmePath,readme);
 await writeFile(new URL('data/current.json',new URL('../',import.meta.url)),JSON.stringify(current,null,2)+'\n');
 console.log('Model release index:',manifest.releaseVersion);
