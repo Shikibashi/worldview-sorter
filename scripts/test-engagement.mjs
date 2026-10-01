@@ -21,7 +21,7 @@ assert.equal(summary.affinityPresentation.hasEstablishedAffinity,false,
  'Legacy scope mappings cannot establish a doctrinal affinity in respondent-facing presentation.');
 const exactlySourced=new Set(['easy-ontology-scoped','fallibilism-about-knowledge',
  'sensory-empiricism-about-the-external-world','act-consequentialism-scoped',
- 'rule-consequentialism-scoped']);
+ 'rule-consequentialism-scoped','ethical-egoism']);
 assert.ok(summary.affinityPresentation.traditions.filter(t=>!exactlySourced.has(t.traditionId))
  .every(t=>t.state==='legacy_scope_unresolved'&&t.legacyDefiningCriterionIds.length>0));
 const easyOnQuick=summary.affinityPresentation.traditions.find(t=>t.traditionId==='easy-ontology-scoped');
@@ -29,7 +29,7 @@ assert.ok(easyOnQuick&&easyOnQuick.state!=='legacy_scope_unresolved',
  'An exact sourced proposition must not inherit the six older scope warnings.');
 assert.ok([...exactlySourced].every(id=>summary.affinityPresentation.traditions.some(t=>
  t.traditionId===id&&t.state!=='legacy_scope_unresolved')),
- 'Every new exact sourced comparison must pass the respondent presentation guard.');
+ 'Every exact sourced comparison must pass the respondent presentation guard.');
 const authoredOverlap={traditions:[{id:'synthetic-tradition',summaryState:'overlap_on_measured_core',
  criteria:[{id:'synthetic-defining',role:'defining',mapping:{status:'direct',propositionId:'synthetic-rule'}}]}]};
 assert.equal(qualifyAffinityPresentation({affinities:authoredOverlap,model:{commitments:[{id:'synthetic-rule',proposition:null}]}})

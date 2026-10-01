@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-083",
+  "title": "Require independent moral-reason evidence for exclusive self-interest",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"item","id":"NEI121"},
+    {"type":"proposition","id":"construct-NE15"},
+    {"type":"result_semantics","id":"model-policy"},
+    {"type":"result_semantics","id":"affinity-catalog-policy"},
+    {"type":"criterion","id":"ethical-egoism/moral-self-interest"},
+    {"type":"tradition","id":"ethical-egoism"},
+    {"type":"route","id":"quick"},
+    {"type":"route","id":"standard"},
+    {"type":"route","id":"full"},
+    {"type":"route","id":"route-policy"},
+    {"type":"source","id":"acad-egoism"},
+    {"type":"localization","id":"bundle/ar"},
+    {"type":"localization","id":"bundle/en-US"},
+    {"type":"localization","id":"bundle/es-ES"},
+    {"type":"localization","id":"catalog/ar"},
+    {"type":"localization","id":"catalog/en-US"},
+    {"type":"localization","id":"catalog/es-ES"},
+    {"type":"localization","id":"catalog/model-binding"}
+  ],
+  "currentBehavior": "Full administers NEI100@1 and near-parallel NEI101@1, counting them as two directional units for a broad NE15 moral self-priority rule. Unadministered reverse item NEI102@1 is also mapped directionally. The ethical-egoism and Objectivism catalog criteria both map directly to NE15.",
+  "proposedBehavior": "State an exact conjunction of universal moral own-good priority and denial of an independent reason from another person's need alone. Group NEI100/101 as one authored unit, exclude NEI102, and replace NEI101 with NEI121@1 on Full. Before first release, change the draft's redundant undecided option to a nondirectional context-dependent answer; no-view remains a separate response state. Ethical egoism directly compares only this scoped criterion; its maximizing rightness criterion stays unmeasured. Objectivism's rational-self-interest criterion is partial, retaining its defining doctrinal role.",
+  "rationale": "Two similar statements about one's own ultimate good cannot independently establish that another person's need has no moral weight. The new original vignette directly distinguishes an independent duty, an independent non-obligatory moral reason, and a reason grounded only in one's own good, while holding the cost modest.",
+  "philosophicalBasis": {
+    "proposition": "Each person morally ought to make their own long-term good the ultimate end of their actions; another person’s need alone supplies no independent moral reason.",
+    "neighboringViews": [
+      "Duties of self-care with independent duties to others",
+      "Agent-centered prerogatives with non-obligatory other-regarding reasons",
+      "Rational egoism without an exclusively moral requirement",
+      "Psychological egoism as a descriptive claim",
+      "Stirnerian ownness without a fixed universal self-interest duty",
+      "Rand's particular life-grounded rational ethics"
+    ],
+    "nonEntailments": [
+      "The standard maximizing if-and-only-if account of ethical egoism",
+      "Psychological self-interest as a fact about motivation",
+      "Refusal to help, indifference to others, or inability to cooperate",
+      "Objectivism or any political position"
+    ],
+    "existingGap": "The former Full route counted NEI100 and NEI101 as independent though both target the universal own-good end. It never administered NEI102, whose disagreement is ambiguous. No current administered item directly asks whether another person's serious need supplies an independent moral reason at modest cost.",
+    "scholarlyDisagreement": "SEP describes the standard maximizing ethical-egoism account and notes less common variants. Rand's rational self-interest is embedded in a broader theory of life and value. This rule tests only a narrower exclusive moral-end conjunction."
+  },
+  "sourceClaims": [
+    {"sourceId":"acad-egoism","relationship":"supports","claim":"Ethical egoism is a normative claim about each agent’s own good as the ultimate end. It differs from psychological egoism, rational egoism, ordinary self-regard, and permission for personal projects; helping others can be chosen for self-interested reasons."},
+    {"sourceId":"sep-egoism","relationship":"supports","claim":"SEP distinguishes normative ethical egoism from psychological and rational egoism and explains that helping others can have self-interested grounds while independent other-regarding moral weight remains a discriminator."}
+  ],
+  "alternatives": [
+    "Keep NEI100 and NEI101 as separate units: rejected because the same general moral end is repeated.",
+    "Use NEI102 disagreement: rejected because it may reject permissible self-concern rather than endorse exclusive self-priority.",
+    "Use a severe-sacrifice or pro-market item: rejected because each permits false positives from neighboring moral or political views.",
+    "Infer Rand's ethics from the new conjunction: rejected because a life-grounded rational standard remains unmeasured."
+  ],
+  "respondentImpact": "Some previous Full-route NE15 support falls to a lean or open state without the new independent reason discriminator. Full responses can now support, oppose, or mix on the narrow conjunction. Quick and Standard remain not measured. Affinity overlap narrows; Objectivism cannot treat NE15 as a complete direct defining match.",
+  "historicalCompatibility": "Model release 1.13.0 and earlier banks, rules, routes, catalog, localizations, and engine archives remain immutable. NEI100@1, NEI101@1, and NEI102@1 are retained. Existing raw answers are not rewritten. A current reinterpretation is separate from the historical result.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","route_omission","item_revision","source_link","affinity_limit"],
+    "paths": ["scripts/test-self-interest-boundary-release.mjs","scripts/test-model-governance.mjs","scripts/test-production-site-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T00:00:00Z","note":"Reviewed SEP Egoism, SEP Rand, Rand's ethics essay, draft vignette, neighboring self-care and reason/duty positions, and explicit non-entailments."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T00:00:00Z","note":"Reviewed exact predecessor paths, route substitution, grouped units, catalog partial status, version boundaries, and historical replay design; release regression and broader validation accompany publication."}
+    ]
+  },
+  "release": {
+    "components": ["bank","model","progressive_routes","full_form","pilot","content_review","source_ledger","affinity","localization_catalog"],
+    "targetVersion": "model-release-1.14.0",
+    "migration": "No raw-response migration. Old administrations keep their original model manifest. New Full administrations use NEI121@1 and the narrower NE15 rule."
+  },
+  "implementationRefs": ["docs/governance/SELF_INTEREST_BOUNDARY_RELEASE.md","scripts/build-self-interest-boundary-v1.mjs","scripts/test-self-interest-boundary-release.mjs"]
+}

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-084",
+  "title": "Keep Rand's rational self-interest defining but only partially mapped",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "criterion",
+  "changeClass": "reclassification",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"criterion","id":"objectivism-rand/rational-self-interest"},
+    {"type":"tradition","id":"objectivism-rand"}
+  ],
+  "currentBehavior": "The Objectivism comparison maps construct-NE15 directly to Rand's defining rational-self-interest doctrine. The rule is a generic normative own-good claim and does not establish Rand's account of rational life and value.",
+  "proposedBehavior": "Keep rational self-interest a defining Objectivist commitment, but mark construct-NE15 as a partial mapping. The changed NE15 rule can neither fill nor decisively reject Rand's complete ethical criterion. Add an explicit discriminator against generic self-priority as a complete Objectivist signal.",
+  "rationale": "Rand's ethics is life-grounded and embedded in a larger metaphysical and epistemic system. Neither generic moral self-priority nor denying an independent need-based reason independently establishes her specific rational standard.",
+  "philosophicalBasis": {
+    "proposition": "The agent's rational long-term self-interest is a moral priority.",
+    "neighboringViews": ["Generic ethical egoism", "Self-care duties", "Stirnerian ownness", "Market liberalism without Rand's ethics"],
+    "nonEntailments": ["Psychological egoism", "Refusal to help strangers", "Objectivism from market preference or generic self-interest alone"],
+    "existingGap": "No direct respondent proposition distinguishes Rand's specific rational and life-grounded standard from other moral self-priority theories.",
+    "scholarlyDisagreement": "SEP describes disagreements over how to interpret Rand's ultimate end and her account of the objective; that internal variation is not resolved by NE15."
+  },
+  "sourceClaims": [
+    {"sourceId":"sep-rand","relationship":"supports","claim":"SEP places Rand’s rational self-interest within a broader life-grounded ethics and describes circumstances in which helping others is appropriate; generic self-priority alone does not establish her complete doctrine."}
+  ],
+  "alternatives": [
+    "Retain direct mapping: rejected because the narrower rule cannot establish Rand's particular rational standard.",
+    "Remove the defining doctrine: rejected because rational self-interest remains central to Rand's system.",
+    "Promote a new Rand-specific item now: deferred because this release repairs an existing false positive without claiming a complete system assessment."
+  ],
+  "respondentImpact": "NE15 support or opposition appears as partial doctrinal evidence, never a settled Objectivist defining overlap or divergence. Other criteria remain independently assessed and no identity is assigned.",
+  "historicalCompatibility": "The 1.13.0 catalog retains its old direct mapping for historical replay. The 1.14.0 catalog uses partial and does not rewrite historical results.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","affinity_limit"],
+    "paths": ["scripts/test-self-interest-boundary-release.mjs","scripts/test-affinity-catalog-v1.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T00:00:00Z","note":"Reviewed SEP Rand and Rand's primary ethics essay against generic moral self-priority and benevolence false positives."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T00:00:00Z","note":"Reviewed partial mapping behavior and historical catalog separation; release regressions cover both."}
+    ]
+  },
+  "release": {
+    "components": ["affinity"],
+    "targetVersion": "model-release-1.14.0",
+    "migration": "No historical result migration. Current comparison uses the new versioned catalog."
+  },
+  "implementationRefs": ["docs/governance/SELF_INTEREST_BOUNDARY_RELEASE.md","scripts/build-self-interest-boundary-v1.mjs","scripts/test-self-interest-boundary-release.mjs"]
+}

@@ -1,0 +1,1487 @@
+{
+  "schemaVersion": "pilot-candidate-1",
+  "pilotCandidateVersion": "pilot-candidate-1.11.0",
+  "status": "candidate_for_human_piloting",
+  "itemBank": {
+    "version": "0.15.0",
+    "path": "data/items/candidate-v0.15.json"
+  },
+  "constructRegistry": {
+    "version": "0.5.0",
+    "path": "data/registries/constructs-v0.5.json"
+  },
+  "sourceRoute": {
+    "version": "philosophy-full-1.2.0",
+    "assignedItems": 240,
+    "selectionSeed": "pilot-v1-content"
+  },
+  "route": {
+    "version": "philosophy-pilot-1.11.0",
+    "path": "data/philosophy/public-pilot-v1.11.json",
+    "instrumentVersion": "worldview-pilot-1.6.0",
+    "instrumentManifestPath": "data/instruments/worldview-pilot-v1.6.json",
+    "assignedItems": 243,
+    "exactItemRevisions": [
+      {
+        "itemId": "PLI003",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI002",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI116",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI035",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI004",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI117",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI009",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI008",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI100",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI058",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI115",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI020",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI116",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI101",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI109",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI022",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI115",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI111",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI110",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI036",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI054",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI112",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI110",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI111",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI100",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI037",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI025",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI113",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI010",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI108",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI101",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI027",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI101",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI055",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI110",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI005",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI013",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI109",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI100",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI026",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI102",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI056",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI009",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI003",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "RCI012",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI105",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI031",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI103",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI050",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI001",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "VAI008",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI018",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI015",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI104",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI025",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI104",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI052",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI002",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI009",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI014",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI014",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI026",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI032",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI105",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI105",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI109",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI004",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "OMI016",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI041",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI017",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI039",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI108",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI038",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI119",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI005",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "OMI017",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI003",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "VAI039",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI016",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI122",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI101",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI009",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI118",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI011",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI007",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI002",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "VAI042",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI008",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI018",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI030",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI100",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI013",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI111",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI026",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI006",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI004",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "VAI022",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI009",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI019",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI028",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI103",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI010",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI110",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI025",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI018",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI004",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI007",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI038",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI006",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI008",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI011",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI032",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI102",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI029",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI113",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI015",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI008",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI121",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI030",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI023",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI004",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI012",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI001",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI034",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI004",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "PLI112",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI014",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI023",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI100",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI005",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "OMI027",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI052",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI014",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI005",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI013",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI002",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI037",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI001",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "MFI017",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI022",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI011",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI107",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI002",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI026",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI020",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI003",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "MSI003",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI004",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI036",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI003",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI016",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI018",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI013",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI109",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI013",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI021",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI051",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI001",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI002",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI006",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI040",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI002",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "MFI013",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI020",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI073",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI108",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI011",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI020",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI027",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI002",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "MSI015",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI042",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI013",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI017",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI126",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI071",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI031",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI104",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI010",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI024",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI029",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI036",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI001",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "RCI029",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI004",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "EXI012",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI026",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI076",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI105",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI022",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI025",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI031",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI106",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI017",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI021",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI005",
+        "itemRevision": 2
+      },
+      {
+        "itemId": "EXI011",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI025",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI077",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI044",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI100",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI019",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI026",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI107",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI033",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI006",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI023",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI010",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI009",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI015",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI067",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI034",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI101",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI021",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI027",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI104",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI060",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI004",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI025",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI019",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI127",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI024",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI069",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI037",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI102",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI018",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI122",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI023",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI032",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI105",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MSI022",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI123",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "RCI030",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EXI014",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "EPI018",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MEI010",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "PLI048",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "NEI040",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "SOI103",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "AHI032",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "MFI028",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "VAI061",
+        "itemRevision": 1
+      },
+      {
+        "itemId": "OMI102",
+        "itemRevision": 1
+      }
+    ],
+    "domainCounts": {
+      "ME": 21,
+      "NE": 26,
+      "MF": 12,
+      "VA": 20,
+      "EP": 26,
+      "OM": 24,
+      "MS": 13,
+      "AH": 16,
+      "RC": 20,
+      "EX": 10,
+      "SO": 22,
+      "PL": 33
+    },
+    "removedItemIds": [
+      "NEI030",
+      "EXI017"
+    ]
+  },
+  "interpretationRules": {
+    "version": "generic-1.11.0-pilot",
+    "path": "data/generic/model-v1.11-pilot.json",
+    "directRuleIds": [
+      "afterlife-belief",
+      "audit2-AH08-biological",
+      "audit2-AH09-environmental",
+      "audit2-EP02-complex-knowledge",
+      "audit2-EP06-testability",
+      "audit2-EP10-revelation",
+      "audit2-EP11-external-world",
+      "audit2-EX02-nondesigner-purpose",
+      "audit2-PL05-decentralization",
+      "audit2-RC02-agentic-divinity",
+      "audit2-RC04-intervention",
+      "audit2-RC05-miracles",
+      "audit2-SO03-relational-self",
+      "audit2-SO05-dominance",
+      "audit2-SO06-anti-egalitarian",
+      "character-counts",
+      "construct-AH13",
+      "construct-AH14",
+      "construct-EP15",
+      "construct-EP16",
+      "construct-EP17",
+      "construct-EP18",
+      "construct-EP19",
+      "construct-EP20",
+      "construct-ME09",
+      "construct-ME10",
+      "construct-NE15",
+      "construct-NE16",
+      "construct-NE17",
+      "construct-NE18",
+      "construct-NE19",
+      "construct-NE20",
+      "construct-NE21",
+      "construct-OM11",
+      "construct-OM12",
+      "construct-OM13",
+      "construct-OM14",
+      "construct-PL27",
+      "construct-PL28",
+      "construct-PL29",
+      "construct-PL30",
+      "construct-PL31",
+      "construct-PL32",
+      "construct-PL33",
+      "construct-SO14",
+      "construct-SO15",
+      "constructed-meaning",
+      "deterministic-world",
+      "divine-existence",
+      "effective-freedom",
+      "extended-cognition",
+      "impartial-beneficence",
+      "instrumental-harm",
+      "legacy-objectivism-market-coordination",
+      "legacy-objectivism-moral-truth-aptness",
+      "legacy-philosophical-anarchism-no-general-obedience",
+      "moral-concern-authority",
+      "moral-concern-care",
+      "moral-concern-equality",
+      "moral-concern-loyalty",
+      "moral-concern-proportionality",
+      "moral-concern-purity",
+      "moral-constraints",
+      "moral-limits-validity",
+      "mutual-advantage",
+      "natural-world",
+      "nondomination",
+      "noninterference",
+      "objective-meaning",
+      "outcomes-count",
+      "ph-basic-experience",
+      "ph-belief-revision",
+      "ph-categorical-reasons",
+      "ph-conscious-causes",
+      "ph-consent-authority",
+      "ph-context-sensitive",
+      "ph-cosmic-purpose",
+      "ph-democratic-authorization",
+      "ph-desert-punishment",
+      "ph-desire-welfare",
+      "ph-doing-allowing",
+      "ph-expert-testimony",
+      "ph-full-reduction",
+      "ph-functional-minds",
+      "ph-group-agency",
+      "ph-high-sacrifice",
+      "ph-individual-claims",
+      "ph-inherent-purpose",
+      "ph-intuitive-warrant",
+      "ph-national-obligations",
+      "ph-noncosmic-meaning",
+      "ph-objective-welfare",
+      "ph-observation-weight",
+      "ph-particular-judgment",
+      "ph-personal-prerogatives",
+      "ph-physical-explanation",
+      "ph-political-cosmopolitanism",
+      "ph-polycentric-order",
+      "ph-process-self",
+      "ph-religious-priority",
+      "ph-religious-public-law",
+      "ph-rights-constraints",
+      "ph-rule-mediated",
+      "ph-sacred-value",
+      "ph-scientific-realism",
+      "ph-social-constitution",
+      "ph-special-obligations",
+      "ph-stance-independence",
+      "ph-strong-property",
+      "ph-supernatural-reality",
+      "ph-tradition-evidence",
+      "ph-unconscious-causes",
+      "ph-universal-requirements",
+      "physical-reality",
+      "priority-VA01",
+      "priority-VA02",
+      "priority-VA03",
+      "priority-VA04",
+      "priority-VA05",
+      "priority-VA06",
+      "priority-VA07",
+      "priority-VA08",
+      "priority-VA09",
+      "priority-VA10",
+      "priority-VA11",
+      "priority-VA12",
+      "priority-VA13",
+      "priority-VA14",
+      "priority-VA15",
+      "priority-VA16",
+      "priority-VA17",
+      "priority-VA18",
+      "priority-VA19",
+      "procedural-justice",
+      "psychological-continuity",
+      "reasonable-rejection",
+      "relational-care",
+      "source-based-validity",
+      "substantive-justice",
+      "theological-suspension",
+      "reviewed-PL34-federal-division",
+      "reviewed-NE22-act-consequence-criterion",
+      "reviewed-NE23-rule-consequence-criterion",
+      "reviewed-ME06-literal-truth-claim"
+    ],
+    "routeMeasuredDirectRuleIds": [
+      "afterlife-belief",
+      "audit2-AH08-biological",
+      "audit2-AH09-environmental",
+      "audit2-EP02-complex-knowledge",
+      "audit2-EP06-testability",
+      "audit2-EP10-revelation",
+      "audit2-EP11-external-world",
+      "audit2-EX02-nondesigner-purpose",
+      "audit2-PL05-decentralization",
+      "audit2-RC02-agentic-divinity",
+      "audit2-RC04-intervention",
+      "audit2-RC05-miracles",
+      "audit2-SO03-relational-self",
+      "audit2-SO05-dominance",
+      "audit2-SO06-anti-egalitarian",
+      "construct-AH13",
+      "construct-AH14",
+      "construct-EP15",
+      "construct-EP16",
+      "construct-EP18",
+      "construct-EP20",
+      "construct-ME09",
+      "construct-ME10",
+      "construct-NE15",
+      "construct-NE17",
+      "construct-NE18",
+      "construct-NE19",
+      "construct-NE20",
+      "construct-OM11",
+      "construct-OM12",
+      "construct-OM13",
+      "construct-OM14",
+      "construct-PL30",
+      "construct-PL31",
+      "construct-PL33",
+      "construct-SO14",
+      "construct-SO15",
+      "constructed-meaning",
+      "deterministic-world",
+      "divine-existence",
+      "effective-freedom",
+      "extended-cognition",
+      "impartial-beneficence",
+      "legacy-objectivism-market-coordination",
+      "legacy-philosophical-anarchism-no-general-obedience",
+      "moral-concern-authority",
+      "moral-concern-care",
+      "moral-concern-equality",
+      "moral-concern-loyalty",
+      "moral-concern-proportionality",
+      "moral-concern-purity",
+      "moral-constraints",
+      "objective-meaning",
+      "outcomes-count",
+      "ph-categorical-reasons",
+      "ph-conscious-causes",
+      "ph-consent-authority",
+      "ph-context-sensitive",
+      "ph-cosmic-purpose",
+      "ph-expert-testimony",
+      "ph-full-reduction",
+      "ph-group-agency",
+      "ph-individual-claims",
+      "ph-inherent-purpose",
+      "ph-personal-prerogatives",
+      "ph-physical-explanation",
+      "ph-polycentric-order",
+      "ph-process-self",
+      "ph-religious-priority",
+      "ph-rights-constraints",
+      "ph-rule-mediated",
+      "ph-sacred-value",
+      "ph-social-constitution",
+      "ph-stance-independence",
+      "ph-supernatural-reality",
+      "ph-tradition-evidence",
+      "ph-unconscious-causes",
+      "ph-universal-requirements",
+      "priority-VA02",
+      "priority-VA04",
+      "priority-VA05",
+      "priority-VA06",
+      "priority-VA11",
+      "priority-VA15",
+      "priority-VA16",
+      "priority-VA18",
+      "psychological-continuity",
+      "reasonable-rejection",
+      "source-based-validity",
+      "theological-suspension",
+      "reviewed-PL34-federal-division",
+      "reviewed-NE22-act-consequence-criterion",
+      "reviewed-NE23-rule-consequence-criterion",
+      "reviewed-ME06-literal-truth-claim"
+    ],
+    "routeNotMeasuredDirectRuleIds": [
+      "character-counts",
+      "construct-EP17",
+      "construct-EP19",
+      "construct-NE16",
+      "construct-NE21",
+      "construct-PL27",
+      "construct-PL28",
+      "construct-PL29",
+      "construct-PL32",
+      "instrumental-harm",
+      "legacy-objectivism-moral-truth-aptness",
+      "moral-limits-validity",
+      "mutual-advantage",
+      "natural-world",
+      "nondomination",
+      "noninterference",
+      "ph-basic-experience",
+      "ph-belief-revision",
+      "ph-democratic-authorization",
+      "ph-desert-punishment",
+      "ph-desire-welfare",
+      "ph-doing-allowing",
+      "ph-functional-minds",
+      "ph-high-sacrifice",
+      "ph-intuitive-warrant",
+      "ph-national-obligations",
+      "ph-noncosmic-meaning",
+      "ph-objective-welfare",
+      "ph-observation-weight",
+      "ph-particular-judgment",
+      "ph-political-cosmopolitanism",
+      "ph-religious-public-law",
+      "ph-scientific-realism",
+      "ph-special-obligations",
+      "ph-strong-property",
+      "physical-reality",
+      "priority-VA01",
+      "priority-VA03",
+      "priority-VA07",
+      "priority-VA08",
+      "priority-VA09",
+      "priority-VA10",
+      "priority-VA12",
+      "priority-VA13",
+      "priority-VA14",
+      "priority-VA17",
+      "priority-VA19",
+      "procedural-justice",
+      "relational-care",
+      "substantive-justice"
+    ],
+    "researchOnlyRuleIds": [
+      "audit2-PL25-reform",
+      "audit2-SO13-just-world",
+      "ph-aesthetic-objectivity",
+      "ph-coherent-justification",
+      "ph-concrete-worlds",
+      "ph-eternal-time",
+      "ph-external-content",
+      "ph-foundational-justification",
+      "ph-governing-laws",
+      "ph-humean-laws",
+      "ph-intention-sensitive",
+      "ph-motivational-necessity",
+      "ph-productive-causation",
+      "ph-reliable-processes",
+      "ph-values-science",
+      "ph-world-possibilities"
+    ]
+  },
+  "derivedInference": {
+    "version": "pilot-derived-1.0.0",
+    "ruleIds": [
+      "derived-RC11-agentic-divine-outlook"
+    ],
+    "retainedUninferredConstructIds": [
+      "ME07",
+      "MS07",
+      "AH12",
+      "EX09"
+    ]
+  },
+  "resultSemantics": {
+    "version": "pilot-result-states-1.0.0",
+    "engineVersion": "generic-evidence-3"
+  },
+  "evidenceThresholds": {
+    "kind": "authored_duplicate_control",
+    "version": "pilot-evidence-units-1.0.0",
+    "minimumUnitsFromRule": true,
+    "psychometricallyCalibrated": false
+  },
+  "unresolvedConstructIds": [
+    "EP03",
+    "EP05",
+    "AH01",
+    "AH03",
+    "AH06",
+    "RC06",
+    "EX04",
+    "SO04",
+    "SO10",
+    "PL01",
+    "PL12",
+    "PL14",
+    "PL15",
+    "PL19"
+  ],
+  "researchOnlyConstructIds": [
+    "MF07",
+    "AH07",
+    "EX05",
+    "EX07",
+    "EX08",
+    "SO07",
+    "SO08"
+  ],
+  "splitConstructIds": [
+    "EP11",
+    "OM08",
+    "AH04",
+    "AH05",
+    "EX02",
+    "SO12",
+    "PL10",
+    "PL20"
+  ],
+  "previousAuditDispositions": {
+    "derived_only": [
+      "ME07",
+      "MS07",
+      "AH12",
+      "RC11",
+      "EX09"
+    ],
+    "research_only": [
+      "MF07",
+      "AH07",
+      "EX05",
+      "EX07",
+      "EX08",
+      "SO07",
+      "SO08"
+    ],
+    "directly_interpretable": [
+      "EP02",
+      "EP06",
+      "EP10",
+      "AH08",
+      "AH09",
+      "RC02",
+      "RC04",
+      "RC05",
+      "SO03",
+      "SO05",
+      "SO06",
+      "SO09",
+      "SO13",
+      "PL05",
+      "PL25"
+    ],
+    "requires_new_discriminating_items": [
+      "EP03",
+      "AH01"
+    ],
+    "unresolved": [
+      "EP05",
+      "AH03",
+      "AH06",
+      "RC06",
+      "EX04",
+      "SO04",
+      "SO10",
+      "PL01",
+      "PL12",
+      "PL14",
+      "PL15",
+      "PL19"
+    ],
+    "split": [
+      "EP11",
+      "OM08",
+      "AH04",
+      "AH05",
+      "EX02",
+      "SO12",
+      "PL10",
+      "PL20"
+    ]
+  },
+  "deprecatedConstructIds": [
+    "OM03"
+  ],
+  "contentReview": {
+    "version": "pilot-content-review-1.6.0",
+    "path": "data/pilots/content-review-v1.6.json"
+  },
+  "sourceHashes": {
+    "data/items/candidate-v0.15.json": "adef83407fe8563e42d70653d1fd41731a13fb348148ebf218ee3eacac702817",
+    "data/registries/constructs-v0.5.json": "10bcb6ce19330fe5fbe67c4c149eb56c3e18dea8c57ffac035b7ab41b83f6480",
+    "data/sources-v1.8.json": "97492ffd01cf2a4327c26474086e87f770995979966a4463f34bf543249bb14e"
+  },
+  "frozenArtifactHashes": {
+    "data/pilots/content-review-v1.6.json": "5d03132a8d0d099e47d42ea3b43438ba7e5a54bf425a9d07bafe604564927823",
+    "data/instruments/worldview-pilot-v1.6.json": "5ca2b2fbf555a6fbb9ef1192dfb4c6927068ad0cb4eaae1f041f9169a4e63ea7",
+    "data/generic/model-v1.11-pilot.json": "7edb09687470c63a297a9fbee59ef8f6088c616ddf05f82fce2f5ad50001c103",
+    "data/philosophy/public-pilot-v1.11.json": "814decef17d8132c236e112c1812f2eabc706aec75ac092b2f9c40a723408f0a"
+  },
+  "limitations": [
+    "No participant testing, reliability, factor structure, item discrimination, calibrated thresholds, or normative distribution has been established.",
+    "The route includes theoretically motivated research questions that do not generate respondent-facing propositions.",
+    "A not-measured proposition reflects insufficient appropriate route content, even when one relevant response is present.",
+    "SO09 interpretation was retired in this successor; historical release 1.1.0 retains the original rule.",
+    "The scoped Easy Ontology comparison uses the existing Full-route OM14 evidence; wider application and realism compatibility remain unmeasured.",
+    "The federal-division pair is authored and source-backed; its wording and response behavior have not been empirically tested.",
+    "The two scoped epistemic comparisons use authored direct propositions; they do not establish philosophical identity or empirical validity.",
+    "The direct act-consequence rule is source-backed authored content, not an empirically validated act-consequentialism scale.",
+    "The consequence-justified rule criterion is source-backed authored content, not an empirically validated rule-consequentialism scale.",
+    "Literal moral truth-claim answers do not establish that any moral claim is true or identify a metaethical school.",
+    "The source-qualified Quick public-testability proposition does not prove scientific exclusivism or psychometric validity.",
+    "AH14 now uses a direct applied compatibility choice; the two authored units are not empirically independent or calibrated.",
+    "EP10 now concerns possible defeasible first-person initial warrant only; EPI032 and EPI122 are not empirically independent or calibrated, and outsider/public warrant remains unmeasured.",
+    "NE15 now requires one own-good priority unit and one independent other-regarding reason unit; their authored independence and respondent comprehension are not empirically established."
+  ]
+}
