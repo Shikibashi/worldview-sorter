@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://worldview.edriffles.us/schemas/worldview-semantic-relations.schema.json",
+  "title": "Worldview Sorter semantic relation graph",
+  "description": "Presentation-only relations among already interpreted propositions. This layer may explain grounding, non-entailment, compatibility, or tension, but may not create or alter proposition states.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion","graphVersion","modelVersion","inferenceAllowed","relations"],
+  "properties": {
+    "schemaVersion": {"const": "1.0.0"},
+    "graphVersion": {"type":"string","minLength":1},
+    "modelVersion": {"type":"string","minLength":1},
+    "inferenceAllowed": {"const": false},
+    "relations": {
+      "type":"array",
+      "items": {"$ref":"#/$defs/relation"}
+    }
+  },
+  "$defs": {
+    "condition": {
+      "type":"object",
+      "additionalProperties":false,
+      "required":["propositionId","state"],
+      "properties":{
+        "propositionId":{"type":"string","minLength":1},
+        "state":{"enum":["supported","opposed"]}
+      }
+    },
+    "sourceClaim": {
+      "type":"object",
+      "additionalProperties":false,
+      "required":["sourceId","relationship","claim"],
+      "properties":{
+        "sourceId":{"type":"string","minLength":1},
+        "relationship":{"enum":["supports_relation","limits_inference"]},
+        "claim":{"type":"string","minLength":1}
+      }
+    },
+    "base": {
+      "type":"object",
+      "required":["id","type","presentation","inferenceAllowed","explanation","sourceClaims"],
+      "properties":{
+        "id":{"type":"string","minLength":1},
+        "type":{"enum":["grounding","non_entailment","compatibility","potential_tension","logical_conflict"]},
+        "presentation":{"enum":["explanatory_grounding","inference_guard","exploration"]},
+        "inferenceAllowed":{"const":false},
+        "explanation":{"type":"string","minLength":1},
+        "sourceClaims":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/sourceClaim"}}
+      }
+    },
+    "relation": {
+      "oneOf":[
+        {
+          "allOf":[
+            {"$ref":"#/$defs/base"},
+            {
+              "type":"object",
+              "additionalProperties":false,
+              "required":["id","type","presentation","inferenceAllowed","explanation","sourceClaims","premises","conclusion"],
+              "properties":{
+                "id":{"type":"string","minLength":1},
+                "type":{"enum":["grounding","non_entailment"]},
+                "presentation":{"enum":["explanatory_grounding","inference_guard"]},
+                "inferenceAllowed":{"const":false},
+                "explanation":{"type":"string","minLength":1},
+                "sourceClaims":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/sourceClaim"}},
+                "premises":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/condition"}},
+                "conclusion":{"$ref":"#/$defs/condition"}
+              }
+            }
+          ]
+        },
+        {
+          "allOf":[
+            {"$ref":"#/$defs/base"},
+            {
+              "type":"object",
+              "additionalProperties":false,
+              "required":["id","type","presentation","inferenceAllowed","explanation","sourceClaims","members"],
+              "properties":{
+                "id":{"type":"string","minLength":1},
+                "type":{"enum":["compatibility","potential_tension","logical_conflict"]},
+                "presentation":{"const":"exploration"},
+                "inferenceAllowed":{"const":false},
+                "explanation":{"type":"string","minLength":1},
+                "sourceClaims":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/sourceClaim"}},
+                "members":{"type":"array","minItems":2,"items":{"$ref":"#/$defs/condition"}}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
