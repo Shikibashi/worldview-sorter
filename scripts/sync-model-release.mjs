@@ -44,6 +44,11 @@ if(pinned.candidateBank.version==='0.14.0'){
  current.academicRelease={version:'0.14.0',path:'data/academic/release-v0.14.json'};
  current.pilot={version:'pilot-0.7',path:'data/pilots/pilot-0.7.json'};
 }
+if(pinned.candidateBank.version==='0.15.0'){
+ current.instrument={version:'0.15.0-research',path:'data/instruments/research-pool-0.15.json'};
+ current.academicRelease={version:'0.15.0',path:'data/academic/release-v0.15.json'};
+ current.pilot={version:'pilot-0.8',path:'data/pilots/pilot-0.8.json'};
+}
 // Coverage is embedded in the pinned model. An older standalone audit snapshot
 // must not be advertised as coverage for the active release.
 delete current.worldviewCoverage;
@@ -86,7 +91,7 @@ current.modelRelease=index.current;
 current.modelReleaseVersions=index.versions;
 current.releaseChannels=channelIndex.current;
 await verifyRelease(root,current,manifest);
-const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v11.json');
+const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v12.json');
 const activeAffinity=await readJson(root,pinned.affinityCatalog.path);
 if(evidenceAudit.release.modelVersion!==pinned.worldviewModel.version||
  evidenceAudit.release.routePolicyVersion!==pinned.progressiveDepth.version)
@@ -112,7 +117,7 @@ readme=readme.replace('The comparisons and engineering scores remain **unvalidat
  'The nine prototype comparisons and engineering scores remain **unvalidated and non-interpretable**. The public catalog offers qualitative, evidence-scoped comparison rather than a validated classification.');
 readme=readme.replace(/The active full-depth route is the (?:frozen )?[0-9]+-item `pilot-candidate-[0-9.]+`(?: in `model-release-[0-9.]+`)?\./,
  `The active full-depth route is the ${summary.fullRouteItems}-item \`${pinned.pilotCandidate.version}\` in \`${manifest.releaseVersion}\`.`);
-readme=readme.replace(/Candidate bank \*\*0\.9\.0\*\* contains \*\*562 original candidate items\*\*\. The registry has \*\*182 permanent entries\*\*, of which \*\*181 are active\*\*\./,
+readme=readme.replace(/Candidate bank \*\*[0-9.]+\*\* contains \*\*[0-9]+ (?:original |authored )?candidate items\*\*\.(?: The registry has \*\*[0-9]+ permanent entries\*\*, of which \*\*[0-9]+ are active\*\*\.| The active registry includes \*\*[0-9]+ permanent entries\*\*\. The public model has \*\*[0-9]+ direct interpretation rules\*\*, of which \*\*[0-9]+\*\* have a two-direction authored evidence path on Full\.)/,
  `Candidate bank **${pinned.candidateBank.version}** contains **${summary.bankItems} authored candidate items**. The active registry includes **${(await readJson(root,pinned.registry.path)).constructs.length} permanent entries**. The public model has **${summary.publicRules} direct interpretation rules**, of which **${summary.fullRouteAssessableRules}** have a two-direction authored evidence path on Full.`);
 readme=readme.replace('This academic update adds 30 distinctions and 90 items. Its 25-entry source ledger distinguishes reviewed scholarly text, abstracts, and metadata-only references. These sources support conceptual distinctions; they do not validate the new questionnaire.',
  'The historical 0.9.0 academic expansion added 30 distinctions and 90 items. The current source ledger adds claim-level links for subsequent reviewed releases. Sources support conceptual distinctions; they do not validate the questionnaire.');

@@ -1,0 +1,21 @@
+{
+  "version": "0.15.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.14.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-09-30",
+  "note": "Revises the unreleased NEI121 draft’s fourth option to a context-dependent answer, replaces one redundant Full-route item, and narrows NE15 to exclusive moral self-priority. Authored content, not empirical validation.",
+  "itemCount": 569,
+  "newItemCount": 1,
+  "registryEntries": 185,
+  "activeConstructCount": 184,
+  "newConstructCount": 0,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.14.json": "48ed7e3d194d9416628685433d695e709073f2774c0239534313caae230b5780",
+    "data/registries/constructs-v0.5.json": "10bcb6ce19330fe5fbe67c4c149eb56c3e18dea8c57ffac035b7ab41b83f6480"
+  },
+  "publicInferenceAllowed": false
+}
