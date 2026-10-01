@@ -58,16 +58,11 @@ See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access 
 
 ## Independent semantic exploration and reference profiles
 
-Worldview Sorter can attach source-backed explanatory links to already interpreted
-propositions and can compare those propositions with independently authored philosopher or
-tradition reference profiles. These layers cannot change respondent evidence, produce a
-nearest-profile winner, assign an identity, or emit match percentages.
+Worldview Sorter can attach source-backed explanatory links to already interpreted propositions and can compare those propositions with independently authored philosopher or tradition reference profiles. These layers cannot change respondent evidence, produce a nearest-profile winner, assign an identity, or emit match percentages.
 
-Third-party philosopher/profile datasets are not used as content sources. New reference
-content is authored from primary texts and reviewed scholarship under the same claim-level
-provenance rules used elsewhere in the project.
+Third-party philosopher/profile datasets are not used as content sources. New reference content is authored from primary texts and reviewed scholarship under the same claim-level provenance rules used elsewhere in the project. The current reference-profile catalog is an internal readiness/authoring artifact and is not part of the public result experience.
 
-See [independent reimplementation and reference-corpus policy](docs/INDEPENDENT_REIMPLEMENTATION.md).
+See [independent reimplementation and reference-corpus policy](docs/INDEPENDENT_REIMPLEMENTATION.md) and [reference-profile governance](docs/REFERENCE_PROFILES.md).
 
 ## Public quiz experience
 

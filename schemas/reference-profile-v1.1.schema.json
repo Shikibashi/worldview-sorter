@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://worldview.edriffles.us/schemas/reference-profile-v1.1.schema.json",
+  "title": "Worldview Sorter route-aware reference profile",
+  "description": "An internal, independently authored, claim-level comparison pinned to exact proposition and route releases. It cannot assign a philosophical identity or calculate similarity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "profileVersion", "modelVersion", "routePolicyVersion", "id", "label",
+    "entityType", "origin", "coverageStatus", "publicationStatus", "scope", "identityOutputAllowed",
+    "percentageMatchAllowed", "neighbors", "nonEntailments", "unmeasuredAreas", "claims", "limitations"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.1.0" },
+    "profileVersion": { "type": "string", "minLength": 1 },
+    "modelVersion": { "type": "string", "minLength": 1 },
+    "routePolicyVersion": { "type": "string", "minLength": 1 },
+    "id": { "type": "string", "minLength": 1 },
+    "label": { "type": "string", "minLength": 1 },
+    "entityType": { "enum": ["philosopher", "tradition"] },
+    "origin": { "const": "independent_authoring" },
+    "coverageStatus": { "enum": ["stub", "partial", "reviewed"] },
+    "publicationStatus": { "const": "internal_only" },
+    "scope": { "type": "string", "minLength": 1 },
+    "identityOutputAllowed": { "const": false },
+    "percentageMatchAllowed": { "const": false },
+    "neighbors": { "$ref": "#/$defs/textList" },
+    "nonEntailments": { "$ref": "#/$defs/textList" },
+    "unmeasuredAreas": { "$ref": "#/$defs/textList" },
+    "limitations": { "$ref": "#/$defs/textList" },
+    "claims": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/claim" }
+    }
+  },
+  "$defs": {
+    "textList": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "sourceClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceId", "relationship", "locator", "claim"],
+      "properties": {
+        "sourceId": { "type": "string", "minLength": 1 },
+        "relationship": { "const": "supports_profile_claim" },
+        "locator": { "type": "string", "minLength": 1 },
+        "claim": { "type": "string", "minLength": 1 }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "propositionId", "targetKind", "targetText", "expectedState", "importance", "evidenceBasis",
+        "mappingStatus", "routeAvailability", "publicUse", "sourceClaims", "neighbors", "nonEntailments", "limitations"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "propositionId": { "type": "string", "minLength": 1 },
+        "targetKind": { "enum": ["proposition", "scope"] },
+        "targetText": { "type": "string", "minLength": 1 },
+        "expectedState": { "enum": ["supported", "opposed"] },
+        "importance": { "enum": ["core", "major", "minor"] },
+        "evidenceBasis": { "enum": ["primary_text", "scholarly_reconstruction", "editorial_hypothesis"] },
+        "mappingStatus": { "enum": ["DIRECT", "PARTIAL", "ROUTE_LIMITED", "UNMEASURED", "MISSING_PROPOSITION", "UNSUITABLE", "CONTEXT_ONLY"] },
+        "routeAvailability": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "publicUse": { "enum": ["comparison", "context_only"] },
+        "sourceClaims": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/sourceClaim" }
+        },
+        "neighbors": { "$ref": "#/$defs/textList" },
+        "nonEntailments": { "$ref": "#/$defs/textList" },
+        "limitations": { "$ref": "#/$defs/textList" }
+      }
+    }
+  }
+}
