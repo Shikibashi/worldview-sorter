@@ -69,7 +69,13 @@ async function verify(expected){
   assert.ok(!/(^|\/)(?:apps\/server|apps\/web|\.data|research|governance|scripts|examples|node_modules|artifacts)(\/|$)/.test(file),
    'Private or development surface in production artifact: '+file);
   assert.ok(!file.endsWith('.map')&&!file.endsWith('.env'),'Debug or secret file in production artifact: '+file);
+  assert.ok(!/(?:^|\/)(?:ar-draft|es-ES-draft)-v\d+\.json$/.test(file),
+   'Unapproved wording draft must not be published: '+file);
  }
+ const deployedCurrent=JSON.parse(await readFile(path.join(output,'data/current.json'),'utf8'));
+ for(const key of ['localizationBundles','localizationBundleVersions'])
+  assert.ok(deployedCurrent[key].every(ref=>ref.locale==='en-US'),
+   'Public runtime reference is outside the canonical wording set: '+key);
  const entry=await readFile(path.join(output,'index.html'),'utf8');
  assert.ok(entry.includes('Worldview Sorter')&&entry.includes('src="./apps/quiz/app.js"'),
   'The custom-domain root must open the public quiz.');
@@ -84,6 +90,11 @@ await mkdir(output,{recursive:true});
 const current=await json('data/current.json');
 const subset={schemaVersion:current.schemaVersion};
 for(const key of publicCurrentKeys){assert.ok(current[key]!==undefined,'Missing active runtime reference: '+key);subset[key]=current[key];}
+for(const key of ['localizationBundles','localizationBundleVersions'])
+ subset[key]=subset[key].filter(ref=>ref.locale==='en-US');
+assert.ok(subset.localizationBundles.every(ref=>ref.locale==='en-US')&&
+ subset.localizationBundleVersions.every(ref=>ref.locale==='en-US'),
+ 'The public artifact may include only the canonical wording set.');
 for(const key of publicCurrentKeys){
  const value=subset[key];
  for(const ref of Array.isArray(value)?value:[value])addRef(ref);

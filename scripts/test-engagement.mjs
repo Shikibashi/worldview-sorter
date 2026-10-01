@@ -75,13 +75,13 @@ const pinned=create('overview',{selectedIds:[selected.id],administration:{...adm
  localization:{locale:'en-US',language:'en',direction:'ltr',bundleVersion:'localization-en-US-1.0.0',catalogVersion:'localization-catalog-1.0.0'}}});
 assert.equal(validateShareSnapshot(pinned).localization.bundleVersion,'localization-en-US-1.0.0');
 assert.equal(compareShareSnapshots(overview,pinned).wordingChanged,true);
-assert.match(shareSnapshotText(overview),/historical English, version unpinned/);
+assert.match(shareSnapshotText(overview),/historical wording, version unpinned/);
 const historical={...structuredClone(overview),schemaVersion:'worldview-share-1'};delete historical.localization;
 for(const row of historical.rows){row.proposition??=row.scope;delete row.scope;delete row.propositionBasis;
  row.sources=row.sources.map(({title,url})=>({title,url}));}
 assert.equal(validateShareSnapshot(historical),historical);
 assert.throws(()=>create('overview',{selectedIds:[selected.id],administration:{...administration,
- localization:{locale:'es-ES',language:'es',direction:'ltr',bundleVersion:'draft',catalogVersion:'draft'}}}));
+ localization:{locale:'other',language:'other',direction:'ltr',bundleVersion:'draft',catalogVersion:'draft'}}}));
 assert.equal(overview.rows[0].status,selected.status);
 assert.equal(overview.rows[0].statusLabel,selected.statusLabel);
 assert.equal(overview.rows[0].proposition,selected.proposition);
