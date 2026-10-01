@@ -1,0 +1,21 @@
+{
+  "version": "0.16.0",
+  "registryVersion": "0.2.0",
+  "baseBankVersion": "0.15.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-10-01",
+  "note": "Adds one original pragmatic-method discriminator and substitutes it with EPI103 for two weaker Full-route items. Authored content, not empirical validation.",
+  "itemCount": 570,
+  "newItemCount": 1,
+  "registryEntries": 185,
+  "activeConstructCount": 184,
+  "newConstructCount": 0,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.15.json": "adef83407fe8563e42d70653d1fd41731a13fb348148ebf218ee3eacac702817",
+    "data/registries/constructs-v0.5.json": "10bcb6ce19330fe5fbe67c4c149eb56c3e18dea8c57ffac035b7ab41b83f6480"
+  },
+  "publicInferenceAllowed": false
+}

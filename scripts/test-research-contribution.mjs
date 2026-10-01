@@ -279,7 +279,9 @@ try{
  assert.ok(!selfInterestEvidence.some(e=>e.itemId==='NEI102'),
   'Ambiguous reverse evidence must not leak into the successor rule.');
  assert.ok(claimIndex.directRules.find(rule=>rule.id==='construct-EP16').sourceLinks.some(link=>
-  link.sourceId==='acad-pragmatism'&&link.claimStatus==='topic_only'));
+  link.sourceId==='acad-pragmatism'&&link.claimStatus==='rule_linked_claim'&&
+  link.linkedClaims.some(claim=>claim.claim.includes('conceivable experiential or practical bearings'))),
+ 'The active research handoff must retain the scoped pragmatic-maxim claim.');
  assert.equal(claimIndex.derivedRules.length,1);
  assert.ok(codebook.flatMap(item=>item.authoredRuleUses).some(use=>use.propositionBasis==='inherited_rule_scope'&&
   use.proposition===null&&typeof use.scope==='string'));

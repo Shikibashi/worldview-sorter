@@ -1,0 +1,5516 @@
+{
+  "schemaVersion": "pilot-content-review-1",
+  "reviewVersion": "pilot-content-review-1.7.0",
+  "sourceFormPolicyVersion": "philosophy-pilot-1.12.0",
+  "sourceSeed": "pilot-v1-content",
+  "sourceAssignedItems": 240,
+  "frozenAssignedItems": 243,
+  "reviewLimit": "Authored content judgment before cognitive interviews and human data; parallel wording may be locally dependent and no item discrimination is estimated.",
+  "repeatedWordingAndDependenceGroups": [
+    {
+      "id": "value-importance-parallels",
+      "itemIds": [
+        "VAI003",
+        "VAI039",
+        "VAI009",
+        "VAI023",
+        "VAI020",
+        "VAI036",
+        "VAI027",
+        "VAI041",
+        "VAI008",
+        "VAI042"
+      ],
+      "note": "Short value-importance stems repeat across paired facets. The different manifestations may help pilot review, but shared format and wording could create local dependence."
+    },
+    {
+      "id": "egoism-general-and-helping",
+      "itemIds": [
+        "AHI100",
+        "AHI101",
+        "AHI102"
+      ],
+      "note": "A universal motive thesis, an apparent-helping case, and an altruistic-desire alternative must be kept conceptually distinct."
+    },
+    {
+      "id": "rescue-near-duplicate",
+      "itemIds": [
+        "NEI005",
+        "NEI030"
+      ],
+      "note": "The two rescue scenarios share the same instrumental-harm structure; NEI030 is removed from the frozen route."
+    },
+    {
+      "id": "existential-possibilities-near-duplicate",
+      "itemIds": [
+        "EXI004",
+        "EXI017"
+      ],
+      "note": "Interesting or worthwhile possibilities are too close to provide two cleanly distinct units; EXI017 is removed."
+    }
+  ],
+  "contentGapsFromPriorAudit": [
+    {
+      "constructId": "MF07",
+      "disposition": "research_only"
+    },
+    {
+      "constructId": "EP03",
+      "disposition": "requires_new_discriminating_items"
+    },
+    {
+      "constructId": "EP05",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "AH01",
+      "disposition": "requires_new_discriminating_items"
+    },
+    {
+      "constructId": "AH03",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "AH06",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "AH07",
+      "disposition": "research_only"
+    },
+    {
+      "constructId": "RC06",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "EX04",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "EX05",
+      "disposition": "research_only"
+    },
+    {
+      "constructId": "EX07",
+      "disposition": "research_only"
+    },
+    {
+      "constructId": "EX08",
+      "disposition": "research_only"
+    },
+    {
+      "constructId": "SO04",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "SO07",
+      "disposition": "research_only"
+    },
+    {
+      "constructId": "SO08",
+      "disposition": "research_only"
+    },
+    {
+      "constructId": "SO10",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "PL01",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "PL12",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "PL14",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "PL15",
+      "disposition": "unresolved"
+    },
+    {
+      "constructId": "PL19",
+      "disposition": "unresolved"
+    }
+  ],
+  "decisions": [
+    {
+      "sourcePosition": 1,
+      "itemId": "PLI003",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL05"
+      ],
+      "mappedRuleIds": [
+        "audit2-PL05-decentralization"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI004",
+        "PLI050"
+      ],
+      "responseMethod": "likert",
+      "contribution": "deliberate_counter_key",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Centralization vs decentralization; compare with PLI004, PLI050 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 2,
+      "itemId": "PLI002",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL02"
+      ],
+      "mappedRuleIds": [
+        "legacy-philosophical-anarchism-no-general-obedience"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI025",
+        "PLI048"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about General political obligation; compare with PLI025, PLI048 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 3,
+      "itemId": "EPI116",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP20"
+      ],
+      "mappedRuleIds": [
+        "construct-EP20"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI117",
+        "EPI115"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "wording_ambiguity",
+      "rationale": "“Highly abstract factual claims” may invite different examples; compare with concrete-knowledge and pure-reason items.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 4,
+      "itemId": "PLI035",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL13"
+      ],
+      "mappedRuleIds": [
+        "legacy-objectivism-market-coordination"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI055"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "policy_proxy_boundary",
+      "rationale": "Market-versus-planning wording supports only a coordination preference, not a general ideology.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 5,
+      "itemId": "PLI004",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL05"
+      ],
+      "mappedRuleIds": [
+        "audit2-PL05-decentralization"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI003",
+        "PLI050"
+      ],
+      "responseMethod": "likert",
+      "contribution": "deliberate_counter_key",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Centralization vs decentralization; compare with PLI003, PLI050 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 6,
+      "itemId": "EPI117",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP20"
+      ],
+      "mappedRuleIds": [
+        "construct-EP20"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI116",
+        "EPI115"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Perceptual-conceptual basis of factual warrant; compare with EPI116, EPI115 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 7,
+      "itemId": "PLI009",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL03"
+      ],
+      "mappedRuleIds": [
+        "ph-consent-authority"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI056"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Consent requirement for authority; compare with PLI056 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 8,
+      "itemId": "PLI008",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL09"
+      ],
+      "mappedRuleIds": [
+        "ph-rights-constraints"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI052"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Rights as side constraints; compare with PLI052 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 9,
+      "itemId": "OMI100",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM11"
+      ],
+      "mappedRuleIds": [
+        "construct-OM11"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI101",
+        "OMI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Abstract-object commitment; compare with OMI101, OMI102 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 10,
+      "itemId": "PLI058",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL08"
+      ],
+      "mappedRuleIds": [
+        "effective-freedom"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI011"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Positive / capability liberty; compare with PLI011 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 11,
+      "itemId": "EPI115",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP20"
+      ],
+      "mappedRuleIds": [
+        "construct-EP20"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI116",
+        "EPI117"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Perceptual-conceptual basis of factual warrant; compare with EPI116, EPI117 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 12,
+      "itemId": "PLI020",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL22"
+      ],
+      "mappedRuleIds": [
+        "ph-political-cosmopolitanism"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI067"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Cosmopolitan political scope; compare with PLI067 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 13,
+      "itemId": "NEI116",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE20"
+      ],
+      "mappedRuleIds": [
+        "construct-NE20"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI115"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Reliance-based reasons for performance or repair; compare with NEI115 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 14,
+      "itemId": "OMI101",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM11"
+      ],
+      "mappedRuleIds": [
+        "construct-OM11"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI100",
+        "OMI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Abstract-object commitment; compare with OMI100, OMI102 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 15,
+      "itemId": "EPI109",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP18"
+      ],
+      "mappedRuleIds": [
+        "construct-EP18"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI110",
+        "EPI111"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Noninferential foundations of justification; compare with EPI110, EPI111 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 16,
+      "itemId": "PLI022",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL24"
+      ],
+      "mappedRuleIds": [
+        "ph-polycentric-order"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI069"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Institutional pluralism / polycentricity; compare with PLI069 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 17,
+      "itemId": "NEI115",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE20"
+      ],
+      "mappedRuleIds": [
+        "construct-NE20"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI116"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Reliance-based reasons for performance or repair; compare with NEI116 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 18,
+      "itemId": "OMI111",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM14"
+      ],
+      "mappedRuleIds": [
+        "construct-OM14"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI110",
+        "OMI109"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "awkward_reverse_key",
+      "rationale": "The “separate deep metaphysical test is always required” wording risks acquiescence or broad disagreement unrelated to a precise metaontological view.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 19,
+      "itemId": "EPI110",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP18"
+      ],
+      "mappedRuleIds": [
+        "construct-EP18"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI109",
+        "EPI111"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Noninferential foundations of justification; compare with EPI109, EPI111 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 20,
+      "itemId": "SOI036",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO11"
+      ],
+      "mappedRuleIds": [
+        "ph-social-constitution"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI013"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Social-construction orientation; compare with SOI013 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 21,
+      "itemId": "PLI054",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL11"
+      ],
+      "mappedRuleIds": [
+        "ph-strong-property"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI013"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Property-right strength; compare with PLI013 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 22,
+      "itemId": "NEI112",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE19"
+      ],
+      "mappedRuleIds": [
+        "construct-NE19"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI113"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Continuing endorsement and exit from commitments; compare with NEI113 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 23,
+      "itemId": "OMI110",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM14"
+      ],
+      "mappedRuleIds": [
+        "construct-OM14"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI111",
+        "OMI109"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Easy or deflationary approach to ontology; compare with OMI111, OMI109 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 24,
+      "itemId": "EPI111",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP18"
+      ],
+      "mappedRuleIds": [
+        "construct-EP18"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI109",
+        "EPI110"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Noninferential foundations of justification; compare with EPI109, EPI110 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 25,
+      "itemId": "MEI100",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME09"
+      ],
+      "mappedRuleIds": [
+        "construct-ME09"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI101",
+        "MEI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "double_barrel_risk",
+      "rationale": "Human needs and flourishing can ground standards in different ways; neighboring items constrain the interpretation.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 26,
+      "itemId": "SOI037",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO13"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO13-just-world"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI038"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "empirical_generalization",
+      "rationale": "Whether outcomes are deserved can be read as an empirical claim about the world; do not infer a full distributive principle.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 27,
+      "itemId": "PLI025",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL02"
+      ],
+      "mappedRuleIds": [
+        "legacy-philosophical-anarchism-no-general-obedience"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI002",
+        "PLI048"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about General political obligation; compare with PLI002, PLI048 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 28,
+      "itemId": "NEI113",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE19"
+      ],
+      "mappedRuleIds": [
+        "construct-NE19"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI112"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Continuing endorsement and exit from commitments; compare with NEI112 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 29,
+      "itemId": "RCI010",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC05"
+      ],
+      "mappedRuleIds": [
+        "audit2-RC05-miracles"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI017"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Miraculous intervention; compare with RCI017 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 30,
+      "itemId": "OMI108",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM13"
+      ],
+      "mappedRuleIds": [
+        "construct-OM13"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI106",
+        "OMI107"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ordinary external-world independence; compare with OMI106, OMI107 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 31,
+      "itemId": "EPI101",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP15"
+      ],
+      "mappedRuleIds": [
+        "construct-EP15"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI100"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Fallibilism about knowledge; compare with EPI100 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 32,
+      "itemId": "SOI027",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO03"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO03-relational-self"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI003"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Relational / interdependent self; compare with SOI003 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 33,
+      "itemId": "MEI101",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME09"
+      ],
+      "mappedRuleIds": [
+        "construct-ME09"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI100",
+        "MEI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Human-life grounding of moral standards; compare with MEI100, MEI102 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 34,
+      "itemId": "PLI055",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL13"
+      ],
+      "mappedRuleIds": [
+        "legacy-objectivism-market-coordination"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI035"
+      ],
+      "responseMethod": "paired_choice",
+      "contribution": "method_diversity_tradeoff",
+      "decision": "retain_for_pilot",
+      "issue": "policy_proxy_boundary",
+      "rationale": "The equal-competence board scenario checks coordination preference without inferring a complete political economy.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 35,
+      "itemId": "NEI110",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE18"
+      ],
+      "mappedRuleIds": [
+        "construct-NE18"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI109"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Promissory self-binding; compare with NEI109 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 36,
+      "itemId": "VAI005",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA02",
+        "VA09",
+        "VA05",
+        "VA11",
+        "VA17"
+      ],
+      "mappedRuleIds": [],
+      "nearbyRouteItemIds": [
+        "VAI003",
+        "VAI041",
+        "VAI039",
+        "VAI020",
+        "VAI027",
+        "VAI036"
+      ],
+      "responseMethod": "ranking",
+      "contribution": "comparative_research_variable",
+      "decision": "retain_for_pilot",
+      "issue": "ranking_research_variable",
+      "rationale": "Forced ranking is comparative and cannot be converted to separate absolute importance claims.",
+      "resultUse": "research_variable_only"
+    },
+    {
+      "sourcePosition": 37,
+      "itemId": "RCI013",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC10"
+      ],
+      "mappedRuleIds": [
+        "ph-religious-priority"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI030"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "wording_comprehension",
+      "rationale": "The fragment relies on the importance response instruction; check that respondents read it as personal importance rather than a truth claim.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 38,
+      "itemId": "OMI109",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM14"
+      ],
+      "mappedRuleIds": [
+        "construct-OM14"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI111",
+        "OMI110"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Easy or deflationary approach to ontology; compare with OMI111, OMI110 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 39,
+      "itemId": "EPI100",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP15"
+      ],
+      "mappedRuleIds": [
+        "construct-EP15"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI101"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Fallibilism about knowledge; compare with EPI101 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 40,
+      "itemId": "SOI026",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO02"
+      ],
+      "mappedRuleIds": [
+        "ph-group-agency"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI002"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Collectivism; compare with SOI002 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 41,
+      "itemId": "MEI102",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME09"
+      ],
+      "mappedRuleIds": [
+        "construct-ME09"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI100",
+        "MEI101"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Human-life grounding of moral standards; compare with MEI100, MEI101 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 42,
+      "itemId": "PLI056",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL03"
+      ],
+      "mappedRuleIds": [
+        "ph-consent-authority"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI009"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Consent requirement for authority; compare with PLI009 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 43,
+      "itemId": "NEI009",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE05"
+      ],
+      "mappedRuleIds": [
+        "reasonable-rejection"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI031"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Contractualist non-rejectability; compare with NEI031 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 44,
+      "itemId": "VAI003",
+      "itemRevision": 2,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA05"
+      ],
+      "mappedRuleIds": [
+        "priority-VA05"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI005",
+        "VAI039"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "parallel_indicator",
+      "rationale": "Competence and achievement wording parallels VAI039; any interpretation stays limited to reported value importance.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 45,
+      "itemId": "RCI012",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC09"
+      ],
+      "mappedRuleIds": [
+        "ph-sacred-value"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI029"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Sacredness orientation; compare with RCI029 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 46,
+      "itemId": "EPI105",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP16"
+      ],
+      "mappedRuleIds": [
+        "construct-EP16"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI104"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "awkward_reverse_key",
+      "rationale": "The absolute “always” and indirect negation may elicit disagreement without affirming a specific pragmatist view.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 47,
+      "itemId": "SOI031",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO05"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO05-dominance"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI009"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Group-dominance preference; compare with SOI009 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 48,
+      "itemId": "MEI103",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME10"
+      ],
+      "mappedRuleIds": [
+        "construct-ME10"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI104",
+        "MEI105"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Choice-to-live conditionality of moral reasons; compare with MEI104, MEI105 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 49,
+      "itemId": "PLI050",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL05"
+      ],
+      "mappedRuleIds": [
+        "audit2-PL05-decentralization"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI003",
+        "PLI004"
+      ],
+      "responseMethod": "paired_choice",
+      "contribution": "method_diversity_tradeoff",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Centralization vs decentralization; compare with PLI003, PLI004 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 50,
+      "itemId": "NEI001",
+      "itemRevision": 2,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE01"
+      ],
+      "mappedRuleIds": [
+        "outcomes-count"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI005",
+        "NEI025"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Consequence sensitivity; compare with NEI005, NEI025 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 51,
+      "itemId": "VAI008",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA15"
+      ],
+      "mappedRuleIds": [
+        "priority-VA15"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI042",
+        "VAI031"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Benevolence: caring; compare with VAI042, VAI031 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 52,
+      "itemId": "OMI018",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM06"
+      ],
+      "mappedRuleIds": [
+        "ph-governing-laws",
+        "ph-humean-laws"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI016",
+        "OMI017"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Laws of nature: Humean / non-Humean; compare with OMI016, OMI017 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 53,
+      "itemId": "RCI015",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC02"
+      ],
+      "mappedRuleIds": [
+        "audit2-RC02-agentic-divinity"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI002",
+        "RCI025"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Personal / agentic deity; compare with RCI002, RCI025 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 54,
+      "itemId": "EPI104",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP16"
+      ],
+      "mappedRuleIds": [
+        "construct-EP16"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI105"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Pragmatic clarification through consequences; compare with EPI105 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 55,
+      "itemId": "SOI025",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO01"
+      ],
+      "mappedRuleIds": [
+        "ph-individual-claims"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI001"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Individualism; compare with SOI001 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 56,
+      "itemId": "MEI104",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME10"
+      ],
+      "mappedRuleIds": [
+        "construct-ME10"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI103",
+        "MEI105"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Choice-to-live conditionality of moral reasons; compare with MEI103, MEI105 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 57,
+      "itemId": "PLI052",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL09"
+      ],
+      "mappedRuleIds": [
+        "ph-rights-constraints"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI008"
+      ],
+      "responseMethod": "paired_choice",
+      "contribution": "method_diversity_tradeoff",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Rights as side constraints; compare with PLI008 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 58,
+      "itemId": "NEI002",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE02"
+      ],
+      "mappedRuleIds": [
+        "moral-constraints"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI005",
+        "NEI026"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Deontic constraint strength; compare with NEI005, NEI026 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 59,
+      "itemId": "VAI009",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA06"
+      ],
+      "mappedRuleIds": [
+        "priority-VA06"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI023"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "parallel_indicator",
+      "rationale": "Authority wording parallels VAI023; no empirical independence is presumed.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 60,
+      "itemId": "OMI014",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM05"
+      ],
+      "mappedRuleIds": [
+        "ph-inherent-purpose"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI004"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Teleology / purposiveness in nature; compare with OMI004 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 61,
+      "itemId": "RCI014",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC01"
+      ],
+      "mappedRuleIds": [
+        "divine-existence"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI001",
+        "RCI021"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Deity existence; compare with RCI001, RCI021 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 62,
+      "itemId": "EPI026",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP06"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP06-testability"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI004"
+      ],
+      "responseMethod": "paired_choice",
+      "contribution": "method_diversity_tradeoff",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Scientific-method reliance; compare with EPI004 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 63,
+      "itemId": "SOI032",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO06"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO06-anti-egalitarian"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI010"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Anti-egalitarianism; compare with SOI010 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 64,
+      "itemId": "MEI105",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME10"
+      ],
+      "mappedRuleIds": [
+        "construct-ME10"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI103",
+        "MEI104"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Choice-to-live conditionality of moral reasons; compare with MEI103, MEI104 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 65,
+      "itemId": "AHI105",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH14"
+      ],
+      "mappedRuleIds": [
+        "construct-AH14"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI104",
+        "AHI103"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Incompatibilist condition on free agency; compare with AHI104, AHI103 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 66,
+      "itemId": "PLI109",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL30"
+      ],
+      "mappedRuleIds": [
+        "construct-PL30"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI111",
+        "PLI110"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Nonstate adjudication and protective provision; compare with PLI111, PLI110 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 67,
+      "itemId": "NEI004",
+      "itemRevision": 2,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE07",
+        "NE09"
+      ],
+      "mappedRuleIds": [
+        "impartial-beneficence"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI044"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "scope_boundary",
+      "rationale": "Equal welfare weight is not the same as equal duties to every person.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 68,
+      "itemId": "OMI016",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM06"
+      ],
+      "mappedRuleIds": [
+        "ph-governing-laws"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI018",
+        "OMI017"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Laws of nature: Humean / non-Humean; compare with OMI018, OMI017 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 69,
+      "itemId": "VAI041",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA11"
+      ],
+      "mappedRuleIds": [
+        "priority-VA11"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI005",
+        "VAI027"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Tradition; compare with VAI005, VAI027 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 70,
+      "itemId": "RCI017",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC05"
+      ],
+      "mappedRuleIds": [
+        "audit2-RC05-miracles"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI010"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Miraculous intervention; compare with RCI010 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 71,
+      "itemId": "EPI039",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP12"
+      ],
+      "mappedRuleIds": [
+        "ph-coherent-justification"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI040",
+        "EPI042"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Theory of justification; compare with EPI040, EPI042 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 72,
+      "itemId": "AHI104",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH14"
+      ],
+      "mappedRuleIds": [
+        "construct-AH14"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI105",
+        "AHI103"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Incompatibilist condition on free agency; compare with AHI105, AHI103 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 73,
+      "itemId": "SOI038",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO13"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO13-just-world"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI037"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Belief in social/world justice; compare with SOI037 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 74,
+      "itemId": "PLI119",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL33"
+      ],
+      "mappedRuleIds": [
+        "construct-PL33"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI118"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Contractual remedies distinct from continuing assent; compare with PLI118 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 75,
+      "itemId": "NEI005",
+      "itemRevision": 2,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE08",
+        "NE01",
+        "NE02"
+      ],
+      "mappedRuleIds": [
+        "instrumental-harm"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI001",
+        "NEI002",
+        "NEI026",
+        "NEI025",
+        "NEI030"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": "local_dependence_risk",
+      "rationale": "Its severe-injury rescue case is retained; the near-duplicate NEI030 is removed. One case does not establish a general theory of instrumental harm.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 76,
+      "itemId": "OMI017",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM06"
+      ],
+      "mappedRuleIds": [
+        "ph-humean-laws"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI018",
+        "OMI016"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Laws of nature: Humean / non-Humean; compare with OMI018, OMI016 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 77,
+      "itemId": "MEI003",
+      "itemRevision": 2,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME03"
+      ],
+      "mappedRuleIds": [
+        "ph-context-sensitive"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI025"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Moral context-sensitivity; compare with MEI025 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 78,
+      "itemId": "VAI039",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA05"
+      ],
+      "mappedRuleIds": [
+        "priority-VA05"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI005",
+        "VAI003"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "parallel_indicator",
+      "rationale": "Ambitious-goal wording adds a concrete achievement manifestation but may share wording effects with VAI003.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 79,
+      "itemId": "RCI016",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC04"
+      ],
+      "mappedRuleIds": [
+        "audit2-RC04-intervention"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI009"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Divine / supernatural intervention; compare with RCI009 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 80,
+      "itemId": "EPI021",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP10"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP10-revelation"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI032"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Revelation as epistemic source; compare with EPI032 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 81,
+      "itemId": "AHI101",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH13"
+      ],
+      "mappedRuleIds": [
+        "construct-AH13"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI100",
+        "AHI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "near_duplicate_local_dependence",
+      "rationale": "The helping example parallels AHI100, but tests whether the broad thesis extends to apparently unrewarded helping.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 82,
+      "itemId": "SOI009",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO05"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO05-dominance"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI031"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Group-dominance preference; compare with SOI031 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 83,
+      "itemId": "PLI118",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL33"
+      ],
+      "mappedRuleIds": [
+        "construct-PL33"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI119"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Contractual remedies distinct from continuing assent; compare with PLI119 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 84,
+      "itemId": "NEI011",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE10"
+      ],
+      "mappedRuleIds": [
+        "ph-personal-prerogatives"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI034"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Agent-relative prerogatives / self-priority; compare with NEI034 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 85,
+      "itemId": "OMI007",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM04"
+      ],
+      "mappedRuleIds": [
+        "ph-full-reduction"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI006"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Reductionism and emergence; compare with OMI006 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 86,
+      "itemId": "MEI002",
+      "itemRevision": 2,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME01"
+      ],
+      "mappedRuleIds": [
+        "ph-stance-independence"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI023"
+      ],
+      "responseMethod": "likert",
+      "contribution": "deliberate_counter_key",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Moral stance-independence / objectivity; compare with MEI023 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 87,
+      "itemId": "VAI042",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA15"
+      ],
+      "mappedRuleIds": [
+        "priority-VA15"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI008",
+        "VAI031"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Benevolence: caring; compare with VAI008, VAI031 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 88,
+      "itemId": "RCI008",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC08"
+      ],
+      "mappedRuleIds": [
+        "ph-cosmic-purpose"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI005"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Cosmic purpose; compare with RCI005 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 89,
+      "itemId": "MSI018",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS06"
+      ],
+      "mappedRuleIds": [
+        "ph-external-content"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI019"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": "philosophy_knowledge_risk",
+      "rationale": "The Twin Earth example may test familiarity with a philosophical thought experiment; retain only as a contextual case beside the plain-language item.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 90,
+      "itemId": "EPI030",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP08"
+      ],
+      "mappedRuleIds": [
+        "ph-tradition-evidence"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI019"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Tradition as epistemic source; compare with EPI019 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 91,
+      "itemId": "AHI100",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH13"
+      ],
+      "mappedRuleIds": [
+        "construct-AH13"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI101",
+        "AHI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "near_duplicate_local_dependence",
+      "rationale": "Broad universal egoism claim; compare with the helping example and altruistic-desire counterclaim before treating answers as a pattern.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 92,
+      "itemId": "SOI013",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO11"
+      ],
+      "mappedRuleIds": [
+        "ph-social-constitution"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI036"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Social-construction orientation; compare with SOI036 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 93,
+      "itemId": "PLI111",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL30"
+      ],
+      "mappedRuleIds": [
+        "construct-PL30"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI109",
+        "PLI110"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "awkward_reverse_key",
+      "rationale": "The absolute denial of legitimate nonstate adjudication may be rejected for many reasons; interpret beside affirmative alternatives.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 94,
+      "itemId": "NEI026",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE02"
+      ],
+      "mappedRuleIds": [
+        "moral-constraints"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI002",
+        "NEI005"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Deontic constraint strength; compare with NEI002, NEI005 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 95,
+      "itemId": "OMI006",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM04"
+      ],
+      "mappedRuleIds": [
+        "ph-full-reduction"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI007"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Reductionism and emergence; compare with OMI007 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 96,
+      "itemId": "MEI004",
+      "itemRevision": 2,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME05"
+      ],
+      "mappedRuleIds": [
+        "ph-categorical-reasons"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI007",
+        "MEI026"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Categorical moral reasons; compare with MEI007, MEI026 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 97,
+      "itemId": "VAI022",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA04"
+      ],
+      "mappedRuleIds": [
+        "priority-VA04"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI038"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Hedonism; compare with VAI038 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 98,
+      "itemId": "RCI009",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC04"
+      ],
+      "mappedRuleIds": [
+        "audit2-RC04-intervention"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI016"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Divine / supernatural intervention; compare with RCI016 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 99,
+      "itemId": "MSI019",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS06"
+      ],
+      "mappedRuleIds": [
+        "ph-external-content"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI018"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Mental-content internalism / externalism; compare with MSI018 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 100,
+      "itemId": "EPI028",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP02"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP02-complex-knowledge"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI009"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Knowledge complexity; compare with EPI009 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 101,
+      "itemId": "AHI103",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH14"
+      ],
+      "mappedRuleIds": [
+        "construct-AH14"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI105",
+        "AHI104"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Incompatibilist condition on free agency; compare with AHI105, AHI104 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 102,
+      "itemId": "SOI010",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO06"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO06-anti-egalitarian"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI032"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Anti-egalitarianism; compare with SOI032 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 103,
+      "itemId": "PLI110",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL30"
+      ],
+      "mappedRuleIds": [
+        "construct-PL30"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI109",
+        "PLI111"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Nonstate adjudication and protective provision; compare with PLI109, PLI111 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 104,
+      "itemId": "NEI025",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE01"
+      ],
+      "mappedRuleIds": [
+        "outcomes-count"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI001",
+        "NEI005"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Consequence sensitivity; compare with NEI001, NEI005 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 105,
+      "itemId": "MFI018",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF06"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-purity"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI028"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Purity; compare with MFI028 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 106,
+      "itemId": "OMI004",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM05"
+      ],
+      "mappedRuleIds": [
+        "ph-inherent-purpose"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI014"
+      ],
+      "responseMethod": "likert",
+      "contribution": "deliberate_counter_key",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Teleology / purposiveness in nature; compare with OMI014 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 107,
+      "itemId": "MEI007",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME05"
+      ],
+      "mappedRuleIds": [
+        "ph-categorical-reasons"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI004",
+        "MEI026"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Categorical moral reasons; compare with MEI004, MEI026 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 108,
+      "itemId": "VAI038",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA04"
+      ],
+      "mappedRuleIds": [
+        "priority-VA04"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI022"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Hedonism; compare with VAI022 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 109,
+      "itemId": "RCI006",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC03"
+      ],
+      "mappedRuleIds": [
+        "ph-supernatural-reality"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI003"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Supernatural reality; compare with RCI003 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 110,
+      "itemId": "EXI008",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX01"
+      ],
+      "mappedRuleIds": [
+        "objective-meaning"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI001",
+        "EXI006"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Ontology of life's meaning; compare with EXI001, EXI006 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 111,
+      "itemId": "MSI011",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS04"
+      ],
+      "mappedRuleIds": [
+        "ph-process-self"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI003"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Substantial-self vs process-self orientation; compare with MSI003 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 112,
+      "itemId": "EPI032",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP10"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP10-revelation"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI021"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Revelation as epistemic source; compare with EPI021 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 113,
+      "itemId": "AHI102",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH13"
+      ],
+      "mappedRuleIds": [
+        "construct-AH13"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI101",
+        "AHI100"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Psychological egoism; compare with AHI101, AHI100 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 114,
+      "itemId": "SOI029",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO09"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO09-moral-scope"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI004"
+      ],
+      "responseMethod": "paired_choice",
+      "contribution": "method_diversity_tradeoff",
+      "decision": "retain_for_pilot",
+      "issue": "social_desirability_risk",
+      "rationale": "Equal-harm local-versus-distant choice may invite a socially favored answer; compare with general concern and policy distinction.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 115,
+      "itemId": "PLI113",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL31"
+      ],
+      "mappedRuleIds": [
+        "construct-PL31"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI112"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Institutional value independent of obedience; compare with PLI112 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 116,
+      "itemId": "MFI015",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF03"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-proportionality"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI025"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Proportionality; compare with MFI025 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 117,
+      "itemId": "MEI008",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME04"
+      ],
+      "mappedRuleIds": [
+        "ph-particular-judgment"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI015"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Generalism vs particularism; compare with MEI015 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 118,
+      "itemId": "NEI101",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE15"
+      ],
+      "mappedRuleIds": [
+        "construct-NE15"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI100"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ethical egoism as a normative principle; compare with NEI100 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 119,
+      "itemId": "OMI030",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM10"
+      ],
+      "mappedRuleIds": [
+        "ph-concrete-worlds"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI029"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": "philosophical_jargon",
+      "rationale": "Possible-world options require technical understanding; keep research-only and check comprehension.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 120,
+      "itemId": "VAI023",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA06"
+      ],
+      "mappedRuleIds": [
+        "priority-VA06"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI009"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "parallel_indicator",
+      "rationale": "Directing others is a concrete expression of authority; no empirical independence is presumed.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 121,
+      "itemId": "RCI004",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC07"
+      ],
+      "mappedRuleIds": [
+        "afterlife-belief"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI023"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Afterlife / postmortem persistence; compare with RCI023 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 122,
+      "itemId": "MSI012",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS05"
+      ],
+      "mappedRuleIds": [
+        "extended-cognition"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI004"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Extended-mind acceptance; compare with MSI004 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 123,
+      "itemId": "EXI001",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX01"
+      ],
+      "mappedRuleIds": [
+        "objective-meaning"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI008",
+        "EXI006"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ontology of life's meaning; compare with EXI008, EXI006 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 124,
+      "itemId": "EPI034",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP11"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP11-external-world"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI037",
+        "EPI036"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": "philosophical_jargon",
+      "rationale": "Direct and indirect perception vocabulary may be interpreted differently by respondents; nearby world-existence questions limit inference.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 125,
+      "itemId": "SOI004",
+      "itemRevision": 2,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO09"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO09-moral-scope"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI029"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "scope_boundary",
+      "rationale": "Equal moral claims across distance do not imply equal institutional obligations.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 126,
+      "itemId": "PLI112",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL31"
+      ],
+      "mappedRuleIds": [
+        "construct-PL31"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI113"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Institutional value independent of obedience; compare with PLI113 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 127,
+      "itemId": "MFI014",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF02"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-equality"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI024"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Equality; compare with MFI024 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 128,
+      "itemId": "MEI023",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME01"
+      ],
+      "mappedRuleIds": [
+        "ph-stance-independence"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI002"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Moral stance-independence / objectivity; compare with MEI002 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 129,
+      "itemId": "NEI100",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE15"
+      ],
+      "mappedRuleIds": [
+        "construct-NE15"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI101"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ethical egoism as a normative principle; compare with NEI101 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 130,
+      "itemId": "AHI005",
+      "itemRevision": 2,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH10"
+      ],
+      "mappedRuleIds": [
+        "ph-conscious-causes"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI032"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Rational-conscious causal attribution; compare with AHI032 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 131,
+      "itemId": "OMI027",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM09"
+      ],
+      "mappedRuleIds": [
+        "ph-eternal-time"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI026"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Temporal ontology; compare with OMI026 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 132,
+      "itemId": "VAI052",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA18"
+      ],
+      "mappedRuleIds": [
+        "priority-VA18"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI033"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Universalism: nature; compare with VAI033 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 133,
+      "itemId": "RCI005",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC08"
+      ],
+      "mappedRuleIds": [
+        "ph-cosmic-purpose"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI008"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Cosmic purpose; compare with RCI008 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 134,
+      "itemId": "MSI013",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS02"
+      ],
+      "mappedRuleIds": [
+        "ph-functional-minds"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI015",
+        "MSI017"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Consciousness theory family; compare with MSI015, MSI017 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 135,
+      "itemId": "EXI002",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX03"
+      ],
+      "mappedRuleIds": [
+        "constructed-meaning"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI010"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Subjective / constructed meaning; compare with EXI010 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 136,
+      "itemId": "EPI037",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP11"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP11-external-world"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI034",
+        "EPI036"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about External-world stance; compare with EPI034, EPI036 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 137,
+      "itemId": "SOI001",
+      "itemRevision": 2,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO01"
+      ],
+      "mappedRuleIds": [
+        "ph-individual-claims"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI025"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Individualism; compare with SOI025 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 138,
+      "itemId": "MFI017",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF05"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-authority"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI027"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Authority; compare with MFI027 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 139,
+      "itemId": "MEI022",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME08"
+      ],
+      "mappedRuleIds": [
+        "ph-motivational-necessity"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI020"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Moral motivation internalism / externalism; compare with MEI020 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 140,
+      "itemId": "PLI011",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL08"
+      ],
+      "mappedRuleIds": [
+        "effective-freedom"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI058"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Positive / capability liberty; compare with PLI058 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 141,
+      "itemId": "NEI107",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE17"
+      ],
+      "mappedRuleIds": [
+        "construct-NE17"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI108"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ownness and revisable allegiance to ideals; compare with NEI108 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 142,
+      "itemId": "AHI002",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH02"
+      ],
+      "mappedRuleIds": [
+        "deterministic-world"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI013"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Determinism belief; compare with AHI013 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 143,
+      "itemId": "OMI026",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM09"
+      ],
+      "mappedRuleIds": [
+        "ph-eternal-time"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI027"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Temporal ontology; compare with OMI027 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 144,
+      "itemId": "VAI020",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA02"
+      ],
+      "mappedRuleIds": [
+        "priority-VA02"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI005",
+        "VAI036"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Self-direction: action; compare with VAI005, VAI036 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 145,
+      "itemId": "RCI003",
+      "itemRevision": 2,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC03"
+      ],
+      "mappedRuleIds": [
+        "ph-supernatural-reality"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI006"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Supernatural reality; compare with RCI006 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 146,
+      "itemId": "MSI003",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS04"
+      ],
+      "mappedRuleIds": [
+        "ph-process-self"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI011"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Substantial-self vs process-self orientation; compare with MSI011 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 147,
+      "itemId": "EXI004",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX06"
+      ],
+      "mappedRuleIds": [
+        "ph-world-possibilities"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI017"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "local_dependence_risk",
+      "rationale": "Retained as an outlook question after removing EXI017; one remaining item cannot establish its former direct pattern.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 148,
+      "itemId": "EPI036",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP11"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP11-external-world"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI034",
+        "EPI037"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about External-world stance; compare with EPI034, EPI037 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 149,
+      "itemId": "SOI003",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO03"
+      ],
+      "mappedRuleIds": [
+        "audit2-SO03-relational-self"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI027"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "double_barrel_risk",
+      "rationale": "Relationships and social roles may affect identity differently; the paired vignette narrows what the response can support.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 150,
+      "itemId": "MFI016",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF04"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-loyalty"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI026"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Loyalty; compare with MFI026 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 151,
+      "itemId": "MEI018",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME06"
+      ],
+      "mappedRuleIds": [
+        "legacy-objectivism-moral-truth-aptness"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI017"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Moral truth-aptness; compare with MEI017 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 152,
+      "itemId": "PLI013",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL11"
+      ],
+      "mappedRuleIds": [
+        "ph-strong-property"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI054"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Property-right strength; compare with PLI054 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 153,
+      "itemId": "NEI109",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE18"
+      ],
+      "mappedRuleIds": [
+        "construct-NE18"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI110"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Promissory self-binding; compare with NEI110 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 154,
+      "itemId": "AHI013",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH02"
+      ],
+      "mappedRuleIds": [
+        "deterministic-world"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI002"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Determinism belief; compare with AHI002 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 155,
+      "itemId": "OMI021",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM07"
+      ],
+      "mappedRuleIds": [
+        "ph-productive-causation"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI020"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Causation model; compare with OMI020 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 156,
+      "itemId": "VAI051",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA16"
+      ],
+      "mappedRuleIds": [
+        "priority-VA16"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI032"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Benevolence: dependability; compare with VAI032 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 157,
+      "itemId": "RCI001",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC01",
+        "RC11"
+      ],
+      "mappedRuleIds": [
+        "theological-suspension"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI014",
+        "RCI021"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Deity existence and Divinity model; compare with RCI014, RCI021 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 158,
+      "itemId": "MSI002",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS03"
+      ],
+      "mappedRuleIds": [
+        "psychological-continuity"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI022"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Personal identity theory; compare with MSI022 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 159,
+      "itemId": "EXI006",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX04",
+        "EX01"
+      ],
+      "mappedRuleIds": [
+        "ph-noncosmic-meaning"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI008",
+        "EXI001",
+        "EXI011"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Existential nihilism and Ontology of life's meaning; compare with EXI008, EXI001, EXI011 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 160,
+      "itemId": "EPI040",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP12"
+      ],
+      "mappedRuleIds": [
+        "ph-reliable-processes"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI039",
+        "EPI042"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Theory of justification; compare with EPI039, EPI042 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 161,
+      "itemId": "SOI002",
+      "itemRevision": 2,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO02"
+      ],
+      "mappedRuleIds": [
+        "ph-group-agency"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI026"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Collectivism; compare with SOI026 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 162,
+      "itemId": "MFI013",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF01"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-care"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI023"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Care; compare with MFI023 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 163,
+      "itemId": "MEI020",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME08"
+      ],
+      "mappedRuleIds": [
+        "ph-motivational-necessity"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI022"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Moral motivation internalism / externalism; compare with MEI022 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 164,
+      "itemId": "PLI073",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL21"
+      ],
+      "mappedRuleIds": [
+        "moral-limits-validity",
+        "source-based-validity"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI071"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": "legal_jargon",
+      "rationale": "Different meanings of legal validity require comprehension checking; the options are not a generic obedience scale.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 165,
+      "itemId": "NEI108",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE17"
+      ],
+      "mappedRuleIds": [
+        "construct-NE17"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI107"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ownness and revisable allegiance to ideals; compare with NEI107 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 166,
+      "itemId": "AHI011",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH11"
+      ],
+      "mappedRuleIds": [
+        "ph-unconscious-causes"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI021"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Unconscious / intrapsychic causal attribution; compare with AHI021 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 167,
+      "itemId": "OMI020",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM07"
+      ],
+      "mappedRuleIds": [
+        "ph-productive-causation"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI021"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Causation model; compare with OMI021 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 168,
+      "itemId": "VAI027",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA11"
+      ],
+      "mappedRuleIds": [
+        "priority-VA11"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI005",
+        "VAI041"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Tradition; compare with VAI005, VAI041 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 169,
+      "itemId": "RCI002",
+      "itemRevision": 2,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC02"
+      ],
+      "mappedRuleIds": [
+        "audit2-RC02-agentic-divinity"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI015",
+        "RCI025"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Personal / agentic deity; compare with RCI015, RCI025 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 170,
+      "itemId": "MSI015",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS02"
+      ],
+      "mappedRuleIds": [
+        "ph-basic-experience"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI013",
+        "MSI017"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Consciousness theory family; compare with MSI013, MSI017 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 171,
+      "itemId": "EPI042",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP12"
+      ],
+      "mappedRuleIds": [
+        "ph-coherent-justification",
+        "ph-foundational-justification",
+        "ph-reliable-processes"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI039",
+        "EPI040"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": "philosophical_jargon",
+      "rationale": "The alternatives require distinguishing technical accounts of justification; pilot cognitive interviews should check comprehension.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 172,
+      "itemId": "EXI013",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX02"
+      ],
+      "mappedRuleIds": [
+        "audit2-EX02-nondesigner-purpose"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI012",
+        "EXI014"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Objective-purpose source; compare with EXI012, EXI014 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 173,
+      "itemId": "MEI017",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME06"
+      ],
+      "mappedRuleIds": [
+        "legacy-objectivism-moral-truth-aptness"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI018"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Moral truth-aptness; compare with MEI018 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 174,
+      "itemId": "PLI071",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL21"
+      ],
+      "mappedRuleIds": [
+        "source-based-validity"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI073"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Legal positivism / nonpositivism; compare with PLI073 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 175,
+      "itemId": "NEI031",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE05"
+      ],
+      "mappedRuleIds": [
+        "reasonable-rejection"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI009"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Contractualist non-rejectability; compare with NEI009 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 176,
+      "itemId": "SOI104",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO15"
+      ],
+      "mappedRuleIds": [
+        "construct-SO15"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI105",
+        "SOI103"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Individual-level explanation of social processes; compare with SOI105, SOI103 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 177,
+      "itemId": "AHI010",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH08"
+      ],
+      "mappedRuleIds": [
+        "audit2-AH08-biological"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI018"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "double_barrel_risk",
+      "rationale": "Inherited dispositions and biological differences are related but not identical causal claims; keep the result at a broad causal scope.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 178,
+      "itemId": "MFI024",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF02"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-equality"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI014"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Equality; compare with MFI014 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 179,
+      "itemId": "OMI029",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM10"
+      ],
+      "mappedRuleIds": [
+        "ph-concrete-worlds"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI030"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Modal ontology; compare with OMI030 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 180,
+      "itemId": "VAI036",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA02"
+      ],
+      "mappedRuleIds": [
+        "priority-VA02"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI005",
+        "VAI020"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Self-direction: action; compare with VAI005, VAI020 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 181,
+      "itemId": "MSI001",
+      "itemRevision": 2,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS01"
+      ],
+      "mappedRuleIds": [
+        "ph-physical-explanation"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI006"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Consciousness reducibility; compare with MSI006 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 182,
+      "itemId": "RCI029",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC09"
+      ],
+      "mappedRuleIds": [
+        "ph-sacred-value"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI012"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Sacredness orientation; compare with RCI012 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 183,
+      "itemId": "EPI004",
+      "itemRevision": 2,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP06"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP06-testability"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI026"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Scientific-method reliance; compare with EPI026 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 184,
+      "itemId": "EXI012",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX02"
+      ],
+      "mappedRuleIds": [
+        "audit2-EX02-nondesigner-purpose"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI013",
+        "EXI014"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Objective-purpose source; compare with EXI013, EXI014 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 185,
+      "itemId": "MEI026",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME05"
+      ],
+      "mappedRuleIds": [
+        "ph-categorical-reasons"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI004",
+        "MEI007"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Categorical moral reasons; compare with MEI004, MEI007 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 186,
+      "itemId": "PLI076",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL25"
+      ],
+      "mappedRuleIds": [
+        "audit2-PL25-reform"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI077"
+      ],
+      "responseMethod": "paired_choice",
+      "contribution": "method_diversity_tradeoff",
+      "decision": "retain_for_pilot",
+      "issue": "conditional_scenario",
+      "rationale": "The reform-versus-break choice presupposes repeatedly defeated reform; infer only the stated conditional preference.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 187,
+      "itemId": "NEI030",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE08"
+      ],
+      "mappedRuleIds": [
+        "instrumental-harm"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI005"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "remove_from_pilot",
+      "issue": "near_duplicate_local_dependence",
+      "rationale": "Both cases ask whether severe injury to one uninvolved person can save five. The second changes severity details without a cleanly isolated philosophical discriminator; retain the earlier case as contextual evidence.",
+      "pairedWith": "NEI005",
+      "resultUse": "none_in_frozen_route"
+    },
+    {
+      "sourcePosition": 188,
+      "itemId": "SOI105",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO15"
+      ],
+      "mappedRuleIds": [
+        "construct-SO15"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI104",
+        "SOI103"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "awkward_reverse_key",
+      "rationale": "“Fully explained without any account” is absolute reverse wording; compare with positive individual-process items.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 189,
+      "itemId": "AHI022",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH09"
+      ],
+      "mappedRuleIds": [
+        "audit2-AH09-environmental"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI019"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Environmental / social causal attribution; compare with AHI019 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 190,
+      "itemId": "MFI025",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF03"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-proportionality"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI015"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Proportionality; compare with MFI015 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 191,
+      "itemId": "VAI031",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA15"
+      ],
+      "mappedRuleIds": [
+        "priority-VA15"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI008",
+        "VAI042"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Benevolence: caring; compare with VAI008, VAI042 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 192,
+      "itemId": "OMI106",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM13"
+      ],
+      "mappedRuleIds": [
+        "construct-OM13"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI108",
+        "OMI107"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ordinary external-world independence; compare with OMI108, OMI107 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 193,
+      "itemId": "MSI017",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS02"
+      ],
+      "mappedRuleIds": [
+        "ph-basic-experience",
+        "ph-functional-minds"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI013",
+        "MSI015"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Consciousness theory family; compare with MSI013, MSI015 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 194,
+      "itemId": "RCI021",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC01"
+      ],
+      "mappedRuleIds": [
+        "divine-existence",
+        "theological-suspension"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI014",
+        "RCI001"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Deity existence; compare with RCI014, RCI001 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 195,
+      "itemId": "EPI005",
+      "itemRevision": 2,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP07"
+      ],
+      "mappedRuleIds": [
+        "ph-expert-testimony"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI018"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Testimony and expertise reliance; compare with EPI018 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 196,
+      "itemId": "EXI011",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX04"
+      ],
+      "mappedRuleIds": [
+        "ph-noncosmic-meaning"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI006"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Existential nihilism; compare with EXI006 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 197,
+      "itemId": "MEI025",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME03"
+      ],
+      "mappedRuleIds": [
+        "ph-context-sensitive"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI003"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Moral context-sensitivity; compare with MEI003 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 198,
+      "itemId": "PLI077",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL25"
+      ],
+      "mappedRuleIds": [
+        "audit2-PL25-reform"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI076"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Reform vs rupture orientation; compare with PLI076 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 199,
+      "itemId": "NEI044",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE07"
+      ],
+      "mappedRuleIds": [
+        "impartial-beneficence"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI004"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Impartial beneficence; compare with NEI004 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 200,
+      "itemId": "SOI100",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO14"
+      ],
+      "mappedRuleIds": [
+        "construct-SO14"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI101",
+        "SOI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Institutional dependence without elimination; compare with SOI101, SOI102 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 201,
+      "itemId": "AHI019",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH09"
+      ],
+      "mappedRuleIds": [
+        "audit2-AH09-environmental"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI022"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "double_barrel_risk",
+      "rationale": "Institutions and learned environments may have distinct effects; the item supports only their broad causal relevance.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 202,
+      "itemId": "MFI026",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF04"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-loyalty"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI016"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Loyalty; compare with MFI016 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 203,
+      "itemId": "OMI107",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM13"
+      ],
+      "mappedRuleIds": [
+        "construct-OM13"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI108",
+        "OMI106"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Ordinary external-world independence; compare with OMI108, OMI106 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 204,
+      "itemId": "VAI033",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA18"
+      ],
+      "mappedRuleIds": [
+        "priority-VA18"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI052"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Universalism: nature; compare with VAI052 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 205,
+      "itemId": "MSI006",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS01"
+      ],
+      "mappedRuleIds": [
+        "ph-physical-explanation"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI001"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Consciousness reducibility; compare with MSI001 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 206,
+      "itemId": "RCI023",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC07"
+      ],
+      "mappedRuleIds": [
+        "afterlife-belief"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI004"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Afterlife / postmortem persistence; compare with RCI004 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 207,
+      "itemId": "EXI010",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX03"
+      ],
+      "mappedRuleIds": [
+        "constructed-meaning"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI002"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Subjective / constructed meaning; compare with EXI002 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 208,
+      "itemId": "EPI009",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP02"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP02-complex-knowledge"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI028"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Knowledge complexity; compare with EPI028 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 209,
+      "itemId": "MEI015",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME04"
+      ],
+      "mappedRuleIds": [
+        "ph-particular-judgment"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI008"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Generalism vs particularism; compare with MEI008 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 210,
+      "itemId": "PLI067",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL22"
+      ],
+      "mappedRuleIds": [
+        "ph-political-cosmopolitanism"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI020"
+      ],
+      "responseMethod": "paired_choice",
+      "contribution": "method_diversity_tradeoff",
+      "decision": "retain_for_pilot",
+      "issue": "policy_proxy_boundary",
+      "rationale": "Citizen-versus-foreigner policy choice is distinct from equal moral standing of persons.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 211,
+      "itemId": "NEI034",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE10"
+      ],
+      "mappedRuleIds": [
+        "ph-personal-prerogatives"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI011"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Agent-relative prerogatives / self-priority; compare with NEI011 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 212,
+      "itemId": "SOI101",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO14"
+      ],
+      "mappedRuleIds": [
+        "construct-SO14"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI100",
+        "SOI102"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Institutional dependence without elimination; compare with SOI100, SOI102 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 213,
+      "itemId": "AHI021",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH11"
+      ],
+      "mappedRuleIds": [
+        "ph-unconscious-causes"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI011"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": "awkward_reverse_key",
+      "rationale": "The negative necessity wording may be rejected without a positive theory of unconscious causation.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 214,
+      "itemId": "MFI027",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF05"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-authority"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI017"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Authority; compare with MFI017 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 215,
+      "itemId": "OMI104",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM12"
+      ],
+      "mappedRuleIds": [
+        "construct-OM12"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI105"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Universals commitment; compare with OMI105 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 216,
+      "itemId": "VAI060",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA21"
+      ],
+      "mappedRuleIds": [
+        "ph-aesthetic-objectivity"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI061"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Aesthetic value objectivity; compare with VAI061 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 217,
+      "itemId": "MSI004",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS05"
+      ],
+      "mappedRuleIds": [
+        "extended-cognition"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI012"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Extended-mind acceptance; compare with MSI012 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 218,
+      "itemId": "RCI025",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC02"
+      ],
+      "mappedRuleIds": [
+        "audit2-RC02-agentic-divinity"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI015",
+        "RCI002"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Personal / agentic deity; compare with RCI015, RCI002 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 219,
+      "itemId": "EXI017",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX06"
+      ],
+      "mappedRuleIds": [
+        "ph-world-possibilities"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI004"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "remove_from_pilot",
+      "issue": "semantic_redundancy",
+      "rationale": "Interesting possibilities worth exploring largely restates worthwhile possibilities worth discovering. It does not independently establish an existential orientation.",
+      "pairedWith": "EXI004",
+      "resultUse": "none_in_frozen_route"
+    },
+    {
+      "sourcePosition": 220,
+      "itemId": "EPI019",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP08"
+      ],
+      "mappedRuleIds": [
+        "ph-tradition-evidence"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI030"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Tradition as epistemic source; compare with EPI030 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 221,
+      "itemId": "MEI024",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME02"
+      ],
+      "mappedRuleIds": [
+        "ph-universal-requirements"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI010"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Universal applicability of moral claims; compare with MEI010 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 222,
+      "itemId": "PLI069",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL24"
+      ],
+      "mappedRuleIds": [
+        "ph-polycentric-order"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI022"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Institutional pluralism / polycentricity; compare with PLI022 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 223,
+      "itemId": "NEI037",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE13"
+      ],
+      "mappedRuleIds": [
+        "ph-rule-mediated"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI040"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Rule-mediated vs direct act evaluation; compare with NEI040 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 224,
+      "itemId": "SOI102",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO14"
+      ],
+      "mappedRuleIds": [
+        "construct-SO14"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI100",
+        "SOI101"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Institutional dependence without elimination; compare with SOI100, SOI101 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 225,
+      "itemId": "AHI018",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH08"
+      ],
+      "mappedRuleIds": [
+        "audit2-AH08-biological"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI010"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Biological causal attribution; compare with AHI010 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 226,
+      "itemId": "MFI023",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF01"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-care"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI013"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Care; compare with MFI013 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 227,
+      "itemId": "VAI032",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA16"
+      ],
+      "mappedRuleIds": [
+        "priority-VA16"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI051"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Benevolence: dependability; compare with VAI051 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 228,
+      "itemId": "OMI105",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM12"
+      ],
+      "mappedRuleIds": [
+        "construct-OM12"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI104"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Universals commitment; compare with OMI104 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 229,
+      "itemId": "MSI022",
+      "itemRevision": 1,
+      "domainId": "MS",
+      "targetConstructIds": [
+        "MS03"
+      ],
+      "mappedRuleIds": [
+        "psychological-continuity"
+      ],
+      "nearbyRouteItemIds": [
+        "MSI002"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Personal identity theory; compare with MSI002 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 230,
+      "itemId": "RCI030",
+      "itemRevision": 1,
+      "domainId": "RC",
+      "targetConstructIds": [
+        "RC10"
+      ],
+      "mappedRuleIds": [
+        "ph-religious-priority"
+      ],
+      "nearbyRouteItemIds": [
+        "RCI013"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Religious / spiritual centrality; compare with RCI013 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 231,
+      "itemId": "EXI014",
+      "itemRevision": 1,
+      "domainId": "EX",
+      "targetConstructIds": [
+        "EX02"
+      ],
+      "mappedRuleIds": [
+        "audit2-EX02-nondesigner-purpose"
+      ],
+      "nearbyRouteItemIds": [
+        "EXI013",
+        "EXI012"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Objective-purpose source; compare with EXI013, EXI012 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 232,
+      "itemId": "EPI018",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP07"
+      ],
+      "mappedRuleIds": [
+        "ph-expert-testimony"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI005"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Testimony and expertise reliance; compare with EPI005 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 233,
+      "itemId": "MEI010",
+      "itemRevision": 1,
+      "domainId": "ME",
+      "targetConstructIds": [
+        "ME02"
+      ],
+      "mappedRuleIds": [
+        "ph-universal-requirements"
+      ],
+      "nearbyRouteItemIds": [
+        "MEI024"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Universal applicability of moral claims; compare with MEI024 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 234,
+      "itemId": "PLI048",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL02"
+      ],
+      "mappedRuleIds": [
+        "legacy-philosophical-anarchism-no-general-obedience"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI002",
+        "PLI025"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about General political obligation; compare with PLI002, PLI025 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 235,
+      "itemId": "NEI040",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE13"
+      ],
+      "mappedRuleIds": [
+        "ph-rule-mediated"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI037"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "alternative_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Rule-mediated vs direct act evaluation; compare with NEI037 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 236,
+      "itemId": "SOI103",
+      "itemRevision": 1,
+      "domainId": "SO",
+      "targetConstructIds": [
+        "SO15"
+      ],
+      "mappedRuleIds": [
+        "construct-SO15"
+      ],
+      "nearbyRouteItemIds": [
+        "SOI104",
+        "SOI105"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Individual-level explanation of social processes; compare with SOI104, SOI105 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 237,
+      "itemId": "AHI032",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH10"
+      ],
+      "mappedRuleIds": [
+        "ph-conscious-causes"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI005"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Rational-conscious causal attribution; compare with AHI005 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 238,
+      "itemId": "MFI028",
+      "itemRevision": 1,
+      "domainId": "MF",
+      "targetConstructIds": [
+        "MF06"
+      ],
+      "mappedRuleIds": [
+        "moral-concern-purity"
+      ],
+      "nearbyRouteItemIds": [
+        "MFI018"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "complementary_case",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A concrete case or selected alternative about Purity; compare with MFI018 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 239,
+      "itemId": "VAI061",
+      "itemRevision": 1,
+      "domainId": "VA",
+      "targetConstructIds": [
+        "VA21"
+      ],
+      "mappedRuleIds": [
+        "ph-aesthetic-objectivity"
+      ],
+      "nearbyRouteItemIds": [
+        "VAI060"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Aesthetic value objectivity; compare with VAI060 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 240,
+      "itemId": "OMI102",
+      "itemRevision": 1,
+      "domainId": "OM",
+      "targetConstructIds": [
+        "OM11"
+      ],
+      "mappedRuleIds": [
+        "construct-OM11"
+      ],
+      "nearbyRouteItemIds": [
+        "OMI100",
+        "OMI101"
+      ],
+      "responseMethod": "likert",
+      "contribution": "parallel_or_complementary_proposition",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A stated proposition about Abstract-object commitment; compare with OMI100, OMI101 for convergence or divergence. Retention supplies content for cognitive review, not an independent factor indicator.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 241,
+      "itemId": "PLI126",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL34"
+      ],
+      "mappedRuleIds": [
+        "reviewed-PL34-federal-division"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI003",
+        "PLI004"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "independent_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "States the protected-division choice against revocable delegation and member-unit control.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 242,
+      "itemId": "PLI127",
+      "itemRevision": 1,
+      "domainId": "PL",
+      "targetConstructIds": [
+        "PL34"
+      ],
+      "mappedRuleIds": [
+        "reviewed-PL34-federal-division"
+      ],
+      "nearbyRouteItemIds": [
+        "PLI126"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "independent_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "Applies the two-level division in a rights-held-constant case; constitutional deference alone is guarded by the first item.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 243,
+      "itemId": "NEI014",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE22"
+      ],
+      "mappedRuleIds": [
+        "reviewed-NE22-act-consequence-criterion"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI001",
+        "NEI122"
+      ],
+      "responseMethod": "likert",
+      "contribution": "independent_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "An existing item checks whether a clearly worse result can remain permissible; disagreement alone is not act consequentialism.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 244,
+      "itemId": "NEI122",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE22"
+      ],
+      "mappedRuleIds": [
+        "reviewed-NE22-act-consequence-criterion"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI037",
+        "NEI040",
+        "NEI014"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "independent_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "A new direct criterion question separates an act’s consequences from a consequence-justified rule and an independent duty.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 245,
+      "itemId": "NEI123",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE23"
+      ],
+      "mappedRuleIds": [
+        "reviewed-NE23-rule-consequence-criterion"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI122",
+        "NEI037",
+        "NEI040"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "independent_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "Asks for the ultimate justification of a harm rule, separate from whether rule conformity determines an act’s rightness in NEI122.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 246,
+      "itemId": "AHI108",
+      "itemRevision": 1,
+      "domainId": "AH",
+      "targetConstructIds": [
+        "AH14"
+      ],
+      "mappedRuleIds": [
+        "construct-AH14"
+      ],
+      "nearbyRouteItemIds": [
+        "AHI103",
+        "AHI104",
+        "AHI105"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "applied_countercase",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "Tests whether determination alone rules out freedom even when a person deliberates without pressure. AHI104 repeats a narrower alternatives requirement; AHI105 disagreement is nondirectional.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 247,
+      "itemId": "EPI122",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP10"
+      ],
+      "mappedRuleIds": [
+        "audit2-EP10-revelation"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI021",
+        "EPI032",
+        "EPI120"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "first_person_initial_warrant_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "Tests whether an apparent divine message gives its experiencer a defeasible initial factual reason, no such reason, or depends on further features. EPI021 has ambiguous audience and threshold; EPI120 remains an unreleased stronger-warrant draft.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 248,
+      "itemId": "NEI121",
+      "itemRevision": 1,
+      "domainId": "NE",
+      "targetConstructIds": [
+        "NE15"
+      ],
+      "mappedRuleIds": [
+        "construct-NE15"
+      ],
+      "nearbyRouteItemIds": [
+        "NEI100",
+        "NEI101",
+        "NEI102",
+        "NEI118",
+        "NEI119"
+      ],
+      "responseMethod": "vignette_choice",
+      "contribution": "independent_other_regarding_reason_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "Preserves a separate independent-duty, independent-reason, and exclusively own-good contrast. The second option opposes exclusive self-priority even though it denies a duty. The item cannot alone establish universal own-good priority or Rand’s ethics.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 249,
+      "itemId": "EPI103",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP16"
+      ],
+      "mappedRuleIds": [
+        "construct-EP16"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI104",
+        "EPI105",
+        "EPI123"
+      ],
+      "responseMethod": "likert",
+      "contribution": "positive_pragmatic_clarification_method",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "Existing direct positive-method item replaces the absolute reverse wording. It cannot alone establish the stronger empty-dispute implication and therefore requires EPI123 for a supported conclusion.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    },
+    {
+      "sourcePosition": 250,
+      "itemId": "EPI123",
+      "itemRevision": 1,
+      "domainId": "EP",
+      "targetConstructIds": [
+        "EP16"
+      ],
+      "mappedRuleIds": [
+        "construct-EP16"
+      ],
+      "nearbyRouteItemIds": [
+        "EPI103",
+        "EPI104",
+        "EPI105",
+        "EPI106"
+      ],
+      "responseMethod": "single_choice",
+      "contribution": "empty_dispute_method_discriminator",
+      "decision": "retain_for_pilot",
+      "issue": null,
+      "rationale": "Separates the strong empty-dispute implication of the pragmatic method from treating practical consequences as one useful clue. Alongside EPI103 it tests two authored facets without counting EPI104 and EPI105 as corroboration.",
+      "resultUse": "only_through_explicit_interpretation_rules"
+    }
+  ]
+}

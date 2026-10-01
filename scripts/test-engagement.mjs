@@ -21,7 +21,7 @@ assert.equal(summary.affinityPresentation.hasEstablishedAffinity,false,
  'Legacy scope mappings cannot establish a doctrinal affinity in respondent-facing presentation.');
 const exactlySourced=new Set(['easy-ontology-scoped','fallibilism-about-knowledge',
  'sensory-empiricism-about-the-external-world','act-consequentialism-scoped',
- 'rule-consequentialism-scoped','ethical-egoism']);
+ 'rule-consequentialism-scoped','ethical-egoism','pragmatism']);
 assert.ok(summary.affinityPresentation.traditions.filter(t=>!exactlySourced.has(t.traditionId))
  .every(t=>t.state==='legacy_scope_unresolved'&&t.legacyDefiningCriterionIds.length>0));
 const easyOnQuick=summary.affinityPresentation.traditions.find(t=>t.traditionId==='easy-ontology-scoped');
@@ -133,7 +133,9 @@ assert.equal(readingTrailFor(syntheticDerivedSummary,{kind:'proposition',id:synt
  'model_review_required');
 const domain=create('domain',{domainId:selected.domainId});
 assert.ok(domain.rows.every(r=>r.domainId===selected.domainId));
-const affinity=create('affinity',{traditionId:summary.affinities.traditions[0].id});
+const legacyTradition=summary.affinityPresentation.traditions.find(t=>t.state==='legacy_scope_unresolved');
+assert.ok(legacyTradition,'The legacy-scope share fixture requires an unresolved defining criterion.');
+const affinity=create('affinity',{traditionId:legacyTradition.traditionId});
 assert.ok(affinity.affinity.criteria.every(c=>c.role==='defining'));
 assert.match(shareSnapshotText(affinity),/Affinity is comparison, not identity/);
 assert.equal(affinity.affinity.presentationState,'legacy_scope_unresolved');
@@ -212,7 +214,7 @@ assert.equal(legacyComparison.sharedScopes[0].before,legacySelected.status);
 const trail=readingTrailFor(summary,{kind:'proposition',id:selected.id});
 assert.equal(trail.status,selected.status);assert.ok(trail.sources.every(s=>s.url.startsWith('https://')));
 const traditions=summary.affinities.traditions;
-assert.equal(readingTrailFor(summary,{kind:'tradition',id:traditions[0].id}).status,'legacy_scope_unresolved');
+assert.equal(readingTrailFor(summary,{kind:'tradition',id:legacyTradition.traditionId}).status,'legacy_scope_unresolved');
 const comparison=compareTraditions(summary.affinities,traditions[0].id,traditions[1].id);
 assert.ok(comparison.left.criteria.length&&comparison.right.criteria.length);
 assert.match(comparison.note,/does not make the traditions identical or rank them/);
