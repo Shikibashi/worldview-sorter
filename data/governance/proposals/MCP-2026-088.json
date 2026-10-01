@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-088",
+  "title": "Classify narrow NE24 outcome-value proposition for public direct interpretation",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "research_classification",
+  "changeClass": "reclassification",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "research_classification",
+      "id": "reviewed-NE24-welfarist-outcome-value"
+    }
+  ],
+  "currentBehavior": "The new authored NE24 proposition is not yet public.",
+  "proposedBehavior": "Include the exact two-unit direct proposition in the successor public model; route-aware results remain not measured on Quick and Standard.",
+  "rationale": "A general claim alone invites acquiescence and can conflate outcomes with permissible actions. The second item probes an independently valuable feature, while the first prevents denial of this one example from establishing universal welfare-only value.",
+  "philosophicalBasis": {
+    "proposition": "Only how well affected beings fare ultimately makes an outcome better or worse in itself; beauty does not add independent outcome value when no being’s well-being changes.",
+    "neighboringViews": [
+      "Plural outcome value including independent beauty, truth, or justice",
+      "Rights-constrained action with welfare-only outcome value",
+      "Consequentialism with plural outcome value",
+      "Distribution-sensitive welfarism"
+    ],
+    "nonEntailments": [
+      "Utilitarianism",
+      "A duty to maximize total welfare",
+      "Hedonism",
+      "Absence of rights or promises as constraints",
+      "A particular aggregation rule",
+      "A complete ethical theory"
+    ],
+    "existingGap": "No active pair distinguishes welfare-only outcome goodness from nonwelfare outcome goods while separating act permission.",
+    "scholarlyDisagreement": "The scope of well-being, distribution, rights, and whether nature has independent value are contested. The rule addresses only a narrow authored contrast, not those disputes."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "sep-welfarism-outcome-value",
+      "relationship": "supports",
+      "claim": "Welfarism makes well-being the only ultimate value; accepting this value thesis does not by itself settle rights, equality, or a criterion of right action."
+    },
+    {
+      "sourceId": "sep-plural-outcome-value",
+      "relationship": "supports",
+      "claim": "A welfarist theory of outcome value differs from plural theories that recognize beauty, truth, justice, or other goods independently of individual welfare."
+    },
+    {
+      "sourceId": "sep-environment-intrinsic",
+      "relationship": "context",
+      "claim": "The possible independent value of nonhuman nature provides a genuine counterexample to welfare-only outcome value, but this one question does not identify an environmental theory."
+    }
+  ],
+  "alternatives": [
+    "Activate NEI124@1 directly: rejected because rights-priority does not oppose welfare-only outcome value.",
+    "Infer welfarism from NEI132 alone: rejected because rejecting this one beauty case leaves other nonwelfare goods possible.",
+    "Map to utilitarianism immediately: rejected because an outcome-value thesis does not settle right action or aggregation.",
+    "Add the questions to all routes: deferred because the 64/120 authored burden should not grow without a separate route review."
+  ],
+  "respondentImpact": "Full gains a scoped direct proposition and two questions; Quick and Standard retain current item sets. Mixed, skipped, missing, and nondirectional responses cannot become confident support. Existing affinity comparisons do not gain a new criterion.",
+  "historicalCompatibility": "All model releases through 1.16.0, prior banks, rules, route item orders, catalog definitions, and engine snapshots remain immutable. No raw response is rewritten. Current reinterpretation of historical answers remains separate.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "one_item_lean",
+      "route_omission",
+      "source_link"
+    ],
+    "paths": [
+      "scripts/test-welfarist-outcome-release.mjs",
+      "scripts/test-model-governance.mjs",
+      "scripts/test-quiz-browser.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-10-01T01:30:00Z",
+        "note": "Reviewed SEP well-being, consequentialism, and environmental ethics distinctions; separated outcome value from action permission, aggregation, and welfare content."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI engineering review",
+        "at": "2026-10-01T01:30:00Z",
+        "note": "Reviewed exact item revisions, route opportunity, evidence states, source ledger, historical pinning, and no new affinity dependence."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "model"
+    ],
+    "targetVersion": "model-release-1.17.0",
+    "migration": "No raw-response migration. New Full route items are additional exact revisions; previous administrations replay pinned releases."
+  },
+  "implementationRefs": [
+    "docs/governance/WELFARIST_OUTCOME_VALUE_REVIEW.md",
+    "scripts/build-welfarist-outcome-v1.mjs",
+    "scripts/test-welfarist-outcome-release.mjs"
+  ]
+}

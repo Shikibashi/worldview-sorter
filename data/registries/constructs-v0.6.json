@@ -1,0 +1,3064 @@
+{
+  "schemaVersion": "1.0.0",
+  "registryVersion": "0.6.0",
+  "status": "provisional",
+  "measurementTypes": [
+    "monopolar",
+    "bipolar",
+    "affinity",
+    "categorical",
+    "hierarchical",
+    "derived"
+  ],
+  "tiers": [
+    "headline",
+    "primary",
+    "diagnostic",
+    "research"
+  ],
+  "outputModes": [
+    "independent_meter",
+    "bipolar_bar",
+    "affinity_card",
+    "affinity_group",
+    "branch_classification",
+    "grouped_facets",
+    "hidden_derived"
+  ],
+  "constructs": [
+    {
+      "id": "ME01",
+      "domainId": "ME",
+      "name": "Moral stance-independence / objectivity",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Degree to which moral truth or correctness is treated as independent of individual or group attitudes.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME02",
+      "domainId": "ME",
+      "name": "Universal applicability of moral claims",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which moral requirements are thought to apply across persons, groups, and contexts.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME03",
+      "domainId": "ME",
+      "name": "Moral context-sensitivity",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which morally relevant context can change the correct judgment.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME04",
+      "domainId": "ME",
+      "name": "Generalism vs particularism",
+      "type": "bipolar",
+      "tier": "primary",
+      "description": "Whether moral judgment is primarily governed by general principles or irreducibly particular features.",
+      "candidateItemTarget": 4,
+      "outputMode": "bipolar_bar",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME05",
+      "domainId": "ME",
+      "name": "Categorical moral reasons",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which moral reasons bind independently of an agent's contingent goals or preferences.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME06",
+      "domainId": "ME",
+      "name": "Moral truth-aptness",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Whether moral assertions are treated as the kind of claims that can literally be true or false.",
+      "candidateItemTarget": 4,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME07",
+      "domainId": "ME",
+      "name": "Metaethical family",
+      "type": "derived",
+      "tier": "diagnostic",
+      "description": "Derived classification over realist, constructivist, subjectivist, error-theoretic, noncognitivist, and related families.",
+      "candidateItemTarget": 0,
+      "outputMode": "hidden_derived",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [
+        "ME01",
+        "ME02",
+        "ME03",
+        "ME05",
+        "ME06"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": false
+    },
+    {
+      "id": "ME08",
+      "domainId": "ME",
+      "name": "Moral motivation internalism / externalism",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Whether sincere moral judgment is conceptually or necessarily connected to motivation.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE01",
+      "domainId": "NE",
+      "name": "Consequence sensitivity",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Weight given to aggregate or outcome-based consequences in moral evaluation.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE02",
+      "domainId": "NE",
+      "name": "Deontic constraint strength",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Strength of moral constraints against otherwise beneficial actions.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE03",
+      "domainId": "NE",
+      "name": "Virtue and character orientation",
+      "type": "affinity",
+      "tier": "headline",
+      "description": "Affinity for evaluating conduct through character, virtues, and practical excellence.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE04",
+      "domainId": "NE",
+      "name": "Care and relational orientation",
+      "type": "affinity",
+      "tier": "headline",
+      "description": "Affinity for relationship-sensitive, dependency-sensitive, and care-centered moral reasoning.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE05",
+      "domainId": "NE",
+      "name": "Contractualist non-rejectability",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Affinity for principles justifiable to each person under reasonable rejection constraints.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE06",
+      "domainId": "NE",
+      "name": "Contractarian mutual advantage",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Affinity for morality grounded in mutually advantageous agreement among agents.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE07",
+      "domainId": "NE",
+      "name": "Impartial beneficence",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Willingness to give equal moral weight to distant or unfamiliar persons and make demanding sacrifices for their welfare.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "oxford-utilitarianism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE08",
+      "domainId": "NE",
+      "name": "Instrumental-harm permissiveness",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Willingness to cause harm instrumentally when doing so produces sufficiently better outcomes.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "oxford-utilitarianism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE09",
+      "domainId": "NE",
+      "name": "Special obligations and partiality",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Weight assigned to special obligations to family, friends, associates, or compatriots.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE10",
+      "domainId": "NE",
+      "name": "Agent-relative prerogatives / self-priority",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Extent to which agents may give their own projects or welfare priority over impersonal demands.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE11",
+      "domainId": "NE",
+      "name": "Moral demandingness",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Extent to which morality may require substantial sacrifice beyond ordinary expectations.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE12",
+      "domainId": "NE",
+      "name": "Doing-allowing asymmetry",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Strength of the distinction between causing harm and allowing comparable harm to occur.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE13",
+      "domainId": "NE",
+      "name": "Rule-mediated vs direct act evaluation",
+      "type": "affinity",
+      "tier": "diagnostic",
+      "description": "Whether actions are primarily evaluated through rules/practices or directly by features of the individual act.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE14",
+      "domainId": "NE",
+      "name": "Intention and side-effect sensitivity",
+      "type": "monopolar",
+      "tier": "research",
+      "description": "Importance of intended means versus merely foreseen side effects in moral judgment.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MF01",
+      "domainId": "MF",
+      "name": "Care",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Moral concern with suffering, protection, and care.",
+      "candidateItemTarget": 6,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "mfq2"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MF02",
+      "domainId": "MF",
+      "name": "Equality",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Moral concern with equal treatment and equal standing.",
+      "candidateItemTarget": 6,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "mfq2"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MF03",
+      "domainId": "MF",
+      "name": "Proportionality",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Moral concern with proportional reward, contribution, reciprocity, and desert.",
+      "candidateItemTarget": 6,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "mfq2"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MF04",
+      "domainId": "MF",
+      "name": "Loyalty",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Moral concern with commitment to groups and collective bonds.",
+      "candidateItemTarget": 6,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "mfq2"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MF05",
+      "domainId": "MF",
+      "name": "Authority",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Moral concern with hierarchy, duty, role, and legitimate deference.",
+      "candidateItemTarget": 6,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "mfq2"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MF06",
+      "domainId": "MF",
+      "name": "Purity",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Moral concern with sanctity, degradation, contamination, and purity.",
+      "candidateItemTarget": 6,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "mfq2"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MF07",
+      "domainId": "MF",
+      "name": "Liberty / opposition to domination",
+      "type": "monopolar",
+      "tier": "research",
+      "description": "Experimental moral-foundation construct concerning domination, coercion, and liberty.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA01",
+      "domainId": "VA",
+      "name": "Self-direction: thought",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of freedom to cultivate one's own ideas and abilities.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA02",
+      "domainId": "VA",
+      "name": "Self-direction: action",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of freedom to determine one's own actions.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA03",
+      "domainId": "VA",
+      "name": "Stimulation",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of excitement, novelty, and change.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA04",
+      "domainId": "VA",
+      "name": "Hedonism",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of pleasure and sensuous gratification.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA05",
+      "domainId": "VA",
+      "name": "Achievement",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of success according to social standards.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA06",
+      "domainId": "VA",
+      "name": "Power: dominance",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of power through exercising control over people.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA07",
+      "domainId": "VA",
+      "name": "Power: resources",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of power through control of material and social resources.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA08",
+      "domainId": "VA",
+      "name": "Face",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of maintaining public image and avoiding humiliation.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA09",
+      "domainId": "VA",
+      "name": "Security: personal",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of safety in one's immediate environment.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA10",
+      "domainId": "VA",
+      "name": "Security: societal",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of safety and stability in wider society.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA11",
+      "domainId": "VA",
+      "name": "Tradition",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of maintaining cultural, family, or religious traditions.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA12",
+      "domainId": "VA",
+      "name": "Conformity: rules",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of complying with rules, laws, and formal obligations.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA13",
+      "domainId": "VA",
+      "name": "Conformity: interpersonal",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of avoiding upsetting or harming other people in social interaction.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA14",
+      "domainId": "VA",
+      "name": "Humility",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of recognizing one's insignificance in the larger scheme.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA15",
+      "domainId": "VA",
+      "name": "Benevolence: caring",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of devotion to the welfare of close others.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA16",
+      "domainId": "VA",
+      "name": "Benevolence: dependability",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of being a reliable and trustworthy member of one's in-group.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA17",
+      "domainId": "VA",
+      "name": "Universalism: concern",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance of commitment to equality, justice, and protection of all people.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA18",
+      "domainId": "VA",
+      "name": "Universalism: nature",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of preservation of the natural environment.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA19",
+      "domainId": "VA",
+      "name": "Universalism: tolerance",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance of acceptance and understanding of people different from oneself.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "schwartz-refined"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA20",
+      "domainId": "VA",
+      "name": "Theory of well-being",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Affinity among experiential/hedonistic, desire-satisfaction, objective-list, and related accounts of well-being.",
+      "candidateItemTarget": 6,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "VA21",
+      "domainId": "VA",
+      "name": "Aesthetic value objectivity",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Whether aesthetic value is objective, response-dependent, conventional, or otherwise constituted.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP01",
+      "domainId": "EP",
+      "name": "Fallibilism / revisability",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Willingness to treat one's beliefs as revisable in light of new evidence or argument.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP02",
+      "domainId": "EP",
+      "name": "Knowledge complexity",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Tendency to regard knowledge as complex, interconnected, and developing rather than simple and fixed.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP03",
+      "domainId": "EP",
+      "name": "Attainability of truth",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Confidence that objective truth or knowledge is attainable in principle.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP04",
+      "domainId": "EP",
+      "name": "Empirical / sensory evidence reliance",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Epistemic weight assigned to observation and sensory evidence.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP05",
+      "domainId": "EP",
+      "name": "Rational / a priori reliance",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Epistemic weight assigned to reason, conceptual analysis, or a priori justification.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP06",
+      "domainId": "EP",
+      "name": "Scientific-method reliance",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Epistemic weight assigned to systematic scientific methods.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP07",
+      "domainId": "EP",
+      "name": "Testimony and expertise reliance",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Epistemic weight assigned to credible testimony and domain expertise.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP08",
+      "domainId": "EP",
+      "name": "Tradition as epistemic source",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Epistemic weight assigned to inherited tradition and long-standing practice.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP09",
+      "domainId": "EP",
+      "name": "Intuition as epistemic source",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Epistemic weight assigned to intuition or seeming.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP10",
+      "domainId": "EP",
+      "name": "Revelation as epistemic source",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Epistemic weight assigned to alleged divine or supernatural revelation.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP11",
+      "domainId": "EP",
+      "name": "External-world stance",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Direct realism, indirect realism, idealism, skepticism, or related positions regarding the external world.",
+      "candidateItemTarget": 4,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP12",
+      "domainId": "EP",
+      "name": "Theory of justification",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Affinity among foundationalist, coherentist, reliabilist, infinitist, and related accounts.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP13",
+      "domainId": "EP",
+      "name": "Scientific realism",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Degree of commitment to realist interpretation of successful scientific theories and unobservable entities.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP14",
+      "domainId": "EP",
+      "name": "Values in science",
+      "type": "categorical",
+      "tier": "research",
+      "description": "View of whether and how non-epistemic values may legitimately influence scientific reasoning.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM01",
+      "domainId": "OM",
+      "name": "Naturalism / supernatural ontology",
+      "type": "categorical",
+      "tier": "headline",
+      "description": "Whether reality is exhausted by the natural world or includes irreducibly supernatural entities or powers.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM02",
+      "domainId": "OM",
+      "name": "Physicalism / nonphysicalism",
+      "type": "categorical",
+      "tier": "headline",
+      "description": "Whether everything is fundamentally physical or includes irreducibly nonphysical reality.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM03",
+      "domainId": "OM",
+      "name": "Abstract-object realism / nominalism",
+      "type": "categorical",
+      "tier": "primary",
+      "description": "Whether abstract objects or universals exist independently of concrete particulars and linguistic practices.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "deprecated",
+      "directlyScored": true
+    },
+    {
+      "id": "OM04",
+      "domainId": "OM",
+      "name": "Reductionism and emergence",
+      "type": "affinity",
+      "tier": "headline",
+      "description": "Affinity for reductive versus genuinely emergent explanatory structures.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM05",
+      "domainId": "OM",
+      "name": "Teleology / purposiveness in nature",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Degree to which natural processes are interpreted as inherently purposive or goal-directed.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM06",
+      "domainId": "OM",
+      "name": "Laws of nature: Humean / non-Humean",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Competing metaphysical accounts of laws of nature.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM07",
+      "domainId": "OM",
+      "name": "Causation model",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Competing accounts such as counterfactual, production, regularity, or primitive causal structure.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM08",
+      "domainId": "OM",
+      "name": "Metaontology",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Whether ontological disputes are substantive, deflationary, quantifier-relative, or otherwise construed.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM09",
+      "domainId": "OM",
+      "name": "Temporal ontology",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Presentism, eternalism, growing-block, and related positions.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM10",
+      "domainId": "OM",
+      "name": "Modal ontology",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Commitments concerning possible worlds, modality, and modal realism or actualism.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MS01",
+      "domainId": "MS",
+      "name": "Consciousness reducibility",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Degree to which consciousness is thought reducible to nonconscious physical/functional facts.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MS02",
+      "domainId": "MS",
+      "name": "Consciousness theory family",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Affinity among physicalist identity, functionalist, dualist, panpsychist, eliminativist, and related families.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [
+        "MS01"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MS03",
+      "domainId": "MS",
+      "name": "Personal identity theory",
+      "type": "categorical",
+      "tier": "headline",
+      "description": "Biological, psychological-continuity, further-fact, reductionist, and related accounts of persistence.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MS04",
+      "domainId": "MS",
+      "name": "Substantial-self vs process-self orientation",
+      "type": "affinity",
+      "tier": "headline",
+      "description": "Whether the self is treated as a persisting substance/entity or a constructed/process-like organization.",
+      "candidateItemTarget": 4,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MS05",
+      "domainId": "MS",
+      "name": "Extended-mind acceptance",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Acceptance that cognitive processes can constitutively extend beyond the biological individual.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MS06",
+      "domainId": "MS",
+      "name": "Mental-content internalism / externalism",
+      "type": "categorical",
+      "tier": "research",
+      "description": "Whether mental content is individuated solely by internal state or partly by external relations.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "MS07",
+      "domainId": "MS",
+      "name": "Identity under transformation",
+      "type": "derived",
+      "tier": "diagnostic",
+      "description": "Derived pattern across teleportation, copying, uploading, replacement, and continuity vignettes.",
+      "candidateItemTarget": 0,
+      "outputMode": "hidden_derived",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [
+        "MS03"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": false
+    },
+    {
+      "id": "AH01",
+      "domainId": "AH",
+      "name": "Free-will belief",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Strength of belief that human agents possess free will.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "free-will-inventory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH02",
+      "domainId": "AH",
+      "name": "Determinism belief",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Strength of belief that events and choices are determined by prior states and laws/causes.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "free-will-inventory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH03",
+      "domainId": "AH",
+      "name": "Moral-responsibility belief",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Strength of belief in basic or desert-entailing moral responsibility.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH04",
+      "domainId": "AH",
+      "name": "Baseline human benevolence",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Belief that humans are naturally capable of or inclined toward benevolence/cooperation.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH05",
+      "domainId": "AH",
+      "name": "Baseline human selfishness / competition",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Belief that humans are naturally inclined toward selfishness, rivalry, or competition.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH06",
+      "domainId": "AH",
+      "name": "Human-nature mutability",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Belief that human traits and dispositions are substantially malleable.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH07",
+      "domainId": "AH",
+      "name": "Human-nature complexity",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Belief that behavior resists simple, single-cause accounts.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH08",
+      "domainId": "AH",
+      "name": "Biological causal attribution",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Weight assigned to biological and inherited causes of behavior.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH09",
+      "domainId": "AH",
+      "name": "Environmental / social causal attribution",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Weight assigned to environmental, institutional, and social causes of behavior.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH10",
+      "domainId": "AH",
+      "name": "Rational-conscious causal attribution",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Weight assigned to conscious reasons and deliberation as causes of behavior.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH11",
+      "domainId": "AH",
+      "name": "Unconscious / intrapsychic causal attribution",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Weight assigned to unconscious or intrapsychic causes of behavior.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH12",
+      "domainId": "AH",
+      "name": "Agency theory family",
+      "type": "derived",
+      "tier": "diagnostic",
+      "description": "Derived but explicitly confirmed classification among compatibilist, libertarian, hard-determinist, skeptical, and related positions.",
+      "candidateItemTarget": 0,
+      "outputMode": "hidden_derived",
+      "evidenceBasis": [
+        "philpapers-2020",
+        "free-will-inventory"
+      ],
+      "prerequisites": [
+        "AH01",
+        "AH02",
+        "AH03"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": false
+    },
+    {
+      "id": "RC01",
+      "domainId": "RC",
+      "name": "Deity existence",
+      "type": "categorical",
+      "tier": "headline",
+      "description": "Credence or categorical stance regarding the existence of God or gods.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC02",
+      "domainId": "RC",
+      "name": "Personal / agentic deity",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which divinity is understood as personal, intentional, or agentic.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [
+        "RC01"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC03",
+      "domainId": "RC",
+      "name": "Supernatural reality",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Belief in supernatural beings, properties, forces, or realms.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC04",
+      "domainId": "RC",
+      "name": "Divine / supernatural intervention",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Belief that supernatural agency intervenes in ordinary events.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [
+        "RC03"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC05",
+      "domainId": "RC",
+      "name": "Miraculous intervention",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Belief that events can occur through suspension or extraordinary override of ordinary natural regularities.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [
+        "RC03"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC06",
+      "domainId": "RC",
+      "name": "Revelatory authority",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Authority granted to purported revelation in belief and conduct.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC07",
+      "domainId": "RC",
+      "name": "Afterlife / postmortem persistence",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Belief that persons or consciousness persist after bodily death.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC08",
+      "domainId": "RC",
+      "name": "Cosmic purpose",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Belief that the universe or human life has an objective cosmic purpose.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC09",
+      "domainId": "RC",
+      "name": "Sacredness orientation",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which entities, places, practices, or values are regarded as sacred or inviolable.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC10",
+      "domainId": "RC",
+      "name": "Religious / spiritual centrality",
+      "type": "hierarchical",
+      "tier": "primary",
+      "description": "Importance and centrality of religious or spiritual commitments in the person's life.",
+      "candidateItemTarget": 4,
+      "outputMode": "grouped_facets",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "RC11",
+      "domainId": "RC",
+      "name": "Divinity model",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Theistic, deistic, pantheistic, panentheistic, impersonal-divinity, and related models.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [
+        "RC01"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX01",
+      "domainId": "EX",
+      "name": "Ontology of life's meaning",
+      "type": "categorical",
+      "tier": "headline",
+      "description": "Whether meaning is objective, subjectively constructed, plural, absent, or otherwise constituted.",
+      "candidateItemTarget": 5,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX02",
+      "domainId": "EX",
+      "name": "Objective-purpose source",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Proposed source of objective meaning or purpose when such meaning is endorsed.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [
+        "EX01"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX03",
+      "domainId": "EX",
+      "name": "Subjective / constructed meaning",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which agents are thought capable of creating meaningful lives through projects, relations, and commitments.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX04",
+      "domainId": "EX",
+      "name": "Existential nihilism",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree of endorsement that life lacks objective or inherent meaning/value.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX05",
+      "domainId": "EX",
+      "name": "World safety",
+      "type": "monopolar",
+      "tier": "research",
+      "description": "General belief that the world is safe rather than dangerous.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "primal-world-beliefs"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX06",
+      "domainId": "EX",
+      "name": "World enticingness / possibility",
+      "type": "monopolar",
+      "tier": "research",
+      "description": "General belief that the world is interesting, abundant, and full of worthwhile possibilities.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "primal-world-beliefs"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX07",
+      "domainId": "EX",
+      "name": "World aliveness / intentional character",
+      "type": "monopolar",
+      "tier": "research",
+      "description": "General tendency to experience the world as intentional, responsive, or alive.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "primal-world-beliefs"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX08",
+      "domainId": "EX",
+      "name": "Optimism vs resignation",
+      "type": "bipolar",
+      "tier": "research",
+      "description": "General orientation toward possibility of improvement versus resignation or pessimism.",
+      "candidateItemTarget": 3,
+      "outputMode": "bipolar_bar",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EX09",
+      "domainId": "EX",
+      "name": "Response to meaninglessness",
+      "type": "derived",
+      "tier": "diagnostic",
+      "description": "Derived existential style in response to absence or uncertainty of objective meaning.",
+      "candidateItemTarget": 0,
+      "outputMode": "hidden_derived",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [
+        "EX01",
+        "EX03",
+        "EX04"
+      ],
+      "measurementStatus": "provisional",
+      "directlyScored": false
+    },
+    {
+      "id": "SO01",
+      "domainId": "SO",
+      "name": "Individualism",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Priority assigned to persons as independent agents with distinct projects and claims.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO02",
+      "domainId": "SO",
+      "name": "Collectivism",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Priority assigned to collective identities, goals, and group-level obligations.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO03",
+      "domainId": "SO",
+      "name": "Relational / interdependent self",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Degree to which identity is understood through constitutive relationships and social roles.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO04",
+      "domainId": "SO",
+      "name": "Tolerance of otherness",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Acceptance of persons, lifestyles, and groups substantially different from one's own.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO05",
+      "domainId": "SO",
+      "name": "Group-dominance preference",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Preference for hierarchical dominance of some social groups over others.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "sdo7"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO06",
+      "domainId": "SO",
+      "name": "Anti-egalitarianism",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Opposition to group-based social equality independent of explicit dominance preference.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "sdo7"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO07",
+      "domainId": "SO",
+      "name": "Cooperation orientation",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Belief in and preference for cooperative modes of social interaction.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO08",
+      "domainId": "SO",
+      "name": "Competition orientation",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Belief in and preference for competitive modes of social interaction.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO09",
+      "domainId": "SO",
+      "name": "Scope of moral concern / cosmopolitan concern",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Breadth of the circle of persons toward whom substantial moral concern is extended.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO10",
+      "domainId": "SO",
+      "name": "Social-category essentialism",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which social categories are treated as deep, natural, fixed, or essence-bearing.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO11",
+      "domainId": "SO",
+      "name": "Social-construction orientation",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which social categories and institutions are understood as historically and socially constituted.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO12",
+      "domainId": "SO",
+      "name": "Humanity-nature worldview",
+      "type": "hierarchical",
+      "tier": "headline",
+      "description": "Higher-order family containing anthropocentrism, ecocentrism, ecological limits, mastery, and harmony/interdependence facets.",
+      "candidateItemTarget": 5,
+      "outputMode": "grouped_facets",
+      "evidenceBasis": [
+        "koltko-2004"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO13",
+      "domainId": "SO",
+      "name": "Belief in social/world justice",
+      "type": "monopolar",
+      "tier": "research",
+      "description": "Belief that people generally receive outcomes they deserve or that social reality is fundamentally just.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL01",
+      "domainId": "PL",
+      "name": "Legitimacy of coercive political authority",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Degree to which states or political institutions can possess a justified right to coerce.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL02",
+      "domainId": "PL",
+      "name": "General political obligation",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Degree to which persons have a general moral duty to obey political law as such.",
+      "candidateItemTarget": 5,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL03",
+      "domainId": "PL",
+      "name": "Consent requirement for authority",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which legitimate authority requires actual, meaningful, or revocable consent.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL04",
+      "domainId": "PL",
+      "name": "Democratic participation / authorization",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Weight assigned to democratic participation or authorization in political legitimacy.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL05",
+      "domainId": "PL",
+      "name": "Centralization vs decentralization",
+      "type": "bipolar",
+      "tier": "headline",
+      "description": "Preference for concentration versus dispersion of political decision-making authority.",
+      "candidateItemTarget": 5,
+      "outputMode": "bipolar_bar",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL06",
+      "domainId": "PL",
+      "name": "Liberty as noninterference",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Importance assigned to freedom from interference.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL07",
+      "domainId": "PL",
+      "name": "Freedom as non-domination",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance assigned to freedom from arbitrary or uncontrolled power.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL08",
+      "domainId": "PL",
+      "name": "Positive / capability liberty",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance assigned to effective capacity or opportunity to pursue valued ends.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL09",
+      "domainId": "PL",
+      "name": "Rights as side constraints",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Strength of rights-based constraints against pursuit of aggregate or collective goals.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL10",
+      "domainId": "PL",
+      "name": "Distributive-principle family",
+      "type": "affinity",
+      "tier": "headline",
+      "description": "Relative affinities for equality, need, desert, sufficiency, priority, entitlement, and related distributive principles.",
+      "candidateItemTarget": 7,
+      "outputMode": "affinity_group",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL11",
+      "domainId": "PL",
+      "name": "Property-right strength",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Strength and scope of moral claims attached to private possession, use, transfer, and exclusion.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL12",
+      "domainId": "PL",
+      "name": "Collective / common ownership legitimacy",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which common, collective, or social ownership is regarded as legitimate or desirable.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL13",
+      "domainId": "PL",
+      "name": "Market coordination preference",
+      "type": "monopolar",
+      "tier": "headline",
+      "description": "Preference for decentralized exchange and price-mediated coordination.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL14",
+      "domainId": "PL",
+      "name": "Collective / democratic coordination preference",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Preference for collective, participatory, or democratically planned coordination.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL15",
+      "domainId": "PL",
+      "name": "Expert / administrative coordination preference",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Preference for expert, technocratic, or administrative coordination.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL16",
+      "domainId": "PL",
+      "name": "Procedural justice priority",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance assigned to fair procedures independent of substantive outcomes.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL17",
+      "domainId": "PL",
+      "name": "Substantive justice priority",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Importance assigned to substantively just outcomes independent of procedure alone.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL18",
+      "domainId": "PL",
+      "name": "Retributive punishment",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Support for punishment as deserved response to wrongdoing.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL19",
+      "domainId": "PL",
+      "name": "Deterrent punishment",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Support for punishment as a means of deterring future wrongdoing.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL20",
+      "domainId": "PL",
+      "name": "Rehabilitative / restorative punishment",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Support for rehabilitation, repair, restoration, or reintegration as purposes of criminal justice.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL21",
+      "domainId": "PL",
+      "name": "Legal positivism / nonpositivism",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Whether legal validity is conceptually separable from morality or partly dependent on moral facts.",
+      "candidateItemTarget": 4,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "philpapers-2020"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL22",
+      "domainId": "PL",
+      "name": "Cosmopolitan political scope",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which political duties and institutions should extend beyond national boundaries.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL23",
+      "domainId": "PL",
+      "name": "National / particular political obligation",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which compatriot or national membership generates special political obligations.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL24",
+      "domainId": "PL",
+      "name": "Institutional pluralism / polycentricity",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Preference for overlapping, competitive, decentralized, or polycentric institutions rather than unitary authority.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL25",
+      "domainId": "PL",
+      "name": "Reform vs rupture orientation",
+      "type": "bipolar",
+      "tier": "research",
+      "description": "Preference for gradual institutional reform versus discontinuous or revolutionary replacement.",
+      "candidateItemTarget": 3,
+      "outputMode": "bipolar_bar",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL26",
+      "domainId": "PL",
+      "name": "Religious authority in public law",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Degree to which religious doctrines or authorities should have independent standing in public law or political rule.",
+      "candidateItemTarget": 4,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "project-theory"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME09",
+      "domainId": "ME",
+      "name": "Human-life grounding of moral standards",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether requirements of human life and flourishing ground objective moral standards. Separate from mere biological description or current preferences.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-rand",
+        "acad-egoism",
+        "acad-stirner"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "ME10",
+      "domainId": "ME",
+      "name": "Choice-to-live conditionality of moral reasons",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether moral requirements are conditional on choosing to live. This is not identical to making morality relative to any passing desire.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-rand",
+        "acad-egoism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE15",
+      "domainId": "NE",
+      "name": "Ethical egoism as a normative principle",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "The universal moral prescription to prioritize one’s own good; not a claim about actual motives or a permission for personal projects.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-egoism",
+        "acad-rand"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE16",
+      "domainId": "NE",
+      "name": "Rational egoism about practical reasons",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether one’s own welfare supplies the ultimate standard of practical rationality; distinct from moral rightness and descriptive motivation.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-egoism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE17",
+      "domainId": "NE",
+      "name": "Ownness and revisable allegiance to ideals",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Original operationalization of non-subjection to fixed ideals and revisable appropriation of projects. An interpretive proposal, not a validated Stirner scale.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-stirner"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE18",
+      "domainId": "NE",
+      "name": "Promissory self-binding",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Whether a voluntary promise itself creates a defeasible reason beyond current desire; not an exceptionless duty or legal remedy rule.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "acad-promises"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE19",
+      "domainId": "NE",
+      "name": "Continuing endorsement and exit from commitments",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether continued association or service requires renewed endorsement; separate from duties to repair induced reliance and from valid waiver.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-stirner",
+        "acad-promises"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE20",
+      "domainId": "NE",
+      "name": "Reliance-based reasons for performance or repair",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Reasons generated by induced expectations and reliance; separable from promises as normative powers and from specific-performance enforcement.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "acad-promises"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE21",
+      "domainId": "NE",
+      "name": "Elective other-regarding concern",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Possibility of voluntarily caring about another as an end without making universal self-sacrifice a duty. Not the intensity of experienced affection.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-stirner",
+        "acad-egoism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP15",
+      "domainId": "EP",
+      "name": "Fallibilism about knowledge",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether knowledge can coexist with the possibility of error; distinct from willingness to revise, skepticism, and infallibility of a nonpropositional perceptual process.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-epistemology",
+        "acad-pragmatism",
+        "acad-rand-epistemology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP16",
+      "domainId": "EP",
+      "name": "Pragmatic clarification through consequences",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Clarifying disputed ideas through conceivable differences in experience or conduct; not treating expediency as truth.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-pragmatism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP17",
+      "domainId": "EP",
+      "name": "Concepts as revisable instruments of inquiry",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Conceptual revision and usefulness in inquiry; compatible with constraints from mind-independent reality.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-pragmatism",
+        "acad-rand-epistemology",
+        "acad-marschall"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP18",
+      "domainId": "EP",
+      "name": "Noninferential foundations of justification",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether some epistemic warrant is not derived from other beliefs. Foundationalism need not make every foundation infallible.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-epistemology",
+        "acad-rand-epistemology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP19",
+      "domainId": "EP",
+      "name": "Contextual certainty",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether sufficient evidence in a context can warrant certainty despite possible later revision. Not dogmatic immunity to evidence.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-rand-epistemology",
+        "acad-epistemology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "EP20",
+      "domainId": "EP",
+      "name": "Perceptual-conceptual basis of factual warrant",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Grounding claims about the concrete external world in sensory evidence integrated by reasoning; not a priori rationalism or rejecting scientific inference.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-rand-epistemology",
+        "acad-epistemology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM11",
+      "domainId": "OM",
+      "name": "Abstract-object commitment",
+      "type": "categorical",
+      "tier": "primary",
+      "description": "Existence of abstract objects such as numbers, distinct from realism about universals and ordinary physical objects.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "acad-nominalism",
+        "acad-marschall"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM12",
+      "domainId": "OM",
+      "name": "Universals commitment",
+      "type": "categorical",
+      "tier": "primary",
+      "description": "Whether numerically the same universal is instantiated by distinct things; separate from shared resemblance and mental concepts.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "acad-nominalism",
+        "acad-rand-epistemology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM13",
+      "domainId": "OM",
+      "name": "Ordinary external-world independence",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Independence of ordinary concrete objects from thought; does not settle social ontology, universals, or the method of ontology.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "acad-rand-epistemology",
+        "acad-epistemology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "OM14",
+      "domainId": "OM",
+      "name": "Easy or deflationary approach to ontology",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Using conceptual application conditions and ordinary empirical inquiry rather than an additional heavyweight existence test. Compatibility with realism remains disputed.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-marschall",
+        "acad-thomasson"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO14",
+      "domainId": "SO",
+      "name": "Institutional dependence without elimination",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether institution-dependent entities can be real; different from independence from all persons or a moral collective duty.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-social-ontology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "SO15",
+      "domainId": "SO",
+      "name": "Individual-level explanation of social processes",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether social explanations must be grounded in agents and their interactions; not normative individualism or denial of aggregate patterns.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-social-ontology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL27",
+      "domainId": "PL",
+      "name": "Preinstitutional grounding of rights",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether persons have basic rights independently of social recognition; distinct from the form and strength of a particular property regime.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-rights",
+        "acad-rand"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL28",
+      "domainId": "PL",
+      "name": "Institutional and instrumental justification of rights",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Justification of rights in terms of agency, cooperation or institutional consequences. May coexist with status-based justification.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-rights",
+        "acad-contractarianism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL29",
+      "domainId": "PL",
+      "name": "Territorial monopoly of final legal force",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Whether a single final rights-protecting legal authority is necessary within a territory. Separate from arbitrary command and unqualified obedience.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-rand",
+        "acad-legitimacy",
+        "acad-hasnas"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL30",
+      "domainId": "PL",
+      "name": "Nonstate adjudication and protective provision",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Institutional possibility and acceptability of nonstate legal services; separate from rejection of general political obligation and from assuming all commons require markets.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-hasnas",
+        "acad-legitimacy"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL31",
+      "domainId": "PL",
+      "name": "Institutional value independent of obedience",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Practical justification and participation without conceding a general content-independent moral duty. Not a disguised abolition scale.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-obligation",
+        "acad-legitimacy",
+        "acad-simmons"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL32",
+      "domainId": "PL",
+      "name": "Institutional state-abolition preference",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Preference for replacing states, independent of rejecting general obligation. This does not measure timing or methods of transition.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-obligation",
+        "acad-legitimacy",
+        "acad-hasnas"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL33",
+      "domainId": "PL",
+      "name": "Contractual remedies distinct from continuing assent",
+      "type": "affinity",
+      "tier": "primary",
+      "description": "Justification of compensatory or protective remedies despite withdrawal, distinct from compulsory personal performance or legal advice about existing law.",
+      "candidateItemTarget": 3,
+      "outputMode": "affinity_card",
+      "evidenceBasis": [
+        "acad-promises"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH13",
+      "domainId": "AH",
+      "name": "Psychological egoism",
+      "type": "monopolar",
+      "tier": "primary",
+      "description": "Descriptive universal claim that ultimate motives concern one’s own welfare. Distinguish desire ownership from desire content.",
+      "candidateItemTarget": 3,
+      "outputMode": "independent_meter",
+      "evidenceBasis": [
+        "acad-egoism",
+        "acad-stirner"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "AH14",
+      "domainId": "AH",
+      "name": "Incompatibilist condition on free agency",
+      "type": "categorical",
+      "tier": "primary",
+      "description": "Whether causal determinism excludes free agency, distinct from the belief that determinism is true or ordinary freedom from coercion.",
+      "candidateItemTarget": 3,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "acad-fwi",
+        "acad-rand-epistemology"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "PL34",
+      "domainId": "PL",
+      "name": "Constitutionally protected federal division",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "A normative preference for entrenched powers at both national and regional levels, with neither level able to withdraw the other’s assigned powers unilaterally. This is narrower than decentralization.",
+      "candidateItemTarget": 2,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "audit-federalism"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE22",
+      "domainId": "NE",
+      "name": "Direct act-consequence criterion",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "A scoped maximizing act-outcome criterion for moral rightness. This is distinct from generic attention to outcomes, rule consequentialism, and utilitarian welfare theory.",
+      "candidateItemTarget": 1,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "sep-act-consequence-criterion"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE23",
+      "domainId": "NE",
+      "name": "Consequence-justified rule criterion",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "A scoped rule-based moral rightness criterion. Consequences ultimately justify the rule, and conformity to it can determine an act’s rightness even when that act alone has a better outcome. This is distinct from a useful rule of thumb and an independent duty.",
+      "candidateItemTarget": 1,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "sep-rule-consequence-criterion"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    },
+    {
+      "id": "NE24",
+      "domainId": "NE",
+      "name": "Welfarist outcome value",
+      "type": "categorical",
+      "tier": "diagnostic",
+      "description": "Whether only the well-being of affected beings ultimately makes an outcome better or worse, distinct from a theory of personal well-being, aggregation, and moral rightness.",
+      "candidateItemTarget": 2,
+      "outputMode": "branch_classification",
+      "evidenceBasis": [
+        "sep-welfarism-outcome-value",
+        "sep-plural-outcome-value"
+      ],
+      "prerequisites": [],
+      "measurementStatus": "provisional",
+      "directlyScored": true
+    }
+  ]
+}

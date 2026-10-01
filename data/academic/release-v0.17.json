@@ -1,0 +1,21 @@
+{
+  "version": "0.17.0",
+  "registryVersion": "0.6.0",
+  "baseBankVersion": "0.16.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-10-01",
+  "note": "Two original complementary questions for scoped welfare-only outcome value; no theory of right action or philosophical identity inferred. Authored, not empirically validated.",
+  "itemCount": 572,
+  "newItemCount": 2,
+  "registryEntries": 186,
+  "activeConstructCount": 185,
+  "newConstructCount": 1,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.16.json": "2808fac9e2da10e1bf369b528cc1d601c99e5d85b7e1a4b54d111c49a352e82e",
+    "data/registries/constructs-v0.5.json": "10bcb6ce19330fe5fbe67c4c149eb56c3e18dea8c57ffac035b7ab41b83f6480"
+  },
+  "publicInferenceAllowed": false
+}
