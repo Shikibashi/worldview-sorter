@@ -75,7 +75,15 @@ async function runRoute(size,{pause=false,detail=false}={}){
  check('Current route uses first-person revelation warrant instead of the audience-ambiguous item',
   saved.presentedItems.some(row=>row.itemId==='EPI122')&&
   !saved.presentedItems.some(row=>row.itemId==='EPI021'));
- check('Self-interest discriminator appears only on the Full route',size===243?
+ check('Welfarist outcome-value questions appear only in Full at their reviewed revisions',size===245?
+  saved.presentedItems.some(row=>row.itemId==='NEI124'&&row.itemRevision===2)&&
+  saved.presentedItems.some(row=>row.itemId==='NEI132'&&row.itemRevision===1):
+  !saved.presentedItems.some(row=>['NEI124','NEI132'].includes(row.itemId)));
+ if(size===245)check('Conflicting answers remain a mixed welfarist result',
+  await page.locator('[data-commitment-id="reviewed-NE24-welfarist-outcome-value"]').count()>=1&&
+  await page.locator('[data-commitment-id="reviewed-NE24-welfarist-outcome-value"]').evaluateAll(nodes=>
+   nodes.every(node=>node.dataset.state==='mixed_context_dependent')));
+ check('Self-interest discriminator appears only on the Full route',size===245?
   saved.presentedItems.some(row=>row.itemId==='NEI121')&&
   !saved.presentedItems.some(row=>row.itemId==='NEI101'):
   !saved.presentedItems.some(row=>row.itemId==='NEI121'));
@@ -146,7 +154,7 @@ try{
  await keyboardContext.close();
  await runRoute(64,{pause:true,detail:true});
  await runRoute(120);
- await runRoute(243);
+ await runRoute(245);
  const historicalBank=JSON.parse(await readFile(path.join(root,'data/items/candidate-v0.9.json'),'utf8'));
  const historicalPilot=JSON.parse(await readFile(path.join(root,'data/pilots/pilot-0.2.json'),'utf8'));
  const historicalPolicy=JSON.parse(await readFile(path.join(root,'data/experience/progressive-depth-v1.2.json'),'utf8'));
