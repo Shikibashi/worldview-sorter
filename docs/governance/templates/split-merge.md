@@ -5,4 +5,4 @@ Copy `model-change.json`; use `changeClass: split` or `merge` and list all old a
 - Preserve old definitions and versions. State the semantic relationship and version boundary explicitly.
 - For a split, show which old evidence reaches each new proposition; do not distribute old answers by assumption.
 - For a merge, explain why either prior answer set does not automatically establish the combined claim.
-- Identify route, affinity, translation, research export, historical replay, and current reinterpretation effects. Raw responses are never rewritten.
+- Identify route, affinity, research export, historical replay, and current reinterpretation effects. Raw responses are never rewritten.

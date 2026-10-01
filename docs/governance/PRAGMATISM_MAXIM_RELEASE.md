@@ -27,6 +27,6 @@ The versioned Pragmatism comparison retains the pragmatic method as a defining s
 
 ## Compatibility and remaining evidence
 
-The new original EPI123@1 and successor bank, source ledger, model, route, catalog, and localization bindings are versioned. Draft Spanish and Arabic remain unavailable; the public application remains English-only. Historical EP16 support from EPI104 and EPI105 is replayable under its original model but does not transfer automatically to this successor. Raw responses are unchanged.
+The new original EPI123@1 and successor bank, source ledger, model, route, and catalog bindings are versioned. Historical EP16 support from EPI104 and EPI105 is replayable under its original model but does not transfer automatically to this successor. Raw responses are unchanged.
 
 Human response-process work is needed to learn whether respondents understand the “no conceivable difference” condition and whether EPI103 and EPI123 provide distinct evidence in practice. Real response data would also be needed to evaluate option use, local dependence, and threshold performance. The software regressions establish only the authored inference contract.

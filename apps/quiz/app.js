@@ -741,13 +741,13 @@ function updateShare(){
 function start(size){
  if(saveConflict){announce('Another tab changed the saved quiz. Reload before starting a new route.');return;}
  const selected=localizationBundles.get('en-US');
- if(!selected||selected.status!=='approved'||selected.canonical!==true){announce('The English questionnaire is unavailable. Please try again later.');return;}
+ if(!selected||selected.status!=='approved'||selected.canonical!==true){announce('The questionnaire is unavailable. Please try again later.');return;}
  if(loadedText&&!confirm('Starting another quiz replaces the locally saved quiz. Save a backup first to keep it. Continue?'))return;
  announce('');bank=activeBank;affinityPilot=activeAffinityPilot;const seed=crypto.randomUUID();const route=experiencePolicy.routes.find(r=>r.size===size);const chosenPolicy=formPolicies.find(p=>p.policyVersion===route?.formPolicyVersion);if(!chosenPolicy)throw Error('Unknown quiz route.');model=models.get(chosenPolicy.modelVersion);if(!model)throw Error('Unknown interpretation release.');if(chosenPolicy.algorithm==='progressive-fixed-1')progressivePolicy=chosenPolicy;affinityCatalog=activeAffinityCatalog;
  const refs=chosenPolicy.routes?.find(r=>r.size===size)?.itemRefs??chosenPolicy.frozenItems;
  const availability=routeLocalizationAvailability({bundle:selected,route:{itemRefs:refs},bank,scalesDoc,model});
- if(!availability.available){announce('This route has no approved wording for the selected language.');return;}
- activeLocalizationBundle=selected;document.documentElement.lang=selected.language;document.documentElement.dir=selected.direction;
+ if(!availability.available){announce('This route is unavailable right now.');return;}
+ activeLocalizationBundle=selected;document.documentElement.lang='en';document.documentElement.dir='ltr';
  quiz=createQuiz({bank,pilot,scalesDoc,formPolicy:chosenPolicy,seed,size,sessionId:crypto.randomUUID(),
   localizationBundle:selected,localizationCatalogVersion:localizationCatalog.catalogVersion,
   modelReleaseVersion:activeModelReleaseVersion,releaseChannel:betaConfig.channel});
@@ -795,13 +795,14 @@ async function bootstrap(){
  for(const catalogVersion of localizationCatalogs){const boundModel=models.get(catalogVersion.modelVersion),boundAffinity=affinitiesByVersion.get(catalogVersion.affinityCatalogVersion),boundBank=banks.get(catalogVersion.canonicalBankVersion);
   if(!boundModel||!boundAffinity||!boundBank)throw Error('Historical wording dependencies are unavailable: '+catalogVersion.catalogVersion);
   validateLocalizationCatalog(catalogVersion,{bank:boundBank,model:boundModel,affinityCatalog:boundAffinity});}
- const loadedBundles=await Promise.all((current.localizationBundleVersions??current.localizationBundles??[]).map(ref=>fetchJSON(ref.path)));
+ const loadedBundles=await Promise.all((current.localizationBundleVersions??current.localizationBundles??[])
+  .filter(ref=>ref.locale==='en-US').map(ref=>fetchJSON(ref.path)));
  for(const bundle of loadedBundles){const catalogVersion=localizationCatalogs.find(c=>c.locales.some(r=>r.locale===bundle.locale&&r.bundleVersion===bundle.bundleVersion));
   if(!catalogVersion)throw Error('Historical wording catalog is unavailable: '+bundle.bundleVersion);
   validateLocalizationBundle(bundle,{catalog:catalogVersion,bank:banks.get(catalogVersion.canonicalBankVersion),scalesDoc,
    model:models.get(catalogVersion.modelVersion),affinityCatalog:affinitiesByVersion.get(catalogVersion.affinityCatalogVersion)});
   localizationBundlesByVersion.set(bundle.bundleVersion,bundle);}
- for(const row of localizationCatalog.locales){const bundle=localizationBundlesByVersion.get(row.bundleVersion);
+ for(const row of localizationCatalog.locales.filter(entry=>entry.locale==='en-US')){const bundle=localizationBundlesByVersion.get(row.bundleVersion);
   if(!bundle)throw Error('Current wording bundle is unavailable: '+row.bundleVersion);
   localizationBundles.set(bundle.locale,bundle);}
  formPolicies=await Promise.all(experiencePolicy.formPolicies.map(p=>fetchJSON(p.path)));
@@ -827,8 +828,7 @@ async function bootstrap(){
   if(quiz.session.completionStatus!=='completed'&&historicalReplayQualification(quiz.session))
    throw Error('This saved attempt uses unverified historical inference code and cannot be continued in the current release. Save its backup and start a new administration.');
   activeLocalizationBundle=quiz.session.localization?localizationBundlesByVersion.get(quiz.session.localization.bundleVersion):null;
-  document.documentElement.lang=activeLocalizationBundle?.language??'en';
-  document.documentElement.dir=activeLocalizationBundle?.direction??'ltr';
+  document.documentElement.lang='en';document.documentElement.dir='ltr';
   if(quiz.depth){progressivePolicy=formPolicies.find(p=>p.policyVersion===quiz.depth.policyVersion);if(!progressivePolicy)throw Error('The saved depth route release is unavailable. Keep its backup.');}
   if(quiz.packet.evidenceModelVersion){model=models.get(quiz.packet.evidenceModelVersion);if(!model)throw Error('The saved interpretation release is unavailable. Keep its backup.');
    affinityPilot=pilotsByModel.get(model.modelVersion);if(!affinityPilot)throw Error('The saved pilot definition is unavailable. Keep its backup.');}

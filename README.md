@@ -89,5 +89,3 @@ The public quiz has no account, analytics tracker, or automatic answer submissio
 [Progressive depth route purposes and limits](docs/PROGRESSIVE_DEPTH.md).
 
 [Optional exploration, sharing, and historical snapshot limits](docs/ENGAGEMENT_SHARING.md).
-
-[Localization architecture and review gates](docs/LOCALIZATION.md).

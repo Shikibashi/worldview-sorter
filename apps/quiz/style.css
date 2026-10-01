@@ -21,18 +21,6 @@ h2,h3,.affinity{overflow-wrap:anywhere}
 @media(max-width:680px){#exploration-actions,.compare-controls,#tradition-comparison{grid-template-columns:1fr}.compare-controls label:nth-of-type(2),.compare-controls select:nth-of-type(2){grid-column:1;grid-row:auto}}
 
 /* Keep reading and focus order in the DOM; direction changes only inline layout. */
-html[dir=rtl] .skip{left:auto;right:1rem}
-html[dir=rtl] .promise span,html[dir=rtl] .notice,html[dir=rtl] #context p,
-html[dir=rtl] .affinity-criterion[data-finding=divergence],html[dir=rtl] .affinity-criterion[data-finding=unmeasured]{border-left:0;border-right:3px solid var(--accent);padding-left:0;padding-right:10px}
-html[dir=rtl] #context p,html[dir=rtl] .affinity-criterion[data-finding=unmeasured]{border-right-color:var(--line)}
-html[dir=rtl] .affinity-criterion[data-finding=divergence]{border-right-color:#8a4e21}
-html[dir=rtl] .route,html[dir=rtl] .answer,html[dir=rtl] .exploration-action button{text-align:start}
-html[dir=rtl] .domain summary{margin-left:0;margin-right:14px}
-html[dir=rtl] .quiet-actions span{margin-left:0;margin-right:auto}
-html[dir=rtl] .navigation #next{margin-left:0;margin-right:auto}
-html[dir=rtl] h1,html[dir=rtl] .brand,html[dir=rtl] .edition{letter-spacing:normal}
-html[dir=rtl] footer span{float:left}
-html[dir=rtl] .source a,html[dir=rtl] .affinity a,html[dir=rtl] #snapshot-view a{unicode-bidi:plaintext}
 footer details{clear:both;padding-top:1rem}footer details label,#question-feedback label,#result-feedback label{display:block;margin-top:.75rem}footer details select,#question-feedback select,#result-feedback select{min-height:48px;max-width:100%}
 
 /* Edriffles Computer Web: shared visual language, adapted for a long questionnaire. */

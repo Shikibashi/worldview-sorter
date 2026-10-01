@@ -17,6 +17,6 @@ Each public rule now pins an exact proposition and a rule-linked academic claim.
 
 ## Preservation and remaining limits
 
-The 64/120/240 item IDs, revisions, and order are unchanged. New route and client versions bind the catalog, source claims, and executable replay snapshot without editing the 1.5 release. English uses the canonical source text. Spanish and Arabic comparison wording remains untranslated and unavailable for public administration. Characteristic and disputed criteria in both new comparisons remain visibly unmeasured instead of being inferred from adjacent rules.
+The 64/120/240 item IDs, revisions, and order are unchanged. New route and client versions bind the catalog, source claims, and executable replay snapshot without editing the 1.5 release. Characteristic and disputed criteria in both new comparisons remain visibly unmeasured instead of being inferred from adjacent rules.
 
 The two groups each contain three closely related agreement items. Their authored evidence units are duplication controls, not proof of independent response information. Human comprehension and item behavior remain open empirical questions.

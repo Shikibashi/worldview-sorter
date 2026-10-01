@@ -58,31 +58,26 @@ const completeStage=async(page,max)=>{
 };
 try{
  const context=await browser.newContext({viewport:{width:1280,height:900},acceptDownloads:true});
- const page=await context.newPage();const errors=[],consoleErrors=[];let submissions=0;
- page.on('pageerror',e=>errors.push(e.message));page.on('console',message=>{if(message.type()==='error')consoleErrors.push(message.text());});page.on('request',r=>{if(r.method()==='POST')submissions++;});
+ const page=await context.newPage();const errors=[],consoleErrors=[];let submissions=0,nonCanonicalWordingRequests=0;
+ page.on('pageerror',e=>errors.push(e.message));page.on('console',message=>{if(message.type()==='error')consoleErrors.push(message.text());});
+ page.on('request',r=>{if(r.method()==='POST')submissions++;if(/(?:ar-draft|es-ES-draft)-v\d+\.json/.test(r.url()))nonCanonicalWordingRequests++;});
  await page.addInitScript(seed=>{Object.defineProperty(globalThis.crypto,'randomUUID',{value:()=>{const n=Number(sessionStorage.getItem('test-uuid-count')??0);sessionStorage.setItem('test-uuid-count',String(n+1));return n===0?seed:'550e8400-e29b-41d4-a716-'+String(n).padStart(12,'0');}});},seed);
  await page.goto(base+'/');await page.waitForSelector('body[data-ready="true"]').catch(async error=>{
-  throw new Error('Quiz did not initialize: '+JSON.stringify({pageErrors:errors,consoleErrors,failure:await page.locator('#failure').innerText().catch(()=>null)}),{cause:error});
+ throw new Error('Quiz did not initialize: '+JSON.stringify({pageErrors:errors,consoleErrors,failure:await page.locator('#failure').innerText().catch(()=>null)}),{cause:error});
  });
+ check('Runtime does not request noncanonical wording files',nonCanonicalWordingRequests===0);
  await checkAccessibility(page,'Landing');
  check('Root opens the quiz rather than research runner',page.url().endsWith('/apps/quiz/'));
  await page.screenshot({path:'artifacts/quiz/landing-desktop.png',fullPage:true});
  check('Three depth presets including the 245-question pilot route',await page.locator('.route').count()===3&&await page.locator('.route[data-size="245"]').count()===1);
- check('Public questionnaire states its English-only availability',
-  /Available in English only/.test(await page.locator('#home').innerText())&&
+ check('Questionnaire has no unsupported language-choice copy or control',
+  !/translated questionnaire|language choice|español|العربية/i.test(await page.locator('#home').innerText())&&
   await page.locator('#locale-choice').count()===0&&
   await page.locator('.route[data-size="64"]').isEnabled());
- check('Draft locales are absent from the respondent route chooser',
-  !/Español|العربية/.test(await page.locator('#home').innerText()));
  await page.setViewportSize({width:320,height:640});
- await page.evaluate(()=>{document.documentElement.lang='ar';document.documentElement.dir='rtl';});
- check('RTL shell retains keyboard accessible order and no mobile overflow',await page.evaluate(()=>
-  document.documentElement.scrollWidth<=innerWidth&&getComputedStyle(document.querySelector('.route')).textAlign==='start'));
- await page.screenshot({path:'artifacts/quiz/rtl-shell-synthetic.png',fullPage:true});
- await page.evaluate(()=>{document.documentElement.lang='en';document.documentElement.dir='ltr';});
  await page.setViewportSize({width:1280,height:900});
  await page.locator('.route[data-size="64"]').click();await page.locator('#quiz').waitFor({state:'visible'});
- check('Public route pins English wording',await page.evaluate(()=>
+ check('Public route pins the active canonical wording',await page.evaluate(()=>
   JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')??'null')?.quiz?.session?.localization?.locale==='en-US'));
  await page.locator('#auto').uncheck();
  check('An unanswered question cannot be advanced',await page.locator('#next').isDisabled());

@@ -22,11 +22,11 @@ All four NDJSON files have one JSON object per line. Empty files contain zero li
 | `administrations.resultSemanticsVersion` | string | Meaning of supported, leaned toward, mixed, opposed, insufficient, not measured. | Historical replay key; public metadata. |
 | `administrations.derivedInferenceVersion` | string | Version of derived proposition rules. | Historical replay key; public metadata. |
 | `administrations.affinityCatalogVersion` | string | Version of doctrinal comparison definitions. | Historical replay key; public metadata. |
-| `administrations.respondentLocale` | `en`, `en-US`, or null | Locale recorded by the client. Current research export rejects unsupported values, including arbitrary client text; null for old records that lack it. This is not nationality or ethnicity. | Package 1.1.0 with extractor 1.2.1; sensitive context. |
-| `administrations.presentationLocale` | `en-US` | Language realization used for the eligible English pilot; historical unpinned English attempts are treated as `en-US`. | Package 1.1.0 with extractor 1.2.1; replay key. |
-| `administrations.interfaceLanguage` | `en` or null | Interface language recorded for a pinned localization; null where historical UI language cannot be established. | Package 1.1.0 with extractor 1.2.1; context. |
-| `administrations.localizationCatalogVersion` | string or null | Catalog release selecting the wording bundle; null for pre-localization attempts. | Package 1.1.0; replay key. |
-| `administrations.localizationBundleVersion` | string or null | Exact language bundle release; null for pre-localization attempts. | Package 1.1.0; replay key. |
+| `administrations.respondentLocale` | `en`, `en-US`, or null | Legacy presentation tag recorded by older clients; current sessions use the fixed canonical wording. This is not nationality or ethnicity. | Package 1.1.0 with extractor 1.2.1; sensitive context. |
+| `administrations.presentationLocale` | `en-US` | Fixed canonical wording tag; older unpinned attempts are treated as `en-US`. | Package 1.1.0 with extractor 1.2.1; replay key. |
+| `administrations.interfaceLanguage` | `en` or null | Legacy interface tag retained for exact replay; null where an older interface could not be established. | Package 1.1.0 with extractor 1.2.1; context. |
+| `administrations.localizationCatalogVersion` | string or null | Historical wording catalog release; null for attempts that predate wording pins. | Package 1.1.0; replay key. |
+| `administrations.localizationBundleVersion` | string or null | Exact historical wording bundle release; null for attempts that predate wording pins. | Package 1.1.0; replay key. |
 | `administrations.modelReleaseVersion` | string or null | Immutable cross-component model manifest for newer administrations; null for older administrations whose component tuple remains separately recorded. | Package 1.1.0; replay key. |
 | `administrations.releaseChannel` | `development`, `internal`, `preview`, `beta`, `stable`, or null | Channel declared by the pinned session; null for older administrations. It is operational context, not an empirical sampling frame. | Package 1.1.0; context metadata. |
 | `responses.researchAdministrationId` | string `a-…` | Join to administration; never null. | Package 1.0.0; pseudonymous sensitive. |
@@ -41,9 +41,9 @@ All four NDJSON files have one JSON object per line. Empty files contain zero li
 | `responses.missingReason` | `no_view`, `not_understood`, `not_applicable`, `branch_not_shown`, `not_reached`, or null | Null only for substantive `answered`. Special states mirror responseState. `branch_not_shown` means routing excluded the item; `not_reached` means no response record by submission. Item unavailable in an older instrument is represented by absence from that instrument's assigned rows, not a null response. | Package 1.0.0; sensitive. |
 | `responses.rawValue` | integer, string option ID, ordered array of string option IDs, or null | Exact selected value for `answered`; null for every other state. A `0` on agreement/paired scales is a substantive midpoint and must not become missing. Item-specific option IDs are in `items.ndjson`. | Scale/item revision; highly sensitive. |
 | `responses.changedAnswerCount` | integer ≥0 | Count of recorded answer changes; zero if no answer. No change timestamps or response speeds are exported. | Package 1.0.0; sensitive. |
-| `responses.textVersion` | string or null | Exact approved wording assigned to this route position; `presented` tells whether it was actually shown. Null on historical sessions that did not pin localization. | Package 1.1.0; replay key. |
-| `responses.variantId` | string or null | Locale-specific variant identity, if a reviewed variant was presented. Null for canonical wording. | Package 1.1.0; comparability key. |
-| `responses.translationStatus` | `approved` or `historical_canonical_unpinned` | Wording approval state at contribution. The latter marks older English sessions without a per-item wording pin, not a translated draft. | Package 1.1.0; comparability key. |
+| `responses.textVersion` | string or null | Exact wording assigned to this route position; `presented` tells whether it was actually shown. Null on historical sessions that did not pin wording. | Package 1.1.0; replay key. |
+| `responses.variantId` | string or null | Historical wording variant identity. Null for canonical wording. | Package 1.1.0; comparability key. |
+| `responses.translationStatus` | `approved` or `historical_canonical_unpinned` | Legacy wording approval state at contribution. The latter marks older sessions without a per-item wording pin. | Package 1.1.0; comparability key. |
 | `items.position` | integer ≥0 | Route position. | Frozen instrument; public authored metadata. |
 | `items.itemId` | string | Stable question ID. | Item revision key; public authored metadata. |
 | `items.itemRevision` | integer ≥1 | Exact wording revision. | Item revision key; public authored metadata. |
@@ -65,8 +65,8 @@ For `agreement5`, `-2/-1/0/1/2` mean strongly disagree/disagree/neutral/agree/st
 | `versions.json` field | Type and meaning | Missingness/classification |
 | --- | --- | --- |
 | `datasetSchemaVersion` | string `research-package-1.1.0`; format of these tables. | Required; public metadata. |
-| `localizationCatalogVersions` | array of catalog versions included as frozen reference files. | Required; public metadata. |
-| `localizationBundleVersions` | array of wording bundle versions included as frozen reference files. | Required; public metadata. |
+| `localizationCatalogVersions` | array of historical wording catalog versions included as frozen reference files. | Required; public metadata. |
+| `localizationBundleVersions` | array of historical wording bundle versions included as frozen reference files. | Required; public metadata. |
 | `modelReleaseVersions` | array of cross-component model release manifests included with the package. | Required; public metadata. |
 | `consentVersion` | string `research-consent-1.0.0`; terms affirmed per contribution. | Required; governance metadata. |
 | `consentSha256` | lowercase SHA-256 hex of `consent-terms.json`. | Required; integrity metadata. |
