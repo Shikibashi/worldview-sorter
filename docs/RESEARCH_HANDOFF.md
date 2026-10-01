@@ -1,6 +1,6 @@
 # Independent research handoff status and release procedure
 
-The research collector is optional and disabled by default. This repository checkout has no mounted production contribution store or configured production research path. On 2026-09-29, **actual consented administration, pseudonym, completion, locale, version, item, and repeat counts were not verifiable here**. A missing local store must not be described as zero production participation. No production incident, recruitment, retention, or test-record register is present in this repository. An operator with access must run the private inventory and review those records before assessing readiness or releasing data.
+The research collector is optional and disabled by default. This repository checkout has no mounted production contribution store or configured production research path. On 2026-09-29, **actual consented administration, pseudonym, completion, version, item, and repeat counts were not verifiable here**. A missing local store must not be described as zero production participation. No production incident, recruitment, retention, or test-record register is present in this repository. An operator with access must run the private inventory and review those records before assessing readiness or releasing data.
 
 ## Source-data boundary
 
@@ -8,7 +8,7 @@ The current consented endpoint accepts an explicitly affirmed versioned 240-item
 
 The normalized export distinguishes answered, `no_view`, `not_understood`, `not_applicable`, `branch_not_shown`, and `not_reached`. Items absent from the Full pilot are missing by instrument design and have no row. Invalid API submissions are rejected, not exported as an `invalid` response. Technical presentation failure has no separate row code. The collector omits exact response times, geographic and demographic data, recruitment source, and a bot marker. These absences constrain analysis; do not manufacture flags from answer content.
 
-The current collector and extractor restrict client-provided respondent locale and item wording metadata to the pinned English values. An older active record with an arbitrary locale, text-version, or variant string blocks export for operator review rather than carrying possible private text into the researcher package. The current extraction logic is `research-snapshot-extractor-1.3.3`; the row format remains `research-package-1.1.0`.
+The current collector accepts only the active canonical wording set. An older active record with an unsupported presentation tag, text-version, or variant string blocks export for operator review rather than carrying possible private text into the researcher package. The current extraction logic is `research-snapshot-extractor-1.3.3`; the row format remains `research-package-1.1.0`.
 
 ## Operator sequence
 
@@ -24,7 +24,7 @@ The current collector and extractor restrict client-provided respondent locale a
 
 ## Structural feasibility pending real counts
 
-`readiness.json` provides per-snapshot classifications with reasons. With no accessible production store, item distributions, dimensional exploration, local dependence, reliability, linked test–retest, and authored-rule critique are **not yet assessed empirically**. Route comparison is **impossible with current consented collection**, because only Full pilot contributions are accepted. Demographic DIF is **impossible** because demographics are not collected. Cross-language analysis is **impossible with current eligible English-only collection**; draft bundles do not create observed language groups. Measurement invariance requires actual compatible comparison groups and joint-item coverage. An operator's record count alone cannot change these structural conclusions or establish validity.
+`readiness.json` provides per-snapshot classifications with reasons. With no accessible production store, item distributions, dimensional exploration, local dependence, reliability, linked test–retest, and authored-rule critique are **not yet assessed empirically**. Route comparison is **impossible with current consented collection**, because only Full pilot contributions are accepted. Demographic DIF is **impossible** because demographics are not collected. Measurement invariance requires actual compatible comparison groups and joint-item coverage. An operator's record count alone cannot change these structural conclusions or establish validity.
 
 The handoff can test whether rows and manifests are complete and replay authored outputs. It cannot choose a factor structure, estimate reliability or invariance, declare rule accuracy, infer population prevalence, or convert affinity satisfaction into a validation criterion. Future researchers must specify those analyses and their assumptions independently.
 

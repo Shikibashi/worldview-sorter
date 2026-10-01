@@ -72,7 +72,7 @@ criterion remains unmeasured.
 ## Release and remaining review
 
 Release 1.14.0 has new bank, model, route, catalog, source ledger, and
-localization bindings. It does not rewrite raw responses. Historical 1.13.0
+release bindings. It does not rewrite raw responses. Historical 1.13.0
 administrations use the old rule and catalog; a current reinterpretation is a
 separate operation. `NEI121@1` is an original authored vignette derived from a
 philosophical contrast, not copied wording.

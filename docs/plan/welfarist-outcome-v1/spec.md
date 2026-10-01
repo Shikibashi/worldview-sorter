@@ -19,7 +19,7 @@ The active model has no direct evidence path for whether well-being is the only 
 | --- | --- | --- |
 | P1 | State only a directly measured outcome-value proposition | Exact rule uses `NEI124@2` and `NEI132@1`, and excludes claims about act rightness, aggregation, and philosophical identity |
 | P2 | Preserve evidence semantics | Two-unit agreement may support or oppose; disagreement is mixed; one unit only leans; missing is insufficient; Quick/Standard are not measured |
-| P3 | Preserve model history | New immutable item, registry, model, route, source, localization binding, and release artifacts; earlier releases verify |
+| P3 | Preserve model history | New immutable item, registry, model, route, source, and release artifacts; earlier releases verify |
 | P4 | Protect against false positives | Test rights-constrained welfarism, beauty-only denial, route omission, and absence of an affinity shortcut |
 | P5 | Keep production static and private | Rebuild and inspect the Pages artifact; verify real Chromium routes and no answer POST |
 

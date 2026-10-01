@@ -11,10 +11,10 @@ These instructions apply to this repository. Keep product strategy in the active
 
 ## Versioning and release boundaries
 
-- Never edit a released item, rule, route, catalog, localization bundle, or model manifest in place. Create successor versions and preserve historical replay. A current reinterpretation of old answers must remain distinguishable from the original result.
+- Never edit a released item, rule, route, catalog, or model manifest in place. Create successor versions and preserve historical replay. A current reinterpretation of old answers must remain distinguishable from the original result.
 - Edit authored sources and run the existing builders for generated artifacts. Do not hand-edit generated snapshots to make validation pass. Check that `data/current.json`, manifests, hashes, and current-facing documentation agree.
 - Retain deprecated objects needed by historical administrations. A split or merge does not transfer old evidence automatically.
-- The public product is currently English-only. Draft locale records are not respondent-ready and must not appear as public language options.
+- Do not surface unavailable product behavior in respondent-facing copy or controls.
 
 ## Implementation and verification
 

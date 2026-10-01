@@ -1,6 +1,6 @@
 # Zeus execution log: welfare-only outcome value
 
-- 2026-10-01: Inspected the current checkout, manifests, release pointers, main/PR state, CI/deployment configuration, governance queue, route reports, and regressions. `main` was at `c5382ba` with model release 1.16.0 deployed; no open PRs were present. The repository remains an English-only static GitHub Pages application.
+- 2026-10-01: Inspected the current checkout, manifests, release pointers, main/PR state, CI/deployment configuration, governance queue, route reports, and regressions. `main` was at `c5382ba` with model release 1.16.0 deployed; no open PRs were present. The repository is a monolingual static GitHub Pages application.
 - `[ZEUS-AUTO:taste]` Scope: add the minimum evidence needed to assess welfare-only outcome value, a currently missing candidate distinction in the planned content batch. This is one proposition release; it does not expand affinity matching or rebuild the questionnaire.
 - The item audit found that the unreleased `NEI124@1` rights-priority alternative could coexist with welfare-only outcome value. The replacement asks directly about outcome value apart from action permission. A single unseen-beauty counterexample is insufficient on its own, so a general item and one concrete counterexample are jointly required.
 - Phase 1 planning: `docs/plan/welfarist-outcome-v1/` records the exact proposition, neighbor distinctions, sources, route decision, QA cases, and evidence limits. The authored claim is not empirical validation.

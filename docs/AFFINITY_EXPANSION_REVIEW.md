@@ -31,7 +31,7 @@ The catalog schema currently groups some different kinds of positions under broa
 
 1. Review each proposed rule against its exact item revisions, both answer directions, mixed and missing cases, nearest neighbors, and relevant philosophical sources.
 2. Add only genuinely missing discriminating questions; version items and routes instead of rewriting the frozen pilot.
-3. Use the existing proposal and release workflow for every new proposition, criterion, and tradition. New direct catalog mappings require an exact proposition and rule-linked supporting source claim. Version localization and archive the execution code if its semantics change.
+3. Use the existing proposal and release workflow for every new proposition, criterion, and tradition. New direct catalog mappings require an exact proposition and rule-linked supporting source claim. Version every changed release artifact and archive the execution code if its semantics change.
 4. Test each candidate with positive, negative, mixed, missing, route-omitted, and false-positive profiles. Compare old and new model releases without changing historical results.
 
 The [review check](../scripts/test-affinity-expansion-review.mjs) verifies IDs, public and route-measured evidence references, source-ledger references, and that deferred doctrine has no asserted direct mapping. It does not certify the philosophical judgments or validate the instrument empirically.

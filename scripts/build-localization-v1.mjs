@@ -32,11 +32,4 @@ current.localizationCatalogVersions=[...new Map([...(current.localizationCatalog
 current.localizationBundles=[...new Map([...(current.localizationBundles??[]),...catalog.locales.map(row=>({locale:row.locale,version:row.bundleVersion,path:row.path}))]
  .map(ref=>[ref.version,ref])).values()];
 await write('data/current.json',current);
-let guide=(await raw('docs/QUIZ_EXPERIENCE.md')).toString();
-guide=guide.replace('the current interface is `quiz-1.6.0`','the current interface is `quiz-1.7.0`');
-if(!guide.includes('LOCALIZATION.md'))guide+='\n## Localization release gate\n\nThe canonical English route is available; Spanish and Arabic are review targets. No unapproved translated philosophical question is served. See [localization architecture and review gaps](LOCALIZATION.md).\n';
-await writeFile(new URL('docs/QUIZ_EXPERIENCE.md',root),guide);
-let readme=(await raw('README.md')).toString();
-if(!readme.includes('docs/LOCALIZATION.md'))readme+='\n[Localization architecture and review gates](docs/LOCALIZATION.md).\n';
-await writeFile(new URL('README.md',root),readme);
-console.log('Localization release:',catalog.catalogVersion,'approved locales:',bundles.filter(bundle=>bundle.status==='approved').map(bundle=>bundle.locale).join(', '));
+console.log('Historical wording release:',catalog.catalogVersion,'approved bundles:',bundles.length);

@@ -56,7 +56,3 @@ npm run test:experience
 ```
 
 `npm test` includes experience unit/regression tests. The separate Quiz experience workflow installs a pinned Playwright version, runs actual Chromium tests and stores synthetic screenshots. Tests exercise completion, pause/resume, all answer formats, no-view versus neutrality, source-linked results, sharing preview, no answer submission, mobile layout, reduced motion and private-file blocking. Passing these checks is software evidence, not proof that people find it enjoyable or that it measures a latent trait accurately.
-
-## Localization release gate
-
-The public questionnaire and results are English-only. Spanish and Arabic are internal review targets; they are not selectable in the public application. No unapproved translated philosophical question is served. See [localization architecture and review gaps](LOCALIZATION.md).

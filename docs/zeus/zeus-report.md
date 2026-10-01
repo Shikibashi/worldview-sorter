@@ -15,7 +15,6 @@ The active direct rule uses `NEI124@2` and `NEI132@1` as two authored evidence u
 - Model release: `model-release-1.17.0`; bank 0.17.0 has 572 candidate items, registry 0.6 has 186 entries, and the model has 145 public direct rules.
 - Route policy 2.5.0 keeps Quick at 64 and Standard at 120; Full grows from 243 to 245. The new rule is not measured on Quick or Standard. Full's authored opportunities rise from 94 to 95; 50 public direct-rule gaps remain.
 - No philosophical comparison was added or strengthened. The catalog remains at eleven traditions/comparisons.
-- English remains the only respondent-ready language. Spanish and Arabic bundles stay untranslated review targets; this release does not pretend multilingual readiness.
 
 ## Verification
 
