@@ -72,7 +72,6 @@ button.primary:hover:not(:disabled),.primary:hover:not(:disabled){background:#41
 .route strong{font-size:1.45rem;font-weight:700}.route span{color:var(--muted)}.route .route-number{font-family:'Courier New',Courier,monospace}
 .route:hover:not(:disabled){background:var(--soft)}
 .routes+.small{margin-top:22px}
-#locale-choice{display:block;width:min(100%,280px);min-height:44px;margin:6px 0;border:1px solid var(--strong);border-radius:0;background:var(--raised);color:var(--ink);padding:6px}
 .notice{border:1px solid var(--strong);border-left:5px solid var(--accent);border-radius:0;background:var(--soft)}
 .method,details{border-top-color:var(--rule)}summary{font-family:'Courier New',Courier,monospace}
 #quiz{overflow-anchor:none}.quiz-meta{display:block;min-height:52px;padding:2px 0}.quiz-meta #topic,.quiz-meta #position{display:block}.quiz-meta #position{margin-top:3px;color:var(--muted)}

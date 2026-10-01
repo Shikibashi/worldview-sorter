@@ -740,8 +740,8 @@ function updateShare(){
 }
 function start(size){
  if(saveConflict){announce('Another tab changed the saved quiz. Reload before starting a new route.');return;}
- const selected=localizationBundles.get($('locale-choice').value);
- if(!selected||selected.status!=='approved'){announce('This questionnaire language is awaiting philosophical and linguistic review. Choose an available language.');return;}
+ const selected=localizationBundles.get('en-US');
+ if(!selected||selected.status!=='approved'||selected.canonical!==true){announce('The English questionnaire is unavailable. Please try again later.');return;}
  if(loadedText&&!confirm('Starting another quiz replaces the locally saved quiz. Save a backup first to keep it. Continue?'))return;
  announce('');bank=activeBank;affinityPilot=activeAffinityPilot;const seed=crypto.randomUUID();const route=experiencePolicy.routes.find(r=>r.size===size);const chosenPolicy=formPolicies.find(p=>p.policyVersion===route?.formPolicyVersion);if(!chosenPolicy)throw Error('Unknown quiz route.');model=models.get(chosenPolicy.modelVersion);if(!model)throw Error('Unknown interpretation release.');if(chosenPolicy.algorithm==='progressive-fixed-1')progressivePolicy=chosenPolicy;affinityCatalog=activeAffinityCatalog;
  const refs=chosenPolicy.routes?.find(r=>r.size===size)?.itemRefs??chosenPolicy.frozenItems;
@@ -806,23 +806,15 @@ async function bootstrap(){
   localizationBundles.set(bundle.locale,bundle);}
  formPolicies=await Promise.all(experiencePolicy.formPolicies.map(p=>fetchJSON(p.path)));
  progressivePolicy=formPolicies.find(p=>p.policyVersion===experiencePolicy.progressivePolicy?.version)??null;
- $('locale-choice').replaceChildren(...localizationCatalog.locales.map(row=>{const option=elem('option',
-  ({'en-US':'English (US)','es-ES':'Español (España)','ar':'العربية'})[row.locale]??row.locale);
-  option.value=row.locale;return option;}));
- const renderLocaleChoice=()=>{const selected=localizationBundles.get($('locale-choice').value);
-  const available=selected?.canonical===true&&selected.status==='approved';
-  $('locale-status').textContent=available?'Approved canonical wording is available for this language.':
-   'Review pending: no translated philosophical questions will be shown. Choose English to begin.';
-  for(const button of $('routes').querySelectorAll('.route'))button.disabled=!available;
- };
- $('locale-choice').addEventListener('change',renderLocaleChoice);
+ const publicBundle=localizationBundles.get('en-US');
+ if(!publicBundle||publicBundle.status!=='approved'||publicBundle.canonical!==true)
+  throw Error('Approved English questionnaire wording is unavailable.');
  for(const [index,route] of experiencePolicy.routes.entries()){
   const button=elem('button',undefined,'route');button.dataset.size=String(route.size);
   const description=staticRelease?route.description.replace(' and optional research contribution',''):route.description;
   button.append(elem('span',route.recommended?'RECOMMENDED':'ROUTE 0'+(index+1),'route-number'),elem('strong',route.label),elem('span',route.size+' questions'),elem('span',description));
   button.addEventListener('click',()=>start(route.size));$('routes').append(button);
  }
- renderLocaleChoice();
  try{loadedText=localStorage.getItem(storageKey);}catch{storageWorks=false;announce('Local saving is unavailable. You can still take the quiz and export your answers.');}
  try{researchReceipts=JSON.parse(localStorage.getItem(researchReceiptKey)??'[]');if(!Array.isArray(researchReceipts))researchReceipts=[];}catch{researchReceipts=[];}
  renderSaved();

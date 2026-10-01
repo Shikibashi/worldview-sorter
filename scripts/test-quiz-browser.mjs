@@ -68,11 +68,12 @@ try{
  check('Root opens the quiz rather than research runner',page.url().endsWith('/apps/quiz/'));
  await page.screenshot({path:'artifacts/quiz/landing-desktop.png',fullPage:true});
  check('Three depth presets including the 243-question pilot route',await page.locator('.route').count()===3&&await page.locator('.route[data-size="243"]').count()===1);
- check('Only reviewed English wording is respondent-available',await page.locator('#locale-choice').inputValue()==='en-US'&&
+ check('Public questionnaire states its English-only availability',
+  /Available in English only/.test(await page.locator('#home').innerText())&&
+  await page.locator('#locale-choice').count()===0&&
   await page.locator('.route[data-size="64"]').isEnabled());
- for(const locale of ['es-ES','ar']){await page.locator('#locale-choice').selectOption(locale);
-  check(locale+' unreviewed route stays unavailable',await page.locator('.route[data-size="64"]').isDisabled()&&
-   /Review pending/.test(await page.locator('#locale-status').innerText()));}
+ check('Draft locales are absent from the respondent route chooser',
+  !/Español|العربية/.test(await page.locator('#home').innerText()));
  await page.setViewportSize({width:320,height:640});
  await page.evaluate(()=>{document.documentElement.lang='ar';document.documentElement.dir='rtl';});
  check('RTL shell retains keyboard accessible order and no mobile overflow',await page.evaluate(()=>
@@ -80,8 +81,9 @@ try{
  await page.screenshot({path:'artifacts/quiz/rtl-shell-synthetic.png',fullPage:true});
  await page.evaluate(()=>{document.documentElement.lang='en';document.documentElement.dir='ltr';});
  await page.setViewportSize({width:1280,height:900});
- await page.locator('#locale-choice').selectOption('en-US');
  await page.locator('.route[data-size="64"]').click();await page.locator('#quiz').waitFor({state:'visible'});
+ check('Public route pins English wording',await page.evaluate(()=>
+  JSON.parse(localStorage.getItem('worldview-sorter:quiz-experience:1')??'null')?.quiz?.session?.localization?.locale==='en-US'));
  await page.locator('#auto').uncheck();
  check('An unanswered question cannot be advanced',await page.locator('#next').isDisabled());
  await page.locator('#question-title').focus();await page.keyboard.press('Tab');
