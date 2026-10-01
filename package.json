@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "build:academic": "node scripts/build-academic-release.mjs && node scripts/build-academic-finalize.mjs && node scripts/build-generic-worldview.mjs && node scripts/build-quiz-experience.mjs && node scripts/build-philosophy-release.mjs && node scripts/build-full-route.mjs && node scripts/build-unmapped-audit.mjs && node scripts/build-unmapped-audit-v2.mjs && node scripts/build-pilot-v1.mjs && node scripts/build-affinity-catalog-v1.mjs && node scripts/build-progressive-depth.mjs && node scripts/build-localization-v1.mjs && node scripts/sync-model-release.mjs",
-    "build:production": "npm run build:academic && node scripts/build-production-site.mjs",
+    "build:production": "npm run build:academic && npm run build:quiz-ui && node scripts/build-production-site.mjs",
+    "build:quiz-ui": "vite build --config apps/quiz-react/vite.config.js",
+    "dev:quiz-ui": "vite --config apps/quiz-react/vite.config.js",
     "test:production:browser": "node scripts/test-production-site-browser.mjs",
     "pretest": "npm run build:academic",
     "prevalidate": "npm run build:academic",
@@ -83,10 +85,18 @@
     "test:affinity": "node scripts/test-affinity-catalog-v1.mjs && node scripts/test-affinity-expansion-review.mjs && node scripts/validate-affinity-question-draft.mjs && npm run test:easy-ontology && npm run test:federal-content && node scripts/test-epistemic-affinity-release.mjs && node scripts/test-act-consequence-content-release.mjs && node scripts/test-rule-consequence-content-release.mjs && node scripts/test-act-rule-affinity-release.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": "^20.19.0 || >=22.12.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
-    "playwright": "^1.63.0"
+    "@vitejs/plugin-react": "6.1.1",
+    "playwright": "^1.63.0",
+    "vite": "8.3.2"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "5.3.0",
+    "@fontsource/sora": "5.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }
