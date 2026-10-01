@@ -1,6 +1,6 @@
 import {createQuiz,restoreQuiz,currentItem,seekQuestion,answerQuestion,nextQuestion,previousQuestion,quizProgress,extendProgressiveQuiz,recordDepthCheckpoint,EXPERIENCE_VERSION,COMPATIBLE_EXPERIENCE_VERSIONS} from '../../packages/experience/quiz.js';
 import {buildQuizSummary,DOMAIN_COPY} from '../../packages/experience/summary.js';
-import {buildResultOverview} from '../../packages/experience/result-overview.js';
+import {buildResultOverview,resultOverviewDescription,resultStatusLabel,formatResponseCoverage} from '../../packages/experience/result-overview.js';
 import {initialExploration,recordExploration,initialExplorationV2,recordExplorationV2} from '../../packages/experience/exploration.js';
 import {buildShareSnapshot,shareSnapshotText,shareSnapshotSvg,readingTrailFor,compareTraditions,recommendExploration} from '../../packages/experience/engagement.js';
 import {shuffleWithSeed} from '../../packages/runtime/index.js';
@@ -54,10 +54,7 @@ function renderResultHighlights(projection){
  const holder=$('result-highlights');holder.replaceChildren();
  if(!projection){$('result-at-a-glance').hidden=true;return;}
  $('result-at-a-glance').hidden=false;
- const hasQualified=[projection.supported,projection.opposed,projection.mixed].some(rows=>rows.length);
- $('glance-description').textContent=hasQualified?
-  'Selected directly interpreted propositions with an exact target and linked source claim. These are examples, not a ranking of your beliefs.':
-  'This route produced authored answer patterns, but none clears the current exact-proposition and source-link review gate for a headline claim. Open a topic to inspect the answers and caveats.';
+ $('glance-description').textContent=resultOverviewDescription(projection);
  const groups=[['Supported',projection.supported],['Opposed',projection.opposed],
   ['Mixed or context-dependent',projection.mixed],['Asked, still inconclusive',projection.insufficient]];
  for(const [title,rows] of groups){
@@ -71,9 +68,9 @@ function renderResultHighlights(projection){
    item.append(link);list.append(item);}section.append(list);}
   holder.append(section);
  }
- if(!hasQualified&&projection.provisionalPatterns.length){
+ if(!projection.supported.length&&!projection.opposed.length&&!projection.mixed.length&&projection.provisionalPatterns.length){
   const section=elem('section',undefined,'highlight-group');section.dataset.state='review_required';
-  section.append(elem('h3','Answer patterns under model review'));
+  section.append(elem('h3','Provisional answer patterns'));
   const list=elem('ul');for(const row of projection.provisionalPatterns){
    const label=row.status==='mixed_context_dependent'?'Mixed pattern':row.status==='opposed'?'Opposed pattern':'Supported pattern';
    const item=elem('li'),link=elem('a',label+' · '+row.label);link.href='#domain-'+row.domainId;
@@ -85,15 +82,15 @@ function renderResultHighlights(projection){
  unmeasured.append(elem('h3','Not measured on this route'));
  if(projection.unmeasured.length){const list=elem('ul');for(const d of projection.unmeasured){
   const domain=summary.domains.find(row=>row.id===d.id),item=elem('li');
-  item.append(elem('a',domain.title+' · '+d.counts.not_measured+' of '+d.total+' paths not measured'));
+  item.append(elem('a',domain.title+' · '+d.counts.not_measured+' of '+d.total+' interpretations not measured'));
   item.firstChild.href='#domain-'+d.id;list.append(item);}unmeasured.append(list);}
- else unmeasured.append(elem('p','No proposition path is marked unmeasured here; some may still be inconclusive or under model review.','small'));
+ else unmeasured.append(elem('p','No interpretation is marked not measured here; some may still be inconclusive or provisional.','small'));
  holder.append(unmeasured);
 }
 function domainEvidenceStrip(card,projection){
  if(!projection||!projection.total)return;
  const labels={supported:'supported',opposed:'opposed',leaned_toward:'leaned toward',
-  mixed_context_dependent:'mixed',insufficient_evidence:'insufficient',not_measured:'not measured',review_required:'under model review'};
+  mixed_context_dependent:'mixed',insufficient_evidence:'insufficient',not_measured:'not measured',review_required:'provisional'};
  const strip=elem('span',undefined,'domain-strip');strip.setAttribute('aria-hidden','true');
  const description=[];
  for(const [state,label] of Object.entries(labels)){
@@ -101,7 +98,7 @@ function domainEvidenceStrip(card,projection){
   const segment=elem('span',undefined,'domain-segment');segment.dataset.state=state;segment.style.flexGrow=String(count);
   strip.append(segment);description.push(count+' '+label);
  }
- card.append(strip,elem('span',projection.assessed+' of '+projection.total+' proposition paths assessed · '+description.join(' · '),'domain-counts'));
+ card.append(strip,elem('span',projection.assessed+' of '+projection.total+' interpretations assessed · '+description.join(' · '),'domain-counts'));
 }
 function exportAnswers(){if(quiz)download(quiz.session,'worldview-answers.json');}
 function resultEvent(type,domainId){
@@ -343,9 +340,13 @@ function evidenceDetails(row){
 }
 function patternBlock(row){
  const block=elem('article',undefined,'pattern');block.dataset.state=row.displayState??row.status;block.dataset.commitmentId=row.id;
- block.append(elem('span',row.statusLabel,'state'),elem('h3',row.label));
- if(row.propositionBasis==='inherited_rule_scope')
-  block.append(elem('p','Provisional authored scope: this historical rule has no separately recorded exact proposition.','small'));
+ block.append(elem('span',resultStatusLabel(row),'state'),elem('h3',row.label));
+ if(row.propositionBasis==='inherited_rule_scope'){
+  const note=row.status==='not_measured'?'This label refers to a broader rule scope, not a separately stated proposition. This route did not assess it.':
+   row.status==='insufficient_evidence'?'This label refers to a broader rule scope, not a separately stated proposition. The questions did not support a direction.':
+   'This question set maps to a broader authored rule, not a separately stated philosophical proposition. Treat this pattern as provisional.';
+  block.append(elem('p',note,'small'));
+ }
  if(row.explanation)block.append(elem('p',row.explanation,'small'));
  block.append(evidenceDetails(row));return block;
 }
@@ -364,7 +365,7 @@ function affinityBlock(tradition,presentation){
  const highlights=tradition.overlap.filter(c=>c.role==='defining').slice(0,2);
  if(highlights.length){
   card.append(elem('p',(['legacy_scope_unresolved','source_claim_unresolved'].includes(presentation?.state)?
-   'Authored criterion overlap under review: ':'Where your interpreted answers overlap with catalog doctrine: ')+highlights.map(c=>c.doctrine).join(' '),'small'));
+   'Potential overlap on a provisional criterion: ':'Where your interpreted answers overlap with catalog doctrine: ')+highlights.map(c=>c.doctrine).join(' '),'small'));
   if(highlights.some(c=>summary?.rows.find(row=>row.id===c.mapping.propositionId)?.propositionBasis==='inherited_rule_scope'))
    card.append(elem('p','Some overlap uses an inherited rule scope rather than a separately recorded proposition. Inspect the evidence and limits below.','small'));
  }
@@ -377,7 +378,7 @@ function affinityBlock(tradition,presentation){
  for(const c of tradition.criteria){const row=elem('div',undefined,'affinity-criterion');row.dataset.finding=c.finding;
   const mapped=c.mapping.propositionId?summary?.rows.find(result=>result.id===c.mapping.propositionId):null;
   const unreviewedMapping=mapped?.presentationReview?.state!=='eligible'&&mapped?.presentationReview?.state!=null;
-  row.append(elem('strong',(c.finding==='overlap'&&unreviewedMapping?'Authored overlap under review':affinityFindingLabel[c.finding])+' · '+c.role),
+  row.append(elem('strong',(c.finding==='overlap'&&unreviewedMapping?'Potential overlap':affinityFindingLabel[c.finding])+' · '+c.role),
    elem('p',c.doctrine),elem('p',c.mapping.note,'small'));
   if(c.mapping.propositionId){
    row.append(elem('p','Pilot mapping: '+c.mapping.status.replaceAll('_',' '),'small'));
@@ -388,7 +389,7 @@ function affinityBlock(tradition,presentation){
    else if(mapped?.presentationReview?.state==='source_claim_unresolved')
     row.append(elem('p','This mapped proposition lacks a rule-linked supporting academic claim.','small'));
    else if(unreviewedMapping)
-    row.append(elem('p','This mapped interpretation awaits model review; its authored engine state is retained for historical context.','small'));
+    row.append(elem('p','This mapping is provisional; its recorded evidence and limits are shown below.','small'));
    row.append(elem('p','Evidence state: '+(c.observedState??'not observed').replaceAll('_',' ')+
     (c.leanDirection?' ('+c.leanDirection+')':''),'small'));
    row.append(elem('small','Proposition reference: '+c.mapping.propositionId));
@@ -626,9 +627,12 @@ function finish(newlyCompleted=false){
  $('share-open').disabled=Boolean(resultReplayQualification);
  loadActivity();if(newlyCompleted){activityEvent('completed','routeId',quiz.depth?.currentRouteId??'full');
   resultEvent('quiz_finished');}
- $('result-counts').textContent=summary.resolvedPatterns+' answer patterns · '+summary.answeredItems+' substantive responses · '+summary.specialResponses+' no-view, unclear or not-applicable responses';
- $('academic-notice').textContent=summary.academicNotice;$('coverage-notice').textContent=summary.coverageNotice;
+ $('result-counts').textContent=formatResponseCoverage(quiz.session);
  const pilotResult=summary.schemaVersion==='quiz-summary-3';
+ $('academic-notice').textContent=pilotResult?
+  'This is an exploratory philosophical quiz, not a validated psychological assessment. Its questions and interpretation rules are authored from philosophical sources; response data have not validated them. Some patterns remain provisional because exact philosophical claims or supporting source links are not recorded.':summary.academicNotice;
+ $('coverage-notice').textContent=pilotResult?
+  'Not measured means this route did not provide a complete set of direct questions. Insufficient evidence means relevant questions were presented, but your responses did not support a direction. A conditional question not presented because of an earlier answer is not evidence either way.':summary.coverageNotice;
  const resultProjection=buildResultOverview(summary);renderResultHighlights(resultProjection);
  for(const [section,list,rows] of [
   ['overview-section','overview-list',summary.overview??[]],
@@ -638,7 +642,7 @@ function finish(newlyCompleted=false){
  }
  $('open-count').textContent=(summary.mixedOrUnresolved?.length??0)+' mixed or insufficient interpretations';
  $('unmeasured-count').textContent=(summary.unmeasured?.length??0)+' interpretations not assessed in this administration';
- $('coverage-gap-count').textContent=(summary.coverageGaps?.length??0)+' additional theoretical distinctions have no approved respondent interpretation rule in this model.';
+ $('coverage-gap-count').textContent=(summary.coverageGaps?.length??0)+' additional philosophical distinctions are not assessed by this version.';
  $('tension-section').hidden=!pilotResult||!summary.tensions?.length;
  $('tension-count').textContent=(summary.tensions?.length??0)+' answer patterns to inspect';
  $('tension-list').replaceChildren(...(summary.tensions??[]).map(t=>{

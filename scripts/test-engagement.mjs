@@ -93,7 +93,7 @@ const legacyCard=create('overview',{selectedIds:[legacySelected.id]});
 assert.equal(legacyCard.rows[0].proposition,null);
 assert.equal(legacyCard.rows[0].scope,legacySelected.scope);
 assert.match(legacyCard.rows[0].explanation,/inherited rule scope/);
-assert.match(legacyCard.rows[0].statusLabel,/inherited rule scope under the authored rule/);
+assert.match(legacyCard.rows[0].statusLabel,/Provisional answer pattern/);
 assert.match(shareSnapshotText(legacyCard),/Authored rule scope:.*no separately recorded proposition/);
 assert.throws(()=>validateShareSnapshot({...legacyCard,rows:[{...legacyCard.rows[0],proposition:legacySelected.scope}]}),
  /Invalid proposition projection/);

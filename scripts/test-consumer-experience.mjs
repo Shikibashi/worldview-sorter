@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {buildResultOverview} from '../packages/experience/result-overview.js';
+import {buildResultOverview,resultOverviewDescription,resultStatusLabel,formatResponseCoverage} from '../packages/experience/result-overview.js';
 
 const root=new URL('../',import.meta.url);
 const read=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
@@ -16,8 +16,12 @@ assert.match(html,/id="result-at-a-glance"/);
 assert.match(html,/id="domain-map"/);
 assert.match(html,/id="result-nav"/);
 assert.match(html,/Illustrative example with fictional answers/);
+assert.match(html,/>Your worldview map</);
+assert.match(html,/Each bar counts interpretations by evidence state/);
 assert.match(app,/buildResultOverview\(summary\)/);
+assert.match(app,/formatResponseCoverage\(quiz\.session\)/);
 assert.doesNotMatch(html,/\d+% (?:match|compatible)/i);
+assert.doesNotMatch(app,/exact-proposition and source-link review gate/);
 
 const row=(id,status,domainId='one',extra={})=>({id,status,domainId,proposition:id+' exact proposition',
  inferenceStatus:'direct',propositionBasis:'explicit_rule_proposition',presentationReview:{state:'eligible'},...extra});
@@ -39,4 +43,13 @@ assert.equal(overview.domains[1].counts.not_measured,1);
 assert.equal(overview.domains[1].assessed,1);
 assert.equal(overview.unmeasured[0].id,'two');
 assert.equal(buildResultOverview({...summary,schemaVersion:'quiz-summary-1'}),null);
+assert.match(resultOverviewDescription(overview),/specific propositions, not an overall philosophy label/);
+assert.match(resultOverviewDescription({...overview,supported:[],opposed:[],mixed:[]}),/patterns remain provisional/);
+assert.match(resultOverviewDescription({...overview,supported:[],opposed:[],mixed:[],provisionalPatterns:[]}),/No direct proposition is ready to highlight/);
+assert.equal(resultStatusLabel({status:'not_measured',presentationReview:{state:'inherited_rule_scope'},statusLabel:'old internal copy'}),'Not measured here');
+assert.match(resultStatusLabel({status:'supported',presentationReview:{state:'inherited_rule_scope'}}),/Provisional answer pattern/);
+assert.match(resultStatusLabel({status:'supported',presentationReview:{state:'source_claim_unresolved'}}),/Provisional interpretation.*source link not recorded/);
+assert.equal(resultStatusLabel({status:'supported',displayState:'model_review_required'}),'Provisional derived interpretation');
+assert.equal(formatResponseCoverage({responses:[{state:'answered'},{state:'no_view'},{state:'not_understood'},{state:'not_applicable'}],presentedItems:[{skippedByBranch:true}]}),
+ 'Responses recorded: 1 substantive · 1 no view · 1 not understood · 1 not applicable · 1 conditional question not asked');
 console.log('Current consumer experience contract and evidence projection passed.');
