@@ -118,6 +118,14 @@ async function runRoute(size,{pause=false,detail=false}={}){
  if(detail){
   await accessible(page,'Production results');
   check('Result section navigation remains available',await page.locator('#result-nav').evaluate(node=>getComputedStyle(node).position==='sticky'));
+  await page.locator('.e-nav-links a[href="#domains-title"]').click();
+  await page.waitForTimeout(200);
+  check('Top navigation opens the domain map with its evidence key in view',await page.evaluate(()=>{
+   const title=document.querySelector('#domains-title'),key=document.querySelector('#domain-map-legend'),nav=document.querySelector('.e-nav');
+   if(!title||!key||!nav||location.hash!=='#domains-title')return false;
+   const heading=title.getBoundingClientRect(),legend=key.getBoundingClientRect(),header=nav.getBoundingClientRect();
+   return heading.top>=header.bottom&&legend.top>=header.bottom&&legend.bottom<=innerHeight;
+  }));
   await page.locator('#result-nav a[href="#domains-title"]').click();
   check('Result navigation reaches the domain map',await page.evaluate(()=>location.hash==='#domains-title'));
   const domain=page.locator('#domain-map details.domain').first();await domain.locator(':scope > summary').click();
