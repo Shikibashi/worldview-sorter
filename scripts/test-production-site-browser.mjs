@@ -108,6 +108,10 @@ async function runRoute(size,{pause=false,detail=false}={}){
    .evaluateAll(nodes=>nodes.some(node=>node.dataset.state==='supported')));
  check('Twelve worldview domains remain navigable',await page.locator('#domain-map .domain').count()===12);
  check('Results open with an evidence-qualified overview',await page.locator('#result-at-a-glance').isVisible());
+ check('Domain evidence markers have a visible key for every result state',
+  await page.locator('#domain-map-legend .wvs-domain-legend-item').count()===5&&
+  await page.locator('#domain-map-legend').innerText().then(text=>
+   ['Supported','Opposed','Mixed','Insufficient evidence','Not measured'].every(label=>text.includes(label))));
  check('Every domain has a categorical evidence strip',await page.locator('#domain-map .domain-strip').count()===12);
  check('Results do not present an ideology match percentage',!(await page.locator('#results').innerText()).match(/\d+% (?:match|compatible)/i));
  check('No automatic response submission occurs',posts.length===0);
