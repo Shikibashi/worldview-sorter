@@ -8,6 +8,7 @@ const current=await read('data/current.json');
 const policy=await read(current.quizExperience.path);
 const html=await readFile(new URL('apps/quiz/index.html',root),'utf8');
 const app=await readFile(new URL('apps/quiz/app.js',root),'utf8');
+const readme=await readFile(new URL('README.md',root),'utf8');
 assert.deepEqual(policy.routes.map(({id,size})=>({id,size})),[
  {id:'quick',size:64},{id:'standard',size:120},{id:'full',size:249}]);
 assert.equal(policy.privacy.defaultAnswerSubmission,false);
@@ -22,6 +23,7 @@ assert.match(app,/buildResultOverview\(summary\)/);
 assert.match(app,/formatResponseCoverage\(quiz\.session\)/);
 assert.doesNotMatch(html,/\d+% (?:match|compatible)/i);
 assert.doesNotMatch(app,/exact-proposition and source-link review gate/);
+assert.doesNotMatch(readme,/older language drafts remain archived/i);
 
 const row=(id,status,domainId='one',extra={})=>({id,status,domainId,proposition:id+' exact proposition',
  inferenceStatus:'direct',propositionBasis:'explicit_rule_proposition',presentationReview:{state:'eligible'},...extra});

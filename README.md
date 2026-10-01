@@ -71,7 +71,7 @@ See [independent reimplementation and reference-corpus policy](docs/INDEPENDENT_
 
 ## Public quiz experience
 
-The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/249-question depth routes, pause/resume, a labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The questionnaire uses one fixed, versioned English presentation. The old `/apps/web/` development collector is absent from the production artifact.
+The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/249-question depth routes, pause/resume, a labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.
 
 Run `npm run server:start`, then visit `http://127.0.0.1:4173/`.
 
