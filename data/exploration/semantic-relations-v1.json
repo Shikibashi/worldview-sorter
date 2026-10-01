@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0.0",
+  "graphVersion": "semantic-relations-1.0.0",
+  "modelVersion": "generic-1.16.0-pilot",
+  "inferenceAllowed": false,
+  "relations": [
+    {
+      "id": "fallibilism-contextual-certainty-compatible",
+      "type": "compatibility",
+      "presentation": "exploration",
+      "inferenceAllowed": false,
+      "members": [
+        {
+          "propositionId": "construct-EP15",
+          "state": "supported"
+        },
+        {
+          "propositionId": "construct-EP19",
+          "state": "supported"
+        }
+      ],
+      "explanation": "Fallible knowledge and context-sensitive certainty can coexist; certainty need not mean immunity to later correction.",
+      "sourceClaims": [
+        {
+          "sourceId": "iep-fallibilism",
+          "relationship": "supports_relation",
+          "claim": "Fallibilism allows knowledge despite a remaining possibility of error."
+        },
+        {
+          "sourceId": "acad-rand-epistemology",
+          "relationship": "supports_relation",
+          "claim": "Contextual certainty is distinguishable from infallibility or immunity to later revision."
+        }
+      ]
+    },
+    {
+      "id": "fallibilism-does-not-entail-pragmatic-maxim",
+      "type": "non_entailment",
+      "presentation": "inference_guard",
+      "inferenceAllowed": false,
+      "premises": [
+        {
+          "propositionId": "construct-EP15",
+          "state": "supported"
+        }
+      ],
+      "conclusion": {
+        "propositionId": "construct-EP16",
+        "state": "supported"
+      },
+      "explanation": "Allowing fallible knowledge does not by itself establish the pragmatic maxim or a pragmatist method of conceptual clarification.",
+      "sourceClaims": [
+        {
+          "sourceId": "iep-fallibilism",
+          "relationship": "limits_inference",
+          "claim": "Fallibilism concerns whether knowledge can coexist with possible error."
+        },
+        {
+          "sourceId": "acad-pragmatism",
+          "relationship": "limits_inference",
+          "claim": "The pragmatic maxim adds a distinct method of clarifying concepts through conceivable practical or experiential bearings."
+        }
+      ]
+    },
+    {
+      "id": "ownness-does-not-entail-ethical-egoism",
+      "type": "non_entailment",
+      "presentation": "inference_guard",
+      "inferenceAllowed": false,
+      "premises": [
+        {
+          "propositionId": "construct-NE17",
+          "state": "supported"
+        }
+      ],
+      "conclusion": {
+        "propositionId": "construct-NE15",
+        "state": "supported"
+      },
+      "explanation": "Ownness and revisable allegiance to ideals do not by themselves impose a universal moral requirement to make one's own good the ultimate end.",
+      "sourceClaims": [
+        {
+          "sourceId": "acad-stirner",
+          "relationship": "limits_inference",
+          "claim": "The reviewed Stirner material supports a non-moralized ownness distinction rather than a fixed universal egoistic duty."
+        },
+        {
+          "sourceId": "acad-egoism",
+          "relationship": "limits_inference",
+          "claim": "Ethical egoism is a separate normative thesis about each agent's own good as the ultimate moral end."
+        }
+      ]
+    },
+    {
+      "id": "exit-and-reliance-repair-compatible",
+      "type": "compatibility",
+      "presentation": "exploration",
+      "inferenceAllowed": false,
+      "members": [
+        {
+          "propositionId": "construct-NE19",
+          "state": "supported"
+        },
+        {
+          "propositionId": "construct-NE20",
+          "state": "supported"
+        }
+      ],
+      "explanation": "Continued association can require renewed endorsement while induced reliance can still generate reasons for performance or repair.",
+      "sourceClaims": [
+        {
+          "sourceId": "acad-stirner",
+          "relationship": "supports_relation",
+          "claim": "Continued association and exit can be treated separately from fixed allegiance."
+        },
+        {
+          "sourceId": "acad-promises",
+          "relationship": "supports_relation",
+          "claim": "Reliance and induced expectations can generate reasons distinct from treating a promise as an irrevocable normative power."
+        }
+      ]
+    }
+  ]
+}
