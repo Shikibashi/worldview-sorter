@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-085",
+  "title": "Replace the reverse-worded pragmatic-maxim inference with direct method and empty-dispute evidence",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"criterion","id":"pragmatism/pragmatic-maxim"},
+    {"type":"result_semantics","id":"affinity-catalog-policy"},
+    {"type":"tradition","id":"pragmatism"},
+    {"type":"item","id":"EPI123"},
+    {"type":"localization","id":"bundle/ar"},
+    {"type":"localization","id":"bundle/en-US"},
+    {"type":"localization","id":"bundle/es-ES"},
+    {"type":"localization","id":"catalog/ar"},
+    {"type":"localization","id":"catalog/en-US"},
+    {"type":"localization","id":"catalog/es-ES"},
+    {"type":"localization","id":"catalog/model-binding"},
+    {"type":"proposition","id":"construct-EP16"},
+    {"type":"result_semantics","id":"model-policy"},
+    {"type":"route","id":"full"},
+    {"type":"route","id":"quick"},
+    {"type":"route","id":"route-policy"},
+    {"type":"route","id":"standard"},
+    {"type":"source","id":"acad-pragmatism"}
+  ],
+  "currentBehavior": "Full administers tentative EPI104 and absolute reverse EPI105. Their agreement/disagreement can count as two units supporting the broad construct-EP16 scope and a direct defining Pragmatism criterion, despite lacking an explicit proposition or rule-linked source claim.",
+  "proposedBehavior": "State an exact conjunction about clarifying disputed ideas through conceivable experiential or practical effects and treating a dispute with no conceivable difference in those effects as conceptually nonsubstantive. Full exchanges EPI105/EPI104 for EPI103/EPI123 without growing. EPI104 and EPI105 remain historical candidates but are not directional evidence in the successor rule. Quick and Standard remain not measured. The Pragmatism criterion compares only this scoped method.",
+  "rationale": "Disagreeing with EPI105's absolute reverse wording is not positive evidence for the pragmatic maxim. EPI104 asks only whether consequence-free disputes deserve questioning. EPI103 directly asks for the positive method, and the original EPI123 contrasts the stronger empty-dispute implication with treating consequences as merely a clue.",
+  "philosophicalBasis": {
+    "proposition": "Disputed ideas should be clarified through their conceivable effects on experience or conduct; if two formulations have no conceivable difference in those effects, their apparent conceptual difference is not substantive.",
+    "neighboringViews": [
+      "Generic fallibilism",
+      "Scientific empiricism and testing",
+      "Consequences as one useful conceptual clue",
+      "Logical verificationism",
+      "Metaphysical realism about distinctions without conceivable practical difference"
+    ],
+    "nonEntailments": [
+      "A useful belief is true",
+      "All meaning reduces exhaustively to observations",
+      "A complete pragmatist philosophy",
+      "Atheism, anti-realism, or any political view"
+    ],
+    "existingGap": "The two Full-route items can be jointly endorsed by someone who finds practical effects helpful but rejects the stronger empty-dispute implication. The positive method item EPI103 was absent from Full.",
+    "scholarlyDisagreement": "Peirce and James share a pragmatic clarification method but differ in their accounts of truth and realism. Peirce's maxim is a tool for clarification, not his complete theory of meaning; other pragmatists vary further."
+  },
+  "sourceClaims": [
+    {"sourceId":"acad-pragmatism","relationship":"supports","claim":"Peirce and James used a pragmatic method to clarify concepts by their conceivable experiential or practical bearings and to expose apparently empty disputes; their views of truth and realism still differ."},
+    {"sourceId":"sep-pragmatism","relationship":"supports","claim":"Peirce and James used a pragmatic method to clarify concepts by their conceivable experiential or practical bearings and to expose apparently empty disputes; their views of truth and realism still differ."}
+  ],
+  "alternatives": [
+    "Keep EPI104 and EPI105 as corroborating units: rejected because the reverse statement's absolute wording creates false positives.",
+    "Count EPI103 and EPI104 as separate units: rejected because both can express only a helpful technique and do not distinguish the strong empty-dispute implication.",
+    "Use a question about whether useful beliefs are true: rejected because it targets a disputed truth theory rather than the pragmatic method.",
+    "Leave EP16 entirely unmeasured: defensible if the new item fails respondent comprehension review; the current authored release is limited to this scoped method and still needs human response-process study."
+  ],
+  "respondentImpact": "Previous Full-route EP16 support from EPI104 plus reverse EPI105 no longer transfers. New Full responses can support, oppose, mix, or leave the scoped method open; Quick and Standard lack its pair. Pragmatism may overlap on this criterion but is never an identity or complete truth theory.",
+  "historicalCompatibility": "Release 1.14.0 and all earlier item, model, route, catalog, localization, and engine snapshots remain unchanged. EPI104@1 and EPI105@1 remain in the bank. Raw answers are never rewritten; current reinterpretation is separate from the original result.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","route_omission","item_revision","source_link","affinity_limit"],
+    "paths": ["scripts/test-pragmatism-maxim-release.mjs","scripts/test-model-governance.mjs","scripts/test-production-site-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T00:46:00Z","note":"Reviewed SEP Pragmatism sections 2–2.2, Peirce's 1878 primary essay, EPI103/104/105, scoped proposition, neighboring methods, and non-entailments."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T00:46:00Z","note":"Reviewed exact-item route substitution, source-claim linkage, historical release preservation, mapped criterion, and regression requirements."}
+    ]
+  },
+  "release": {
+    "components": ["bank","model","affinity","localization_catalog","progressive_routes","full_form","pilot","content_review","source_ledger"],
+    "targetVersion": "model-release-1.15.0",
+    "migration": "No raw-response migration. The successor Full route asks EPI103@1 and EPI123@1; prior administrations replay their pinned models and routes."
+  },
+  "implementationRefs": ["docs/governance/PRAGMATISM_MAXIM_RELEASE.md","scripts/build-pragmatism-maxim-v1.mjs","scripts/test-pragmatism-maxim-release.mjs"]
+}

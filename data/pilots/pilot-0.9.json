@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "pilotId": "pilot-0.9",
+  "status": "architecture",
+  "bankVersion": "0.16.0",
+  "sourceInstrumentVersion": "0.16.0-research",
+  "sessionSchemaVersion": "1.0.0",
+  "administration": {
+    "mode": "planned_missing_packets",
+    "defaultPacketSize": 120,
+    "allowedPacketSize": {
+      "min": 80,
+      "max": 160
+    },
+    "packetSelection": "seeded_domain_proportional",
+    "assignment": "uniform_random_or_round_robin_by_deployment",
+    "note": "Packet sizes and assignment are operational engineering defaults, not claims about psychometric or sample-size adequacy. No engineering scoring model is assigned to the successor bank. The 0.11 research pool includes NEI122; the public Full route separately administers NEI014@1. The 0.12 research pool includes NEI123; the public Full route also administers the prior NEI122@1 criterion question. The 0.13 research pool includes AHI108@1; the public routes replace AHI104@1 in a separate versioned release. The 0.14 research pool includes EPI122@1; the public routes replace EPI021@1 in a separate versioned release. The 0.15 research pool includes NEI121@1; Full replaces NEI101@1 in a separately versioned public release. The 0.16 research pool includes EPI123@1; Full replaces EPI104@1 and EPI105@1 in a separately versioned public release.",
+    "packetOrdering": "constraint-search-v1",
+    "maxSameDomainConsecutive": 2
+  },
+  "privacy": {
+    "directIdentifiersAllowed": false,
+    "rawIpStorageAllowed": false,
+    "rawUserAgentStorageAllowed": false,
+    "respondentKeyOptional": true,
+    "respondentKeyMeaning": "Opaque pseudonymous key only when repeated-session linkage is intentionally required."
+  },
+  "recording": {
+    "exactItemRevision": true,
+    "presentationIndex": true,
+    "responseState": true,
+    "rawResponseValue": true,
+    "responseTimeMs": true,
+    "changedAnswerCount": true,
+    "locale": true,
+    "clientVersion": true,
+    "randomizationSeed": true
+  },
+  "scoring": {
+    "defaultEngineeringModelVersion": null,
+    "publicInterpretationAllowed": false
+  },
+  "calibration": {
+    "exportVersion": "0.1.0",
+    "includeDirectIdentifiers": false,
+    "preserveSpecialResponseStates": true,
+    "preserveResponseTiming": true
+  }
+}

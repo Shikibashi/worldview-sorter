@@ -1,6 +1,6 @@
 # Pragmatism criterion: preliminary content review
 
-Status: editorial review, not an approved interpretation or catalog change. The frozen `model-release-1.0.0` and `philosophical-affinity-1.0.0` remain unchanged.
+Status: historical predecessor review. [Model release 1.15.0](PRAGMATISM_MAXIM_RELEASE.md) implements a narrower proposition and a new discriminator. This document describes the earlier evidence problem; its frozen-release statements refer to the state reviewed at the time.
 
 ## Exact dependency
 
