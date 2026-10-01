@@ -19,6 +19,7 @@ These instructions apply to this repository. Keep product strategy in the active
 ## Implementation and verification
 
 - Keep PRs small and coherent. Use existing architecture before adding a parallel engine or broad infrastructure layer. Read `DESIGN.md` before changing the public UI.
+- Keep the public questionnaire on its current fixed English wording. Changes to presentation scope require an explicit product decision. Retain older wording records only where required for historical replay; do not surface them as active product features.
 - Run focused checks while iterating. Before an inference or release change is complete, run relevant model validation, historical regression, browser flows, and a production artifact check on the final HEAD. Report unrun checks and unresolved failures.
 - Inspect the license and record provenance before reusing competitor code, assets, data, or questionnaire wording. Interaction ideas alone do not authorize copying or weaker scoring assumptions.
 - Production is the static GitHub Pages site at `https://worldview.edriffles.us`. Keep `apps/server/`, `apps/web/`, private storage, research collector endpoints, and secrets out of the Pages artifact. Verify the deployed site and its version after merging a production release.

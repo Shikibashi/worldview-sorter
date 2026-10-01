@@ -13,7 +13,6 @@ Use `PLI060@2` as the versioned workplace-level indicator and `PLI123@2` as the 
 - The two items are complementary across decision scales, not paraphrases and not evidence of statistical independence.
 - Preserve PLI060@1 in bank 0.18.0 and the unreleased PLI123@1 draft. No prior bank, route, model, affinity definition, or manifest is edited.
 - Do not add or alter a socialist, democratic-socialist, or other tradition criterion in this release.
-- Keep the current production language English (en-US); do not restore archived locale drafts to the active release.
 
 ## Intended interpretation
 
