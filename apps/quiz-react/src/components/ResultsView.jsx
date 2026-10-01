@@ -204,7 +204,7 @@ export default function ResultsView({ runtime, quiz, summary, activity, onActivi
       <div id="results">
       <header className="e-nav"><div className="e-wrap">
         <a className="e-logo" href="#top"><b>Worldview</b><span> Sorter</span></a>
-        <div className="e-nav-links"><a href="#domain-map">Your map</a><a href="#affinity-section">Traditions</a><a href="#tension-section">Open questions</a></div>
+        <div className="e-nav-links"><a href="#domains-title">Your map</a><a href="#affinity-section">Traditions</a><a href="#tension-section">Open questions</a></div>
       </div></header>
 
       <div className="e-wrap wvs-results-layout">
