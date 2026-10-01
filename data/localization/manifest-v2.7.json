@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "worldview-localization-manifest-1",
+  "catalogVersion": "localization-catalog-2.7.0",
+  "hashes": {
+    "data/localization/catalog-v18.json": "da70a454ccc0187725f84baa0e5c16cc3204c579b88d192cac0d5c39bd4953dd",
+    "data/localization/en-US-v18.json": "8b5748f4e2773966661302924487ea265ad07c50783a4c81c65e13ad3ddb8d0e"
+  }
+}

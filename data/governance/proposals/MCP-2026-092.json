@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-092",
+  "title": "Add scoped democratic/social control of production proposition",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "new_object",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"proposition","id":"reviewed-PL39-democratic-social-control-production"},
+    {"type":"construct","id":"PL39"},
+    {"type":"item","id":"PLI060"},
+    {"type":"item","id":"PLI123"},
+    {"type":"route","id":"full"},
+    {"type":"route","id":"route-policy"},
+    {"type":"result_semantics","id":"model-policy"},
+    {"type":"result_semantics","id":"affinity-catalog-policy"},
+    {"type":"localization","id":"catalog/model-binding"},
+    {"type":"localization","id":"catalog/en-US"},
+    {"type":"localization","id":"bundle/en-US"},
+    {"type":"source","id":"sep-socialism-effective-control"},
+    {"type":"source","id":"iep-socialism-effective-ownership"}
+  ],
+  "currentBehavior": "The public model has direct items for workplace decision procedures, property claims, common-ownership legitimacy, and market/allocation preferences, but no Full-route interpretation of effective social control over major productive enterprises. Those neighboring views do not settle this proposition.",
+  "proposedBehavior": "Add a directly interpreted, two-item proposition using PLI060@2 (workplace decision rights) and PLI123@2 (effective control of major productive enterprises). Promote only when both authored evidence units align; report one directional unit as leaned_toward, cross-setting disagreement as mixed_context_dependent, nondirectional/missing presented evidence as insufficient_evidence, and route omission as not_measured. Add both exact revisions to Full only; Quick and Standard remain unchanged.",
+  "rationale": "The existing Full route omitted the one candidate that asks about worker governance, and the active bank did not ask who should exercise effective control over major productive enterprises. Common ownership, redistribution, market preferences, or generic workplace democracy cannot substitute. The engine requires two distinct authored evidence units for a supported/opposed state; the release uses the existing workplace item as a complementary direct setting and preserves that threshold.",
+  "philosophicalBasis": {
+    "proposition": "Across the two stated production settings, the respondent favors meaningful worker or democratically accountable public control over owner-appointed managerial, private-owner, or unaccountable state control.",
+    "neighboringViews": [
+      "Common ownership of selected resources without a general preference about productive enterprises",
+      "Workplace voting without a preference for social control over major productive assets",
+      "Private ownership with redistribution, social insurance, or public services",
+      "Democratic public control, worker self-management, and unaccountable state control",
+      "Market coordination and social control of ownership, which can coexist in market-socialist proposals",
+      "Planning versus market allocation"
+    ],
+    "nonEntailments": [
+      "Socialism, democratic socialism, communism, or any complete ideological identity",
+      "A legal ownership title or one required institutional form of social ownership",
+      "Abolition of personal property, all private property, or markets",
+      "Central planning, redistribution, a welfare state, or political democracy in every domain",
+      "State expansion, state abolition, or an empirical claim about an existing economy"
+    ],
+    "existingGap": "No public Full rule directly compares effective worker/accountable-public control of major productive enterprises with private-owner and unaccountable-state alternatives, while also requiring a distinct workplace-level evidence unit.",
+    "scholarlyDisagreement": "Scholars and socialist traditions disagree about whether social control is realized through worker self-management, democratically accountable public institutions, markets, planning, or combinations. The proposition records only the respondent's direction across the two stated cases and does not canonicalize one institutional design."
+  },
+  "sourceClaims": [
+    {
+      "sourceId":"sep-socialism-effective-control",
+      "relationship":"supports",
+      "claim":"The SEP describes the institutional contrast with capitalism as bringing the bulk of productive assets under social, democratic control, while distinguishing socialism from statism and treating markets and institutional designs as contested. This supports a scoped control distinction, not a complete ideology inference."
+    },
+    {
+      "sourceId":"iep-socialism-effective-ownership",
+      "relationship":"supports",
+      "claim":"The IEP distinguishes legal from effective ownership and private, state, and social control. It explains that state ownership is a socializing arrangement only when people exercise control, while worker participation and markets vary across proposals."
+    }
+  ],
+  "alternatives": [
+    "Use PLI014/common-ownership legitimacy as a proxy: rejected because selected commons do not establish control of productive enterprises.",
+    "Use PL14 or PLI060 alone: rejected because workplace coordination does not establish the asset-level preference and the rule requires two authored evidence units.",
+    "Infer a socialist or democratic-socialist affinity directly: rejected because a scoped production-control criterion is not a complete tradition profile.",
+    "Lower the two-unit evidence requirement for this item: rejected because that would make one answer sufficient for supported/opposed and violate the current engine's authored duplicate-control invariant.",
+    "Wait for human response data before any authored interpretation: rejected because the source-backed distinction and direct response mappings can be authored now; empirical comprehension, reliability, and validity remain unclaimed."
+  ],
+  "respondentImpact": "Full gains two questions and one scoped political-economy result, increasing from 247 to 249 questions. Quick and Standard preserve their exact routes and report this proposition as not_measured. One matching response alone can only lean; mixed cross-setting responses remain visible. No affinity, identity, percentage, or complete economic-system label is added.",
+  "historicalCompatibility": "The successor uses new bank, registry, source, model, Full route, progressive-depth, catalog-manifest, locale-bundle, and result-release paths. Bank 0.18.0 and PLI060@1 remain unchanged, the unreleased PLI123@1 draft remains preserved, and model release 1.18.0 and its hashes remain reproducible. No raw answer is migrated or rewritten.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","route_omission","one_unit_lean","source_trace","catalog_non_leak"],
+    "paths": ["scripts/test-social-control-production-release.mjs","scripts/test-model-governance.mjs","scripts/test-full-route.mjs","scripts/test-quiz-browser.mjs","scripts/test-production-site-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T05:29:40Z","note":"Checked the SEP/IEP distinction, institutional disagreement, neighboring views, and non-entailments. The result names only the two stated production-control settings; the reserved PL35 migration target remains distinct."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T05:29:40Z","note":"Confirmed the existing two-unit engine threshold, exact route omission behavior, release-version requirements, the separate public-classification proposal, and historical revision path."}
+    ]
+  },
+  "release": {
+    "components": ["bank","registry","sources","source_ledger","model","full_form","progressive_routes","progressive_manifest","pilot","content_review","affinity","affinity_manifest","localization_catalog","localization_manifest"],
+    "targetVersion": "model-release-1.19.0",
+    "migration": "No response migration. New administrations on Full use PLI060@2 and PLI123@2; historical administrations continue to use their exact prior item, route, and model manifests."
+  },
+  "implementationRefs": [
+    "docs/governance/SOCIAL_CONTROL_PRODUCTION_REVIEW.md",
+    "docs/plan/social-control-production-v1/release-plan.md",
+    "scripts/build-social-control-production-v1.mjs",
+    "scripts/test-social-control-production-release.mjs"
+  ]
+}

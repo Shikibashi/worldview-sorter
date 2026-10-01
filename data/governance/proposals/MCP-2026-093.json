@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-093",
+  "title": "Promote the scoped production-control proposition to public Full results",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "research_classification",
+  "changeClass": "reclassification",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"research_classification","id":"reviewed-PL39-democratic-social-control-production"}
+  ],
+  "currentBehavior": "The new PL39 proposition and its two direct item revisions are not yet public; current results do not interpret production-control preferences.",
+  "proposedBehavior": "Expose reviewed-PL39-democratic-social-control-production as a direct proposition only in Full's authored evidence opportunity. Quick and Standard leave it not_measured. Two distinct item units must align for supported or opposed; one unit can lean, opposing directions remain mixed/context-dependent, and nondirectional evidence stays insufficient.",
+  "rationale": "Public membership must be an explicit reclassification separate from authoring the proposition and items. The rule uses the exact revised workplace and major-enterprise items; adjacent common-ownership, market, property, welfare, or authority results cannot substitute.",
+  "philosophicalBasis": {
+    "proposition": "Across the two stated production settings, the respondent favors meaningful worker or democratically accountable public control over owner-appointed managerial, private-owner, or unaccountable state control.",
+    "neighboringViews": [
+      "Common ownership of selected resources without a general production-control preference",
+      "Workplace voting without a preference about control of major productive assets",
+      "Private ownership combined with redistribution or social insurance",
+      "Worker self-management, accountable public control, and unaccountable state administration",
+      "Market coordination and social control of ownership, which may coexist"
+    ],
+    "nonEntailments": [
+      "Socialism or a complete economic-system identity",
+      "A required legal title or one institutional form of social control",
+      "A market/planning view, redistribution position, welfare-state view, or complete theory of property"
+    ],
+    "existingGap": "No active public rule directly interprets the two stated production-control contexts.",
+    "scholarlyDisagreement": "The reviewed sources distinguish effective social control from formal title or unaccountable state administration while documenting disagreement about worker, public, market, and planning arrangements. The reclassification preserves that limited proposition and adds no tradition affinity."
+  },
+  "sourceClaims": [
+    {
+      "sourceId":"sep-socialism-effective-control",
+      "relationship":"supports",
+      "claim":"The SEP describes the institutional contrast with capitalism as bringing the bulk of productive assets under social, democratic control, while distinguishing socialism from statism and treating markets and institutional designs as contested. This supports a scoped control distinction, not a complete ideology inference."
+    },
+    {
+      "sourceId":"iep-socialism-effective-ownership",
+      "relationship":"supports",
+      "claim":"The IEP distinguishes legal from effective ownership and private, state, and social control. It explains that state ownership is a socializing arrangement only when people exercise control, while worker participation and markets vary across proposals."
+    }
+  ],
+  "alternatives": [
+    "Leave the proposition outside public results: rejected because the two direct item units provide an explicit, route-limited authored evidence path.",
+    "Promote a socialism affinity: rejected because the items do not measure a complete tradition profile or market/planning doctrine."
+  ],
+  "respondentImpact": "Only Full can assess this direct proposition. Quick and Standard show not_measured; a single directional unit only leans, disagreement is mixed/context-dependent, and no tradition label or percentage is produced.",
+  "historicalCompatibility": "Public membership begins only in model-release-1.19.0. Earlier models and results are unchanged and are not backfilled.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","route_omission","source_claim_trace"],
+    "paths": ["scripts/test-social-control-production-release.mjs","scripts/test-model-governance.mjs","scripts/test-quiz-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T05:29:40Z","note":"Promoted only the source-backed two-setting response proposition; no complete economic tradition or affinity follows."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T05:29:40Z","note":"Confirmed route-only public availability, the two-unit evidence contract, false-positive controls, and immutable historical release behavior."}
+    ]
+  },
+  "release": {
+    "components": ["model"],
+    "targetVersion": "model-release-1.19.0",
+    "migration": "No response migration. Public rule membership begins with model release 1.19.0 and does not reinterpret prior administrations."
+  },
+  "implementationRefs": [
+    "docs/governance/SOCIAL_CONTROL_PRODUCTION_REVIEW.md",
+    "scripts/test-social-control-production-release.mjs"
+  ]
+}

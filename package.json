@@ -37,7 +37,7 @@
     "shortform:select": "node scripts/select-short-form.mjs",
     "worldview:compare": "node scripts/worldview.mjs compare",
     "worldview:followups": "node scripts/worldview.mjs followups",
-    "test:generic": "node scripts/test-generic-worldview.mjs && node scripts/test-moral-truth-claim-release.mjs && node scripts/test-quick-source-qualification-release.mjs && node scripts/test-free-will-condition-release.mjs && node scripts/test-revelation-warrant-release.mjs && node scripts/test-self-interest-boundary-release.mjs && node scripts/test-pragmatism-maxim-release.mjs && node scripts/test-sacred-value-scope-release.mjs && node scripts/test-welfarist-outcome-release.mjs && node scripts/test-welfare-maximization-release.mjs",
+    "test:generic": "node scripts/test-generic-worldview.mjs && node scripts/test-moral-truth-claim-release.mjs && node scripts/test-quick-source-qualification-release.mjs && node scripts/test-free-will-condition-release.mjs && node scripts/test-revelation-warrant-release.mjs && node scripts/test-self-interest-boundary-release.mjs && node scripts/test-pragmatism-maxim-release.mjs && node scripts/test-sacred-value-scope-release.mjs && node scripts/test-welfarist-outcome-release.mjs && node scripts/test-welfare-maximization-release.mjs && node scripts/test-social-control-production-release.mjs",
     "test:experience": "node scripts/test-quiz-experience.mjs",
     "test:engagement": "node scripts/test-engagement.mjs",
     "test:localization": "node scripts/test-localization.mjs",
