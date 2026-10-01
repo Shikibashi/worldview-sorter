@@ -90,4 +90,4 @@ The public quiz has no account, analytics tracker, or automatic answer submissio
 
 [Optional exploration, sharing, and historical snapshot limits](docs/ENGAGEMENT_SHARING.md).
 
-[Localization architecture and review gates](docs/LOCALIZATION.md).
+The public quiz is English-only. [Localization architecture and review gates](docs/LOCALIZATION.md) describe internal draft work, not released multilingual support.

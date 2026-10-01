@@ -59,4 +59,4 @@ npm run test:experience
 
 ## Localization release gate
 
-The canonical English route is available; Spanish and Arabic are review targets. No unapproved translated philosophical question is served. See [localization architecture and review gaps](LOCALIZATION.md).
+The public questionnaire and results are English-only. Spanish and Arabic are internal review targets; they are not selectable in the public application. No unapproved translated philosophical question is served. See [localization architecture and review gaps](LOCALIZATION.md).
