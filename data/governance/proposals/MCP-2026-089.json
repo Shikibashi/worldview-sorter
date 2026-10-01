@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-089",
+  "title": "Add scoped total-well-being maximization evidence for individual-act rightness",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "new_object",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"item","id":"NEI133"},
+    {"type":"item","id":"NEI125"},
+    {"type":"construct","id":"NE25"},
+    {"type":"proposition","id":"reviewed-NE25-total-welfare-maximization"},
+    {"type":"source","id":"sep-promises-act-rule"},
+    {"type":"source","id":"sep-act-consequence-criterion"},
+    {"type":"source","id":"sep-welfarism-outcome-value"},
+    {"type":"route","id":"full"},
+    {"type":"route","id":"route-policy"},
+    {"type":"result_semantics","id":"model-policy"},
+    {"type":"result_semantics","id":"affinity-catalog-policy"},
+    {"type":"localization","id":"catalog/model-binding"},
+    {"type":"localization","id":"catalog/en-US"},
+    {"type":"localization","id":"bundle/en-US"}
+  ],
+  "currentBehavior": "The active model separates generic consequence concern, act-versus-rule criteria, and welfare-only outcome value. It does not directly test whether a respondent endorses maximizing total well-being as the criterion for individual-act rightness when a valid promise favors the lower-welfare action. NEI125@1 is an unreleased draft whose promise scenario does not state that trust effects are included in the welfare comparison.",
+  "proposedBehavior": "Preserve unreleased NEI125@1 and add NEI125@2 with trust effects included, plus NEI133@1 as a general total-well-being criterion statement. A direct rule supports or opposes only when both authored units agree. Conflicting directions remain mixed/context-dependent; one direction leans; non-directional or missing answers remain insufficient. Quick and Standard keep their exact items and show not_measured; only successor Full includes both items. No affinity criterion is added.",
+  "rationale": "NEI125@1 alone asks one case and leaves a plausible welfare-consequence ambiguity. Reusing generic consequence or act-versus-rule evidence would infer the new proposition from neighboring questions. A general principle and a distinct promise-conflict application test the stated criterion at two levels without copying academic wording. The pair may still share method variance or be locally dependent; no empirical independence is claimed.",
+  "philosophicalBasis": {
+    "proposition": "In the general rule item and the specified promise case, the respondent treats choosing the available action with the greatest total well-being for everyone affected as decisive for individual-act moral rightness, even when keeping a valid promise favors the lower-well-being action.",
+    "neighboringViews": [
+      "Generic consequence responsiveness without a maximizing criterion",
+      "A direct act-consequence criterion with a different account of outcome value",
+      "Rule consequentialism and promise-keeping practices",
+      "Promise-based or rights-based duties that can favor a lower-welfare act",
+      "Welfare as an important reason without welfare maximization",
+      "Pluralist, prioritarian, egalitarian, total, or average outcome theories"
+    ],
+    "nonEntailments": [
+      "Utilitarianism or any complete ethical identity",
+      "Hedonism or a particular theory of well-being",
+      "Welfare as the only ultimate outcome value",
+      "A general theory of promises or rights",
+      "A universal distribution or population-ethics rule",
+      "A real-world decision procedure or actual respondent behavior",
+      "A political or policy position"
+    ],
+    "existingGap": "The active bank has no direct general statement plus distinct promise-conflict application for maximizing total well-being as an individual-act criterion. NE22, NE23, NE24, and generic outcome-concern questions address neighboring but non-equivalent distinctions.",
+    "scholarlyDisagreement": "Consequentialist theories differ about which value is maximized, total versus average aggregation, act versus rule assessment, and how promises constrain action. Promise obligations also have competing accounts. This release records only the explicit commitment stated in these items and does not settle those disputes."
+  },
+  "sourceClaims": [
+    {
+      "sourceId":"sep-act-consequence-criterion",
+      "relationship":"supports",
+      "claim":"In its maximizing form, act consequentialism makes the best outcome among available acts the criterion of moral rightness; this act-level criterion differs from evaluating general rules."
+    },
+    {
+      "sourceId":"sep-promises-act-rule",
+      "relationship":"supports",
+      "claim":"Act-utilitarian accounts can explain promissory obligations through the welfare effects of promises and their breach, while rule-utilitarian accounts evaluate general promise-keeping practices; a promise conflict is a discriminator rather than a complete theory label."
+    },
+    {
+      "sourceId":"sep-welfarism-outcome-value",
+      "relationship":"context",
+      "claim":"The criterion of rightness is distinct from the theory of outcome value and from total-versus-average aggregation; this release measures only the explicit total-well-being commitment tested in its authored items."
+    }
+  ],
+  "alternatives": [
+    "Promote NEI125@1 alone: rejected because it is one unreleased case and leaves the promise/trust consequence boundary ambiguous.",
+    "Reuse NE22, NE23, NE24, or generic consequence items as the second unit: rejected because none directly tests total-well-being maximization in the promise conflict.",
+    "Call the result utilitarianism or add an affinity criterion: rejected because these items do not establish a complete theory, welfare account, aggregation doctrine, or broader tradition profile.",
+    "Add either item to Quick or Standard: deferred because the proposition requires the two-unit route opportunity and current short-route burden should not change for one new criterion."
+  ],
+  "respondentImpact": "Full adds NEI133@1 and NEI125@2, spaced apart in the existing order. Quick and Standard retain their exact item references and return not_measured for this proposition; the existing clarification planner may offer eligible Full-route items only with its recorded evidence-gap rationale. Mixed, partial, neutral, skipped, or missing responses are not converted into a stronger conclusion.",
+  "historicalCompatibility": "Model releases through 1.17.0, earlier item banks, NEI125@1 draft wording, route definitions, affinity criteria, historical result-engine sources, and saved response records remain unchanged. New administrations use release 1.18.0. Old answers are not rewritten, and no old result is silently replaced.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "single_item_lean",
+      "route_omission",
+      "source_claim_trace",
+      "affinity_non_leak"
+    ],
+    "paths": [
+      "scripts/test-welfare-maximization-release.mjs",
+      "scripts/test-model-governance.mjs",
+      "scripts/test-quiz-browser.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role":"philosophical",
+        "reviewer":"Worldview Sorter AI editorial review",
+        "at":"2026-10-01T03:43:30Z",
+        "note":"Reviewed SEP act-maximization, total/average value distinctions, and act/rule treatments of promises. Kept the proposition response-scoped and excluded complete utilitarian or affinity claims."
+      },
+      {
+        "role":"engineering",
+        "reviewer":"Worldview Sorter AI engineering review",
+        "at":"2026-10-01T03:43:30Z",
+        "note":"Checked exact item revisions, Full-only two-unit opportunity, route omissions, evidence states, source links, monolingual active bundle, and historical release pinning."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "bank",
+      "registry",
+      "sources",
+      "source_ledger",
+      "model",
+      "full_form",
+      "progressive_routes",
+      "progressive_manifest",
+      "pilot",
+      "content_review",
+      "affinity",
+      "affinity_manifest",
+      "localization_catalog",
+      "localization_manifest"
+    ],
+    "targetVersion":"model-release-1.18.0",
+    "migration":"No raw-response migration. Full adds two exact new revisions as a versioned extension; Quick and Standard remain unchanged. Historical administrations keep their original route, model, and catalog manifests."
+  },
+  "implementationRefs": [
+    "docs/governance/WELFARE_MAXIMIZATION_REVIEW.md",
+    "scripts/build-welfare-maximization-v1.mjs",
+    "scripts/test-welfare-maximization-release.mjs"
+  ]
+}

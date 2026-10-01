@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-091",
+  "title": "Retire untranslated locale drafts from the active English-only release",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "localization",
+  "changeClass": "deprecation",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"localization","id":"catalog/ar"},
+    {"type":"localization","id":"bundle/ar"},
+    {"type":"localization","id":"catalog/es-ES"},
+    {"type":"localization","id":"bundle/es-ES"}
+  ],
+  "currentBehavior": "Model release 1.17 pins Arabic and Spanish draft wording artifacts in its localization catalog and release manifest. They are marked untranslated and are not approved respondent-facing instruments.",
+  "proposedBehavior": "Model release 1.18 supports only the canonical English (en-US) wording. The active catalog, bundle list, and localization manifest contain only that wording. Prior release manifests and exact draft files remain unchanged for historical reconstruction; they are not listed as currently supported languages.",
+  "rationale": "The product is now monolingual. Carrying untranslated language drafts as active release components incorrectly suggests supported alternatives and makes the current release boundary ambiguous. Retiring them from the successor is a release-scope correction, not a translation-quality judgment.",
+  "philosophicalBasis": {
+    "proposition": "The respondent-facing language in model release 1.18 is canonical English (en-US), and no other language draft is eligible for administration in that release.",
+    "neighboringViews": [
+      "A language-code record does not itself make wording respondent-ready.",
+      "An untranslated draft may remain useful as historical editorial material.",
+      "A future language adaptation would require a separately reviewed and versioned release."
+    ],
+    "nonEntailments": [
+      "This decision makes no claim about the quality or meaning of the archived drafts.",
+      "This decision does not alter prior model manifests or historical administrations.",
+      "This decision does not establish that future language adaptations are impossible."
+    ],
+    "existingGap": "The current release manifest includes untranslated drafts despite the product's English-only respondent experience.",
+    "scholarlyDisagreement": "No philosophical dispute is asserted. This is an editorial scope and release-eligibility decision; no claim of translation equivalence or linguistic validation is made."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "project-theory",
+      "relationship": "context",
+      "claim": "The repository's current product scope is English-only; this source is cited as project context, not as evidence of linguistic equivalence."
+    }
+  ],
+  "alternatives": [
+    "Keep the untranslated drafts in the active manifest: rejected because their presence misstates current release eligibility.",
+    "Delete the draft files and historical manifest references: rejected because prior release snapshots must remain reconstructible.",
+    "Treat draft presence as language support: rejected because the catalog marks those entries untranslated and no respondent-facing selector exists."
+  ],
+  "respondentImpact": "New administrations in model release 1.18 use canonical English only. The current quiz has no language selector or alternate wording path.",
+  "historicalCompatibility": "No older catalog, bundle, manifest, item revision, route, or saved administration is edited. Earlier releases continue to reference their exact historical artifacts. The successor no longer advertises or packages the untranslated locale drafts as active components.",
+  "tests": {
+    "required": ["active_catalog_english_only","active_bundle_english_only","historical_manifest_unchanged","deprecation_required_for_component_removal","production_artifact_excludes_untranslated_drafts"],
+    "paths": ["scripts/test-model-governance.mjs","scripts/test-production-site-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"linguistic","reviewer":"Worldview Sorter AI release-scope review","at":"2026-10-01T04:10:00Z","note":"Confirmed the proposal makes no translation-quality or equivalence claim and removes only draft locales from the successor's active manifest."},
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T04:10:00Z","note":"Confirmed no philosophical proposition or inference rule changes as a result of the locale retirement."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T04:10:00Z","note":"Verified old manifests remain pinned and the successor bundle list and static artifact are English-only."}
+    ]
+  },
+  "release": {
+    "components": ["localization_catalog","localization_manifest"],
+    "targetVersion": "model-release-1.18.0",
+    "migration": "No administration migration. The new release pins en-US only; untranslated draft files remain available through their immutable historical release manifests."
+  },
+  "implementationRefs": [
+    "docs/plan/welfare-maximization-v1/release-plan.md",
+    "scripts/build-welfare-maximization-v1.mjs",
+    "scripts/test-model-governance.mjs"
+  ]
+}

@@ -1,23 +1,23 @@
 {
   "schemaVersion": "1.0.0",
-  "registryVersion": "0.6.0",
+  "registryVersion": "0.7.0",
   "candidateBank": {
     "key": "bank",
-    "version": "0.17.0",
-    "path": "data/items/candidate-v0.17.json",
-    "sha256": "b336d12bbf69b16a6bc1b95c1abc457c3285d0194b9e94a28ef2a362a95f61d3"
+    "version": "0.18.0",
+    "path": "data/items/candidate-v0.18.json",
+    "sha256": "6dd795243ce798774083f6e059b6580a034195c7c7b64c94fbc561daf0fa5502"
   },
   "instrument": {
-    "version": "0.17.0-research",
-    "path": "data/instruments/research-pool-0.17.json"
+    "version": "0.18.0-research",
+    "path": "data/instruments/research-pool-0.18.json"
   },
   "editorialAudit": {
     "version": "0.1.0",
     "path": "data/reviews/editorial-audit-v0.1.json"
   },
   "pilot": {
-    "version": "pilot-0.10",
-    "path": "data/pilots/pilot-0.10.json"
+    "version": "pilot-0.11",
+    "path": "data/pilots/pilot-0.11.json"
   },
   "engineeringScoringModel": {
     "version": "engineering-keyed-0.2",
@@ -48,8 +48,8 @@
     "path": "data/profiles/matching-policy-v0.2.json"
   },
   "academicRelease": {
-    "version": "0.17.0",
-    "path": "data/academic/release-v0.17.json"
+    "version": "0.18.0",
+    "path": "data/academic/release-v0.18.json"
   },
   "academicSupplement": {
     "version": "0.9.0",
@@ -57,19 +57,19 @@
   },
   "worldviewModel": {
     "key": "model",
-    "version": "generic-1.14.0-pilot",
-    "path": "data/generic/model-v1.14-pilot.json",
-    "sha256": "5344c951e4f25a50913a2fe434fcf07bee3757951ff561eed46f0c4fd03ddb29"
+    "version": "generic-1.15.0-pilot",
+    "path": "data/generic/model-v1.15-pilot.json",
+    "sha256": "3c147cece64e613a6942ac1f06eaa99957263f00e93ac44380f3ef094004149a"
   },
   "worldviewSourceLedger": {
     "key": "source_ledger",
-    "version": "0.18.0",
-    "path": "data/generic/source-ledger-v0.18.json",
-    "sha256": "334c08eaf6bb864e1adf4e42871ab1cb9b4f282cbd9c52205f2448e490c97a98"
+    "version": "0.19.0",
+    "path": "data/generic/source-ledger-v0.19.json",
+    "sha256": "a46e106cb9200a440b715ba8b2b8792dff661904f99ef76cd292816c2b1a272a"
   },
   "quizExperience": {
-    "version": "quiz-1.21.0",
-    "path": "data/experience/policy-v1.21.json",
+    "version": "quiz-1.22.0",
+    "path": "data/experience/policy-v1.22.json",
     "entrypoint": "apps/quiz/index.html"
   },
   "publicForm": {
@@ -78,9 +78,9 @@
   },
   "fullForm": {
     "key": "full_form",
-    "version": "philosophy-pilot-1.14.0",
-    "path": "data/philosophy/public-pilot-v1.14.json",
-    "sha256": "9975bc42a854b81fca530d0b6f134e07b1ff9feddb2368bea6b2834819b58326"
+    "version": "philosophy-pilot-1.15.0",
+    "path": "data/philosophy/public-pilot-v1.15.json",
+    "sha256": "b2a1bb2e08c5793ff16dcb5378a926cd7192bcc81b9471014a19a6cf26c9cbef"
   },
   "unmappedAcademicAudit": {
     "key": "unmapped_audit",
@@ -94,16 +94,16 @@
   },
   "pilotCandidate": {
     "key": "pilot",
-    "version": "pilot-candidate-1.14.0",
-    "path": "data/pilots/pilot-candidate-v1.14.json",
-    "sha256": "6ad84c560681ee6fb44b264de6fb1a24ab19b0bdb3e1103764d433e0c1492cb8"
+    "version": "pilot-candidate-1.15.0",
+    "path": "data/pilots/pilot-candidate-v1.15.json",
+    "sha256": "6d195e801d8d91e19717817eb76fefaaa2328dfe1dd3a48fb2147e943c7333dd"
   },
   "affinityCatalog": {
     "key": "affinity",
-    "version": "philosophical-affinity-2.5.0",
-    "path": "data/affinities/catalog-v2.5.json",
-    "sha256": "29b3c717d9eea1f82055b7051e1608901985cd370e1e2770337bfe6a08a2b901",
-    "manifestPath": "data/affinities/manifest-v2.5.json"
+    "version": "philosophical-affinity-2.6.0",
+    "path": "data/affinities/catalog-v2.6.json",
+    "sha256": "4cc7f912a257ac76d4f577b3d06159074ed3b4a585db74a05fbff8ad96340d46",
+    "manifestPath": "data/affinities/manifest-v2.6.json"
   },
   "affinityCatalogVersions": [
     {
@@ -185,21 +185,26 @@
       "version": "philosophical-affinity-2.5.0",
       "path": "data/affinities/catalog-v2.5.json",
       "manifestPath": "data/affinities/manifest-v2.5.json"
+    },
+    {
+      "version": "philosophical-affinity-2.6.0",
+      "path": "data/affinities/catalog-v2.6.json",
+      "manifestPath": "data/affinities/manifest-v2.6.json"
     }
   ],
   "progressiveDepth": {
     "key": "progressive_routes",
-    "version": "progressive-depth-2.5.0",
-    "path": "data/experience/progressive-depth-v2.5.json",
-    "sha256": "74322aec409482ee65ba0eac532d11ffc2a22d51092c90150af4937f4a629234",
-    "manifestPath": "data/experience/progressive-depth-v2.5.manifest.json"
+    "version": "progressive-depth-2.6.0",
+    "path": "data/experience/progressive-depth-v2.6.json",
+    "sha256": "f26ad8b38d300d79e7b57d9a7ec15811f9c8570768d2161ff00150c34dd85697",
+    "manifestPath": "data/experience/progressive-depth-v2.6.manifest.json"
   },
   "localizationCatalog": {
     "key": "localization_catalog",
-    "version": "localization-catalog-2.5.0",
-    "path": "data/localization/catalog-v16.json",
-    "sha256": "d207212a2874d29f7998c4a19e1010b16a21a06e743d4778db8c7d2016bb992d",
-    "manifestPath": "data/localization/manifest-v2.5.json"
+    "version": "localization-catalog-2.6.0",
+    "path": "data/localization/catalog-v17.json",
+    "sha256": "2b6fd5e5654290e672df00fb10780cd99206992760467fb081d584fb2d41af1e",
+    "manifestPath": "data/localization/manifest-v2.6.json"
   },
   "localizationCatalogVersions": [
     {
@@ -281,42 +286,37 @@
       "version": "localization-catalog-2.5.0",
       "path": "data/localization/catalog-v16.json",
       "manifestPath": "data/localization/manifest-v2.5.json"
+    },
+    {
+      "version": "localization-catalog-2.6.0",
+      "path": "data/localization/catalog-v17.json",
+      "manifestPath": "data/localization/manifest-v2.6.json"
     }
   ],
   "localizationBundles": [
     {
-      "locale": "ar",
-      "version": "localization-ar-draft-16",
-      "path": "data/localization/ar-draft-v16.json"
-    },
-    {
       "locale": "en-US",
-      "version": "localization-en-US-2.5.0",
-      "path": "data/localization/en-US-v16.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-16",
-      "path": "data/localization/es-ES-draft-v16.json"
+      "version": "localization-en-US-2.6.0",
+      "path": "data/localization/en-US-v17.json"
     }
   ],
   "registry": {
     "key": "registry",
-    "version": "0.6.0",
-    "path": "data/registries/constructs-v0.6.json",
-    "sha256": "1634c8b557ae89f5444611b0f5d2320d5e06fd8c95361533ce135778fa4a6052"
+    "version": "0.7.0",
+    "path": "data/registries/constructs-v0.7.json",
+    "sha256": "f9af60640543af93fed76f57eeca5a5564704f48e080b9b0cc382ff0e8b108a2"
   },
   "sourceRegistry": {
     "key": "sources",
-    "version": "source-registry-1.10.0",
-    "path": "data/sources-v1.10.json",
-    "sha256": "dd0f5d3861cb30ba8694e1777d34609d10d2855fd4f16608c43b1af882342fd5"
+    "version": "source-registry-1.11.0",
+    "path": "data/sources-v1.11.json",
+    "sha256": "1c8d5ce48d4ed1659d66f5a57b9ff36e564684483aac49c5eeca3fb2832a73eb"
   },
   "contentReview": {
     "key": "content_review",
-    "version": "pilot-content-review-1.8.0",
-    "path": "data/pilots/content-review-v1.8.json",
-    "sha256": "b818ea1ba7170bf54a1c468ea44af7330186582d51f4b92a79562fdf6d44bb90"
+    "version": "pilot-content-review-1.9.0",
+    "path": "data/pilots/content-review-v1.9.json",
+    "sha256": "702897aed85b53906755ebe05b023a8d65eb6a4f13eaa7df3a36bcd9abd2e351"
   },
   "responseScales": {
     "key": "response_scales",
@@ -332,24 +332,9 @@
   },
   "localizationBundleVersions": [
     {
-      "locale": "ar",
-      "version": "localization-ar-draft-1",
-      "path": "data/localization/ar-draft-v1.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-1.0.0",
       "path": "data/localization/en-US-v1.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-1",
-      "path": "data/localization/es-ES-draft-v1.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-2",
-      "path": "data/localization/ar-draft-v2.json"
     },
     {
       "locale": "en-US",
@@ -357,29 +342,9 @@
       "path": "data/localization/en-US-v2.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-2",
-      "path": "data/localization/es-ES-draft-v2.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-3",
-      "path": "data/localization/ar-draft-v3.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-1.2.0",
       "path": "data/localization/en-US-v3.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-3",
-      "path": "data/localization/es-ES-draft-v3.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-4",
-      "path": "data/localization/ar-draft-v4.json"
     },
     {
       "locale": "en-US",
@@ -387,29 +352,9 @@
       "path": "data/localization/en-US-v4.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-4",
-      "path": "data/localization/es-ES-draft-v4.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-5",
-      "path": "data/localization/ar-draft-v5.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-1.4.0",
       "path": "data/localization/en-US-v5.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-5",
-      "path": "data/localization/es-ES-draft-v5.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-6",
-      "path": "data/localization/ar-draft-v6.json"
     },
     {
       "locale": "en-US",
@@ -417,29 +362,9 @@
       "path": "data/localization/en-US-v6.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-6",
-      "path": "data/localization/es-ES-draft-v6.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-7",
-      "path": "data/localization/ar-draft-v7.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-1.6.0",
       "path": "data/localization/en-US-v7.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-7",
-      "path": "data/localization/es-ES-draft-v7.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-8",
-      "path": "data/localization/ar-draft-v8.json"
     },
     {
       "locale": "en-US",
@@ -447,29 +372,9 @@
       "path": "data/localization/en-US-v8.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-8",
-      "path": "data/localization/es-ES-draft-v8.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-9",
-      "path": "data/localization/ar-draft-v9.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-1.8.0",
       "path": "data/localization/en-US-v9.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-9",
-      "path": "data/localization/es-ES-draft-v9.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-10",
-      "path": "data/localization/ar-draft-v10.json"
     },
     {
       "locale": "en-US",
@@ -477,29 +382,9 @@
       "path": "data/localization/en-US-v10.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-10",
-      "path": "data/localization/es-ES-draft-v10.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-11",
-      "path": "data/localization/ar-draft-v11.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-2.0.0",
       "path": "data/localization/en-US-v11.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-11",
-      "path": "data/localization/es-ES-draft-v11.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-12",
-      "path": "data/localization/ar-draft-v12.json"
     },
     {
       "locale": "en-US",
@@ -507,29 +392,9 @@
       "path": "data/localization/en-US-v12.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-12",
-      "path": "data/localization/es-ES-draft-v12.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-13",
-      "path": "data/localization/ar-draft-v13.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-2.2.0",
       "path": "data/localization/en-US-v13.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-13",
-      "path": "data/localization/es-ES-draft-v13.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-14",
-      "path": "data/localization/ar-draft-v14.json"
     },
     {
       "locale": "en-US",
@@ -537,29 +402,9 @@
       "path": "data/localization/en-US-v14.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-14",
-      "path": "data/localization/es-ES-draft-v14.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-15",
-      "path": "data/localization/ar-draft-v15.json"
-    },
-    {
       "locale": "en-US",
       "version": "localization-en-US-2.4.0",
       "path": "data/localization/en-US-v15.json"
-    },
-    {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-15",
-      "path": "data/localization/es-ES-draft-v15.json"
-    },
-    {
-      "locale": "ar",
-      "version": "localization-ar-draft-16",
-      "path": "data/localization/ar-draft-v16.json"
     },
     {
       "locale": "en-US",
@@ -567,14 +412,14 @@
       "path": "data/localization/en-US-v16.json"
     },
     {
-      "locale": "es-ES",
-      "version": "localization-es-ES-draft-16",
-      "path": "data/localization/es-ES-draft-v16.json"
+      "locale": "en-US",
+      "version": "localization-en-US-2.6.0",
+      "path": "data/localization/en-US-v17.json"
     }
   ],
   "modelRelease": {
-    "version": "model-release-1.17.0",
-    "path": "data/releases/model-release-v1.17.0.json"
+    "version": "model-release-1.18.0",
+    "path": "data/releases/model-release-v1.18.0.json"
   },
   "modelReleaseVersions": [
     {
@@ -648,10 +493,18 @@
     {
       "version": "model-release-1.17.0",
       "path": "data/releases/model-release-v1.17.0.json"
+    },
+    {
+      "version": "model-release-1.18.0",
+      "path": "data/releases/model-release-v1.18.0.json"
     }
   ],
   "releaseChannels": {
-    "version": "worldview-release-channels-18.0.0",
-    "path": "data/releases/channels-v18.json"
+    "version": "worldview-release-channels-19.0.0",
+    "path": "data/releases/channels-v19.json"
+  },
+  "pilotEvidenceAudit": {
+    "version": "pilot-evidence-dispositions-1.15.0",
+    "path": "data/reviews/pilot-evidence-dispositions-v16.json"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "version": "0.18.0",
+  "registryVersion": "0.7.0",
+  "baseBankVersion": "0.18.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-10-01",
+  "note": "Adds two original, complementary questions and one scoped direct proposition about total-well-being maximization in act rightness. No utilitarian identity, broader promise theory, or affinity mapping is inferred. Authored content, not empirically validated.",
+  "itemCount": 574,
+  "newItemCount": 2,
+  "registryEntries": 187,
+  "activeConstructCount": 186,
+  "newConstructCount": 1,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 25,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.17.json": "b336d12bbf69b16a6bc1b95c1abc457c3285d0194b9e94a28ef2a362a95f61d3",
+    "data/registries/constructs-v0.6.json": "1634c8b557ae89f5444611b0f5d2320d5e06fd8c95361533ce135778fa4a6052"
+  },
+  "publicInferenceAllowed": false
+}

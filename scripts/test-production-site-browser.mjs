@@ -75,18 +75,22 @@ async function runRoute(size,{pause=false,detail=false}={}){
  check('Current route uses first-person revelation warrant instead of the audience-ambiguous item',
   saved.presentedItems.some(row=>row.itemId==='EPI122')&&
   !saved.presentedItems.some(row=>row.itemId==='EPI021'));
- check('Welfarist outcome-value questions appear only in Full at their reviewed revisions',size===245?
+ check('Welfarist outcome-value questions appear only in Full at their reviewed revisions',size===247?
   saved.presentedItems.some(row=>row.itemId==='NEI124'&&row.itemRevision===2)&&
   saved.presentedItems.some(row=>row.itemId==='NEI132'&&row.itemRevision===1):
   !saved.presentedItems.some(row=>['NEI124','NEI132'].includes(row.itemId)));
- if(size===245)check('Conflicting answers remain a mixed welfarist result',
+ if(size===247)check('Conflicting answers remain a mixed welfarist result',
   await page.locator('[data-commitment-id="reviewed-NE24-welfarist-outcome-value"]').count()>=1&&
   await page.locator('[data-commitment-id="reviewed-NE24-welfarist-outcome-value"]').evaluateAll(nodes=>
    nodes.every(node=>node.dataset.state==='mixed_context_dependent')));
- check('Self-interest discriminator appears only on the Full route',size===245?
+ check('Self-interest discriminator appears only on the Full route',size===247?
   saved.presentedItems.some(row=>row.itemId==='NEI121')&&
   !saved.presentedItems.some(row=>row.itemId==='NEI101'):
   !saved.presentedItems.some(row=>row.itemId==='NEI121'));
+ check('Total-well-being criterion items appear only in Full at their reviewed revisions',size===247?
+  saved.presentedItems.some(row=>row.itemId==='NEI133'&&row.itemRevision===1)&&
+  saved.presentedItems.some(row=>row.itemId==='NEI125'&&row.itemRevision===2):
+  !saved.presentedItems.some(row=>['NEI125','NEI133'].includes(row.itemId)));
  check('Twelve worldview domains remain navigable',await page.locator('#domain-map .domain').count()===12);
  check('Results open with an evidence-qualified overview',await page.locator('#result-at-a-glance').isVisible());
  check('Every domain has a categorical evidence strip',await page.locator('#domain-map .domain-strip').count()===12);
@@ -154,7 +158,7 @@ try{
  await keyboardContext.close();
  await runRoute(64,{pause:true,detail:true});
  await runRoute(120);
- await runRoute(245);
+ await runRoute(247);
  const historicalBank=JSON.parse(await readFile(path.join(root,'data/items/candidate-v0.9.json'),'utf8'));
  const historicalPilot=JSON.parse(await readFile(path.join(root,'data/pilots/pilot-0.2.json'),'utf8'));
  const historicalPolicy=JSON.parse(await readFile(path.join(root,'data/experience/progressive-depth-v1.2.json'),'utf8'));

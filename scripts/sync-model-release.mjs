@@ -1,4 +1,5 @@
-import {readFile,writeFile} from 'node:fs/promises';
+import {readFile,readdir,writeFile} from 'node:fs/promises';
+import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {currentFromManifest,readJson,verifyRelease} from '../packages/governance/release.js';
 
@@ -59,6 +60,11 @@ if(pinned.candidateBank.version==='0.17.0'){
  current.academicRelease={version:'0.17.0',path:'data/academic/release-v0.17.json'};
  current.pilot={version:'pilot-0.10',path:'data/pilots/pilot-0.10.json'};
 }
+if(pinned.candidateBank.version==='0.18.0'){
+ current.instrument={version:'0.18.0-research',path:'data/instruments/research-pool-0.18.json'};
+ current.academicRelease={version:'0.18.0',path:'data/academic/release-v0.18.json'};
+ current.pilot={version:'pilot-0.11',path:'data/pilots/pilot-0.11.json'};
+}
 // Coverage is embedded in the pinned model. An older standalone audit snapshot
 // must not be advertised as coverage for the active release.
 delete current.worldviewCoverage;
@@ -84,7 +90,7 @@ for(const release of history)for(const component of release.components.filter(ro
  if(prior&&JSON.stringify(prior)!==JSON.stringify(ref))throw Error('Conflicting historical localization bundle: '+key);
  localizationBundleHistory.set(key,ref);
 }
-current.localizationBundleVersions=[...localizationBundleHistory.values()];
+current.localizationBundleVersions=[...localizationBundleHistory.values()].filter(ref=>ref.locale==='en-US');
 const experienceIndex=await readJson(root,'data/experience/current.json');
 if(experienceIndex.schemaVersion!=='worldview-experience-index-1'||
  !/^data\/experience\/policy-v[0-9.]+\.json$/.test(experienceIndex.current?.path))
@@ -101,7 +107,25 @@ current.modelRelease=index.current;
 current.modelReleaseVersions=index.versions;
 current.releaseChannels=channelIndex.current;
 await verifyRelease(root,current,manifest);
-const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v15.json');
+const reviewFiles=(await readdir(path.join(root,'data/reviews')))
+ .filter(file=>/^pilot-evidence-dispositions-v[0-9]+\.json$/.test(file)).sort((a,b)=>
+  Number(b.match(/v([0-9]+)/)[1])-Number(a.match(/v([0-9]+)/)[1]));
+let auditRef=current.pilotEvidenceAudit;
+if(auditRef){
+ const candidate=await readJson(root,auditRef.path).catch(()=>null);
+ if(!candidate||candidate.release.modelVersion!==pinned.worldviewModel.version||
+  candidate.release.routePolicyVersion!==pinned.progressiveDepth.version)auditRef=null;
+}
+if(!auditRef){
+ for(const file of reviewFiles){const candidate=await readJson(root,'data/reviews/'+file);
+  if(candidate.release.modelVersion===pinned.worldviewModel.version&&
+   candidate.release.routePolicyVersion===pinned.progressiveDepth.version){
+   auditRef={version:candidate.auditVersion,path:'data/reviews/'+file};break;
+  }}
+}
+if(!auditRef)throw Error('No pilot evidence audit matches the active model and route policy.');
+current.pilotEvidenceAudit=auditRef;
+const evidenceAudit=await readJson(root,auditRef.path);
 const activeAffinity=await readJson(root,pinned.affinityCatalog.path);
 if(evidenceAudit.release.modelVersion!==pinned.worldviewModel.version||
  evidenceAudit.release.routePolicyVersion!==pinned.progressiveDepth.version)
@@ -139,6 +163,9 @@ readme=readme.replace(/with 64\/120\/\d+-question depth routes/,
  `with 64/120/${summary.fullRouteItems}-question depth routes`);
 readme=readme.replace(/The active Full route uses the frozen 238-question pilot\. Earlier 240-item and 80\/120\/160-item releases remain available for replaying saved quizzes\./,
  `The active Full route uses the versioned ${summary.fullRouteItems}-question successor pilot. The earlier frozen 238-question pilot and older 240-item and 80/120/160-item releases remain available for historical replay.`);
+const monolingual='The public questionnaire is English (en-US) only. Older language drafts remain archived with their historical releases and are not offered to respondents.';
+if(!readme.includes(monolingual))readme=readme.replace('The static Pages site has no research-upload endpoint.',
+ `The static Pages site has no research-upload endpoint. ${monolingual}`);
 await writeFile(readmePath,readme);
 await writeFile(new URL('data/current.json',new URL('../',import.meta.url)),JSON.stringify(current,null,2)+'\n');
 console.log('Model release index:',manifest.releaseVersion);

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createQuiz,restoreQuiz} from '../packages/experience/quiz.js';
+import {currentFromManifest} from '../packages/governance/release.js';
 import {RESULT_STATES,validateLocalizationCatalog,validateLocalizationBundle,itemLocalization,localizeItem,localizeSummary,
  routeLocalizationAvailability,validateSavedLocalization} from '../packages/localization/index.js';
 
@@ -12,11 +13,25 @@ const [catalog,bank,scalesDoc,model,affinity,pilot,policy]=await Promise.all([
 assert.ok(validateLocalizationCatalog(catalog,{bank,model,affinityCatalog:affinity}));
 const bundles=await Promise.all(catalog.locales.map(row=>read(row.path)));
 for(const bundle of bundles)assert.ok(validateLocalizationBundle(bundle,{catalog,bank,scalesDoc,model,affinityCatalog:affinity}));
-const english=bundles.find(b=>b.locale==='en-US'),spanish=bundles.find(b=>b.locale==='es-ES'),arabic=bundles.find(b=>b.locale==='ar');
+const english=bundles.find(b=>b.locale==='en-US');
+assert.deepEqual(catalog.locales.map(row=>row.locale),['en-US']);
+assert.ok(current.localizationBundles.every(row=>row.locale==='en-US')&&
+ current.localizationBundleVersions.every(row=>row.locale==='en-US'));
 for(const route of policy.routes){
  const en=routeLocalizationAvailability({bundle:english,route,bank,scalesDoc,model,affinityCatalog:affinity});
  assert.equal(en.available,true);assert.equal(en.affinityAvailable,true);
- for(const bundle of [spanish,arabic]){const unavailable=routeLocalizationAvailability({bundle,route,bank,scalesDoc,model,affinityCatalog:affinity});
+}
+const historical=currentFromManifest(await read('data/releases/model-release-v1.17.0.json'));
+const [historicalCatalog,historicalBank,historicalModel,historicalAffinity,historicalPolicy]=await Promise.all([
+ read(historical.localizationCatalog.path),read(historical.candidateBank.path),read(historical.worldviewModel.path),
+ read(historical.affinityCatalog.path),read(historical.progressiveDepth.path)]);
+const historicalBundles=await Promise.all(historicalCatalog.locales.map(row=>read(row.path)));
+for(const bundle of historicalBundles)assert.ok(validateLocalizationBundle(bundle,{catalog:historicalCatalog,bank:historicalBank,
+ scalesDoc,model:historicalModel,affinityCatalog:historicalAffinity}));
+const spanish=historicalBundles.find(bundle=>bundle.locale==='es-ES'),arabic=historicalBundles.find(bundle=>bundle.locale==='ar');
+for(const route of historicalPolicy.routes){
+ for(const bundle of [spanish,arabic]){const unavailable=routeLocalizationAvailability({bundle,route,bank:historicalBank,
+  scalesDoc,model:historicalModel,affinityCatalog:historicalAffinity});
   assert.equal(unavailable.available,false);assert.ok(unavailable.missingItems.length>0);
   assert.ok(unavailable.blockers.includes('interface_integration_pending'));
   assert.equal(unavailable.affinityAvailable,false);}
@@ -31,17 +46,19 @@ assert.deepEqual(restoreQuiz(quiz,{bank,pilot,scalesDoc,formPolicies:[policy],lo
 assert.throws(()=>restoreQuiz(quiz,{bank,pilot,scalesDoc,formPolicies:[policy],localizationBundles:[],localizationCatalogs:[catalog]}),/bundle unavailable/);
 const altered=structuredClone(quiz);altered.session.presentedItems[0].textVersion='silently-retranslated';
 assert.throws(()=>restoreQuiz(altered,{bank,pilot,scalesDoc,formPolicies:[policy],localizationBundles:bundles,localizationCatalogs:[catalog]}),/wording version mismatch/);
-const item=bank.items.find(i=>i.id==='RCI001'),scale=scalesDoc.scales.find(s=>s.id===item.responseScaleId);
+const item=historicalBank.items.find(i=>i.id==='RCI001'),scale=scalesDoc.scales.find(s=>s.id===item.responseScaleId);
 const synthetic=structuredClone(spanish);synthetic.status='approved';synthetic.itemRealizations.push({itemId:item.id,itemRevision:item.revision,
  text:'[synthetic review fixture]',options:item.options.map(o=>({id:o.id,label:'[synthetic] '+o.id})),
  kind:'locale_variant',variantId:'synthetic-variant-1',evidenceCompatibility:'not_comparable',status:'approved',
  textVersion:'synthetic-text-1',producer:'synthetic test fixture',createdAt:'2026-09-29T00:00:00Z',sourceNote:'test',adaptationNote:'test',
  reviews:[{role:'linguistic',reviewer:'synthetic',at:'2026-09-29T00:00:00Z',note:'test'},
   {role:'philosophical',reviewer:'synthetic',at:'2026-09-29T00:00:00Z',note:'test'}]});
-const syntheticCatalog=structuredClone(catalog);syntheticCatalog.locales.find(r=>r.locale==='es-ES').status='approved';
-assert.throws(()=>validateLocalizationBundle(synthetic,{catalog:syntheticCatalog,bank,scalesDoc,model,affinityCatalog:affinity}),/incompatible adaptation/);
+const syntheticCatalog=structuredClone(historicalCatalog);syntheticCatalog.locales.find(r=>r.locale==='es-ES').status='approved';
+assert.throws(()=>validateLocalizationBundle(synthetic,{catalog:syntheticCatalog,bank:historicalBank,scalesDoc,
+ model:historicalModel,affinityCatalog:historicalAffinity}),/incompatible adaptation/);
 synthetic.itemRealizations[0].evidenceCompatibility='same_proposition_reviewed';
-assert.ok(validateLocalizationBundle(synthetic,{catalog:syntheticCatalog,bank,scalesDoc,model,affinityCatalog:affinity}));
+assert.ok(validateLocalizationBundle(synthetic,{catalog:syntheticCatalog,bank:historicalBank,scalesDoc,
+ model:historicalModel,affinityCatalog:historicalAffinity}));
 assert.deepEqual(itemLocalization(synthetic,item),{textVersion:'synthetic-text-1',variantId:'synthetic-variant-1'});
 assert.throws(()=>localizeItem(synthetic,item,scale),/response scale is not approved/);
 synthetic.itemRealizations[0].status='needs_revision';
@@ -69,5 +86,6 @@ unreviewedDirect.rows[0].presentationReview={schemaVersion:'direct-presentation-
 assert.equal(localizeSummary(unreviewedDirect,translationFixture).reason,'presentation_qualification_unavailable',
  'An approved translation of generic result states must not erase the direct-evidence qualification.');
 synthetic.itemRealizations[0].status='approved';synthetic.itemRealizations[0].reviews=[];
-assert.throws(()=>validateLocalizationBundle(synthetic,{catalog:syntheticCatalog,bank,scalesDoc,model,affinityCatalog:affinity}),/linguistic and philosophical review/);
+assert.throws(()=>validateLocalizationBundle(synthetic,{catalog:syntheticCatalog,bank:historicalBank,scalesDoc,
+ model:historicalModel,affinityCatalog:historicalAffinity}),/linguistic and philosophical review/);
 console.log('Localization regressions passed: release gating, exact wording replay, variant compatibility, missing scale, and RTL metadata.');

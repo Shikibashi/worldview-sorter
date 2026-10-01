@@ -429,7 +429,7 @@ const startNew = ({ size, seed }) => {
   session = createPilotSession({
     pilot,
     packet,
-    locale:navigator.language || "en-US",
+    locale:"en-US",
     clientVersion:"web-0.2",
     sessionId:createSessionId()
   });

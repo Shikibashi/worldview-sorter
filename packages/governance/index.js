@@ -355,7 +355,7 @@ export function validateReleaseTransition({previousManifest,nextManifest,changes
  insist(next.some((part,i)=>part>old[i]&&next.slice(0,i).every((value,j)=>value===old[j])),
   'a new model release version is required');
  const before=new Map(previousManifest.components.map(c=>[c.key,c])),after=new Map(nextManifest.components.map(c=>[c.key,c]));
- const keyFor=component=>component==='localization'?'localization_catalog':component==='routes'?'progressive_routes':component;
+ const keyFor=component=>component==='localization'||component.startsWith('localization_bundle:')?'localization_catalog':component==='routes'?'progressive_routes':component;
  const matchingProposal=change=>proposals.filter(p=>['approved','released'].includes(p.status)&&
    (!p.release.targetVersion||p.release.targetVersion===nextManifest.releaseVersion)&&
    p.affectedObjects.some(o=>o.type===change.objectType&&o.id===change.id)&&
@@ -363,7 +363,16 @@ export function validateReleaseTransition({previousManifest,nextManifest,changes
   .sort((a,b)=>Number(b.release.targetVersion===nextManifest.releaseVersion)-Number(a.release.targetVersion===nextManifest.releaseVersion))[0];
  const classified=new Set(changes.map(change=>keyFor(change.component)));
  for(const [key,prior] of before){const future=after.get(key);
-  insist(future,'release removed component '+key);
+  if(!future){
+   const locale=key.startsWith('localization_bundle:')?key.slice('localization_bundle:'.length):null;
+   const retirement=locale&&proposals.find(p=>['approved','released'].includes(p.status)&&
+    p.changeClass==='deprecation'&&p.objectType==='localization'&&
+    (!p.release.targetVersion||p.release.targetVersion===nextManifest.releaseVersion)&&
+    p.release.components.includes('localization_catalog')&&
+    p.affectedObjects.some(o=>o.type==='localization'&&o.id==='bundle/'+locale));
+   if(retirement){validateProposal(retirement);continue;}
+   insist(false,'release removed component '+key);
+  }
   if(prior.sha256===future.sha256)continue;
   insist(prior.path!==future.path&&prior.version!==future.version,'changed component needs a new path and version: '+key);
   const parent=key.startsWith('localization_bundle:')?'localization_catalog':
