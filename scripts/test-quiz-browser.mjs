@@ -425,19 +425,21 @@ try{
   fullPage.locator('.pattern[data-commitment-id="ph-sacred-value"]')}).first();
  await sacredDomain.locator('details > summary').first().click();
  const sacredRow=sacredDomain.locator('.pattern[data-commitment-id="ph-sacred-value"]').first();
- check('Inherited rule scope limitation is visible before opening evidence',
-  (await sacredRow.locator(':scope > p.small').first().innerText()).includes('no separately recorded exact proposition'));
+ check('Sacred-status result states its narrower tradeoff scope before opening evidence',
+  (await sacredRow.innerText()).includes('some moral weight in a community-object tradeoff')&&
+  !(await sacredRow.innerText()).includes('Provisional authored scope'));
  check('Directional scope-only direct results use authored-pattern wording',await fullPage.locator('#domain-map .pattern').evaluateAll(nodes=>
   nodes.filter(node=>node.querySelector(':scope > p.small')?.textContent?.includes('Provisional authored scope')&&
    ['supported','opposed','leaned_toward','mixed_context_dependent'].includes(node.dataset.state))
    .some(node=>node.querySelector(':scope > .state')?.textContent?.includes('inherited rule scope under the authored rule'))));
  await sacredRow.locator('details > summary').first().click();
- check('A context-limited source explains its scope and lack of quiz validation',
-  (await sacredRow.innerText()).includes('Source record context; relevance to this inherited rule scope needs review:')&&
+ check('Sacred-status sources distinguish philosophical claim from context-limited study',
+  (await sacredRow.innerText()).includes('Rule-linked source claim (supports):')&&
+  (await sacredRow.innerText()).includes('Rule-linked source claim (context):')&&
   (await sacredRow.innerText()).includes('This source does not validate this questionnaire.'));
- check('Inherited rule details label scope and connect answer to evidence meaning',
-  (await sacredRow.innerText()).includes('Authored interpretation scope:')&&
-  (await sacredRow.innerText()).includes('no separately recorded standalone proposition')&&
+ check('Sacred-status details state the exact proposition and connect answer to evidence meaning',
+  (await sacredRow.innerText()).includes('Proposition considered: In the stated community-object')&&
+  (await sacredRow.innerText()).includes('This result does not imply:')&&
   (await sacredRow.innerText()).includes('Your response:')&&
   (await sacredRow.innerText()).includes('Evidence meaning:'));
  check('Directional exact direct propositions flag missing supporting source linkage',await fullPage.locator('#domain-map .pattern').evaluateAll(nodes=>

@@ -75,13 +75,13 @@ assert.equal(sourceQuality(snapshot.model.sources.find(s=>s.id==='gen-values')),
 const provenanceReport=spawnSync(process.execPath,['scripts/model-governance.mjs','report'],{cwd:root,encoding:'utf8'});
 assert.equal(provenanceReport.status,0,provenanceReport.stderr);
 const provenance=JSON.parse(provenanceReport.stdout);
-assert.ok(provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'&&
- r.sourceClasses.includes('context_limited_empirical_research')));
+assert.ok(!provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'),
+ 'The successor must retain a philosophical source alongside its context-limited empirical study.');
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,14);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,13);
-assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,132);
-for (const ruleId of ['construct-EP15','construct-EP16','construct-EP20','audit2-EP06-testability','construct-AH14','audit2-EP10-revelation','construct-NE15']) {
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,18);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,14);
+assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,131);
+for (const ruleId of ['construct-EP15','construct-EP16','construct-EP20','audit2-EP06-testability','construct-AH14','audit2-EP10-revelation','construct-NE15','ph-sacred-value']) {
  assert.ok(!provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(ruleId));
 }
 assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
@@ -91,9 +91,10 @@ assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='construct-EP16'));
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='ph-sacred-value'));
 assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,144);
-assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,24);
-assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,120);
+assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,25);
+assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,119);
 assert.ok(!provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
+assert.ok(!provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='ph-sacred-value'));
 assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,23);
 assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRuleProposition.length,11);
 assert.equal(provenance.affinityLegacyScopeDependencies.criteriaWithoutLinkedSupportingClaim.length,12);
