@@ -54,6 +54,11 @@ if(pinned.candidateBank.version==='0.16.0'){
  current.academicRelease={version:'0.16.0',path:'data/academic/release-v0.16.json'};
  current.pilot={version:'pilot-0.9',path:'data/pilots/pilot-0.9.json'};
 }
+if(pinned.candidateBank.version==='0.17.0'){
+ current.instrument={version:'0.17.0-research',path:'data/instruments/research-pool-0.17.json'};
+ current.academicRelease={version:'0.17.0',path:'data/academic/release-v0.17.json'};
+ current.pilot={version:'pilot-0.10',path:'data/pilots/pilot-0.10.json'};
+}
 // Coverage is embedded in the pinned model. An older standalone audit snapshot
 // must not be advertised as coverage for the active release.
 delete current.worldviewCoverage;
@@ -96,7 +101,7 @@ current.modelRelease=index.current;
 current.modelReleaseVersions=index.versions;
 current.releaseChannels=channelIndex.current;
 await verifyRelease(root,current,manifest);
-const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v14.json');
+const evidenceAudit=await readJson(root,'data/reviews/pilot-evidence-dispositions-v15.json');
 const activeAffinity=await readJson(root,pinned.affinityCatalog.path);
 if(evidenceAudit.release.modelVersion!==pinned.worldviewModel.version||
  evidenceAudit.release.routePolicyVersion!==pinned.progressiveDepth.version)
