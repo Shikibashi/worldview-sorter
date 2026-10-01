@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "policyVersion": "independent-reference-authoring-1.0.0",
+  "thirdPartyProfileDatasetsAsContentSources": false,
+  "requiresOriginalProse": true,
+  "requiresIndependentCoverageSelection": true,
+  "allowedSourceClasses": [
+    "primary_text",
+    "signed_scholarly_synthesis",
+    "peer_reviewed_scholarship",
+    "publisher_metadata"
+  ],
+  "forbiddenImportedStructures": [
+    "profile_coordinates",
+    "axis_weights",
+    "match_percentages",
+    "nearest_profile_labels",
+    "external_taxonomy_descriptions",
+    "external_profile_summaries",
+    "external_argument_wording",
+    "external_source_annotation_bundles"
+  ],
+  "publicComparison": {
+    "allowedEvidenceBasis": [
+      "primary_text",
+      "scholarly_reconstruction"
+    ],
+    "forbiddenEvidenceBasis": [
+      "editorial_hypothesis"
+    ],
+    "aggregateScoreAllowed": false,
+    "identityAssignmentAllowed": false
+  }
+}

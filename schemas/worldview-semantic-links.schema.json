@@ -1,0 +1,48 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://worldview.edriffles.us/schemas/worldview-semantic-links.schema.json",
+  "title":"Worldview Sorter semantic links",
+  "description":"Non-scoring explanatory links among already interpreted Worldview Sorter propositions.",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schemaVersion","linkSetVersion","modelVersion","mayChangeInterpretation","links"],
+  "properties":{
+    "schemaVersion":{"const":"1.0.0"},
+    "linkSetVersion":{"type":"string","minLength":1},
+    "modelVersion":{"type":"string","minLength":1},
+    "mayChangeInterpretation":{"const":false},
+    "links":{"type":"array","items":{"$ref":"#/$defs/link"}}
+  },
+  "$defs":{
+    "condition":{
+      "type":"object","additionalProperties":false,
+      "required":["propositionId","state"],
+      "properties":{
+        "propositionId":{"type":"string","minLength":1},
+        "state":{"enum":["supported","opposed"]}
+      }
+    },
+    "sourceClaim":{
+      "type":"object","additionalProperties":false,
+      "required":["sourceId","relationship","claim"],
+      "properties":{
+        "sourceId":{"type":"string","minLength":1},
+        "relationship":{"enum":["supports_link","limits_inference"]},
+        "claim":{"type":"string","minLength":1}
+      }
+    },
+    "link":{
+      "type":"object","additionalProperties":false,
+      "required":["id","kind","mayChangeInterpretation","when","explanation","sourceClaims"],
+      "properties":{
+        "id":{"type":"string","minLength":1},
+        "kind":{"enum":["explanatory_support","does_not_establish","can_coexist","needs_clarification","contradiction"]},
+        "mayChangeInterpretation":{"const":false},
+        "when":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/condition"}},
+        "target":{"$ref":"#/$defs/condition"},
+        "explanation":{"type":"string","minLength":1},
+        "sourceClaims":{"type":"array","minItems":1,"items":{"$ref":"#/$defs/sourceClaim"}}
+      }
+    }
+  }
+}
