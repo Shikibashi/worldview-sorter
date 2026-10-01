@@ -1,12 +1,10 @@
 # GitHub Pages production deployment
 
-The public site is intended to be a static artifact at `https://worldview.edriffles.us/`. The default `main` branch is the production source; the draft `construct-registry-v0.1` branch is not a deployment trigger. The [Pages workflow](../.github/workflows/deploy-pages.yml) checks out the triggering commit, runs model and browser validation, builds `dist/pages/`, verifies its file boundary, uploads the artifact, and deploys through the `github-pages` environment. Manual dispatch is allowed only on `main`.
-
-The current public questionnaire is English (en-US) only. Untranslated wording drafts are excluded from the active release and production artifact; immutable earlier manifests remain available for historical replay.
+The public site is a static artifact at `https://worldview.edriffles.us/`. Only the default `main` branch is a push deployment source. The [Pages workflow](../.github/workflows/deploy-pages.yml) checks out the triggering commit, runs model and browser validation, builds `dist/pages/`, verifies its file boundary, uploads the artifact, and deploys through the `github-pages` environment. Manual dispatch is allowed only on `main`.
 
 ## Build and artifact
 
-Run `npm ci`, `npm test`, `npm run build:production`, `node scripts/verify-production-site.mjs`, and `npm run test:production:browser`. Install Playwright Chromium before the browser test. The static test uses synthetic answers and serves the assembled artifact, including the custom-domain root. It completes the actual 64, 120, and 247 item routes, checks local pause/resume, result generation, source links, exports, sharing preview, accessibility, mobile zoom, reduced motion, and absence of collector requests.
+Run `npm ci`, `npm test`, `npm run build:production`, `node scripts/verify-production-site.mjs`, and `npm run test:production:browser`. Install Playwright Chromium before the browser test. The static test uses synthetic answers and serves the assembled artifact, including the custom-domain root. It completes the actual 64, 120, and 249 item routes, checks local pause/resume, result generation, source links, exports, sharing preview, accessibility, mobile zoom, reduced motion, and absence of collector requests.
 
 The artifact contains a generated root `index.html`, the quiz and snapshot viewer, their browser module import graph, exact runtime data references (including historical models needed by saved administrations), selected public documents, and `deployment.json`. The latter identifies the Git commit, application, item bank, model, route, result semantics, and affinity versions. The builder starts with an empty output directory and rejects unexpected module imports. The verifier rejects server, development UI, private data, research exports, scripts, fixtures, symlinks, and unapproved paths. Neither the repository root nor `apps/server/` is published.
 

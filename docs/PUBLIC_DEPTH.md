@@ -2,7 +2,7 @@
 
 ## Bank v0.7
 
-At this historical milestone, candidate bank v0.7 contained **363 items**. The current candidate bank is v0.10 with 564 items; see [progressive depth](PROGRESSIVE_DEPTH.md) for current routes.
+At this historical milestone, candidate bank v0.7 contained **363 items**. The current candidate bank is v0.19 with 575 items; see [progressive depth](PROGRESSIVE_DEPTH.md) for current routes.
 
 All public-facing constructs share the same minimum development floor:
 
