@@ -1,6 +1,6 @@
 import {createQuiz,restoreQuiz,currentItem,seekQuestion,answerQuestion,nextQuestion,previousQuestion,quizProgress,extendProgressiveQuiz,recordDepthCheckpoint,EXPERIENCE_VERSION,COMPATIBLE_EXPERIENCE_VERSIONS} from '../../packages/experience/quiz.js';
 import {buildQuizSummary,DOMAIN_COPY} from '../../packages/experience/summary.js';
-import {buildResultOverview,resultOverviewDescription,formatResponseCoverage} from '../../packages/experience/result-overview.js';
+import {buildResultOverview,resultOverviewDescription,resultStatusLabel,formatResponseCoverage} from '../../packages/experience/result-overview.js';
 import {initialExploration,recordExploration,initialExplorationV2,recordExplorationV2} from '../../packages/experience/exploration.js';
 import {buildShareSnapshot,shareSnapshotText,shareSnapshotSvg,readingTrailFor,compareTraditions,recommendExploration} from '../../packages/experience/engagement.js';
 import {shuffleWithSeed} from '../../packages/runtime/index.js';
@@ -340,7 +340,7 @@ function evidenceDetails(row){
 }
 function patternBlock(row){
  const block=elem('article',undefined,'pattern');block.dataset.state=row.displayState??row.status;block.dataset.commitmentId=row.id;
- block.append(elem('span',row.statusLabel,'state'),elem('h3',row.label));
+ block.append(elem('span',resultStatusLabel(row),'state'),elem('h3',row.label));
  if(row.propositionBasis==='inherited_rule_scope'){
   const note=row.status==='not_measured'?'This label refers to a broader rule scope, not a separately stated proposition. This route did not assess it.':
    row.status==='insufficient_evidence'?'This label refers to a broader rule scope, not a separately stated proposition. The questions did not support a direction.':
@@ -628,8 +628,11 @@ function finish(newlyCompleted=false){
  loadActivity();if(newlyCompleted){activityEvent('completed','routeId',quiz.depth?.currentRouteId??'full');
   resultEvent('quiz_finished');}
  $('result-counts').textContent=formatResponseCoverage(quiz.session);
- $('academic-notice').textContent=summary.academicNotice;$('coverage-notice').textContent=summary.coverageNotice;
  const pilotResult=summary.schemaVersion==='quiz-summary-3';
+ $('academic-notice').textContent=pilotResult?
+  'This is an exploratory philosophical quiz, not a validated psychological assessment. Its questions and interpretation rules are authored from philosophical sources; response data have not validated them. Some patterns remain provisional because exact philosophical claims or supporting source links are not recorded.':summary.academicNotice;
+ $('coverage-notice').textContent=pilotResult?
+  'Not measured means this route did not provide a complete set of direct questions. Insufficient evidence means relevant questions were presented, but your responses did not support a direction. A conditional question not presented because of an earlier answer is not evidence either way.':summary.coverageNotice;
  const resultProjection=buildResultOverview(summary);renderResultHighlights(resultProjection);
  for(const [section,list,rows] of [
   ['overview-section','overview-list',summary.overview??[]],

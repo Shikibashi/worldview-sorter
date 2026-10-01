@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {buildResultOverview,resultOverviewDescription,formatResponseCoverage} from '../packages/experience/result-overview.js';
+import {buildResultOverview,resultOverviewDescription,resultStatusLabel,formatResponseCoverage} from '../packages/experience/result-overview.js';
 
 const root=new URL('../',import.meta.url);
 const read=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
@@ -46,6 +46,10 @@ assert.equal(buildResultOverview({...summary,schemaVersion:'quiz-summary-1'}),nu
 assert.match(resultOverviewDescription(overview),/specific propositions, not an overall philosophy label/);
 assert.match(resultOverviewDescription({...overview,supported:[],opposed:[],mixed:[]}),/patterns remain provisional/);
 assert.match(resultOverviewDescription({...overview,supported:[],opposed:[],mixed:[],provisionalPatterns:[]}),/No direct proposition is ready to highlight/);
+assert.equal(resultStatusLabel({status:'not_measured',presentationReview:{state:'inherited_rule_scope'},statusLabel:'old internal copy'}),'Not measured here');
+assert.match(resultStatusLabel({status:'supported',presentationReview:{state:'inherited_rule_scope'}}),/Provisional answer pattern/);
+assert.match(resultStatusLabel({status:'supported',presentationReview:{state:'source_claim_unresolved'}}),/Provisional interpretation.*source link not recorded/);
+assert.equal(resultStatusLabel({status:'supported',displayState:'model_review_required'}),'Provisional derived interpretation');
 assert.equal(formatResponseCoverage({responses:[{state:'answered'},{state:'no_view'},{state:'not_understood'},{state:'not_applicable'}],presentedItems:[{skippedByBranch:true}]}),
  'Responses recorded: 1 substantive · 1 no view · 1 not understood · 1 not applicable · 1 conditional question not asked');
 console.log('Current consumer experience contract and evidence projection passed.');

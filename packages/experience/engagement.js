@@ -1,5 +1,6 @@
 // This layer consumes completed result projections. It never reads raw answers,
 // changes interpretation, or computes distances between philosophies.
+import {resultStatusLabel} from './result-overview.js';
 export const SHARE_SCHEMA_VERSION='worldview-share-6';
 const basisSnapshots=new Set(['worldview-share-5',SHARE_SCHEMA_VERSION]);
 const states=new Set(['supported','opposed','leaned_toward','mixed','mixed_context_dependent','insufficient_evidence','not_measured']);
@@ -17,7 +18,7 @@ const rowSources=items=>(items??[]).filter(s=>{try{return new URL(s.url).protoco
  });
 const rowProjection=row=>({id:row.id,domainId:row.domainId,inferenceStatus:row.inferenceStatus,label:cleanText(row.label),
  proposition:row.proposition==null?null:cleanText(row.proposition),scope:cleanText(row.scope),propositionBasis:row.propositionBasis,
- status:row.status,statusLabel:cleanText(row.statusLabel),
+ status:row.status,statusLabel:cleanText(resultStatusLabel(row)),
  explanation:cleanText((row.propositionBasis==='inherited_rule_scope'?'This phrase is an inherited rule scope rather than a separately recorded standalone proposition. ':'')+(row.explanation??'')),
  boundary:cleanText(row.boundary),sources:rowSources(row.sources)});
 const shareableRow=(row,allowInsufficient=false)=>row&&states.has(row.status)&&row.status!=='not_measured'&&

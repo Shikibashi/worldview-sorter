@@ -20,6 +20,23 @@ export function resultOverviewDescription(projection){
  return 'No direct proposition is ready to highlight from this route. Below, you can inspect mixed answers, questions that did not support a direction, and distinctions this route did not measure.';
 }
 
+export function resultStatusLabel(row){
+ if(!row)return '';
+ if(row.status==='not_measured')return 'Not measured here';
+ if(row.status==='insufficient_evidence')return 'Insufficient evidence';
+ if(row.presentationReview?.state==='inherited_rule_scope'){
+  const direction=row.status==='supported'?'answers align with the broader rule':
+   row.status==='opposed'?'answers run against the broader rule':
+   row.status==='leaned_toward'?(row.leanDirection==='oppose'?'one answer points against the broader rule':'one answer points toward the broader rule'):
+   ['mixed','mixed_context_dependent'].includes(row.status)?'answers differ across the broader rule':null;
+  return direction?'Provisional answer pattern: '+direction:row.statusLabel??'';
+ }
+ if(row.presentationReview?.state==='source_claim_unresolved')
+  return 'Provisional interpretation · supporting source link not recorded';
+ if(row.displayState==='model_review_required')return 'Provisional derived interpretation';
+ return row.statusLabel??'';
+}
+
 export function formatResponseCoverage(session){
  const counts={answered:0,no_view:0,not_understood:0,not_applicable:0};
  for(const response of session?.responses??[])if(Object.hasOwn(counts,response.state))counts[response.state]++;
