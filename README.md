@@ -56,6 +56,17 @@ The active generic model covers all twelve domains using reusable, source-tracea
 
 See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access ledger](research/academic/GENERIC_SOURCE_LEDGER.md), and [coverage report](data/generic/coverage-v0.1.json). Existing sample collection and older comparison modules remain compatibility/development tools; the generic layer does not require cognitive review or claim empirical validation.
 
+## Semantic relation exploration
+
+The optional semantic relation layer connects already interpreted propositions through
+source-backed grounding, non-entailment, compatibility, and tension relations. It is
+strictly presentation-only: it cannot alter proposition evidence, affinity comparisons,
+or assign an identity. The initial layer adapts useful relation-graph ideas from the
+public Philoscopia framework without importing its corpus or replacing Worldview Sorter's
+evidence-first model.
+
+See [Philoscopia adoption and inference boundary](docs/PHILOSCOPIA_ADOPTION.md).
+
 ## Public quiz experience
 
 The root opens a [Computer Web-styled field guide](DESIGN.md) with 64/120/249-question depth routes, pause/resume, a labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The public questionnaire is English (en-US) only. Older language drafts remain archived with their historical releases and are not offered to respondents. The old `/apps/web/` development collector is absent from the production artifact.
