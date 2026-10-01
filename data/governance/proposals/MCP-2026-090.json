@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-090",
+  "title": "Promote the scoped total-well-being criterion rule to public Full results",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "research_classification",
+  "changeClass": "reclassification",
+  "status": "approved",
+  "affectedObjects": [
+    {"type":"research_classification","id":"reviewed-NE25-total-welfare-maximization"}
+  ],
+  "currentBehavior": "The NE25 rule and two item revisions are not yet in the active model; no public proposition exists.",
+  "proposedBehavior": "Expose reviewed-NE25-total-welfare-maximization as a direct public proposition only in Full's authored evidence opportunity. Quick and Standard preserve their exact route definitions and report not_measured. The direct rule requires two concordant authored units and remains outside every affinity comparison.",
+  "rationale": "The public claim is justified only by the exact two-question evidence path. A source citation or a related act-consequence, welfarist-value, or promise result cannot substitute for it.",
+  "philosophicalBasis": {
+    "proposition": "In the general rule item and the specified promise case, the respondent treats choosing the available action with the greatest total well-being for everyone affected as decisive for individual-act moral rightness, even when keeping a valid promise favors the lower-well-being action.",
+    "neighboringViews": [
+      "Generic consequence responsiveness",
+      "Act-versus-rule consequentialism",
+      "Promise-based duties",
+      "Welfare as a reason without maximization",
+      "Pluralist or distribution-sensitive consequentialism"
+    ],
+    "nonEntailments": [
+      "Utilitarianism as a complete ethical theory",
+      "Hedonism or one account of welfare",
+      "Welfare-only outcome value",
+      "A complete promise or rights theory",
+      "An affinity, identity, policy, or behavioral conclusion"
+    ],
+    "existingGap": "No public direct rule covers this exact total-well-being promise-conflict criterion. Neighboring public propositions cannot serve as prerequisites or proxy evidence.",
+    "scholarlyDisagreement": "Philosophers dispute the relation between maximizing outcomes and promises, and distinguish act from rule assessment and welfare from other value theories. The promotion is limited to explicit response evidence in the specified item wording."
+  },
+  "sourceClaims": [
+    {
+      "sourceId":"sep-act-consequence-criterion",
+      "relationship":"supports",
+      "claim":"In its maximizing form, act consequentialism makes the best outcome among available acts the criterion of moral rightness; this act-level criterion differs from evaluating general rules."
+    },
+    {
+      "sourceId":"sep-promises-act-rule",
+      "relationship":"supports",
+      "claim":"Act-utilitarian accounts can explain promissory obligations through the welfare effects of promises and their breach, while rule-utilitarian accounts evaluate general promise-keeping practices; a promise conflict is a discriminator rather than a complete theory label."
+    },
+    {
+      "sourceId":"sep-welfarism-outcome-value",
+      "relationship":"context",
+      "claim":"The criterion of rightness is distinct from the theory of outcome value and from total-versus-average aggregation; this release measures only the explicit total-well-being commitment tested in its authored items."
+    }
+  ],
+  "alternatives": [
+    "Leave the rule nonpublic and record only the coverage gap: rejected because the two direct items jointly support a limited, reviewable response proposition.",
+    "Use existing consequence, act/rule, or welfare-value rules as a proxy: rejected because none asks whether total well-being is decisive in the promise conflict.",
+    "Add an affinity mapping: rejected because the evidence does not establish a complete tradition criterion."
+  ],
+  "respondentImpact": "Only Full can assess this direct proposition. Quick and Standard show not_measured. Within Full, agreement between the two direct units may support or oppose; disagreement remains mixed; one directional unit leans; missing or nondirectional evidence is insufficient.",
+  "historicalCompatibility": "No previously released model, route, item wording, catalog, or result changes. The new public membership begins only in model-release-1.18.0; old administrations remain replayable under their pinned manifests.",
+  "tests": {
+    "required": ["positive","negative","mixed","missing","false_positive_neighbor","historical","route_omission","source_claim_trace"],
+    "paths": ["scripts/test-welfare-maximization-release.mjs","scripts/test-model-governance.mjs","scripts/test-quiz-browser.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role":"philosophical","reviewer":"Worldview Sorter AI editorial review","at":"2026-10-01T03:43:30Z","note":"Approved only the response-scoped proposition stated above; no complete ethical theory or tradition inference is permitted."},
+      {"role":"engineering","reviewer":"Worldview Sorter AI engineering review","at":"2026-10-01T03:43:30Z","note":"Verified public membership remains tied to the exact two-item Full-route path and historical manifests remain unchanged."}
+    ]
+  },
+  "release": {
+    "components":["model"],
+    "targetVersion":"model-release-1.18.0",
+    "migration":"No response migration. The public rule begins with the successor model release and is not backfilled into historical results."
+  },
+  "implementationRefs":[
+    "docs/governance/WELFARE_MAXIMIZATION_REVIEW.md",
+    "scripts/test-welfare-maximization-release.mjs"
+  ]
+}

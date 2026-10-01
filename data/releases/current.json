@@ -1,8 +1,8 @@
 {
   "schemaVersion": "model-release-index-1",
   "current": {
-    "version": "model-release-1.17.0",
-    "path": "data/releases/model-release-v1.17.0.json"
+    "version": "model-release-1.18.0",
+    "path": "data/releases/model-release-v1.18.0.json"
   },
   "versions": [
     {
@@ -76,6 +76,10 @@
     {
       "version": "model-release-1.17.0",
       "path": "data/releases/model-release-v1.17.0.json"
+    },
+    {
+      "version": "model-release-1.18.0",
+      "path": "data/releases/model-release-v1.18.0.json"
     }
   ]
 }

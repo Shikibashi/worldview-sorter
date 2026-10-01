@@ -1,5 +1,9 @@
 # Philosophical model changes
 
+## Model release 1.18.0 — scoped total-well-being maximization and English-only release
+
+[Release 1.18.0](../data/releases/model-release-v1.18.0.json) adds `NEI133@1` and revised unreleased draft `NEI125@2` to successor Full, with one direct proposition limited to endorsing total-well-being maximization as an individual-act rightness criterion in a stated promise conflict. Quick and Standard keep their exact item references and leave it `not_measured`; the two units must agree for support or opposition, while disagreement remains mixed. This is not a complete utilitarian theory or an affinity mapping. The bank has 574 candidate items, the model has 146 public direct rules, and the 64/120/247 routes provide 30/56/96 authored directional opportunities respectively; 50 public rules remain unmeasured by Full. The [governed reviews](governance/WELFARE_MAXIMIZATION_REVIEW.md) and [regressions](../scripts/test-welfare-maximization-release.mjs) record the proposition, source limits, route behavior, and false-positive controls. The current release supports canonical English (en-US) only. Untranslated draft wording is retired from its active manifest under [MCP-2026-091](../data/governance/proposals/MCP-2026-091.json); all prior release manifests and wording snapshots remain unchanged for historical replay. No psychometric validation is claimed.
+
 ## Model release 1.0.0 — operational baseline
 
 This manifest pins the existing authored pilot item bank, construct registry, interpretation model, route policy, affinity catalog, source records, wording pins, and result-semantics label. It predates executable-source pinning, so its exact historical engine behavior cannot be proved from the manifest alone. It is not psychometric validation.
