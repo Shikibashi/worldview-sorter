@@ -55,15 +55,16 @@ export function qualifyDirectPresentation(rule){
 function directStatusLabel(result,review){
  if(['not_measured','insufficient_evidence'].includes(result.state))return STATUS[result.state];
  if(review.state==='inherited_rule_scope'){
-  if(result.state==='supported')return 'Your answers align with this inherited rule scope under the authored rule';
-  if(result.state==='opposed')return 'Your answers run against this inherited rule scope under the authored rule';
-  if(result.state==='leaned_toward')return result.leanDirection==='oppose'?
-   'One answer leans against this inherited rule scope':'One answer leans toward this inherited rule scope';
-  return 'Your answers differ across this inherited rule scope under the authored rule';
+  const direction=result.state==='supported'?'answers align with the broader rule':
+   result.state==='opposed'?'answers run against the broader rule':
+   result.state==='leaned_toward'?(result.leanDirection==='oppose'?'one answer points against the broader rule':'one answer points toward the broader rule'):
+   'answers differ across the broader rule';
+  return 'Provisional answer pattern: '+direction;
  }
+ if(review.state==='source_claim_unresolved')return 'Provisional interpretation · supporting source link not recorded';
  const label=result.state==='leaned_toward'&&result.leanDirection==='oppose'?
   'Your answers lean against this':STATUS[result.state];
- return review.state==='source_claim_unresolved'?label+' · supporting source link under review':label;
+ return label;
 }
 export function qualifyDerivedPresentation({rule,model}){
  const direct=new Map(model.commitments.map(candidate=>[candidate.id,candidate]));
@@ -110,9 +111,9 @@ export function buildQuizSummary({model,bank,scalesDoc,session,affinityCatalog=n
     coverageStatus:itemIds.size?'some_responses':'not_sampled_or_no_responses'};
   })}));
  return {schemaVersion:'quiz-summary-1',experienceVersion:EXPERIENCE_VERSION,modelVersion:report.modelVersion,bankVersion:report.bankVersion,
-  title:'Your worldview, in pieces',subtitle:'A map of the answers you gave, not a label you have to wear.',
-  academicNotice:'Informed by philosophy and psychology research. These original questions and interpretation rules are exploratory, not a validated psychological assessment.',
-  coverageNotice:session.instrumentVersion.startsWith('worldview-public')?'Each route samples the core philosophical topics, but not every position. A blank or unresolved area means limited evidence or an unmapped distinction, not a neutral or opposing belief.':'This historical sample was not content-balanced. Missing topics do not indicate neutrality or opposition.',
+  title:'Your worldview map',subtitle:'What your answers support, where they differ, and what this route left open.',
+  academicNotice:'This is an exploratory philosophical quiz, not a validated psychological assessment. Its questions and interpretation rules are authored from philosophical sources; response data have not validated them.',
+  coverageNotice:session.instrumentVersion.startsWith('worldview-public')?'Not measured means this route did not provide a complete set of direct questions. Insufficient evidence means relevant questions were presented, but your responses did not support a direction. A conditional question not presented because of an earlier answer is not evidence either way.':'This historical sample was not content-balanced. Missing topics do not indicate neutrality or opposition.',
   resolvedPatterns:rows.filter(r=>['supported','opposed','mixed','mixed_context_dependent'].includes(r.status)).length,
   answeredItems:session.responses.filter(r=>r.state==='answered').length,
   specialResponses:session.responses.filter(r=>r.state!=='answered').length,
@@ -180,7 +181,7 @@ function buildPilotSummary({model,bank,scalesDoc,session,affinityCatalog,affinit
   return {id:d.id,constructId:d.constructId,domainId:d.domainId,facetId:d.facetId??d.domainId+'-other',
   label:d.label,proposition:d.proposition,propositionBasis:'explicit_derived_proposition',inferenceStatus:'derived',status:d.state,
   displayState:unqualified?'model_review_required':d.state,
-  statusLabel:unqualified?'Derived interpretation awaiting model review':STATUS[d.state],presentationReview:review,
+  statusLabel:unqualified?'Provisional derived interpretation':STATUS[d.state],presentationReview:review,
   leanDirection:null,explanation:unqualified?
    'The frozen authored engine returns '+d.state.replaceAll('_',' ')+', but this derived interpretation has an unresolved prerequisite proposition or missing rule-linked supporting source claims. Its historical state is retained for replay, not presented as an established conclusion.':
    d.directConflicts.length?'A direct answer conflicts with this synthesis, so it is withheld.':
@@ -223,9 +224,9 @@ function buildPilotSummary({model,bank,scalesDoc,session,affinityCatalog,affinit
   name:c.name??c.id,disposition:c.disposition??'unresolved',reason:c.coverageGap??'No approved interpretation rule.'}));
  return {schemaVersion:'quiz-summary-3',experienceVersion:EXPERIENCE_VERSION,modelVersion:report.modelVersion,
   resultSemanticsVersion:report.resultSemanticsVersion,bankVersion:report.bankVersion,instrumentVersion:session.instrumentVersion,
-  title:'Your worldview, in pieces',subtitle:'A map of answer-grounded interpretations, not an assigned identity.',
-  academicNotice:'This is a theoretically authored pilot candidate. Its items, evidence units and thresholds have not been psychometrically validated. Some frozen direct rules retain inherited scopes or lack a rule-linked supporting academic claim; inspect each result before treating it as a philosophical proposition.',
-  coverageNotice:'Not measured means this administration did not offer a complete evidence path. This may reflect the route, a conditional question not reached, or a distinction the instrument cannot yet assess. Insufficient evidence means the opportunity existed but these answers do not justify a direction.',
+  title:'Your worldview map',subtitle:'What your answers support, where they differ, and what this route left open.',
+  academicNotice:'This is an exploratory philosophical quiz, not a validated psychological assessment. Its questions and interpretation rules are authored from philosophical sources; response data have not validated them. Some patterns remain provisional because their exact philosophical claim or supporting source is not yet recorded together.',
+  coverageNotice:'Not measured means this route did not provide a complete set of direct questions. Insufficient evidence means relevant questions were presented, but your responses did not support a direction. A conditional question not presented because of an earlier answer is not evidence either way.',
   answeredItems:session.responses.filter(r=>r.state==='answered').length,specialResponses:session.responses.filter(r=>r.state!=='answered').length,
   resolvedPatterns:rows.filter(r=>r.displayState!=='model_review_required'&&
    ['supported','opposed','mixed_context_dependent'].includes(r.status)).length,

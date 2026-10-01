@@ -128,6 +128,28 @@ try{
  }
  await page.locator('#results').waitFor({state:'visible'});
  await checkAccessibility(page,'Results');
+ check('Results open with an evidence-qualified worldview map',
+  await page.locator('#results-title').innerText()==='Your worldview map'&&
+  /What your answers support, where they differ, and what this route left open/.test(await page.locator('#results .lede').innerText()));
+ check('At-a-glance explanation avoids internal review-gate language',
+  await page.locator('#glance-description').isVisible()&&
+  !/review gate|proposition path|rule-linked claim/i.test(await page.locator('#glance-description').innerText()));
+ check('Response summary separates substantive and no-view responses',
+  /Responses recorded:/.test(await page.locator('#result-counts').innerText())&&
+  /substantive/.test(await page.locator('#result-counts').innerText())&&
+  /no view/.test(await page.locator('#result-counts').innerText()));
+ check('Domain map labels bars as interpretation counts rather than scores',
+  /interpretations assessed/.test(await page.locator('#domain-map').innerText())&&
+  !/%/.test(await page.locator('#domain-map').innerText()));
+ check('Unreviewed patterns are described as provisional rather than as a model-review status',
+  /provisional/i.test(await page.locator('#domain-map').innerText())&&
+  !/under model review|awaiting model review/i.test(await page.locator('#results').innerText()));
+ const unmeasuredScopeNotes=await page.locator('#domain-map .pattern[data-state="not_measured"]').evaluateAll(nodes=>
+  nodes.flatMap(node=>[...node.querySelectorAll(':scope > p.small')].map(note=>note.textContent))
+   .filter(text=>text.includes('broader rule scope')));
+ check('A not-measured inherited rule is never described as an observed pattern',
+  unmeasuredScopeNotes.length>0&&unmeasuredScopeNotes.every(text=>/route did not assess it/.test(text)&&
+   !/provisional pattern/i.test(text)));
  check('All seven formats reached in a real browser',observed.size===7&&rankingTested);
  check('Twelve result panels',await page.locator('#domain-map .domain').count()===12);
  check('Academic qualification visible',/not a validated|not been psychometrically validated/.test(await page.locator('#academic-notice').innerText()));
@@ -430,9 +452,9 @@ try{
   (await sacredRow.innerText()).includes('some moral weight in a community-object tradeoff')&&
   !(await sacredRow.innerText()).includes('Provisional authored scope'));
  check('Directional scope-only direct results use authored-pattern wording',await fullPage.locator('#domain-map .pattern').evaluateAll(nodes=>
-  nodes.filter(node=>node.querySelector(':scope > p.small')?.textContent?.includes('Provisional authored scope')&&
+  nodes.filter(node=>node.querySelector(':scope > p.small')?.textContent?.includes('maps to a broader authored rule, not a separately stated philosophical proposition')&&
    ['supported','opposed','leaned_toward','mixed_context_dependent'].includes(node.dataset.state))
-   .some(node=>node.querySelector(':scope > .state')?.textContent?.includes('inherited rule scope under the authored rule'))));
+   .some(node=>node.querySelector(':scope > .state')?.textContent?.includes('Provisional answer pattern'))));
  await sacredRow.locator('details > summary').first().click();
  check('Sacred-status sources distinguish philosophical claim from context-limited study',
   (await sacredRow.innerText()).includes('Rule-linked source claim (supports):')&&
@@ -444,9 +466,9 @@ try{
   (await sacredRow.innerText()).includes('Your response:')&&
   (await sacredRow.innerText()).includes('Evidence meaning:'));
  check('Directional exact direct propositions flag missing supporting source linkage',await fullPage.locator('#domain-map .pattern').evaluateAll(nodes=>
-  nodes.filter(node=>!node.querySelector(':scope > p.small')?.textContent?.includes('Provisional authored scope')&&
+  nodes.filter(node=>!node.querySelector(':scope > p.small')?.textContent?.includes('broader rule scope')&&
    ['supported','opposed','leaned_toward','mixed_context_dependent'].includes(node.dataset.state))
-   .some(node=>node.querySelector(':scope > .state')?.textContent?.includes('supporting source link under review'))));
+   .some(node=>node.querySelector(':scope > .state')?.textContent?.includes('supporting source link not recorded'))));
  const derivedRow=sacredDomain.locator('.pattern[data-commitment-id="derived-RC11-agentic-divine-outlook"]');
  await derivedRow.locator('details > summary').first().click();
  check('Derived result names its direct propositions and observed states',

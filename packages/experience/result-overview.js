@@ -13,6 +13,24 @@ const stateOf=row=>{
  return row.status==='mixed'?'mixed_context_dependent':row.status;
 };
 
+export function resultOverviewDescription(projection){
+ const hasDirect=[projection?.supported,projection?.opposed,projection?.mixed].some(rows=>rows?.length);
+ if(hasDirect)return 'These are selected interpretations of specific propositions, not an overall philosophy label. Open a topic to see the answers and sources behind each.';
+ if(projection?.provisionalPatterns?.length)return 'Some question patterns remain provisional because the exact proposition and its supporting source are not linked together here. They are not presented as established philosophical positions.';
+ return 'No direct proposition is ready to highlight from this route. Below, you can inspect mixed answers, questions that did not support a direction, and distinctions this route did not measure.';
+}
+
+export function formatResponseCoverage(session){
+ const counts={answered:0,no_view:0,not_understood:0,not_applicable:0};
+ for(const response of session?.responses??[])if(Object.hasOwn(counts,response.state))counts[response.state]++;
+ const parts=[`${counts.answered} substantive`];
+ for(const [state,label] of [['no_view','no view'],['not_understood','not understood'],['not_applicable','not applicable']])
+  if(counts[state])parts.push(`${counts[state]} ${label}`);
+ const conditionalSkips=(session?.presentedItems??[]).filter(item=>item.skippedByBranch).length;
+ if(conditionalSkips)parts.push(`${conditionalSkips} conditional question${conditionalSkips===1?'':'s'} not asked`);
+ return 'Responses recorded: '+parts.join(' · ');
+}
+
 export function buildResultOverview(summary){
  if(summary?.schemaVersion!=='quiz-summary-3')return null;
  const rows=summary.rows??[];

@@ -289,7 +289,7 @@ test('Derived conclusion needs both direct propositions and yields to a conflict
  assert.equal(row.presentationReview.state,'prerequisite_unresolved');
  assert.deepEqual(row.presentationReview.unresolvedPrerequisiteRuleIds,['divine-existence']);
  assert.equal(row.presentationReview.derivedClaimUnlinked,true);
- assert.match(row.statusLabel,/awaiting model review/);
+ assert.match(row.statusLabel,/Provisional derived interpretation/);
  assert.ok(!summary.overview.some(candidate=>candidate.id===row.id));
  assert.throws(()=>createSharePreview(summary,[row.id]),/evidence-backed patterns/);
  const reviewedModel=structuredClone(model),derivedRule=reviewedModel.derivedRules.find(rule=>rule.id===yes.id);
@@ -321,8 +321,8 @@ test('Direct result presentation distinguishes a rule scope from an exact source
  assert.equal(miracle.status,'supported','The frozen engine result remains replayable.');
  assert.equal(miracle.presentationReview.schemaVersion,'direct-presentation-1');
  assert.equal(miracle.presentationReview.state,'source_claim_unresolved');
- assert.match(miracle.statusLabel,/supporting source link under review/);
- assert.match(createSharePreview(summary,[miracle.id]),/supporting source link under review/);
+ assert.match(miracle.statusLabel,/Provisional interpretation.*supporting source link not recorded/);
+ assert.match(createSharePreview(summary,[miracle.id]),/Provisional interpretation.*supporting source link not recorded/);
  assert.match(miracle.explanation,/supporting academic claim has not yet been linked/);
  assert.equal(summary.rows.find(row=>row.id===legacyRule.id).presentationReview.state,'inherited_rule_scope');
  assert.equal(summary.rows.filter(row=>row.inferenceStatus==='direct'&&row.presentationReview.state==='eligible').length,0);
