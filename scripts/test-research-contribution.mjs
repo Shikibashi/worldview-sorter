@@ -271,8 +271,13 @@ try{
   rule.propositionBasis==='inherited_rule_scope').length,inheritedPublicScopes);
  assert.ok(!claimIndex.directRules.some(rule=>rule.id==='audit2-SO09-moral-scope'),
   'A retired rule must not reappear in a new authored research snapshot.');
- assert.ok(claimIndex.directRules.find(rule=>rule.id==='construct-NE15').evidence.some(e=>
-  e.itemId==='NEI102'&&e.itemRevision===1&&e.assignedInFrozenRoute===false));
+ const selfInterestEvidence=claimIndex.directRules.find(rule=>rule.id==='construct-NE15').evidence;
+ assert.ok(selfInterestEvidence.some(e=>e.itemId==='NEI121'&&e.itemRevision===1&&
+  e.assignedInFrozenRoute===true),'The release codebook must include the administered moral-reason discriminator.');
+ assert.ok(selfInterestEvidence.some(e=>e.itemId==='NEI101'&&e.itemRevision===1&&
+  e.assignedInFrozenRoute===false),'The near-parallel historical item remains reconstructible.');
+ assert.ok(!selfInterestEvidence.some(e=>e.itemId==='NEI102'),
+  'Ambiguous reverse evidence must not leak into the successor rule.');
  assert.ok(claimIndex.directRules.find(rule=>rule.id==='construct-EP16').sourceLinks.some(link=>
   link.sourceId==='acad-pragmatism'&&link.claimStatus==='topic_only'));
  assert.equal(claimIndex.derivedRules.length,1);

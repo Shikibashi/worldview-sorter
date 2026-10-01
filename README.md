@@ -4,7 +4,7 @@ Twelve interface domains, not twelve forced bipolar latent traits.
 
 ## Current release
 
-Candidate bank **0.14.0** contains **568 authored candidate items**. The active registry includes **185 permanent entries**. The public model has **144 direct interpretation rules**, of which **94** have a two-direction authored evidence path on Full. One bundled legacy ontology construct is deprecated, not silently redefined.
+Candidate bank **0.15.0** contains **569 authored candidate items**. The active registry includes **185 permanent entries**. The public model has **144 direct interpretation rules**, of which **94** have a two-direction authored evidence path on Full. One bundled legacy ontology construct is deprecated, not silently redefined.
 
 The historical 0.9.0 academic expansion added 30 distinctions and 90 items. The current source ledger adds claim-level links for subsequent reviewed releases. Sources support conceptual distinctions; they do not validate the questionnaire.
 
@@ -80,7 +80,7 @@ All 49 constructs unmapped in `coverage-v0.2.json` now have explicit disposition
 
 ## V1 pilot candidate
 
-The active full-depth route is the 243-item `pilot-candidate-1.10.0` in `model-release-1.13.0`. It keeps the earlier 242- and 240-question full forms and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
+The active full-depth route is the 243-item `pilot-candidate-1.11.0` in `model-release-1.14.0`. It keeps the earlier 242- and 240-question full forms and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
 
 ## Data and optional research contribution
 

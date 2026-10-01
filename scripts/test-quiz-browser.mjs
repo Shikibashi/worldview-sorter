@@ -395,12 +395,15 @@ try{
   !(await fullPage.locator('#overview-section').innerText()).includes('Clearly evidenced commitments'));
  check('Pilot affinity section renders every scoped catalog comparison',await fullPage.locator('#affinity-section').isVisible()&&
   await fullPage.locator('[data-tradition-id]').count()===affinityCatalog.traditions.length);
- const legacyTraditions=['pragmatism','stirnerian-ownness','ethical-egoism',
+ const legacyTraditions=['pragmatism','stirnerian-ownness',
   'philosophical-anarchism','objectivism-rand','ontological-naturalism'];
  check('Scope-only defining mappings cannot present a close doctrinal match',
   (await Promise.all(legacyTraditions.map(async id=>
    (await fullPage.locator(`[data-tradition-id="${id}"] .affinity-state`).textContent())
     .includes('Doctrinal affinity unresolved')))).every(Boolean));
+ check('Narrow ethical-egoism criterion is no longer a scope-only placeholder',
+  !(await fullPage.locator('[data-tradition-id="ethical-egoism"] .affinity-state').textContent())
+   .includes('Doctrinal affinity unresolved'));
  const sacredDomain=fullPage.locator('#domain-map .domain').filter({has:
   fullPage.locator('.pattern[data-commitment-id="ph-sacred-value"]')}).first();
  await sacredDomain.locator('details > summary').first().click();
