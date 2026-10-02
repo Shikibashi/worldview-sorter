@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "build:academic": "node scripts/build-academic-release.mjs && node scripts/build-academic-finalize.mjs && node scripts/build-generic-worldview.mjs && node scripts/build-quiz-experience.mjs && node scripts/build-philosophy-release.mjs && node scripts/build-full-route.mjs && node scripts/build-unmapped-audit.mjs && node scripts/build-unmapped-audit-v2.mjs && node scripts/build-pilot-v1.mjs && node scripts/build-affinity-catalog-v1.mjs && node scripts/build-progressive-depth.mjs && node scripts/build-localization-v1.mjs && node scripts/sync-model-release.mjs",
-    "build:production": "npm run build:academic && node scripts/build-production-site.mjs",
+    "build:production": "npm run build:academic && npm run build:quiz-ui && node scripts/build-production-site.mjs",
+    "build:quiz-ui": "vite build --config apps/quiz-react/vite.config.js",
+    "dev:quiz-ui": "vite --config apps/quiz-react/vite.config.js",
     "test:production:browser": "node scripts/test-production-site-browser.mjs",
     "pretest": "npm run build:academic",
     "prevalidate": "npm run build:academic",
@@ -40,8 +42,6 @@
     "test:generic": "node scripts/test-generic-worldview.mjs && node scripts/test-moral-truth-claim-release.mjs && node scripts/test-quick-source-qualification-release.mjs && node scripts/test-free-will-condition-release.mjs && node scripts/test-revelation-warrant-release.mjs && node scripts/test-self-interest-boundary-release.mjs && node scripts/test-pragmatism-maxim-release.mjs && node scripts/test-sacred-value-scope-release.mjs && node scripts/test-welfarist-outcome-release.mjs && node scripts/test-welfare-maximization-release.mjs && node scripts/test-social-control-production-release.mjs",
     "test:semantic-links": "node scripts/test-semantic-links.mjs",
     "test:reference-profiles": "node scripts/test-reference-profiles.mjs",
-    "reference:readiness": "node scripts/build-reference-readiness-audit.mjs",
-    "test:reference-readiness": "node scripts/test-reference-readiness-audit.mjs",
     "test:independent-authoring": "node scripts/test-independent-authoring-policy.mjs",
     "test:experience": "node scripts/test-quiz-experience.mjs",
     "test:engagement": "node scripts/test-engagement.mjs",
@@ -72,7 +72,7 @@
     "test:ui-smoke": "node scripts/test-ui-smoke.mjs",
     "test:web:syntax": "node --check apps/web/app.js && node --check apps/server/server.mjs && node --check apps/quiz/app.js && node --check apps/quiz/result-overview-view.js && node --check apps/quiz/share-viewer.js && node --check packages/experience/engagement.js",
     "validate": "npm run validate:registry && npm run validate:items && npm run validate:pilot && npm run validate:profiles && npm run lint:items",
-    "test": "npm run verify:release && npm run verify:governance && npm run validate && node scripts/audit-pilot-evidence.mjs --check && node scripts/audit-pilot-evidence.mjs --current --check && node scripts/audit-pilot-evidence.mjs --active --check && npm run test:runtime && npm run test:packet-ordering && npm run test:score && npm run test:collection && npm run test:research && npm run test:production && npm run test:product-metrics && npm run test:consumer-experience && npm run test:dimensions && npm run test:content-reconciliation && npm run test:profiles && npm run test:generic && npm run test:semantic-links && npm run test:reference-profiles && npm run test:reference-readiness && npm run test:independent-authoring && npm run test:philosophy && npm run test:full-route && npm run test:audit && npm run test:pilot && npm run test:so09 && npm run test:affinity && npm run test:experience && npm run test:engagement && npm run test:localization && npm run test:governance && npm run test:beta && npm run test:depth && npm run test:ui-smoke && npm run test:web:syntax",
+    "test": "npm run verify:release && npm run verify:governance && npm run validate && node scripts/audit-pilot-evidence.mjs --check && node scripts/audit-pilot-evidence.mjs --current --check && node scripts/audit-pilot-evidence.mjs --active --check && npm run test:runtime && npm run test:packet-ordering && npm run test:score && npm run test:collection && npm run test:research && npm run test:production && npm run test:product-metrics && npm run test:consumer-experience && npm run test:dimensions && npm run test:content-reconciliation && npm run test:profiles && npm run test:generic && npm run test:semantic-links && npm run test:inference-safety && npm run test:reference-profiles && npm run test:reference-readiness && npm run test:independent-authoring && npm run test:philosophy && npm run test:full-route && npm run test:audit && npm run test:pilot && npm run test:so09 && npm run test:affinity && npm run test:experience && npm run test:engagement && npm run test:localization && npm run test:governance && npm run test:beta && npm run test:depth && npm run test:ui-smoke && npm run test:web:syntax",
     "web:serve": "node apps/server/server.mjs",
     "server:start": "node apps/server/server.mjs",
     "test:philosophy": "node scripts/test-philosophy-release.mjs",
@@ -82,13 +82,24 @@
     "test:so09": "node scripts/test-so09-retirement.mjs",
     "test:easy-ontology": "node scripts/test-easy-ontology-release.mjs",
     "test:federal-content": "node scripts/test-federal-content-release.mjs",
-    "test:affinity": "node scripts/test-affinity-catalog-v1.mjs && node scripts/test-affinity-expansion-review.mjs && node scripts/validate-affinity-question-draft.mjs && npm run test:easy-ontology && npm run test:federal-content && node scripts/test-epistemic-affinity-release.mjs && node scripts/test-act-consequence-content-release.mjs && node scripts/test-rule-consequence-content-release.mjs && node scripts/test-act-rule-affinity-release.mjs"
+    "test:affinity": "node scripts/test-affinity-catalog-v1.mjs && node scripts/test-affinity-expansion-review.mjs && node scripts/validate-affinity-question-draft.mjs && npm run test:easy-ontology && npm run test:federal-content && node scripts/test-epistemic-affinity-release.mjs && node scripts/test-act-consequence-content-release.mjs && node scripts/test-rule-consequence-content-release.mjs && node scripts/test-act-rule-affinity-release.mjs",
+    "test:inference-safety": "node scripts/test-inference-safety.mjs",
+    "reference:readiness": "node scripts/build-reference-readiness-audit.mjs",
+    "test:reference-readiness": "node scripts/test-reference-readiness-audit.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": "^20.19.0 || >=22.12.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
-    "playwright": "^1.63.0"
+    "@vitejs/plugin-react": "6.1.1",
+    "playwright": "^1.63.0",
+    "vite": "8.3.2"
+  },
+  "dependencies": {
+    "@fontsource/poppins": "5.3.0",
+    "@fontsource/sora": "5.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   }
 }
