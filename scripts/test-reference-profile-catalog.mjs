@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { readFile } from 'node:fs/promises';
-import { resolve, dirname } from 'node:path';
+import { cp, mkdir, mkdtemp, readFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   compareReferenceProfile,
@@ -123,10 +124,20 @@ const generatedPaths = [
   'data/reference/current.json',
   'docs/reference-profiles-v1.0.0.md'
 ];
-execFileSync(process.execPath, ['scripts/build-reference-profile-release.mjs'], { cwd: root, stdio: 'ignore' });
-const firstBuild = await Promise.all(generatedPaths.map(readText));
-execFileSync(process.execPath, ['scripts/build-reference-profile-release.mjs'], { cwd: root, stdio: 'ignore' });
-const secondBuild = await Promise.all(generatedPaths.map(readText));
+const buildInIsolatedWorkspace = async () => {
+  const workspace = await mkdtemp(join(tmpdir(), 'worldview-reference-profile-'));
+  try {
+    for (const directory of ['data', 'docs', 'packages', 'scripts']) {
+      await cp(resolve(root, directory), resolve(workspace, directory), { recursive: true });
+    }
+    execFileSync(process.execPath, ['scripts/build-reference-profile-release.mjs'], { cwd: workspace, stdio: 'inherit' });
+    return await Promise.all(generatedPaths.map(path => readFile(resolve(workspace, path), 'utf8')));
+  } finally {
+    await rm(workspace, { recursive: true, force: true });
+  }
+};
+const firstBuild = await buildInIsolatedWorkspace();
+const secondBuild = await buildInIsolatedWorkspace();
 assert.deepEqual(secondBuild, firstBuild, 'Reference-profile release generation must be deterministic.');
 
 const manifest = await readJson('data/reference/manifest-v1.0.0.json');
