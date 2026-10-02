@@ -9,7 +9,8 @@ import {createQuiz,seekQuestion,answerQuestion,nextQuestion} from '../packages/e
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),site=path.join(root,'dist/pages');
 const contentType={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8',
- '.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/plain; charset=utf-8'};
+ '.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/plain; charset=utf-8',
+ '.woff':'font/woff','.woff2':'font/woff2'};
 const server=createServer(async(req,res)=>{
  try{
   const url=new URL(req.url,'http://localhost');
@@ -26,6 +27,7 @@ let checks=0;
 const check=(description,condition)=>{assert.ok(condition,description);checks++;};
 const accessible=async(page,description)=>{
  const report=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
+ if(report.violations.length)console.error(JSON.stringify(report.violations.map(({id,impact,help,nodes})=>({id,impact,help,nodes:nodes.map(node=>({target:node.target,summary:node.failureSummary}))})),null,2));
  check(description+' accessibility',report.violations.length===0);
 };
 async function answerCurrent(page){
@@ -45,12 +47,18 @@ async function runRoute(size,{pause=false,detail=false}={}){
  page.on('request',request=>{if(request.method()==='POST')posts.push(request.url());});
  await page.goto(base+'/');await page.waitForSelector('body[data-ready="true"]');
  check('Domain root loads the public quiz',new URL(page.url()).pathname==='/');
- check('All three current routes are available',await page.locator('.route').count()===3);
- check('Landing previews a clearly fictional result',await page.locator('.example-result').innerText().then(text=>
-  text.includes('Illustrative example with fictional answers')&&/not measured/i.test(text)));
+ check('The landing flow opens the depth chooser',await page.locator('#choose-route').isVisible());
+ check('Landing previews a clearly fictional result',await page.locator('.example-result').innerText().then(text=>{
+  const visible=text.toLowerCase();
+  return visible.includes('illustrative example with fictional answers')&&visible.includes('not measured');
+ }));
  check('Static hosting exposes no research or feedback control',await page.locator('#privacy-controls').isHidden()&&
   await page.locator('#research-section').isHidden()&&await page.locator('#product-feedback').isHidden());
  if(detail)await accessible(page,'Production landing');
+ await page.locator('#choose-route').click();
+ await page.locator('#route-chooser').waitFor({state:'visible'});
+ check('The 12Axes-style route screen exposes the three active WVS depths',await page.locator('.route[data-size]').count()===3);
+ if(detail)await accessible(page,'Production route chooser');
  await page.locator(`.route[data-size="${size}"]`).click();
  await page.locator('#quiz').waitFor({state:'visible'});await page.locator('#auto').uncheck();
  check('Route selection starts at its assigned length',await page.locator('#progress-caption').innerText().then(text=>text.includes(String(size))));
@@ -100,15 +108,27 @@ async function runRoute(size,{pause=false,detail=false}={}){
    .evaluateAll(nodes=>nodes.some(node=>node.dataset.state==='supported')));
  check('Twelve worldview domains remain navigable',await page.locator('#domain-map .domain').count()===12);
  check('Results open with an evidence-qualified overview',await page.locator('#result-at-a-glance').isVisible());
+ check('Domain evidence markers have a visible key for every result state',
+  await page.locator('#domain-map-legend .wvs-domain-legend-item').count()===5&&
+  await page.locator('#domain-map-legend').innerText().then(text=>
+   ['Supported','Opposed','Mixed','Insufficient evidence','Not measured'].every(label=>text.includes(label))));
  check('Every domain has a categorical evidence strip',await page.locator('#domain-map .domain-strip').count()===12);
  check('Results do not present an ideology match percentage',!(await page.locator('#results').innerText()).match(/\d+% (?:match|compatible)/i));
  check('No automatic response submission occurs',posts.length===0);
  if(detail){
   await accessible(page,'Production results');
   check('Result section navigation remains available',await page.locator('#result-nav').evaluate(node=>getComputedStyle(node).position==='sticky'));
+  await page.locator('.e-nav-links a[href="#domains-title"]').click();
+  await page.waitForTimeout(200);
+  check('Top navigation opens the domain map with its evidence key in view',await page.evaluate(()=>{
+   const title=document.querySelector('#domains-title'),key=document.querySelector('#domain-map-legend'),nav=document.querySelector('.e-nav');
+   if(!title||!key||!nav||location.hash!=='#domains-title')return false;
+   const heading=title.getBoundingClientRect(),legend=key.getBoundingClientRect(),header=nav.getBoundingClientRect();
+   return heading.top>=header.bottom&&legend.top>=header.bottom&&legend.bottom<=innerHeight;
+  }));
   await page.locator('#result-nav a[href="#domains-title"]').click();
   check('Result navigation reaches the domain map',await page.evaluate(()=>location.hash==='#domains-title'));
-  const domain=page.locator('#domain-map .domain details').first();await domain.locator('summary').first().click();
+  const domain=page.locator('#domain-map details.domain').first();await domain.locator(':scope > summary').click();
   const source=domain.locator('.pattern details').first();if(await source.count()){
    await source.locator(':scope > summary').click();
    check('Source navigation retains secure citation links',await source.locator('a[href^="https:"]').count()>0);
@@ -154,6 +174,8 @@ try{
  check('Deployment metadata pins a commit and model release',/^[0-9a-f]{40}$/.test(deployment.gitCommit)&&deployment.modelReleaseVersion);
  const keyboardContext=await browser.newContext(),keyboardPage=await keyboardContext.newPage();
  await keyboardPage.goto(base+'/');await keyboardPage.waitForSelector('body[data-ready="true"]');
+ await keyboardPage.locator('#choose-route').focus();await keyboardPage.keyboard.press('Enter');
+ await keyboardPage.locator('#route-chooser').waitFor({state:'visible'});
  await keyboardPage.locator('.route[data-size="64"]').focus();await keyboardPage.keyboard.press('Enter');
  await keyboardPage.locator('#quiz').waitFor({state:'visible'});
  await keyboardPage.locator('#auto').focus();await keyboardPage.keyboard.press('Space');

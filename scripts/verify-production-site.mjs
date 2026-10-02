@@ -18,11 +18,13 @@ async function inventory(dir){
  return output;
 }
 const files=await inventory(site),fileSet=new Set(files);
-for(const file of ['index.html','apps/quiz/app.js','apps/quiz/share.html','apps/quiz/style.css',
+for(const file of ['index.html','apps/quiz/share-viewer.js','apps/quiz/share.html','apps/quiz/style.css',
  'data/current.json','data/response-scales.json','deployment.json','.nojekyll'])
  assert.ok(fileSet.has(file),'Missing public asset: '+file);
+assert.ok(files.some(file=>/^assets\/[A-Za-z0-9_-]+\.js$/.test(file)),'Missing the bundled public application module.');
+assert.ok(files.some(file=>/^assets\/[A-Za-z0-9_-]+\.css$/.test(file)),'Missing the bundled public application stylesheet.');
 for(const file of files){
- assert.ok(file==='.nojekyll'||/^(?:index\.html|deployment\.json|apps\/quiz\/|packages\/(?:runtime|experience|worldview|philosophy|localization|beta)\/|data\/(?:current\.json|response-scales\.json|items\/|pilots\/|generic\/|philosophy\/|experience\/|affinities\/|localization\/|releases\/)|docs\/)/.test(file),
+ assert.ok(file==='.nojekyll'||/^(?:index\.html|deployment\.json|assets\/[A-Za-z0-9_-]+\.(?:js|css|woff2|woff)|apps\/quiz\/|packages\/(?:runtime|experience|worldview|philosophy|localization|beta)\/|data\/(?:current\.json|response-scales\.json|items\/|pilots\/|generic\/|philosophy\/|experience\/|affinities\/|localization\/|releases\/)|docs\/)/.test(file),
   'Unapproved Pages path: '+file);
  assert.ok(!/(?:^|\/)(?:apps\/server|apps\/web|\.data|research|governance|scripts|examples|node_modules|artifacts)(?:\/|$)/.test(file),
   'Private or development path in Pages artifact: '+file);
@@ -40,11 +42,14 @@ for(const value of Object.values(current))for(const ref of Array.isArray(value)?
  if(ref&&typeof ref==='object'&&typeof ref.path==='string')assert.ok(fileSet.has(ref.path),'Missing current release data: '+ref.path);
 for(const ref of [...experience.formPolicies,...(experience.modelPolicies??[])])
  assert.ok(fileSet.has(ref.path),'Missing historical route or model: '+ref.path);
-const rootHtml=await read('index.html'),quizHtml=await read('apps/quiz/index.html');
-assert.ok(rootHtml.includes('src="./apps/quiz/app.js"')&&rootHtml.includes('Worldview Sorter'),'Root does not open quiz.');
+const rootHtml=await read('index.html');
+assert.ok(rootHtml.includes('<div id="root"></div>')&&
+ /<script[^>]+type="module"[^>]+src="\.\/assets\/[^\"]+\.js"/.test(rootHtml)&&
+ rootHtml.includes('Worldview Sorter'),'Root does not open the bundled quiz.');
 assert.ok(rootHtml.includes(`name="worldview-static-release" content="${current.modelRelease.version}"`),'Static release marker missing.');
-assert.ok(quizHtml.includes('name="worldview-static-release"'),'Nested quiz must share static hosting policy.');
-assert.ok(!rootHtml.includes('http://')&&!quizHtml.includes('http://'),'Insecure production link.');
+assert.ok(!fileSet.has('apps/quiz/index.html')&&!fileSet.has('apps/quiz/app.js'),
+ 'The legacy public application entry leaked into Pages.');
+assert.ok(!rootHtml.includes('http://'),'Insecure production link.');
 const deployment=await json('deployment.json');
 assert.equal(deployment.modelReleaseVersion,current.modelRelease.version);
 assert.equal(deployment.worldviewModelVersion,current.worldviewModel.version);
