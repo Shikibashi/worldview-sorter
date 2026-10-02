@@ -76,7 +76,7 @@ const currentPointer = {
 
 const activeSourceMap = new Map([...(model.sources ?? []).map(source => [source.id, source]), ...catalog.sources.map(source => [source.id, source])]);
 const reportLines = [
-  '# Reference-profile catalog 1.0.0',
+  `# Reference-profile catalog ${catalog.catalogVersion.replace('reference-profile-catalog-', '')}`,
   '',
   '> Internal comparison material only. These entries are not public result cards, identity assignments, empirical classifications, or complete reconstructions of philosophers and traditions.',
   '',
