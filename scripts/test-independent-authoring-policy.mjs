@@ -24,11 +24,17 @@ const inspect=(value,path)=>{
   }
 };
 
-const files=(await readdir(new URL('data/reference/',root))).filter(name=>name.endsWith('.json')&&name!=='authoring-policy-v1.json');
+const files=(await readdir(new URL('data/reference/',root))).filter(name=>/^reference-profiles-v.*\.json$/.test(name));
+assert.ok(files.length>0,'Expected at least one independently authored reference-profile catalog.');
 for(const name of files){
-  const profile=await read('data/reference/'+name);
-  assert.equal(profile.origin,'independent_authoring',name+' must declare independent authoring.');
-  inspect(profile,'data/reference/'+name);
+  const catalog=await read('data/reference/'+name);
+  assert.equal(catalog.origin,'independent_authoring',name+' must declare independent authoring.');
+  assert.ok(Array.isArray(catalog.profiles),name+' must contain profile records.');
+  for(const profile of catalog.profiles){
+    assert.equal(profile.origin,'independent_authoring',profile.id+' must declare independent authoring.');
+    inspect(profile,name+'#'+profile.id);
+  }
+  inspect(catalog.sources,name+'#sources');
 }
 
 console.log('Independent authoring policy: source boundary, no classifier fields, and profile-origin checks passed.');

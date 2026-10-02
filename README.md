@@ -56,6 +56,14 @@ The active generic model covers all twelve domains using reusable, source-tracea
 
 See [the generic source/item matrix](docs/GENERIC_WORLDVIEW.md), [source access ledger](research/academic/GENERIC_SOURCE_LEDGER.md), and [coverage report](data/generic/coverage-v0.1.json). Existing sample collection and older comparison modules remain compatibility/development tools; the generic layer does not require cognitive review or claim empirical validation.
 
+## Independent semantic exploration and reference profiles
+
+Worldview Sorter can attach source-backed explanatory links to already interpreted propositions and can compare those propositions with independently authored philosopher or tradition reference profiles. These layers cannot change respondent evidence, produce a nearest-profile winner, assign an identity, or emit match percentages.
+
+Third-party philosopher/profile datasets are not used as content sources. New reference content is authored from primary texts and reviewed scholarship under the same claim-level provenance rules used elsewhere in the project. The current reference-profile catalog is an internal readiness/authoring artifact and is not part of the public result experience.
+
+See [independent reimplementation and reference-corpus policy](docs/INDEPENDENT_REIMPLEMENTATION.md) and [reference-profile governance](docs/REFERENCE_PROFILES.md).
+
 ## Public quiz experience
 
 The root opens the React/Vite application built on the user-owned [12Axes front-end foundation](docs/12AXES_FOUNDATION_ADOPTION.md), with the active 64/120/249-question routes, pause/resume, a clearly labeled example result, and source-linked summaries. Results open with an evidence-qualified overview, a categorical twelve-topic map, and section navigation. It is exploratory, not a validated assessment. Answers stay in the browser unless the user exports or deliberately shares them. The static Pages site has no research-upload endpoint. The old `/apps/web/` development collector is absent from the production artifact.

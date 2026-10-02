@@ -28,6 +28,8 @@ At minimum, production data must track:
 - `evidenceThresholds.version` — editorial evidence-unit requirements, not calibrated cutoffs.
 - `catalogVersion` and `affinitySemanticsVersion` — exact sourced doctrine, proposition mapping, and qualitative comparison semantics; neither is a respondent identity model.
 
+Reference-profile comparison content is separately versioned by `profileModelVersion`. Each immutable catalog pins the exact worldview-model and progressive-route files it uses in a generated manifest. Route-aware comparisons require the administration's route ID; omitted propositions remain `not_measured`. See [reference-profile authoring and release rules](REFERENCE_PROFILES.md). A new model or route release requires a new profile catalog version before those profiles can be compared against it; old catalog files and manifests remain unchanged.
+
 These versions must not be collapsed into one application version.
 
 An opted-in research contribution additionally records `consentVersion` and a separate `research-package-1.1.0` export format. The served consent terms are hash-pinned in `data/research/consent-v1.manifest.json`; a changed disclosure needs a new version, not an edit to historical terms. The package includes the exact bank, route, model, catalog, consent, and source snapshots needed to review the historical context. Current exports accept the active frozen pilot tuple; supporting a future instrument tuple requires a new explicit exporter/version path rather than silently remapping old responses.
