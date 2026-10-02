@@ -147,9 +147,9 @@ See the [pilot-era historical contract](PILOT_V1.md), [progressive route contrac
 await writeFile(new URL('docs/FULL_ROUTE.md',new URL('../',import.meta.url)),fullGuide);
 const readmePath=new URL('README.md',new URL('../',import.meta.url));
 let readme=await readFile(readmePath,'utf8');
-const oldComparison='The nine reference comparisons consume exact item IDs, revisions and raw response states.';
-const newComparison=`The nine earlier reference comparisons remain historical prototypes. The current public result uses ${activeAffinity.traditions.length} versioned philosophical comparisons over interpreted propositions.`;
-const successorComparison=/The nine earlier reference comparisons remain historical prototypes\. The current public result uses (?:six|[0-9]+) versioned philosophical comparisons over interpreted propositions\./;
+const oldComparison='Reference comparisons consume exact item IDs, revisions and raw response states.';
+const newComparison=`The active public result uses ${activeAffinity.traditions.length} versioned philosophical comparisons over interpreted propositions.`;
+const successorComparison=/The active public result uses [0-9]+ versioned philosophical comparisons over interpreted propositions\./;
 if(!readme.includes(oldComparison)&&!successorComparison.test(readme))throw Error('README comparison summary changed; update the release documentation sync.');
 readme=readme.replace(oldComparison,newComparison).replace(successorComparison,newComparison);
 readme=readme.replace('The comparisons and engineering scores remain **unvalidated and non-interpretable**.',

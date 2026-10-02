@@ -1,10 +1,10 @@
 # 12Axes interaction-parity reference
 
-> Historical milestone. This document describes the earlier 80/120/160 collector contract. The current public quiz uses 64/120/240 routes and does not automatically submit answers. The active contract is checked by `npm run test:consumer-experience` and the production browser suite.
+> Historical milestone. This document describes an earlier collector-era interaction audit. The current public quiz uses 64/120/249 routes and does not automatically submit answers. The active implementation is built on the user's own 12Axes fork; see [the foundation adoption record](12AXES_FOUNDATION_ADOPTION.md). Current behavior is checked by the production browser suite.
 
 This document records the earlier **interaction** milestone. A later [question-content gap review](DIMENSION_QUESTION_GAPS.md) compares the twelve topics visible in user-supplied result screenshots with the current Worldview Sorter bank and routes. That review proposes original questions without adopting 12Axes scoring or identity claims.
 
-The browser runner intentionally borrows the interaction pattern of modern 12Axes while not copying its political dimensions, scoring model, or source code.
+This audit originally referenced RomanCypherpunk/12axes for interaction patterns only. It predates the direct integration of the user's Shikibashi/12axes fork and does not describe the current app's code provenance.
 
 Reference implementation reviewed:
 
@@ -48,7 +48,7 @@ Worldview Sorter must additionally support:
 
 The project therefore targets **interaction parity**, not scoring or ontology parity.
 
-No code from RomanCypherpunk/12axes is copied because that repository is source-visible but proprietary.
+The current UI foundation is adapted from the user's Shikibashi/12axes fork, with the copyright holder's direction recorded in [the adoption note](12AXES_FOUNDATION_ADOPTION.md). This historical audit's statement about the separate RomanCypherpunk repository remains limited to that earlier review.
 
 ## Automated parity tests
 
