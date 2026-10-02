@@ -4,11 +4,21 @@ Reference profiles are an internal, claim-level exploration format. They compare
 
 ## Current release
 
-The current catalog pointer is [`data/reference/current.json`](../data/reference/current.json). It identifies an immutable, versioned catalog, a generated release manifest, and a generated human-readable report. The manifest pins the exact active worldview-model and progressive-route file hashes used for each profile. The catalog's profile-only source ledger is independently versioned and included in the catalog hash; none of these sources are added to the response-inference model because these profiles do not participate in response scoring. The current first batch is documented in [`reference-profiles-v1.0.0.md`](reference-profiles-v1.0.0.md).
+The current catalog pointer is [`data/reference/current.json`](../data/reference/current.json). It identifies an immutable, versioned catalog, a generated release manifest, and a generated human-readable report. The manifest pins the exact active worldview-model and progressive-route file hashes used for each profile. The catalog's profile-only source ledger is independently versioned and included in the catalog hash; none of these sources are added to the response-inference model because these profiles do not participate in response scoring. The current catalog is documented in [`reference-profiles-v1.1.0.md`](reference-profiles-v1.1.0.md). The immutable 1.0.0 catalog remains available for historical review.
 
-The first catalog is intentionally internal-only. It contains five narrowly scoped comparisons: the general content-independent political-obligation criterion; the pragmatic maxim; two selected Peircean commitments; an external-world experiential-warrant criterion; and the direct maximizing act-consequence criterion. None is a complete reconstruction of a philosopher or tradition.
+The catalog is intentionally internal-only. Version 1.1.0 retains the five original scoped comparisons and adds two more narrow comparisons: Ethical Egoism's exclusive moral self-priority criterion and Rand's life-grounded objective-ethics criterion. It does not add a Mill profile, because the active act-consequence and total-welfare propositions remain only partial mappings of Mill's contested utility criterion. None of these profiles is a complete reconstruction of a philosopher or tradition.
 
 The active public model and affinity system remain authoritative for response interpretation. Profile claims may reference only exact active model proposition IDs. The route-aware comparison API requires the administered route: when that route did not offer a proposition, the claim is `not_measured` even if another route's report contains a state. An available proposition with missing or skipped answers remains governed by the model's own missingness state.
+
+## Partial-candidate audit disposition
+
+The 1.1.0 review starts from the three `PARTIAL_PROFILE_ONLY` candidates in the pinned readiness audit and narrows rather than stretches them:
+
+- Ethical Egoism contributes only the exact `construct-NE15` comparison on Full. The standard maximizing if-and-only-if account of moral rightness remains unmeasured.
+- Ayn Rand contributes only the exact `construct-ME09` life-grounded ethics comparison on Full. The current `construct-NE15`, `construct-EP20`, and `ph-rights-constraints` overlaps remain too broad to stand in for Rand's rational-self-interest, epistemological, or rights doctrines.
+- John Stuart Mill remains without a reference profile. `reviewed-NE22-act-consequence-criterion` and `reviewed-NE25-total-welfare-maximization` are useful neighboring propositions, but treating either as an exact Mill commitment would resolve interpretive disputes that the accepted sources explicitly leave open.
+
+No item, active proposition, route, affinity, public result, or React/Vite behavior changes in this release. The detailed audit is recorded in [`reference-profile-partial-audit-v1.md`](reference-profile-partial-audit-v1.md).
 
 ## Source and inference boundaries
 
