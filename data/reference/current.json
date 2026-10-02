@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "catalogVersion": "reference-profile-catalog-1.0.0",
-  "profileModelVersion": "reference-profile-model-1.0.0",
-  "sourceLedgerVersion": "reference-profile-sources-1.0.0",
-  "catalogPath": "data/reference/reference-profiles-v1.0.0.json",
-  "manifestPath": "data/reference/manifest-v1.0.0.json",
-  "reportPath": "docs/reference-profiles-v1.0.0.md"
+  "catalogVersion": "reference-profile-catalog-1.1.0",
+  "profileModelVersion": "reference-profile-model-1.1.0",
+  "sourceLedgerVersion": "reference-profile-sources-1.1.0",
+  "catalogPath": "data/reference/reference-profiles-v1.1.0.json",
+  "manifestPath": "data/reference/manifest-v1.1.0.json",
+  "reportPath": "docs/reference-profiles-v1.1.0.md"
 }
