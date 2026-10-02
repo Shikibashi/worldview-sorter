@@ -33,6 +33,7 @@ const assertRepoPath = path => {
 
 const index = await readJson('data/reference/catalog-index.json');
 if (index.schemaVersion !== '1.0.0') throw new Error('Unsupported reference profile catalog index.');
+assertRepoPath(index.catalogPath);
 const catalogText = await readText(index.catalogPath);
 const catalog = JSON.parse(catalogText);
 if (catalog.catalogVersion !== index.currentCatalogVersion) throw new Error('Catalog index version does not match the selected catalog.');
@@ -114,6 +115,7 @@ for (const profile of catalog.profiles) {
   reportLines.push('');
 }
 
+assertRepoPath(index.manifestPath);
 await writeJson(index.manifestPath, manifest);
 await writeMutableJson('data/reference/current.json', currentPointer);
 const reportAbsolute = assertRepoPath(index.reportPath);
