@@ -650,13 +650,13 @@
             {
               "sourceId": "primary-rand-objectivist-ethics",
               "relationship": "supports_profile_claim",
-              "locator": "Sections 2–4",
+              "locator": "Passages on value and life as the standard, including the statement of man's life as the Objectivist standard of value (The Virtue of Selfishness, pp. 16–27)",
               "claim": "Rand presents life as the standard of value and argues that objective ethics is grounded in the requirements of human life rather than in arbitrary preference."
             },
             {
               "sourceId": "acad-rand",
               "relationship": "supports_profile_claim",
-              "locator": "Section 4",
+              "locator": "Section 2.1",
               "claim": "The scholarly overview describes Rand's ethical theory as grounding value in the requirements of human life while situating that claim inside a larger system."
             }
           ],
