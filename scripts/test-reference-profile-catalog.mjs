@@ -15,20 +15,75 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const readText = path => readFile(resolve(root, path), 'utf8');
 const readJson = async path => JSON.parse(await readText(path));
 const current = await readJson('data/current.json');
+const referenceCurrent = await readJson('data/reference/current.json');
+const catalogIndex = await readJson('data/reference/catalog-index.json');
 const model = await readJson(current.worldviewModel.path);
 const routes = await readJson(current.progressiveDepth.path);
-const catalog = await readJson('data/reference/reference-profiles-v1.0.0.json');
+const catalog = await readJson(referenceCurrent.catalogPath);
+const historicalCatalog = await readJson('data/reference/reference-profiles-v1.0.0.json');
 
 assert.equal(validateReferenceCatalog({ catalog, model, routes }), true);
-assert.equal(catalog.profiles.length, 5);
+assert.equal(catalog.profiles.length, 7);
 assert.equal(catalog.publicationStatus, 'internal_only');
-assert.equal(catalog.profileModelVersion, 'reference-profile-model-1.0.0');
-assert.equal(catalog.sourceLedgerVersion, 'reference-profile-sources-1.0.0');
+assert.equal(catalog.profileModelVersion, 'reference-profile-model-1.1.0');
+assert.equal(catalog.sourceLedgerVersion, 'reference-profile-sources-1.1.0');
+assert.equal(referenceCurrent.catalogVersion, catalog.catalogVersion);
+assert.equal(catalogIndex.currentCatalogVersion, catalog.catalogVersion);
+assert.equal(catalogIndex.catalogPath, referenceCurrent.catalogPath);
 assert.equal(current.worldviewModel.version, catalog.modelVersion);
 assert.equal(current.progressiveDepth.version, catalog.routePolicyVersion);
+assert.equal(historicalCatalog.catalogVersion, 'reference-profile-catalog-1.0.0');
+assert.equal(historicalCatalog.profiles.length, 5, 'The released 1.0.0 reference catalog must remain unchanged.');
 assert.ok(!Object.hasOwn(current, 'referenceProfiles'), 'Reference profiles must not be added to the public production pointer.');
 
 const profiles = new Map(catalog.profiles.map(profile => [profile.id, profile]));
+const egoismProfile = profiles.get('ethical-egoism-exclusive-self-priority-scoped');
+assert.ok(egoismProfile, 'The scoped ethical-egoism criterion must be present.');
+assert.deepEqual(egoismProfile.claims.map(claim => claim.propositionId), ['construct-NE15']);
+assert.deepEqual(egoismProfile.claims[0].routeAvailability, ['full']);
+assert.equal(egoismProfile.claims[0].mappingStatus, 'ROUTE_LIMITED');
+assert.ok(egoismProfile.unmeasuredAreas.some(value => /maximizing if-and-only-if/i.test(value)),
+  'The standard maximizing ethical-egoism criterion must remain explicitly unmeasured.');
+
+const randProfile = profiles.get('ayn-rand-life-grounded-ethics-scoped');
+assert.ok(randProfile, 'The scoped Rand life-grounded ethics criterion must be present.');
+assert.deepEqual(randProfile.claims.map(claim => claim.propositionId), ['construct-ME09']);
+assert.deepEqual(randProfile.claims[0].routeAvailability, ['full']);
+assert.equal(randProfile.claims[0].mappingStatus, 'ROUTE_LIMITED');
+for (const unresolved of ['rational self-interest', 'epistemology', 'rights']) {
+  assert.ok(randProfile.unmeasuredAreas.some(value => value.toLowerCase().includes(unresolved)),
+    `Rand's unresolved ${unresolved} distinction must remain unmeasured.`);
+}
+assert.ok(![...profiles.keys()].some(id => id.includes('mill')),
+  'Mill must not be promoted while the active propositions remain only partial mappings of his utility criterion.');
+
+const scopedFullReport = {
+  modelVersion: model.modelVersion,
+  routePolicyVersion: routes.policyVersion,
+  routeId: 'full',
+  commitments: [
+    { commitmentId: 'construct-NE15', state: 'supported' },
+    { commitmentId: 'construct-ME09', state: 'supported' }
+  ],
+  derived: []
+};
+for (const candidate of [egoismProfile, randProfile]) {
+  const fullScopedComparison = compareReferenceProfile({
+    profile: candidate, model, routes, routeId: 'full', report: scopedFullReport, referenceSources: catalog.sources
+  });
+  assert.equal(fullScopedComparison.claims[0].relation, 'overlap');
+  const standardScopedComparison = compareReferenceProfile({
+    profile: candidate,
+    model,
+    routes,
+    routeId: 'standard',
+    report: { ...scopedFullReport, routeId: 'standard' },
+    referenceSources: catalog.sources
+  });
+  assert.equal(standardScopedComparison.claims[0].relation, 'not_measured',
+    `${candidate.id}: Standard-route omission must remain not measured.`);
+}
+
 const profile = profiles.get('charles-s-peirce-scoped-commitments');
 const maximClaim = profile.claims.find(claim => claim.propositionId === 'construct-EP16');
 const fallibilismClaim = profile.claims.find(claim => claim.propositionId === 'construct-EP15');
@@ -120,9 +175,9 @@ const inspectOutput = value => {
 inspectOutput(fullComparison);
 
 const generatedPaths = [
-  'data/reference/manifest-v1.0.0.json',
+  referenceCurrent.manifestPath,
   'data/reference/current.json',
-  'docs/reference-profiles-v1.0.0.md'
+  referenceCurrent.reportPath
 ];
 const buildInIsolatedWorkspace = async () => {
   const workspace = await mkdtemp(join(tmpdir(), 'worldview-reference-profile-'));
@@ -140,7 +195,7 @@ const firstBuild = await buildInIsolatedWorkspace();
 const secondBuild = await buildInIsolatedWorkspace();
 assert.deepEqual(secondBuild, firstBuild, 'Reference-profile release generation must be deterministic.');
 
-const manifest = await readJson('data/reference/manifest-v1.0.0.json');
+const manifest = await readJson(referenceCurrent.manifestPath);
 assert.equal(manifest.components.worldviewModel.version, model.modelVersion);
 assert.equal(manifest.components.progressiveRoutes.version, routes.policyVersion);
 assert.deepEqual(manifest.profileIds, catalog.profiles.map(candidate => candidate.id));
