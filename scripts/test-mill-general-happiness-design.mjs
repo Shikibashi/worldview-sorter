@@ -5,34 +5,45 @@ import {validateProposal} from '../packages/governance/index.js';
 const root=new URL('../',import.meta.url);
 const read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
 
-const [current,model,bank,routes,referenceCurrent,proposal]=await Promise.all([
-  read('data/current.json'),
-  read('data/generic/model-v1.16-pilot.json'),
-  read('data/items/candidate-v0.19.json'),
-  read('data/experience/progressive-depth-v2.7.json'),
+const current = await read('data/current.json');
+const [model,bank,routes,referenceCurrent,proposal]=await Promise.all([
+  read(current.worldviewModel.path),
+  read(current.candidateBank.path),
+  read(current.progressiveDepth.path),
   read('data/reference/current.json'),
   read('data/governance/proposals/MCP-2026-094.json')
 ]);
 const catalog=await read(referenceCurrent.catalogPath);
 
-assert.equal(current.modelRelease.version,'model-release-1.19.0');
-assert.equal(current.worldviewModel.version,'generic-1.16.0-pilot');
-assert.equal(current.candidateBank.version,'0.19.0');
-assert.equal(current.progressiveDepth.version,'progressive-depth-2.7.0');
-assert.equal(referenceCurrent.catalogVersion,'reference-profile-catalog-1.1.0');
+if (current.modelRelease.version === 'model-release-1.20.0') {
+  assert.equal(current.worldviewModel.version, 'generic-1.17.0-pilot');
+  assert.equal(current.candidateBank.version, '0.20.0');
+  assert.equal(current.progressiveDepth.version, 'progressive-depth-2.8.0');
+} else {
+  assert.equal(current.modelRelease.version, 'model-release-1.19.0');
+  assert.equal(current.worldviewModel.version, 'generic-1.16.0-pilot');
+  assert.equal(current.candidateBank.version, '0.19.0');
+  assert.equal(current.progressiveDepth.version, 'progressive-depth-2.7.0');
+}
+assert.equal(referenceCurrent.catalogVersion, current.modelRelease.version === 'model-release-1.20.0' ? 'reference-profile-catalog-1.2.0' : 'reference-profile-catalog-1.1.0');
 
 assert.equal(validateProposal(proposal),proposal);
-assert.equal(proposal.status,'under_review');
-assert.equal(proposal.philosophicalBasis.proposition,
-  'General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.');
-
 const proposedRule='reviewed-NE26-general-happiness-ultimate-standard';
-assert.ok(!model.commitments.some(row=>row.id===proposedRule),
-  'The design must not silently activate NE26 before its release gate is satisfied.');
-assert.ok(!bank.items.some(row=>row.id==='NEI134'||row.id==='NEI135'),
-  'Proposed evidence units must remain absent from the active 0.19.0 bank.');
-assert.ok(!model.commitments.some(row=>row.constructId==='NE26'),
-  'No active proposition may claim the reserved NE26 construct before release.');
+if (current.modelRelease.version === 'model-release-1.20.0') {
+  assert.equal(proposal.status, 'approved');
+  assert.ok(model.commitments.some(row => row.id === proposedRule),
+    'Model release 1.20.0 activates NE26 after release gate is satisfied.');
+  assert.ok(bank.items.some(row => row.id === 'NEI134') && bank.items.some(row => row.id === 'NEI135'),
+    'Active bank 0.20.0 contains NEI134 and NEI135.');
+} else {
+  assert.equal(proposal.status, 'under_review');
+  assert.ok(!model.commitments.some(row=>row.id===proposedRule),
+    'The design must not silently activate NE26 before its release gate is satisfied.');
+  assert.ok(!bank.items.some(row=>row.id==='NEI134'||row.id==='NEI135'),
+    'Proposed evidence units must remain absent from the active 0.19.0 bank.');
+  assert.ok(!model.commitments.some(row=>row.constructId==='NE26'),
+    'No active proposition may claim the reserved NE26 construct before release.');
+}
 
 for(const id of [
   'reviewed-NE22-act-consequence-criterion',
@@ -45,8 +56,13 @@ assert.ok(!catalog.profiles.some(row=>/mill/i.test(row.id)||/john stuart mill/i.
   'Mill must remain unprofiled while NE26 is only a design.');
 
 for(const route of routes.routes){
-  assert.ok(!route.itemRefs.some(ref=>ref.itemId==='NEI134'||ref.itemId==='NEI135'),
-    'No current route may administer proposed NE26 evidence.');
+  if (route.id === 'full' && current.modelRelease.version === 'model-release-1.20.0') {
+    assert.equal(route.size, 251);
+    assert.ok(route.itemRefs.some(ref=>ref.itemId==='NEI134'||ref.itemId==='NEI135'));
+  } else {
+    assert.ok(!route.itemRefs.some(ref=>ref.itemId==='NEI134'||ref.itemId==='NEI135'),
+      'No current route may administer proposed NE26 evidence.');
+  }
 }
 
 const required=new Set(proposal.tests.required);

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-095",
+  "title": "Promote the interpretation-neutral general-happiness ultimate-standard proposition to public Full results",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "research_classification",
+  "changeClass": "reclassification",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "research_classification",
+      "id": "reviewed-NE26-general-happiness-ultimate-standard"
+    }
+  ],
+  "currentBehavior": "The new NE26 proposition and its two direct item revisions are not yet public; current results do not interpret general happiness as an ultimate moral standard.",
+  "proposedBehavior": "Expose reviewed-NE26-general-happiness-ultimate-standard as a direct proposition only in Full's authored evidence opportunity. Quick and Standard leave it not_measured. Two distinct item units must align for supported or opposed; one unit can lean, opposing directions remain mixed/context-dependent, and nondirectional evidence stays insufficient.",
+  "rationale": "Public membership must be an explicit reclassification separate from authoring the proposition and items. The rule uses the exact conflict and rule-revision items; adjacent welfarist, consequentialist, or outcome-value results cannot substitute.",
+  "philosophicalBasis": {
+    "proposition": "General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.",
+    "neighboringViews": [
+      "Act consequentialism with direct maximization per act",
+      "Rule consequentialism where rule conformity is the immediate criterion of duty",
+      "Sanction utilitarianism or other indirect structures of obligation",
+      "Welfarist outcome evaluation without the ultimate standard claim",
+      "Pluralist moral theories treating happiness as one value among several",
+      "Deontological theories with independently authoritative rights or duties"
+    ],
+    "nonEntailments": [
+      "An act-utilitarian classification",
+      "A rule-utilitarian classification",
+      "Total-welfare maximization in each individual act",
+      "Welfare as the only ultimate outcome value",
+      "A complete utilitarian identity or complete Mill profile"
+    ],
+    "existingGap": "No active public rule directly interprets the interpretation-neutral claim that general happiness is the ultimate moral standard.",
+    "scholarlyDisagreement": "Mill explicitly presents utility as the foundation and standard of morality, while scholars disagree about whether duty is best reconstructed as direct act utilitarianism, rule utilitarianism, or sanction utilitarianism. The reclassification preserves that limited first-principle proposition and adds no tradition affinity."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "primary-mill-utilitarianism-ch2",
+      "relationship": "supports",
+      "claim": "In Utilitarianism Chapter II, Mill presents Utility or the Greatest Happiness Principle as the foundation and standard of morality and treats secondary principles as subordinate to an ultimate standard."
+    },
+    {
+      "sourceId": "sep-mill-moral-political",
+      "relationship": "supports",
+      "claim": "The SEP distinguishes Mill's utilitarian first principle from a decision procedure and documents competing direct, rule, and sanction reconstructions, supporting an interpretation-neutral first-principle scope."
+    },
+    {
+      "sourceId": "sep-utilitarianism-history",
+      "relationship": "context",
+      "claim": "The historical overview treats Mill as a classical utilitarian while noting disagreement over act-versus-rule interpretation; it does not validate the proposed item wording."
+    }
+  ],
+  "alternatives": [
+    "Leave the proposition outside public results: rejected because the two direct item units provide an explicit, route-limited authored evidence path.",
+    "Promote a Mill tradition affinity: rejected because the items do not measure a complete tradition profile or act-versus-rule doctrine."
+  ],
+  "respondentImpact": "Only Full can assess this direct proposition. Quick and Standard show not_measured; a single directional unit only leans, disagreement is mixed/context-dependent, and no tradition label or percentage is produced.",
+  "historicalCompatibility": "Public membership begins only in model-release-1.20.0. Earlier models and results are unchanged and are not backfilled.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "route_omission",
+      "source_claim_trace"
+    ],
+    "paths": [
+      "scripts/test-mill-canary-release-v1.mjs",
+      "scripts/test-mill-general-happiness-design.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-10-03T05:00:00Z",
+        "note": "Promoted only the source-backed first-principle proposition; no complete utilitarian tradition or affinity follows."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI engineering review",
+        "at": "2026-10-03T05:00:00Z",
+        "note": "Confirmed route-only public availability, the two-unit evidence contract, false-positive controls, and immutable historical release behavior."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "model"
+    ],
+    "targetVersion": "model-release-1.20.0",
+    "migration": "No response migration. Public rule membership begins with model release 1.20.0 and does not reinterpret prior administrations."
+  },
+  "implementationRefs": [
+    "docs/plan/mill-general-happiness-v1/research-design.md",
+    "docs/plan/mill-general-happiness-v1/regression-design.md",
+    "scripts/test-mill-canary-release-v1.mjs"
+  ]
+}
