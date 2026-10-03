@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "reference-readiness-index-1",
+  "auditVersion": "reference-readiness-audit-2.0.0",
+  "specPath": "data/reference/readiness-audit-v2.json",
+  "reportPath": "data/reference/readiness-report-v2.json",
+  "markdownPath": "docs/REFERENCE_READINESS_REPORT.md"
+}

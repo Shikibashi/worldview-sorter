@@ -8,7 +8,12 @@ const digest=buffer=>createHash('sha256').update(buffer).digest('hex');
 const bytes=async path=>readFile(new URL(path,root));
 const fail=message=>{throw new Error(`Reference readiness audit: ${message}`);};
 
-const spec=await readJson('data/reference/readiness-audit-v1.json');
+let pointer=null;
+try{pointer=await readJson('data/reference/readiness-current.json');}catch{}
+const specPath=pointer?.specPath??'data/reference/readiness-audit-v1.json';
+const reportPath=pointer?.reportPath??'data/reference/readiness-report-v1.json';
+const markdownPath=pointer?.markdownPath??'docs/REFERENCE_READINESS_REPORT.md';
+const spec=await readJson(specPath);
 const current=await readJson('data/current.json');
 const authoringPolicy=await readJson(spec.baseline.authoringPolicy.path);
 
@@ -43,8 +48,8 @@ const report=buildReferenceReadinessReport({
   authoringPolicy
 });
 const outputs=[
-  ['data/reference/readiness-report-v1.json',JSON.stringify(report,null,2)+'\n'],
-  ['docs/REFERENCE_READINESS_REPORT.md',renderReferenceReadinessMarkdown(report)]
+  [reportPath,JSON.stringify(report,null,2)+'\n'],
+  [markdownPath,renderReferenceReadinessMarkdown(report)]
 ];
 const check=process.argv.includes('--check');
 for(const [path,content] of outputs){

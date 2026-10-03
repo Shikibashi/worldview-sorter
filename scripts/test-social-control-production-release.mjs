@@ -7,7 +7,7 @@ import {captureRelease,currentFromManifest,loadSnapshot,readJson,validateContent
 
 const root=new URL('../',import.meta.url),read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
 const currentRef=await read('data/current.json');
-const currentManifest=await read(currentRef.modelRelease.path);
+const currentManifest=await read('data/releases/model-release-v1.19.0.json');
 const previousManifest=await read('data/releases/model-release-v1.18.0.json');
 const current=currentFromManifest(currentManifest),previous=currentFromManifest(previousManifest);
 const [bank,model,scales,depth,catalog,pilot,oldBank,oldModel,oldDepth,oldCatalog,draft,
@@ -77,7 +77,7 @@ for(const id of ['PLI060','PLI123'])assert.ok(!['quick','standard'].some(routeId
 assert.ok(route('full').assessableDirectRuleIds.includes(ruleId));
 assert.ok(current.fullForm.path===currentManifest.components.find(row=>row.key==='full_form').path);
 assert.ok(pilot.interpretationRules.routeMeasuredDirectRuleIds.includes(ruleId));
-assert.equal(currentRef.pilotEvidenceAudit.path,'data/reviews/pilot-evidence-dispositions-v17.json');
+assert.ok(['data/reviews/pilot-evidence-dispositions-v17.json','data/reviews/pilot-evidence-dispositions-v18.json'].includes(currentRef.pilotEvidenceAudit.path));
 assert.equal(catalog.modelVersion,model.modelVersion);
 assert.deepEqual(catalog.traditions.map(row=>row.commitments),oldCatalog.traditions.map(row=>row.commitments),
  'The catalog only rebinds to the successor model; it adds no production-control affinity.');

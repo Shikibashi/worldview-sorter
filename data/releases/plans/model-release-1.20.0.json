@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schemaVersion": "successor-release-plan-1",
+  "version": "model-release-1.20.0",
+  "builder": "scripts/build-mill-canary-release-v1.mjs",
+  "authoredInputs": [
+    "package.json",
+    "data/releases/plans/model-release-1.20.0.json",
+    "data/governance/proposals/MCP-2026-094.json",
+    "data/governance/proposals/MCP-2026-095.json",
+    "data/exploration/semantic-links-v1.json",
+    "docs/plan/mill-general-happiness-v1/research-design.md",
+    "scripts/release-successor.mjs",
+    "scripts/build-mill-canary-release-v1.mjs",
+    "scripts/test-mill-canary-release-v1.mjs",
+    "scripts/build-reference-readiness-audit.mjs",
+    "scripts/test-consumer-experience.mjs",
+    "scripts/test-mill-general-happiness-design.mjs",
+    "scripts/test-model-governance.mjs",
+    "scripts/test-production-site-browser.mjs",
+    "scripts/test-progressive-depth.mjs",
+    "scripts/test-quiz-browser.mjs",
+    "scripts/test-reference-profile-catalog.mjs",
+    "scripts/test-reference-readiness-audit.mjs",
+    "scripts/test-social-control-production-release.mjs"
+  ],
+  "notes": "Canary release 1.20.0: activates interpretation-neutral general happiness as ultimate moral standard proposition (NE26) with items NEI134@1 and NEI135@1 on Full route (251 items). Quick and Standard remain unchanged."
+}

@@ -25,8 +25,8 @@ const historicalCatalog = await readJson('data/reference/reference-profiles-v1.0
 assert.equal(validateReferenceCatalog({ catalog, model, routes }), true);
 assert.equal(catalog.profiles.length, 7);
 assert.equal(catalog.publicationStatus, 'internal_only');
-assert.equal(catalog.profileModelVersion, 'reference-profile-model-1.1.0');
-assert.equal(catalog.sourceLedgerVersion, 'reference-profile-sources-1.1.0');
+assert.equal(catalog.profileModelVersion, catalog.catalogVersion === 'reference-profile-catalog-1.2.0' ? 'reference-profile-model-1.2.0' : 'reference-profile-model-1.1.0');
+assert.equal(catalog.sourceLedgerVersion, catalog.catalogVersion === 'reference-profile-catalog-1.2.0' ? 'reference-profile-sources-1.2.0' : 'reference-profile-sources-1.1.0');
 assert.equal(referenceCurrent.catalogVersion, catalog.catalogVersion);
 assert.equal(catalogIndex.currentCatalogVersion, catalog.catalogVersion);
 assert.equal(catalogIndex.catalogPath, referenceCurrent.catalogPath);

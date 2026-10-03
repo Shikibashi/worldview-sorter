@@ -63,6 +63,7 @@ export async function buildSuccessor(treeRoot, plan, {production = false} = {}) 
   const pointers = await readText(treeRoot, 'data/current.json');
   try { run(treeRoot, 'npm', ['run', 'build:academic'], 'sync'); }
   catch (error) { await writeFile(path.join(treeRoot, 'data/current.json'), pointers); throw error; }
+  run(treeRoot, 'node', ['scripts/build-reference-readiness-audit.mjs'], 'readiness');
   run(treeRoot, 'node', ['scripts/model-governance.mjs', 'verify'], 'verify');
   if (production) run(treeRoot, 'npm', ['run', 'build:production'], 'production');
   const after = JSON.parse(await readText(treeRoot, 'data/current.json'));

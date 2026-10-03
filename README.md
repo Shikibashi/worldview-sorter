@@ -4,7 +4,7 @@ Twelve interface domains, not twelve forced bipolar latent traits.
 
 ## Current release
 
-Candidate bank **0.19.0** contains **575 authored candidate items**. The active registry includes **188 permanent entries**. The public model has **147 direct interpretation rules**, of which **97** have a two-direction authored evidence path on Full. One bundled legacy ontology construct is deprecated, not silently redefined.
+Candidate bank **0.20.0** contains **577 authored candidate items**. The active registry includes **189 permanent entries**. The public model has **148 direct interpretation rules**, of which **98** have a two-direction authored evidence path on Full. One bundled legacy ontology construct is deprecated, not silently redefined.
 
 The historical 0.9.0 academic expansion added 30 distinctions and 90 items. The current source ledger adds claim-level links for subsequent reviewed releases. Sources support conceptual distinctions; they do not validate the questionnaire.
 
@@ -80,7 +80,7 @@ The public quiz uses a versioned content blueprint with separate ontology, metap
 
 ## Full and historical routes
 
-The active Full route uses the versioned 249-question successor pilot. The earlier frozen 238-question pilot and older 240-item and 80/120/160-item releases remain available for historical replay. No timer, new scoring assumptions, or automatic submission. Inapplicable branch follow-ups can be skipped. See [full-route behavior and compatibility](docs/FULL_ROUTE.md).
+The active Full route uses the versioned 251-question successor pilot. The earlier frozen 238-question pilot and older 240-item and 80/120/160-item releases remain available for historical replay. No timer, new scoring assumptions, or automatic submission. Inapplicable branch follow-ups can be skipped. See [full-route behavior and compatibility](docs/FULL_ROUTE.md).
 
 ## Evidence-limited 49-construct audit
 
@@ -88,7 +88,7 @@ All 49 constructs unmapped in `coverage-v0.2.json` now have explicit disposition
 
 ## V1 pilot candidate
 
-The active full-depth route is the 249-item `pilot-candidate-1.16.0` in `model-release-1.19.0`. It keeps the earlier 242- and 240-question full forms and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
+The active full-depth route is the 251-item `pilot-candidate-1.17.0` in `model-release-1.20.0`. It keeps the earlier 242- and 240-question full forms and all historical models at their versioned paths. Results separate route content gaps from respondent-level insufficient evidence and expose direct/derived provenance without percentages or assigned identities. See the [current Full-route contract](docs/FULL_ROUTE.md) and [historical pilot contract](docs/PILOT_V1.md).
 
 ## Data and optional research contribution
 

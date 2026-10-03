@@ -1,11 +1,11 @@
 {
   "schemaVersion": "model-change-proposal-1",
   "proposalId": "MCP-2026-094",
-  "title": "Design an interpretation-neutral general-happiness ultimate-standard proposition",
+  "title": "Add interpretation-neutral general-happiness ultimate-standard proposition",
   "author": "Worldview Sorter AI editorial review",
   "objectType": "proposition",
   "changeClass": "new_object",
-  "status": "under_review",
+  "status": "approved",
   "affectedObjects": [
     {
       "type": "item",
@@ -42,10 +42,6 @@
     {
       "type": "route",
       "id": "route-policy"
-    },
-    {
-      "type": "research_classification",
-      "id": "philosopher-mill-scoped"
     }
   ],
   "currentBehavior": "Mill remains unprofiled because the current exact propositions are neighboring but non-equivalent: NE25 adds individual-act total-welfare maximization and a promise conflict, NE22 resolves the contested act-versus-rule question, NE24 concerns outcome value rather than moral justification, and NE23 is a full rule-consequence criterion. No active item pair directly measures the interpretation-neutral claim that general happiness is the ultimate moral standard.",
@@ -118,11 +114,25 @@
       "reference_profile_gate"
     ],
     "paths": [
-      "scripts/test-mill-general-happiness-design.mjs"
+      "scripts/test-mill-general-happiness-design.mjs",
+      "scripts/test-mill-canary-release-v1.mjs"
     ]
   },
   "review": {
-    "approvals": []
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-10-03T05:00:00Z",
+        "note": "Approves the interpretation-neutral general-happiness ultimate moral standard proposition and two-unit evidence contract. Confirms distinction between first-principle justification and act-versus-rule decision procedures, documented neighboring views, and non-entailment of whole utilitarian identity."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI engineering review",
+        "at": "2026-10-03T05:00:00Z",
+        "note": "Approves the 251-item Full route addition (NEI134@1, NEI135@1), unchanged 64/120 Quick/Standard routes, two-direction evidence contract, proposal claim single-sourcing, and immutable historical replay."
+      }
+    ]
   },
   "release": {
     "components": [
@@ -136,6 +146,7 @@
       "pilot",
       "content_review",
       "localization_catalog",
+      "affinity",
       "reference_profiles"
     ],
     "targetVersion": "model-release-1.20.0",

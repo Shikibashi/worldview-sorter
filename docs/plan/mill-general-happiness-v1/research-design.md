@@ -92,7 +92,7 @@ Scenario group: `secondary-principle-ultimate-ground`
 
 Prompt:
 
-> A familiar moral rule is normally useful and deeply established. Suppose careful long-run evidence shows that revising the rule would better promote the general happiness, while the dispute is specifically about whether the old rule has moral authority independent of that happiness. Which view is closest to yours?
+> A familiar moral rule is normally useful. Suppose careful evidence shows that revising it would better promote the general happiness, but people disagree on whether the old rule has moral authority independent of that happiness. Which view is closest to yours?
 
 Directional options:
 

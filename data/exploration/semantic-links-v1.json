@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "linkSetVersion": "semantic-links-1.0.0",
-  "modelVersion": "generic-1.16.0-pilot",
+  "modelVersion": "generic-1.17.0-pilot",
   "mayChangeInterpretation": false,
   "links": [
     {
