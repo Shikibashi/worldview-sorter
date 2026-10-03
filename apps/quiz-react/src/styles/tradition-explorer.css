@@ -1,0 +1,13 @@
+.wvs-tradition-explorer { margin-block: 1.5rem 2rem; min-width: 0; }
+.wvs-tradition-explorer :is(p, h4, h5, a, summary) { overflow-wrap: anywhere; }
+.wvs-explorer-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.wvs-explorer-controls label, .wvs-explorer-followup label { display: grid; gap: .5rem; min-width: 0; }
+.wvs-tradition-explorer :is(input, select) { box-sizing: border-box; width: 100%; max-width: 100%; min-width: 0; font: inherit; }
+.wvs-explorer-evidence { margin-top: 1.5rem; }
+.wvs-explorer-criterion { padding-block: 1rem; border-bottom: 1px solid currentColor; }
+.wvs-explorer-criterion h5, .wvs-explorer-followup h5 { margin-block: 0 .75rem; font-size: 1rem; line-height: 1.5; }
+.wvs-explorer-provenance { margin-block: 1rem; }
+.wvs-explorer-followup { margin-block: 1.5rem; }
+.wvs-explorer-followup .e-btn { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 48rem) { .wvs-explorer-controls { grid-template-columns: minmax(0, 1fr); } }
+.wvs-tradition-explorer .wvs-qualification { color: var(--texto-suave); }
