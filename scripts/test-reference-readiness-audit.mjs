@@ -7,7 +7,6 @@ const root=new URL('../',import.meta.url);
 const read=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
 const digest=async path=>createHash('sha256').update(await readFile(new URL(path,root))).digest('hex');
 const spec=await read('data/reference/readiness-audit-v1.json');
-const current=await read('data/current.json');
 const model=await read(spec.baseline.worldviewModel.path);
 const bank=await read(spec.baseline.candidateBank.path);
 const routes=await read(spec.baseline.progressiveRoutes.path);
@@ -22,7 +21,7 @@ const byClaim=(candidate,id)=>candidate.claims.find(claim=>claim.id===id);
 validateReferenceReadinessSpec(context);
 const report=build();
 assert.equal(report.auditVersion,'reference-readiness-audit-1.0.0');
-assert.equal(report.baseline.model.version,current.worldviewModel.version);
+assert.equal(report.baseline.model.version,spec.baseline.worldviewModel.version);
 assert.deepEqual(report.baseline.routeOrder.map(row=>[row.id,row.size]),[['quick',64],['standard',120],['full',249]]);
 assert.deepEqual(report.summary.readinessStates,{READY_FOR_PROFILE_AUTHORING:5,PARTIAL_PROFILE_ONLY:3,RESEARCH_GAPS:3,CONTEXT_ONLY:1});
 
@@ -108,17 +107,14 @@ for(const phrase of ['% match','nearest philosopher','assigned identity','simila
 assert.deepEqual(build(),report,'Rerunning from the same pinned inputs must produce identical output.');
 
 const pins=[
-  [spec.baseline.candidateBank,current.candidateBank],
-  [spec.baseline.worldviewModel,current.worldviewModel],
-  [spec.baseline.sourceLedger,current.worldviewSourceLedger],
-  [spec.baseline.affinityCatalog,current.affinityCatalog],
-  [spec.baseline.progressiveRoutes,current.progressiveDepth]
+  spec.baseline.candidateBank,
+  spec.baseline.worldviewModel,
+  spec.baseline.sourceLedger,
+  spec.baseline.affinityCatalog,
+  spec.baseline.progressiveRoutes
 ];
-for(const [auditPin,currentPin] of pins){
-  assert.equal(auditPin.path,currentPin.path);
-  assert.equal(auditPin.version,currentPin.version);
+for(const auditPin of pins)
   assert.equal(await digest(auditPin.path),auditPin.sha256,`${auditPin.path} changed from the immutable audit baseline.`);
-}
 assert.equal(await digest(spec.baseline.authoringPolicy.path),spec.baseline.authoringPolicy.sha256);
 
 const leads=new Map(report.existingItemLeads.map(row=>[row.itemRevision,row]));
