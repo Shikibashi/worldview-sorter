@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFile,writeFile} from 'node:fs/promises';
-
+import {evaluateItemContentReview} from '../packages/governance/gap-ranking.js';
 const root=new URL('../',import.meta.url);
 const currentAudit=process.argv.includes('--current');
 const activeAudit=process.argv.includes('--active');
@@ -13,6 +13,7 @@ const paths={bank:activeAudit?active.candidateBank.path:'data/items/candidate-v0
 const raw=async path=>readFile(new URL(path,root));
 const read=async path=>JSON.parse(await raw(path));
 const [bank,model,policy,prior,decisionFile]=await Promise.all(Object.values(paths).map(read));
+const contentReview=activeAudit?await read(active.contentReview.path):null;
 assert.equal(model.modelVersion,activeAudit?active.worldviewModel.version:currentAudit?'generic-1.2.0-pilot':'generic-1.1.0-pilot');
 assert.equal(policy.policyVersion,activeAudit?active.progressiveDepth.version:currentAudit?'progressive-depth-1.2.0':'progressive-depth-1.1.0');
 assert.equal(decisionFile.schemaVersion,'directional-contract-decisions-1');
@@ -53,13 +54,29 @@ const fullRouteGaps=model.commitments.filter(rule=>publicIds.has(rule.id)).flatM
  const bankAvailable=counts(rule,wholeBank);
  const gapClass=!enough(rule,bankAvailable)?'bank_directional_contract_gap':
   available.support===0&&available.oppose===0?'all_evidence_omitted_by_frozen_route':'incomplete_frozen_route_path';
+ const outsideRouteEvidenceItemRefs=rule.evidence.filter(e=>!fullRefs.has(e.itemId)).map(e=>{
+  const cr=activeAudit?evaluateItemContentReview(e.itemId,contentReview):null;
+  return {itemId:e.itemId,itemRevision:e.itemRevision,unitId:e.unitId,
+   ...(cr?{contentReview:{decision:cr.decision,issue:cr.issue,resultUse:cr.resultUse,excluded:cr.excluded}}:{} )};
+ });
+ const hasExcludedOutsideItem=outsideRouteEvidenceItemRefs.some(ref=>ref.contentReview?.excluded);
+ const rankingTier=!enough(rule,bankAvailable)?'tier_4_bank_directional_contract_gap':
+  available.support===0&&available.oppose===0?'tier_3_bank_ready_route_admission':
+  hasExcludedOutsideItem?'tier_2_content_blocked_route_gap':
+  'tier_1_route_near_completion_candidate';
+ const futureChange=!activeAudit?(gapClass==='bank_directional_contract_gap'?'versioned_item_or_rule_review':
+  'successor_route_review_only_if_incremental_distinction_justifies_burden'):
+  rankingTier==='tier_4_bank_directional_contract_gap'?'versioned_item_or_rule_review':
+  rankingTier==='tier_2_content_blocked_route_gap'?'author_replacement_non_duplicate_item_revision_or_discriminator':
+  rankingTier==='tier_1_route_near_completion_candidate'?'substantive_semantic_review_before_route_admission':
+  'successor_route_review_only_if_incremental_distinction_justifies_burden';
  return [{ruleId:rule.id,constructId:rule.constructId,domainId:rule.domainId,label:rule.label,tier:rule.tier,
   minimumEvidenceUnits:rule.minimumEvidenceUnits,fullRouteEvidenceUnits:available,bankEvidenceUnits:bankAvailable,
   assignedEvidenceItemRefs:rule.evidence.filter(e=>fullRefs.has(e.itemId)).map(e=>({itemId:e.itemId,itemRevision:e.itemRevision,unitId:e.unitId})),
-  outsideRouteEvidenceItemRefs:rule.evidence.filter(e=>!fullRefs.has(e.itemId)).map(e=>({itemId:e.itemId,itemRevision:e.itemRevision,unitId:e.unitId})),
-  sourceIds:rule.sourceIds,gapClass,disposition:'retain_not_measured',
-  futureChange:gapClass==='bank_directional_contract_gap'?'versioned_item_or_rule_review':
-   'successor_route_review_only_if_incremental_distinction_justifies_burden',
+  outsideRouteEvidenceItemRefs,
+  sourceIds:rule.sourceIds,gapClass,
+  ...(activeAudit?{rankingTier,contentReviewStatus:hasExcludedOutsideItem?'blocked_by_content_review_exclusion':'unblocked'}:{}),
+  disposition:'retain_not_measured',futureChange,
   historicalCompatibility:'The frozen 238-item route and prior result are unchanged.'}];
 });
 const historicalRouteGaps=prior.structuralGaps.map(gap=>{
@@ -101,7 +118,8 @@ const report={schemaVersion:'pilot-evidence-dispositions-1',auditVersion:activeA
  summary:{bankItems:bank.items.length,publicRules:publicIds.size,fullRouteItems:fullRefs.size,
   fullRouteAssessableRules:publicIds.size-fullRouteGaps.length,fullRouteNotMeasuredRules:fullRouteGaps.length,
   wholeBankDirectionalGaps:directionalContracts.length,publicWholeBankDirectionalGaps:directionalContracts.filter(row=>row.public).length,
-  historicalRouteGaps:historicalRouteGaps.length,historicalStatusCounts:statusCounts,fullRouteGapClasses:gapClassCounts},
+  historicalRouteGaps:historicalRouteGaps.length,historicalStatusCounts:statusCounts,fullRouteGapClasses:gapClassCounts,
+  ...(activeAudit?{rankingTiers:Object.fromEntries(['tier_1_route_near_completion_candidate','tier_2_content_blocked_route_gap','tier_3_bank_ready_route_admission','tier_4_bank_directional_contract_gap'].map(t=>[t,fullRouteGaps.filter(g=>g.rankingTier===t).length]))}:{})},
  semantics:{assessable:'The route assigns at least the authored minimum distinct units in both directions; actual responses may remain inconclusive.',
   notMeasured:'The frozen route lacks a viable two-direction authored path; a response to one mapped item is not a public conclusion.',
   noStatisticalClaim:'Evidence-unit IDs control authored duplication only. They do not establish independent items, reliability, or human validity.'},

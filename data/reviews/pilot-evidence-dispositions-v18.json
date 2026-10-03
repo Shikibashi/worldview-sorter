@@ -35,6 +35,12 @@
       "all_evidence_omitted_by_frozen_route": 37,
       "bank_directional_contract_gap": 11,
       "incomplete_frozen_route_path": 2
+    },
+    "rankingTiers": {
+      "tier_1_route_near_completion_candidate": 1,
+      "tier_2_content_blocked_route_gap": 1,
+      "tier_3_bank_ready_route_admission": 37,
+      "tier_4_bank_directional_contract_gap": 11
     }
   },
   "semantics": {
@@ -709,18 +715,30 @@
         {
           "itemId": "NEI003",
           "itemRevision": 1,
-          "unitId": "NEI003"
+          "unitId": "NEI003",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI027",
           "itemRevision": 1,
-          "unitId": "NE-S05"
+          "unitId": "NE-S05",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-virtue"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -745,17 +763,32 @@
         {
           "itemId": "EPI106",
           "itemRevision": 1,
-          "unitId": "EPI106"
+          "unitId": "EPI106",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI107",
           "itemRevision": 1,
-          "unitId": "EPI107"
+          "unitId": "EPI107",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI108",
           "itemRevision": 1,
-          "unitId": "EPI108"
+          "unitId": "EPI108",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -764,6 +797,8 @@
         "acad-marschall"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -788,17 +823,32 @@
         {
           "itemId": "EPI112",
           "itemRevision": 1,
-          "unitId": "EPI112"
+          "unitId": "EPI112",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI113",
           "itemRevision": 1,
-          "unitId": "EPI113"
+          "unitId": "EPI113",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI114",
           "itemRevision": 1,
-          "unitId": "EPI114"
+          "unitId": "EPI114",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -806,6 +856,8 @@
         "acad-epistemology"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -830,23 +882,40 @@
         {
           "itemId": "NEI103",
           "itemRevision": 1,
-          "unitId": "NEI103"
+          "unitId": "NEI103",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI104",
           "itemRevision": 1,
-          "unitId": "NEI104"
+          "unitId": "NEI104",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI105",
           "itemRevision": 1,
-          "unitId": "NEI105"
+          "unitId": "NEI105",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "acad-egoism"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -871,17 +940,32 @@
         {
           "itemId": "NEI118",
           "itemRevision": 1,
-          "unitId": "NEI118"
+          "unitId": "NEI118",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI119",
           "itemRevision": 1,
-          "unitId": "NEI119"
+          "unitId": "NEI119",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI120",
           "itemRevision": 1,
-          "unitId": "NEI120"
+          "unitId": "NEI120",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -889,6 +973,8 @@
         "acad-egoism"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -913,17 +999,32 @@
         {
           "itemId": "PLI100",
           "itemRevision": 1,
-          "unitId": "PLI100"
+          "unitId": "PLI100",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI101",
           "itemRevision": 1,
-          "unitId": "PLI101"
+          "unitId": "PLI101",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI102",
           "itemRevision": 1,
-          "unitId": "PLI102"
+          "unitId": "PLI102",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -931,6 +1032,8 @@
         "acad-rand"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -955,17 +1058,32 @@
         {
           "itemId": "PLI103",
           "itemRevision": 1,
-          "unitId": "PLI103"
+          "unitId": "PLI103",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI104",
           "itemRevision": 1,
-          "unitId": "PLI104"
+          "unitId": "PLI104",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI105",
           "itemRevision": 1,
-          "unitId": "PLI105"
+          "unitId": "PLI105",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -973,6 +1091,8 @@
         "acad-contractarianism"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -997,17 +1117,32 @@
         {
           "itemId": "PLI106",
           "itemRevision": 1,
-          "unitId": "PLI106"
+          "unitId": "PLI106",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI107",
           "itemRevision": 1,
-          "unitId": "PLI107"
+          "unitId": "PLI107",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI108",
           "itemRevision": 1,
-          "unitId": "PLI108"
+          "unitId": "PLI108",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -1016,6 +1151,8 @@
         "acad-hasnas"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1040,17 +1177,32 @@
         {
           "itemId": "PLI115",
           "itemRevision": 1,
-          "unitId": "PLI115"
+          "unitId": "PLI115",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI116",
           "itemRevision": 1,
-          "unitId": "PLI116"
+          "unitId": "PLI116",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI117",
           "itemRevision": 1,
-          "unitId": "PLI117"
+          "unitId": "PLI117",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -1059,6 +1211,8 @@
         "acad-hasnas"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1089,15 +1243,23 @@
         {
           "itemId": "NEI030",
           "itemRevision": 1,
-          "unitId": "NE-S07"
+          "unitId": "NE-S07",
+          "contentReview": {
+            "decision": "remove_from_pilot",
+            "issue": "near_duplicate_local_dependence",
+            "resultUse": "none_in_frozen_route",
+            "excluded": true
+          }
         }
       ],
       "sourceIds": [
         "acad-ous"
       ],
       "gapClass": "incomplete_frozen_route_path",
+      "rankingTier": "tier_2_content_blocked_route_gap",
+      "contentReviewStatus": "blocked_by_content_review_exclusion",
       "disposition": "retain_not_measured",
-      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "futureChange": "author_replacement_non_duplicate_item_revision_or_discriminator",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
     },
     {
@@ -1133,6 +1295,8 @@
         "gen-noncognitivism"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1163,15 +1327,22 @@
         {
           "itemId": "PLI072",
           "itemRevision": 1,
-          "unitId": "PLI072"
+          "unitId": "PLI072",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-law"
       ],
       "gapClass": "incomplete_frozen_route_path",
+      "rankingTier": "tier_1_route_near_completion_candidate",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
-      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "futureChange": "substantive_semantic_review_before_route_admission",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
     },
     {
@@ -1194,12 +1365,22 @@
         {
           "itemId": "NEI010",
           "itemRevision": 1,
-          "unitId": "NEI010"
+          "unitId": "NEI010",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI032",
           "itemRevision": 1,
-          "unitId": "NEI032"
+          "unitId": "NEI032",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -1207,6 +1388,8 @@
         "gen-contractualism"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1231,18 +1414,30 @@
         {
           "itemId": "OMI009",
           "itemRevision": 1,
-          "unitId": "OMI009"
+          "unitId": "OMI009",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "OMI011",
           "itemRevision": 1,
-          "unitId": "OMI011"
+          "unitId": "OMI011",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-naturalism"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1267,18 +1462,30 @@
         {
           "itemId": "PLI010",
           "itemRevision": 1,
-          "unitId": "PLI010"
+          "unitId": "PLI010",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI057",
           "itemRevision": 1,
-          "unitId": "PL-S08"
+          "unitId": "PL-S08",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-liberty"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1303,18 +1510,30 @@
         {
           "itemId": "PLI007",
           "itemRevision": 1,
-          "unitId": "PLI007"
+          "unitId": "PLI007",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI051",
           "itemRevision": 1,
-          "unitId": "PL-S04"
+          "unitId": "PL-S04",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-liberty"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1351,6 +1570,8 @@
         "domain-panpsychism"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1375,18 +1596,30 @@
         {
           "itemId": "EPI001",
           "itemRevision": 1,
-          "unitId": "EP-M01"
+          "unitId": "EP-M01",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI023",
           "itemRevision": 1,
-          "unitId": "EP-S01"
+          "unitId": "EP-S01",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "acad-epistemology"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1411,18 +1644,30 @@
         {
           "itemId": "PLI006",
           "itemRevision": 1,
-          "unitId": "PLI006"
+          "unitId": "PLI006",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI027",
           "itemRevision": 1,
-          "unitId": "PLI027"
+          "unitId": "PLI027",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "acad-legitimacy"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1447,18 +1692,30 @@
         {
           "itemId": "PLI017",
           "itemRevision": 1,
-          "unitId": "PLI017"
+          "unitId": "PLI017",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI064",
           "itemRevision": 1,
-          "unitId": "PL-S12"
+          "unitId": "PL-S12",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "domain-punishment"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1483,18 +1740,30 @@
         {
           "itemId": "VAI054",
           "itemRevision": 1,
-          "unitId": "VAI054"
+          "unitId": "VAI054",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI056",
           "itemRevision": 1,
-          "unitId": "VA-S02"
+          "unitId": "VA-S02",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-wellbeing"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1519,18 +1788,30 @@
         {
           "itemId": "NEI013",
           "itemRevision": 1,
-          "unitId": "NEI013"
+          "unitId": "NEI013",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI036",
           "itemRevision": 1,
-          "unitId": "NE-S12"
+          "unitId": "NE-S12",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "domain-doing"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1567,6 +1848,8 @@
         "domain-functionalism"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1591,18 +1874,30 @@
         {
           "itemId": "NEI012",
           "itemRevision": 1,
-          "unitId": "NEI012"
+          "unitId": "NEI012",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI035",
           "itemRevision": 1,
-          "unitId": "NE-S11"
+          "unitId": "NE-S11",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-consequentialism"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1627,18 +1922,30 @@
         {
           "itemId": "EPI011",
           "itemRevision": 1,
-          "unitId": "EPI011"
+          "unitId": "EPI011",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI031",
           "itemRevision": 1,
-          "unitId": "EP-S04"
+          "unitId": "EP-S04",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "acad-epistemology"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1663,18 +1970,30 @@
         {
           "itemId": "PLI021",
           "itemRevision": 1,
-          "unitId": "PLI021"
+          "unitId": "PLI021",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI068",
           "itemRevision": 1,
-          "unitId": "PL-S15"
+          "unitId": "PL-S15",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "acad-obligation"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1711,6 +2030,8 @@
         "gen-meaning"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1735,18 +2056,30 @@
         {
           "itemId": "VAI058",
           "itemRevision": 1,
-          "unitId": "VAI058"
+          "unitId": "VAI058",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI054",
           "itemRevision": 1,
-          "unitId": "VAI054"
+          "unitId": "VAI054",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-wellbeing"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1771,18 +2104,30 @@
         {
           "itemId": "EPI003",
           "itemRevision": 1,
-          "unitId": "EPI003"
+          "unitId": "EPI003",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI016",
           "itemRevision": 1,
-          "unitId": "EPI016"
+          "unitId": "EPI016",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "acad-epistemology"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1819,6 +2164,8 @@
         "domain-particularism"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1855,6 +2202,8 @@
         "domain-cosmopolitanism"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1879,12 +2228,22 @@
         {
           "itemId": "PLI023",
           "itemRevision": 1,
-          "unitId": "PLI023"
+          "unitId": "PLI023",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI070",
           "itemRevision": 1,
-          "unitId": "PL-S17"
+          "unitId": "PL-S17",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -1892,6 +2251,8 @@
         "gen-theology"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1916,18 +2277,30 @@
         {
           "itemId": "EPI013",
           "itemRevision": 1,
-          "unitId": "EPI013"
+          "unitId": "EPI013",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "EPI033",
           "itemRevision": 1,
-          "unitId": "EP-S06"
+          "unitId": "EP-S06",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "domain-scientific-realism"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -1952,12 +2325,22 @@
         {
           "itemId": "NEI024",
           "itemRevision": 1,
-          "unitId": "NEI024"
+          "unitId": "NEI024",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI033",
           "itemRevision": 1,
-          "unitId": "NE-S09"
+          "unitId": "NE-S09",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -1965,6 +2348,8 @@
         "acad-promises"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2001,6 +2386,8 @@
         "domain-property"
       ],
       "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "versioned_item_or_rule_review",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2025,18 +2412,30 @@
         {
           "itemId": "OMI002",
           "itemRevision": 1,
-          "unitId": "OMI002"
+          "unitId": "OMI002",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "OMI012",
           "itemRevision": 1,
-          "unitId": "OMI012"
+          "unitId": "OMI012",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-physicalism"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2061,17 +2460,32 @@
         {
           "itemId": "VAI001",
           "itemRevision": 2,
-          "unitId": "VAI001"
+          "unitId": "VAI001",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI019",
           "itemRevision": 1,
-          "unitId": "VAI019"
+          "unitId": "VAI019",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI035",
           "itemRevision": 1,
-          "unitId": "VAI035"
+          "unitId": "VAI035",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2079,6 +2493,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2103,17 +2519,32 @@
         {
           "itemId": "VAI006",
           "itemRevision": 1,
-          "unitId": "VAI006"
+          "unitId": "VAI006",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI021",
           "itemRevision": 1,
-          "unitId": "VAI021"
+          "unitId": "VAI021",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI037",
           "itemRevision": 1,
-          "unitId": "VAI037"
+          "unitId": "VAI037",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2121,6 +2552,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2145,17 +2578,32 @@
         {
           "itemId": "VAI010",
           "itemRevision": 1,
-          "unitId": "VAI010"
+          "unitId": "VAI010",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI024",
           "itemRevision": 1,
-          "unitId": "VAI024"
+          "unitId": "VAI024",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI045",
           "itemRevision": 1,
-          "unitId": "VAI045"
+          "unitId": "VAI045",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2163,6 +2611,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2187,17 +2637,32 @@
         {
           "itemId": "VAI011",
           "itemRevision": 1,
-          "unitId": "VAI011"
+          "unitId": "VAI011",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI025",
           "itemRevision": 1,
-          "unitId": "VAI025"
+          "unitId": "VAI025",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI046",
           "itemRevision": 1,
-          "unitId": "VAI046"
+          "unitId": "VAI046",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2205,6 +2670,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2229,12 +2696,22 @@
         {
           "itemId": "VAI002",
           "itemRevision": 2,
-          "unitId": "VAI002"
+          "unitId": "VAI002",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI040",
           "itemRevision": 1,
-          "unitId": "VAI040"
+          "unitId": "VAI040",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2242,6 +2719,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2266,17 +2745,32 @@
         {
           "itemId": "VAI012",
           "itemRevision": 1,
-          "unitId": "VAI012"
+          "unitId": "VAI012",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI026",
           "itemRevision": 1,
-          "unitId": "VAI026"
+          "unitId": "VAI026",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI047",
           "itemRevision": 1,
-          "unitId": "VAI047"
+          "unitId": "VAI047",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2284,6 +2778,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2308,17 +2804,32 @@
         {
           "itemId": "VAI013",
           "itemRevision": 1,
-          "unitId": "VAI013"
+          "unitId": "VAI013",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI028",
           "itemRevision": 1,
-          "unitId": "VAI028"
+          "unitId": "VAI028",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI048",
           "itemRevision": 1,
-          "unitId": "VAI048"
+          "unitId": "VAI048",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2326,6 +2837,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2350,17 +2863,32 @@
         {
           "itemId": "VAI014",
           "itemRevision": 1,
-          "unitId": "VAI014"
+          "unitId": "VAI014",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI029",
           "itemRevision": 1,
-          "unitId": "VAI029"
+          "unitId": "VAI029",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI049",
           "itemRevision": 1,
-          "unitId": "VAI049"
+          "unitId": "VAI049",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2368,6 +2896,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2392,17 +2922,32 @@
         {
           "itemId": "VAI015",
           "itemRevision": 1,
-          "unitId": "VAI015"
+          "unitId": "VAI015",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI030",
           "itemRevision": 1,
-          "unitId": "VAI030"
+          "unitId": "VAI030",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI050",
           "itemRevision": 1,
-          "unitId": "VAI050"
+          "unitId": "VAI050",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2410,6 +2955,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2434,12 +2981,22 @@
         {
           "itemId": "VAI004",
           "itemRevision": 2,
-          "unitId": "VAI004"
+          "unitId": "VAI004",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI043",
           "itemRevision": 1,
-          "unitId": "VAI043"
+          "unitId": "VAI043",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2447,6 +3004,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2471,17 +3030,32 @@
         {
           "itemId": "VAI018",
           "itemRevision": 1,
-          "unitId": "VAI018"
+          "unitId": "VAI018",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI034",
           "itemRevision": 1,
-          "unitId": "VAI034"
+          "unitId": "VAI034",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "VAI053",
           "itemRevision": 1,
-          "unitId": "VAI053"
+          "unitId": "VAI053",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
@@ -2489,6 +3063,8 @@
         "schwartz-refined"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2513,18 +3089,30 @@
         {
           "itemId": "PLI015",
           "itemRevision": 1,
-          "unitId": "PLI015"
+          "unitId": "PLI015",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI062",
           "itemRevision": 1,
-          "unitId": "PL-S10"
+          "unitId": "PL-S10",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-distribution"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2549,18 +3137,30 @@
         {
           "itemId": "NEI006",
           "itemRevision": 1,
-          "unitId": "NEI006"
+          "unitId": "NEI006",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "NEI028",
           "itemRevision": 1,
-          "unitId": "NE-S06"
+          "unitId": "NE-S06",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-care"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
@@ -2585,18 +3185,30 @@
         {
           "itemId": "PLI016",
           "itemRevision": 1,
-          "unitId": "PLI016"
+          "unitId": "PLI016",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         },
         {
           "itemId": "PLI063",
           "itemRevision": 1,
-          "unitId": "PL-S11"
+          "unitId": "PL-S11",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
         }
       ],
       "sourceIds": [
         "gen-distribution"
       ],
       "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
       "disposition": "retain_not_measured",
       "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
       "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
