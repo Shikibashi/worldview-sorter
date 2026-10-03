@@ -27,5 +27,14 @@ Workflow reference: upstream `obra/superpowers` planning, test-driven-developmen
 
 - Local projection RED: nine tests, eight expected missing-feature failures against empty stubs.
 - Local projection GREEN: nine tests passed against the implementation.
-- The local environment could not clone GitHub (DNS unavailable); full-repository execution is delegated to the repository's actual CI, not simulated. Browser and final CI evidence are recorded in the PR.
+- The local environment could not clone GitHub (DNS unavailable); full-repository execution is delegated to the repository's actual CI, not simulated. At the final check, GitHub returned no workflow runs for the feature branch. The complete build/browser gates are wired into CI but remain unrun; the PR stays draft.
 - No inference, release manifest, item wording, public route, or internal-reference publication changes are intended.
+
+## Final review record
+
+- Implemented `TraditionExplorer.jsx` and connected it with five added integration lines in `ResultsView.jsx`, reusing `Pattern` for exact evidence rendering. The existing pairwise comparison is retained.
+- Local checks: 9/9 projection tests passed; TypeScript JSX syntax/transpilation passed for the new component; browser test script passed `node --check`. None of these is a full application build or browser run.
+- A code-review correction prevents the empty topic placeholder from being submitted to the existing global domain planner.
+- GitHub diff inspection confirms this branch changes only UI, new tests, browser CI coverage, and this plan. No released model, bank, route, catalog, or source-ledger objects changed.
+- Full `npm test`, production build/verification, accessibility and browser execution remain unverified. Local GitHub and npm DNS resolution failed; no branch workflow runs were returned by GitHub. The initial browser RED was specified but not executed; only the pure-function RED/GREEN cycle was observed.
+- Draft PR #40 is the review artifact. Nothing was merged or deployed.

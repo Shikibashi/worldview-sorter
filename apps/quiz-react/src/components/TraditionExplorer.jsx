@@ -95,8 +95,11 @@ export default function TraditionExplorer({ summary, depth, replayQualification,
         <h5>Optional clarification of an open topic</h5>
         <p>These topics contain unresolved, directly mapped evidence. The existing planner may offer reviewed questions about the topic, not necessarily every criterion of this tradition. Unmapped and partially mapped doctrine stays limited.</p>
         <label htmlFor="explorer-gap-domain">Choose an open topic
-          <select id="explorer-gap-domain" value={selectedDomain} onChange={event => depth.setDomainId(event.target.value)}>
-            <option value="">Choose a topic</option>
+          <select id="explorer-gap-domain" value={selectedDomain} onChange={event => {
+            const id = event.target.value;
+            if (view.gapDomains.some(domain => domain.id === id)) depth.setDomainId(id);
+          }}>
+            <option value="" disabled>Choose a topic</option>
             {view.gapDomains.map(domain => <option key={domain.id} value={domain.id}>{domain.title}</option>)}
           </select>
         </label>
