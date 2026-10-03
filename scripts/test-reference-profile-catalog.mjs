@@ -21,12 +21,14 @@ const model = await readJson(current.worldviewModel.path);
 const routes = await readJson(current.progressiveDepth.path);
 const catalog = await readJson(referenceCurrent.catalogPath);
 const historicalCatalog = await readJson('data/reference/reference-profiles-v1.0.0.json');
+const historicalCatalog11 = await readJson('data/reference/reference-profiles-v1.1.0.json');
+const historicalCatalog12 = await readJson('data/reference/reference-profiles-v1.2.0.json');
 
 assert.equal(validateReferenceCatalog({ catalog, model, routes }), true);
-assert.equal(catalog.profiles.length, 7);
+assert.equal(catalog.profiles.length, 8);
 assert.equal(catalog.publicationStatus, 'internal_only');
-assert.equal(catalog.profileModelVersion, catalog.catalogVersion === 'reference-profile-catalog-1.2.0' ? 'reference-profile-model-1.2.0' : 'reference-profile-model-1.1.0');
-assert.equal(catalog.sourceLedgerVersion, catalog.catalogVersion === 'reference-profile-catalog-1.2.0' ? 'reference-profile-sources-1.2.0' : 'reference-profile-sources-1.1.0');
+assert.equal(catalog.profileModelVersion, 'reference-profile-model-1.3.0');
+assert.equal(catalog.sourceLedgerVersion, 'reference-profile-sources-1.3.0');
 assert.equal(referenceCurrent.catalogVersion, catalog.catalogVersion);
 assert.equal(catalogIndex.currentCatalogVersion, catalog.catalogVersion);
 assert.equal(catalogIndex.catalogPath, referenceCurrent.catalogPath);
@@ -34,6 +36,10 @@ assert.equal(current.worldviewModel.version, catalog.modelVersion);
 assert.equal(current.progressiveDepth.version, catalog.routePolicyVersion);
 assert.equal(historicalCatalog.catalogVersion, 'reference-profile-catalog-1.0.0');
 assert.equal(historicalCatalog.profiles.length, 5, 'The released 1.0.0 reference catalog must remain unchanged.');
+assert.equal(historicalCatalog11.catalogVersion, 'reference-profile-catalog-1.1.0');
+assert.equal(historicalCatalog11.profiles.length, 7, 'The released 1.1.0 reference catalog must remain unchanged.');
+assert.equal(historicalCatalog12.catalogVersion, 'reference-profile-catalog-1.2.0');
+assert.equal(historicalCatalog12.profiles.length, 7, 'The released 1.2.0 reference catalog must remain unchanged.');
 assert.ok(!Object.hasOwn(current, 'referenceProfiles'), 'Reference profiles must not be added to the public production pointer.');
 
 const profiles = new Map(catalog.profiles.map(profile => [profile.id, profile]));
@@ -54,9 +60,29 @@ for (const unresolved of ['rational self-interest', 'epistemology', 'rights']) {
   assert.ok(randProfile.unmeasuredAreas.some(value => value.toLowerCase().includes(unresolved)),
     `Rand's unresolved ${unresolved} distinction must remain unmeasured.`);
 }
-assert.ok(![...profiles.keys()].some(id => id.includes('mill')),
-  'Mill must not be promoted while the active propositions remain only partial mappings of his utility criterion.');
+const millProfile = profiles.get('john-stuart-mill-general-happiness-scoped');
+assert.ok(millProfile, 'The scoped Mill general happiness criterion profile must be present.');
+assert.equal(millProfile.entityType, 'philosopher');
+assert.equal(millProfile.publicationStatus, 'internal_only');
+assert.equal(millProfile.identityOutputAllowed, false);
+assert.equal(millProfile.percentageMatchAllowed, false);
+assert.deepEqual(millProfile.claims.map(claim => claim.propositionId), ['reviewed-NE26-general-happiness-ultimate-standard']);
+assert.deepEqual(millProfile.claims[0].routeAvailability, ['full']);
+assert.equal(millProfile.claims[0].mappingStatus, 'ROUTE_LIMITED');
+assert.equal(millProfile.claims[0].expectedState, 'supported');
+assert.equal(millProfile.claims[0].importance, 'core');
+assert.equal(millProfile.claims[0].evidenceBasis, 'primary_text');
 
+// Ensure Mill profile strictly satisfies Research Design non-entailment rules
+for (const forbidden of ['NE22', 'NE23', 'NE24', 'NE25']) {
+  assert.ok(!millProfile.claims.some(claim => claim.propositionId.includes(forbidden)),
+    `Mill profile must NOT import ${forbidden} as a required commitment.`);
+}
+assert.ok(millProfile.nonEntailments.some(v => /act utilitarian/i.test(v)));
+assert.ok(millProfile.nonEntailments.some(v => /rule utilitarian/i.test(v)));
+assert.ok(millProfile.nonEntailments.some(v => /sanction-utilitarian/i.test(v)));
+assert.ok(millProfile.nonEntailments.some(v => /NE25/i.test(v)));
+assert.ok(millProfile.nonEntailments.some(v => /NE24/i.test(v)));
 const scopedFullReport = {
   modelVersion: model.modelVersion,
   routePolicyVersion: routes.policyVersion,

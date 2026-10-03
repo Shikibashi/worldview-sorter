@@ -62,16 +62,16 @@
   "summary": {
     "candidateCount": 12,
     "readinessStates": {
-      "READY_FOR_PROFILE_AUTHORING": 5,
-      "PARTIAL_PROFILE_ONLY": 3,
+      "READY_FOR_PROFILE_AUTHORING": 6,
+      "PARTIAL_PROFILE_ONLY": 2,
       "RESEARCH_GAPS": 3,
       "CONTEXT_ONLY": 1
     },
     "mappingStatuses": {
-      "ROUTE_LIMITED": 8,
+      "ROUTE_LIMITED": 9,
       "CONTEXT_ONLY": 3,
       "MISSING_PROPOSITION": 9,
-      "PARTIAL": 8,
+      "PARTIAL": 6,
       "DIRECT": 1
     }
   },
@@ -3624,40 +3624,34 @@
     },
     {
       "id": "philosopher-mill-scoped",
-      "label": "John Stuart Mill — utility criterion (scoped)",
+      "label": "John Stuart Mill — general happiness criterion (scoped)",
       "entityType": "philosopher",
-      "scope": "A selected comparison of the greatest-happiness principle and impartial concern; not a complete reconstruction of Mill's ethics or political philosophy.",
-      "readinessState": "PARTIAL_PROFILE_ONLY",
+      "scope": "A selected comparison of the greatest-happiness principle as the ultimate moral standard; not a complete reconstruction of Mill's ethics or political philosophy.",
+      "readinessState": "READY_FOR_PROFILE_AUTHORING",
       "existingAffinity": null,
       "claimSummary": {
-        "claimCount": 2,
-        "comparisonEligibleClaims": 0,
+        "claimCount": 1,
+        "comparisonEligibleClaims": 1,
         "directClaims": 0,
-        "directInterpretationPathClaims": 0,
+        "directInterpretationPathClaims": 1,
         "derivedInterpretationPathClaims": 0,
-        "partialClaims": 2,
-        "routeLimitedClaims": 0,
+        "partialClaims": 0,
+        "routeLimitedClaims": 1,
         "unmeasuredClaims": 0,
         "missingPropositionClaims": 0,
         "unsuitableClaims": 0,
         "contextOnlyClaims": 0,
-        "coreClaimsDirectlyMeasurable": 0,
-        "coreClaimsUnavailable": 1,
+        "coreClaimsDirectlyMeasurable": 1,
+        "coreClaimsUnavailable": 0,
         "statuses": {
-          "PARTIAL": 2
+          "ROUTE_LIMITED": 1
         }
       },
-      "blockingCoreGaps": [
-        {
-          "id": "mill-greatest-happiness-principle",
-          "status": "PARTIAL",
-          "proposition": "The greatest happiness principle treats the promotion of general happiness as the ultimate moral standard.",
-          "propositionId": "reviewed-NE25-total-welfare-maximization"
-        }
-      ],
+      "blockingCoreGaps": [],
       "neighbors": [
         "Benthamite utilitarianism",
         "rule consequentialism",
+        "act consequentialism",
         "non-utilitarian liberalism",
         "pluralist theories of value"
       ],
@@ -3674,13 +3668,13 @@
         {
           "id": "mill-greatest-happiness-principle",
           "entityType": "philosopher",
-          "proposition": "The greatest happiness principle treats the promotion of general happiness as the ultimate moral standard.",
+          "proposition": "General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.",
           "doctrinalRole": "core",
           "evidenceBasis": "primary_text",
           "expectedPropositionState": "supported",
-          "mappingStatus": "PARTIAL",
-          "comparisonEligible": false,
-          "propositionId": "reviewed-NE25-total-welfare-maximization",
+          "mappingStatus": "ROUTE_LIMITED",
+          "comparisonEligible": true,
+          "propositionId": "reviewed-NE26-general-happiness-ultimate-standard",
           "relatedPropositions": [],
           "routeAvailability": [
             {
@@ -3729,40 +3723,40 @@
             "modelSourceQualification": {
               "status": "claim_linked",
               "sourceIds": [
-                "sep-act-consequence-criterion",
-                "sep-promises-act-rule",
-                "sep-welfarism-outcome-value"
+                "primary-mill-utilitarianism-ch2",
+                "sep-mill-moral-political",
+                "sep-utilitarianism-history"
               ],
               "unresolvedSourceIds": [],
               "sources": [
                 {
-                  "id": "sep-act-consequence-criterion",
-                  "title": "Stanford Encyclopedia of Philosophy: Consequentialism",
-                  "url": "https://plato.stanford.edu/entries/consequentialism/",
-                  "evidenceType": "signed_scholarly_synthesis",
-                  "access": "selected_sections_reviewed",
-                  "sourceRole": "signed_scholarly_synthesis",
-                  "detailedUseLimit": "This source supports the stated philosophical contrast, not question validity or a complete consequentialist identity.",
+                  "id": "primary-mill-utilitarianism-ch2",
+                  "title": "John Stuart Mill, Utilitarianism, Chapter II",
+                  "url": "https://www.gutenberg.org/files/11224/11224-h/11224-h.htm",
+                  "evidenceType": "primary_text",
+                  "access": "text_reviewed",
+                  "sourceRole": "primary_text",
+                  "detailedUseLimit": "Supports the stated philosophical distinction only; it does not validate item wording, thresholds, route placement, comprehension, or psychometrics.",
                   "validatesOurItems": false
                 },
                 {
-                  "id": "sep-promises-act-rule",
-                  "title": "Stanford Encyclopedia of Philosophy: Promises",
-                  "url": "https://plato.stanford.edu/entries/promises/",
+                  "id": "sep-mill-moral-political",
+                  "title": "Stanford Encyclopedia of Philosophy: Mill's Moral and Political Philosophy",
+                  "url": "https://plato.stanford.edu/entries/mill-moral-political/",
                   "evidenceType": "signed_scholarly_synthesis",
-                  "access": "selected_sections_reviewed",
+                  "access": "text_reviewed",
                   "sourceRole": "signed_scholarly_synthesis",
-                  "detailedUseLimit": "Supports the act-versus-rule distinction in promise cases. It does not validate the original question, the two-unit threshold, respondent comprehension, or a whole utilitarian identity.",
+                  "detailedUseLimit": "Supports the stated philosophical distinction only; it does not validate item wording, thresholds, route placement, comprehension, or psychometrics.",
                   "validatesOurItems": false
                 },
                 {
-                  "id": "sep-welfarism-outcome-value",
-                  "title": "Stanford Encyclopedia of Philosophy: Well-Being",
-                  "url": "https://plato.stanford.edu/entries/well-being/",
+                  "id": "sep-utilitarianism-history",
+                  "title": "Stanford Encyclopedia of Philosophy: The History of Utilitarianism",
+                  "url": "https://plato.stanford.edu/entries/utilitarianism-history/",
                   "evidenceType": "signed_scholarly_synthesis",
-                  "access": "selected_sections_reviewed",
+                  "access": "text_reviewed",
                   "sourceRole": "signed_scholarly_synthesis",
-                  "detailedUseLimit": "Defines the welfare-only outcome-value distinction and one nonwelfare neighbor. It does not validate question comprehension, unit independence, or thresholds.",
+                  "detailedUseLimit": "Supports the stated philosophical distinction only; it does not validate item wording, thresholds, route placement, comprehension, or psychometrics.",
                   "validatesOurItems": false
                 }
               ],
@@ -3773,7 +3767,7 @@
           "sourceClaims": [
             {
               "sourceId": "mill-utilitarianism",
-              "claim": "Mill states that actions are right in proportion as they promote happiness and wrong as they produce its reverse.",
+              "claim": "Mill states that actions are right in proportion as they promote happiness and wrong as they produce its reverse, and treats utility as the ultimate standard resolving conflicts among secondary principles.",
               "locator": "Chapter II",
               "sourceClass": "primary_text",
               "sourceTitle": "John Stuart Mill, Utilitarianism (1861), Chapter II",
@@ -3784,7 +3778,7 @@
             {
               "sourceId": "sep-utilitarianism-history",
               "claim": "Mill is commonly read as a utilitarian, though scholars disagree about whether his criterion is best classified as act or rule consequentialist.",
-              "locator": "Sections 3–5",
+              "locator": "Sections 2 and 4",
               "sourceClass": "signed_scholarly_synthesis",
               "sourceTitle": "Stanford Encyclopedia of Philosophy, The History of Utilitarianism",
               "sourceUrl": "https://plato.stanford.edu/entries/utilitarianism-history/",
@@ -3798,110 +3792,11 @@
             "pluralist moral theories"
           ],
           "nonEntailments": [
+            "A settled classification of Mill as an act or rule utilitarian.",
             "The specific total-welfare promise-case response alone establishes Mill's whole theory."
           ],
           "limitations": [
-            "NE25 tests a general rule plus one specified promise conflict, not the whole greatest-happiness principle."
-          ]
-        },
-        {
-          "id": "mill-act-consequence-reading",
-          "entityType": "philosopher",
-          "proposition": "Moral rightness is ultimately determined by the consequences of individual acts rather than by conformity to a consequence-justified code of rules.",
-          "doctrinalRole": "major",
-          "evidenceBasis": "scholarly_reconstruction",
-          "expectedPropositionState": "supported",
-          "mappingStatus": "PARTIAL",
-          "comparisonEligible": false,
-          "propositionId": "reviewed-NE22-act-consequence-criterion",
-          "relatedPropositions": [],
-          "routeAvailability": [
-            {
-              "routeId": "quick",
-              "capable": false,
-              "guaranteedCapable": false,
-              "reason": "route_omits_or_lacks_required_evidence_units",
-              "eligibleEvidenceUnits": 0,
-              "guaranteedEvidenceUnits": 0,
-              "minimumEvidenceUnits": 2,
-              "itemRevisions": [],
-              "conditionalDependencies": []
-            },
-            {
-              "routeId": "standard",
-              "capable": false,
-              "guaranteedCapable": false,
-              "reason": "route_omits_or_lacks_required_evidence_units",
-              "eligibleEvidenceUnits": 0,
-              "guaranteedEvidenceUnits": 0,
-              "minimumEvidenceUnits": 2,
-              "itemRevisions": [],
-              "conditionalDependencies": []
-            },
-            {
-              "routeId": "full",
-              "capable": true,
-              "guaranteedCapable": true,
-              "reason": "minimum_authored_evidence_units_guaranteed",
-              "eligibleEvidenceUnits": 2,
-              "guaranteedEvidenceUnits": 2,
-              "minimumEvidenceUnits": 2,
-              "itemRevisions": [
-                "undefined@undefined",
-                "undefined@undefined"
-              ],
-              "conditionalDependencies": []
-            }
-          ],
-          "capableRoutes": [
-            "full"
-          ],
-          "interpretationPath": {
-            "kind": "direct",
-            "activePublicInterpretation": true,
-            "modelSourceQualification": {
-              "status": "claim_linked",
-              "sourceIds": [
-                "sep-act-consequence-criterion"
-              ],
-              "unresolvedSourceIds": [],
-              "sources": [
-                {
-                  "id": "sep-act-consequence-criterion",
-                  "title": "Stanford Encyclopedia of Philosophy: Consequentialism",
-                  "url": "https://plato.stanford.edu/entries/consequentialism/",
-                  "evidenceType": "signed_scholarly_synthesis",
-                  "access": "selected_sections_reviewed",
-                  "sourceRole": "signed_scholarly_synthesis",
-                  "detailedUseLimit": "This source supports the stated philosophical contrast, not question validity or a complete consequentialist identity.",
-                  "validatesOurItems": false
-                }
-              ],
-              "itemValidityClaimed": false,
-              "note": "Philosophical source support is separate from evidence that an item or response threshold is valid."
-            }
-          },
-          "sourceClaims": [
-            {
-              "sourceId": "sep-utilitarianism-history",
-              "claim": "Some scholars interpret Mill's greatest-happiness criterion as act-utilitarian, while other interpretations emphasize rules and secondary principles.",
-              "locator": "Sections 3–5",
-              "sourceClass": "signed_scholarly_synthesis",
-              "sourceTitle": "Stanford Encyclopedia of Philosophy, The History of Utilitarianism",
-              "sourceUrl": "https://plato.stanford.edu/entries/utilitarianism-history/",
-              "qualifiedClass": true,
-              "itemValidityClaimed": false
-            }
-          ],
-          "neighboringViews": [
-            "rule consequentialism",
-            "rule-guided act utilitarianism"
-          ],
-          "nonEntailments": [
-            "A settled consensus that Mill is an act consequentialist."
-          ],
-          "limitations": [
-            "The SEP records interpretive disagreement; this is an explicitly partial reading, not a canonical classification."
+            "NE26 tests the first-principle status of general happiness on Full; it does not reconstruct Mill's whole moral theory or resolve act vs rule debates."
           ]
         }
       ]

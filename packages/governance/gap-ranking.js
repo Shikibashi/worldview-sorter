@@ -11,7 +11,7 @@ export const EXCLUSION_ISSUES = Object.freeze([
 export function evaluateItemContentReview(itemRef, contentReview) {
   const itemId = typeof itemRef === 'string' ? itemRef : itemRef.itemId;
   const decision = (contentReview?.decisions ?? []).find(d => d.itemId === itemId);
-  if (!decision) return {itemId, excluded: false, decision: null, issue: null, rationale: null};
+  if (!decision) return {itemId, excluded: false, decision: null, issue: null, rationale: null, hasRecordedReview: false};
 
   const isRemoved = decision.decision === 'remove_from_pilot' || decision.resultUse === 'none_in_frozen_route';
   const hasExclusionIssue = EXCLUSION_ISSUES.includes(decision.issue);
@@ -24,7 +24,8 @@ export function evaluateItemContentReview(itemRef, contentReview) {
     issue: decision.issue ?? null,
     resultUse: decision.resultUse ?? null,
     rationale: decision.rationale ?? null,
-    pairedWith: decision.pairedWith ?? null
+    pairedWith: decision.pairedWith ?? null,
+    hasRecordedReview: true
   };
 }
 
@@ -57,7 +58,11 @@ export function rankFullRouteGaps({ gaps, contentReview, bank }) {
     } else {
       tier = 'tier_1_route_near_completion_candidate';
       tierLabel = 'Tier 1: Route-near completion candidate';
-      actionRecommendation = 'Single missing bank item has no content-review exclusion. Requires substantive semantic review of proposition and item balance before route admission.';
+      if (gap.ruleId === 'moral-limits-validity') {
+        actionRecommendation = 'Assigned item is PLI073@1. Missing bank item PLI072@1 has no recorded pilot review decision. Substantive conceptual blockers (inclusive positivism overlap, conflation of defective law with invalidity in PLI073, and Radbruch threshold coherence against source-based-validity) require narrowing target proposition and co-reviewing both PL21 rules before route admission.';
+      } else {
+        actionRecommendation = 'Single missing bank item has no content-review exclusion. Requires substantive semantic review of proposition and item balance before route admission.';
+      }
     }
 
     ranked.push({

@@ -1,0 +1,772 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogVersion": "reference-profile-catalog-1.3.0",
+  "profileModelVersion": "reference-profile-model-1.3.0",
+  "sourceLedgerVersion": "reference-profile-sources-1.3.0",
+  "origin": "independent_authoring",
+  "modelVersion": "generic-1.17.0-pilot",
+  "routePolicyVersion": "progressive-depth-2.8.0",
+  "publicationStatus": "internal_only",
+  "scopeNote": "These are narrow, source-traceable comparisons of selected commitments. They do not classify a respondent or reconstruct a whole philosopher or tradition.",
+  "sources": [
+    {
+      "id": "primary-peirce-how-to-make-ideas-clear",
+      "sourceType": "primary_text",
+      "authors": [
+        "Charles Sanders Peirce"
+      ],
+      "title": "How to Make Our Ideas Clear",
+      "container": "Popular Science Monthly, volume 12",
+      "year": 1878,
+      "url": "https://www.peirce.org/writings/p119.html",
+      "accessNote": "Online transcription of Peirce's original essay; the Stanford Encyclopedia entry is used for scholarly context."
+    },
+    {
+      "id": "primary-peirce-fallibilism-continuity-evolution",
+      "sourceType": "primary_text",
+      "authors": [
+        "Charles Sanders Peirce"
+      ],
+      "title": "Fallibilism, Continuity, and Evolution",
+      "container": "Collected Papers of Charles Sanders Peirce, volume 1, sections 1.141–1.175",
+      "year": 1897,
+      "url": "https://www.textlog.de/4248.html",
+      "accessNote": "Online text transcription of the posthumously published paper; citation follows the Collected Papers section numbering."
+    },
+    {
+      "id": "primary-wolff-in-defense-of-anarchism",
+      "sourceType": "primary_text",
+      "authors": [
+        "Robert Paul Wolff"
+      ],
+      "title": "In Defense of Anarchism",
+      "year": 1970,
+      "url": "https://theanarchistlibrary.org/library/robert-paul-wolff-in-defense-of-anarchism",
+      "accessNote": "Digital transcription of the book; used only for Wolff's stated argument, not as a canonical account of every philosophical-anarchist position."
+    },
+    {
+      "id": "primary-locke-essay-book-iv",
+      "sourceType": "primary_text",
+      "authors": [
+        "John Locke"
+      ],
+      "title": "An Essay Concerning Human Understanding, Book IV",
+      "year": 1690,
+      "url": "https://www.earlymoderntexts.com/assets/pdfs/locke1690book4.pdf",
+      "accessNote": "Modernized text edition of Locke's work; cited to the book and section numbering, with the SEP entry providing interpretive context."
+    },
+    {
+      "id": "primary-rand-objectivist-ethics",
+      "sourceType": "primary_text",
+      "authors": [
+        "Ayn Rand"
+      ],
+      "title": "The Objectivist Ethics",
+      "container": "The Virtue of Selfishness",
+      "year": 1961,
+      "url": "https://courses.aynrand.org/works/the-objectivist-ethics/",
+      "accessNote": "Primary essay used only for Rand's stated life-grounded ethical criterion; the active WVS items remain independently authored and are not validated by this text."
+    }
+  ],
+  "profiles": [
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "reference-profile-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "philosophical-anarchism-general-obligation-scoped",
+      "label": "Philosophical anarchism — general content-independent obedience criterion (scoped)",
+      "entityType": "tradition",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "One comparison criterion: whether there is a general moral duty to obey law merely because it is law. This does not reconstruct philosophical anarchism as a whole.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "A posteriori philosophical anarchism",
+        "Consent-based accounts of political obligation",
+        "Content-independent authority",
+        "Prudential or moral reasons to comply without a general duty"
+      ],
+      "nonEntailments": [
+        "Immediate abolition of the state",
+        "Rejection of voting, courts, or all institutions",
+        "Violence, resistance, or refusal to comply in every case",
+        "The claim that no law can create any moral reason for action",
+        "Moral skepticism"
+      ],
+      "unmeasuredAreas": [
+        "The full range of arguments for and against political obligation",
+        "Institutional alternatives, transition, and the practical feasibility of anarchist arrangements",
+        "Whether democracy, consent, fairness, or consequences can ground particular obligations"
+      ],
+      "claims": [
+        {
+          "id": "general-content-independent-obligation",
+          "propositionId": "legacy-philosophical-anarchism-no-general-obedience",
+          "targetKind": "scope",
+          "targetText": "The philosophical-anarchist position about a general content-independent duty to obey, not a policy of immediate institutional abolition.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "primary_text",
+          "mappingStatus": "DIRECT",
+          "routeAvailability": [
+            "quick",
+            "standard",
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "primary-wolff-in-defense-of-anarchism",
+              "relationship": "supports_profile_claim",
+              "locator": "Chapter I, section 3, conclusion on autonomy and a duty to obey laws simply because they are laws.",
+              "claim": "Wolff's argument denies that citizens have a general duty to obey state laws solely because they are laws; this is one argument within philosophical anarchism."
+            },
+            {
+              "sourceId": "acad-obligation",
+              "relationship": "supports_profile_claim",
+              "locator": "Section 3.2, 'Against Philosophical Anarchism.'",
+              "claim": "The scholarly overview treats philosophical-anarchist arguments as challenges to a general obligation to obey law and distinguishes variants of those arguments."
+            }
+          ],
+          "neighbors": [
+            "Consent theory",
+            "Fair-play accounts",
+            "Anarchism as a political program"
+          ],
+          "nonEntailments": [
+            "State abolition",
+            "A specific institutional replacement",
+            "Violent methods",
+            "No reason to comply with any law"
+          ],
+          "limitations": [
+            "The active WVS target is a narrowly scoped comparison rule; it does not settle competing arguments or internal variants.",
+            "PLI048 and the other mapped items concern the stated obligation criterion, not every reason for compliance."
+          ]
+        }
+      ],
+      "limitations": [
+        "This is a single-criterion comparison, not a complete philosophical-anarchist profile.",
+        "Do not infer abolition, institutional rejection, tactics, or general noncompliance from this result."
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "reference-profile-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "pragmatism-pragmatic-maxim-scoped",
+      "label": "Pragmatism — pragmatic-maxim criterion (scoped)",
+      "entityType": "tradition",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "The pragmatic maxim as a method for clarifying concepts and apparent disputes through conceivable practical or experiential bearings; not a complete account of pragmatism.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "Generic fallibilism",
+        "Scientific empiricism",
+        "Instrumentalism",
+        "Logical verificationism",
+        "Consequences as one useful clarification technique"
+      ],
+      "nonEntailments": [
+        "A belief is true merely because it is useful",
+        "A complete pragmatist theory of truth",
+        "Rejection of mind-independent reality",
+        "Reduction of all meaningful claims to observation",
+        "A political or religious position"
+      ],
+      "unmeasuredAreas": [
+        "Pragmatist theories of truth and realism",
+        "The roles of inquiry, community, habit, and experimental practice across pragmatist traditions",
+        "Differences among Peirce, James, Dewey, and later pragmatists"
+      ],
+      "claims": [
+        {
+          "id": "pragmatic-maxim",
+          "propositionId": "construct-EP16",
+          "targetKind": "proposition",
+          "targetText": "Disputed ideas should be clarified through their conceivable effects on experience or conduct; if two formulations have no conceivable difference in those effects, their apparent conceptual difference is not substantive.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "primary_text",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "primary-peirce-how-to-make-ideas-clear",
+              "relationship": "supports_profile_claim",
+              "locator": "Part II, Peirce's statement and explanation of the pragmatic maxim.",
+              "claim": "Peirce's maxim clarifies a conception by considering the conceivable practical bearings of its object."
+            },
+            {
+              "sourceId": "acad-pragmatism",
+              "relationship": "supports_profile_claim",
+              "locator": "Sections 2 and 2.1; compare sections 3.1 and 3.2 for variation about truth.",
+              "claim": "The scholarly account presents Peirce's maxim as a method for clarifying hypotheses through experience while documenting disagreement among pragmatists about truth and reality."
+            }
+          ],
+          "neighbors": [
+            "Fallibilism",
+            "Empiricism",
+            "Instrumentalism",
+            "Verificationism"
+          ],
+          "nonEntailments": [
+            "Truth is whatever works",
+            "Antirealism",
+            "Scientific method as a complete philosophy"
+          ],
+          "limitations": [
+            "Only the stated clarification criterion is represented; the full tradition is not.",
+            "The active item set does not distinguish all pragmatist accounts of truth, realism, or inquiry."
+          ]
+        }
+      ],
+      "limitations": [
+        "The profile does not claim to measure every pragmatist doctrine or settle internal disagreement.",
+        "The direct criterion is available only on the Full route; its omission on Quick or Standard is not opposition."
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "reference-profile-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "charles-s-peirce-scoped-commitments",
+      "label": "Charles S. Peirce — pragmatic clarification and fallibilist inquiry (scoped)",
+      "entityType": "philosopher",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "Two selected commitments in Peirce's work: pragmatic clarification and the fallibility of knowledge claims. This is not a whole-philosopher reconstruction.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "Jamesian pragmatism",
+        "Generic empiricism",
+        "Fallibilism without the pragmatic maxim",
+        "Pragmatism with different views of truth or realism"
+      ],
+      "nonEntailments": [
+        "Peirce's complete theory of truth or reality",
+        "Skepticism or epistemic pessimism",
+        "The doctrines of tychism, synechism, or agapism",
+        "Peirce's semiotics, categories, or complete theory of inquiry"
+      ],
+      "unmeasuredAreas": [
+        "Semiotics and the theory of signs",
+        "Categories, normative sciences, and the architectonic structure of his philosophy",
+        "Tychism, synechism, agapism, and the detailed account of truth and reality",
+        "Abduction and the full logic of scientific inquiry"
+      ],
+      "claims": [
+        {
+          "id": "peircean-pragmatic-maxim",
+          "propositionId": "construct-EP16",
+          "targetKind": "proposition",
+          "targetText": "Disputed ideas should be clarified through their conceivable effects on experience or conduct; if two formulations have no conceivable difference in those effects, their apparent conceptual difference is not substantive.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "primary_text",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "primary-peirce-how-to-make-ideas-clear",
+              "relationship": "supports_profile_claim",
+              "locator": "Part II, 'How to Make Our Ideas Clear.'",
+              "claim": "Peirce formulates the pragmatic maxim as clarifying a conception through the conceivable practical bearings of its object."
+            },
+            {
+              "sourceId": "acad-pragmatism",
+              "relationship": "supports_profile_claim",
+              "locator": "Section 2.1, 'Peirce: The Pragmatic Maxim.'",
+              "claim": "The scholarly reconstruction identifies the maxim as central to Peirce's original conception of pragmatism."
+            }
+          ],
+          "neighbors": [
+            "Jamesian pragmatism",
+            "Instrumentalism",
+            "Verificationism"
+          ],
+          "nonEntailments": [
+            "A full Peircean system",
+            "One theory of truth shared by all pragmatists"
+          ],
+          "limitations": [
+            "This question represents the maxim's selected clarification role, not Peirce's complete philosophical system."
+          ]
+        },
+        {
+          "id": "peircean-fallibilist-knowledge",
+          "propositionId": "construct-EP15",
+          "targetKind": "proposition",
+          "targetText": "A claim can count as knowledge even when its justification leaves open a possibility of error.",
+          "expectedState": "supported",
+          "importance": "major",
+          "evidenceBasis": "primary_text",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "standard",
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "primary-peirce-fallibilism-continuity-evolution",
+              "relationship": "supports_profile_claim",
+              "locator": "Collected Papers 1.141–1.175, especially section 1.141 on the limits of certainty in reasoning.",
+              "claim": "Peirce argues that reasoning about factual matters cannot achieve absolute certainty; this claim is about fallibility, not that all beliefs are false."
+            },
+            {
+              "sourceId": "iep-fallibilism",
+              "relationship": "supports_profile_claim",
+              "locator": "Introduction and sections 2–3 on fallible justification and the possibility of knowledge.",
+              "claim": "The scholarly account distinguishes the possibility of error in justification from skepticism and explains how fallible justification can be compatible with knowledge."
+            },
+            {
+              "sourceId": "acad-pragmatism",
+              "relationship": "supports_profile_claim",
+              "locator": "Section 2, discussion of the fallibilist, anti-Cartesian norms of inquiry.",
+              "claim": "The scholarly account connects Peircean pragmatism with fallibilist inquiry while distinguishing Peirce's framework from other pragmatist views."
+            }
+          ],
+          "neighbors": [
+            "Skepticism",
+            "Mere willingness to revise",
+            "Infallibilism about some kinds of knowledge"
+          ],
+          "nonEntailments": [
+            "No knowledge is possible",
+            "All beliefs are false",
+            "A particular respondent's confidence is low"
+          ],
+          "limitations": [
+            "The WVS proposition concerns the possibility of fallible knowledge, not the whole range or scope of Peirce's fallibilism.",
+            "The comparison does not test Peirce's arguments about science, continuity, or objective chance."
+          ]
+        }
+      ],
+      "limitations": [
+        "Two selected commitments cannot stand in for Peirce's broad and internally connected body of work.",
+        "The pragmatic-maxim criterion is Full-only; Quick and Standard results leave that central criterion unmeasured."
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "reference-profile-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "external-world-empiricism-warrant-scoped",
+      "label": "Empiricism about concrete external facts — experiential-warrant criterion (scoped)",
+      "entityType": "tradition",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "One epistemic criterion: experiential evidence is ultimately required for knowledge claims about concrete external reality. It does not represent empiricism as a whole.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "Empiricism about the origin of concepts",
+        "Rationalist accounts of a priori external-world knowledge",
+        "Scientific empiricism",
+        "Skepticism about the external world"
+      ],
+      "nonEntailments": [
+        "All knowledge comes from sensory experience",
+        "Reasoning is unimportant or dispensable",
+        "A denial of a priori knowledge in mathematics or ethics",
+        "Naive realism or a complete theory of perception"
+      ],
+      "unmeasuredAreas": [
+        "The source of concepts and the existence of innate ideas",
+        "Whether a priori knowledge is possible in mathematics, logic, ethics, or other domains",
+        "The structure of perception and the relation between experience and external objects"
+      ],
+      "claims": [
+        {
+          "id": "experiential-warrant-for-external-facts",
+          "propositionId": "construct-EP20",
+          "targetKind": "proposition",
+          "targetText": "Knowledge claims about concrete external reality ultimately require experiential evidence; reasoning alone cannot establish new external-world facts.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "scholarly_reconstruction",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "sep-rationalism-empiricism",
+              "relationship": "supports_profile_claim",
+              "locator": "Sections 1.1–1.2, on empiricism and knowledge of the external world.",
+              "claim": "The scholarly account frames empiricism and rationalism partly in terms of whether experience is required for knowledge of external-world facts, while allowing reasoning to organize evidence."
+            },
+            {
+              "sourceId": "primary-locke-essay-book-iv",
+              "relationship": "supports_profile_claim",
+              "locator": "Book IV, chapter XI, especially sections 1 and 3–6.",
+              "claim": "Locke distinguishes intuitive knowledge of one's existence, demonstrative knowledge of God, and sensitive knowledge of other things; this illustrates why the WVS comparison is restricted to external-world factual warrant."
+            }
+          ],
+          "neighbors": [
+            "Rationalism",
+            "Skepticism",
+            "Scientific empiricism"
+          ],
+          "nonEntailments": [
+            "A complete Locke profile",
+            "Universal empiricism about every domain",
+            "Rejection of deduction or scientific reasoning"
+          ],
+          "limitations": [
+            "Only a subject-scoped external-world warrant criterion is represented.",
+            "The WVS target cannot distinguish all historical or contemporary forms of empiricism."
+          ]
+        }
+      ],
+      "limitations": [
+        "This criterion must not be presented as a complete empiricist worldview or as a classification of Locke.",
+        "The criterion is available only on the Full route; omission from shorter routes remains unmeasured."
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "reference-profile-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "act-consequentialism-direct-criterion-scoped",
+      "label": "Act consequentialism — direct maximizing rightness criterion (scoped)",
+      "entityType": "tradition",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "One criterion: an act's own consequences directly determine its moral rightness, with a better available outcome ruling out a worse act. The profile does not identify utilitarianism or a theory of value.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "Full rule consequentialism",
+        "Satisficing consequentialism",
+        "Deontological constraints",
+        "Generic outcome sensitivity"
+      ],
+      "nonEntailments": [
+        "Utilitarianism",
+        "Welfarism",
+        "Hedonism",
+        "Impartial maximizing across all persons in every formulation",
+        "An empirically calibrated moral type"
+      ],
+      "unmeasuredAreas": [
+        "What counts as good or bad outcome value",
+        "Whether welfare is the only intrinsic good",
+        "The full scope of impartiality and aggregation",
+        "How the criterion applies to demandingness, rights, and side constraints"
+      ],
+      "claims": [
+        {
+          "id": "direct-act-maximizing-criterion",
+          "propositionId": "reviewed-NE22-act-consequence-criterion",
+          "targetKind": "proposition",
+          "targetText": "An act’s own consequences ultimately determine its moral rightness, and an available act with a better outcome for everyone affected rules out a worse act as permissible.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "scholarly_reconstruction",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "sep-act-consequence-criterion",
+              "relationship": "supports_profile_claim",
+              "locator": "Sections 1–2 and 5, distinguishing direct act criteria, maximization, rule criteria, and decision procedures.",
+              "claim": "The scholarly account defines act consequentialism by the consequences of the act and a maximizing rightness condition, while distinguishing it from rule consequentialism and from decision procedures."
+            }
+          ],
+          "neighbors": [
+            "Rule consequentialism",
+            "Satisficing consequentialism",
+            "Deontology",
+            "Outcome-sensitive pluralism"
+          ],
+          "nonEntailments": [
+            "Utilitarianism",
+            "Welfarism",
+            "Hedonism",
+            "A single recommended decision procedure"
+          ],
+          "limitations": [
+            "The criterion does not state what makes outcomes good or bad.",
+            "The active route presents the direct criterion only in Full."
+          ]
+        }
+      ],
+      "limitations": [
+        "This is a scoped criterion comparison; it is not a whole tradition profile and it does not imply a respondent identity.",
+        "The single mapped criterion cannot establish utilitarianism, welfarism, or hedonism."
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "reference-profile-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "ethical-egoism-exclusive-self-priority-scoped",
+      "label": "Ethical egoism — exclusive moral self-priority criterion (scoped)",
+      "entityType": "tradition",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "One narrow normative criterion associated with ethical egoism: each agent's own long-term good is the ultimate moral end and another person's need alone supplies no independent moral reason. This does not represent the standard maximizing if-and-only-if account of moral rightness.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "Standard maximizing ethical egoism",
+        "Rational egoism about practical reasons",
+        "Psychological egoism about motivation",
+        "Self-regarding prerogatives or duties of self-care",
+        "Stirnerian ownness"
+      ],
+      "nonEntailments": [
+        "That an act is morally right if and only if it best advances the agent's own good",
+        "That people in fact always act selfishly",
+        "That rationality always requires maximizing self-interest",
+        "Indifference to others or refusal to help",
+        "Rand's complete ethical system or any political position"
+      ],
+      "unmeasuredAreas": [
+        "The standard maximizing if-and-only-if criterion of moral rightness",
+        "Which theory of welfare or self-interest is correct",
+        "Rule-, character-, satisficing-, or other nonstandard variants of ethical egoism"
+      ],
+      "claims": [
+        {
+          "id": "exclusive-moral-self-priority",
+          "propositionId": "construct-NE15",
+          "targetKind": "proposition",
+          "targetText": "Each person morally ought to make their own long-term good the ultimate end of their actions; another person’s need alone supplies no independent moral reason.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "scholarly_reconstruction",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "acad-egoism",
+              "relationship": "supports_profile_claim",
+              "locator": "Sections 1–3",
+              "claim": "The scholarly account distinguishes ethical egoism's moral focus on the agent's own good from psychological and rational egoism; its standard formulation is stronger than this scoped WVS criterion, so maximization remains explicitly unmeasured here."
+            }
+          ],
+          "neighbors": [
+            "Maximizing ethical egoism",
+            "Rational egoism",
+            "Psychological egoism",
+            "Self-regarding permissions"
+          ],
+          "nonEntailments": [
+            "The standard claim that moral rightness is necessary and sufficient with maximizing the agent's own good",
+            "A descriptive claim that agents are always selfish",
+            "A claim that another person's interests never matter instrumentally"
+          ],
+          "limitations": [
+            "NE15 directly measures exclusive moral self-priority with a need-based discriminator, not the stronger maximizing criterion.",
+            "NEI100@1 and NEI101@1 share one authored evidence unit; Full obtains the second unit from NEI121@1 rather than treating the near-paraphrases as independent corroboration."
+          ]
+        }
+      ],
+      "limitations": [
+        "This is a one-criterion comparison and must not be presented as a complete ethical-egoism profile.",
+        "Only Full can assess the active proposition; Quick and Standard omission remains not measured."
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "reference-profile-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "ayn-rand-life-grounded-ethics-scoped",
+      "label": "Ayn Rand — life-grounded objective ethics criterion (scoped)",
+      "entityType": "philosopher",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "One selected commitment in Rand's ethics: requirements of human life and flourishing ground objective moral standards. This is not a reconstruction of Objectivism as a coordinated metaphysical, epistemological, ethical, and political system.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "Naturalistic or life-grounded ethics not derived from Rand",
+        "Other forms of eudaimonism",
+        "Generic moral realism",
+        "Ethical egoism without Rand's theory of value"
+      ],
+      "nonEntailments": [
+        "Objectivism as a complete philosophical system",
+        "Rand's specific rational-self-interest doctrine",
+        "Rand's theory of perception, concepts, or axiomatic knowledge",
+        "Rand's derivation of individual rights",
+        "Free-market or laissez-faire political commitments"
+      ],
+      "unmeasuredAreas": [
+        "Rand's rational self-interest within a life-grounded ethics",
+        "Rand's perceptual and conceptual epistemology",
+        "Rand's derivation and scope of individual rights",
+        "The wider metaphysical and political commitments of Objectivism"
+      ],
+      "claims": [
+        {
+          "id": "life-grounded-objective-ethics",
+          "propositionId": "construct-ME09",
+          "targetKind": "scope",
+          "targetText": "Whether requirements of human life and flourishing ground objective moral standards. Separate from mere biological description or current preferences.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "primary_text",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "primary-rand-objectivist-ethics",
+              "relationship": "supports_profile_claim",
+              "locator": "Passages on value and life as the standard, including the statement of man's life as the Objectivist standard of value (The Virtue of Selfishness, pp. 16–27)",
+              "claim": "Rand presents life as the standard of value and argues that objective ethics is grounded in the requirements of human life rather than in arbitrary preference."
+            },
+            {
+              "sourceId": "acad-rand",
+              "relationship": "supports_profile_claim",
+              "locator": "Section 2.1",
+              "claim": "The scholarly overview describes Rand's ethical theory as grounding value in the requirements of human life while situating that claim inside a larger system."
+            }
+          ],
+          "neighbors": [
+            "Generic moral realism",
+            "Naturalistic ethics",
+            "Other eudaimonist accounts of flourishing"
+          ],
+          "nonEntailments": [
+            "Rational egoism or ethical egoism in every formulation",
+            "Rand's full epistemology or metaphysics",
+            "Rand's political theory or derivation of rights"
+          ],
+          "limitations": [
+            "ME09 captures only the life-and-flourishing grounding criterion.",
+            "The active NE15, EP20, and rights propositions are broader neighboring claims and remain insufficiently specific to fill Rand's other defining commitments."
+          ]
+        }
+      ],
+      "limitations": [
+        "This profile deliberately promotes one exact Rand-specific commitment, not Objectivism as a system.",
+        "Only Full can assess ME09; shorter-route omission must remain not measured."
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "profileVersion": "john-stuart-mill-scoped-1.0.0",
+      "modelVersion": "generic-1.17.0-pilot",
+      "routePolicyVersion": "progressive-depth-2.8.0",
+      "id": "john-stuart-mill-general-happiness-scoped",
+      "label": "John Stuart Mill — general happiness criterion (scoped)",
+      "entityType": "philosopher",
+      "origin": "independent_authoring",
+      "coverageStatus": "partial",
+      "publicationStatus": "internal_only",
+      "scope": "An internal, source-traceable comparison of John Stuart Mill's first-principle commitment to the general happiness as the ultimate moral standard; not a complete reconstruction of Mill's ethics, utilitarianism, or political philosophy.",
+      "identityOutputAllowed": false,
+      "percentageMatchAllowed": false,
+      "neighbors": [
+        "Benthamite utilitarianism",
+        "rule consequentialism",
+        "act consequentialism",
+        "pluralist moral theories",
+        "non-utilitarian liberalism"
+      ],
+      "nonEntailments": [
+        "A settled classification of Mill as an act utilitarian",
+        "A settled classification of Mill as a rule utilitarian",
+        "A sanction-utilitarian reconstruction of duty",
+        "Adoption of the NE25 total-welfare promise-case commitment",
+        "Adoption of NE24 welfare-only outcome value",
+        "A simple quantitative hedonism",
+        "Mill's qualitative higher-pleasures doctrine",
+        "Mill's theory of liberty, rights, justice, or political economy",
+        "A complete Millian or utilitarian identity"
+      ],
+      "unmeasuredAreas": [
+        "Higher vs lower pleasures qualitative hierarchy",
+        "Harm principle and individual liberty boundaries",
+        "Representative democracy and epistemic voting",
+        "Secondary moral principles decision procedures",
+        "Act vs rule vs sanction utilitarian reconstruction"
+      ],
+      "limitations": [
+        "This comparison tests only the first-principle status of the general happiness standard.",
+        "It does not classify respondents as utilitarians or determine act vs rule consequentialism.",
+        "The proposition is evaluated only on the Full route; Quick and Standard routes leave it not measured."
+      ],
+      "claims": [
+        {
+          "id": "mill-general-happiness-ultimate-standard",
+          "propositionId": "reviewed-NE26-general-happiness-ultimate-standard",
+          "targetKind": "proposition",
+          "targetText": "General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.",
+          "expectedState": "supported",
+          "importance": "core",
+          "evidenceBasis": "primary_text",
+          "mappingStatus": "ROUTE_LIMITED",
+          "routeAvailability": [
+            "full"
+          ],
+          "publicUse": "comparison",
+          "sourceClaims": [
+            {
+              "sourceId": "primary-mill-utilitarianism-ch2",
+              "relationship": "supports_profile_claim",
+              "locator": "Chapter II",
+              "claim": "Mill holds that the Greatest Happiness Principle is the foundation of morality, treating general happiness as the ultimate moral standard while recognizing secondary principles."
+            },
+            {
+              "sourceId": "sep-mill-moral-political",
+              "relationship": "supports_profile_claim",
+              "locator": "Sections 2.6–2.10",
+              "claim": "Scholars distinguish Mill's general happiness standard from decision procedures and record competing direct, rule, and sanction reconstructions."
+            }
+          ],
+          "neighbors": [
+            "act consequentialism",
+            "rule consequentialism",
+            "pluralist moral theories"
+          ],
+          "nonEntailments": [
+            "A settled classification of Mill as an act or rule consequentialist",
+            "An endorsement of total-welfare maximization in every dilemma"
+          ],
+          "limitations": [
+            "The claim is evaluated on the Full route only and does not establish a complete utilitarian worldview."
+          ]
+        }
+      ]
+    }
+  ]
+}
