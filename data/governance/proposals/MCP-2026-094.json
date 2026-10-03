@@ -5,7 +5,7 @@
   "author": "Worldview Sorter AI editorial review",
   "objectType": "proposition",
   "changeClass": "new_object",
-  "status": "under_review",
+  "status": "approved",
   "affectedObjects": [
     {
       "type": "item",
@@ -118,11 +118,27 @@
       "reference_profile_gate"
     ],
     "paths": [
-      "scripts/test-mill-general-happiness-design.mjs"
+      "scripts/test-mill-general-happiness-design.mjs",
+      "scripts/test-evidence-gap-release-v1.mjs",
+      "scripts/test-reference-profile-catalog.mjs",
+      "scripts/test-reference-readiness-audit.mjs"
     ]
   },
   "review": {
-    "approvals": []
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-10-03T05:20:00Z",
+        "note": "Rechecked Mill Utilitarianism Chapter II and current SEP interpretation boundaries. Approved only the interpretation-neutral general-happiness first-principle proposition; act/rule/sanction classification remains unentailed."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI engineering review",
+        "at": "2026-10-03T05:20:00Z",
+        "note": "Approved activation only with two new Full-only evidence units, neighbor non-substitution, act/rule neutrality, source tracing, historical replay, and the internal-only reference-profile gate."
+      }
+    ]
   },
   "release": {
     "components": [
@@ -144,6 +160,9 @@
   "implementationRefs": [
     "docs/plan/mill-general-happiness-v1/research-design.md",
     "docs/plan/mill-general-happiness-v1/regression-design.md",
-    "scripts/test-mill-general-happiness-design.mjs"
+    "scripts/test-mill-general-happiness-design.mjs",
+    "docs/plan/evidence-gap-release-v1/research-decision.md",
+    "scripts/build-evidence-gap-release-v1.mjs",
+    "scripts/test-evidence-gap-release-v1.mjs"
   ]
 }
