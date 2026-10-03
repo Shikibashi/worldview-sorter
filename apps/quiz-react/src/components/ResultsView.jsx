@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { resultStatusLabel, formatResponseCoverage } from '../../../../packages/experience/result-overview.js';
+import { resultStatusLabel, formatResponseCoverage, formatTensionDetails } from '../../../../packages/experience/result-overview.js';
 import { buildShareSnapshot, shareSnapshotText, shareSnapshotSvg, readingTrailFor, compareTraditions } from '../../../../packages/experience/engagement.js';
 import ResultsNav from './ResultsNav.jsx';
 
@@ -26,6 +26,61 @@ function ExternalSource({ source, onOpen }) {
   return valid
     ? <a href={source.url} target="_blank" rel="noopener noreferrer" onClick={onOpen}>{source.title}<span className="sr-only"> (opens in a new tab)</span></a>
     : <span>{source.title}</span>;
+}
+
+export function TensionCard({ tension, summary, onActivity }) {
+  const details = formatTensionDetails(tension, summary);
+  if (!details) return null;
+
+  return (
+    <article className="wvs-tension" data-tension-id={details.id} data-relation={details.relation}>
+      <div className="wvs-tension-head">
+        <span className={`wvs-relation-badge wvs-relation-${details.relation}`}>
+          {details.relationLabel}
+        </span>
+        <span className="wvs-tension-domain">{details.domainTitle}</span>
+      </div>
+      <h3 className="wvs-tension-title">{details.title}</h3>
+
+      {details.answers?.length > 0 && (
+        <div className="wvs-tension-answers">
+          <p className="wvs-tension-subhead">Responses in tension:</p>
+          <ul className="wvs-tension-answer-list">
+            {details.answers.map((ans, idx) => (
+              <li key={ans.itemId ?? idx} className={`wvs-tension-answer wvs-tension-answer-${ans.direction}`}>
+                <p className="wvs-tension-question-text"><strong>{ans.itemId}:</strong> {ans.text}</p>
+                <p className="wvs-tension-response"><strong>Your answer:</strong> {ans.answer}</p>
+                <p className="wvs-tension-meaning"><em>Evidence meaning:</em> {ans.meaning}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div className="wvs-tension-why">
+        <p className="wvs-tension-subhead">Why these answers differ:</p>
+        <p>{details.why}</p>
+      </div>
+
+      {details.discriminatingQuestions?.length > 0 && (
+        <div className="wvs-tension-discriminators">
+          <p className="wvs-tension-subhead">Discriminating questions to consider:</p>
+          {details.discriminatingQuestions.map((dq, qIdx) => (
+            <div key={qIdx} className="wvs-tension-discriminator">
+              <p className="wvs-discriminator-prompt">{dq.prompt}</p>
+              {dq.options?.length > 0 && (
+                <ul className="wvs-discriminator-options">
+                  {dq.options.map((opt, oIdx) => (
+                    <li key={oIdx}>{opt}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </article>
+  );
 }
 
 export function Pattern({ row, onActivity }) {
@@ -308,9 +363,9 @@ export default function ResultsView({ runtime, quiz, summary, activity, onActivi
             <div className="wvs-section-heading"><p className="e-eyebrow">04 / Open questions</p><h2 id="tension-title">Answers worth exploring</h2>
               <p>A mixed result is not a consistency grade. Some views coexist; others call for a distinction or clarification.</p>
             </div>
-            <div className="wvs-tension-list">{summary.tensions.map((tension, index) => <article className="wvs-tension" key={tension.id ?? index}>
-              <span>Potential tension</span><p>{tension.explanation}</p>
-            </article>)}</div>
+            <div className="wvs-tension-list">{summary.tensions.map((tension, index) => (
+              <TensionCard key={tension.id ?? index} tension={tension} summary={summary} onActivity={onActivity} />
+            ))}</div>
           </section>}
 
           <section id="activity-section" className="wvs-section" aria-labelledby="activity-title">
