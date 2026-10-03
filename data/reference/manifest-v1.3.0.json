@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "manifestVersion": "reference-profile-manifest-1.3.0",
+  "catalogVersion": "reference-profile-catalog-1.3.0",
+  "profileModelVersion": "reference-profile-model-1.3.0",
+  "sourceLedgerVersion": "reference-profile-sources-1.3.0",
+  "modelReleaseVersion": "model-release-1.20.0",
+  "components": {
+    "profileCatalog": {
+      "version": "reference-profile-catalog-1.3.0",
+      "path": "data/reference/reference-profiles-v1.3.0.json",
+      "sha256": "b8f4379d6b50504e2b676d3049adb8a43903c376ed902de371656d77ee651772"
+    },
+    "worldviewModel": {
+      "version": "generic-1.17.0-pilot",
+      "path": "data/generic/model-v1.17-pilot.json",
+      "sha256": "3e605180d211765664d733af6155ea52b88a3f4c5934b02716aedd2078766e13"
+    },
+    "progressiveRoutes": {
+      "version": "progressive-depth-2.8.0",
+      "path": "data/experience/progressive-depth-v2.8.json",
+      "sha256": "79d9b47f917ec9ef097b8121216a8ac711c4292e1098b000147e2d347fae89f6"
+    }
+  },
+  "profileIds": [
+    "philosophical-anarchism-general-obligation-scoped",
+    "pragmatism-pragmatic-maxim-scoped",
+    "charles-s-peirce-scoped-commitments",
+    "external-world-empiricism-warrant-scoped",
+    "act-consequentialism-direct-criterion-scoped",
+    "ethical-egoism-exclusive-self-priority-scoped",
+    "ayn-rand-life-grounded-ethics-scoped",
+    "john-stuart-mill-general-happiness-scoped"
+  ],
+  "externalSourceIds": [
+    "primary-locke-essay-book-iv",
+    "primary-peirce-fallibilism-continuity-evolution",
+    "primary-peirce-how-to-make-ideas-clear",
+    "primary-rand-objectivist-ethics",
+    "primary-wolff-in-defense-of-anarchism"
+  ]
+}

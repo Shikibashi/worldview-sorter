@@ -1,0 +1,71 @@
+// Regression test verifying legal-validity limits research design invariants,
+// audit facts, item assignment state, and Radbruch threshold coherence blockers.
+
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+
+const root = new URL('../', import.meta.url);
+const readJson = async file => JSON.parse(await readFile(new URL(file, root), 'utf8'));
+
+const current = await readJson('data/current.json');
+const [model, depth, contentReview, bank] = await Promise.all([
+  readJson(current.worldviewModel.path),
+  readJson(current.progressiveDepth.path),
+  readJson(current.contentReview.path),
+  readJson(current.candidateBank.path)
+]);
+
+// 1. Audit Facts Verification
+const moralLimitsRule = model.commitments.find(r => r.id === 'moral-limits-validity');
+assert.ok(moralLimitsRule, 'moral-limits-validity rule must exist in active model');
+
+const fullRoute = depth.routes.find(r => r.id === 'full');
+assert.ok(fullRoute, 'Full route must exist');
+const fullItemIds = new Set(fullRoute.itemRefs.map(r => r.itemId));
+
+// Assigned item on Full is PLI073@1, NOT PLI014
+assert.ok(fullItemIds.has('PLI073'), 'PLI073 must be assigned on Full route');
+assert.ok(!fullItemIds.has('PLI072'), 'PLI072 must NOT be assigned on Full route');
+assert.ok(moralLimitsRule.evidence.some(e => e.itemId === 'PLI073'),
+  'moral-limits-validity must include PLI073 in its evidence');
+assert.ok(moralLimitsRule.evidence.some(e => e.itemId === 'PLI072'),
+  'moral-limits-validity must include PLI072 in its evidence');
+assert.ok(!moralLimitsRule.evidence.some(e => e.itemId === 'PLI014'),
+  'moral-limits-validity must NOT include PLI014 in its evidence (audit typo corrected)');
+
+// Content review status
+const pli073Review = contentReview.decisions.find(d => d.itemId === 'PLI073');
+assert.ok(pli073Review, 'PLI073 must have a recorded content review');
+assert.equal(pli073Review.decision, 'retain_for_pilot');
+assert.equal(pli073Review.issue, 'legal_jargon');
+
+const pli072Review = contentReview.decisions.find(d => d.itemId === 'PLI072');
+assert.equal(pli072Review, undefined,
+  'PLI072 must have NO recorded review decision in content-review-v1.11.json');
+
+// 2. Full route status invariant
+assert.ok(!fullRoute.assessableDirectRuleIds.includes('moral-limits-validity'),
+  'moral-limits-validity must remain not_measured on Full route until revised');
+
+// 3. Documented Conceptual Blocker Checks
+// Blocker 2: PLI073 maps defective_law to support
+const pli073Mapping = moralLimitsRule.evidence.find(e => e.itemId === 'PLI073');
+assert.ok(pli073Mapping.support.includes('defective_law'),
+  'Documents existing blocker: defective_law is conflated with not_law as support');
+assert.ok(pli073Mapping.support.includes('not_law'),
+  'not_law is mapped as support');
+
+// Blocker 3: Radbruch threshold coherence against source-based-validity
+const sourceBasedRule = model.commitments.find(r => r.id === 'source-based-validity');
+assert.ok(sourceBasedRule, 'source-based-validity rule must exist');
+const pli071Mapping = sourceBasedRule.evidence.find(e => e.itemId === 'PLI071');
+const pli073SourceMapping = sourceBasedRule.evidence.find(e => e.itemId === 'PLI073');
+
+assert.ok(pli071Mapping.support.includes(1), 'Agreeing to PLI071 supports source-based-validity');
+assert.ok(pli073SourceMapping.oppose.includes('not_law'),
+  'Selecting not_law on PLI073 opposes source-based-validity');
+// Consequence: A coherent Radbruch respondent who affirms that ordinary unjust law can be valid (PLI071:1)
+// but extreme injustice is not law (PLI073:not_law) gets 1 support and 1 oppose on source-based-validity,
+// producing a spurious mixed_context_dependent conflict.
+
+console.log('Legal validity limits research design regressions passed: audit facts, content review omission, and conceptual blockers validated.');

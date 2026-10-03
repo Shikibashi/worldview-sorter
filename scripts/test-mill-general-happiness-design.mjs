@@ -25,7 +25,7 @@ if (current.modelRelease.version === 'model-release-1.20.0') {
   assert.equal(current.candidateBank.version, '0.19.0');
   assert.equal(current.progressiveDepth.version, 'progressive-depth-2.7.0');
 }
-assert.equal(referenceCurrent.catalogVersion, current.modelRelease.version === 'model-release-1.20.0' ? 'reference-profile-catalog-1.2.0' : 'reference-profile-catalog-1.1.0');
+assert.ok(['reference-profile-catalog-1.2.0', 'reference-profile-catalog-1.3.0'].includes(referenceCurrent.catalogVersion));
 
 assert.equal(validateProposal(proposal),proposal);
 const proposedRule='reviewed-NE26-general-happiness-ultimate-standard';
@@ -52,8 +52,13 @@ for(const id of [
   'reviewed-NE25-total-welfare-maximization'
 ]) assert.ok(model.commitments.some(row=>row.id===id),'Missing neighboring proposition '+id);
 
-assert.ok(!catalog.profiles.some(row=>/mill/i.test(row.id)||/john stuart mill/i.test(row.label)),
-  'Mill must remain unprofiled while NE26 is only a design.');
+if (referenceCurrent.catalogVersion === 'reference-profile-catalog-1.2.0') {
+  assert.ok(!catalog.profiles.some(row=>/mill/i.test(row.id)||/john stuart mill/i.test(row.label)),
+    'Mill must remain unprofiled while NE26 is only a design.');
+} else {
+  assert.ok(catalog.profiles.some(row=>row.id === 'john-stuart-mill-general-happiness-scoped'),
+    'Mill scoped profile is present in catalog 1.3.0 after NE26 canary activation.');
+}
 
 for(const route of routes.routes){
   if (route.id === 'full' && current.modelRelease.version === 'model-release-1.20.0') {

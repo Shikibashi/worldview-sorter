@@ -25,7 +25,7 @@ assert.equal(nei030Review.issue, 'near_duplicate_local_dependence');
 
 const pli072Review = evaluateItemContentReview('PLI072', contentReview);
 assert.equal(pli072Review.excluded, false, 'PLI072 must not be excluded');
-
+assert.equal(pli072Review.hasRecordedReview, false, 'PLI072 has no recorded review decision');
 // 2. Rank all 50 Full-route gaps
 const result = rankFullRouteGaps({
   gaps: dispositions.fullRouteGaps,
@@ -67,5 +67,12 @@ assert.ok(moralLimits, 'moral-limits-validity gap must exist');
 assert.equal(moralLimits.tier, 'tier_1_route_near_completion_candidate',
   'moral-limits-validity should be Tier 1 (route-near, unblocked item)');
 assert.equal(moralLimits.hasContentReviewExclusion, false);
-
+assert.ok(moralLimits.actionRecommendation.includes('PLI073@1'),
+  'moral-limits-validity recommendation must identify assigned item PLI073@1');
+assert.ok(moralLimits.actionRecommendation.includes('PLI072@1'),
+  'moral-limits-validity recommendation must identify missing bank item PLI072@1');
+assert.ok(moralLimits.actionRecommendation.includes('no recorded pilot review'),
+  'moral-limits-validity recommendation must state PLI072 has no recorded pilot review');
+assert.ok(moralLimits.actionRecommendation.includes('Radbruch threshold'),
+  'moral-limits-validity recommendation must reference Radbruch threshold coherence');
 console.log('Gap ranking regression passed: content-review exclusions forbid near-duplicate NEI030 from Tier 1; 4-tier taxonomy validated across 50 gaps.');

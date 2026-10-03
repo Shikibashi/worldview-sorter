@@ -1132,12 +1132,13 @@
     },
     {
       "id": "philosopher-mill-scoped",
-      "label": "John Stuart Mill — utility criterion (scoped)",
+      "label": "John Stuart Mill — general happiness criterion (scoped)",
       "entityType": "philosopher",
-      "scope": "A selected comparison of the greatest-happiness principle and impartial concern; not a complete reconstruction of Mill's ethics or political philosophy.",
+      "scope": "A selected comparison of the greatest-happiness principle as the ultimate moral standard; not a complete reconstruction of Mill's ethics or political philosophy.",
       "neighbors": [
         "Benthamite utilitarianism",
         "rule consequentialism",
+        "act consequentialism",
         "non-utilitarian liberalism",
         "pluralist theories of value"
       ],
@@ -1154,22 +1155,22 @@
         {
           "id": "mill-greatest-happiness-principle",
           "entityType": "philosopher",
-          "proposition": "The greatest happiness principle treats the promotion of general happiness as the ultimate moral standard.",
+          "proposition": "General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.",
           "doctrinalRole": "core",
           "evidenceBasis": "primary_text",
           "expectedPropositionState": "supported",
-          "mappingAssessment": "partial",
-          "propositionId": "reviewed-NE25-total-welfare-maximization",
+          "mappingAssessment": "exact",
+          "propositionId": "reviewed-NE26-general-happiness-ultimate-standard",
           "sourceClaims": [
             {
               "sourceId": "mill-utilitarianism",
-              "claim": "Mill states that actions are right in proportion as they promote happiness and wrong as they produce its reverse.",
+              "claim": "Mill states that actions are right in proportion as they promote happiness and wrong as they produce its reverse, and treats utility as the ultimate standard resolving conflicts among secondary principles.",
               "locator": "Chapter II"
             },
             {
               "sourceId": "sep-utilitarianism-history",
               "claim": "Mill is commonly read as a utilitarian, though scholars disagree about whether his criterion is best classified as act or rule consequentialist.",
-              "locator": "Sections 3–5"
+              "locator": "Sections 2 and 4"
             }
           ],
           "neighboringViews": [
@@ -1178,37 +1179,11 @@
             "pluralist moral theories"
           ],
           "nonEntailments": [
+            "A settled classification of Mill as an act or rule utilitarian.",
             "The specific total-welfare promise-case response alone establishes Mill's whole theory."
           ],
           "limitations": [
-            "NE25 tests a general rule plus one specified promise conflict, not the whole greatest-happiness principle."
-          ]
-        },
-        {
-          "id": "mill-act-consequence-reading",
-          "entityType": "philosopher",
-          "proposition": "Moral rightness is ultimately determined by the consequences of individual acts rather than by conformity to a consequence-justified code of rules.",
-          "doctrinalRole": "major",
-          "evidenceBasis": "scholarly_reconstruction",
-          "expectedPropositionState": "supported",
-          "mappingAssessment": "partial",
-          "propositionId": "reviewed-NE22-act-consequence-criterion",
-          "sourceClaims": [
-            {
-              "sourceId": "sep-utilitarianism-history",
-              "claim": "Some scholars interpret Mill's greatest-happiness criterion as act-utilitarian, while other interpretations emphasize rules and secondary principles.",
-              "locator": "Sections 3–5"
-            }
-          ],
-          "neighboringViews": [
-            "rule consequentialism",
-            "rule-guided act utilitarianism"
-          ],
-          "nonEntailments": [
-            "A settled consensus that Mill is an act consequentialist."
-          ],
-          "limitations": [
-            "The SEP records interpretive disagreement; this is an explicitly partial reading, not a canonical classification."
+            "NE26 tests the first-principle status of general happiness on Full; it does not reconstruct Mill's whole moral theory or resolve act vs rule debates."
           ]
         }
       ]

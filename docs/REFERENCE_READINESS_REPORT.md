@@ -24,7 +24,7 @@ This is an authored coverage audit. Its route counts are available evidence oppo
 | Philosophical anarchism — general political obligation criterion | `READY_FOR_PROFILE_AUTHORING` | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
 | Charles S. Peirce — pragmatic maxim and fallibilist inquiry (scoped) | `READY_FOR_PROFILE_AUTHORING` | 0 | 2 | 0 | 2 | 0 | 0 | 0 |
 | David Hume — empiricism, induction, and moral sentiment | `RESEARCH_GAPS` | 0 | 0 | 0 | 0 | 0 | 3 | 1 |
-| John Stuart Mill — utility criterion (scoped) | `PARTIAL_PROFILE_ONLY` | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| John Stuart Mill — general happiness criterion (scoped) | `READY_FOR_PROFILE_AUTHORING` | 0 | 1 | 0 | 1 | 0 | 0 | 0 |
 | Early Confucian ethics — roles and ritual cultivation | `RESEARCH_GAPS` | 0 | 0 | 1 | 0 | 0 | 2 | 0 |
 | Stoic ethics — virtue and indifferent externals | `RESEARCH_GAPS` | 0 | 0 | 1 | 0 | 0 | 2 | 0 |
 | Analytic philosophy — context-only category | `CONTEXT_ONLY` | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
@@ -290,26 +290,19 @@ Selected themes in Hume's theory of ideas, causal inference, and moral judgment;
 - No active proposition assesses Hume's problem of induction or the role of moral sentiment.
 - Scholars disagree about the scope of Hume's skeptical and noncognitivist conclusions.
 
-### John Stuart Mill — utility criterion (scoped)
+### John Stuart Mill — general happiness criterion (scoped)
 
-**Readiness:** `PARTIAL_PROFILE_ONLY`
+**Readiness:** `READY_FOR_PROFILE_AUTHORING`
 
-A selected comparison of the greatest-happiness principle and impartial concern; not a complete reconstruction of Mill's ethics or political philosophy.
-
-**Core gaps**:
-- `PARTIAL` — The greatest happiness principle treats the promotion of general happiness as the ultimate moral standard.
+A selected comparison of the greatest-happiness principle as the ultimate moral standard; not a complete reconstruction of Mill's ethics or political philosophy.
 
 | Claim | Role | Mapping | Interpretation path | WVS proposition | Adjacent propositions | Quick | Standard | Full |
 |---|---|---|---|---|---|---|---|---|---|
-| The greatest happiness principle treats the promotion of general happiness as the ultimate moral standard. | core | `PARTIAL` | direct | reviewed-NE25-total-welfare-maximization | — | not available (0/2 units; guaranteed) | not available (0/2 units; guaranteed) | capable (2/2 units; guaranteed) |
-| ↳ Source | | | | [John Stuart Mill, Utilitarianism (1861), Chapter II](https://www.earlymoderntexts.com/assets/pdfs/mill1863_1.pdf) | Mill states that actions are right in proportion as they promote happiness and wrong as they produce its reverse. (Chapter II; primary_text; does not validate the WVS item) | | | |
-| ↳ Source | | | | [Stanford Encyclopedia of Philosophy, The History of Utilitarianism](https://plato.stanford.edu/entries/utilitarianism-history/) | Mill is commonly read as a utilitarian, though scholars disagree about whether his criterion is best classified as act or rule consequentialist. (Sections 3–5; signed_scholarly_synthesis; does not validate the WVS item) | | | |
-| ↳ WVS source path | | | | claim_linked | sep-act-consequence-criterion, sep-promises-act-rule, sep-welfarism-outcome-value; item validity is assessed separately | | | |
-| ↳ Limitation | | | | | NE25 tests a general rule plus one specified promise conflict, not the whole greatest-happiness principle. | | | |
-| Moral rightness is ultimately determined by the consequences of individual acts rather than by conformity to a consequence-justified code of rules. | major | `PARTIAL` | direct | reviewed-NE22-act-consequence-criterion | — | not available (0/2 units; guaranteed) | not available (0/2 units; guaranteed) | capable (2/2 units; guaranteed) |
-| ↳ Source | | | | [Stanford Encyclopedia of Philosophy, The History of Utilitarianism](https://plato.stanford.edu/entries/utilitarianism-history/) | Some scholars interpret Mill's greatest-happiness criterion as act-utilitarian, while other interpretations emphasize rules and secondary principles. (Sections 3–5; signed_scholarly_synthesis; does not validate the WVS item) | | | |
-| ↳ WVS source path | | | | claim_linked | sep-act-consequence-criterion; item validity is assessed separately | | | |
-| ↳ Limitation | | | | | The SEP records interpretive disagreement; this is an explicitly partial reading, not a canonical classification. | | | |
+| General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act. | core | `ROUTE_LIMITED` | direct | reviewed-NE26-general-happiness-ultimate-standard | — | not available (0/2 units; guaranteed) | not available (0/2 units; guaranteed) | capable (2/2 units; guaranteed) |
+| ↳ Source | | | | [John Stuart Mill, Utilitarianism (1861), Chapter II](https://www.earlymoderntexts.com/assets/pdfs/mill1863_1.pdf) | Mill states that actions are right in proportion as they promote happiness and wrong as they produce its reverse, and treats utility as the ultimate standard resolving conflicts among secondary principles. (Chapter II; primary_text; does not validate the WVS item) | | | |
+| ↳ Source | | | | [Stanford Encyclopedia of Philosophy, The History of Utilitarianism](https://plato.stanford.edu/entries/utilitarianism-history/) | Mill is commonly read as a utilitarian, though scholars disagree about whether his criterion is best classified as act or rule consequentialist. (Sections 2 and 4; signed_scholarly_synthesis; does not validate the WVS item) | | | |
+| ↳ WVS source path | | | | claim_linked | primary-mill-utilitarianism-ch2, sep-mill-moral-political, sep-utilitarianism-history; item validity is assessed separately | | | |
+| ↳ Limitation | | | | | NE26 tests the first-principle status of general happiness on Full; it does not reconstruct Mill's whole moral theory or resolve act vs rule debates. | | | |
 
 **False-positive boundaries and non-entailments**:
 - One settled scholarly classification of Mill as act or rule utilitarian
