@@ -98,3 +98,16 @@ Reference-profile catalog 1.1.0 adds exactly two scoped internal comparisons:
 Mill remains unprofiled. The broader three readiness candidates remain `PARTIAL_PROFILE_ONLY`, which is intentional: authoring a narrower comparison does not erase the candidate-level gaps.
 
 The 1.0.0 reference catalog remains immutable. Version 1.1.0 remains `internal_only`, keeps `identityOutputAllowed: false` and `percentageMatchAllowed: false`, and is not added to `data/current.json`. Route omission remains `not_measured`. No winner, nearest-profile, similarity, aggregate-score, or percentage semantics are introduced.
+
+## Post-PR #37 follow-up: interpretation-neutral Mill evidence design
+
+A source-first follow-up at main `03169ee9bf346473ae4e1e6ff33f307f61d770d2` confirms that the unresolved Mill distinction is real rather than a missing remap. Mill's *Utilitarianism*, Chapter II, supports a first-principle claim about general happiness as the ultimate moral standard while also discussing subordinate or secondary principles. The current scholarly literature distinguishes that first principle from disputed direct-act, rule, and other indirect reconstructions.
+
+The governed design in [`docs/plan/mill-general-happiness-v1/research-design.md`](plan/mill-general-happiness-v1/research-design.md) therefore reserves `NE26` for this future exact proposition:
+
+> General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.
+
+The design proposes two distinct future Full-only evidence units, `NEI134@1` and `NEI135@1`, and fixes the required positive, negative, mixed, one-unit, missing, false-positive-neighbor, act/rule-neutrality, source-trace, route-omission, historical, and reference-profile-gate regressions before implementation. See [the regression design](plan/mill-general-happiness-v1/regression-design.md) and under-review proposal `MCP-2026-094`.
+
+This is a design record, not active evidence. Neither item, `NE26`, nor `reviewed-NE26-general-happiness-ultimate-standard` exists in the active 0.19.0 / 1.16.0 / 2.7.0 release. The current catalog must therefore continue to contain no Mill profile. Promotion becomes eligible for separate review only after a successor release contains both direct evidence units, guarantees them on Full, resolves the rule's claim-level sources, and passes the governed regressions. NE22, NE23, NE24, and NE25 remain neighboring propositions and must not substitute for that direct evidence.
+
