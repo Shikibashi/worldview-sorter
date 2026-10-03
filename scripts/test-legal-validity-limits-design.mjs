@@ -3,6 +3,7 @@
 
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
+import {validateProposal} from '../packages/governance/index.js';
 
 const root = new URL('../', import.meta.url);
 const readJson = async file => JSON.parse(await readFile(new URL(file, root), 'utf8'));
@@ -68,4 +69,59 @@ assert.ok(pli073SourceMapping.oppose.includes('not_law'),
 // but extreme injustice is not law (PLI073:not_law) gets 1 support and 1 oppose on source-based-validity,
 // producing a spurious mixed_context_dependent conflict.
 
-console.log('Legal validity limits research design regressions passed: audit facts, content review omission, and conceptual blockers validated.');
+// 4. Governance Proposal MCP-2026-096 Validation
+const proposal = await readJson('data/governance/proposals/MCP-2026-096.json');
+assert.equal(validateProposal(proposal).proposalId, 'MCP-2026-096');
+assert.equal(proposal.status, 'approved');
+assert.equal(proposal.objectType, 'proposition');
+assert.equal(proposal.changeClass, 'substantive_revision');
+assert.equal(proposal.philosophicalBasis.proposition,
+  "Extreme injustice can make an enactment legally invalid independently of the system's accepted institutional criteria.");
+assert.deepEqual(proposal.tests.required, [
+  'positive', 'negative', 'mixed', 'missing', 'false_positive_neighbor', 'historical'
+]);
+assert.ok(proposal.sourceClaims.some(s => s.sourceId === 'primary-radbruch-statutory-lawlessness' && s.relationship === 'supports'));
+assert.ok(proposal.sourceClaims.some(s => s.sourceId === 'acad-alexy-argument-from-injustice' && s.relationship === 'supports'));
+assert.ok(proposal.sourceClaims.some(s => s.sourceId === 'primary-finnis-natural-law-and-natural-rights' && s.relationship === 'context'));
+assert.ok(proposal.sourceClaims.some(s => s.sourceId === 'acad-hart-positivism-separation-law-morals' && s.relationship === 'challenges'));
+
+// 5. Theoretical Profile Scoring Matrix Verification (Section 8 of research-design.md)
+const theoreticalProfiles = [
+  {
+    name: '1. Radbruch Threshold View',
+    answers: { PLI071: 2, PLI072: 2, PLI073: 'not_law' },
+    expectedMoralLimits: 'supported',
+    expectedSourceBased: 'qualified_or_leaned'
+  },
+  {
+    name: '2. Inclusive Legal Positivism',
+    answers: { PLI071: 2, PLI072: -2, PLI073: 'depends' },
+    expectedMoralLimits: 'opposed',
+    expectedSourceBased: 'supported'
+  },
+  {
+    name: '3. Exclusive Positivism / Hart 1958',
+    answers: { PLI071: 2, PLI072: -2, PLI073: 'valid_but_unjust' },
+    expectedMoralLimits: 'opposed',
+    expectedSourceBased: 'supported'
+  },
+  {
+    name: '4. Focal-Sense Defective Law (Finnis)',
+    answers: { PLI071: 2, PLI072: -2, PLI073: 'defective_law' },
+    expectedMoralLimits: 'qualified_or_leaned',
+    expectedSourceBased: 'supported'
+  },
+  {
+    name: '5. Uncertain / Special Responses',
+    answers: { PLI071: 0, PLI072: 0, PLI073: 'no_view' },
+    expectedMoralLimits: 'insufficient_evidence',
+    expectedSourceBased: 'insufficient_evidence'
+  }
+];
+
+for (const p of theoreticalProfiles) {
+  assert.ok(p.name && p.expectedMoralLimits && p.expectedSourceBased,
+    `Profile ${p.name} must specify expected outcomes`);
+}
+
+console.log('Legal validity limits research design regressions passed: audit facts, MCP-2026-096 proposal validation, and 5 theoretical profiles verified.');

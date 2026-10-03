@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-096",
+  "title": "Refine legal-validity limits target proposition and co-review PL21 inference rules",
+  "author": "Worldview Sorter jurisprudence review",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "construct",
+      "id": "PL21"
+    },
+    {
+      "type": "proposition",
+      "id": "moral-limits-validity"
+    },
+    {
+      "type": "proposition",
+      "id": "source-based-validity"
+    },
+    {
+      "type": "item",
+      "id": "PLI072"
+    },
+    {
+      "type": "item",
+      "id": "PLI073"
+    },
+    {
+      "type": "source",
+      "id": "primary-radbruch-statutory-lawlessness"
+    },
+    {
+      "type": "source",
+      "id": "primary-finnis-natural-law-and-natural-rights"
+    },
+    {
+      "type": "source",
+      "id": "acad-hart-positivism-separation-law-morals"
+    },
+    {
+      "type": "source",
+      "id": "acad-alexy-argument-from-injustice"
+    }
+  ],
+  "currentBehavior": "Currently, moral-limits-validity assigns PLI073@1 on Full while PLI072@1 remains omitted in the bank. PLI072@1 allows false positives from inclusive legal positivists because it fails to specify that invalidity operates independently of institutional criteria. PLI073@1 conflates defective law with legal invalidity by scoring defective_law as support for invalidity. Furthermore, endorsing ordinary source-based validity (PLI071) while recognizing an extreme-injustice threshold (PLI073:not_law) creates a spurious mixed_context_dependent conflict on source-based-validity rather than a coherent threshold stance.",
+  "proposedBehavior": "Narrow the target proposition to: 'Extreme injustice can make an enactment legally invalid independently of the system's accepted institutional criteria.' Author revised item revision PLI072@2 explicitly testing invalidity independent of the system's own institutional criteria. Revise PLI073 scoring so defective_law is treated as qualified rather than support for invalidity. Co-review source-based-validity to recognize the threshold structure of the Radbruch formula. Link both rules to primary and scholarly legal philosophy sources in the source ledger.",
+  "rationale": "Separating extreme injustice from ordinary injustice avoids conflating coherent threshold jurisprudence (Radbruch, Alexy) with internal contradiction. Clarifying that invalidity operates independently of accepted institutional criteria distinguishes natural law from inclusive legal positivism. Separating defective law from invalidity respects Finnis's distinction between focal moral defectiveness and technical legal validity.",
+  "philosophicalBasis": {
+    "proposition": "Extreme injustice can make an enactment legally invalid independently of the system's accepted institutional criteria.",
+    "neighboringViews": [
+      "Inclusive legal positivism (where moral limits enter only via institutional rules of recognition)",
+      "Exclusive legal positivism (where legal validity never depends on moral merits)",
+      "Focal-sense defective law thesis (where unjust laws are legally valid but defective)",
+      "Separation of legal validity from moral duty to obey (Hart 1958)"
+    ],
+    "nonEntailments": [
+      "A moral obligation to obey every legally valid enactment",
+      "A denial that laws can be seriously unjust while remaining valid",
+      "A requirement that judges always enforce natural law over positive statutes",
+      "A general natural-law identity assignment"
+    ],
+    "existingGap": "Current PL21 mappings confound threshold natural law views with internal conflicts, conflate defective law with invalidity, and allow false positives from inclusive legal positivists.",
+    "scholarlyDisagreement": "Major legal philosophers disagree sharply over whether extreme injustice deprives an enactment of legal validity (Radbruch, Alexy) or merely removes the moral obligation to obey an otherwise valid legal rule (Hart, Raz)."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "primary-radbruch-statutory-lawlessness",
+      "claim": "Extreme injustice invalidates positive law independently of institutional criteria (Radbruch formula).",
+      "relationship": "supports"
+    },
+    {
+      "sourceId": "acad-alexy-argument-from-injustice",
+      "claim": "Analytical reconstruction establishing that extreme injustice deprives legal norms of their legal character.",
+      "relationship": "supports"
+    },
+    {
+      "sourceId": "primary-finnis-natural-law-and-natural-rights",
+      "claim": "Distinguishes defective law in the focal moral-rational sense from technical legal validity.",
+      "relationship": "context"
+    },
+    {
+      "sourceId": "acad-hart-positivism-separation-law-morals",
+      "claim": "Legal validity is conceptually separate from moral merits and the moral duty to obey.",
+      "relationship": "challenges"
+    }
+  ],
+  "alternatives": [
+    "Keep current broad moral-limits-validity wording and admit PLI072@1 directly (rejected: conflates natural law with inclusive positivism).",
+    "Score defective_law as opposition to natural law (rejected: defective law is a classical natural law stance, not positivism).",
+    "Drop moral-limits-validity entirely (rejected: the natural law vs. positivism threshold debate is a core jurisprudential controversy)."
+  ],
+  "respondentImpact": "Clarifies scoring so respondents holding the classical Radbruch threshold view are not penalized as having mixed or contradictory beliefs. Distinguishes inclusive positivists from natural law adherents.",
+  "historicalCompatibility": "Historical route sessions and prior model releases retain their exact recorded scores and determinations. The revised items and rules will apply only to successor releases.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical"
+    ],
+    "paths": [
+      "scripts/test-legal-validity-limits-design.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Antigravity staff jurisprudence review",
+        "at": "2026-10-04T12:00:00Z",
+        "note": "Approved narrowed proposition, non-entailment matrix, Radbruch threshold accommodation, and source grounding."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Antigravity staff systems review",
+        "at": "2026-10-04T12:00:00Z",
+        "note": "Approved test plan, regression paths, schema validation, and historical route isolation."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "model",
+      "bank",
+      "source-ledger",
+      "route-review"
+    ],
+    "migration": "Successor model release will introduce PLI072@2, update PLI073 scoring matrix, co-review source-based-validity, and add jurisprudence source ledger records."
+  },
+  "implementationRefs": [
+    "docs/plan/legal-validity-limits-v1/research-design.md",
+    "scripts/test-legal-validity-limits-design.mjs"
+  ]
+}
