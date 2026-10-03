@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-096",
+  "title": "Separate belief in free will from compatibility and determinism theories",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "new_object",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "item",
+      "id": "AHI106"
+    },
+    {
+      "type": "construct",
+      "id": "AH01"
+    },
+    {
+      "type": "proposition",
+      "id": "reviewed-AH01-some-human-free-will"
+    },
+    {
+      "type": "route",
+      "id": "full"
+    },
+    {
+      "type": "route",
+      "id": "route-policy"
+    }
+  ],
+  "currentBehavior": "AH01 remains requires_new_discriminating_items. Several existing items ask whether freedom is compatible with prior causes or determinism, so disagreement can identify an incompatibilist theory without establishing that the respondent denies free will.",
+  "proposedBehavior": "Publish AHI106@1 alongside AHI001@2 on Full and add a two-unit direct proposition that human beings sometimes act with genuine free will while leaving its correct metaphysical explanation open. Quick and Standard remain not_measured. Determinism and compatibility items do not substitute for this evidence.",
+  "rationale": "The Free Will Inventory separates belief in free will from determinism and dualism, and the philosophical literature distinguishes whether free will exists from which conditions make it possible. AHI001 directly asks about genuine control; AHI106 explicitly separates existence belief from theory of freedom.",
+  "philosophicalBasis": {
+    "proposition": "Human beings sometimes act with genuine free will, without committing to a particular account of how free will is possible or whether determinism is compatible with it.",
+    "neighboringViews": [
+      "Compatibilism",
+      "Incompatibilism",
+      "Libertarian accounts of agency",
+      "Hard determinism",
+      "Free-will skepticism"
+    ],
+    "nonEntailments": [
+      "Determinism is true",
+      "Determinism is false",
+      "Compatibilism",
+      "Incompatibilism",
+      "Libertarian agency",
+      "Dualism",
+      "Moral responsibility requires free will"
+    ],
+    "existingGap": "The existing pool confounded existence belief with conditions for free action; a respondent can be an incompatibilist while believing in free will or a compatibilist while believing free will is rare or absent.",
+    "scholarlyDisagreement": "The analysis and metaphysics of free will are contested. The release deliberately asks only whether some human action is genuinely free, not which theory explains it."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "free-will-inventory",
+      "relationship": "supports",
+      "claim": "The Free Will Inventory was designed with separate free-will, determinism, and dualism dimensions rather than treating a determinism answer as a direct measure of free-will belief."
+    },
+    {
+      "sourceId": "gen-agency",
+      "relationship": "supports",
+      "claim": "The SEP treatment distinguishes compatibilist and incompatibilist analyses, so belief about causal determination does not by itself settle whether free will exists."
+    },
+    {
+      "sourceId": "audit2-freewill-sep",
+      "relationship": "context",
+      "claim": "The prior audit records that the existence, analysis, and moral significance of free will are distinct and that causal explanation alone does not decide existence belief."
+    }
+  ],
+  "alternatives": [
+    "Infer free-will belief from AHI012/AHI023/AHI034: rejected because those items primarily test compatibility conditions.",
+    "Use belief that determinism is true or false as a proxy: rejected because actuality and compatibility are distinct questions.",
+    "Treat AHI106 conditional_free_will as direct support: rejected because saying freedom is possible if a condition holds does not establish that any actual human action satisfies the condition."
+  ],
+  "respondentImpact": "Full gains AHI001@2 and AHI106@1 as a widely separated two-unit path. `some_free_will` is direct support, `no_free_will` is direct opposition, while conditional and undecided responses are nondirectional. Quick and Standard remain unchanged and not_measured.",
+  "historicalCompatibility": "Model release 1.19.0 and earlier remain byte-pinned. AHI106@1 is newly released; no historical compatibility or determinism response is reinterpreted as AH01 evidence.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "single_item_lean",
+      "route_omission",
+      "false_positive_neighbor",
+      "historical",
+      "source_claim_trace"
+    ],
+    "paths": [
+      "scripts/test-evidence-gap-release-v1.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-10-03T05:20:00Z",
+        "note": "Reviewed the existence/compatibility/determinism distinction against the Free Will Inventory and SEP boundaries."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI engineering review",
+        "at": "2026-10-03T05:20:00Z",
+        "note": "Requires AHI106 conditional and undecided responses to remain nondirectional and forbids compatibility/determinism proxy evidence."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "bank",
+      "model",
+      "progressive_routes",
+      "full_form",
+      "pilot",
+      "content_review",
+      "source_ledger"
+    ],
+    "targetVersion": "model-release-1.20.0",
+    "migration": "No raw-response migration. The proposition begins only in the successor release."
+  },
+  "implementationRefs": [
+    "docs/plan/evidence-gap-release-v1/research-decision.md",
+    "scripts/test-evidence-gap-release-v1.mjs"
+  ]
+}
