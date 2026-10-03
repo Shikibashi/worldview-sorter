@@ -1,6 +1,6 @@
 import {createQuiz,restoreQuiz,currentItem,seekQuestion,answerQuestion,nextQuestion,previousQuestion,quizProgress,extendProgressiveQuiz,recordDepthCheckpoint,EXPERIENCE_VERSION,COMPATIBLE_EXPERIENCE_VERSIONS} from '../../packages/experience/quiz.js';
 import {buildQuizSummary,DOMAIN_COPY} from '../../packages/experience/summary.js';
-import {buildResultOverview,resultStatusLabel,formatResponseCoverage} from '../../packages/experience/result-overview.js';
+import {buildResultOverview,resultStatusLabel,formatResponseCoverage,formatTensionDetails} from '../../packages/experience/result-overview.js';
 import {renderResultHighlights,appendDomainEvidenceStrip} from './result-overview-view.js';
 import {initialExploration,recordExploration,initialExplorationV2,recordExplorationV2} from '../../packages/experience/exploration.js';
 import {buildShareSnapshot,shareSnapshotText,shareSnapshotSvg,readingTrailFor,compareTraditions,recommendExploration} from '../../packages/experience/engagement.js';
@@ -600,7 +600,43 @@ function finish(newlyCompleted=false){
  $('tension-section').hidden=!pilotResult||!summary.tensions?.length;
  $('tension-count').textContent=(summary.tensions?.length??0)+' answer patterns to inspect';
  $('tension-list').replaceChildren(...(summary.tensions??[]).map(t=>{
-  const block=elem('article',undefined,'tension');block.append(elem('h3',summary.domains.find(d=>d.id===t.domainId)?.title??'A topic to revisit'),elem('p',t.explanation));return block;
+  const details=formatTensionDetails(t,summary);
+  const block=elem('article',undefined,'tension');
+  if(details?.relation)block.dataset.relation=details.relation;
+  const head=elem('div',undefined,'tension-head');
+  const badge=elem('span',details?.relationLabel??'Tension','relation-badge '+(details?.relation??''));
+  const domSpan=elem('span',details?.domainTitle??'Topic','tension-domain');
+  head.append(badge,domSpan);
+  block.append(head,elem('h3',details?.title??'A topic to revisit'));
+  if(details?.answers?.length){
+   const ansBlock=elem('div',undefined,'tension-answers');
+   ansBlock.append(elem('strong','Responses in tension:'));
+   const list=elem('ul',undefined,'tension-answer-list');
+   for(const a of details.answers){
+    const li=elem('li',undefined,'tension-answer '+a.direction);
+    li.append(elem('p',a.itemId+': '+a.text),elem('p','Your answer: '+a.answer),elem('small',a.meaning));
+    list.append(li);
+   }
+   ansBlock.append(list);
+   block.append(ansBlock);
+  }
+  const whyBlock=elem('div',undefined,'tension-why');
+  whyBlock.append(elem('strong','Why these answers differ:'),elem('p',details?.why??t.explanation));
+  block.append(whyBlock);
+  if(details?.discriminatingQuestions?.length){
+   const dqBlock=elem('div',undefined,'tension-discriminators');
+   dqBlock.append(elem('strong','Discriminating questions to consider:'));
+   for(const dq of details.discriminatingQuestions){
+    dqBlock.append(elem('p',dq.prompt));
+    if(dq.options?.length){
+     const oList=elem('ul');
+     for(const opt of dq.options)oList.append(elem('li',opt));
+     dqBlock.append(oList);
+    }
+   }
+   block.append(dqBlock);
+  }
+  return block;
  }));
  $('domain-map').replaceChildren();
  const opportunityLabels={not_measured:'Not measured in this administration',

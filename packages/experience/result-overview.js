@@ -72,3 +72,137 @@ export function buildResultOverview(summary){
   domains
  };
 }
+
+export function formatTensionDetails(tension, summary) {
+  if (!tension) return null;
+  const domain = summary?.domains?.find(d => d.id === tension.domainId);
+  const domainTitle = domain?.title ?? domain?.name ?? tension.domainId ?? 'General';
+  const involvedRows = (tension.ruleIds ?? [])
+    .map(id => summary?.rows?.find(r => r.id === id))
+    .filter(Boolean);
+  const primaryRow = involvedRows[0];
+
+  const isGeneralCase = tension.kind === 'general_case_divergence';
+  const isMixedEvidence = tension.kind === 'mixed_direct_evidence';
+  const isCompeting = tension.kind === 'competing_propositions';
+  const isDerivedConflict = tension.kind === 'derived_direct_conflict';
+
+  const relation = (isGeneralCase || tension.relation === 'coexistence') ? 'coexistence' :
+    (isMixedEvidence || tension.relation === 'context_dependent') ? 'context_dependent' : 'conflict';
+
+  const relationLabel = relation === 'coexistence' ? 'Can coexist across contexts' :
+    relation === 'context_dependent' ? 'Context-dependent evidence' : 'Competing commitments';
+
+  const answers = [];
+  const seenItems = new Set();
+
+  for (const row of involvedRows) {
+    for (const ev of row.evidence ?? []) {
+      const isSupport = ev.meaning === 'support' || (tension.supportingItemIds ?? []).includes(ev.itemId);
+      const isOppose = ev.meaning === 'oppose' || (tension.opposingItemIds ?? []).includes(ev.itemId);
+      const isConflicted = isDerivedConflict && (tension.itemIds ?? []).includes(ev.itemId);
+
+      if ((isSupport || isOppose || isCompeting || isConflicted) && !seenItems.has(ev.itemId)) {
+        seenItems.add(ev.itemId);
+        const direction = isSupport ? 'support' : isOppose ? 'oppose' : 'direct_conflict';
+        const target = row.proposition ?? row.scope ?? row.label;
+        const meaning = direction === 'support' ? `Supports: "${target}"` :
+          direction === 'oppose' ? `Opposes: "${target}"` :
+          `Conflicts directly with: "${target}"`;
+
+        answers.push({
+          itemId: ev.itemId,
+          text: ev.text ?? ev.prompt ?? ev.itemId,
+          answer: ev.answer ?? 'Answer recorded',
+          direction,
+          meaning,
+          ruleLabel: row.label
+        });
+      }
+    }
+  }
+
+  let why = tension.why;
+  if (!why) {
+    if (isGeneralCase) {
+      why = 'You endorsed a general principle while choosing differently in a concrete scenario. In philosophical reasoning, general principles often establish default guidance, while concrete dilemmas introduce competing stakes, thresholds, or exceptions. These answers can coexist consistently.';
+    } else if (isMixedEvidence) {
+      why = 'Your answers to different questions about this proposition emphasize competing considerations. This pattern reflects context-sensitive discrimination across different cases rather than an inconsistent stance.';
+    } else if (tension.id === 'miracle-supernatural-conflict') {
+      why = 'Affirming miraculous interventions while rejecting supernatural reality represents a philosophical tension. In classical metaphysics, miracles are defined as divine suspensions of natural order, which presupposes supernatural reality. Reconciling both typically requires adopting a non-literal, metaphorical, or naturalistic reinterpretation of miraculous events.';
+    } else if (isDerivedConflict) {
+      why = 'Your direct answer contradicts the synthesis that would normally follow from your other accepted premises. The engine respects your explicit direct judgment by withholding the derived conclusion.';
+    } else {
+      why = tension.explanation ?? 'These answers point in different directions and warrant closer examination.';
+    }
+  }
+
+  let discriminatingQuestions = Array.isArray(tension.discriminatingQuestions) ? [...tension.discriminatingQuestions] : [];
+  if (!discriminatingQuestions.length) {
+    if (isGeneralCase && primaryRow?.id === 'audit2-EP02-complex-knowledge') {
+      discriminatingQuestions = [
+        {
+          prompt: 'Consider whether knowledge differs by domain:',
+          options: [
+            'Theoretical frameworks are interconnected webs, while specific empirical findings are distinct facts',
+            'Knowledge is fundamentally unified and web-like across all fields',
+            'Knowledge is strictly a modular catalog of separate domain facts'
+          ]
+        }
+      ];
+    } else if (tension.id === 'miracle-supernatural-conflict') {
+      discriminatingQuestions = [
+        {
+          prompt: 'Do you view miracles as literal interventions that suspend physical laws, or as deeply meaningful natural events that evoke spiritual wonder?',
+          options: [
+            'Literal divine intervention that suspends natural law (requires supernatural reality)',
+            'Natural occurrence with profound spiritual or symbolic meaning (compatible with naturalism)'
+          ]
+        }
+      ];
+    } else if (isGeneralCase) {
+      discriminatingQuestions = [
+        {
+          prompt: 'Does the concrete case represent an exception to the general principle, or does it define the general boundary?',
+          options: [
+            'The general rule holds as the default, but this concrete case is a justified exception',
+            'The concrete case shows that the general rule was stated too broadly',
+            'Both apply equally in different institutional or practical domains'
+          ]
+        }
+      ];
+    } else if (isCompeting) {
+      discriminatingQuestions = [
+        {
+          prompt: 'How do you understand the relationship between these two commitments?',
+          options: [
+            'One takes priority over the other when they come into conflict',
+            'They address separate domains and operate under different standards',
+            'One commitment is understood non-literally or metaphorically'
+          ]
+        }
+      ];
+    } else if (primaryRow?.interpretationRule?.neighbors?.length) {
+      discriminatingQuestions = [
+        {
+          prompt: `Consider which nearby position best describes the boundary in your view:`,
+          options: primaryRow.interpretationRule.neighbors.slice(0, 3)
+        }
+      ];
+    }
+  }
+
+  return {
+    id: tension.id,
+    kind: tension.kind,
+    domainId: tension.domainId,
+    domainTitle,
+    title: primaryRow?.label ?? (isCompeting && involvedRows[1] ? `${primaryRow?.label} vs. ${involvedRows[1]?.label}` : domainTitle),
+    relation,
+    relationLabel,
+    answers,
+    why,
+    discriminatingQuestions,
+    explanation: tension.explanation ?? why
+  };
+}
