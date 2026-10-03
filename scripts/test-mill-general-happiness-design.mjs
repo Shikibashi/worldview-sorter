@@ -5,24 +5,23 @@ import {validateProposal} from '../packages/governance/index.js';
 const root=new URL('../',import.meta.url);
 const read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
 
-const [current,model,bank,routes,referenceCurrent,proposal]=await Promise.all([
-  read('data/current.json'),
+const [release,model,bank,routes,catalog,proposal]=await Promise.all([
+  read('data/releases/model-release-v1.19.0.json'),
   read('data/generic/model-v1.16-pilot.json'),
   read('data/items/candidate-v0.19.json'),
   read('data/experience/progressive-depth-v2.7.json'),
-  read('data/reference/current.json'),
+  read('data/reference/reference-profiles-v1.1.0.json'),
   read('data/governance/proposals/MCP-2026-094.json')
 ]);
-const catalog=await read(referenceCurrent.catalogPath);
 
-assert.equal(current.modelRelease.version,'model-release-1.19.0');
+assert.equal(release.releaseVersion,'model-release-1.19.0');
 assert.equal(current.worldviewModel.version,'generic-1.16.0-pilot');
 assert.equal(current.candidateBank.version,'0.19.0');
 assert.equal(current.progressiveDepth.version,'progressive-depth-2.7.0');
-assert.equal(referenceCurrent.catalogVersion,'reference-profile-catalog-1.1.0');
+assert.equal(catalog.catalogVersion,'reference-profile-catalog-1.1.0');
 
 assert.equal(validateProposal(proposal),proposal);
-assert.equal(proposal.status,'under_review');
+assert.equal(proposal.status,'approved');
 assert.equal(proposal.philosophicalBasis.proposition,
   'General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.');
 
