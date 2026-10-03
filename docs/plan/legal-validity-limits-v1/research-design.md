@@ -91,6 +91,54 @@ The source ledger (`data/generic/source-ledger-v*.json`) currently cites generic
 
 ## 6. Governance Boundary & Sequencing
 
+- **Approved Proposal**: Formally governed under [`data/governance/proposals/MCP-2026-096.json`](../../data/governance/proposals/MCP-2026-096.json).
 - **Active Questionnaire**: Remains strictly unchanged (251 items on Full, 64 on Quick, 120 on Standard).
 - **Active Model Scoring**: `moral-limits-validity` remains `not_measured` on all routes until a successor release incorporates the co-reviewed items and rules.
 - **Historical Compatibility**: Preserved byte-for-byte; prior route reviews and pilot sessions are unaffected.
+
+---
+
+## 7. Exact Drafted Item Revisions
+
+### Unit A (Principle Question): `PLI072@2`
+- **Construct**: `PL21`
+- **Response scale**: `agreement5` (-2 to 2)
+- **Content kind**: principle statement
+- **Stem**: "Extreme injustice can deprive an enactment of genuine legal status even when the legal system's own rules contain no moral limits."
+- **Word count**: 21 words (well within the strict 45-word ceiling).
+- **Directional mapping**:
+  - `support`: 1 (Agree), 2 (Strongly agree)
+  - `oppose`: -2 (Strongly disagree), -1 (Disagree)
+  - `neutral / non-directional`: 0
+- **Why this resolves Blocker 1**: The qualifying clause *"even when the legal system's own rules contain no moral limits"* directly separates natural law from inclusive legal positivism. An inclusive positivist acknowledges moral limits only if the system's institutional criteria (e.g., constitutional Bill of Rights) incorporate them; when the system's rules contain no such limits, an inclusive positivist holds the enactment to be legally valid. Only natural-law / Radbruch adherents affirm that extreme injustice invalidates law independently of institutional criteria.
+
+### Unit B (Concrete Vignette): `PLI073@2`
+- **Construct**: `PL21` / `PL-S18`
+- **Response scale**: `vignette_choice`
+- **Scenario group**: `PL-S18`
+- **Prompt**: "A regime enacts a rule through all of its recognized legal procedures, but the rule is profoundly unjust. Which is closest to your view?"
+- **Options & Scoring Matrix**:
+  - `not_law`: "Extreme injustice can prevent it from being genuine law."
+    - `moral-limits-validity`: **Support** (1 unit)
+    - `source-based-validity`: **Oppose** (threshold-qualified)
+  - `valid_but_unjust`: "It can be valid law while being profoundly unjust."
+    - `moral-limits-validity`: **Oppose** (1 unit)
+    - `source-based-validity`: **Support** (1 unit)
+  - `defective_law`: "It is law in a defective sense, with moral failure affecting its legal status."
+    - `moral-limits-validity`: **Qualified / Non-directional** (acknowledges moral defectiveness without affirming legal invalidity; resolves Blocker 2)
+    - `source-based-validity`: **Neutral / Non-directional**
+  - `depends`: "It depends on whether that legal system's own rules include moral limits."
+    - `moral-limits-validity`: **Qualified / Non-directional** (inclusive positivist discriminator)
+    - `source-based-validity`: **Neutral / Non-directional**
+
+---
+
+## 8. Theoretical Profile Test Matrix
+
+| Profile | `PLI071` (immoral law valid) | `PLI072@2` (independent invalidity) | `PLI073@2` (profound injustice vignette) | Expected `moral-limits-validity` | Expected `source-based-validity` | Coherence Note |
+|---|---|---|---|---|---|---|
+| **1. Radbruch Threshold View** | Agree (+1 or +2) | Agree (+1 or +2) | `not_law` | **Supported** | **Qualified / Leaned** | Coherent: ordinary unjust law valid, extreme injustice invalid. Spurious conflict eliminated. |
+| **2. Inclusive Legal Positivism** | Agree (+1 or +2) | Disagree (-1 or -2) | `depends` | **Opposed** | **Supported** | Coherent: validity depends on whether institutional criteria include moral tests. |
+| **3. Exclusive Positivism / Hart 1958** | Agree (+1 or +2) | Disagree (-1 or -2) | `valid_but_unjust` | **Opposed** | **Supported** | Coherent: validity strictly source-based; moral duty to obey is separate. |
+| **4. Focal-Sense Defective Law (Finnis)** | Agree (+1 or +2) | Disagree (-1 or -2) | `defective_law` | **Qualified / Leaned** | **Supported** | Coherent: law valid in technical sense, but defective in focal moral-rational sense. |
+| **5. Uncertain / Special Responses** | Neutral (0) | Neutral (0) | `no_view` | **Insufficient evidence** | **Insufficient evidence** | Fails closed to insufficient evidence without false positive. |
