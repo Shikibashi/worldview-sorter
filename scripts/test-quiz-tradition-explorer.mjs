@@ -129,3 +129,54 @@ test('exploration is read-only and adds no identity, percentage, ranking, or ans
   assert.equal(JSON.stringify(summary), before);
   for (const key of ['identity', 'score', 'percentage', 'matchPercent', 'ranking', 'responses']) assert.equal(key in view, false);
 });
+
+// Review qualification and evidence sufficiency are independent dimensions.
+// Reverting the projection to replace every finding with under_review must fail.
+test('review warnings preserve missing, mixed, insufficient, and partial findings', () => {
+  const expected = { omitted: 'unmeasured', mixed: 'contradictory', weak: 'unresolved', partial: 'partial', derived: 'unresolved' };
+  for (const state of ['inherited_rule_scope', 'source_claim_unresolved', undefined]) {
+    const summary = fixture();
+    summary.rows.forEach(row => { row.presentationReview = state ? { state } : undefined; });
+    const before = JSON.stringify(summary);
+    const view = inspectTradition(deepFreeze(summary), 'alpha');
+    for (const [id, finding] of Object.entries(expected)) {
+      const entry = view.criteria.find(candidate => candidate.criterion.id === id);
+      assert.equal(entry.finding, finding, `${id}: ${state ?? 'absent review'} must not replace ${finding}`);
+      assert.equal(entry.reviewRequired, true, `${id} must retain a separate review warning`);
+    }
+    assert.deepEqual(view.gapDomains, [], 'Preserved open findings must not bypass review eligibility');
+    assert.equal(JSON.stringify(summary), before, 'Historical evidence must not be rewritten');
+  }
+});
+
+test('unreviewed settled findings remain withheld instead of becoming measured claims', () => {
+  for (const state of ['inherited_rule_scope', 'source_claim_unresolved', undefined]) {
+    const summary = fixture();
+    for (const id of ['p-overlap', 'p-divergence']) {
+      summary.rows.find(row => row.id === id).presentationReview = state ? { state } : undefined;
+    }
+    const view = inspectTradition(summary, 'alpha');
+    for (const id of ['overlap', 'divergence']) {
+      const entry = view.criteria.find(candidate => candidate.criterion.id === id);
+      assert.equal(entry.finding, 'under_review');
+      assert.equal(entry.reviewRequired, true);
+      assert.equal(entry.criterion.finding, id, 'Keep the original authored finding only in provenance');
+    }
+  }
+});
+
+test('eligible evidence and unavailable mappings do not acquire a fabricated review warning', () => {
+  const view = inspectTradition(fixture(), 'alpha');
+  for (const id of ['overlap', 'divergence', 'mixed', 'weak', 'omitted', 'partial', 'derived', 'no-row', 'unsupported']) {
+    assert.equal(view.criteria.find(entry => entry.criterion.id === id).reviewRequired, false, id);
+  }
+});
+
+test('an unknown finding remains unavailable even when its proposition awaits review', () => {
+  const summary = fixture();
+  summary.affinities.traditions[0].criteria[0].finding = 'unknown_future_finding';
+  summary.rows[0].presentationReview = { state: 'source_claim_unresolved' };
+  const entry = inspectTradition(summary, 'alpha').criteria[0];
+  assert.equal(entry.finding, 'unavailable');
+  assert.equal(entry.reviewRequired, true);
+});

@@ -17,12 +17,13 @@ export function inspectTradition(summary, traditionId) {
   const criteria = (tradition.criteria ?? []).map(criterion => {
     const proposition = rows.get(criterion.mapping?.propositionId) ?? null;
     let finding = FINDINGS.has(criterion.finding) ? criterion.finding : 'unavailable';
-    // Keep presentation qualification separate from the historical engine finding.
+    // Review status must not erase missing, mixed, or partial evidence.
+    const reviewRequired = Boolean(proposition) && proposition.presentationReview?.state !== 'eligible';
     if (criterion.mapping?.propositionId) {
       if (!proposition) finding = 'unavailable';
-      else if (proposition.presentationReview?.state !== 'eligible') finding = 'under_review';
+      else if (reviewRequired && ['overlap', 'divergence'].includes(finding)) finding = 'under_review';
     }
-    return { criterion, proposition, finding,
+    return { criterion, proposition, finding, reviewRequired,
       sources: (criterion.sourceIds ?? []).map(id => sources.get(id)).filter(Boolean) };
   });
   const gapIds = new Set(criteria.filter(({ criterion, proposition, finding }) =>

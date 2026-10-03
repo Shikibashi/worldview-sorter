@@ -70,7 +70,7 @@ export default function TraditionExplorer({ summary, depth, replayQualification,
       <p className="wvs-qualification">{qualificationLabels[view.state] ?? 'Inspect each criterion and its limitations; no overall classification is made here.'}</p>
       <p className="wvs-note">Catalog {summary.affinityCatalogVersion} · interpretation {summary.modelVersion}. Doctrine sources describe the tradition; interpretation sources explain the scope of the questionnaire evidence.</p>
       <div className="wvs-criteria-list">
-        {view.criteria.map(({ criterion, proposition, finding, sources }) => <section className="wvs-explorer-criterion" key={criterion.id} data-finding={finding}>
+        {view.criteria.map(({ criterion, proposition, finding, sources, reviewRequired }) => <section className="wvs-explorer-criterion" key={criterion.id} data-finding={finding}>
           <h5>{criterion.role === 'defining' ? 'Defining criterion' : criterion.role === 'disputed' ? 'Disputed criterion' : 'Characteristic criterion'} · {findingLabels[finding]}</h5>
           <p>{criterion.doctrine}</p>
           {criterion.mapping?.note && <p className="wvs-note"><strong>Mapping limit:</strong> {criterion.mapping.note}</p>}
@@ -78,7 +78,7 @@ export default function TraditionExplorer({ summary, depth, replayQualification,
           {finding === 'unmeasured' && <p className="wvs-note">{proposition
             ? 'This administration did not measure the mapped proposition. Missing evidence is not agreement or disagreement.'
             : 'This doctrine has no suitable public proposition mapping. Additional questions are not presented as a way to establish it.'}</p>}
-          {finding === 'under_review' && <p className="wvs-note">The recorded rule output is available below, but it is not promoted into a reviewed doctrinal conclusion.</p>}
+          {reviewRequired && <p className="wvs-note" data-review-required="true">Interpretation scope or source link remains under review. The recorded rule output is available below, but it is not promoted into a reviewed doctrinal conclusion.</p>}
           {proposition ? <details className="wvs-explorer-provenance">
             <summary>Inspect the proposition, answers, and interpretation sources</summary>
             {renderEvidence(proposition)}
