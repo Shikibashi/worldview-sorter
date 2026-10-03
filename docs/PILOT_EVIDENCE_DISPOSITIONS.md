@@ -1,32 +1,36 @@
 # Frozen pilot evidence dispositions
 
-This is the current content-opportunity audit for `generic-1.16.0-pilot` and the 249-item `full-2.7.0` route in model release 1.19.0. The [machine-readable disposition](../data/reviews/pilot-evidence-dispositions-v17.json) records each affected rule, exact assigned and omitted item revisions, evidence-unit counts, source IDs, Full-route scope, and reconciliation with the [older 35-gap route review](../data/reviews/route-review-v1.json). Rebuild with `node scripts/audit-pilot-evidence.mjs --active --write`; CI checks it with `--active --check`. Earlier artifacts remain pinned. Model release 1.19.0 added two Full-route questions (`ECI001@2` and `ECI002@2`) for a scoped worker-control economic authority criterion (`reviewed-EC01-social-control`), bringing Full to 249 items while Quick and Standard remain unchanged at 64 and 120. The addition created one additional complete Full evidence path (reaching 97 assessable direct rules), while 50 direct public rules remain `not_measured` by the 249-item route.
+This is the current content-opportunity audit for `generic-1.17.0-pilot` and the 251-item `full-2.8.0` route in model release 1.20.0. The [machine-readable disposition](../data/reviews/pilot-evidence-dispositions-v18.json) records each affected rule, exact assigned and omitted item revisions, evidence-unit counts, source IDs, Full-route scope, content-review disposition status, and reconciliation with the [older 35-gap route review](../data/reviews/route-review-v1.json). Rebuild with `node scripts/audit-pilot-evidence.mjs --active --write`; CI checks it with `--active --check`. Earlier artifacts remain pinned. Model release 1.20.0 added two Full-route questions (`NEI134@1` and `NEI135@1`) for a scoped general happiness as ultimate moral standard criterion (`reviewed-NE26-general-happiness-ultimate-standard`), bringing Full to 251 items while Quick and Standard remain unchanged at 64 and 120. The addition created one additional complete Full evidence path (reaching 98 assessable direct rules of 148 public rules), while 50 direct public rules remain `not_measured` by the 251-item route.
 
 ## What the current route can claim
 
-The candidate bank contains 575 authored items (`candidate-v0.19.json`). The versioned Full route assigns 249 exact revisions. Of 147 public direct rules, 97 have at least two assigned authored evidence units capable of support **and** at least two capable of opposition. This is evidence opportunity, not a guaranteed respondent result: neutral, no-view, uncomprehended, missing, and contradictory answers retain their own handling. The other 50 public direct rules remain `not_measured` by this route.
+The candidate bank contains 577 authored items (`candidate-v0.20.json`). The versioned Full route assigns 251 exact revisions. Of 148 public direct rules, 98 have at least two assigned authored evidence units capable of support **and** at least two capable of opposition. This is evidence opportunity, not a guaranteed respondent result: neutral, no-view, uncomprehended, missing, and contradictory answers retain their own handling. The other 50 public direct rules remain `not_measured` by this route.
 
 | Current Full-route gap class | Rules | Disposition |
 | --- | ---: | --- |
 | Route omits existing bank items | 37 | Items exist in candidate bank with complete 2-support and 2-oppose units, but Full route assigns none of them. |
-| Assigned evidence directionally incomplete | 2 | Partial evidence assigned on Full (1 support, 1 oppose), but 1 additional bank item is omitted by route. |
+| Assigned evidence directionally incomplete | 2 | Partial evidence assigned on Full (1 support, 1 oppose), but 1 additional bank item is omitted by route. Classified into Tier 1 (clean item) and Tier 2 (content-blocked item). |
 | Entire bank lacks required opposing units | 11 | Bank directional gap: bank has 2 support but <2 oppose units. Cannot be repaired by route edits alone. |
 
 ## Research backlog: ranking the 50 Full-route gaps
 
-The 50 gaps fall into three distinct repair categories:
+The 50 gaps fall into four distinct tiers based on bank completeness and pilot content-review dispositions:
 
-### Tier 1: Route-near completion (2 rules)
+### Tier 1: Route-near completion candidate (admissibility unblocked · 1 rule)
 
-These two rules are already 50% assigned on Full (1 support unit, 1 oppose unit). Each needs only **one** additional existing bank item admitted to Full to satisfy the 2-support / 2-oppose threshold:
+This rule is already 50% assigned on Full (1 support unit, 1 oppose unit), needs only **one** additional existing bank item admitted to Full to satisfy the 2-support / 2-oppose threshold, and its candidate bank item carries **no content-review exclusion**:
 
-1. **`instrumental-harm`** (`NE08`, headline): "Instrumental harm can be permissible" (Trolley / double-effect / consequentialist constraints). Currently assigns `NEI005@2` (1 support, 1 oppose). Omitted item `NEI030@1` completes the contract (giving 2 support, 2 oppose).
-2. **`moral-limits-validity`** (`PL21`, diagnostic): "Extreme injustice may undermine legal status" (Natural law vs. legal positivism / Radbruch formula). Currently assigns `PLI014@2` (1 support, 1 oppose). Omitted item `PLI072@1` completes the contract (giving 2 support, 2 oppose).
+1. **`moral-limits-validity`** (`PL21`, diagnostic): "Extreme injustice may undermine legal status" (Natural law vs. legal positivism / Radbruch formula). Currently assigns `PLI014@2` (1 support, 1 oppose). Omitted item `PLI072@1` completes the contract (giving 2 support, 2 oppose) and is clean in content review (`retain_for_pilot`). Note: Admission requires substantive semantic review of the legal-validity proposition and item balance before route expansion.
 
-### Tier 2: Bank-ready route admissions (37 rules)
+### Tier 2: Content-blocked route-near gap (rewrite / replacement required · 1 rule)
 
-All 37 rules have fully viable 2-support and 2-oppose authored evidence paths in the candidate bank (59 total distinct bank items), but are omitted entirely from the 249-item Full route. Ranked by philosophical tradition impact and core doctrinal distinctions:
+This rule is mathematically 50% assigned on Full (1 support, 1 oppose) and appears "route-near," but its missing bank item is **explicitly excluded by content review** and prohibited from uncomplicated route admission:
 
+1. **`instrumental-harm`** (`NE08`, headline): "Instrumental harm can be permissible" (Trolley / double-effect / consequentialist constraints). Currently assigns `NEI005@2` (1 support, 1 oppose). Omitted item `NEI030@1` would mathematically provide the second support unit, but `NEI030` was deliberately removed during pilot content review (`decision: "remove_from_pilot"`, `issue: "near_duplicate_local_dependence"` with `NEI005`). Admitting `NEI030@1` violates test independence and local non-dependence. Resolving `instrumental-harm` requires authoring a replacement non-duplicate item revision or separate discriminating scenario.
+
+### Tier 3: Bank-ready route admissions (37 rules)
+
+All 37 rules have fully viable 2-support and 2-oppose authored evidence paths in the candidate bank (59 total distinct bank items), but are omitted entirely from the 251-item Full route. Ranked by philosophical tradition impact and core doctrinal distinctions:
 #### A. Core political philosophy & rights foundations (12 rules)
 - **`noninterference`** (`PL06`): Negative liberty (Berlin, Mill; harmless choice). Bank items: `PLI007`, `PLI051` (2 sup, 2 opp).
 - **`nondomination`** (`PL07`): Republican liberty (Pettit, Skinner; uncontrolled power). Bank items: `PLI010`, `PLI057` (2 sup, 2 opp).
@@ -64,10 +68,9 @@ All 37 rules have fully viable 2-support and 2-oppose authored evidence paths in
 #### E. Schwartz value priorities (11 rules)
 - `priority-VA01` (Thought), `priority-VA03` (Stimulation), `priority-VA07` (Resources), `priority-VA08` (Face), `priority-VA09` (Personal security), `priority-VA10` (Societal security), `priority-VA12` (Rule conformity), `priority-VA13` (Interpersonal conformity), `priority-VA14` (Humility), `priority-VA17` (Universalist concern), `priority-VA19` (Universalist tolerance).
 
-### Tier 3: Bank directional contract gaps (11 public rules + 5 research rules)
+### Tier 4: Bank directional contract gaps (11 public rules + 5 research rules)
 
-These 11 public rules cannot be solved by route expansion alone: the candidate bank itself lacks the required opposing evidence units. Each requires authoring new contrasting item revisions or revising rule directional semantics:
-
+These 11 public rules cannot be solved by route expansion alone: the candidate bank itself lacks the required opposing evidence units (<2 oppose). Each requires authoring new contrasting item revisions or revising rule directional semantics:
 1. **`legacy-objectivism-moral-truth-aptness`** (`ME06`): Bank has 2 sup, 1 opp.
 2. **`mutual-advantage`** (`NE06`): Bank has 2 sup, 1 opp.
 3. **`ph-basic-experience`** (`MS02`): Bank has 2 sup, 1 opp.
