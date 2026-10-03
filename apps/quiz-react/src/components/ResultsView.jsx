@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { resultStatusLabel, formatResponseCoverage } from '../../../../packages/experience/result-overview.js';
 import { buildShareSnapshot, shareSnapshotText, shareSnapshotSvg, readingTrailFor, compareTraditions } from '../../../../packages/experience/engagement.js';
 import ResultsNav from './ResultsNav.jsx';
+import TraditionExplorer from './TraditionExplorer.jsx';
 
 const statusLabels = {
   supported: 'Supported', opposed: 'Opposed', leaned_toward: 'Leaned toward', mixed: 'Mixed',
@@ -361,9 +362,13 @@ export default function ResultsView({ runtime, quiz, summary, activity, onActivi
           </section>
 
           {summary.affinities?.traditions?.length > 1 && <section id="compare-section" className="wvs-section" aria-labelledby="compare-title">
-            <div className="wvs-section-heading"><p className="e-eyebrow">07 / Compare</p><h2 id="compare-title">Compare two traditions</h2>
+            <div className="wvs-section-heading"><p className="e-eyebrow">07 / Compare</p><h2 id="compare-title">Explore and compare traditions</h2>
               <p>See shared and diverging doctrine, disputed areas, and criteria this route did not measure. There is no winner or distance score.</p>
             </div>
+            <TraditionExplorer summary={summary} depth={depth} replayQualification={replayQualification}
+              onClarify={onClarify} onActivity={onActivity}
+              renderEvidence={row => <Pattern row={row} onActivity={onActivity} />} />
+            <h3>Compare two traditions</h3>
             <div className="wvs-compare-controls">
               <label>First tradition<select value={leftTradition} onChange={event => setLeftTradition(event.target.value)}>
                 {summary.affinities.traditions.map(row => <option value={row.id} key={row.id}>{row.name}</option>)}
