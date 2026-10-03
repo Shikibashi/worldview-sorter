@@ -392,7 +392,13 @@ export function validateReleaseTransition({previousManifest,nextManifest,changes
    change.objectType+':'+change.id+' requires a new '+component+' artifact path and version');
  const matching=matchingProposal(change);
   if(change.risk==='editorial_only')continue;
-  insist(matching,'missing approved proposal for '+change.objectType+':'+change.id);
+  if(!matching){
+   const naming=proposals.filter(p=>['approved','released'].includes(p.status)&&
+    (!p.release.targetVersion||p.release.targetVersion===nextManifest.releaseVersion)&&
+    p.affectedObjects.some(o=>o.type===change.objectType&&o.id===change.id));
+   insist(false,'missing approved proposal for '+change.objectType+':'+change.id+(naming.length?
+    '; '+naming.map(p=>p.proposalId).join(', ')+' names it but release.components lacks "'+keyFor(change.component)+'"':''));
+  }
   validateProposal(matching);
   insist(change.risk==='editorial_only'||meaningful.has(matching.changeClass),
    'a meaning-sensitive change cannot use editorial_only approval: '+change.objectType+':'+change.id);
