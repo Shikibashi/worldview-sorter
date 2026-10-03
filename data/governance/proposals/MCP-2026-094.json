@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-094",
+  "title": "Design an interpretation-neutral general-happiness ultimate-standard proposition",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "new_object",
+  "status": "under_review",
+  "affectedObjects": [
+    {
+      "type": "item",
+      "id": "NEI134"
+    },
+    {
+      "type": "item",
+      "id": "NEI135"
+    },
+    {
+      "type": "construct",
+      "id": "NE26"
+    },
+    {
+      "type": "proposition",
+      "id": "reviewed-NE26-general-happiness-ultimate-standard"
+    },
+    {
+      "type": "source",
+      "id": "primary-mill-utilitarianism-ch2"
+    },
+    {
+      "type": "source",
+      "id": "sep-mill-moral-political"
+    },
+    {
+      "type": "source",
+      "id": "sep-utilitarianism-history"
+    },
+    {
+      "type": "route",
+      "id": "full"
+    },
+    {
+      "type": "route",
+      "id": "route-policy"
+    },
+    {
+      "type": "research_classification",
+      "id": "philosopher-mill-scoped"
+    }
+  ],
+  "currentBehavior": "Mill remains unprofiled because the current exact propositions are neighboring but non-equivalent: NE25 adds individual-act total-welfare maximization and a promise conflict, NE22 resolves the contested act-versus-rule question, NE24 concerns outcome value rather than moral justification, and NE23 is a full rule-consequence criterion. No active item pair directly measures the interpretation-neutral claim that general happiness is the ultimate moral standard.",
+  "proposedBehavior": "In a future successor release, add two new Full-only authored evidence units under NE26 and a direct proposition stating that general happiness is the ultimate moral standard while remaining neutral about whether that standard is applied directly to acts or indirectly through rules or other structures. Require both distinct units for support or opposition, preserve mixed/lean/missing states, leave Quick and Standard not_measured, and add no affinity criterion. Only after the active release passes the full qualification gate may an internal-only scoped Mill comparison map exactly to NE26.",
+  "rationale": "The primary text supports general happiness as Mill's first principle, while current scholarship documents genuine disagreement about the immediate criterion of duty. Reusing NE22, NE23, NE24, or NE25 would either overstate Mill's doctrine or test a different philosophical level. A general conflict item plus a secondary-principle revision item provide two conceptually distinct self-report tasks without claiming psychometric independence.",
+  "philosophicalBasis": {
+    "proposition": "General happiness is the ultimate moral standard: moral rules, duties, and judgments are ultimately justified or resolved by their relation to the general happiness, without requiring that standard to be applied directly to each individual act.",
+    "neighboringViews": [
+      "Direct act consequentialism",
+      "Full rule consequentialism",
+      "Sanction or other indirect utilitarianism",
+      "Total-well-being maximizing act criteria",
+      "Welfarist outcome-value theories",
+      "Pluralist moral theories",
+      "Rights- or duty-first theories with independent moral authority"
+    ],
+    "nonEntailments": [
+      "A settled act-utilitarian interpretation of John Stuart Mill",
+      "A settled rule-utilitarian interpretation of John Stuart Mill",
+      "A sanction-utilitarian interpretation of John Stuart Mill",
+      "Total-welfare maximization in each individual act",
+      "Welfare as the only ultimate outcome value",
+      "Simple quantitative hedonism",
+      "Mill's higher-pleasure doctrine",
+      "A complete utilitarian identity or a complete Mill profile"
+    ],
+    "existingGap": "No active exact proposition or pair of direct evidence units tests general happiness as the ultimate moral standard independently of the act-versus-rule criterion, outcome-value thesis, and total-welfare maximizing-act criterion.",
+    "scholarlyDisagreement": "Mill explicitly presents utility/general happiness as the foundation and standard of morality, but scholars disagree about whether his theory of duty is best reconstructed as direct act utilitarianism, rule utilitarianism, sanction utilitarianism, or another indirect structure. The proposed proposition captures only the shared first-principle claim."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "primary-mill-utilitarianism-ch2",
+      "relationship": "supports",
+      "claim": "In Utilitarianism Chapter II, Mill presents Utility or the Greatest Happiness Principle as the foundation and standard of morality and treats secondary principles as subordinate to an ultimate standard."
+    },
+    {
+      "sourceId": "sep-mill-moral-political",
+      "relationship": "supports",
+      "claim": "The SEP distinguishes Mill's utilitarian first principle from a decision procedure and documents competing direct, rule, and sanction reconstructions, supporting an interpretation-neutral first-principle scope."
+    },
+    {
+      "sourceId": "sep-utilitarianism-history",
+      "relationship": "context",
+      "claim": "The historical overview treats Mill as a classical utilitarian while noting disagreement over act-versus-rule interpretation; it does not validate the proposed item wording."
+    }
+  ],
+  "alternatives": [
+    "Map Mill directly to NE25: rejected because NE25 adds total-well-being maximization at the individual-act level and a specified promise-conflict commitment.",
+    "Map Mill directly to NE22: rejected because that would make a disputed direct-act interpretation a required Mill commitment.",
+    "Map Mill to NE23: rejected because a full rule-consequence criterion is also a disputed reconstruction rather than the interpretation-neutral first principle.",
+    "Use NE24 as the missing proposition: rejected because welfare-only outcome value concerns the goodness of outcomes, not the ultimate standard of moral justification.",
+    "Add only one direct item: rejected because the current evidence policy requires independent authored evidence units before a new confident direct proposition is route-capable.",
+    "Promote Mill immediately from the design: rejected because proposed items are not active evidence and the reference-profile qualification gate must remain closed."
+  ],
+  "respondentImpact": "No respondent-facing behavior changes in this design. A future approved release would add two Full-only ethics items and one narrow direct proposition; Quick and Standard would remain unchanged. The proposition would not produce a utilitarian identity, affinity match, score, or percentage.",
+  "historicalCompatibility": "Model release 1.19.0 and earlier releases, candidate bank 0.19.0, generic model 1.16.0, progressive-depth 2.7.0, reference catalog 1.1.0, and historical results remain unchanged. No historical response can count as NE26 evidence because the proposed item revisions are absent from those releases.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "false_positive_neighbor",
+      "historical",
+      "single_item_lean",
+      "route_omission",
+      "neighbor_non_substitution",
+      "act_rule_neutrality",
+      "source_claim_trace",
+      "reference_profile_gate"
+    ],
+    "paths": [
+      "scripts/test-mill-general-happiness-design.mjs"
+    ]
+  },
+  "review": {
+    "approvals": []
+  },
+  "release": {
+    "components": [
+      "bank",
+      "registry",
+      "sources",
+      "source_ledger",
+      "model",
+      "full_form",
+      "progressive_routes",
+      "pilot",
+      "content_review",
+      "localization_catalog",
+      "reference_profiles"
+    ],
+    "targetVersion": "model-release-1.20.0",
+    "migration": "No raw-response migration. A future release would add two exact Full-only item revisions and one direct proposition; older releases and the current unprofiled Mill disposition remain immutable."
+  },
+  "implementationRefs": [
+    "docs/plan/mill-general-happiness-v1/research-design.md",
+    "docs/plan/mill-general-happiness-v1/regression-design.md",
+    "scripts/test-mill-general-happiness-design.mjs"
+  ]
+}
