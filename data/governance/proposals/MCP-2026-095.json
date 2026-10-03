@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-095",
+  "title": "Separate fallible truth attainability from certainty and global skepticism",
+  "author": "Worldview Sorter AI editorial review",
+  "objectType": "proposition",
+  "changeClass": "new_object",
+  "status": "approved",
+  "affectedObjects": [
+    {
+      "type": "item",
+      "id": "EPI118"
+    },
+    {
+      "type": "construct",
+      "id": "EP03"
+    },
+    {
+      "type": "proposition",
+      "id": "reviewed-EP03-fallible-truth-attainability"
+    },
+    {
+      "type": "route",
+      "id": "full"
+    },
+    {
+      "type": "route",
+      "id": "route-policy"
+    }
+  ],
+  "currentBehavior": "EP03 remains requires_new_discriminating_items. Existing answers mix objective truth attainability, certainty requirements, approximation, conventionalism, and domain-limited skepticism, so no public direct rule is allowed.",
+  "proposedBehavior": "Publish EPI118@1 alongside EPI010@1 on Full and add a two-unit direct proposition that human inquiry can sometimes reach objectively correct factual answers while remaining fallible and revisable. Quick and Standard remain not_measured. Uncertainty, approximation in some cases, and the possibility of permanently unknowable questions do not by themselves oppose the proposition.",
+  "rationale": "The existing EPI010 item already asks whether at least some objectively correct answers are attainable. EPI118 adds the missing fallibilist discriminator by separating objective knowledge from certainty and merely practical success. Requiring both units prevents the earlier certainty/skepticism conflation.",
+  "philosophicalBasis": {
+    "proposition": "Human inquiry can sometimes reach objectively correct answers to factual questions even when those answers remain fallible and open to revision.",
+    "neighboringViews": [
+      "Infallibilism about knowledge",
+      "Global skepticism",
+      "Domain-limited skepticism",
+      "Pragmatic success without objective correctness",
+      "Conventionalism about factual correctness"
+    ],
+    "nonEntailments": [
+      "Certainty",
+      "Every factual question is knowable",
+      "No important question is permanently unknowable",
+      "Scientific infallibility",
+      "Realism about every philosophical domain"
+    ],
+    "existingGap": "The previous EP03 pool did not contain two independent directional units that separated objective attainability from certainty and domain-limited skepticism.",
+    "scholarlyDisagreement": "Epistemologists dispute the analysis and scope of knowledge, but fallibilist accounts explicitly allow knowledge despite possible error. This release measures only the respondent-level proposition stated above."
+  },
+  "sourceClaims": [
+    {
+      "sourceId": "acad-epistemology",
+      "relationship": "supports",
+      "claim": "The epistemology literature distinguishes knowledge and justification from certainty and permits questions about the scope and attainability of knowledge to be analyzed separately."
+    },
+    {
+      "sourceId": "iep-fallibilism",
+      "relationship": "supports",
+      "claim": "Fallibilism allows a belief to count as knowledge even when its justification does not conclusively eliminate the possibility of error; this does not by itself imply skepticism."
+    }
+  ],
+  "alternatives": [
+    "Use EPI015 as opposition: rejected because saying some important questions may be unknowable does not deny that other factual questions are objectively answerable.",
+    "Treat EPI029 approximate as opposition: rejected because approximation and fallibility do not imply that objective truth is unattainable.",
+    "Use EPI010 alone: rejected because one item cannot establish the two-unit direct-evidence contract and does not independently separate certainty from knowledge."
+  ],
+  "respondentImpact": "Full gains EPI010@1 and EPI118@1 as a widely separated two-unit path. Two aligned units can support or oppose; one directional unit only leans; disagreement between units is mixed; nondirectional evidence is insufficient. Quick and Standard remain unchanged and report not_measured.",
+  "historicalCompatibility": "Model release 1.19.0 and all earlier artifacts remain immutable. EPI118@1 is newly released and no historical response is backfilled or reinterpreted as EP03 evidence.",
+  "tests": {
+    "required": [
+      "positive",
+      "negative",
+      "mixed",
+      "missing",
+      "single_item_lean",
+      "route_omission",
+      "false_positive_neighbor",
+      "historical",
+      "source_claim_trace"
+    ],
+    "paths": [
+      "scripts/test-evidence-gap-release-v1.mjs",
+      "scripts/test-model-governance.mjs"
+    ]
+  },
+  "review": {
+    "approvals": [
+      {
+        "role": "philosophical",
+        "reviewer": "Worldview Sorter AI editorial review",
+        "at": "2026-10-03T05:20:00Z",
+        "note": "Reviewed the certainty, fallibilism, skepticism, and objective-correctness boundaries; approval is limited to the exact proposition."
+      },
+      {
+        "role": "engineering",
+        "reviewer": "Worldview Sorter AI engineering review",
+        "at": "2026-10-03T05:20:00Z",
+        "note": "Requires two distinct Full-only evidence units, explicit nondirectional states, historical replay, and no proxy evidence from adjacent epistemic constructs."
+      }
+    ]
+  },
+  "release": {
+    "components": [
+      "bank",
+      "model",
+      "progressive_routes",
+      "full_form",
+      "pilot",
+      "content_review",
+      "source_ledger"
+    ],
+    "targetVersion": "model-release-1.20.0",
+    "migration": "No raw-response migration. The proposition begins only in the successor release."
+  },
+  "implementationRefs": [
+    "docs/plan/evidence-gap-release-v1/research-decision.md",
+    "scripts/test-evidence-gap-release-v1.mjs"
+  ]
+}
