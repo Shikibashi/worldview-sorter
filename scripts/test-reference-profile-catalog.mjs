@@ -21,12 +21,13 @@ const model = await readJson(current.worldviewModel.path);
 const routes = await readJson(current.progressiveDepth.path);
 const catalog = await readJson(referenceCurrent.catalogPath);
 const historicalCatalog = await readJson('data/reference/reference-profiles-v1.0.0.json');
+const historicalCatalog11 = await readJson('data/reference/reference-profiles-v1.1.0.json');
 
 assert.equal(validateReferenceCatalog({ catalog, model, routes }), true);
-assert.equal(catalog.profiles.length, 7);
+assert.equal(catalog.profiles.length, 8);
 assert.equal(catalog.publicationStatus, 'internal_only');
-assert.equal(catalog.profileModelVersion, 'reference-profile-model-1.1.0');
-assert.equal(catalog.sourceLedgerVersion, 'reference-profile-sources-1.1.0');
+assert.equal(catalog.profileModelVersion, 'reference-profile-model-1.2.0');
+assert.equal(catalog.sourceLedgerVersion, 'reference-profile-sources-1.2.0');
 assert.equal(referenceCurrent.catalogVersion, catalog.catalogVersion);
 assert.equal(catalogIndex.currentCatalogVersion, catalog.catalogVersion);
 assert.equal(catalogIndex.catalogPath, referenceCurrent.catalogPath);
@@ -34,6 +35,9 @@ assert.equal(current.worldviewModel.version, catalog.modelVersion);
 assert.equal(current.progressiveDepth.version, catalog.routePolicyVersion);
 assert.equal(historicalCatalog.catalogVersion, 'reference-profile-catalog-1.0.0');
 assert.equal(historicalCatalog.profiles.length, 5, 'The released 1.0.0 reference catalog must remain unchanged.');
+assert.equal(historicalCatalog11.profiles.length, 7, 'The released 1.1.0 reference catalog must remain unchanged.');
+assert.ok(!historicalCatalog11.profiles.some(profile=>/mill/i.test(profile.id)),
+  'The 1.19-era reference catalog must retain its historical no-Mill boundary.');
 assert.ok(!Object.hasOwn(current, 'referenceProfiles'), 'Reference profiles must not be added to the public production pointer.');
 
 const profiles = new Map(catalog.profiles.map(profile => [profile.id, profile]));
@@ -54,8 +58,16 @@ for (const unresolved of ['rational self-interest', 'epistemology', 'rights']) {
   assert.ok(randProfile.unmeasuredAreas.some(value => value.toLowerCase().includes(unresolved)),
     `Rand's unresolved ${unresolved} distinction must remain unmeasured.`);
 }
-assert.ok(![...profiles.keys()].some(id => id.includes('mill')),
-  'Mill must not be promoted while the active propositions remain only partial mappings of his utility criterion.');
+const millProfile = profiles.get('john-stuart-mill-general-happiness-scoped');
+assert.ok(millProfile, 'The successor reference catalog must contain the scoped Mill NE26 comparison.');
+assert.deepEqual(millProfile.claims.map(claim=>claim.propositionId),
+  ['reviewed-NE26-general-happiness-ultimate-standard']);
+assert.deepEqual(millProfile.claims[0].routeAvailability,['full']);
+assert.equal(millProfile.claims[0].mappingStatus,'ROUTE_LIMITED');
+assert.equal(millProfile.identityOutputAllowed,false);
+assert.equal(millProfile.percentageMatchAllowed,false);
+assert.ok(millProfile.nonEntailments.some(value=>/act-utilitarian/i.test(value)));
+assert.ok(millProfile.nonEntailments.some(value=>/rule-utilitarian/i.test(value)));
 
 const scopedFullReport = {
   modelVersion: model.modelVersion,
