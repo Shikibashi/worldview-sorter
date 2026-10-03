@@ -4,6 +4,7 @@ on:
     branches: [construct-registry-v0.1]
     paths:
       - 'apps/quiz/**'
+      - 'apps/quiz-react/**'
       - 'packages/experience/**'
       - 'packages/collection/**'
       - 'packages/worldview/**'
@@ -23,6 +24,7 @@ on:
   pull_request:
     paths:
       - 'apps/quiz/**'
+      - 'apps/quiz-react/**'
       - 'packages/experience/**'
       - 'packages/collection/**'
       - 'packages/worldview/**'
@@ -58,7 +60,9 @@ jobs:
       - name: Build unchanged academic model and quiz projection
         run: npm run build:academic
       - name: Test controller, results and reward isolation
-        run: npm run test:experience
+        run: |
+          npm run test:experience
+          node --test scripts/test-quiz-tradition-explorer.mjs
       - name: Install browser for public-flow checks
         run: npx playwright install --with-deps chromium
       - name: Exercise the real browser
@@ -70,6 +74,7 @@ jobs:
           npm run build:production
           node scripts/verify-production-site.mjs
           npm run test:production:browser
+          node scripts/test-production-site-tradition-explorer.mjs
       - name: Retain synthetic screenshots and test output
         if: always()
         uses: actions/upload-artifact@v4
