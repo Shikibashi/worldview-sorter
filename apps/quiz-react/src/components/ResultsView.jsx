@@ -28,8 +28,15 @@ function ExternalSource({ source, onOpen }) {
     : <span>{source.title}</span>;
 }
 
-function Pattern({ row, onActivity }) {
+export function Pattern({ row, onActivity }) {
   const proposition = row.proposition ?? row.scope;
+  const hasEvidence = (row.evidence?.length ?? 0) > 0;
+  const hasProvenance = (row.sources?.length ?? 0) > 0 ||
+    Boolean(row.interpretationRule) ||
+    (row.interpretationRule?.neighbors?.length ?? 0) > 0 ||
+    (row.interpretationRule?.nonEntailments?.length ?? 0) > 0 ||
+    (row.interpretationRule?.falsePositives?.length ?? 0) > 0;
+
   return (
     <article className="wvs-result-item pattern" data-state={row.displayState ?? row.status} data-commitment-id={row.id}>
       <div className="wvs-result-item-head">
@@ -40,24 +47,28 @@ function Pattern({ row, onActivity }) {
       {row.propositionBasis === 'inherited_rule_scope' && <p className="wvs-note">This is an inherited interpretation scope, not a separately reviewed standalone proposition.</p>}
       {row.explanation && <p>{row.explanation}</p>}
       {row.boundary && <p className="wvs-note"><strong>Limit:</strong> {row.boundary}</p>}
-      {row.evidence?.length > 0 && (
+      {(hasEvidence || hasProvenance) && (
         <details className="wvs-evidence-details">
-          <summary>Why this appears · answers and sources</summary>
-          <div className="wvs-evidence-list">
-            {row.evidence.map((entry, index) => (
-              <div className="wvs-evidence" key={`${entry.itemId}:${entry.itemRevision}:${index}`}>
-                <p>{entry.text}</p>
-                <p><strong>Your response:</strong> {entry.answer}</p>
-                <p className="wvs-note"><strong>Evidence meaning:</strong> {(entry.meaning ?? entry.interpretation ?? 'not recorded').replaceAll('_', ' ')} · {entry.itemId} revision {entry.itemRevision}</p>
-              </div>
-            ))}
-          </div>
+          <summary>{hasEvidence ? 'Why this appears · answers and sources' : 'Why this appears · model provenance and sources'}</summary>
+          {hasEvidence ? (
+            <div className="wvs-evidence-list">
+              {row.evidence.map((entry, index) => (
+                <div className="wvs-evidence" key={`${entry.itemId}:${entry.itemRevision}:${index}`}>
+                  <p>{entry.text}</p>
+                  <p><strong>Your response:</strong> {entry.answer}</p>
+                  <p className="wvs-note"><strong>Evidence meaning:</strong> {(entry.meaning ?? entry.interpretation ?? 'not recorded').replaceAll('_', ' ')} · {entry.itemId} revision {entry.itemRevision}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="wvs-note"><strong>Respondent evidence:</strong> No direct answer observations were recorded for this proposition on the administered route.</p>
+          )}
           {row.interpretationRule?.neighbors?.length > 0 && <p className="wvs-note"><strong>Nearby views not settled:</strong> {row.interpretationRule.neighbors.join(' · ')}</p>}
           {row.interpretationRule?.nonEntailments?.length > 0 && <p className="wvs-note"><strong>This does not imply:</strong> {row.interpretationRule.nonEntailments.join(' · ')}</p>}
           {row.interpretationRule?.falsePositives?.length > 0 && <p className="wvs-note"><strong>Similar answers can also reflect:</strong> {row.interpretationRule.falsePositives.join(' · ')}</p>}
           {row.sources?.length > 0 && <div className="wvs-source-list"><strong>Sources behind this interpretation</strong>
             {row.sources.map(source => <div className="wvs-source" key={source.id}>
-              <ExternalSource source={source} onOpen={() => onActivity({ type: 'source_opened', domainId: row.domainId })} />
+              <ExternalSource source={source} onOpen={() => onActivity?.({ type: 'source_opened', domainId: row.domainId })} />
               {source.locator && <span className="wvs-note">{source.locator}</span>}
               {source.claimLinks?.map((link, index) => <p className="wvs-note" key={index}>Rule-linked source claim ({link.relationship}): {link.claim}</p>)}
               {source.validatesThisQuiz === false && <p className="wvs-note">This source does not validate the questionnaire.</p>}
