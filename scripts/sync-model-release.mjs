@@ -2,6 +2,7 @@ import {readFile,readdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {currentFromManifest,readJson,verifyRelease} from '../packages/governance/release.js';
+import {discoverCompanions} from '../packages/governance/successor.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const index=await readJson(root,'data/releases/current.json');
@@ -18,58 +19,10 @@ if(channels.configVersion!==channelIndex.current.version||
  throw Error('Release channels do not target the active model release.');
 const pinned=currentFromManifest(manifest);
 Object.assign(current,pinned);
-// The research-pool and academic-release pointers are operational companions
-// to this bank. Historical pool artifacts remain at their original paths.
-if(pinned.candidateBank.version==='0.10.0'){
- current.instrument={version:'0.10.0-research',path:'data/instruments/research-pool-0.10.json'};
- current.academicRelease={version:'0.10.0',path:'data/academic/release-v0.10.json'};
- current.pilot={version:'pilot-0.3',path:'data/pilots/pilot-0.3.json'};
-}
-if(pinned.candidateBank.version==='0.11.0'){
- current.instrument={version:'0.11.0-research',path:'data/instruments/research-pool-0.11.json'};
- current.academicRelease={version:'0.11.0',path:'data/academic/release-v0.11.json'};
- current.pilot={version:'pilot-0.4',path:'data/pilots/pilot-0.4.json'};
-}
-if(pinned.candidateBank.version==='0.12.0'){
- current.instrument={version:'0.12.0-research',path:'data/instruments/research-pool-0.12.json'};
- current.academicRelease={version:'0.12.0',path:'data/academic/release-v0.12.json'};
- current.pilot={version:'pilot-0.5',path:'data/pilots/pilot-0.5.json'};
-}
-if(pinned.candidateBank.version==='0.13.0'){
- current.instrument={version:'0.13.0-research',path:'data/instruments/research-pool-0.13.json'};
- current.academicRelease={version:'0.13.0',path:'data/academic/release-v0.13.json'};
- current.pilot={version:'pilot-0.6',path:'data/pilots/pilot-0.6.json'};
-}
-if(pinned.candidateBank.version==='0.14.0'){
- current.instrument={version:'0.14.0-research',path:'data/instruments/research-pool-0.14.json'};
- current.academicRelease={version:'0.14.0',path:'data/academic/release-v0.14.json'};
- current.pilot={version:'pilot-0.7',path:'data/pilots/pilot-0.7.json'};
-}
-if(pinned.candidateBank.version==='0.15.0'){
- current.instrument={version:'0.15.0-research',path:'data/instruments/research-pool-0.15.json'};
- current.academicRelease={version:'0.15.0',path:'data/academic/release-v0.15.json'};
- current.pilot={version:'pilot-0.8',path:'data/pilots/pilot-0.8.json'};
-}
-if(pinned.candidateBank.version==='0.16.0'){
- current.instrument={version:'0.16.0-research',path:'data/instruments/research-pool-0.16.json'};
- current.academicRelease={version:'0.16.0',path:'data/academic/release-v0.16.json'};
- current.pilot={version:'pilot-0.9',path:'data/pilots/pilot-0.9.json'};
-}
-if(pinned.candidateBank.version==='0.17.0'){
- current.instrument={version:'0.17.0-research',path:'data/instruments/research-pool-0.17.json'};
- current.academicRelease={version:'0.17.0',path:'data/academic/release-v0.17.json'};
- current.pilot={version:'pilot-0.10',path:'data/pilots/pilot-0.10.json'};
-}
-if(pinned.candidateBank.version==='0.18.0'){
- current.instrument={version:'0.18.0-research',path:'data/instruments/research-pool-0.18.json'};
- current.academicRelease={version:'0.18.0',path:'data/academic/release-v0.18.json'};
- current.pilot={version:'pilot-0.11',path:'data/pilots/pilot-0.11.json'};
-}
-if(pinned.candidateBank.version==='0.19.0'){
- current.instrument={version:'0.19.0-research',path:'data/instruments/research-pool-0.19.json'};
- current.academicRelease={version:'0.19.0',path:'data/academic/release-v0.19.json'};
- current.pilot={version:'pilot-0.12',path:'data/pilots/pilot-0.12.json'};
-}
+// The research pool, academic-release record, and runtime pilot configuration
+// are operational companions of the pinned bank. Each is resolved by the bank
+// version it declares, so a successor release needs no edit to this script.
+Object.assign(current,await discoverCompanions(root,pinned.candidateBank.version));
 // Coverage is embedded in the pinned model. An older standalone audit snapshot
 // must not be advertised as coverage for the active release.
 delete current.worldviewCoverage;

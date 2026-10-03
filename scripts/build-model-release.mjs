@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {releaseNotes,semanticDiff,validateProposal,validateReleaseTransition} from '../packages/governance/index.js';
 import {captureRelease,currentFromManifest,loadSnapshot,readJson,validateContentIntegrity} from '../packages/governance/release.js';
 import {verifyEngineSource} from '../packages/governance/engine-source.js';
+import {StagedWrites} from '../packages/governance/successor.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const args=process.argv.slice(2),flag=name=>args.includes(name)?args[args.indexOf(name)+1]:null;
@@ -27,6 +28,14 @@ if(args.includes('--bootstrap')){
  const version=flag('--new-version'),relative=flag('--out');
  if(!relative||!/^data\/releases\/model-release-v[0-9.]+\.json$/.test(relative))
   throw Error('Specify a new versioned data/releases/model-release-v*.json output.');
+ if(current.modelRelease?.version===version){
+  // Re-running a finished release verifies reproducibility instead of colliding with its own output.
+  assert.equal(current.modelRelease.path,relative,'Release '+version+' is already active at '+current.modelRelease.path+', not '+relative+'.');
+  assert.deepEqual(await captureRelease(root,current,version),await readJson(root,relative),
+   'Release '+version+' is not reproducible from the committed component pointers.');
+  console.log(version+' is already built and reproducible from the committed tree; no files changed.');
+  process.exit(0);
+ }
  const previous=await readJson(root,current.modelRelease.path),oldCurrent=currentFromManifest(previous);
  assert.deepEqual(await captureRelease(root,oldCurrent,previous.releaseVersion),previous,
   'Historical model release has changed in place.');
@@ -53,11 +62,13 @@ if(args.includes('--bootstrap')){
  }
  const review=validateReleaseTransition({previousManifest:previous,nextManifest:next,changes,proposals,nextSnapshot});
  assert.ok(changes.length,'No governed content changed; no new model release is needed.');
- await write(relative,next);
  current.modelRelease={version,path:relative};
  current.modelReleaseVersions=[...(current.modelReleaseVersions??[]),current.modelRelease];
- await writeFile(path.join(root,'data/current.json'),JSON.stringify(current,null,2)+'\n');
- await writeFile(path.join(root,'data/releases/current.json'),JSON.stringify({schemaVersion:'model-release-index-1',
-  current:current.modelRelease,versions:current.modelReleaseVersions},null,2)+'\n');
+ const staged=new StagedWrites(root);
+ staged.create(relative,next);
+ staged.replace('data/current.json',current);
+ staged.replace('data/releases/current.json',{schemaVersion:'model-release-index-1',
+  current:current.modelRelease,versions:current.modelReleaseVersions});
+ await staged.commit();
  console.log(JSON.stringify({releaseVersion:version,review,notes:releaseNotes(changes)},null,2));
 }else throw Error('Use --bootstrap once or --new-version VERSION --out NEW_FILE with approved proposals.');
