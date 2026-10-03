@@ -19,7 +19,7 @@ assert.equal(current.modelRelease.version,'model-release-1.19.0');
 assert.equal(current.worldviewModel.version,'generic-1.16.0-pilot');
 assert.equal(current.candidateBank.version,'0.19.0');
 assert.equal(current.progressiveDepth.version,'progressive-depth-2.7.0');
-assert.equal(referenceCurrent.currentCatalogVersion,'reference-profile-catalog-1.1.0');
+assert.equal(referenceCurrent.catalogVersion,'reference-profile-catalog-1.1.0');
 
 assert.equal(validateProposal(proposal),proposal);
 assert.equal(proposal.status,'under_review');
