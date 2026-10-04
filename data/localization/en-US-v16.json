@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "worldview-localization-bundle-1",
+  "bundleVersion": "localization-en-US-2.5.0",
+  "locale": "en-US",
+  "language": "en",
+  "direction": "ltr",
+  "status": "approved",
+  "canonical": true,
+  "bankVersion": "0.17.0",
+  "modelVersion": "generic-1.14.0-pilot",
+  "affinityCatalogVersion": "philosophical-affinity-2.5.0",
+  "itemRealizations": [],
+  "scaleRealizations": [],
+  "propositionRealizations": [],
+  "affinityRealizations": [],
+  "resultStates": {},
+  "uiStrings": {},
+  "sourceNotes": "The frozen English bank, response scales, model, and affinity catalog are the versioned English realization. This bundle pins their use without copying authored text into a second source of truth.",
+  "sourceRealizations": [],
+  "terminologyDecisions": []
+}

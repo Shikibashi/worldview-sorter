@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "worldview-model-release-1",
+  "releaseVersion": "model-release-1.18.0",
+  "releaseKind": "authored_operational_pilot",
+  "reviewBasis": [
+    "data/pilots/content-review-v1.9.json",
+    "data/academic/unmapped-audit-v2.json",
+    "data/affinities/manifest-v2.6.json",
+    "data/localization/manifest-v2.6.json"
+  ],
+  "resultSemanticsVersion": "pilot-result-states-1.0.0",
+  "affinitySemanticsVersion": "doctrinal-comparison-1.0.0",
+  "components": [
+    {
+      "key": "affinity",
+      "version": "philosophical-affinity-2.6.0",
+      "path": "data/affinities/catalog-v2.6.json",
+      "sha256": "4cc7f912a257ac76d4f577b3d06159074ed3b4a585db74a05fbff8ad96340d46"
+    },
+    {
+      "key": "affinity_manifest",
+      "version": "philosophical-affinity-2.6.0",
+      "path": "data/affinities/manifest-v2.6.json",
+      "sha256": "f44bb15e06d333ffa0eea9e632b488efcbcd9bde7fa65e397dcdb1b02e2beef9"
+    },
+    {
+      "key": "bank",
+      "version": "0.18.0",
+      "path": "data/items/candidate-v0.18.json",
+      "sha256": "6dd795243ce798774083f6e059b6580a034195c7c7b64c94fbc561daf0fa5502"
+    },
+    {
+      "key": "content_review",
+      "version": "pilot-content-review-1.9.0",
+      "path": "data/pilots/content-review-v1.9.json",
+      "sha256": "702897aed85b53906755ebe05b023a8d65eb6a4f13eaa7df3a36bcd9abd2e351"
+    },
+    {
+      "key": "engine_source",
+      "version": "engine-source-1.6.0",
+      "path": "data/releases/engine-sources/engine-source-1.6.0/manifest.json",
+      "sha256": "a254f41e9f00f7487900859333dfb16b65dd28aaa4324cf81c7d3ed1f22a1762"
+    },
+    {
+      "key": "full_form",
+      "version": "philosophy-pilot-1.15.0",
+      "path": "data/philosophy/public-pilot-v1.15.json",
+      "sha256": "b2a1bb2e08c5793ff16dcb5378a926cd7192bcc81b9471014a19a6cf26c9cbef"
+    },
+    {
+      "key": "localization_bundle:en-US",
+      "version": "localization-en-US-2.6.0",
+      "path": "data/localization/en-US-v17.json",
+      "sha256": "a25e77dd35157e37bec07e02cf67fccab20fafaf38f5eb9efa12ef6b28d322e4"
+    },
+    {
+      "key": "localization_catalog",
+      "version": "localization-catalog-2.6.0",
+      "path": "data/localization/catalog-v17.json",
+      "sha256": "2b6fd5e5654290e672df00fb10780cd99206992760467fb081d584fb2d41af1e"
+    },
+    {
+      "key": "localization_manifest",
+      "version": "localization-catalog-2.6.0",
+      "path": "data/localization/manifest-v2.6.json",
+      "sha256": "e492e1ee35809b22df51cf71a12656412513faf5c5eb5608e6fda8b94282dfd0"
+    },
+    {
+      "key": "model",
+      "version": "generic-1.15.0-pilot",
+      "path": "data/generic/model-v1.15-pilot.json",
+      "sha256": "3c147cece64e613a6942ac1f06eaa99957263f00e93ac44380f3ef094004149a"
+    },
+    {
+      "key": "pilot",
+      "version": "pilot-candidate-1.15.0",
+      "path": "data/pilots/pilot-candidate-v1.15.json",
+      "sha256": "6d195e801d8d91e19717817eb76fefaaa2328dfe1dd3a48fb2147e943c7333dd"
+    },
+    {
+      "key": "progressive_manifest",
+      "version": "progressive-depth-2.6.0",
+      "path": "data/experience/progressive-depth-v2.6.manifest.json",
+      "sha256": "c978f6d2de1d90e8e85293306ff9535dc74dfc9e2bcd446fe686ea2c47124e0a"
+    },
+    {
+      "key": "progressive_routes",
+      "version": "progressive-depth-2.6.0",
+      "path": "data/experience/progressive-depth-v2.6.json",
+      "sha256": "f26ad8b38d300d79e7b57d9a7ec15811f9c8570768d2161ff00150c34dd85697"
+    },
+    {
+      "key": "registry",
+      "version": "0.7.0",
+      "path": "data/registries/constructs-v0.7.json",
+      "sha256": "f9af60640543af93fed76f57eeca5a5564704f48e080b9b0cc382ff0e8b108a2"
+    },
+    {
+      "key": "response_scales",
+      "version": "1.0.0",
+      "path": "data/response-scales.json",
+      "sha256": "d170831cf7781c5e6aedb60407aeca31d82ee8b4ce6689c95fc00b2274493121"
+    },
+    {
+      "key": "source_ledger",
+      "version": "0.19.0",
+      "path": "data/generic/source-ledger-v0.19.json",
+      "sha256": "a46e106cb9200a440b715ba8b2b8792dff661904f99ef76cd292816c2b1a272a"
+    },
+    {
+      "key": "sources",
+      "version": "source-registry-1.11.0",
+      "path": "data/sources-v1.11.json",
+      "sha256": "1c8d5ce48d4ed1659d66f5a57b9ff36e564684483aac49c5eeca3fb2832a73eb"
+    },
+    {
+      "key": "unmapped_audit",
+      "version": "unmapped-audit-2.0.0",
+      "path": "data/academic/unmapped-audit-v2.json",
+      "sha256": "ac439464be9ff1f9f0dece39c58ec49a2b4ad6577721fded85c237dc429aaa72"
+    }
+  ]
+}

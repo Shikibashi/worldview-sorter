@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "worldview-localization-catalog-1",
+  "catalogVersion": "localization-catalog-2.6.0",
+  "canonicalBankVersion": "0.18.0",
+  "modelVersion": "generic-1.15.0-pilot",
+  "affinityCatalogVersion": "philosophical-affinity-2.6.0",
+  "locales": [
+    {
+      "locale": "en-US",
+      "language": "en",
+      "direction": "ltr",
+      "bundleVersion": "localization-en-US-2.6.0",
+      "path": "data/localization/en-US-v17.json",
+      "status": "approved"
+    }
+  ],
+  "note": "English (en-US) is the sole supported respondent-facing language in this release."
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "worldview-pages-deployment-1",
+  "gitCommit": "6e25f79d88c82fb2774792c7f7ae1ca10a69e20a",
+  "applicationVersion": "0.6.1",
+  "modelReleaseVersion": "model-release-1.21.0",
+  "itemBankVersion": "0.21.0",
+  "worldviewModelVersion": "generic-1.18.0-pilot",
+  "routePolicyVersion": "progressive-depth-2.9.0",
+  "fullRoutePolicyVersion": "philosophy-pilot-1.18.0",
+  "instrumentVersion": "pilot-candidate-1.18.0",
+  "resultContractVersion": "pilot-result-states-1.0.0",
+  "affinityCatalogVersion": "philosophical-affinity-2.9.0",
+  "hosting": "github-pages-static"
+}
