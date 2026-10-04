@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "currentCatalogVersion": "reference-profile-catalog-1.3.0",
-  "catalogPath": "data/reference/reference-profiles-v1.3.0.json",
-  "manifestPath": "data/reference/manifest-v1.3.0.json",
-  "reportPath": "docs/reference-profiles-v1.3.0.md"
+  "currentCatalogVersion": "reference-profile-catalog-1.4.0",
+  "catalogPath": "data/reference/reference-profiles-v1.4.0.json",
+  "manifestPath": "data/reference/manifest-v1.4.0.json",
+  "reportPath": "docs/reference-profiles-v1.4.0.md"
 }

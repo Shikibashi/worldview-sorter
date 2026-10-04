@@ -77,7 +77,7 @@ for(const id of ['PLI060','PLI123'])assert.ok(!['quick','standard'].some(routeId
 assert.ok(route('full').assessableDirectRuleIds.includes(ruleId));
 assert.ok(current.fullForm.path===currentManifest.components.find(row=>row.key==='full_form').path);
 assert.ok(pilot.interpretationRules.routeMeasuredDirectRuleIds.includes(ruleId));
-assert.ok(['data/reviews/pilot-evidence-dispositions-v17.json','data/reviews/pilot-evidence-dispositions-v18.json'].includes(currentRef.pilotEvidenceAudit.path));
+assert.ok(['data/reviews/pilot-evidence-dispositions-v17.json','data/reviews/pilot-evidence-dispositions-v18.json','data/reviews/pilot-evidence-dispositions-v19.json'].includes(currentRef.pilotEvidenceAudit.path));
 assert.equal(catalog.modelVersion,model.modelVersion);
 assert.deepEqual(catalog.traditions.map(row=>row.commitments),oldCatalog.traditions.map(row=>row.commitments),
  'The catalog only rebinds to the successor model; it adds no production-control affinity.');

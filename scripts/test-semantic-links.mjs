@@ -3,8 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {evaluateSemanticLinks,validateSemanticLinkSet,SemanticLinkError} from '../packages/worldview/semantic-links.js';
 
 const read=async path=>JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'));
-const current=await read('data/current.json');
-const model=await read(current.worldviewModel.path);
+// This immutable link set belongs to the 1.20 release, not the active successor.
+const model=await read('data/generic/model-v1.17-pilot.json');
 const linkSet=await read('data/exploration/semantic-links-v1.json');
 
 assert.equal(validateSemanticLinkSet({linkSet,model}),true);

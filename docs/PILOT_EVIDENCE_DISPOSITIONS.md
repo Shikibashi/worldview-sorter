@@ -1,5 +1,32 @@
 # Frozen pilot evidence dispositions
 
+## Current successor: model release 1.21.0
+
+The [current disposition](../data/reviews/pilot-evidence-dispositions-v19.json)
+covers `generic-1.18.0-pilot`, bank `candidate-v0.21.json` (578 items), and
+Full `full-2.9.0` (253 items). Of 148 public direct rules, 99 have bidirectional
+evidence opportunity and 49 remain unmeasured. Quick/Standard retain 64/120 items.
+
+| Remaining gap tier | Rules |
+| --- | ---: |
+| Route-near, unblocked | 0 |
+| Content-blocked (`instrumental-harm`) | 1 |
+| Bank-ready but omitted | 37 |
+| Bank directional-contract gap | 11 |
+
+PL21 no longer belongs to the gap backlog. Revised `PLI072@2`/`PLI073@2`
+measure independent extreme-injustice invalidity; unchanged `PLI071@1` and
+new `PLI128@1` measure only whether immoral laws can remain legally valid.
+`defective_law` stays nondirectional, and extreme-threshold answers no longer
+oppose ordinary validity. Two units in each direction remain mandatory.
+These are authored software/content facts, not psychometric validation.
+
+Rebuild/check with `node scripts/audit-pilot-evidence.mjs --active --write`
+or `--active --check`. The earlier analysis below is retained as the **1.20
+baseline**, not the current route or remaining PL21 work.
+
+## Archived 1.20 baseline
+
 This is the current content-opportunity audit for `generic-1.17.0-pilot` and the 251-item `full-2.8.0` route in model release 1.20.0. The [machine-readable disposition](../data/reviews/pilot-evidence-dispositions-v18.json) records each affected rule, exact assigned and omitted item revisions, evidence-unit counts, source IDs, Full-route scope, content-review disposition status, and reconciliation with the [older 35-gap route review](../data/reviews/route-review-v1.json). Rebuild with `node scripts/audit-pilot-evidence.mjs --active --write`; CI checks it with `--active --check`. Earlier artifacts remain pinned. Model release 1.20.0 added two Full-route questions (`NEI134@1` and `NEI135@1`) for a scoped general happiness as ultimate moral standard criterion (`reviewed-NE26-general-happiness-ultimate-standard`), bringing Full to 251 items while Quick and Standard remain unchanged at 64 and 120. The addition created one additional complete Full evidence path (reaching 98 assessable direct rules of 148 public rules), while 50 direct public rules remain `not_measured` by the 251-item route.
 
 ## What the current route can claim

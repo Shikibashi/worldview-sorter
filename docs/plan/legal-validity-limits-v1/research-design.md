@@ -89,7 +89,47 @@ The source ledger (`data/generic/source-ledger-v*.json`) currently cites generic
 
 ---
 
-## 6. Governance Boundary & Sequencing
+## 6. Successor 1.21 review resolution
+
+MCP-2026-096/097 govern the successor implementation. Full has 253 items,
+99 assessable direct rules and 49 remaining gaps; Quick/Standard retain 64/120.
+Historical release 1.20 remains pinned to its original wording and scoring.
+The approvals describe actual AI candidate-design reviews, not human review or
+psychometric validation. Publication still requires release verification.
+
+- `source-based-validity` now means only **“An immoral law can remain legally valid.”**
+  It does not infer social-sources primacy, positivism, or a duty to obey.
+- `PLI072@2` retains the independent extreme-injustice principle below.
+- `PLI073@2` stipulates that all institutional validity criteria are satisfied,
+  that they contain no moral limits, and that injustice reaches an intolerable
+  extreme. `not_law` supports independent invalidity; `valid_but_unjust` explicitly
+  denies invalidity from that extreme injustice. `defective_law` and `depends`
+  are nondirectional. This item supplies **no** ordinary-validity evidence.
+- New `PLI128@1` asks about a seriously unfair city fee satisfying all
+  institutional validity criteria, including incorporated moral conditions,
+  below an intolerable extreme-injustice threshold. `valid_but_unjust` supports
+  ordinary immoral-law validity; `not_law` explicitly rejects it.
+  `defective_law` and `depends` are nondirectional.
+- Unchanged `PLI071@1` plus `PLI128@1` provide two distinct authored units in
+  both directions. No measurement threshold is weakened. Authored-unit
+  distinctness is not empirical independence.
+- Exact wording/options are authored in `scripts/build-legal-validity-release-v1.mjs`.
+  `scripts/test-legal-validity-limits-design.mjs` invokes the real scoring engine,
+  including positive, negative, mixed, missing, single-unit, route-omission,
+  nondirectional, neighboring-view and historical-replay cases.
+
+| Synthetic fixture | Extreme invalidity | Ordinary immoral-law validity |
+|---|---|---|
+| Threshold: agrees PLI071/072, PLI073 `not_law`, PLI128 `valid_but_unjust` | supported | supported |
+| Inclusive/exclusive: agrees PLI071, disagrees PLI072, both vignettes `valid_but_unjust` | opposed | supported |
+| Defective-law: agrees PLI071, disagrees PLI072, both vignettes `defective_law` | leaned opposition | leaned support |
+| Neutral/special responses | insufficient evidence | insufficient evidence |
+
+These fixtures assert answer meanings, not identities or validation of named
+thinkers. Selected SEP sections ground the distinctions; the primary-text/book
+references are bibliographic leads, not falsely claimed full-text readings.
+
+### Superseded pre-release sequencing (historical design record)
 
 - **Approved Proposal**: Formally governed under [`data/governance/proposals/MCP-2026-096.json`](../../data/governance/proposals/MCP-2026-096.json).
 - **Active Questionnaire**: Remains strictly unchanged (251 items on Full, 64 on Quick, 120 on Standard).
@@ -98,7 +138,7 @@ The source ledger (`data/generic/source-ledger-v*.json`) currently cites generic
 
 ---
 
-## 7. Exact Drafted Item Revisions
+## 7. Superseded initial item drafts (not the successor contract)
 
 ### Unit A (Principle Question): `PLI072@2`
 - **Construct**: `PL21`
@@ -133,7 +173,7 @@ The source ledger (`data/generic/source-ledger-v*.json`) currently cites generic
 
 ---
 
-## 8. Theoretical Profile Test Matrix
+## 8. Superseded theoretical matrix (replaced by executed scoring tests)
 
 | Profile | `PLI071` (immoral law valid) | `PLI072@2` (independent invalidity) | `PLI073@2` (profound injustice vignette) | Expected `moral-limits-validity` | Expected `source-based-validity` | Coherence Note |
 |---|---|---|---|---|---|---|

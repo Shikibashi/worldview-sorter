@@ -25,7 +25,8 @@ assert.equal(nei030Review.issue, 'near_duplicate_local_dependence');
 
 const pli072Review = evaluateItemContentReview('PLI072', contentReview);
 assert.equal(pli072Review.excluded, false, 'PLI072 must not be excluded');
-assert.equal(pli072Review.hasRecordedReview, false, 'PLI072 has no recorded review decision');
+assert.equal(pli072Review.hasRecordedReview, current.modelRelease.version === 'model-release-1.21.0',
+  'Only the successor records the revised PLI072 content review');
 // 2. Rank all 50 Full-route gaps
 const result = rankFullRouteGaps({
   gaps: dispositions.fullRouteGaps,
@@ -33,13 +34,24 @@ const result = rankFullRouteGaps({
   bank
 });
 
-assert.equal(result.gaps.length, 50, 'Must rank all 50 Full-route gaps');
-assert.deepEqual(result.tierCounts, {
-  tier_1_route_near_completion_candidate: 1,
-  tier_2_content_blocked_route_gap: 1,
-  tier_3_bank_ready_route_admission: 37,
-  tier_4_bank_directional_contract_gap: 11
-});
+const gapCount = dispositions.fullRouteGaps.length;
+assert.equal(result.gaps.length, gapCount, 'Rank every recorded Full-route gap');
+assert.ok(gapCount === 50 || gapCount === 49, 'Must rank all Full-route gaps');
+if (gapCount === 49) {
+  assert.deepEqual(result.tierCounts, {
+    tier_1_route_near_completion_candidate: 0,
+    tier_2_content_blocked_route_gap: 1,
+    tier_3_bank_ready_route_admission: 37,
+    tier_4_bank_directional_contract_gap: 11
+  });
+} else {
+  assert.deepEqual(result.tierCounts, {
+    tier_1_route_near_completion_candidate: 1,
+    tier_2_content_blocked_route_gap: 1,
+    tier_3_bank_ready_route_admission: 37,
+    tier_4_bank_directional_contract_gap: 11
+  });
+}
 
 // 3. Invariant: No gap with excluded items may appear in Tier 1
 const tier1Gaps = result.gaps.filter(g => g.tier === 'tier_1_route_near_completion_candidate');
@@ -63,6 +75,11 @@ assert.ok(instrumentalHarm.actionRecommendation.includes('near_duplicate_local_d
   'instrumental-harm recommendation must state the specific issue');
 
 const moralLimits = result.gaps.find(g => g.ruleId === 'moral-limits-validity');
+if (current.modelRelease.version === 'model-release-1.21.0') {
+assert.equal(moralLimits, undefined, 'Revised moral-limits-validity has a complete Full evidence path');
+assert.equal(result.gaps.some(g => g.ruleId === 'source-based-validity'), false,
+  'Ordinary-validity replacement must not introduce a directional gap');
+} else {
 assert.ok(moralLimits, 'moral-limits-validity gap must exist');
 assert.equal(moralLimits.tier, 'tier_1_route_near_completion_candidate',
   'moral-limits-validity should be Tier 1 (route-near, unblocked item)');
@@ -75,4 +92,5 @@ assert.ok(moralLimits.actionRecommendation.includes('no recorded pilot review'),
   'moral-limits-validity recommendation must state PLI072 has no recorded pilot review');
 assert.ok(moralLimits.actionRecommendation.includes('Radbruch threshold'),
   'moral-limits-validity recommendation must reference Radbruch threshold coherence');
-console.log('Gap ranking regression passed: content-review exclusions forbid near-duplicate NEI030 from Tier 1; 4-tier taxonomy validated across 50 gaps.');
+}
+console.log(`Gap ranking regression passed: content-review exclusions preserved across ${gapCount} gaps.`);

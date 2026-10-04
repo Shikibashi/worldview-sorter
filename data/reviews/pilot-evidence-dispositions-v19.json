@@ -1,0 +1,3593 @@
+{
+  "schemaVersion": "pilot-evidence-dispositions-1",
+  "auditVersion": "pilot-evidence-dispositions-1.18.0",
+  "scope": "Authored evidence-path and compatibility audit of the frozen successor pilot. Counts are structural, not psychometric.",
+  "inputs": {
+    "data/items/candidate-v0.21.json": "d07e08e8556c2d4ba333c08bc2fddb6a6e489cfa265803857def445371795115",
+    "data/generic/model-v1.18-pilot.json": "f7a8204eb8d4367d3d7eef3c211787709a53e1a8e20342f6769e8ed25be62597",
+    "data/experience/progressive-depth-v2.9.json": "7e065f3734e66b9e8ce69ab586f551f64f687c7736142035aa58c40d7dde87de",
+    "data/reviews/route-review-v1.json": "9b94f74297594629ffcd957cccf131f782f762397e4b1424a1f4103c4421acc8",
+    "data/reviews/directional-contract-decisions-v1.json": "f0767f4de377bb964efd3f647c58df61bae49fe3cb0ea603882b771dab900563"
+  },
+  "release": {
+    "modelVersion": "generic-1.18.0-pilot",
+    "routePolicyVersion": "progressive-depth-2.9.0",
+    "fullRouteVersion": "full-2.9.0",
+    "bankVersion": "0.21.0"
+  },
+  "summary": {
+    "bankItems": 578,
+    "publicRules": 148,
+    "fullRouteItems": 253,
+    "fullRouteAssessableRules": 99,
+    "fullRouteNotMeasuredRules": 49,
+    "wholeBankDirectionalGaps": 16,
+    "publicWholeBankDirectionalGaps": 11,
+    "historicalRouteGaps": 35,
+    "historicalStatusCounts": {
+      "narrower_or_split_public_rule_with_full_path": 2,
+      "no_successor_direct_rule": 16,
+      "related_public_rule_with_full_path": 14,
+      "reopened_and_unresolved": 1,
+      "successor_rule_nonpublic": 2
+    },
+    "fullRouteGapClasses": {
+      "all_evidence_omitted_by_frozen_route": 37,
+      "bank_directional_contract_gap": 11,
+      "incomplete_frozen_route_path": 1
+    },
+    "rankingTiers": {
+      "tier_1_route_near_completion_candidate": 0,
+      "tier_2_content_blocked_route_gap": 1,
+      "tier_3_bank_ready_route_admission": 37,
+      "tier_4_bank_directional_contract_gap": 11
+    }
+  },
+  "semantics": {
+    "assessable": "The route assigns at least the authored minimum distinct units in both directions; actual responses may remain inconclusive.",
+    "notMeasured": "The frozen route lacks a viable two-direction authored path; a response to one mapped item is not a public conclusion.",
+    "noStatisticalClaim": "Evidence-unit IDs control authored duplication only. They do not establish independent items, reliability, or human validity."
+  },
+  "directionalContracts": [
+    {
+      "ruleId": "legacy-objectivism-moral-truth-aptness",
+      "constructId": "ME06",
+      "domainId": "ME",
+      "label": "moral-truth-aptness",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "legacy-objectivism-moral-truth-aptness",
+        "cause": "alternative_answer_not_clean_opposition",
+        "reason": "MEI018 asks what a moral utterance is doing. Choosing attitude or prescription need not deny all literal truth-aptness, including minimalist or quasi-realist truth-talk. MEI017 supplies the only direct opposing unit.",
+        "nextReview": "Ask separately whether moral sentences can literally be true or false; do not treat attitude expression as a second denial.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/moral-cognitivism/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "mutual-advantage",
+      "constructId": "NE06",
+      "domainId": "NE",
+      "label": "Mutual advantage helps justify moral rules",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "mutual-advantage",
+        "cause": "strongest_reason_not_exclusive_reason",
+        "reason": "NEI032 asks for the strongest moral basis among alternatives. Choosing impartiality, rights, or virtue does not deny that mutual advantage can also help justify a rule. Only NEI010 directly records opposition.",
+        "nextReview": "A second item would need to deny the justificatory relevance of mutual advantage itself, without forcing a complete contractarian identity.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/contractarianism/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-aesthetic-objectivity",
+      "constructId": "VA21",
+      "domainId": "VA",
+      "label": "Aesthetic value can exceed actual liking",
+      "public": false,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "nonpublic_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-aesthetic-objectivity",
+        "cause": "response_dependence_not_no_value_beyond_actual_liking",
+        "reason": "VAI061 alone asks whether aesthetic value can survive universal actual dislike. VAI060 asks how informed critics' disagreement is best understood; response-dependent or conventional accounts can still distinguish apt from actual responses and need not deny VAI061's possibility.",
+        "nextReview": "Keep research-only. Define which account of mind-independent, ideal-response, or conventional value is targeted before treating another answer as direct denial.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/beauty/",
+          "https://plato.stanford.edu/entries/aesthetic-judgment/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-basic-experience",
+      "constructId": "MS02",
+      "domainId": "MS",
+      "label": "Simple physical systems may have basic experience",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-basic-experience",
+        "cause": "theory_choice_not_exclusive_denial",
+        "reason": "MSI017 offers broad descriptions of consciousness. Selecting identity, functional, or dual does not by itself deny every basic-experience possibility; only MSI015 directly opposes the stated possibility.",
+        "nextReview": "Test denial of basic experience in simple physical systems directly, while separating experience from cognition.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/panpsychism/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-coherent-justification",
+      "constructId": "EP12",
+      "domainId": "EP",
+      "label": "A coherent web helps ground justification",
+      "public": false,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "nonpublic_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-coherent-justification",
+        "cause": "preferred_theory_not_denial_of_contributory_role",
+        "reason": "EPI039 directly tests whether coherence mainly grounds justification. EPI042 asks for the closest fundamental account; selecting a foundation, reliable process, or plural answer does not deny that coherence can help justify a belief.",
+        "nextReview": "Keep research-only. Separate coherence as the sole ultimate ground from coherence as one justificatory contributor before authoring a second opposing unit.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/justep-coherence/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-desire-welfare",
+      "constructId": "VA20",
+      "domainId": "VA",
+      "label": "Informed desire fulfillment can improve well-being",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 0
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-desire-welfare",
+        "cause": "target_scope_and_counterexample_need_review",
+        "reason": "VAI054 asks for the closest ultimate account, so choosing pleasure or objective goods does not deny that desire fulfillment can sometimes improve well-being. VAI056 tests one fulfilled desire without felt benefit; its 'no' option might oppose a narrower intrinsic-benefit claim, but should not be silently promoted to opposition to the current broad 'can improve' target.",
+        "nextReview": "Define whether the target is any benefit, intrinsic benefit, or an exclusive theory, then add or remap only an answer that denies that exact target.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/well-being/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-doing-allowing",
+      "constructId": "NE12",
+      "domainId": "NE",
+      "label": "Causing harm can be worse than failing to prevent it",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-doing-allowing",
+        "cause": "single_case_not_general_denial",
+        "reason": "NEI036's roughly-equal or depends answers concern one harm case with possible further duties and intentions. They do not cleanly deny NEI013's 'normally worse' claim.",
+        "nextReview": "A counterindicator must distinguish general moral significance of doing versus allowing from verdicts driven by further duties in one case.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/doing-allowing/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-foundational-justification",
+      "constructId": "EP12",
+      "domainId": "EP",
+      "label": "Some justification rests on basic beliefs or experiences",
+      "public": false,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "nonpublic_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-foundational-justification",
+        "cause": "preferred_theory_not_denial_of_basic_justification",
+        "reason": "EPI038 directly tests the possibility of properly basic justification. EPI042's coherence, reliability, infinite, and plural alternatives describe a closest fundamental account; choosing one does not always deny that some experiences or beliefs have noninferential justification.",
+        "nextReview": "Keep research-only. Test the absence of any basic or noninferential justification directly if a two-sided public proposition is later proposed.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/justep-foundational/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-functional-minds",
+      "constructId": "MS02",
+      "domainId": "MS",
+      "label": "Functional organization can determine mental states",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-functional-minds",
+        "cause": "theory_choice_not_exclusive_denial",
+        "reason": "MSI017's identity, dual, panpsych, and other options do not each entail denial of every functional criterion for mental states. MSI013 supplies the only direct opposing unit.",
+        "nextReview": "Ask whether preserving functional organization is insufficient for the relevant mental states, specifying whether the target is mentality or consciousness.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/functionalism/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-noncosmic-meaning",
+      "constructId": "EX01",
+      "domainId": "EX",
+      "label": "Objective meaning need not require cosmic purpose",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-noncosmic-meaning",
+        "cause": "conditional_scenario_not_modal_denial",
+        "reason": "EXI011 asks for a reaction under the supposition that no objective purpose is built in. Its nihilism option may reject meaning in that scenario, but it does not cleanly answer EXI006's general possibility that objective meaning can arise without cosmic or divine purpose.",
+        "nextReview": "Clarify whether non-cosmic objective meaning is possible independently of the respondent's view of the actual world.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/life-meaning/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-objective-welfare",
+      "constructId": "VA20",
+      "domainId": "VA",
+      "label": "Well-being can include goods not currently desired",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-objective-welfare",
+        "cause": "closest_theory_not_exclusive_denial",
+        "reason": "VAI054 asks which description is closest to an ultimate account. Pleasure or informed desire as a preferred description does not exclude knowledge or friendship from helping someone when not currently desired. VAI058 alone directly opposes that possibility.",
+        "nextReview": "Use a direct counterexample about undesired objective goods; keep plural theories available rather than making alternatives exclusive by fiat.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/well-being/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-particular-judgment",
+      "constructId": "ME04",
+      "domainId": "ME",
+      "label": "Particular cases need more than general rules",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-particular-judgment",
+        "cause": "usual_rule_priority_not_no_exceptions",
+        "reason": "MEI015 says general rules 'usually' determine rightness. That is compatible with MEI008's weaker claim that some cases need particular judgment. Only MEI008 directly records opposition to the current target.",
+        "nextReview": "Separate exceptionless generalism from ordinary reliance on general principles; do not infer strong particularism from case judgment.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/moral-particularism-generalism/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-political-cosmopolitanism",
+      "constructId": "PL22",
+      "domainId": "PL",
+      "label": "Foreign interests merit consideration beyond national benefit",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-political-cosmopolitanism",
+        "cause": "priority_not_absence_of_concern",
+        "reason": "PLI067 asks whether a citizen normally receives greater political weight in a matched rescue. Citizen priority does not entail refusal to take foreign interests seriously without reciprocal benefit, the narrower PLI020 target. Its B alternative already says equal weight, while paired5's neutral point also says 'Neither / equal'; the answer format therefore makes an equality response ambiguous.",
+        "nextReview": "Ask directly whether foreign interests can create serious political reasons even absent national gain, keeping special obligations distinct. Revise the paired item's response format in a new item revision before using equality as evidence.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/cosmopolitanism/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-productive-causation",
+      "constructId": "OM07",
+      "domainId": "OM",
+      "label": "Causation requires a productive connection",
+      "public": false,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "nonpublic_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-productive-causation",
+        "cause": "preferred_analysis_not_exclusive_denial_of_processes",
+        "reason": "OMI020 directly contrasts productive connection with mere regular association. OMI021 asks for the closest fundamental description; a counterfactual, regularity, or primitive answer does not by itself deny that real mechanisms matter in many causal explanations.",
+        "nextReview": "Keep research-only. Specify whether production is necessary for causation, merely common in instances, or part of an explanatory model before mapping a second opposition.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/causation-counterfactual/",
+          "https://plato.stanford.edu/entries/causation-regularity/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-reliable-processes",
+      "constructId": "EP12",
+      "domainId": "EP",
+      "label": "Reliable processes can justify beliefs",
+      "public": false,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "nonpublic_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-reliable-processes",
+        "cause": "preferred_theory_not_denial_of_reliability_contribution",
+        "reason": "EPI040 directly asks whether a reliable process can justify without the believer explaining its reliability. EPI042 asks for the closest fundamental theory; selecting foundation, coherence, or pluralism does not necessarily deny that a reliable process can justify in some cases.",
+        "nextReview": "Keep research-only. If this distinction is promoted, test directly whether reliability without accessible reasons can itself justify a belief.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/justep-intext/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    },
+    {
+      "ruleId": "ph-strong-property",
+      "constructId": "PL11",
+      "domainId": "PL",
+      "label": "Legitimate acquisition can ground strong property claims",
+      "public": true,
+      "minimumEvidenceUnits": 2,
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "missingDirections": [
+        "oppose"
+      ],
+      "disposition": "public_rule_structurally_not_measured",
+      "semanticReview": {
+        "ruleId": "ph-strong-property",
+        "cause": "compensated_override_not_no_strong_claim",
+        "reason": "PLI054's compensated public-use alternatives can accept a strong property claim while allowing an override. They are not clean opposition to PLI013's acquisition-based strong claim.",
+        "nextReview": "Specify whether the target is a strong defeasible claim or a near-absolute veto before adding an opposing mapping.",
+        "academicContextUrls": [
+          "https://plato.stanford.edu/entries/libertarianism/"
+        ]
+      },
+      "reviewRequirement": "A versioned item or rule review must supply the missing direction or explicitly change the inference contract before this rule can produce a directional public result."
+    }
+  ],
+  "fullRouteScope": {
+    "intendedAssessablePublicRuleIds": [
+      "afterlife-belief",
+      "audit2-AH08-biological",
+      "audit2-AH09-environmental",
+      "audit2-EP02-complex-knowledge",
+      "audit2-EP06-testability",
+      "audit2-EP10-revelation",
+      "audit2-EP11-external-world",
+      "audit2-EX02-nondesigner-purpose",
+      "audit2-PL05-decentralization",
+      "audit2-RC02-agentic-divinity",
+      "audit2-RC04-intervention",
+      "audit2-RC05-miracles",
+      "audit2-SO03-relational-self",
+      "audit2-SO05-dominance",
+      "audit2-SO06-anti-egalitarian",
+      "construct-AH13",
+      "construct-AH14",
+      "construct-EP15",
+      "construct-EP16",
+      "construct-EP18",
+      "construct-EP20",
+      "construct-ME09",
+      "construct-ME10",
+      "construct-NE15",
+      "construct-NE17",
+      "construct-NE18",
+      "construct-NE19",
+      "construct-NE20",
+      "construct-OM11",
+      "construct-OM12",
+      "construct-OM13",
+      "construct-OM14",
+      "construct-PL30",
+      "construct-PL31",
+      "construct-PL33",
+      "construct-SO14",
+      "construct-SO15",
+      "constructed-meaning",
+      "deterministic-world",
+      "divine-existence",
+      "effective-freedom",
+      "extended-cognition",
+      "impartial-beneficence",
+      "legacy-objectivism-market-coordination",
+      "legacy-philosophical-anarchism-no-general-obedience",
+      "moral-concern-authority",
+      "moral-concern-care",
+      "moral-concern-equality",
+      "moral-concern-loyalty",
+      "moral-concern-proportionality",
+      "moral-concern-purity",
+      "moral-constraints",
+      "moral-limits-validity",
+      "objective-meaning",
+      "outcomes-count",
+      "ph-categorical-reasons",
+      "ph-conscious-causes",
+      "ph-consent-authority",
+      "ph-context-sensitive",
+      "ph-cosmic-purpose",
+      "ph-expert-testimony",
+      "ph-full-reduction",
+      "ph-group-agency",
+      "ph-individual-claims",
+      "ph-inherent-purpose",
+      "ph-personal-prerogatives",
+      "ph-physical-explanation",
+      "ph-polycentric-order",
+      "ph-process-self",
+      "ph-religious-priority",
+      "ph-rights-constraints",
+      "ph-rule-mediated",
+      "ph-sacred-value",
+      "ph-social-constitution",
+      "ph-stance-independence",
+      "ph-supernatural-reality",
+      "ph-tradition-evidence",
+      "ph-unconscious-causes",
+      "ph-universal-requirements",
+      "priority-VA02",
+      "priority-VA04",
+      "priority-VA05",
+      "priority-VA06",
+      "priority-VA11",
+      "priority-VA15",
+      "priority-VA16",
+      "priority-VA18",
+      "psychological-continuity",
+      "reasonable-rejection",
+      "reviewed-ME06-literal-truth-claim",
+      "reviewed-NE22-act-consequence-criterion",
+      "reviewed-NE23-rule-consequence-criterion",
+      "reviewed-NE24-welfarist-outcome-value",
+      "reviewed-NE25-total-welfare-maximization",
+      "reviewed-NE26-general-happiness-ultimate-standard",
+      "reviewed-PL34-federal-division",
+      "reviewed-PL39-democratic-social-control-production",
+      "source-based-validity",
+      "theological-suspension"
+    ],
+    "conditionallyAssessablePublicRuleIds": [],
+    "deliberatelyUnmeasuredPublicRuleIds": [
+      "character-counts",
+      "construct-EP17",
+      "construct-EP19",
+      "construct-NE16",
+      "construct-NE21",
+      "construct-PL27",
+      "construct-PL28",
+      "construct-PL29",
+      "construct-PL32",
+      "instrumental-harm",
+      "legacy-objectivism-moral-truth-aptness",
+      "mutual-advantage",
+      "natural-world",
+      "nondomination",
+      "noninterference",
+      "ph-basic-experience",
+      "ph-belief-revision",
+      "ph-democratic-authorization",
+      "ph-desert-punishment",
+      "ph-desire-welfare",
+      "ph-doing-allowing",
+      "ph-functional-minds",
+      "ph-high-sacrifice",
+      "ph-intuitive-warrant",
+      "ph-national-obligations",
+      "ph-noncosmic-meaning",
+      "ph-objective-welfare",
+      "ph-observation-weight",
+      "ph-particular-judgment",
+      "ph-political-cosmopolitanism",
+      "ph-religious-public-law",
+      "ph-scientific-realism",
+      "ph-special-obligations",
+      "ph-strong-property",
+      "physical-reality",
+      "priority-VA01",
+      "priority-VA03",
+      "priority-VA07",
+      "priority-VA08",
+      "priority-VA09",
+      "priority-VA10",
+      "priority-VA12",
+      "priority-VA13",
+      "priority-VA14",
+      "priority-VA17",
+      "priority-VA19",
+      "procedural-justice",
+      "relational-care",
+      "substantive-justice"
+    ],
+    "researchOnlyRuleIds": [
+      "audit2-PL25-reform",
+      "audit2-SO13-just-world",
+      "ph-aesthetic-objectivity",
+      "ph-coherent-justification",
+      "ph-concrete-worlds",
+      "ph-eternal-time",
+      "ph-external-content",
+      "ph-foundational-justification",
+      "ph-governing-laws",
+      "ph-humean-laws",
+      "ph-intention-sensitive",
+      "ph-motivational-necessity",
+      "ph-productive-causation",
+      "ph-reliable-processes",
+      "ph-values-science",
+      "ph-world-possibilities"
+    ],
+    "constructsWithoutDirectRuleIds": [
+      "AH01",
+      "AH03",
+      "AH04",
+      "AH05",
+      "AH06",
+      "AH07",
+      "AH12",
+      "EP03",
+      "EP05",
+      "EX04",
+      "EX05",
+      "EX07",
+      "EX08",
+      "EX09",
+      "ME07",
+      "MF07",
+      "MS07",
+      "OM08",
+      "PL01",
+      "PL10",
+      "PL12",
+      "PL14",
+      "PL15",
+      "PL19",
+      "PL20",
+      "RC06",
+      "RC11",
+      "SO04",
+      "SO07",
+      "SO08",
+      "SO09",
+      "SO10",
+      "SO12"
+    ],
+    "unresolvedOrNeedsItemsConstructIds": [
+      "AH01",
+      "AH03",
+      "AH06",
+      "EP03",
+      "EP05",
+      "EX04",
+      "PL01",
+      "PL12",
+      "PL14",
+      "PL15",
+      "PL19",
+      "RC06",
+      "SO04",
+      "SO09",
+      "SO10"
+    ],
+    "note": "This is the frozen route opportunity contract, not a claim that any respondent reached a directional result."
+  },
+  "fullRouteGaps": [
+    {
+      "ruleId": "character-counts",
+      "constructId": "NE03",
+      "domainId": "NE",
+      "label": "Character contributes to moral assessment",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI003",
+          "itemRevision": 1,
+          "unitId": "NEI003",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI027",
+          "itemRevision": 1,
+          "unitId": "NE-S05",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-virtue"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-EP17",
+      "constructId": "EP17",
+      "domainId": "EP",
+      "label": "Concepts as revisable instruments of inquiry",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "EPI106",
+          "itemRevision": 1,
+          "unitId": "EPI106",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI107",
+          "itemRevision": 1,
+          "unitId": "EPI107",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI108",
+          "itemRevision": 1,
+          "unitId": "EPI108",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-pragmatism",
+        "acad-rand-epistemology",
+        "acad-marschall"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-EP19",
+      "constructId": "EP19",
+      "domainId": "EP",
+      "label": "Contextual certainty",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "EPI112",
+          "itemRevision": 1,
+          "unitId": "EPI112",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI113",
+          "itemRevision": 1,
+          "unitId": "EPI113",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI114",
+          "itemRevision": 1,
+          "unitId": "EPI114",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-rand-epistemology",
+        "acad-epistemology"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-NE16",
+      "constructId": "NE16",
+      "domainId": "NE",
+      "label": "Rational egoism about practical reasons",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI103",
+          "itemRevision": 1,
+          "unitId": "NEI103",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI104",
+          "itemRevision": 1,
+          "unitId": "NEI104",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI105",
+          "itemRevision": 1,
+          "unitId": "NEI105",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-egoism"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-NE21",
+      "constructId": "NE21",
+      "domainId": "NE",
+      "label": "Elective other-regarding concern",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI118",
+          "itemRevision": 1,
+          "unitId": "NEI118",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI119",
+          "itemRevision": 1,
+          "unitId": "NEI119",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI120",
+          "itemRevision": 1,
+          "unitId": "NEI120",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-stirner",
+        "acad-egoism"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-PL27",
+      "constructId": "PL27",
+      "domainId": "PL",
+      "label": "Preinstitutional grounding of rights",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI100",
+          "itemRevision": 1,
+          "unitId": "PLI100",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI101",
+          "itemRevision": 1,
+          "unitId": "PLI101",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI102",
+          "itemRevision": 1,
+          "unitId": "PLI102",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-rights",
+        "acad-rand"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-PL28",
+      "constructId": "PL28",
+      "domainId": "PL",
+      "label": "Institutional and instrumental justification of rights",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI103",
+          "itemRevision": 1,
+          "unitId": "PLI103",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI104",
+          "itemRevision": 1,
+          "unitId": "PLI104",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI105",
+          "itemRevision": 1,
+          "unitId": "PLI105",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-rights",
+        "acad-contractarianism"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-PL29",
+      "constructId": "PL29",
+      "domainId": "PL",
+      "label": "Territorial monopoly of final legal force",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI106",
+          "itemRevision": 1,
+          "unitId": "PLI106",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI107",
+          "itemRevision": 1,
+          "unitId": "PLI107",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI108",
+          "itemRevision": 1,
+          "unitId": "PLI108",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-rand",
+        "acad-legitimacy",
+        "acad-hasnas"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "construct-PL32",
+      "constructId": "PL32",
+      "domainId": "PL",
+      "label": "Institutional state-abolition preference",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI115",
+          "itemRevision": 1,
+          "unitId": "PLI115",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI116",
+          "itemRevision": 1,
+          "unitId": "PLI116",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI117",
+          "itemRevision": 1,
+          "unitId": "PLI117",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-obligation",
+        "acad-legitimacy",
+        "acad-hasnas"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "instrumental-harm",
+      "constructId": "NE08",
+      "domainId": "NE",
+      "label": "Instrumental harm can be permissible",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 1,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "NEI005",
+          "itemRevision": 2,
+          "unitId": "NE-S01"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI030",
+          "itemRevision": 1,
+          "unitId": "NE-S07",
+          "contentReview": {
+            "decision": "remove_from_pilot",
+            "issue": "near_duplicate_local_dependence",
+            "resultUse": "none_in_frozen_route",
+            "excluded": true
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-ous"
+      ],
+      "gapClass": "incomplete_frozen_route_path",
+      "rankingTier": "tier_2_content_blocked_route_gap",
+      "contentReviewStatus": "blocked_by_content_review_exclusion",
+      "disposition": "retain_not_measured",
+      "futureChange": "author_replacement_non_duplicate_item_revision_or_discriminator",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "legacy-objectivism-moral-truth-aptness",
+      "constructId": "ME06",
+      "domainId": "ME",
+      "label": "moral-truth-aptness",
+      "tier": "diagnostic",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "MEI017",
+          "itemRevision": 1,
+          "unitId": "MEI017"
+        },
+        {
+          "itemId": "MEI018",
+          "itemRevision": 1,
+          "unitId": "MEI018"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [],
+      "sourceIds": [
+        "domain-polzler",
+        "gen-noncognitivism"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "mutual-advantage",
+      "constructId": "NE06",
+      "domainId": "NE",
+      "label": "Mutual advantage helps justify moral rules",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI010",
+          "itemRevision": 1,
+          "unitId": "NEI010",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI032",
+          "itemRevision": 1,
+          "unitId": "NEI032",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-contractarianism",
+        "gen-contractualism"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "natural-world",
+      "constructId": "OM01",
+      "domainId": "OM",
+      "label": "Reality is entirely natural",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "OMI009",
+          "itemRevision": 1,
+          "unitId": "OMI009",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "OMI011",
+          "itemRevision": 1,
+          "unitId": "OMI011",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-naturalism"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "nondomination",
+      "constructId": "PL07",
+      "domainId": "PL",
+      "label": "Uncontrolled power itself can diminish freedom",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI010",
+          "itemRevision": 1,
+          "unitId": "PLI010",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI057",
+          "itemRevision": 1,
+          "unitId": "PL-S08",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-liberty"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "noninterference",
+      "constructId": "PL06",
+      "domainId": "PL",
+      "label": "Interference with harmless choice reduces liberty",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI007",
+          "itemRevision": 1,
+          "unitId": "PLI007",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI051",
+          "itemRevision": 1,
+          "unitId": "PL-S04",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-liberty"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-basic-experience",
+      "constructId": "MS02",
+      "domainId": "MS",
+      "label": "Simple physical systems may have basic experience",
+      "tier": "diagnostic",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "MSI015",
+          "itemRevision": 1,
+          "unitId": "MSI015"
+        },
+        {
+          "itemId": "MSI017",
+          "itemRevision": 1,
+          "unitId": "MSI017"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [],
+      "sourceIds": [
+        "domain-panpsychism"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-belief-revision",
+      "constructId": "EP01",
+      "domainId": "EP",
+      "label": "Strong contrary evidence should reopen beliefs",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "EPI001",
+          "itemRevision": 1,
+          "unitId": "EP-M01",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI023",
+          "itemRevision": 1,
+          "unitId": "EP-S01",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-epistemology"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-democratic-authorization",
+      "constructId": "PL04",
+      "domainId": "PL",
+      "label": "Participation adds to political legitimacy",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI006",
+          "itemRevision": 1,
+          "unitId": "PLI006",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI027",
+          "itemRevision": 1,
+          "unitId": "PLI027",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-legitimacy"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-desert-punishment",
+      "constructId": "PL18",
+      "domainId": "PL",
+      "label": "Desert can justify punishment without future benefit",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI017",
+          "itemRevision": 1,
+          "unitId": "PLI017",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI064",
+          "itemRevision": 1,
+          "unitId": "PL-S12",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "domain-punishment"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-desire-welfare",
+      "constructId": "VA20",
+      "domainId": "VA",
+      "label": "Informed desire fulfillment can improve well-being",
+      "tier": "diagnostic",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 0
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI054",
+          "itemRevision": 1,
+          "unitId": "VAI054",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI056",
+          "itemRevision": 1,
+          "unitId": "VA-S02",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-wellbeing"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-doing-allowing",
+      "constructId": "NE12",
+      "domainId": "NE",
+      "label": "Causing harm can be worse than failing to prevent it",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI013",
+          "itemRevision": 1,
+          "unitId": "NEI013",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI036",
+          "itemRevision": 1,
+          "unitId": "NE-S12",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "domain-doing"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-functional-minds",
+      "constructId": "MS02",
+      "domainId": "MS",
+      "label": "Functional organization can determine mental states",
+      "tier": "diagnostic",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "MSI013",
+          "itemRevision": 1,
+          "unitId": "MSI013"
+        },
+        {
+          "itemId": "MSI017",
+          "itemRevision": 1,
+          "unitId": "MSI017"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [],
+      "sourceIds": [
+        "domain-functionalism"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-high-sacrifice",
+      "constructId": "NE11",
+      "domainId": "NE",
+      "label": "Very large benefits can require major sacrifice",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI012",
+          "itemRevision": 1,
+          "unitId": "NEI012",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI035",
+          "itemRevision": 1,
+          "unitId": "NE-S11",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-consequentialism"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-intuitive-warrant",
+      "constructId": "EP09",
+      "domainId": "EP",
+      "label": "Intuition can provide initial justification",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "EPI011",
+          "itemRevision": 1,
+          "unitId": "EPI011",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI031",
+          "itemRevision": 1,
+          "unitId": "EP-S04",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-epistemology"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-national-obligations",
+      "constructId": "PL23",
+      "domainId": "PL",
+      "label": "National membership can create special obligations",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI021",
+          "itemRevision": 1,
+          "unitId": "PLI021",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI068",
+          "itemRevision": 1,
+          "unitId": "PL-S15",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-obligation"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-noncosmic-meaning",
+      "constructId": "EX01",
+      "domainId": "EX",
+      "label": "Objective meaning need not require cosmic purpose",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "EXI006",
+          "itemRevision": 1,
+          "unitId": "EXI006"
+        },
+        {
+          "itemId": "EXI011",
+          "itemRevision": 1,
+          "unitId": "EXI011"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [],
+      "sourceIds": [
+        "gen-meaning"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-objective-welfare",
+      "constructId": "VA20",
+      "domainId": "VA",
+      "label": "Well-being can include goods not currently desired",
+      "tier": "diagnostic",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI058",
+          "itemRevision": 1,
+          "unitId": "VAI058",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI054",
+          "itemRevision": 1,
+          "unitId": "VAI054",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-wellbeing"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-observation-weight",
+      "constructId": "EP04",
+      "domainId": "EP",
+      "label": "Observation carries weight against an attractive theory",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "EPI003",
+          "itemRevision": 1,
+          "unitId": "EPI003",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI016",
+          "itemRevision": 1,
+          "unitId": "EPI016",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-epistemology"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-particular-judgment",
+      "constructId": "ME04",
+      "domainId": "ME",
+      "label": "Particular cases need more than general rules",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "MEI008",
+          "itemRevision": 1,
+          "unitId": "MEI008"
+        },
+        {
+          "itemId": "MEI015",
+          "itemRevision": 1,
+          "unitId": "MEI015"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [],
+      "sourceIds": [
+        "domain-particularism"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-political-cosmopolitanism",
+      "constructId": "PL22",
+      "domainId": "PL",
+      "label": "Foreign interests merit consideration beyond national benefit",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "PLI020",
+          "itemRevision": 1,
+          "unitId": "PLI020"
+        },
+        {
+          "itemId": "PLI067",
+          "itemRevision": 1,
+          "unitId": "PLI067"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [],
+      "sourceIds": [
+        "domain-cosmopolitanism"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-religious-public-law",
+      "constructId": "PL26",
+      "domainId": "PL",
+      "label": "Religious authority can independently ground public law",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI023",
+          "itemRevision": 1,
+          "unitId": "PLI023",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI070",
+          "itemRevision": 1,
+          "unitId": "PL-S17",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "acad-legitimacy",
+        "gen-theology"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-scientific-realism",
+      "constructId": "EP13",
+      "domainId": "EP",
+      "label": "Successful science can support reality of unobservables",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "EPI013",
+          "itemRevision": 1,
+          "unitId": "EPI013",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "EPI033",
+          "itemRevision": 1,
+          "unitId": "EP-S06",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "domain-scientific-realism"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-special-obligations",
+      "constructId": "NE09",
+      "domainId": "NE",
+      "label": "Close relationships can create additional duties",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI024",
+          "itemRevision": 1,
+          "unitId": "NEI024",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI033",
+          "itemRevision": 1,
+          "unitId": "NE-S09",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-care",
+        "acad-promises"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "ph-strong-property",
+      "constructId": "PL11",
+      "domainId": "PL",
+      "label": "Legitimate acquisition can ground strong property claims",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 1
+      },
+      "assignedEvidenceItemRefs": [
+        {
+          "itemId": "PLI013",
+          "itemRevision": 1,
+          "unitId": "PLI013"
+        },
+        {
+          "itemId": "PLI054",
+          "itemRevision": 1,
+          "unitId": "PL-S06"
+        }
+      ],
+      "outsideRouteEvidenceItemRefs": [],
+      "sourceIds": [
+        "domain-property"
+      ],
+      "gapClass": "bank_directional_contract_gap",
+      "rankingTier": "tier_4_bank_directional_contract_gap",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "versioned_item_or_rule_review",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "physical-reality",
+      "constructId": "OM02",
+      "domainId": "OM",
+      "label": "Physicalism about fundamental reality",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "OMI002",
+          "itemRevision": 1,
+          "unitId": "OMI002",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "OMI012",
+          "itemRevision": 1,
+          "unitId": "OMI012",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-physicalism"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA01",
+      "constructId": "VA01",
+      "domainId": "VA",
+      "label": "High stated priority: Self-direction: thought",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI001",
+          "itemRevision": 2,
+          "unitId": "VAI001",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI019",
+          "itemRevision": 1,
+          "unitId": "VAI019",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI035",
+          "itemRevision": 1,
+          "unitId": "VAI035",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA03",
+      "constructId": "VA03",
+      "domainId": "VA",
+      "label": "High stated priority: Stimulation",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI006",
+          "itemRevision": 1,
+          "unitId": "VAI006",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI021",
+          "itemRevision": 1,
+          "unitId": "VAI021",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI037",
+          "itemRevision": 1,
+          "unitId": "VAI037",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA07",
+      "constructId": "VA07",
+      "domainId": "VA",
+      "label": "High stated priority: Power: resources",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI010",
+          "itemRevision": 1,
+          "unitId": "VAI010",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI024",
+          "itemRevision": 1,
+          "unitId": "VAI024",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI045",
+          "itemRevision": 1,
+          "unitId": "VAI045",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA08",
+      "constructId": "VA08",
+      "domainId": "VA",
+      "label": "High stated priority: Face",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI011",
+          "itemRevision": 1,
+          "unitId": "VAI011",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI025",
+          "itemRevision": 1,
+          "unitId": "VAI025",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI046",
+          "itemRevision": 1,
+          "unitId": "VAI046",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA09",
+      "constructId": "VA09",
+      "domainId": "VA",
+      "label": "High stated priority: Security: personal",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI002",
+          "itemRevision": 2,
+          "unitId": "VAI002",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI040",
+          "itemRevision": 1,
+          "unitId": "VAI040",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA10",
+      "constructId": "VA10",
+      "domainId": "VA",
+      "label": "High stated priority: Security: societal",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI012",
+          "itemRevision": 1,
+          "unitId": "VAI012",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI026",
+          "itemRevision": 1,
+          "unitId": "VAI026",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI047",
+          "itemRevision": 1,
+          "unitId": "VAI047",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA12",
+      "constructId": "VA12",
+      "domainId": "VA",
+      "label": "High stated priority: Conformity: rules",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI013",
+          "itemRevision": 1,
+          "unitId": "VAI013",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI028",
+          "itemRevision": 1,
+          "unitId": "VAI028",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI048",
+          "itemRevision": 1,
+          "unitId": "VAI048",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA13",
+      "constructId": "VA13",
+      "domainId": "VA",
+      "label": "High stated priority: Conformity: interpersonal",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI014",
+          "itemRevision": 1,
+          "unitId": "VAI014",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI029",
+          "itemRevision": 1,
+          "unitId": "VAI029",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI049",
+          "itemRevision": 1,
+          "unitId": "VAI049",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA14",
+      "constructId": "VA14",
+      "domainId": "VA",
+      "label": "High stated priority: Humility",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI015",
+          "itemRevision": 1,
+          "unitId": "VAI015",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI030",
+          "itemRevision": 1,
+          "unitId": "VAI030",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI050",
+          "itemRevision": 1,
+          "unitId": "VAI050",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA17",
+      "constructId": "VA17",
+      "domainId": "VA",
+      "label": "High stated priority: Universalism: concern",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI004",
+          "itemRevision": 2,
+          "unitId": "VAI004",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI043",
+          "itemRevision": 1,
+          "unitId": "VAI043",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "priority-VA19",
+      "constructId": "VA19",
+      "domainId": "VA",
+      "label": "High stated priority: Universalism: tolerance",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 3,
+        "oppose": 3
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "VAI018",
+          "itemRevision": 1,
+          "unitId": "VAI018",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI034",
+          "itemRevision": 1,
+          "unitId": "VAI034",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "VAI053",
+          "itemRevision": 1,
+          "unitId": "VAI053",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-values",
+        "schwartz-refined"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "procedural-justice",
+      "constructId": "PL16",
+      "domainId": "PL",
+      "label": "Fair procedures have independent justificatory weight",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI015",
+          "itemRevision": 1,
+          "unitId": "PLI015",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI062",
+          "itemRevision": 1,
+          "unitId": "PL-S10",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-distribution"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "relational-care",
+      "constructId": "NE04",
+      "domainId": "NE",
+      "label": "Care relationships generate moral reasons",
+      "tier": "headline",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "NEI006",
+          "itemRevision": 1,
+          "unitId": "NEI006",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "NEI028",
+          "itemRevision": 1,
+          "unitId": "NE-S06",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-care"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    },
+    {
+      "ruleId": "substantive-justice",
+      "constructId": "PL17",
+      "domainId": "PL",
+      "label": "Fair procedure can leave an unjust outcome",
+      "tier": "primary",
+      "minimumEvidenceUnits": 2,
+      "fullRouteEvidenceUnits": {
+        "support": 0,
+        "oppose": 0
+      },
+      "bankEvidenceUnits": {
+        "support": 2,
+        "oppose": 2
+      },
+      "assignedEvidenceItemRefs": [],
+      "outsideRouteEvidenceItemRefs": [
+        {
+          "itemId": "PLI016",
+          "itemRevision": 1,
+          "unitId": "PLI016",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        },
+        {
+          "itemId": "PLI063",
+          "itemRevision": 1,
+          "unitId": "PL-S11",
+          "contentReview": {
+            "decision": null,
+            "issue": null,
+            "excluded": false
+          }
+        }
+      ],
+      "sourceIds": [
+        "gen-distribution"
+      ],
+      "gapClass": "all_evidence_omitted_by_frozen_route",
+      "rankingTier": "tier_3_bank_ready_route_admission",
+      "contentReviewStatus": "unblocked",
+      "disposition": "retain_not_measured",
+      "futureChange": "successor_route_review_only_if_incremental_distinction_justifies_burden",
+      "historicalCompatibility": "The frozen 238-item route and prior result are unchanged."
+    }
+  ],
+  "historicalRouteGaps": [
+    {
+      "historicalRuleId": "audit-AH03-basic-desert",
+      "constructId": "AH03",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-AH04-altruistic-capacity",
+      "constructId": "AH04",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-AH06-malleability",
+      "constructId": "AH06",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-AH08-biological",
+      "constructId": "AH08",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-AH08-biological"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-AH08-biological"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-AH09-environmental",
+      "constructId": "AH09",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-AH09-environmental"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-AH09-environmental"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EP02-complex-knowledge",
+      "constructId": "EP02",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-EP02-complex-knowledge"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-EP02-complex-knowledge"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EP05-apriori",
+      "constructId": "EP05",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EP06-testability",
+      "constructId": "EP06",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-EP06-testability"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-EP06-testability"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EP10-revelation",
+      "constructId": "EP10",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-EP10-revelation"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-EP10-revelation"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EP11-external-world",
+      "constructId": "EP11",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [
+        "audit2-EP11-external-world"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-EP11-external-world"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EP11-skepticism",
+      "constructId": "EP11",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [
+        "audit2-EP11-external-world"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-EP11-external-world"
+      ],
+      "status": "narrower_or_split_public_rule_with_full_path",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EX02-designer-purpose",
+      "constructId": "EX02",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [
+        "audit2-EX02-nondesigner-purpose"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-EX02-nondesigner-purpose"
+      ],
+      "status": "narrower_or_split_public_rule_with_full_path",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-EX02-nondesigner-purpose",
+      "constructId": "EX02",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [
+        "audit2-EX02-nondesigner-purpose"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-EX02-nondesigner-purpose"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-OM08-deflationary",
+      "constructId": "OM08",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-OM08-substantive",
+      "constructId": "OM08",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-PL01-legitimacy",
+      "constructId": "PL01",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-PL05-decentralization",
+      "constructId": "PL05",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-PL05-decentralization"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-PL05-decentralization"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-PL12-common-ownership",
+      "constructId": "PL12",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-PL14-democratic-coordination",
+      "constructId": "PL14",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-PL15-expert-coordination",
+      "constructId": "PL15",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-PL19-deterrence",
+      "constructId": "PL19",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-PL25-reform",
+      "constructId": "PL25",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-PL25-reform"
+      ],
+      "currentPublicRuleIds": [],
+      "status": "successor_rule_nonpublic",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-RC02-agentic-divinity",
+      "constructId": "RC02",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-RC02-agentic-divinity"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-RC02-agentic-divinity"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-RC04-intervention",
+      "constructId": "RC04",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-RC04-intervention"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-RC04-intervention"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-RC05-miracles",
+      "constructId": "RC05",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-RC05-miracles"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-RC05-miracles"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-RC06-revelatory-authority",
+      "constructId": "RC06",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO03-relational-self",
+      "constructId": "SO03",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-SO03-relational-self"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-SO03-relational-self"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO04-toleration",
+      "constructId": "SO04",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO05-dominance",
+      "constructId": "SO05",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-SO05-dominance"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-SO05-dominance"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO06-anti-egalitarian",
+      "constructId": "SO06",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-SO06-anti-egalitarian"
+      ],
+      "currentPublicRuleIds": [
+        "audit2-SO06-anti-egalitarian"
+      ],
+      "status": "related_public_rule_with_full_path",
+      "inferenceBoundary": "The successor rule has a route path; the historic and successor propositions still require version-specific reading.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO09-moral-scope",
+      "constructId": "SO09",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "reopened_and_unresolved",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO10-essentialism",
+      "constructId": "SO10",
+      "currentConstructDisposition": "unresolved",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO12-anthropocentric-priority",
+      "constructId": "SO12",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO12-interdependence",
+      "constructId": "SO12",
+      "currentConstructDisposition": "split",
+      "currentRuleIds": [],
+      "currentPublicRuleIds": [],
+      "status": "no_successor_direct_rule",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    },
+    {
+      "historicalRuleId": "audit-SO13-just-world",
+      "constructId": "SO13",
+      "currentConstructDisposition": "directly_interpretable",
+      "currentRuleIds": [
+        "audit2-SO13-just-world"
+      ],
+      "currentPublicRuleIds": [],
+      "status": "successor_rule_nonpublic",
+      "inferenceBoundary": "No inference from the historical rule transfers automatically to a successor target.",
+      "historicalCompatibility": "The 80/120/160/240 releases and the historical gap record remain unchanged."
+    }
+  ]
+}

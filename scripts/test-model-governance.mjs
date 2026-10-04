@@ -11,12 +11,20 @@ import {captureRelease,currentFromManifest,loadSnapshot,readJson,validateContent
 import {describeEngineSource,ENGINE_SOURCE_PATHS,verifyEngineSource} from '../packages/governance/engine-source.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url)),current=await readJson(root,'data/current.json');
-const is120=current.modelRelease.version==='model-release-1.20.0';
-assert.equal(current.instrument.path,is120?'data/instruments/research-pool-0.20.json':'data/instruments/research-pool-0.19.json',
+const version=current.modelRelease.version;
+const is121=version==='model-release-1.21.0';
+const is120=version==='model-release-1.20.0'||is121;
+const expectedInstrument=is121?'data/instruments/research-pool-0.21.json':
+ (version==='model-release-1.20.0'?'data/instruments/research-pool-0.20.json':'data/instruments/research-pool-0.19.json');
+const expectedAcademic=is121?'data/academic/release-v0.21.json':
+ (version==='model-release-1.20.0'?'data/academic/release-v0.20.json':'data/academic/release-v0.19.json');
+const expectedPilot=is121?'data/pilots/pilot-0.14.json':
+ (version==='model-release-1.20.0'?'data/pilots/pilot-0.13.json':'data/pilots/pilot-0.12.json');
+assert.equal(current.instrument.path,expectedInstrument,
  'The academic rebuild must restore the research pool paired with the active bank.');
-assert.equal(current.academicRelease.path,is120?'data/academic/release-v0.20.json':'data/academic/release-v0.19.json',
+assert.equal(current.academicRelease.path,expectedAcademic,
  'The academic rebuild must restore the academic release paired with the active bank.');
-assert.equal(current.pilot.path,is120?'data/pilots/pilot-0.13.json':'data/pilots/pilot-0.12.json',
+assert.equal(current.pilot.path,expectedPilot,
  'The academic rebuild must restore the pilot paired with the active bank.');
 const activeManifest=await readJson(root,current.modelRelease.path);
 assert.deepEqual(activeManifest.components.filter(row=>row.key.startsWith('localization_bundle:')).map(row=>row.key),
@@ -39,7 +47,7 @@ assert.equal(externalWorldProposal.status,'draft');
 assert.deepEqual(await verifyRelease(root,current,activeManifest),activeManifest);
 assert.deepEqual(await verifyRelease(root,historical,manifest),manifest);
 const counts=validateContentIntegrity(snapshot);assert.equal(counts.items,562);assert.equal(counts.routes,3);
-assert.equal(validateContentIntegrity(activeSnapshot).items,is120?577:575);
+assert.equal(validateContentIntegrity(activeSnapshot).items,is121?578:(is120?577:575));
 assert.equal(validateContentIntegrity(activeSnapshot).publicRules,is120?148:147);
 assert.deepEqual(await captureRelease(root,historical,manifest.releaseVersion),manifest);
 assert.deepEqual(await captureRelease(root,current,activeManifest.releaseVersion),activeManifest);
@@ -95,9 +103,9 @@ const provenance=JSON.parse(provenanceReport.stdout);
 assert.ok(!provenance.publicRulesWithSoleLimitedSource.some(r=>r.ruleId==='ph-sacred-value'),
  'The successor must retain a philosophical source alongside its context-limited empirical study.');
 assert.ok(provenance.claimLevelProvenance.referencesWithoutExplicitClaim>0);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,is120?29:26);
-assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,is120?22:20);
-assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,131);
+assert.equal(provenance.claimLevelProvenance.ruleLinkedClaimReferences,is121?39:(is120?29:26));
+assert.equal(provenance.claimLevelProvenance.ruleLinkedSupportingClaimReferences,is121?25:(is120?22:20));
+assert.equal(provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.length,is121?129:131);
 for (const ruleId of ['construct-EP15','construct-EP16','construct-EP20','audit2-EP06-testability','construct-AH14','audit2-EP10-revelation','construct-NE15','ph-sacred-value']) {
  assert.ok(!provenance.claimLevelProvenance.rulesWithoutRuleLinkedSupportingClaim.includes(ruleId));
 }
@@ -108,8 +116,8 @@ assert.equal(provenance.claimLevelProvenance.totalPublicRuleSourceReferences,
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='construct-EP16'));
 assert.ok(!provenance.claimLevelProvenance.rulesWithNoExplicitSourceClaim.some(r=>r.ruleId==='ph-sacred-value'));
 assert.equal(provenance.explicitPropositionCoverage.publicRuleCount,is120?148:147);
-assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,is120?29:28);
-assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,119);
+assert.equal(provenance.explicitPropositionCoverage.withExplicitProposition,is121?31:(is120?29:28));
+assert.equal(provenance.explicitPropositionCoverage.withoutExplicitProposition.length,is121?117:119);
 assert.ok(!provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='construct-EP16'));
 assert.ok(!provenance.explicitPropositionCoverage.withoutExplicitProposition.some(r=>r.ruleId==='ph-sacred-value'));
 assert.equal(provenance.affinityLegacyScopeDependencies.mappedCriterionCount,23);
@@ -123,7 +131,7 @@ assert.ok(!provenance.affinityLegacyScopeDependencies.criteriaWithoutExplicitRul
  row.propositionId==='construct-EP16'));
 const opportunities=provenance.routeEvidenceOpportunities;
 assert.deepEqual(opportunities.routes.map(route=>[route.routeId,route.thresholdReachablePublicRuleCount,
- route.belowThresholdPublicRuleCount]),is120?[['quick',30,118],['standard',56,92],['full',98,50]]:[['quick',30,117],['standard',56,91],['full',97,50]]);
+ route.belowThresholdPublicRuleCount]),is121?[['quick',30,118],['standard',56,92],['full',99,49]]:(is120?[['quick',30,118],['standard',56,92],['full',98,50]]:[['quick',30,117],['standard',56,91],['full',97,50]]));
 const fullOpportunity=opportunities.routes.find(route=>route.routeId==='full');
 const selfInterestOpportunity=fullOpportunity.mappedAffinityCriteria.find(criterion=>
  criterion.traditionId==='ethical-egoism'&&criterion.criterionId==='moral-self-interest');

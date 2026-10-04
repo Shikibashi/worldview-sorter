@@ -1,14 +1,14 @@
 # Reference-profile readiness audit
 
-Audit: `reference-readiness-audit-2.0.0`
+Audit: `reference-readiness-audit-3.0.0`
 
 ## Baseline
 
-- Model: `generic-1.17.0-pilot`
-- Affinity catalog: `philosophical-affinity-2.8.0`
-- Routes: quick 64 (quick-2.8.0); standard 120 (standard-2.8.0); full 251 (full-2.8.0)
-- Candidate bank: `0.20.0`
-- Source ledger: `0.21.0`
+- Model: `generic-1.18.0-pilot`
+- Affinity catalog: `philosophical-affinity-2.9.0`
+- Routes: quick 64 (quick-2.9.0); standard 120 (standard-2.9.0); full 253 (full-2.9.0)
+- Candidate bank: `0.21.0`
+- Source ledger: `0.22.0`
 
 This is an authored coverage audit. Its route counts are available evidence opportunities, not empirical item information or validation.
 
@@ -63,7 +63,7 @@ A scoped comparison of the pragmatic method for clarifying disputed ideas, not a
 - Only the pragmatic-maxim criterion is treated as defining in this scoped profile.
 - The comparison is authored from doctrine and does not establish a person's identity or the instrument's validity.
 
-**Existing affinity entry:** `pragmatism` in `philosophical-affinity-2.8.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
+**Existing affinity entry:** `pragmatism` in `philosophical-affinity-2.9.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
 
 ### Experience-grounded knowledge of the external world — scoped criterion
 
@@ -92,7 +92,7 @@ Whether claims about concrete external reality require experiential evidence; no
 - The instrument's proposition is restricted to factual claims about ordinary external reality.
 - No current route directly tests the origin of all concepts or the status of mathematics and morality.
 
-**Existing affinity entry:** `sensory-empiricism-about-the-external-world` in `philosophical-affinity-2.8.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
+**Existing affinity entry:** `sensory-empiricism-about-the-external-world` in `philosophical-affinity-2.9.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
 
 ### Act consequentialism — rightness criterion
 
@@ -117,7 +117,7 @@ The direct act-consequence criterion represented by the existing rule; not a com
 - The current proposition tests a defined act-level rightness criterion and does not identify a complete ethical theory.
 - The needed item pair appears only on Full.
 
-**Existing affinity entry:** `act-consequentialism-scoped` in `philosophical-affinity-2.8.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
+**Existing affinity entry:** `act-consequentialism-scoped` in `philosophical-affinity-2.9.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
 
 ### Ethical Egoism — universal self-priority and maximization distinction
 
@@ -148,7 +148,7 @@ Separates the normative claim that each agent ought to prioritize their own good
 - The active direct proposition addresses exclusive moral self-priority, not a complete maximizing rightness criterion.
 - The three-item evidence pool contains two near-parallel responses in one evidence unit; minimum evidence cannot treat them as independent corroboration.
 
-**Existing affinity entry:** `ethical-egoism` in `philosophical-affinity-2.8.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
+**Existing affinity entry:** `ethical-egoism` in `philosophical-affinity-2.9.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
 
 ### Objectivism in Ayn Rand's formulation
 
@@ -193,7 +193,7 @@ A coordinated philosophical system with ethical, epistemological, metaphysical, 
 - Several defining Objectivist doctrines are not directly measured by current routes.
 - The surfaced criteria are a limited set and do not reconstruct Rand's complete system.
 
-**Existing affinity entry:** `objectivism-rand` in `philosophical-affinity-2.8.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
+**Existing affinity entry:** `objectivism-rand` in `philosophical-affinity-2.9.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
 
 ### Philosophical anarchism — general political obligation criterion
 
@@ -222,7 +222,7 @@ A narrow comparison of whether law itself generates a general content-independen
 - Practical endorsement of institutions and rejection of general obedience can coexist.
 - The broader grounds of state legitimacy and abolition remain disputed or undermeasured.
 
-**Existing affinity entry:** `philosophical-anarchism` in `philosophical-affinity-2.8.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
+**Existing affinity entry:** `philosophical-anarchism` in `philosophical-affinity-2.9.0`. Its authored criteria and route opportunities are listed in the JSON report; the audit does not alter the affinity.
 
 ### Charles S. Peirce — pragmatic maxim and fallibilist inquiry (scoped)
 

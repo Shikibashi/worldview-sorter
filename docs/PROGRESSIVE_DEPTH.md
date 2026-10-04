@@ -1,5 +1,22 @@
 # Progressive depth routes
 
+## Current route 2.9.0 (model release 1.21.0)
+
+The [current route definition](../data/experience/progressive-depth-v2.9.json)
+assigns 64/120/253 items. Quick and Standard preserve their exact prior
+references and order. Full revises `PLI073@2` and adds `PLI072@2` and `PLI128@1`.
+It has 37 vignettes, 99 assessable public direct rules and 49 remaining gaps.
+Quick/Standard retain 30/56 assessable rules; defining affinity opportunities
+remain 2/3/14. The new PL21 evidence separates independent extreme-injustice
+invalidity from ordinary immoral-law validity without identity assignments,
+social-sources primacy or weaker evidence thresholds.
+
+The 2.8 description below is a historical baseline; its 251-item/98-rule
+counts are not current. Route continuation and replay semantics remain as
+described. No route is psychometrically validated.
+
+## Archived route 2.8.0 baseline
+
 The [active versioned route definition](../data/experience/progressive-depth-v2.8.json) contains 64, 120, and 251 exact item revisions. Relative to [route 2.7.0](../data/experience/progressive-depth-v2.7.json), Quick and Standard retain their exact items and order. Full adds `NEI134@1` and `NEI135@1` for a scoped general happiness as ultimate moral standard criterion (`reviewed-NE26-general-happiness-ultimate-standard`); both are Full-only. Earlier routes remain pinned. This is authored content policy, not an empirically optimized short form. Each route lists exact revisions, burden, and sufficient directional evidence *opportunity*. Actual answers may remain neutral, mixed, missing, or insufficient. Run `npm run report:depth` for domain, format, rule, affinity, and route-overlap reports.
 
 | Route | Purpose and burden | Content opportunity | Deliberate limit |

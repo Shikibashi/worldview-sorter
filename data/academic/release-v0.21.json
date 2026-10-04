@@ -1,0 +1,21 @@
+{
+  "version": "0.21.0",
+  "registryVersion": "0.10.0",
+  "baseBankVersion": "0.21.0",
+  "status": "original_candidates_not_validated",
+  "reviewedOn": "2026-10-04",
+  "note": "Revises PLI072@2 and PLI073@2 and adds PLI128@1 on Full (253 items). Bibliographic references are not full-text reviewed; selected SEP sections provide reviewed scholarly context.",
+  "itemCount": 578,
+  "newItemCount": 1,
+  "registryEntries": 189,
+  "activeConstructCount": 188,
+  "newConstructCount": 0,
+  "referenceProfileCount": 9,
+  "academicSourceCount": 27,
+  "antiInferenceRulesAdded": 24,
+  "frozenSourceHashes": {
+    "data/items/candidate-v0.18.json": "6dd795243ce798774083f6e059b6580a034195c7c7b64c94fbc561daf0fa5502",
+    "data/registries/constructs-v0.7.json": "f9af60640543af93fed76f57eeca5a5564704f48e080b9b0cc382ff0e8b108a2"
+  },
+  "publicInferenceAllowed": false
+}

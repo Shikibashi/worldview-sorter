@@ -10,7 +10,7 @@ const html=await readFile(new URL('apps/quiz/index.html',root),'utf8');
 const app=await readFile(new URL('apps/quiz/app.js',root),'utf8');
 const readme=await readFile(new URL('README.md',root),'utf8');
 assert.deepEqual(policy.routes.map(({id,size})=>({id,size})),[
- {id:'quick',size:64},{id:'standard',size:120},{id:'full',size:current.modelRelease.version === 'model-release-1.20.0' ? 251 : 249}]);
+ {id:'quick',size:64},{id:'standard',size:120},{id:'full',size:current.modelRelease.version === 'model-release-1.21.0' ? 253 : (current.modelRelease.version === 'model-release-1.20.0' ? 251 : 249)}]);
 assert.equal(policy.privacy.defaultAnswerSubmission,false);
 assert.equal(policy.questionnairePolicy.normalizeToIdeologyPercentages,false);
 assert.match(html,/id="result-at-a-glance"/);

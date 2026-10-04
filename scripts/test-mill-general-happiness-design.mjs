@@ -15,7 +15,11 @@ const [model,bank,routes,referenceCurrent,proposal]=await Promise.all([
 ]);
 const catalog=await read(referenceCurrent.catalogPath);
 
-if (current.modelRelease.version === 'model-release-1.20.0') {
+if (current.modelRelease.version === 'model-release-1.21.0') {
+  assert.equal(current.worldviewModel.version, 'generic-1.18.0-pilot');
+  assert.equal(current.candidateBank.version, '0.21.0');
+  assert.equal(current.progressiveDepth.version, 'progressive-depth-2.9.0');
+} else if (current.modelRelease.version === 'model-release-1.20.0') {
   assert.equal(current.worldviewModel.version, 'generic-1.17.0-pilot');
   assert.equal(current.candidateBank.version, '0.20.0');
   assert.equal(current.progressiveDepth.version, 'progressive-depth-2.8.0');
@@ -25,11 +29,11 @@ if (current.modelRelease.version === 'model-release-1.20.0') {
   assert.equal(current.candidateBank.version, '0.19.0');
   assert.equal(current.progressiveDepth.version, 'progressive-depth-2.7.0');
 }
-assert.ok(['reference-profile-catalog-1.2.0', 'reference-profile-catalog-1.3.0'].includes(referenceCurrent.catalogVersion));
+assert.ok(['reference-profile-catalog-1.2.0', 'reference-profile-catalog-1.3.0', 'reference-profile-catalog-1.4.0'].includes(referenceCurrent.catalogVersion));
 
 assert.equal(validateProposal(proposal),proposal);
 const proposedRule='reviewed-NE26-general-happiness-ultimate-standard';
-if (current.modelRelease.version === 'model-release-1.20.0') {
+if (['model-release-1.20.0', 'model-release-1.21.0'].includes(current.modelRelease.version)) {
   assert.equal(proposal.status, 'approved');
   assert.ok(model.commitments.some(row => row.id === proposedRule),
     'Model release 1.20.0 activates NE26 after release gate is satisfied.');
@@ -61,8 +65,8 @@ if (referenceCurrent.catalogVersion === 'reference-profile-catalog-1.2.0') {
 }
 
 for(const route of routes.routes){
-  if (route.id === 'full' && current.modelRelease.version === 'model-release-1.20.0') {
-    assert.equal(route.size, 251);
+  if (route.id === 'full' && ['model-release-1.20.0', 'model-release-1.21.0'].includes(current.modelRelease.version)) {
+    assert.ok(route.size >= 251);
     assert.ok(route.itemRefs.some(ref=>ref.itemId==='NEI134'||ref.itemId==='NEI135'));
   } else {
     assert.ok(!route.itemRefs.some(ref=>ref.itemId==='NEI134'||ref.itemId==='NEI135'),

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "model-change-proposal-1",
+  "proposalId": "MCP-2026-097",
+  "title": "Narrow immoral-law validity and separately review ordinary-injustice evidence",
+  "author": "Worldview Sorter jurisprudence review",
+  "objectType": "proposition",
+  "changeClass": "substantive_revision",
+  "status": "approved",
+  "affectedObjects": [
+    {"type": "construct", "id": "PL21"},
+    {"type": "proposition", "id": "source-based-validity"},
+    {"type": "item", "id": "PLI071"},
+    {"type": "item", "id": "PLI073"},
+    {"type": "item", "id": "PLI128"},
+    {"type": "source", "id": "gen-law"},
+    {"type": "source", "id": "sep-natural-law-theories-legal-validity"},
+    {"type": "source", "id": "acad-hart-positivism-separation-law-morals"},
+    {"type": "source", "id": "primary-radbruch-statutory-lawlessness"}
+  ],
+  "currentBehavior": "Release 1.20 uses PLI071@1 and PLI073@1. PLI073:not_law opposes the ordinary-validity rule, so a threshold response can produce a spurious mixed state. The incomplete 1.21 attempt removed that opposition without replacing the second opposing unit, making the rule not_measured for every profile. Its proposed social-sources primacy clause also exceeded the evidence.",
+  "proposedBehavior": "Use exactly 'An immoral law can remain legally valid.' PLI071@1 remains unchanged. Separately add PLI128@1: an unfair city fee satisfies all institutional validity criteria including incorporated moral conditions, while its injustice is stipulated below an intolerable extreme threshold. PLI071 agreement and PLI128:valid_but_unjust support; PLI071 disagreement and PLI128:not_law oppose. The latter explicitly denies that an immoral rule can remain valid even below that threshold. PLI128:defective_law/depends are nondirectional. Remove PLI073 entirely from this rule. Preserve two distinct supporting and opposing units and every existing gate.",
+  "rationale": "A moral-fallibility proposition does not establish social-sources primacy or legal positivism. A separately authored ordinary-injustice case restores bidirectional coverage without treating extreme-threshold invalidity as opposition. Distinct authored units are software evidence units, not a claim of empirical independence or psychometric validation.",
+  "philosophicalBasis": {
+    "proposition": "An immoral law can remain legally valid.",
+    "neighboringViews": [
+      "Inclusive positivism allows incorporated moral validity criteria, explicitly satisfied in PLI128.",
+      "Exclusive positivism endorses a stronger sources thesis not established by this proposition.",
+      "Threshold natural-law views can accept ordinary immoral laws while rejecting extreme injustice.",
+      "Finnis-style defective law can retain technical validity.",
+      "Moral duty to obey or enforce is distinct from legal validity."
+    ],
+    "nonEntailments": [
+      "Legal validity depends primarily or exclusively on social sources.",
+      "A positivist identity, inclusive or exclusive.",
+      "A denial that extreme injustice can invalidate an enactment.",
+      "A moral obligation to obey, enforce, or approve every valid law.",
+      "All immoral laws are valid, or incorporated moral criteria are irrelevant."
+    ],
+    "existingGap": "The incomplete mapping had only one opposing unit. PLI128 supplies a separately reviewed, original ordinary-injustice unit in both directions; PLI073 no longer supplies either direction. False positives from institutional moral invalidity, extreme-threshold rejection and undefined defective-law language are excluded rather than assigned philosophical identities.",
+    "scholarlyDisagreement": "SEP Legal Positivism section 4.1 explicitly says moral fallibility is not exclusive to positivism and is accepted by several natural-law and nonpositivist accounts. SEP Natural Law Theories section 4 distinguishes technical validity from lack of moral directiveness and focal defectiveness. These limited claims support the narrowed proposition, not a stronger theory of legal sources."
+  },
+  "sourceClaims": [
+    {"sourceId": "gen-law", "relationship": "supports", "claim": "Legal Positivism, section 4.1, states that law can be morally deficient and that this moral-fallibility thesis is not the exclusive property of positivism; accepting immoral law therefore does not establish social-sources primacy or a positivist identity."},
+    {"sourceId": "sep-natural-law-theories-legal-validity", "relationship": "supports", "claim": "Natural Law Theories, section 4, permits saying that a rule is legally valid yet too unjust to obey or apply, while distinguishing its defective or non-central sense. Technical validity, moral directiveness and focal defectiveness must not be collapsed."},
+    {"sourceId": "acad-hart-positivism-separation-law-morals", "relationship": "context", "claim": "Bibliographic lead for the separation debate; this article was not read in this review. The modest moral-fallibility claim relies on the reviewed SEP synthesis, not an asserted direct reading."},
+    {"sourceId": "primary-radbruch-statutory-lawlessness", "relationship": "context", "claim": "Bibliographic lead for the extreme-injustice threshold debate; the primary text was not read in this review. No exhaustive reconstruction of the formula is claimed by the ordinary-injustice item."}
+  ],
+  "alternatives": [
+    "Keep PLI073:not_law as opposition: rejected because extreme-threshold rejection does not deny ordinary immoral-law validity.",
+    "Remove only that opposition: rejected because it leaves one opposing unit and disables measurement.",
+    "Weaken minimumEvidenceUnits or directional availability gates: rejected.",
+    "Claim social-sources primacy from PLI071: rejected as a stronger proposition than the item supports."
+  ],
+  "respondentImpact": "Full adds PLI128@1 alongside MCP-2026-096's PLI072@2, reaching 253 items and 99 assessable direct rules; bank 578. Quick/Standard references, affinity criteria, identity gates and scoring thresholds are unchanged. Coherent threshold fixtures can support both narrow propositions without being assigned a tradition.",
+  "historicalCompatibility": "Release 1.20 keeps its original model, route, bank and engine. Its PLI071@1/PLI073@1 answers replay under the historical mapping, including the historical mixed state. Successor interpretations are separately versioned and do not transfer PLI073@1 answers to revised wording or to PLI128.",
+  "tests": {
+    "required": ["positive", "negative", "mixed", "missing", "false_positive_neighbor", "historical"],
+    "paths": ["scripts/test-legal-validity-limits-design.mjs", "scripts/test-model-governance.mjs", "scripts/test-progressive-depth.mjs"]
+  },
+  "review": {
+    "approvals": [
+      {"role": "philosophical", "reviewer": "GJC implementing AI assistant — separate ordinary-injustice evidence review", "at": "2026-10-04T00:11:37Z", "note": "Separately reviewed exact PLI128@1 stem/options, unchanged PLI071@1 meaning, both directional mappings and removal of PLI073 against fetched SEP Legal Positivism 4.1 and Natural Law Theories 4. Approved only the narrowed moral-fallibility candidate proposition and explicit institutional/extreme-threshold exclusions. Four primary/book leads remain unread; no human, independent psychometric or empirical validation is claimed."},
+      {"role": "engineering", "reviewer": "GJC Architect AI assistant — agent 6-EngineeringReview", "at": "2026-10-04T00:11:37Z", "note": "Recorded actual static re-review approving PLI071@1/PLI128@1 bidirectional source evidence, PLI072@2/PLI073@2 bidirectional extreme-injustice evidence, nondirectional defective_law/depends, unchanged gates, finalized pilot hashes and corrected review metadata. Contingent on accurate proposal/source review and parent execution verification. No tests, builds, lint, formatter or human review is represented; not production-release approval."}
+    ]
+  },
+  "release": {
+    "components": ["model", "bank", "registry", "sources", "source_ledger", "routes"],
+    "migration": "Generate successor 1.21 artifacts only with new PLI128@1 evidence; preserve all historical artifacts. Candidate design approval does not replace parent verification before publication."
+  },
+  "implementationRefs": ["docs/plan/legal-validity-limits-v1/research-design.md", "scripts/build-legal-validity-release-v1.mjs", "scripts/test-legal-validity-limits-design.mjs"]
+}

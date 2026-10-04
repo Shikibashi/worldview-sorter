@@ -22,17 +22,20 @@ const compare=q=>compareWorldview({model,bank,scalesDoc,input:q.session,routeMan
 const plan=(q,domainId=null)=>planWorldviewFollowups({model,bank,scalesDoc,input:q.session,routeManifest:policy,allowedItemRefs:policy.routes.at(-1).itemRefs,domainId,maxItems:policy.clarificationBudget,affinityCatalog:catalog});
 let checks=0;const check=(name,fn)=>{fn();checks++;console.log('PASS progressive depth: '+name);};
 check('Three immutable nested routes preserve exact frozen revisions and domain/format spread',()=>{
+ const is121 = current.modelRelease.version === 'model-release-1.21.0';
  const is120 = current.modelRelease.version === 'model-release-1.20.0';
- assert.deepEqual(policy.routes.map(r=>r.size),[64,120,is120?251:249]);let prior=new Set();
+ const fullSize = is121 ? 253 : (is120 ? 251 : 249);
+ const directRules = is121 ? 99 : (is120 ? 98 : 97);
+ assert.deepEqual(policy.routes.map(r=>r.size),[64,120,fullSize]);let prior=new Set();
  assert.deepEqual(policy.routes.at(-1).itemRefs,frozenForm.frozenItems);
  for(const route of policy.routes){const ids=new Set(route.itemRefs.map(x=>x.itemId));assert.equal(ids.size,route.size);for(const x of route.itemRefs){assert.equal(byId.get(x.itemId).revision,x.itemRevision);assert.ok(pilotManifest.route.exactItemRevisions.some(y=>y.itemId===x.itemId&&y.itemRevision===x.itemRevision));}for(const id of prior)assert.ok(ids.has(id));prior=ids;const row=report.routes.find(r=>r.routeId===route.id);assert.equal(row.itemCount,route.size);assert.equal(Object.values(row.domains).filter(Boolean).length,12);assert.equal(Object.values(row.responseScales).filter(Boolean).length,7);assert.deepEqual([...route.assessableDirectRuleIds].sort(),model.publicRuleIds.filter(id=>!row.unassessablePublicRuleIds.includes(id)).sort());assert.deepEqual([...route.assessableFacetIds].sort(),[...row.assessableFacetIds].sort());}
- assert.deepEqual(report.routes.map(r=>r.assessableDirectRules),[30,56,is120?98:97]);
+ assert.deepEqual(report.routes.map(r=>r.assessableDirectRules),[30,56,directRules]);
  assert.deepEqual(report.routes.map(r=>r.affinity.reduce((n,t)=>n+t.definingDirectlyAssessable,0)),[2,3,14]);
  assert.deepEqual(report.routes.map(r=>r.affinity.reduce((n,t)=>n+t.definingPartiallyAssessed,0)),[0,2,3]);
 });
 check('A short route cannot inherit unasked public or derived propositions',()=>{
  const q=fill(newQuiz(64,'all-no-view')),r=compare(q);
- assert.equal(r.commitments.filter(c=>model.publicRuleIds.includes(c.commitmentId)&&c.state==='not_measured').length, current.modelRelease.version==='model-release-1.20.0'?119:118);
+ assert.equal(r.commitments.filter(c=>model.publicRuleIds.includes(c.commitmentId)&&c.state==='not_measured').length, ['model-release-1.20.0', 'model-release-1.21.0'].includes(current.modelRelease.version)?119:118);
  assert.ok(r.derived.every(d=>d.state!=='supported'));
  const s=buildQuizSummary({model,bank,scalesDoc,session:q.session,routeManifest:policy,affinityCatalog:catalog,affinityPilot:pilotManifest});
  assert.equal(s.affinities.traditions.length,catalog.traditions.length);
